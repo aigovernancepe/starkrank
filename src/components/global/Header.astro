@@ -1,0 +1,137 @@
+---
+import Logo from './Logo.astro';
+import LocaleSwitcher from './LocaleSwitcher.astro';
+import { mainNav } from '../../data/navigation';
+import { getCurrentLocale, t } from '../../utils/i18n';
+import type { Locale } from '../../data/locales';
+
+interface Props {
+  locale?: string;
+}
+
+const { locale: localeProp } = Astro.props;
+const locale = (localeProp ?? getCurrentLocale(Astro.url) ?? 'en') as Locale;
+
+// Translation map for nav item labels
+const navLabelKeys: Record<string, string> = {
+  'Services': 'nav.services',
+  'Case Studies': 'nav.caseStudies',
+  'Blog': 'nav.blog',
+  'About': 'nav.about',
+  'Contact': 'nav.contact',
+};
+
+// Translation map for mega-menu pillar group labels
+const pillarLabelKeys: Record<string, string> = {
+  'Search & AI Intelligence': 'pillar.search-ai-intelligence',
+  'Performance Media': 'pillar.performance-media',
+  'Authority & PR': 'pillar.authority-pr',
+  'Content & Copywriting': 'pillar.content-copywriting',
+  'Data & Web': 'pillar.data-web',
+};
+
+function localizeLabel(label: string): string {
+  const key = navLabelKeys[label] ?? pillarLabelKeys[label];
+  if (key) return t(key, locale);
+  // Try as a service name
+  const serviceKey = Object.entries({
+    'AI Search Optimisation': 'service.ai-search-optimisation',
+    'Technical SEO Audit': 'service.technical-seo-audit',
+    'Local SEO Consulting': 'service.local-seo-consulting',
+    'Performance Ads Management': 'service.performance-ads-management',
+    'Google Ads Management': 'service.google-ads-management',
+    'Google Ads Audit': 'service.google-ads-audit',
+    'Paid Social Strategy': 'service.paid-social-strategy',
+    'Digital PR Strategy': 'service.digital-pr-strategy',
+    'Reactive PR': 'service.reactive-pr',
+    'Authority Link Building': 'service.authority-link-building',
+    'Content Marketing': 'service.content-marketing',
+    'SEO Copywriting': 'service.seo-copywriting',
+    'Copywriting Audit': 'service.copywriting-audit',
+    'Audience Persona Mapping': 'service.audience-persona-mapping',
+    'Technical Web Design': 'service.technical-web-design',
+    'Google Analytics Consultancy': 'service.google-analytics-consultancy',
+    'Performance Web Development': 'service.performance-web-development',
+    'ROI Reporting & Transparency': 'service.roi-reporting-transparency',
+  }).find(([name]) => name === label);
+  if (serviceKey) return t(serviceKey[1], locale);
+  return label;
+}
+---
+
+<header class="sticky top-0 z-40 bg-cream/95 backdrop-blur-sm border-b border-gray-light/30">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <Logo variant="stacked-light" />
+
+    <!-- Desktop Nav -->
+    <div class="hidden lg:flex items-center gap-8">
+      {mainNav.map((item) => (
+        <div class="relative group">
+          <a
+            href={item.href}
+            class="text-sm font-label font-semibold uppercase tracking-wide text-dark hover:text-blue transition-colors"
+          >
+            {localizeLabel(item.label)}
+          </a>
+          {item.children && (
+            <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+              <div class="bg-white border border-gray-light rounded-lg shadow-xl p-6 grid grid-cols-2 gap-6 min-w-[480px]">
+                {item.children.map((group) => (
+                  <div>
+                    <a href={group.href} class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-3 block">
+                      {localizeLabel(group.label)}
+                    </a>
+                    {group.children && (
+                      <ul class="space-y-2">
+                        {group.children.map((child) => (
+                          <li>
+                            <a href={child.href} class="text-sm font-body text-dark hover:text-blue transition-colors">
+                              {localizeLabel(child.label)}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <div class="flex items-center gap-4">
+      <LocaleSwitcher />
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-toggle"
+        class="lg:hidden p-2 text-dark"
+        aria-label="Open menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-light">
+    <div class="px-6 py-4 space-y-4">
+      {mainNav.map((item) => (
+        <a href={item.href} class="block text-sm font-label font-semibold uppercase tracking-wide text-dark">
+          {localizeLabel(item.label)}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

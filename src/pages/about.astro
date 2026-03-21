@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/ui/HeroSection.astro';
+import Section from '../components/ui/Section.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+---
+
+<BaseLayout
+  title="About StarkRank — Swiss-Founded, Globally Driven"
+  description="StarkRank is a Swiss-founded digital marketing agency with offices in the US, Peru, Germany, and Switzerland. We combine technical precision with creative authority."
+>
+  <HeroSection
+    headline="Swiss-Founded. Globally Driven."
+    subheadline="We bridge the gap between high-end brand authority and deep technical execution across four continents."
+  />
+
+  <Section bg="cream">
+    <SectionHeader label="Our Story" title="Built for the AI Era" />
+    <div class="prose prose-lg max-w-3xl font-body text-dark">
+      <p>
+        StarkRank was founded with a simple conviction: businesses deserve marketing partners who understand both the technical mechanics of search and the human psychology behind every click.
+      </p>
+      <p>
+        From our roots in Switzerland to our operations in the United States, Peru, and Germany, we bring a unique blend of Swiss precision and global perspective to every engagement.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <SectionHeader label="Global Presence" title="Four Markets. One Vision." align="center" />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        { region: 'United States', cities: 'Miami, Fort Lauderdale', focus: 'Performance Media & AI Search' },
+        { region: 'Switzerland', cities: 'Basel, Zürich', focus: 'Technical SEO & Analytics' },
+        { region: 'Germany', cities: 'Hannover', focus: 'DACH Market Strategy' },
+        { region: 'Peru', cities: 'Lima', focus: 'LATAM Digital Growth' },
+      ].map((office) => (
+        <div class="bg-cream rounded-lg p-6">
+          <h3 class="text-lg font-headline font-black text-navy">{office.region}</h3>
+          <p class="mt-2 text-sm font-body text-gray">{office.cities}</p>
+          <p class="mt-1 text-xs font-label font-semibold uppercase tracking-wide text-blue">{office.focus}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

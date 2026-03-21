@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import Button from '../../components/ui/Button.astro';
+---
+
+<BaseLayout
+  title="Copywriting & UX Audit — StarkRank"
+  description="Is your website converting visitors into leads? Get a comprehensive copywriting and UX audit to identify where your site is losing customers."
+>
+  <HeroSection
+    headline="Copywriting & UX Audit"
+    subheadline="Is your website selling — or just existing? We'll show you where your copy is losing leads and how to fix it."
+  >
+    <Button href="#audit-form" variant="primary" size="lg">Request Your Audit</Button>
+  </HeroSection>
+
+  <Section bg="cream" id="audit-form">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div>
+        <h2 class="text-3xl font-headline font-black text-navy mb-6">What We Review</h2>
+        <ul class="space-y-4">
+          {[
+            'Landing page copy effectiveness and clarity',
+            'Call-to-action placement and persuasion',
+            'User flow and conversion funnel analysis',
+            'Headline and value proposition strength',
+            'SEO content alignment with search intent',
+            'Mobile UX and readability assessment',
+          ].map((item) => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-blue mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-sm font-body text-dark">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <form class="space-y-6" method="POST">
+          <div>
+            <label for="name" class="block text-sm font-label font-semibold uppercase tracking-wide text-dark mb-2">Name</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-light rounded-md font-body text-dark bg-white focus:border-blue focus:outline-none" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-label font-semibold uppercase tracking-wide text-dark mb-2">Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-light rounded-md font-body text-dark bg-white focus:border-blue focus:outline-none" />
+          </div>
+          <div>
+            <label for="site-url" class="block text-sm font-label font-semibold uppercase tracking-wide text-dark mb-2">Website URL</label>
+            <input type="url" id="site-url" name="url" required class="w-full px-4 py-3 border border-gray-light rounded-md font-body text-dark bg-white focus:border-blue focus:outline-none" />
+          </div>
+          <Button variant="primary" size="lg">Request Free Audit</Button>
+        </form>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Card from '../../components/ui/Card.astro';
+import { getCollection } from 'astro:content';
+import { pillars } from '../../data/pillars';
+
+const allServices = await getCollection('services');
+---
+
+<BaseLayout
+  title="Digital Marketing Services — StarkRank"
+  description="Explore StarkRank's full suite of digital marketing services: AI search optimisation, technical SEO, Google Ads, digital PR, content marketing, and analytics consultancy."
+>
+  <HeroSection
+    headline="Our Services"
+    subheadline="Full-service digital growth, from AI search intelligence to transparent reporting."
+  />
+
+  {pillars.map((pillar) => {
+    const pillarServices = allServices.filter((s) => s.data.pillar === pillar.id);
+    return (
+      <Section bg={pillars.indexOf(pillar) % 2 === 0 ? 'cream' : 'white'}>
+        <SectionHeader
+          label={pillar.tagline}
+          title={pillar.name}
+          subtitle={pillar.description}
+        />
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {pillarServices.map((service) => (
+            <Card href={`/services/${service.data.slug}/`}>
+              {service.data.isPillarHub && (
+                <span class="text-[10px] font-label font-bold uppercase tracking-widest text-blue mb-2 block">Hub</span>
+              )}
+              <h3 class="text-lg font-headline font-bold text-navy">{service.data.title}</h3>
+              <p class="mt-2 text-sm font-body text-gray leading-relaxed">{service.data.description}</p>
+            </Card>
+          ))}
+        </div>
+      </Section>
+    );
+  })}
+</BaseLayout>

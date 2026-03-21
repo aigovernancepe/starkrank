@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import PillarCard from '../../components/ui/PillarCard.astro';
+import Button from '../../components/ui/Button.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import { getLocalizedPillars } from '../../data/pillars';
+import { getSpokePath } from '../../data/service-slugs';
+
+const pillars = getLocalizedPillars('de');
+
+const pillarCityLinks: Record<string, string> = {
+  'search-ai-intelligence': `/de/${getSpokePath('ai-search-optimisation', 'hannover', 'de')}/`,
+  'performance-media': `/de/${getSpokePath('google-ads-management', 'hannover', 'de')}/`,
+  'authority-pr': `/de/${getSpokePath('reactive-pr', 'hannover', 'de')}/`,
+  'content-copywriting': `/de/${getSpokePath('seo-copywriting', 'hannover', 'de')}/`,
+  'data-web': `/de/${getSpokePath('google-analytics-consultancy', 'hannover', 'de')}/`,
+};
+---
+
+<BaseLayout
+  title="StarkRank Deutschland — Datengetriebenes Digitales Marketing"
+  description="StarkRank ist eine globale Digital-Marketing-Agentur mit Fokus auf KI-Suchoptimierung, technisches SEO und datengetriebene Wachstumsstrategien für den deutschen Markt."
+  locale="de"
+>
+  <HeroSection
+    headline="Datengetriebenes Wachstum für das KI-Zeitalter"
+    subheadline="Wir optimieren Ihre Marke für Suchmaschinen, KI-Plattformen und die Menschen dahinter."
+  >
+    <Button href="/de/kontakt/" variant="primary" size="lg">Kontakt</Button>
+  </HeroSection>
+
+  <Section bg="cream">
+    <SectionHeader label="Unsere Leistungen" title="Fünf Säulen des digitalen Wachstums" align="center" />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {pillars.map((pillar) => <PillarCard pillar={pillar} locale="de" href={pillarCityLinks[pillar.id]} />)}
+    </div>
+  </Section>
+
+  <CTABanner bg="navy" title="Bereit zu wachsen?" subtitle="Buchen Sie eine kostenlose Beratung.">
+    <Button href="/contact/" variant="primary" size="lg">Kontaktieren Sie uns</Button>
+  </CTABanner>
+</BaseLayout>

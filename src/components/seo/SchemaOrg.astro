@@ -1,0 +1,93 @@
+---
+interface Props {
+  type: 'organization' | 'localBusiness' | 'service' | 'website' | 'article';
+  data?: Record<string, unknown>;
+}
+
+const { type, data = {} } = Astro.props;
+const site = Astro.site?.origin ?? 'https://starkrank.com';
+
+function buildSchema(type: string, data: Record<string, unknown>) {
+  const schemas: Record<string, () => Record<string, unknown>> = {
+    organization: () => ({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      '@id': `${site}/#organization`,
+      name: 'StarkRank',
+      url: site,
+      logo: `${site}/images/logos/starkrank-dark-avatar.svg`,
+      description: 'Data-driven digital marketing agency specialising in AI search optimisation, technical SEO, and performance media.',
+      foundingDate: '2026',
+      ...data,
+    }),
+
+    localBusiness: () => ({
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      '@id': `${site}/#local-${data.citySlug ?? 'office'}`,
+      name: `StarkRank ${data.city ?? ''}`.trim(),
+      url: data.url ?? site,
+      parentOrganization: { '@id': `${site}/#organization` },
+      ...(data.address && {
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: data.city,
+          addressRegion: data.region,
+          postalCode: data.postalCode,
+          addressCountry: data.country,
+        },
+      }),
+      ...(data.coordinates && {
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: (data.coordinates as { lat: number }).lat,
+          longitude: (data.coordinates as { lng: number }).lng,
+        },
+      }),
+      ...data,
+    }),
+
+    service: () => ({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: data.title,
+      description: data.description,
+      provider: { '@id': `${site}/#organization` },
+      url: data.url ?? `${site}${Astro.url.pathname}`,
+      ...data,
+    }),
+
+    website: () => ({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': `${site}/#website`,
+      name: 'StarkRank',
+      url: site,
+      publisher: { '@id': `${site}/#organization` },
+      ...data,
+    }),
+
+    article: () => ({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: data.title,
+      description: data.description,
+      datePublished: data.pubDate,
+      dateModified: data.updatedDate ?? data.pubDate,
+      author: {
+        '@type': 'Organization',
+        name: 'StarkRank',
+      },
+      publisher: { '@id': `${site}/#organization` },
+      url: data.url ?? `${site}${Astro.url.pathname}`,
+      ...data,
+    }),
+  };
+
+  return schemas[type]?.() ?? {};
+}
+
+const schema = buildSchema(type, data);
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

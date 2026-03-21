@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/ui/HeroSection.astro';
+import Section from '../components/ui/Section.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import Button from '../components/ui/Button.astro';
+---
+
+<BaseLayout
+  title="Contact StarkRank — Get in Touch"
+  description="Ready to grow? Contact StarkRank for a free consultation on AI search optimisation, SEO, PPC, and digital marketing services."
+>
+  <HeroSection
+    headline="Get in Touch"
+    subheadline="Ready to grow? Let's talk about your digital strategy."
+  />
+
+  <Section bg="cream">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div>
+        <SectionHeader label="Send a Message" title="Tell Us About Your Goals" />
+        <form class="space-y-6" method="POST" action="/contact/">
+          <div>
+            <label for="name" class="block text-sm font-label font-semibold uppercase tracking-wide text-dark mb-2">Name</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-light rounded-md font-body text-dark bg-white focus:border-blue focus:outline-none" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-label font-semibold uppercase tracking-wide text-dark mb-2">Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-light rounded-md font-body text-dark bg-white focus:border-blue focus:outline-none" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-label font-semibold uppercase tracking-wide text-dark mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-light rounded-md font-body text-dark bg-white focus:border-blue focus:outline-none resize-y"></textarea>
+          </div>
+          <Button variant="primary" size="lg">Send Message</Button>
+        </form>
+      </div>
+
+      <div>
+        <SectionHeader label="Our Offices" title="Find Us Worldwide" />
+        <div class="space-y-8">
+          {[
+            { region: 'United States', address: 'South Florida', email: 'us@starkrank.com' },
+            { region: 'Switzerland', address: 'Basel-Landschaft', email: 'ch@starkrank.com' },
+            { region: 'Germany', address: 'Hannover', email: 'de@starkrank.com' },
+            { region: 'Peru', address: 'Lima', email: 'pe@starkrank.com' },
+          ].map((office) => (
+            <div class="border-b border-gray-light/40 pb-6">
+              <h3 class="text-lg font-headline font-black text-navy">{office.region}</h3>
+              <p class="mt-1 text-sm font-body text-gray">{office.address}</p>
+              <a href={`mailto:${office.email}`} class="mt-1 text-sm font-body text-blue hover:text-blue-light">
+                {office.email}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

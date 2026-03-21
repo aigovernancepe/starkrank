@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Card from '../../components/ui/Card.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import { getCollection, render } from 'astro:content';
+import { getPillarById } from '../../data/pillars';
+
+export async function getStaticPaths() {
+  const services = await getCollection('services');
+  return services.map((service) => ({
+    params: { slug: service.data.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+const { Content } = await render(service);
+const pillar = getPillarById(service.data.pillar);
+
+const allServices = await getCollection('services');
+const relatedServices = service.data.relatedServices
+  ? allServices.filter((s) => service.data.relatedServices!.includes(s.data.slug))
+  : [];
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: service.data.title,
+  description: service.data.description,
+  provider: { '@id': 'https://starkrank.com/#organization' },
+  url: `https://starkrank.com/services/${service.data.slug}/`,
+};
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  ...(pillar ? [{ label: pillar.name, href: `/services/${pillar.services[0]}/` }] : []),
+  { label: service.data.title, href: `/services/${service.data.slug}/` },
+];
+---
+
+<BaseLayout
+  title={`${service.data.title} — StarkRank`}
+  description={service.data.description}
+  schema={serviceSchema}
+>
+  <Section bg="cream">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2">
+        <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+          {pillar?.tagline}
+        </span>
+        <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+          {service.data.title}
+        </h1>
+        <p class="mt-4 text-lg text-gray font-body leading-relaxed">
+          {service.data.description}
+        </p>
+
+        <div class="mt-8 prose prose-lg max-w-none font-body text-dark">
+          <Content />
+        </div>
+
+        {service.data.features && service.data.features.length > 0 && (
+          <div class="mt-12">
+            <h2 class="text-2xl font-headline font-black text-navy mb-6">What's Included</h2>
+            <ul class="space-y-3">
+              {service.data.features.map((feature: string) => (
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-blue mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-sm font-body text-dark">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div class="mt-12">
+          <Button href="/contact/" variant="primary" size="lg">Get Started</Button>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="lg:col-span-1">
+        {relatedServices.length > 0 && (
+          <div>
+            <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Related Services</h3>
+            <div class="space-y-3">
+              {relatedServices.map((related) => (
+                <Card href={`/services/${related.data.slug}/`}>
+                  <h4 class="text-sm font-headline font-bold text-navy">{related.data.title}</h4>
+                </Card>
+              ))}
+            </div>
+          </div>
+        )}
+      </aside>
+    </div>
+  </Section>
+
+  <CTABanner bg="navy" title="Ready to Grow?" subtitle="Book a free consultation to discuss your digital strategy.">
+    <Button href="/contact/" variant="primary" size="lg">Contact Us</Button>
+  </CTABanner>
+</BaseLayout>

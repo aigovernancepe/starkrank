@@ -1,0 +1,30 @@
+import { defineConfig } from 'astro/config';
+import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
+
+export default defineConfig({
+  site: 'https://starkrank.com',
+  trailingSlash: 'always',
+  output: 'static',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'pe', 'de', { path: 'ch-de', codes: ['ch-de'] }],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+    fallback: {
+      pe: 'en',
+      de: 'en',
+      'ch-de': 'de',
+    },
+  },
+  redirects: {
+    '/schweiz/': '/ch-de/',
+    '/peru/': '/pe/',
+    '/deutschland/': '/de/',
+  },
+  integrations: [sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+});

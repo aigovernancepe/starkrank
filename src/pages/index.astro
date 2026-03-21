@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/ui/HeroSection.astro';
+import Section from '../components/ui/Section.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import PillarCard from '../components/ui/PillarCard.astro';
+import Button from '../components/ui/Button.astro';
+import CTABanner from '../components/ui/CTABanner.astro';
+import { pillars } from '../data/pillars';
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://starkrank.com/#organization',
+  name: 'StarkRank',
+  url: 'https://starkrank.com',
+  logo: 'https://starkrank.com/images/logos/starkrank-dark-avatar.svg',
+  description: 'Data-driven digital marketing agency specialising in AI search optimisation, technical SEO, and performance media.',
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://starkrank.com/#website',
+  name: 'StarkRank',
+  url: 'https://starkrank.com',
+  publisher: { '@id': 'https://starkrank.com/#organization' },
+};
+---
+
+<BaseLayout
+  title="StarkRank — Data-Driven Growth for the AI Era"
+  description="StarkRank is a global digital marketing agency specialising in AI search optimisation, technical SEO, performance ads, and data-driven growth strategies."
+  schema={[orgSchema, websiteSchema]}
+>
+  <HeroSection
+    headline="Data-Driven Growth for the AI Era"
+    subheadline="We optimise your brand for search engines, AI platforms, and the humans behind both."
+  >
+    <Button href="/services/" variant="primary" size="lg">View Services</Button>
+    <Button href="/contact/" variant="secondary" size="lg">Get in Touch</Button>
+  </HeroSection>
+
+  <Section bg="cream">
+    <SectionHeader
+      label="What We Do"
+      title="Five Pillars of Digital Growth"
+      subtitle="From AI search intelligence to transparent ROI reporting, we cover every angle of your digital presence."
+      align="center"
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {pillars.map((pillar) => (
+        <PillarCard pillar={pillar} />
+      ))}
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <SectionHeader
+      label="Why StarkRank"
+      title="Technical Precision. Creative Authority."
+      align="center"
+    />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div>
+        <p class="text-4xl font-headline font-black text-blue">100+</p>
+        <p class="mt-2 text-sm font-body text-gray">Clients Served Globally</p>
+      </div>
+      <div>
+        <p class="text-4xl font-headline font-black text-blue">4</p>
+        <p class="mt-2 text-sm font-body text-gray">Countries, One Strategy</p>
+      </div>
+      <div>
+        <p class="text-4xl font-headline font-black text-blue">14</p>
+        <p class="mt-2 text-sm font-body text-gray">Specialist Services</p>
+      </div>
+    </div>
+  </Section>
+
+  <CTABanner
+    bg="navy"
+    title="Is Your Ad Spend Working?"
+    subtitle="Get a free Google Ads audit and discover where your budget is leaking."
+  >
+    <Button href="/audits/free-google-ads-check/" variant="primary" size="lg">Free Ads Audit</Button>
+    <Button href="/audits/copywriting-ux-analysis/" variant="ghost" size="lg">Copywriting Audit</Button>
+  </CTABanner>
+</BaseLayout>

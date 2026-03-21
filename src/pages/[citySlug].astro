@@ -1,0 +1,33 @@
+---
+import CitySpokePage from '../components/pages/CitySpokePage.astro';
+import { getCollection } from 'astro:content';
+import { getSpokePath } from '../data/service-slugs';
+
+export async function getStaticPaths() {
+  const cities = await getCollection('cities');
+  const services = await getCollection('services');
+  const enCities = cities.filter((c) => c.data.locale === 'en');
+
+  const paths: Array<{ params: { citySlug: string }; props: Record<string, unknown> }> = [];
+
+  for (const city of enCities) {
+    for (const serviceSlug of city.data.services) {
+      const service = services.find((s) => s.data.slug === serviceSlug);
+      if (!service) continue;
+
+      const spokeSlug = getSpokePath(serviceSlug, city.data.citySlug, 'en');
+
+      paths.push({
+        params: { citySlug: spokeSlug },
+        props: { city: city.data, service: service.data, spokeSlug },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { city, service, spokeSlug } = Astro.props;
+---
+
+<CitySpokePage city={city} service={service} locale="en" spokeSlug={spokeSlug} />

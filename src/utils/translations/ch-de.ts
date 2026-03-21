@@ -1,0 +1,75 @@
+export const chde: Record<string, string> = {
+  'nav.services': 'Leistungen',
+  'nav.caseStudies': 'Referenzen',
+  'nav.blog': 'Blog',
+  'nav.about': 'Über uns',
+  'nav.contact': 'Kontakt',
+
+  // Pillar Names
+  'pillar.search-ai-intelligence': 'Suche & KI-Intelligenz',
+  'pillar.performance-media': 'Performance Media',
+  'pillar.authority-pr': 'Autorität & PR',
+  'pillar.content-copywriting': 'Content & Texterstellung',
+  'pillar.data-web': 'Daten & Web',
+
+  'hero.headline': 'Datengetriebenes Wachstum für das KI-Zeitalter',
+  'hero.subheadline': 'Wir optimieren Ihre Marke für Suchmaschinen, KI-Plattformen und die Menschen dahinter.',
+  'hero.cta': 'Jetzt starten',
+
+  'cta.freeAudit': 'Kostenloses Audit',
+  'cta.contactUs': 'Kontaktieren Sie uns',
+  'cta.learnMore': 'Mehr erfahren',
+  'cta.viewServices': 'Alle Leistungen',
+
+  'footer.tagline': 'Suchintelligenz. Globale Reichweite.',
+  'footer.services': 'Leistungen',
+  'footer.company': 'Unternehmen',
+  'footer.audits': 'Kostenlose Audits',
+  'footer.rights': 'Alle Rechte vorbehalten.',
+  'footer.freeAdsAudit': 'Kostenloses Google Ads Audit',
+  'footer.copywritingAudit': 'Texterstellungs-Audit',
+
+  'services.title': 'Unsere Leistungen',
+  'services.subtitle': 'Ganzheitliches digitales Wachstum, von KI-Suche bis transparentes Reporting.',
+
+  'blog.title': 'Einblicke',
+  'blog.subtitle': 'Expertenperspektiven zu Suche, KI und digitalem Wachstum.',
+
+  'contact.title': 'Kontakt',
+  'contact.subtitle': 'Bereit zu wachsen? Lassen Sie uns sprechen.',
+
+  // Service Names
+  'service.ai-search-optimisation': 'KI-Suchoptimierung',
+  'service.technical-seo-audit': 'Technisches SEO-Audit',
+  'service.local-seo-consulting': 'Lokale SEO-Beratung',
+  'service.performance-ads-management': 'Performance-Ads-Management',
+  'service.google-ads-management': 'Google Ads Management',
+  'service.google-ads-audit': 'Google Ads Audit',
+  'service.paid-social-strategy': 'Paid-Social-Strategie',
+  'service.digital-pr-strategy': 'Digitale PR-Strategie',
+  'service.reactive-pr': 'Reaktive Pressearbeit',
+  'service.authority-link-building': 'Strategischer Linkaufbau',
+  'service.content-marketing': 'Content Marketing',
+  'service.seo-copywriting': 'SEO-Texterstellung',
+  'service.copywriting-audit': 'Texterstellungs-Audit',
+  'service.audience-persona-mapping': 'Zielgruppen- und Persona-Analyse',
+  'service.technical-web-design': 'Technisches Webdesign',
+  'service.google-analytics-consultancy': 'Google Analytics Beratung',
+  'service.performance-web-development': 'Performance-Webentwicklung',
+  'service.roi-reporting-transparency': 'ROI-Reporting und Transparenz',
+
+  // City Spoke Pages
+  'spoke.in': 'in',
+  'spoke.servicesIn': 'Dienstleistungen in',
+  'spoke.description': '{service}-Dienstleistungen in {city}, {country}. StarkRank liefert datengetriebene digitale Marketinglösungen, massgeschneidert für den Markt in {city}.',
+  'spoke.whyCity': 'Warum {city}?',
+  'spoke.whyCityText': 'Der Markt in {city} verlangt einen Partner, der lokales Suchverhalten und globale Best Practices versteht. StarkRank verbindet tiefgehende technische Expertise mit lokalem Marktwissen, um messbare Ergebnisse zu liefern.',
+  'spoke.approach': 'Unser Ansatz',
+  'spoke.approachText': 'Wir beginnen mit Daten. Jede {service}-Strategie, die wir für Unternehmen in {city} entwickeln, basiert auf Suchintelligenz, Wettbewerbsanalyse und klaren ROI-Kennzahlen.',
+  'spoke.otherServices': 'Weitere Leistungen in {city}',
+  'spoke.contactIn': 'Kontaktieren Sie uns in {city}',
+  'spoke.growBusiness': 'Wachsen Sie in {city}',
+  'spoke.bookConsultation': 'Buchen Sie eine kostenlose Beratung mit unserem lokalen Team.',
+  'spoke.getStarted': 'Jetzt starten',
+  'spoke.home': 'Startseite',
+};

@@ -1,0 +1,75 @@
+export const pe: Record<string, string> = {
+  'nav.services': 'Servicios',
+  'nav.caseStudies': 'Casos de Éxito',
+  'nav.blog': 'Blog',
+  'nav.about': 'Nosotros',
+  'nav.contact': 'Contacto',
+
+  // Pillar Names
+  'pillar.search-ai-intelligence': 'Búsqueda e Inteligencia IA',
+  'pillar.performance-media': 'Medios de Rendimiento',
+  'pillar.authority-pr': 'Autoridad y PR',
+  'pillar.content-copywriting': 'Contenido y Redacción',
+  'pillar.data-web': 'Datos y Web',
+
+  'hero.headline': 'Crecimiento Basado en Datos para la Era de la IA',
+  'hero.subheadline': 'Optimizamos tu marca para motores de búsqueda, plataformas de IA y las personas detrás de ambos.',
+  'hero.cta': 'Empezar',
+
+  'cta.freeAudit': 'Auditoría Gratuita',
+  'cta.contactUs': 'Contáctenos',
+  'cta.learnMore': 'Más Información',
+  'cta.viewServices': 'Ver Todos los Servicios',
+
+  'footer.tagline': 'Inteligencia de Búsqueda. Alcance Global.',
+  'footer.services': 'Servicios',
+  'footer.company': 'Empresa',
+  'footer.audits': 'Auditorías Gratuitas',
+  'footer.rights': 'Todos los derechos reservados.',
+  'footer.freeAdsAudit': 'Auditoría Gratuita de Google Ads',
+  'footer.copywritingAudit': 'Auditoría de Redacción',
+
+  'services.title': 'Nuestros Servicios',
+  'services.subtitle': 'Crecimiento digital integral, desde búsqueda IA hasta reportes transparentes.',
+
+  'blog.title': 'Perspectivas',
+  'blog.subtitle': 'Perspectivas expertas sobre búsqueda, IA y crecimiento digital.',
+
+  'contact.title': 'Contáctenos',
+  'contact.subtitle': '¿Listo para crecer? Hablemos.',
+
+  // Service Names
+  'service.ai-search-optimisation': 'Optimización de Búsqueda IA',
+  'service.technical-seo-audit': 'Auditoría SEO Técnica',
+  'service.local-seo-consulting': 'Consultoría SEO Local',
+  'service.performance-ads-management': 'Gestión de Anuncios de Rendimiento',
+  'service.google-ads-management': 'Gestión de Google Ads',
+  'service.google-ads-audit': 'Auditoría de Google Ads',
+  'service.paid-social-strategy': 'Estrategia de Redes Sociales Pagadas',
+  'service.digital-pr-strategy': 'Estrategia de PR Digital',
+  'service.reactive-pr': 'PR Reactivo',
+  'service.authority-link-building': 'Construcción de Enlaces de Autoridad',
+  'service.content-marketing': 'Marketing de Contenidos',
+  'service.seo-copywriting': 'Redacción SEO',
+  'service.copywriting-audit': 'Auditoría de Redacción',
+  'service.audience-persona-mapping': 'Mapeo de Personas y Audiencia',
+  'service.technical-web-design': 'Diseño Web Técnico',
+  'service.google-analytics-consultancy': 'Consultoría Google Analytics',
+  'service.performance-web-development': 'Desarrollo Web de Alto Rendimiento',
+  'service.roi-reporting-transparency': 'Reportes de ROI y Transparencia',
+
+  // City Spoke Pages
+  'spoke.in': 'en',
+  'spoke.servicesIn': 'servicios en',
+  'spoke.description': 'Servicios de {service} en {city}, {country}. StarkRank ofrece soluciones de marketing digital basadas en datos, adaptadas al mercado de {city}.',
+  'spoke.whyCity': '¿Por qué {city}?',
+  'spoke.whyCityText': 'El mercado de {city} exige un socio que entienda el comportamiento de búsqueda local y las mejores prácticas globales. StarkRank combina experiencia técnica profunda con conocimiento del mercado local para entregar resultados medibles.',
+  'spoke.approach': 'Nuestro Enfoque',
+  'spoke.approachText': 'Comenzamos con datos. Cada estrategia de {service} que construimos para empresas en {city} está fundamentada en inteligencia de búsqueda, análisis competitivo y métricas claras de ROI.',
+  'spoke.otherServices': 'Otros Servicios en {city}',
+  'spoke.contactIn': 'Contáctenos en {city}',
+  'spoke.growBusiness': 'Haga Crecer su Negocio en {city}',
+  'spoke.bookConsultation': 'Agende una consulta gratuita con nuestro equipo local.',
+  'spoke.getStarted': 'Empezar',
+  'spoke.home': 'Inicio',
+};

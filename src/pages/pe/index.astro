@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import PillarCard from '../../components/ui/PillarCard.astro';
+import Button from '../../components/ui/Button.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import { getLocalizedPillars } from '../../data/pillars';
+import { getSpokePath } from '../../data/service-slugs';
+
+const pillars = getLocalizedPillars('pe');
+
+const pillarCityLinks: Record<string, string> = {
+  'search-ai-intelligence': `/pe/${getSpokePath('ai-search-optimisation', 'lima', 'pe')}/`,
+  'performance-media': `/pe/${getSpokePath('google-ads-management', 'lima', 'pe')}/`,
+  'authority-pr': `/pe/${getSpokePath('reactive-pr', 'lima', 'pe')}/`,
+  'content-copywriting': `/pe/${getSpokePath('seo-copywriting', 'lima', 'pe')}/`,
+  'data-web': `/pe/${getSpokePath('google-analytics-consultancy', 'lima', 'pe')}/`,
+};
+---
+
+<BaseLayout
+  title="StarkRank Perú — Marketing Digital Basado en Datos"
+  description="StarkRank es una agencia global de marketing digital especializada en optimización de búsqueda IA, SEO técnico y estrategias de crecimiento basadas en datos."
+  locale="pe"
+>
+  <HeroSection
+    headline="Crecimiento Basado en Datos para la Era de la IA"
+    subheadline="Optimizamos tu marca para motores de búsqueda, plataformas de IA y las personas detrás de ambos."
+  >
+    <Button href="/pe/contacto/" variant="primary" size="lg">Contacto</Button>
+  </HeroSection>
+
+  <Section bg="cream">
+    <SectionHeader label="Nuestros Servicios" title="Cinco Pilares del Crecimiento Digital" align="center" />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {pillars.map((pillar) => <PillarCard pillar={pillar} locale="pe" href={pillarCityLinks[pillar.id]} />)}
+    </div>
+  </Section>
+
+  <CTABanner bg="navy" title="¿Listo para crecer?" subtitle="Agenda una consulta gratuita.">
+    <Button href="/contact/" variant="primary" size="lg">Contáctenos</Button>
+  </CTABanner>
+</BaseLayout>

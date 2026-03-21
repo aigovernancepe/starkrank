@@ -1,0 +1,30 @@
+---
+interface Props {
+  variant?: 'inline-light' | 'inline-dark' | 'stacked-dark' | 'stacked-transparent' | 'stacked-light' | 'mark';
+  size?: 'sm' | 'md' | 'lg';
+  class?: string;
+}
+
+const { variant = 'inline-dark', size = 'md', class: className = '' } = Astro.props;
+
+const sizeClasses: Record<string, string> = {
+  sm: 'h-6 w-auto',
+  md: 'h-8 w-auto',
+  lg: 'h-12 w-auto',
+};
+
+const logoMap: Record<string, string> = {
+  'inline-light': '/images/logos/starkrank-inline-light.svg',
+  'inline-dark': '/images/logos/starkrank-inline-dark.svg',
+  'stacked-dark': '/images/logos/starkrank-dark-stacked.svg',
+  'stacked-transparent': '/images/logos/starkrank-dark-stacked-transparent.svg',
+  'stacked-light': '/images/logos/starkrank-lockup-light.svg',
+  'mark': '/images/logos/starkrank-dark-mark.svg',
+};
+
+const src = logoMap[variant] ?? logoMap['inline-dark'];
+---
+
+<a href="/" class:list={['inline-block', className]}>
+  <img src={src} alt="StarkRank" width="160" height="40" class={sizeClasses[size]} />
+</a>

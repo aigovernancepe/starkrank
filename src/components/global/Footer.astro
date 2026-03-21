@@ -1,0 +1,102 @@
+---
+import Logo from './Logo.astro';
+import { footerNav } from '../../data/navigation';
+import { getCurrentLocale, t } from '../../utils/i18n';
+import type { Locale } from '../../data/locales';
+
+interface Props {
+  locale?: string;
+}
+
+const { locale: localeProp } = Astro.props;
+const locale = (localeProp ?? getCurrentLocale(Astro.url) ?? 'en') as Locale;
+const year = new Date().getFullYear();
+
+const pillarKeys: Record<string, string> = {
+  'Search & AI': 'pillar.search-ai-intelligence',
+  'Performance Media': 'pillar.performance-media',
+  'Authority & PR': 'pillar.authority-pr',
+  'Content & Copy': 'pillar.content-copywriting',
+  'Data & Web': 'pillar.data-web',
+};
+
+const companyKeys: Record<string, string> = {
+  'About': 'nav.about',
+  'Case Studies': 'nav.caseStudies',
+  'Blog': 'nav.blog',
+  'Contact': 'nav.contact',
+};
+
+const auditKeys: Record<string, string> = {
+  'Free Google Ads Audit': 'footer.freeAdsAudit',
+  'Copywriting Audit': 'footer.copywritingAudit',
+};
+---
+
+<footer class="bg-navy text-cream">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <!-- Brand -->
+      <div>
+        <Logo variant="stacked-transparent" size="lg" class="mb-4" />
+        <p class="text-sm text-gray-light mt-4 font-body">
+          {t('footer.tagline', locale)}
+        </p>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">
+          {t('footer.services', locale)}
+        </h4>
+        <ul class="space-y-2">
+          {footerNav.pillars.map((item) => (
+            <li>
+              <a href={item.href} class="text-sm font-body text-gray-light hover:text-cream transition-colors">
+                {t(pillarKeys[item.label] ?? item.label, locale)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h4 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">
+          {t('footer.company', locale)}
+        </h4>
+        <ul class="space-y-2">
+          {footerNav.company.map((item) => (
+            <li>
+              <a href={item.href} class="text-sm font-body text-gray-light hover:text-cream transition-colors">
+                {t(companyKeys[item.label] ?? item.label, locale)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Audits -->
+      <div>
+        <h4 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">
+          {t('footer.audits', locale)}
+        </h4>
+        <ul class="space-y-2">
+          {footerNav.audits.map((item) => (
+            <li>
+              <a href={item.href} class="text-sm font-body text-gray-light hover:text-cream transition-colors">
+                {t(auditKeys[item.label] ?? item.label, locale)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray/20 text-center">
+      <p class="text-xs text-gray font-body">
+        &copy; {year} StarkRank. {t('footer.rights', locale)}
+      </p>
+    </div>
+  </div>
+</footer>
