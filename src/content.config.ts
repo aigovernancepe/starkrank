@@ -56,4 +56,16 @@ const cities = defineCollection({
   }),
 });
 
-export const collections = { services, blog, cities };
+const spokes = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/spokes' }),
+  schema: z.object({
+    serviceSlug: z.string(),
+    citySlug: z.string(),
+    locale: z.enum(['en', 'pe', 'de', 'ch-de']),
+    title: z.string(),
+    description: z.string(),
+    localCTA: z.string().optional(),
+  }),
+});
+
+export const collections = { services, blog, cities, spokes };

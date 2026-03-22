@@ -6,6 +6,7 @@ import { getSpokePath } from '../data/service-slugs';
 export async function getStaticPaths() {
   const cities = await getCollection('cities');
   const services = await getCollection('services');
+  const spokeEntries = await getCollection('spokes');
   const enCities = cities.filter((c) => c.data.locale === 'en');
 
   const paths: Array<{ params: { citySlug: string }; props: Record<string, unknown> }> = [];
@@ -16,10 +17,13 @@ export async function getStaticPaths() {
       if (!service) continue;
 
       const spokeSlug = getSpokePath(serviceSlug, city.data.citySlug, 'en');
+      const spoke = spokeEntries.find(
+        (s) => s.data.serviceSlug === serviceSlug && s.data.citySlug === city.data.citySlug && s.data.locale === 'en'
+      ) ?? null;
 
       paths.push({
         params: { citySlug: spokeSlug },
-        props: { city: city.data, service: service.data, spokeSlug },
+        props: { city: city.data, service, spokeSlug, spoke },
       });
     }
   }
@@ -27,7 +31,7 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { city, service, spokeSlug } = Astro.props;
+const { city, service, spokeSlug, spoke } = Astro.props;
 ---
 
-<CitySpokePage city={city} service={service} locale="en" spokeSlug={spokeSlug} />
+<CitySpokePage city={city} service={service} locale="en" spokeSlug={spokeSlug} spoke={spoke} />

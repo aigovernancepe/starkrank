@@ -10,6 +10,7 @@ import type { Locale } from '../../data/locales';
 import { t, tf } from '../../utils/i18n';
 import { getSpokePath } from '../../data/service-slugs';
 import { getLocalizedNavHref } from '../../data/navigation';
+import { render } from 'astro:content';
 
 interface Props {
   city: {
@@ -23,28 +24,35 @@ interface Props {
     region?: string;
     postalCode?: string;
   };
-  service: {
-    title: string;
-    slug: string;
-    description: string;
-    pillar: string;
-  };
+  service: any;
   locale: Locale;
   spokeSlug: string;
+  spoke?: any;
 }
 
-const { city, service, locale, spokeSlug } = Astro.props;
+const { city, service, locale, spokeSlug, spoke } = Astro.props;
+
+// Support both full collection entry (new) and plain data object (legacy)
+const serviceData = service.data ?? service;
+
 const site = Astro.site?.origin ?? 'https://starkrank.com';
 const localePath = locale === 'en' ? '' : `/${locale}`;
 const pageUrl = `${localePath}/${spokeSlug}/`;
 
-const localServiceTitle = t(`service.${service.slug}`, locale);
+const localServiceTitle = t(`service.${serviceData.slug}`, locale);
 const vars = { service: localServiceTitle, city: city.city, country: city.country };
 const inWord = t('spoke.in', locale);
 const heroImagePath = `/images/cities/${city.citySlug}.jpg`;
 
-const title = `${localServiceTitle} ${inWord} ${city.city} — StarkRank`;
-const description = tf('spoke.description', vars, locale);
+const hasSpokeContent = !!spoke;
+const spokeTitle = spoke?.data?.title ?? `${localServiceTitle} ${inWord} ${city.city}`;
+const spokeDescription = spoke?.data?.description ?? tf('spoke.description', vars, locale);
+
+const title = `${spokeTitle} — StarkRank`;
+const description = spokeDescription;
+
+// Render spoke markdown body if available
+const SpokeContent = hasSpokeContent ? (await render(spoke)).Content : null;
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -72,8 +80,8 @@ const localBusinessSchema = {
       '@type': 'Offer',
       itemOffered: {
         '@type': 'Service',
-        name: service.title,
-        url: `${site}/services/${service.slug}/`,
+        name: serviceData.title,
+        url: `${site}/services/${serviceData.slug}/`,
       },
     }],
   },
@@ -84,6 +92,8 @@ const breadcrumbs = [
   { label: t('spoke.home', locale), href: homeHref },
   { label: `${localServiceTitle} ${inWord} ${city.city}`, href: pageUrl },
 ];
+
+const ctaTitle = spoke?.data?.localCTA ?? tf('spoke.growBusiness', vars, locale);
 ---
 
 <BaseLayout title={title} description={description} locale={locale} schema={localBusinessSchema}>
@@ -96,43 +106,68 @@ const breadcrumbs = [
     <Button href={getLocalizedNavHref('/contact/', locale)} variant="primary" size="lg">{tf('spoke.contactIn', vars, locale)}</Button>
   </HeroSection>
 
-  <Section bg="cream">
-    <Breadcrumbs items={breadcrumbs} />
+  {hasSpokeContent && SpokeContent ? (
+    <Section bg="cream">
+      <Breadcrumbs items={breadcrumbs} />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div>
-        <h2 class="text-2xl font-headline font-black text-navy mb-4">{tf('spoke.whyCity', vars, locale)}</h2>
-        <p class="text-sm font-body text-gray leading-relaxed">
-          {tf('spoke.whyCityText', vars, locale)}
-        </p>
+      <div class="prose prose-lg max-w-none font-body text-dark">
+        <SpokeContent />
       </div>
-      <div>
-        <h2 class="text-2xl font-headline font-black text-navy mb-4">{t('spoke.approach', locale)}</h2>
-        <p class="text-sm font-body text-gray leading-relaxed">
-          {tf('spoke.approachText', { ...vars, service: localServiceTitle.toLowerCase() }, locale)}
-        </p>
+
+      <div class="mt-12">
+        <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.otherServices', vars, locale)}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {city.services.filter((s: string) => s !== serviceData.slug).slice(0, 6).map((serviceSlug: string) => {
+            const spokePath = getSpokePath(serviceSlug, city.citySlug, locale);
+            return (
+              <Card href={`${localePath}/${spokePath}/`}>
+                <h4 class="text-sm font-headline font-bold text-navy">
+                  {t(`service.${serviceSlug}`, locale)}
+                </h4>
+              </Card>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </Section>
+  ) : (
+    <Section bg="cream">
+      <Breadcrumbs items={breadcrumbs} />
 
-    <div class="mt-12">
-      <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.otherServices', vars, locale)}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {city.services.filter((s: string) => s !== service.slug).slice(0, 6).map((serviceSlug: string) => {
-          const spokePath = getSpokePath(serviceSlug, city.citySlug, locale);
-          return (
-            <Card href={`${localePath}/${spokePath}/`}>
-              <h4 class="text-sm font-headline font-bold text-navy">
-                {t(`service.${serviceSlug}`, locale)}
-              </h4>
-            </Card>
-          );
-        })}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-2xl font-headline font-black text-navy mb-4">{tf('spoke.whyCity', vars, locale)}</h2>
+          <p class="text-sm font-body text-gray leading-relaxed">
+            {tf('spoke.whyCityText', vars, locale)}
+          </p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-headline font-black text-navy mb-4">{t('spoke.approach', locale)}</h2>
+          <p class="text-sm font-body text-gray leading-relaxed">
+            {tf('spoke.approachText', { ...vars, service: localServiceTitle.toLowerCase() }, locale)}
+          </p>
+        </div>
       </div>
-    </div>
 
-  </Section>
+      <div class="mt-12">
+        <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.otherServices', vars, locale)}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {city.services.filter((s: string) => s !== serviceData.slug).slice(0, 6).map((serviceSlug: string) => {
+            const spokePath = getSpokePath(serviceSlug, city.citySlug, locale);
+            return (
+              <Card href={`${localePath}/${spokePath}/`}>
+                <h4 class="text-sm font-headline font-bold text-navy">
+                  {t(`service.${serviceSlug}`, locale)}
+                </h4>
+              </Card>
+            );
+          })}
+        </div>
+      </div>
+    </Section>
+  )}
 
-  <CTABanner bg="navy" title={tf('spoke.growBusiness', vars, locale)} subtitle={t('spoke.bookConsultation', locale)}>
+  <CTABanner bg="navy" title={ctaTitle} subtitle={t('spoke.bookConsultation', locale)}>
     <Button href={getLocalizedNavHref('/contact/', locale)} variant="primary" size="lg">{t('spoke.getStarted', locale)}</Button>
   </CTABanner>
 </BaseLayout>
