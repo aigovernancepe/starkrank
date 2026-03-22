@@ -45,7 +45,7 @@ La adopción de herramientas de IA en Perú está creciendo aceleradamente, espe
 
 ## ¿Cómo funciona nuestro enfoque AISO para el mercado peruano?
 
-Utilizamos nuestro marco propietario AISO Score para evaluar su presencia en búsqueda IA a través de seis dimensiones. Cada dimensión se puntúa y compara con competidores en su sector dentro del mercado limeño.
+Utilizamos nuestro marco propietario AISO Score (AI Search Optimisation — Optimización de Búsqueda IA) para evaluar su presencia en búsqueda IA a través de seis dimensiones. Cada dimensión se puntúa y compara con competidores en su sector dentro del mercado limeño.
 
 Lo que diferencia nuestra auditoría para Lima es el contexto local: evaluamos visibilidad en consultas relevantes para las industrias que impulsan la capital, verificamos que su organización sea reconocible en búsquedas en español e inglés, y coordinamos con nuestros servicios de [Consultoría SEO Local](/pe/seo-local-lima/) y [Auditoría SEO Técnica](/pe/auditoria-seo-lima/) para cubrir toda la cadena de visibilidad.
 

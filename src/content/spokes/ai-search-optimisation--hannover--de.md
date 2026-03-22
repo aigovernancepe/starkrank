@@ -46,6 +46,6 @@ Für B2B-Unternehmen in Hannover bedeutet das: Wer in KI-Antworten nicht vorkomm
 
 ## Wie funktioniert der AISO Score für den deutschen Markt?
 
-Unser proprietäres AISO-Score-Framework bewertet Ihre KI-Suchbereitschaft anhand von sechs Dimensionen. Für den deutschen Markt berücksichtigen wir zusätzlich DSGVO-konforme Umsetzung, deutschsprachige Entitätsoptimierung und das spezifische B2B-Suchverhalten in der deutschen Industrie.
+Unser proprietäres AISO-Score-Framework (AI Search Optimisation — KI-Suchoptimierung) bewertet Ihre KI-Suchbereitschaft anhand von sechs Dimensionen. Für den deutschen Markt berücksichtigen wir zusätzlich DSGVO-konforme Umsetzung, deutschsprachige Entitätsoptimierung und das spezifische B2B-Suchverhalten in der deutschen Industrie.
 
 Das Ergebnis ist keine generische Checkliste — es ist eine priorisierte Roadmap, die auf Ihre Wettbewerbsposition in Hannover zugeschnitten ist. Für die technische Umsetzung arbeiten wir mit unserem [Technischen SEO-Audit](/de/seo-audit-hannover/) zusammen, und für lokale Sichtbarkeit mit unserem [Lokalen SEO-Service](/de/lokale-seo-beratung-hannover/).

@@ -46,6 +46,6 @@ Für Basler Unternehmen bedeutet das eine besondere Herausforderung und Chance z
 
 ## Wie funktioniert der AISO Score für den Schweizer Markt?
 
-Unser AISO-Score-Framework bewertet Ihre KI-Suchbereitschaft anhand von sechs Dimensionen. Für den Standort Basel berücksichtigen wir zusätzlich mehrsprachige Entitäten, nDSG-konforme Umsetzung und die grenzüberschreitende Sichtbarkeit im trinationalen Raum.
+Unser AISO-Score-Framework (AI Search Optimisation — KI-Suchoptimierung) bewertet Ihre KI-Suchbereitschaft anhand von sechs Dimensionen. Für den Standort Basel berücksichtigen wir zusätzlich mehrsprachige Entitäten, nDSG-konforme Umsetzung und die grenzüberschreitende Sichtbarkeit im trinationalen Raum.
 
 Das Ergebnis ist eine priorisierte Roadmap für Ihre Wettbewerbsposition in Basel. Für die technische Umsetzung arbeiten wir mit unserem [Technischen SEO-Audit](/ch-de/seo-audit-basel/) zusammen, und für lokale Sichtbarkeit mit unserem [Lokalen SEO-Service](/ch-de/lokale-seo-beratung-basel/).
