@@ -77,4 +77,6 @@ export const pe: Record<string, string> = {
   'spoke.faqTitle': 'Preguntas Frecuentes',
   'spoke.lastUpdated': 'Última actualización',
   'spoke.by': 'Por',
+  'spoke.sectorsLabel': 'Sectores',
+  'spoke.sectorsTitle': '¿Qué sectores en {city} se benefician más?',
 };

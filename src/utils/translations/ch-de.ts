@@ -77,4 +77,6 @@ export const chde: Record<string, string> = {
   'spoke.faqTitle': 'Häufig gestellte Fragen',
   'spoke.lastUpdated': 'Zuletzt aktualisiert',
   'spoke.by': 'Von',
+  'spoke.sectorsLabel': 'Branchen',
+  'spoke.sectorsTitle': 'Welche Branchen in {city} profitieren am stärksten?',
 };

@@ -84,4 +84,6 @@ export const en: Record<string, string> = {
   'spoke.faqTitle': 'Frequently Asked Questions',
   'spoke.lastUpdated': 'Last updated',
   'spoke.by': 'By',
+  'spoke.sectorsLabel': 'Industries',
+  'spoke.sectorsTitle': 'Which industries in {city} benefit most?',
 };
