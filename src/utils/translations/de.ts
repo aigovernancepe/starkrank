@@ -74,4 +74,5 @@ export const de: Record<string, string> = {
   'spoke.home': 'Startseite',
   'spoke.deliverables': 'Unsere Leistung',
   'spoke.deliverablesTitle': 'Was wir liefern',
+  'spoke.faqTitle': 'Häufig gestellte Fragen',
 };

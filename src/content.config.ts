@@ -2,6 +2,11 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
+const faqItem = z.object({
+  question: z.string(),
+  answer: z.string(),
+});
+
 const services = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/services' }),
   schema: z.object({
@@ -20,6 +25,7 @@ const services = defineCollection({
     features: z.array(z.string()).optional(),
     relatedServices: z.array(z.string()).optional(),
     ogImage: z.string().optional(),
+    faq: z.array(faqItem).optional(),
   }),
 });
 
@@ -74,6 +80,7 @@ const spokes = defineCollection({
       description: z.string(),
     })).optional(),
     deliverables: z.array(z.string()).optional(),
+    faq: z.array(faqItem).optional(),
   }),
 });
 

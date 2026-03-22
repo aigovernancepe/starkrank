@@ -74,4 +74,5 @@ export const pe: Record<string, string> = {
   'spoke.home': 'Inicio',
   'spoke.deliverables': 'Lo que Recibe',
   'spoke.deliverablesTitle': 'Lo que Entregamos',
+  'spoke.faqTitle': 'Preguntas Frecuentes',
 };

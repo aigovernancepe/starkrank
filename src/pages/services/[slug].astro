@@ -35,6 +35,22 @@ const serviceSchema = {
   url: `https://starkrank.com/services/${service.data.slug}/`,
 };
 
+const faq = service.data.faq ?? [];
+const faqSchema = faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item: { question: string; answer: string }) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+} : null;
+
+const schemas = [serviceSchema, ...(faqSchema ? [faqSchema] : [])];
+
 const isAISO = service.data.slug === 'ai-search-optimisation';
 
 const breadcrumbs = [
@@ -48,7 +64,7 @@ const breadcrumbs = [
 <BaseLayout
   title={`${service.data.title} — StarkRank`}
   description={service.data.description}
-  schema={serviceSchema}
+  schema={schemas}
 >
   <Section bg="cream">
     <Breadcrumbs items={breadcrumbs} />
@@ -116,6 +132,27 @@ const breadcrumbs = [
       </aside>
     </div>
   </Section>
+
+  {faq.length > 0 && (
+    <Section bg="white">
+      <SectionHeader label="FAQ" title="Frequently Asked Questions" />
+      <div class="max-w-3xl space-y-6">
+        {faq.map((item: { question: string; answer: string }) => (
+          <details class="group bg-cream border border-gray-light/40 rounded-lg">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer p-6 font-headline font-bold text-navy text-base md:text-lg select-none">
+              {item.question}
+              <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-sm font-body text-gray leading-relaxed">
+              {item.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </Section>
+  )}
 
   {isAISO ? (
     <CTABanner bg="navy" title="How AI-Ready Is Your Website?" subtitle="Request a free AISO Score audit and find out where you stand — before your competitors do.">

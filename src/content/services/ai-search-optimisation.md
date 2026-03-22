@@ -14,6 +14,17 @@ relatedServices:
   - "technical-seo-audit"
   - "local-seo-consulting"
   - "content-marketing"
+faq:
+  - question: "Is AI search optimisation different from SEO?"
+    answer: "Yes. SEO focuses on ranking in search engine results pages. AI search optimisation focuses on being cited in AI-generated answers. The technical foundations overlap (crawlability, structured data, quality content), but AI search requires additional strategies: entity optimisation, answer-first content structure, AI crawler access, and citation-specific monitoring."
+  - question: "Which AI search platforms matter most?"
+    answer: "The primary platforms are Google AI Overviews, ChatGPT (with browsing), Perplexity, and Bing Copilot. Their combined search volume is growing rapidly, and each uses slightly different retrieval methods. A comprehensive strategy covers all four."
+  - question: "How long before we see results?"
+    answer: "The technical foundations (crawler access, structured data, content restructuring) can be implemented in 4–8 weeks. Brand entity and citation building take 3–6 months to mature. AI search monitoring shows measurable changes within the first month of tracking."
+  - question: "Do we need to change our existing website?"
+    answer: "Not necessarily a redesign — but targeted changes to content structure, schema markup, and crawler configuration are typically required. We prioritise changes by impact and work within your existing CMS and tech stack."
+  - question: "Can you help if we already have an SEO agency?"
+    answer: "Yes. AI search optimisation is a specialist layer that complements traditional SEO. We work alongside existing agencies or in-house teams, focusing specifically on the AI visibility gap."
 ---
 
 AI-powered search engines — ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot — now answer questions directly, citing sources inline. Ranking on page one is no longer enough. If your content is not structured for retrieval-augmented generation (RAG), your brand is invisible to the fastest-growing search channel. Yet most businesses have no strategy for it.
@@ -84,19 +95,3 @@ Traditional analytics miss most AI search impact. A user who gets your informati
 
 We deliver monthly reporting with these metrics alongside traditional SEO KPIs, so you see the full picture.
 
-## Frequently asked questions
-
-**Is AI search optimisation different from SEO?**
-Yes. SEO focuses on ranking in search engine results pages. AI search optimisation focuses on being cited in AI-generated answers. The technical foundations overlap (crawlability, structured data, quality content), but AI search requires additional strategies: entity optimisation, answer-first content structure, AI crawler access, and citation-specific monitoring.
-
-**Which AI search platforms matter most?**
-The primary platforms are Google AI Overviews, ChatGPT (with browsing), Perplexity, and Bing Copilot. Their combined search volume is growing rapidly, and each uses slightly different retrieval methods. A comprehensive strategy covers all four.
-
-**How long before we see results?**
-The technical foundations (crawler access, structured data, content restructuring) can be implemented in 4–8 weeks. Brand entity and citation building take 3–6 months to mature. AI search monitoring shows measurable changes within the first month of tracking.
-
-**Do we need to change our existing website?**
-Not necessarily a redesign — but targeted changes to content structure, schema markup, and crawler configuration are typically required. We prioritise changes by impact and work within your existing CMS and tech stack.
-
-**Can you help if we already have an SEO agency?**
-Yes. AI search optimisation is a specialist layer that complements traditional SEO. We work alongside existing agencies or in-house teams, focusing specifically on the AI visibility gap.

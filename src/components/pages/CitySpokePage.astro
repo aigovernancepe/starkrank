@@ -59,6 +59,7 @@ const SpokeContent = hasSpokeContent ? (await render(spoke)).Content : null;
 const highlights = spoke?.data?.highlights ?? [];
 const sectors = spoke?.data?.sectors ?? [];
 const deliverables = spoke?.data?.deliverables ?? [];
+const faq: Array<{ question: string; answer: string }> = spoke?.data?.faq ?? [];
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -99,10 +100,25 @@ const breadcrumbs = [
   { label: `${localServiceTitle} ${inWord} ${city.city}`, href: pageUrl },
 ];
 
+const faqSchema = faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+} : null;
+
+const pageSchemas = [localBusinessSchema, ...(faqSchema ? [faqSchema] : [])];
+
 const ctaTitle = spoke?.data?.localCTA ?? tf('spoke.growBusiness', vars, locale);
 ---
 
-<BaseLayout title={title} description={description} locale={locale} schema={localBusinessSchema}>
+<BaseLayout title={title} description={description} locale={locale} schema={pageSchemas}>
   <HeroSection
     headline={`${localServiceTitle} ${inWord} **${city.city}**`}
     subheadline={description}
@@ -179,7 +195,29 @@ const ctaTitle = spoke?.data?.localCTA ?? tf('spoke.growBusiness', vars, locale)
         </Section>
       )}
 
-      {/* Section 5: Other services */}
+      {/* Section 5: FAQ accordion */}
+      {faq.length > 0 && (
+        <Section bg="cream">
+          <SectionHeader label="FAQ" title={t('spoke.faqTitle', locale)} />
+          <div class="max-w-3xl space-y-6">
+            {faq.map((item: { question: string; answer: string }) => (
+              <details class="group bg-white border border-gray-light/40 rounded-lg">
+                <summary class="flex items-center justify-between gap-4 cursor-pointer p-6 font-headline font-bold text-navy text-base md:text-lg select-none">
+                  {item.question}
+                  <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+                </summary>
+                <div class="px-6 pb-6 text-sm font-body text-gray leading-relaxed">
+                  {item.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Section 6: Other services */}
       <Section bg="cream">
         <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.otherServices', vars, locale)}</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
