@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
 import Section from '../../components/ui/Section.astro';
 import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
 import Button from '../../components/ui/Button.astro';
@@ -40,6 +41,7 @@ const pageUrl = `${localePath}/${spokeSlug}/`;
 const localServiceTitle = t(`service.${service.slug}`, locale);
 const vars = { service: localServiceTitle, city: city.city, country: city.country };
 const inWord = t('spoke.in', locale);
+const heroImagePath = `/images/cities/${city.citySlug}.jpg`;
 
 const title = `${localServiceTitle} ${inWord} ${city.city} — StarkRank`;
 const description = tf('spoke.description', vars, locale);
@@ -85,20 +87,19 @@ const breadcrumbs = [
 ---
 
 <BaseLayout title={title} description={description} locale={locale} schema={localBusinessSchema}>
+  <HeroSection
+    headline={`${localServiceTitle} ${inWord} **${city.city}**`}
+    subheadline={description}
+    align="left"
+    backgroundImage={heroImagePath}
+  >
+    <Button href={getLocalizedNavHref('/contact/', locale)} variant="primary" size="lg">{tf('spoke.contactIn', vars, locale)}</Button>
+  </HeroSection>
+
   <Section bg="cream">
     <Breadcrumbs items={breadcrumbs} />
 
-    <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
-      {city.city}, {city.country}
-    </span>
-    <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
-      {localServiceTitle} {inWord} {city.city}
-    </h1>
-    <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-3xl">
-      {description}
-    </p>
-
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
         <h2 class="text-2xl font-headline font-black text-navy mb-4">{tf('spoke.whyCity', vars, locale)}</h2>
         <p class="text-sm font-body text-gray leading-relaxed">
@@ -129,12 +130,9 @@ const breadcrumbs = [
       </div>
     </div>
 
-    <div class="mt-12">
-      <Button href={getLocalizedNavHref('/contact/', locale)} variant="primary" size="lg">{tf('spoke.contactIn', vars, locale)}</Button>
-    </div>
   </Section>
 
   <CTABanner bg="navy" title={tf('spoke.growBusiness', vars, locale)} subtitle={t('spoke.bookConsultation', locale)}>
-    <Button href="/contact/" variant="primary" size="lg">{t('spoke.getStarted', locale)}</Button>
+    <Button href={getLocalizedNavHref('/contact/', locale)} variant="primary" size="lg">{t('spoke.getStarted', locale)}</Button>
   </CTABanner>
 </BaseLayout>

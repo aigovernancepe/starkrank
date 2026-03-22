@@ -1,19 +1,42 @@
 ---
 interface Props {
   headline: string;
+  /** Words wrapped in ** will render in Blue Light as accent. e.g. "Growth for the **AI Era**" */
   subheadline?: string;
   align?: 'left' | 'center';
+  /** Optional background image URL for city spoke pages. Navy overlay is applied automatically. */
+  backgroundImage?: string;
 }
 
-const { headline, subheadline, align = 'center' } = Astro.props;
+const { headline, subheadline, align = 'center', backgroundImage } = Astro.props;
 const alignClass = align === 'center' ? 'text-center items-center' : 'text-left items-start';
+
+// Parse **accent** markers into spans
+function renderHeadline(text: string): string {
+  return text.replace(/\*\*(.+?)\*\*/g, '<span class="text-blue-light">$1</span>');
+}
 ---
 
-<section class="bg-navy text-cream py-24 md:py-32">
-  <div class:list={['max-w-7xl mx-auto px-6 flex flex-col', alignClass]}>
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-headline font-black tracking-tight text-cream max-w-4xl">
-      {headline}
-    </h1>
+<section
+  class:list={['relative py-24 md:py-32 overflow-hidden', backgroundImage ? '' : 'bg-navy']}
+>
+  {backgroundImage && (
+    <div class="absolute inset-0">
+      <img
+        src={backgroundImage}
+        alt=""
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-navy/80"></div>
+    </div>
+  )}
+
+  <div class:list={['relative max-w-7xl mx-auto px-6 flex flex-col', alignClass]}>
+    <h1
+      class="text-4xl md:text-5xl lg:text-6xl font-headline font-black tracking-tight text-white max-w-4xl"
+      set:html={renderHeadline(headline)}
+    />
     {subheadline && (
       <p class="mt-6 text-lg md:text-xl text-gray-light font-body max-w-2xl leading-relaxed">
         {subheadline}
