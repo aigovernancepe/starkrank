@@ -5,6 +5,34 @@ locale: "pe"
 title: "Optimización de Búsqueda IA en Lima"
 description: "Posicione su empresa limeña en las respuestas de ChatGPT, Perplexity y Google AI Overviews. StarkRank audita, reestructura y monitorea su presencia digital para que las plataformas de IA lo citen como fuente confiable."
 localCTA: "Solicite su Auditoría AISO Gratuita para Lima"
+highlights:
+  - title: "Rastreabilidad"
+    description: "¿Pueden GPTBot, ClaudeBot y PerplexityBot acceder a su contenido? Verificamos robots.txt, llms.txt, barreras de renderizado y evidencia de actividad de rastreadores IA en sus logs."
+  - title: "Estructura"
+    description: "¿Su markup es legible para IA? Evaluamos datos estructurados (JSON-LD), HTML semántico, jerarquía de encabezados y formato optimizado para recuperación por fragmentos."
+  - title: "Autoridad"
+    description: "¿Su marca existe como entidad reconocida? Verificamos schema de Organización, enlaces sameAs a Wikipedia/Wikidata/LinkedIn y consistencia de datos en plataformas."
+  - title: "Citabilidad"
+    description: "¿Su contenido responde directamente y es original? Evaluamos si sus páginas lideran con respuestas claras, usan encabezados tipo pregunta e incluyen datos únicos."
+  - title: "Actualización"
+    description: "¿Qué tan actual es su contenido? Los modelos de IA despriorizan contenido obsoleto. Auditamos fechas de publicación, frecuencia de actualización y relevancia temática."
+  - title: "Medición"
+    description: "¿Está rastreando su rendimiento en búsqueda IA? Revisamos segmentación de tráfico IA en GA4, monitoreo de menciones de marca y datos base de share of voice."
+sectors:
+  - name: "Fintech y banca digital"
+    description: "Los usuarios preguntan a plataformas IA por comparaciones de productos financieros, tasas y recomendaciones. Ser citado como fuente confiable genera leads cualificados."
+  - name: "E-commerce y retail"
+    description: "Las búsquedas conversacionales del tipo 'mejor tienda de X en Lima' están reemplazando las búsquedas tradicionales por palabra clave."
+  - name: "Servicios profesionales y B2B"
+    description: "Consultoras, estudios legales y proveedores de tecnología compiten por visibilidad cuando los tomadores de decisiones usan IA para investigar opciones."
+  - name: "Minería y agroexportación"
+    description: "Empresas internacionales investigan proveedores peruanos a través de herramientas IA; aparecer como fuente autorizada en inglés y español es competitivamente decisivo."
+deliverables:
+  - "Auditoría AISO Score completa con puntuación por dimensión y comparativa sectorial"
+  - "Verificación de acceso para GPTBot, ClaudeBot y PerplexityBot en su infraestructura"
+  - "Plan de reestructuración de contenido con encabezados orientados a preguntas y respuestas directas"
+  - "Estrategia de entidad de marca para el mercado peruano e internacional"
+  - "Configuración de monitoreo de menciones en plataformas IA y panel de métricas mensual"
 ---
 
 ## ¿Por qué la búsqueda con IA importa para empresas en Lima?
@@ -15,32 +43,8 @@ La adopción de herramientas de IA en Perú está creciendo aceleradamente, espe
 
 ## ¿Cómo funciona nuestro enfoque AISO para el mercado peruano?
 
-Utilizamos nuestro marco propietario AISO Score para evaluar su presencia en búsqueda IA a través de seis dimensiones: rastreabilidad, estructura, autoridad, citabilidad, actualización y medición. Cada dimensión se puntúa y compara con competidores en su sector dentro del mercado limeño.
+Utilizamos nuestro marco propietario AISO Score para evaluar su presencia en búsqueda IA a través de seis dimensiones. Cada dimensión se puntúa y compara con competidores en su sector dentro del mercado limeño.
 
-Lo que diferencia nuestra auditoría para Lima es el contexto local:
-
-- **Sectores clave**: Evaluamos visibilidad en consultas relevantes para minería, agroexportación, fintech, retail y servicios profesionales — las industrias que impulsan Lima
-- **Entidad de marca en español**: Verificamos que su organización sea reconocible en búsquedas en español e inglés, crucial para empresas con operaciones internacionales
-- **Google Business Profile y datos locales**: Coordinamos con nuestro servicio de [Consultoría SEO Local](/pe/seo-local-lima/) para asegurar consistencia de datos en el ecosistema peruano
-- **Infraestructura técnica**: Trabajamos con nuestro equipo de [Auditoría SEO Técnica](/pe/auditoria-seo-lima/) para garantizar que los bots de IA puedan acceder y renderizar su contenido correctamente
-
-## ¿Qué sectores en Lima se benefician más?
-
-Las empresas limeñas en estos sectores ven el mayor impacto de una estrategia AISO:
-
-- **Fintech y banca digital** — Los usuarios preguntan a las plataformas IA por comparaciones de productos financieros, tasas y recomendaciones. Ser citado como fuente confiable genera leads cualificados
-- **E-commerce y retail** — Las búsquedas conversacionales del tipo "mejor tienda de X en Lima" están reemplazando las búsquedas tradicionales por palabra clave
-- **Servicios profesionales y B2B** — Consultoras, estudios legales y proveedores de tecnología compiten por visibilidad cuando los tomadores de decisiones usan IA para investigar opciones
-- **Minería y agroexportación** — Empresas internacionales investigan proveedores peruanos a través de herramientas IA; aparecer como fuente autorizada en inglés y español es competitivamente decisivo
-
-## ¿Qué entregamos?
-
-Cada proyecto AISO para Lima incluye:
-
-1. Auditoría AISO Score completa con puntuación por dimensión y comparativa sectorial
-2. Verificación de acceso para GPTBot, ClaudeBot y PerplexityBot en su infraestructura
-3. Plan de reestructuración de contenido con encabezados orientados a preguntas y respuestas directas
-4. Estrategia de entidad de marca para el mercado peruano e internacional
-5. Configuración de monitoreo de menciones en plataformas IA y panel de métricas mensual
+Lo que diferencia nuestra auditoría para Lima es el contexto local: evaluamos visibilidad en consultas relevantes para las industrias que impulsan la capital, verificamos que su organización sea reconocible en búsquedas en español e inglés, y coordinamos con nuestros servicios de [Consultoría SEO Local](/pe/seo-local-lima/) y [Auditoría SEO Técnica](/pe/auditoria-seo-lima/) para cubrir toda la cadena de visibilidad.
 
 El resultado no es un informe genérico — es una hoja de ruta priorizada y específica para su posición competitiva en Lima.

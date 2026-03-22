@@ -72,4 +72,6 @@ export const pe: Record<string, string> = {
   'spoke.bookConsultation': 'Agende una consulta gratuita con nuestro equipo local.',
   'spoke.getStarted': 'Empezar',
   'spoke.home': 'Inicio',
+  'spoke.deliverables': 'Lo que Recibe',
+  'spoke.deliverablesTitle': 'Lo que Entregamos',
 };

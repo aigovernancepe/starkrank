@@ -72,4 +72,6 @@ export const de: Record<string, string> = {
   'spoke.bookConsultation': 'Buchen Sie eine kostenlose Beratung mit unserem lokalen Team.',
   'spoke.getStarted': 'Jetzt starten',
   'spoke.home': 'Startseite',
+  'spoke.deliverables': 'Unsere Leistung',
+  'spoke.deliverablesTitle': 'Was wir liefern',
 };

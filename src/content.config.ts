@@ -65,6 +65,15 @@ const spokes = defineCollection({
     title: z.string(),
     description: z.string(),
     localCTA: z.string().optional(),
+    highlights: z.array(z.object({
+      title: z.string(),
+      description: z.string(),
+    })).optional(),
+    sectors: z.array(z.object({
+      name: z.string(),
+      description: z.string(),
+    })).optional(),
+    deliverables: z.array(z.string()).optional(),
   }),
 });
 

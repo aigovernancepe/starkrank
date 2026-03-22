@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/ui/HeroSection.astro';
 import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
 import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
 import Button from '../../components/ui/Button.astro';
 import Card from '../../components/ui/Card.astro';
@@ -53,6 +54,11 @@ const description = spokeDescription;
 
 // Render spoke markdown body if available
 const SpokeContent = hasSpokeContent ? (await render(spoke)).Content : null;
+
+// Structured spoke data
+const highlights = spoke?.data?.highlights ?? [];
+const sectors = spoke?.data?.sectors ?? [];
+const deliverables = spoke?.data?.deliverables ?? [];
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -107,14 +113,74 @@ const ctaTitle = spoke?.data?.localCTA ?? tf('spoke.growBusiness', vars, locale)
   </HeroSection>
 
   {hasSpokeContent && SpokeContent ? (
-    <Section bg="cream">
-      <Breadcrumbs items={breadcrumbs} />
+    <>
+      {/* Section 1: Breadcrumbs + Narrative content */}
+      <Section bg="cream">
+        <Breadcrumbs items={breadcrumbs} />
+        <div class="prose prose-lg max-w-none font-body text-dark
+          [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:font-headline [&>h2]:font-black [&>h2]:text-navy [&>h2]:tracking-tight [&>h2]:mt-12 [&>h2]:mb-4
+          [&>p]:leading-relaxed [&>p]:text-gray [&>p]:mb-6
+          [&>ul]:space-y-2 [&>ul>li]:text-gray
+          [&_strong]:text-dark
+          [&_a]:text-blue [&_a]:font-semibold [&_a:hover]:text-blue-light">
+          <SpokeContent />
+        </div>
+      </Section>
 
-      <div class="prose prose-lg max-w-none font-body text-dark">
-        <SpokeContent />
-      </div>
+      {/* Section 2: Highlights as card grid */}
+      {highlights.length > 0 && (
+        <Section bg="white">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {highlights.map((h: { title: string; description: string }) => (
+              <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+                <h3 class="text-lg font-headline font-black text-navy mb-3">{h.title}</h3>
+                <p class="text-sm font-body text-gray leading-relaxed">{h.description}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
 
-      <div class="mt-12">
+      {/* Section 3: Sectors as card grid */}
+      {sectors.length > 0 && (
+        <Section bg="cream">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {sectors.map((s: { name: string; description: string }) => (
+              <div class="flex gap-4 items-start">
+                <div class="shrink-0 w-10 h-10 rounded-md bg-blue/10 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-blue" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-base font-headline font-bold text-navy">{s.name}</h3>
+                  <p class="mt-1 text-sm font-body text-gray leading-relaxed">{s.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Section 4: Deliverables as checklist */}
+      {deliverables.length > 0 && (
+        <Section bg="white">
+          <SectionHeader label={t('spoke.deliverables', locale)} title={t('spoke.deliverablesTitle', locale)} />
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {deliverables.map((d: string, i: number) => (
+              <div class="flex items-start gap-4 bg-cream border border-gray-light/40 rounded-lg p-5">
+                <span class="shrink-0 w-8 h-8 rounded-full bg-blue text-white flex items-center justify-center text-sm font-label font-bold">
+                  {i + 1}
+                </span>
+                <p class="text-sm font-body text-dark leading-relaxed pt-1">{d}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Section 5: Other services */}
+      <Section bg="cream">
         <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.otherServices', vars, locale)}</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           {city.services.filter((s: string) => s !== serviceData.slug).slice(0, 6).map((serviceSlug: string) => {
@@ -128,8 +194,8 @@ const ctaTitle = spoke?.data?.localCTA ?? tf('spoke.growBusiness', vars, locale)
             );
           })}
         </div>
-      </div>
-    </Section>
+      </Section>
+    </>
   ) : (
     <Section bg="cream">
       <Breadcrumbs items={breadcrumbs} />

@@ -79,4 +79,6 @@ export const en: Record<string, string> = {
   'spoke.bookConsultation': 'Book a free consultation with our local team.',
   'spoke.getStarted': 'Get Started',
   'spoke.home': 'Home',
+  'spoke.deliverables': 'What You Get',
+  'spoke.deliverablesTitle': 'What We Deliver',
 };

@@ -65,23 +65,30 @@ const breadcrumbs = [
           {service.data.description}
         </p>
 
-        <div class="mt-8 prose prose-lg max-w-none font-body text-dark">
+        <div class="mt-8 prose prose-lg max-w-none font-body text-dark
+          [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:font-headline [&>h2]:font-black [&>h2]:text-navy [&>h2]:tracking-tight [&>h2]:mt-14 [&>h2]:mb-4 [&>h2]:pt-6 [&>h2]:border-t [&>h2]:border-gray-light/30
+          [&>p]:leading-relaxed [&>p]:text-gray [&>p]:mb-6
+          [&>ul]:space-y-2 [&>ul>li]:text-gray
+          [&>ol]:space-y-3 [&>ol>li]:text-gray [&>ol>li]:pl-2
+          [&_strong]:text-dark
+          [&_a]:text-blue [&_a]:font-semibold [&_a:hover]:text-blue-light
+          first:[&>h2]:mt-0 first:[&>h2]:pt-0 first:[&>h2]:border-t-0">
           <Content />
         </div>
 
         {service.data.features && service.data.features.length > 0 && (
-          <div class="mt-12">
-            <h2 class="text-2xl font-headline font-black text-navy mb-6">What's Included</h2>
-            <ul class="space-y-3">
-              {service.data.features.map((feature: string) => (
-                <li class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-blue mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                  <span class="text-sm font-body text-dark">{feature}</span>
-                </li>
+          <div class="mt-14 pt-6 border-t border-gray-light/30">
+            <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-6">What's Included</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {service.data.features.map((feature: string, i: number) => (
+                <div class="flex items-start gap-3 bg-white border border-gray-light/40 rounded-lg p-4">
+                  <span class="shrink-0 w-7 h-7 rounded-full bg-blue text-white flex items-center justify-center text-xs font-label font-bold">
+                    {i + 1}
+                  </span>
+                  <span class="text-sm font-body text-dark pt-0.5">{feature}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         )}
 
@@ -92,18 +99,20 @@ const breadcrumbs = [
 
       <!-- Sidebar -->
       <aside class="lg:col-span-1">
-        {relatedServices.length > 0 && (
-          <div>
-            <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Related Services</h3>
-            <div class="space-y-3">
-              {relatedServices.map((related) => (
-                <Card href={`/services/${related.data.slug}/`}>
-                  <h4 class="text-sm font-headline font-bold text-navy">{related.data.title}</h4>
-                </Card>
-              ))}
+        <div class="lg:sticky lg:top-8">
+          {relatedServices.length > 0 && (
+            <div>
+              <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Related Services</h3>
+              <div class="space-y-3">
+                {relatedServices.map((related) => (
+                  <Card href={`/services/${related.data.slug}/`}>
+                    <h4 class="text-sm font-headline font-bold text-navy">{related.data.title}</h4>
+                  </Card>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </aside>
     </div>
   </Section>
