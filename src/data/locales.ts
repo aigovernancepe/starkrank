@@ -36,3 +36,11 @@ export const localeConfig = {
 export type Locale = keyof typeof localeConfig;
 export const defaultLocale: Locale = 'en';
 export const locales = Object.keys(localeConfig) as Locale[];
+
+/** The primary city slug used for spoke page links per locale. */
+export const defaultCity: Record<Locale, string> = {
+  en: 'fort-lauderdale',
+  pe: 'lima',
+  de: 'hannover',
+  'ch-de': 'basel',
+};

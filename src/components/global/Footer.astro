@@ -1,6 +1,6 @@
 ---
 import Logo from './Logo.astro';
-import { footerNav } from '../../data/navigation';
+import { footerNav, getLocalizedNavHref } from '../../data/navigation';
 import { getCurrentLocale, t } from '../../utils/i18n';
 import type { Locale } from '../../data/locales';
 
@@ -38,7 +38,7 @@ const auditKeys: Record<string, string> = {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
       <!-- Brand -->
       <div>
-        <Logo variant="stacked-transparent" size="lg" class="mb-4" />
+        <Logo variant="stacked-transparent" size="lg" class="mb-4" locale={locale} />
         <p class="text-sm text-gray-light mt-4 font-body">
           {t('footer.tagline', locale)}
         </p>
@@ -52,7 +52,7 @@ const auditKeys: Record<string, string> = {
         <ul class="space-y-2">
           {footerNav.pillars.map((item) => (
             <li>
-              <a href={item.href} class="text-sm font-body text-gray-light hover:text-cream transition-colors">
+              <a href={getLocalizedNavHref(item.href, locale)} class="text-sm font-body text-gray-light hover:text-cream transition-colors">
                 {t(pillarKeys[item.label] ?? item.label, locale)}
               </a>
             </li>
@@ -68,7 +68,7 @@ const auditKeys: Record<string, string> = {
         <ul class="space-y-2">
           {footerNav.company.map((item) => (
             <li>
-              <a href={item.href} class="text-sm font-body text-gray-light hover:text-cream transition-colors">
+              <a href={getLocalizedNavHref(item.href, locale)} class="text-sm font-body text-gray-light hover:text-cream transition-colors">
                 {t(companyKeys[item.label] ?? item.label, locale)}
               </a>
             </li>

@@ -8,6 +8,7 @@ import CTABanner from '../../components/ui/CTABanner.astro';
 import type { Locale } from '../../data/locales';
 import { t, tf } from '../../utils/i18n';
 import { getSpokePath } from '../../data/service-slugs';
+import { getLocalizedNavHref } from '../../data/navigation';
 
 interface Props {
   city: {
@@ -129,7 +130,7 @@ const breadcrumbs = [
     </div>
 
     <div class="mt-12">
-      <Button href="/contact/" variant="primary" size="lg">{tf('spoke.contactIn', vars, locale)}</Button>
+      <Button href={getLocalizedNavHref('/contact/', locale)} variant="primary" size="lg">{tf('spoke.contactIn', vars, locale)}</Button>
     </div>
   </Section>
 

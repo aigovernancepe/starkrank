@@ -1,7 +1,7 @@
 ---
 import Logo from './Logo.astro';
 import LocaleSwitcher from './LocaleSwitcher.astro';
-import { mainNav } from '../../data/navigation';
+import { mainNav, getLocalizedNavHref } from '../../data/navigation';
 import { getCurrentLocale, t } from '../../utils/i18n';
 import type { Locale } from '../../data/locales';
 
@@ -61,14 +61,14 @@ function localizeLabel(label: string): string {
 
 <header class="sticky top-0 z-40 bg-cream/95 backdrop-blur-sm border-b border-gray-light/30">
   <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <Logo variant="stacked-light" />
+    <Logo variant="stacked-light" locale={locale} />
 
     <!-- Desktop Nav -->
     <div class="hidden lg:flex items-center gap-8">
       {mainNav.map((item) => (
         <div class="relative group">
           <a
-            href={item.href}
+            href={getLocalizedNavHref(item.href, locale)}
             class="text-sm font-label font-semibold uppercase tracking-wide text-dark hover:text-blue transition-colors"
           >
             {localizeLabel(item.label)}
@@ -78,14 +78,14 @@ function localizeLabel(label: string): string {
               <div class="bg-white border border-gray-light rounded-lg shadow-xl p-6 grid grid-cols-2 gap-6 min-w-[480px]">
                 {item.children.map((group) => (
                   <div>
-                    <a href={group.href} class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-3 block">
+                    <a href={getLocalizedNavHref(group.href, locale)} class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-3 block">
                       {localizeLabel(group.label)}
                     </a>
                     {group.children && (
                       <ul class="space-y-2">
                         {group.children.map((child) => (
                           <li>
-                            <a href={child.href} class="text-sm font-body text-dark hover:text-blue transition-colors">
+                            <a href={getLocalizedNavHref(child.href, locale)} class="text-sm font-body text-dark hover:text-blue transition-colors">
                               {localizeLabel(child.label)}
                             </a>
                           </li>
@@ -120,7 +120,7 @@ function localizeLabel(label: string): string {
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-light">
     <div class="px-6 py-4 space-y-4">
       {mainNav.map((item) => (
-        <a href={item.href} class="block text-sm font-label font-semibold uppercase tracking-wide text-dark">
+        <a href={getLocalizedNavHref(item.href, locale)} class="block text-sm font-label font-semibold uppercase tracking-wide text-dark">
           {localizeLabel(item.label)}
         </a>
       ))}

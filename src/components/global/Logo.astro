@@ -3,9 +3,11 @@ interface Props {
   variant?: 'inline-light' | 'inline-dark' | 'stacked-dark' | 'stacked-transparent' | 'stacked-light' | 'mark';
   size?: 'sm' | 'md' | 'lg';
   class?: string;
+  locale?: string;
 }
 
-const { variant = 'inline-dark', size = 'md', class: className = '' } = Astro.props;
+const { variant = 'inline-dark', size = 'md', class: className = '', locale } = Astro.props;
+const homeHref = locale && locale !== 'en' ? `/${locale}/` : '/';
 
 const sizeClasses: Record<string, string> = {
   sm: 'h-6 w-auto',
@@ -25,6 +27,6 @@ const logoMap: Record<string, string> = {
 const src = logoMap[variant] ?? logoMap['inline-dark'];
 ---
 
-<a href="/" class:list={['inline-block', className]}>
+<a href={homeHref} class:list={['inline-block', className]}>
   <img src={src} alt="StarkRank" width="160" height="40" class={sizeClasses[size]} />
 </a>

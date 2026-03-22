@@ -1,3 +1,6 @@
+import { type Locale, defaultCity } from './locales';
+import { getSpokePath } from './service-slugs';
+
 export interface NavItem {
   label: string;
   href: string;
@@ -84,3 +87,41 @@ export const footerNav = {
     { label: 'Copywriting Audit', href: '/audits/copywriting-ux-analysis/' },
   ],
 };
+
+/** Locale-specific overrides for non-service navigation paths. */
+const contactPaths: Record<Locale, string> = {
+  en: '/contact/',
+  pe: '/pe/contacto/',
+  de: '/de/kontakt/',
+  'ch-de': '/ch-de/kontakt/',
+};
+
+/**
+ * Convert a navigation href to its locale-aware equivalent.
+ * - EN locale: returns the original href (global master pages).
+ * - Other locales: maps /services/[slug]/ to the local spoke page,
+ *   /contact/ to the localized contact page, and /services/ to the locale home.
+ */
+export function getLocalizedNavHref(href: string, locale: Locale): string {
+  if (locale === 'en') return href;
+
+  const localePrefix = `/${locale}`;
+
+  // Contact page
+  if (href === '/contact/') return contactPaths[locale];
+
+  // Top-level /services/ link → locale homepage (shows pillar cards)
+  if (href === '/services/') return `${localePrefix}/`;
+
+  // Individual service pages → spoke page in default city
+  const serviceMatch = href.match(/^\/services\/([^/]+)\/$/);
+  if (serviceMatch) {
+    const serviceSlug = serviceMatch[1];
+    const city = defaultCity[locale];
+    const spokePath = getSpokePath(serviceSlug, city, locale);
+    return `${localePrefix}/${spokePath}/`;
+  }
+
+  // Everything else (about, blog, case-studies, audits) → keep as-is
+  return href;
+}
