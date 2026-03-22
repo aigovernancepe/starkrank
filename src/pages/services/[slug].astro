@@ -97,11 +97,15 @@ const breadcrumbs = [
         <div class="mt-8 prose prose-lg max-w-none font-body text-dark
           [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:font-headline [&>h2]:font-black [&>h2]:text-navy [&>h2]:tracking-tight [&>h2]:mt-14 [&>h2]:mb-4 [&>h2]:pt-6 [&>h2]:border-t [&>h2]:border-gray-light/30
           [&>p]:leading-relaxed [&>p]:text-gray [&>p]:mb-6
-          [&>ul]:space-y-2 [&>ul>li]:text-gray
-          [&>ol]:space-y-3 [&>ol>li]:text-gray [&>ol>li]:pl-2
           [&_strong]:text-dark
           [&_a]:text-blue [&_a]:font-semibold [&_a:hover]:text-blue-light
-          first:[&>h2]:mt-0 first:[&>h2]:pt-0 first:[&>h2]:border-t-0">
+          first:[&>h2]:mt-0 first:[&>h2]:pt-0 first:[&>h2]:border-t-0
+          [&>ol]:list-none [&>ol]:pl-0 [&>ol]:space-y-4 [&>ol]:counter-reset-[item]
+          [&>ol>li]:counter-increment-[item] [&>ol>li]:bg-white [&>ol>li]:border [&>ol>li]:border-gray-light/40 [&>ol>li]:rounded-lg [&>ol>li]:p-5 [&>ol>li]:pl-14 [&>ol>li]:relative [&>ol>li]:text-gray [&>ol>li]:text-base [&>ol>li]:leading-relaxed
+          [&>ol>li]:before:content-[counter(item)] [&>ol>li]:before:absolute [&>ol>li]:before:left-4 [&>ol>li]:before:top-5 [&>ol>li]:before:w-7 [&>ol>li]:before:h-7 [&>ol>li]:before:rounded-full [&>ol>li]:before:bg-blue [&>ol>li]:before:text-white [&>ol>li]:before:flex [&>ol>li]:before:items-center [&>ol>li]:before:justify-center [&>ol>li]:before:text-xs [&>ol>li]:before:font-bold
+          [&>ul]:space-y-3 [&>ul]:pl-0 [&>ul]:list-none
+          [&>ul>li]:relative [&>ul>li]:pl-7 [&>ul>li]:text-gray [&>ul>li]:text-base [&>ul>li]:leading-relaxed
+          [&>ul>li]:before:content-[''] [&>ul>li]:before:absolute [&>ul>li]:before:left-0 [&>ul>li]:before:top-2.5 [&>ul>li]:before:w-3 [&>ul>li]:before:h-3 [&>ul>li]:before:rounded-full [&>ul>li]:before:bg-blue/20 [&>ul>li]:before:border-2 [&>ul>li]:before:border-blue">
           <Content />
         </div>
 
