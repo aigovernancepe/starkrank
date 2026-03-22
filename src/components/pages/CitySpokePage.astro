@@ -160,27 +160,24 @@ const ctaTitle = spoke?.data?.localCTA ?? tf('spoke.growBusiness', vars, locale)
           [&>ul>li]:text-gray [&>ul>li]:text-base [&>ul>li]:leading-relaxed">
           <SpokeContent />
         </div>
-      </Section>
 
-      {/* Section 2: Highlights as numbered cards */}
-      {highlights.length > 0 && (
-        <Section bg="white">
-          {highlightsTitle && (
-            <SectionHeader title={highlightsTitle} />
-          )}
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {highlights.map((h: { title: string; description: string }, i: number) => (
-              <div class="bg-cream border border-gray-light/40 rounded-lg p-5 pl-14 relative">
-                <span class="absolute left-4 top-5 w-7 h-7 rounded-full bg-blue text-white flex items-center justify-center text-xs font-label font-bold">
-                  {i + 1}
-                </span>
-                <h3 class="text-base font-headline font-bold text-navy mb-2">{h.title}</h3>
-                <p class="text-sm font-body text-gray leading-relaxed">{h.description}</p>
-              </div>
-            ))}
+        {/* Highlights inline within narrative section */}
+        {highlights.length > 0 && (
+          <div class="mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {highlights.map((h: { title: string; description: string }, i: number) => (
+                <div class="bg-white border border-gray-light/40 rounded-lg p-5 pl-14 relative">
+                  <span class="absolute left-4 top-5 w-7 h-7 rounded-full bg-blue text-white flex items-center justify-center text-xs font-label font-bold">
+                    {i + 1}
+                  </span>
+                  <h3 class="text-base font-headline font-bold text-navy mb-2">{h.title}</h3>
+                  <p class="text-sm font-body text-gray leading-relaxed">{h.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </Section>
-      )}
+        )}
+      </Section>
 
       {/* Section 3: Sectors with heading */}
       {sectors.length > 0 && (
