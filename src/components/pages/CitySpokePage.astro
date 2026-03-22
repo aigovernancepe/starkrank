@@ -60,6 +60,8 @@ const highlights = spoke?.data?.highlights ?? [];
 const sectors = spoke?.data?.sectors ?? [];
 const deliverables = spoke?.data?.deliverables ?? [];
 const faq: Array<{ question: string; answer: string }> = spoke?.data?.faq ?? [];
+const highlightsTitle = spoke?.data?.highlightsTitle ?? null;
+const sectorsTitle = spoke?.data?.sectorsTitle ?? null;
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -163,6 +165,9 @@ const ctaTitle = spoke?.data?.localCTA ?? tf('spoke.growBusiness', vars, locale)
       {/* Section 2: Highlights as numbered cards */}
       {highlights.length > 0 && (
         <Section bg="white">
+          {highlightsTitle && (
+            <SectionHeader title={highlightsTitle} />
+          )}
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {highlights.map((h: { title: string; description: string }, i: number) => (
               <div class="bg-cream border border-gray-light/40 rounded-lg p-5 pl-14 relative">
@@ -180,7 +185,7 @@ const ctaTitle = spoke?.data?.localCTA ?? tf('spoke.growBusiness', vars, locale)
       {/* Section 3: Sectors with heading */}
       {sectors.length > 0 && (
         <Section bg="cream">
-          <SectionHeader label={t('spoke.sectorsLabel', locale)} title={tf('spoke.sectorsTitle', vars, locale)} />
+          <SectionHeader label={t('spoke.sectorsLabel', locale)} title={sectorsTitle ?? tf('spoke.sectorsTitle', vars, locale)} />
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             {sectors.map((s: { name: string; description: string }) => (
               <div class="flex gap-4 items-start bg-white border border-gray-light/40 rounded-lg p-5">

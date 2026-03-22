@@ -6,6 +6,7 @@ locale: "ch-de"
 title: "KI-Suchoptimierung in Basel"
 description: "Positionieren Sie Ihr Basler Unternehmen in den Antworten von ChatGPT, Perplexity und Google AI Overviews. StarkRank auditiert, restrukturiert und überwacht Ihre digitale Präsenz für maximale KI-Sichtbarkeit im Schweizer und internationalen Markt."
 localCTA: "Kostenlose AISO-Analyse für Basel anfordern"
+highlightsTitle: "Der AISO Score: Sechs Dimensionen"
 highlights:
   - title: "Crawlbarkeit"
     description: "Können GPTBot, ClaudeBot und PerplexityBot auf Ihre Inhalte zugreifen? Wir prüfen robots.txt, llms.txt, WAF-Konfigurationen und Server-Logs auf KI-Crawler-Aktivität."

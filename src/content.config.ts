@@ -83,6 +83,8 @@ const spokes = defineCollection({
     deliverables: z.array(z.string()).optional(),
     faq: z.array(faqItem).optional(),
     updatedDate: z.coerce.date().optional(),
+    highlightsTitle: z.string().optional(),
+    sectorsTitle: z.string().optional(),
   }),
 });
 

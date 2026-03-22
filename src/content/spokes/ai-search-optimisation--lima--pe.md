@@ -6,6 +6,7 @@ locale: "pe"
 title: "Optimización de Búsqueda IA en Lima"
 description: "Posicione su empresa limeña en las respuestas de ChatGPT, Perplexity y Google AI Overviews. StarkRank audita, reestructura y monitorea su presencia digital para que las plataformas de IA lo citen como fuente confiable."
 localCTA: "Solicite su Auditoría AISO Gratuita para Lima"
+highlightsTitle: "El AISO Score: Seis Dimensiones"
 highlights:
   - title: "Rastreabilidad"
     description: "¿Pueden GPTBot, ClaudeBot y PerplexityBot acceder a su contenido? Verificamos robots.txt, llms.txt, barreras de renderizado y evidencia de actividad de rastreadores IA en sus logs."

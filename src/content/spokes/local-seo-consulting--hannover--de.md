@@ -6,6 +6,8 @@ locale: "de"
 title: "Lokale SEO-Beratung in Hannover"
 description: "Dominieren Sie die lokalen Suchergebnisse und Google Maps in Hannover. StarkRank optimiert Ihre lokale Präsenz, damit Ihr Unternehmen erscheint, wenn Kunden in Ihrer Nähe suchen — in klassischen Suchmaschinen und KI-Plattformen."
 localCTA: "Lokale Sichtbarkeit in Hannover verbessern"
+highlightsTitle: "Was wir optimieren"
+sectorsTitle: "Welche lokalen Unternehmen profitieren am stärksten?"
 highlights:
   - title: "Google Business Profile"
     description: "Vollständige Optimierung aller Felder: Kategorien, Einzugsgebiet (Hannover-Mitte, List, Linden, Laatzen), Fotos, Beiträge, Fragen und Antworten."

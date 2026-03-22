@@ -6,6 +6,8 @@ locale: "ch-de"
 title: "Technisches SEO-Audit in Basel"
 description: "Identifizieren Sie die technischen Probleme, die Ihre Sichtbarkeit in Suchmaschinen und KI-Plattformen bremsen. StarkRank liefert eine vollständige Diagnose mit priorisierter Massnahmenplanung für Unternehmen in Basel."
 localCTA: "Technisches SEO-Audit für Basel anfordern"
+highlightsTitle: "Was wir prüfen"
+sectorsTitle: "Welche technischen Probleme finden wir am häufigsten?"
 highlights:
   - title: "Crawlbarkeit"
     description: "Zugangsüberprüfung für Googlebot, Bingbot und KI-Crawler. Bei strikten Sicherheitsrichtlinien analysieren wir zusätzlich WAF-Logs und CDN-Konfigurationen."

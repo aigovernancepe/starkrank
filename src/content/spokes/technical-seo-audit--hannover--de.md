@@ -6,6 +6,8 @@ locale: "de"
 title: "Technisches SEO-Audit in Hannover"
 description: "Identifizieren Sie die technischen Probleme, die Ihre Sichtbarkeit in Suchmaschinen und KI-Plattformen bremsen. StarkRank liefert eine vollständige Diagnose mit priorisierter Massnahmenplanung für Unternehmen in Hannover."
 localCTA: "Technisches SEO-Audit für Hannover anfordern"
+highlightsTitle: "Was wir prüfen"
+sectorsTitle: "Welche technischen Probleme finden wir am häufigsten?"
 highlights:
   - title: "Crawlbarkeit"
     description: "Überprüfung des Zugangs für Googlebot, Bingbot und KI-Crawler. Analyse der Server-Logs, um zu bestätigen, welche Bots tatsächlich auf Ihre Seiten zugreifen."

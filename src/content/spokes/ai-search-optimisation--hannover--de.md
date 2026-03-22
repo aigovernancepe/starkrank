@@ -6,6 +6,7 @@ locale: "de"
 title: "KI-Suchoptimierung in Hannover"
 description: "Positionieren Sie Ihr Unternehmen in Hannover in den Antworten von ChatGPT, Perplexity und Google AI Overviews. StarkRank auditiert, restrukturiert und überwacht Ihre digitale Präsenz für maximale KI-Sichtbarkeit."
 localCTA: "Kostenlose AISO-Analyse für Hannover anfordern"
+highlightsTitle: "Der AISO Score: Sechs Dimensionen"
 highlights:
   - title: "Crawlbarkeit"
     description: "Können GPTBot, ClaudeBot und PerplexityBot auf Ihre Inhalte zugreifen? Wir prüfen robots.txt, llms.txt, JavaScript-Barrieren und Server-Logs auf KI-Crawler-Aktivität."

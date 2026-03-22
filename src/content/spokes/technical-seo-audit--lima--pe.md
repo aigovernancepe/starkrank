@@ -6,6 +6,8 @@ locale: "pe"
 title: "Auditoría SEO Técnica en Lima"
 description: "Identifique los problemas técnicos que frenan su visibilidad en buscadores y plataformas de IA. StarkRank entrega un diagnóstico completo con hoja de ruta priorizada para empresas en Lima."
 localCTA: "Solicite su Auditoría SEO Técnica para Lima"
+highlightsTitle: "Lo que Auditamos"
+sectorsTitle: "¿Qué problemas técnicos encontramos con más frecuencia?"
 highlights:
   - title: "Rastreabilidad"
     description: "Verificamos acceso para Googlebot, Bingbot y rastreadores IA (GPTBot, ClaudeBot, PerplexityBot). Analizamos logs del servidor para confirmar qué bots acceden realmente a su sitio."

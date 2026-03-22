@@ -6,6 +6,8 @@ locale: "pe"
 title: "Consultoría SEO Local en Lima"
 description: "Domine los resultados de búsqueda local y Google Maps en Lima. StarkRank optimiza su presencia local para que su empresa aparezca cuando los clientes buscan servicios cerca de ellos — en buscadores tradicionales y plataformas de IA."
 localCTA: "Mejore su Visibilidad Local en Lima"
+highlightsTitle: "Lo que Optimizamos"
+sectorsTitle: "¿Qué negocios locales se benefician más?"
 highlights:
   - title: "Google Business Profile"
     description: "Optimización completa de categorías, áreas de servicio por distrito, fotos, publicaciones, preguntas y respuestas — todo lo que alimenta el pack local y las respuestas IA."
