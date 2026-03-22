@@ -60,14 +60,4 @@ The schema types we assess and implement depend on your business:
 
 Correctly implemented structured data increases your chances of rich snippets in traditional search and direct citation in AI-generated answers. Inconsistencies between visible content and JSON-LD markup can trigger penalties, so accuracy is critical.
 
-## What do you deliver?
-
-The audit produces a documented report with every finding categorised and prioritised. You receive:
-
-1. A crawl health summary with bot access status for all major search and AI crawlers
-2. An indexation report showing which pages are indexed, excluded, or erroneously blocked
-3. A Core Web Vitals scorecard with specific fix recommendations per page template
-4. A structured data audit with validated JSON-LD scripts ready for implementation
-5. A prioritised roadmap ordered by impact and implementation effort
-
 We do not just identify problems — we deliver the fixes. Our development team can implement recommendations directly, or we provide specifications your developers can follow.
