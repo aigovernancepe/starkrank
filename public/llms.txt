@@ -55,3 +55,4 @@ StarkRank offers 18 specialist services organised into five pillars:
 - Website: https://starkrank.com
 - LinkedIn: https://www.linkedin.com/company/starkrank
 - Wikidata: https://www.wikidata.org/wiki/Q138764144
+- Crunchbase: https://www.crunchbase.com/organization/starkrank
