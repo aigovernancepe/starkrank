@@ -35,6 +35,8 @@ const serviceSchema = {
   url: `https://starkrank.com/services/${service.data.slug}/`,
 };
 
+const isAISO = service.data.slug === 'ai-search-optimisation';
+
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services/' },
@@ -84,7 +86,7 @@ const breadcrumbs = [
         )}
 
         <div class="mt-12">
-          <Button href="/contact/" variant="primary" size="lg">Get Started</Button>
+          <Button href="/contact/" variant="primary" size="lg">{isAISO ? 'Request Your Free AI Visibility Audit' : 'Get Started'}</Button>
         </div>
       </div>
 
@@ -106,7 +108,13 @@ const breadcrumbs = [
     </div>
   </Section>
 
-  <CTABanner bg="navy" title="Ready to Grow?" subtitle="Book a free consultation to discuss your digital strategy.">
-    <Button href="/contact/" variant="primary" size="lg">Contact Us</Button>
-  </CTABanner>
+  {isAISO ? (
+    <CTABanner bg="navy" title="How AI-Ready Is Your Website?" subtitle="Request a free AISO Score audit and find out where you stand — before your competitors do.">
+      <Button href="/contact/" variant="primary" size="lg">Request Your Free AI Visibility Audit</Button>
+    </CTABanner>
+  ) : (
+    <CTABanner bg="navy" title="Ready to Grow?" subtitle="Book a free consultation to discuss your digital strategy.">
+      <Button href="/contact/" variant="primary" size="lg">Contact Us</Button>
+    </CTABanner>
+  )}
 </BaseLayout>
