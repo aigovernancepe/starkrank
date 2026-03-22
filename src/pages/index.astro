@@ -16,6 +16,39 @@ const orgSchema = {
   url: 'https://starkrank.com',
   logo: 'https://starkrank.com/images/logos/starkrank-dark-avatar.svg',
   description: 'Data-driven digital marketing agency specialising in AI search optimisation, technical SEO, and performance media.',
+  sameAs: [
+    'https://www.linkedin.com/company/starkrank',
+  ],
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      email: 'contact@starkrank.com',
+      contactType: 'sales',
+      areaServed: 'US',
+      availableLanguage: 'English',
+    },
+    {
+      '@type': 'ContactPoint',
+      email: 'info@starkrank.com',
+      contactType: 'sales',
+      areaServed: 'CH',
+      availableLanguage: ['German', 'English'],
+    },
+    {
+      '@type': 'ContactPoint',
+      email: 'kontakt@starkrank.com',
+      contactType: 'sales',
+      areaServed: 'DE',
+      availableLanguage: ['German', 'English'],
+    },
+    {
+      '@type': 'ContactPoint',
+      email: 'contacto@starkrank.com',
+      contactType: 'sales',
+      areaServed: 'PE',
+      availableLanguage: ['Spanish', 'English'],
+    },
+  ],
 };
 
 const websiteSchema = {

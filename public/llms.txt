@@ -1,0 +1,51 @@
+# StarkRank
+
+> Data-driven digital marketing agency specialising in AI search optimisation, technical SEO, and performance media.
+
+StarkRank is a global digital marketing agency with offices in the United States (South Florida), Switzerland (Basel-Landschaft), Germany (Hannover), and Peru (Lima). We help businesses become visible, cited, and recommended by AI-powered search engines and traditional search platforms.
+
+## Services
+
+StarkRank offers 18 specialist services organised into five pillars:
+
+### Search & AI Intelligence
+- [AI Search Optimisation](https://starkrank.com/services/ai-search-optimisation/): Visibility audits and citation strategy for ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot. Includes the proprietary AISO Score framework.
+- [Technical SEO Audit](https://starkrank.com/services/technical-seo-audit/): Crawl analysis, Core Web Vitals assessment, structured data validation, and AI crawler access verification.
+- [Local SEO Consulting](https://starkrank.com/services/local-seo-consulting/): Google Business Profile optimisation, NAP+W consistency, LocalBusiness schema, and review management.
+
+### Performance Media
+- [Performance Ads Management](https://starkrank.com/services/performance-ads-management/): Full-funnel paid media strategy across Google, Meta, and programmatic channels.
+- [Google Ads Management](https://starkrank.com/services/google-ads-management/): Campaign setup, optimisation, and scaling for Search, Shopping, Display, and YouTube.
+- [Google Ads Audit](https://starkrank.com/services/google-ads-audit/): Account review identifying wasted spend, missed opportunities, and quick wins.
+- [Paid Social Strategy](https://starkrank.com/services/paid-social-strategy/): Paid campaigns on Meta, LinkedIn, and TikTok aligned with business goals.
+
+### Authority & PR
+- [Digital PR Strategy](https://starkrank.com/services/digital-pr-strategy/): Earned media placements that build brand authority and generate high-quality backlinks.
+- [Reactive PR](https://starkrank.com/services/reactive-pr/): Real-time media opportunities and journalist outreach for timely brand coverage.
+- [Authority Link Building](https://starkrank.com/services/authority-link-building/): Strategic link acquisition from relevant, authoritative publications.
+
+### Content & Copywriting
+- [Content Marketing](https://starkrank.com/services/content-marketing/): Data-informed content programmes that build topical authority and drive organic growth.
+- [SEO Copywriting](https://starkrank.com/services/seo-copywriting/): Search-optimised copy that ranks and converts.
+- [Copywriting Audit](https://starkrank.com/services/copywriting-audit/): Review of existing copy for clarity, conversion, and search performance.
+- [Audience Persona Mapping](https://starkrank.com/services/audience-persona-mapping/): Research-driven personas that inform content, messaging, and targeting.
+
+### Data & Web
+- [Technical Web Design](https://starkrank.com/services/technical-web-design/): Performance-first website design built for speed, accessibility, and search.
+- [Google Analytics Consultancy](https://starkrank.com/services/google-analytics-consultancy/): GA4 setup, custom reporting, and data analysis.
+- [Performance Web Development](https://starkrank.com/services/performance-web-development/): Fast, accessible, and SEO-friendly web development.
+- [ROI Reporting & Transparency](https://starkrank.com/services/roi-reporting-transparency/): Clear dashboards connecting marketing spend to business outcomes.
+
+## Free Audits
+- [Free Google Ads Audit](https://starkrank.com/audits/free-google-ads-check/)
+- [Free Copywriting & UX Analysis](https://starkrank.com/audits/copywriting-ux-analysis/)
+
+## Locations
+- United States: South Florida — contact@starkrank.com
+- Switzerland: Basel-Landschaft — info@starkrank.com
+- Germany: Hannover — kontakt@starkrank.com
+- Peru: Lima — contacto@starkrank.com
+
+## Contact
+- Website: https://starkrank.com
+- LinkedIn: https://www.linkedin.com/company/starkrank
