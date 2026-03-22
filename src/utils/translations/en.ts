@@ -82,4 +82,6 @@ export const en: Record<string, string> = {
   'spoke.deliverables': 'What You Get',
   'spoke.deliverablesTitle': 'What We Deliver',
   'spoke.faqTitle': 'Frequently Asked Questions',
+  'spoke.lastUpdated': 'Last updated',
+  'spoke.by': 'By',
 };

@@ -1,6 +1,7 @@
 ---
 serviceSlug: "technical-seo-audit"
 citySlug: "lima"
+updatedDate: 2026-03-22
 locale: "pe"
 title: "Auditoría SEO Técnica en Lima"
 description: "Identifique los problemas técnicos que frenan su visibilidad en buscadores y plataformas de IA. StarkRank entrega un diagnóstico completo con hoja de ruta priorizada para empresas en Lima."

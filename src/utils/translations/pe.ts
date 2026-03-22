@@ -75,4 +75,6 @@ export const pe: Record<string, string> = {
   'spoke.deliverables': 'Lo que Recibe',
   'spoke.deliverablesTitle': 'Lo que Entregamos',
   'spoke.faqTitle': 'Preguntas Frecuentes',
+  'spoke.lastUpdated': 'Última actualización',
+  'spoke.by': 'Por',
 };

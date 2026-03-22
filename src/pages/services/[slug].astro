@@ -81,6 +81,19 @@ const breadcrumbs = [
           {service.data.description}
         </p>
 
+        <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+          {service.data.updatedDate && (
+            <span>
+              Last updated: <time datetime={service.data.updatedDate.toISOString().split('T')[0]}>
+                {service.data.updatedDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+              </time>
+            </span>
+          )}
+          <span>
+            By <a href="/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
+          </span>
+        </div>
+
         <div class="mt-8 prose prose-lg max-w-none font-body text-dark
           [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:font-headline [&>h2]:font-black [&>h2]:text-navy [&>h2]:tracking-tight [&>h2]:mt-14 [&>h2]:mb-4 [&>h2]:pt-6 [&>h2]:border-t [&>h2]:border-gray-light/30
           [&>p]:leading-relaxed [&>p]:text-gray [&>p]:mb-6

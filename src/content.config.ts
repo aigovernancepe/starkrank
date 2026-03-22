@@ -26,6 +26,7 @@ const services = defineCollection({
     relatedServices: z.array(z.string()).optional(),
     ogImage: z.string().optional(),
     faq: z.array(faqItem).optional(),
+    updatedDate: z.coerce.date().optional(),
   }),
 });
 
@@ -81,6 +82,7 @@ const spokes = defineCollection({
     })).optional(),
     deliverables: z.array(z.string()).optional(),
     faq: z.array(faqItem).optional(),
+    updatedDate: z.coerce.date().optional(),
   }),
 });
 

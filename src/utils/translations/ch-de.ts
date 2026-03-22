@@ -75,4 +75,6 @@ export const chde: Record<string, string> = {
   'spoke.deliverables': 'Unsere Leistung',
   'spoke.deliverablesTitle': 'Was wir liefern',
   'spoke.faqTitle': 'Häufig gestellte Fragen',
+  'spoke.lastUpdated': 'Zuletzt aktualisiert',
+  'spoke.by': 'Von',
 };

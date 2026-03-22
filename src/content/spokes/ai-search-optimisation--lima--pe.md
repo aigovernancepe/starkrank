@@ -1,6 +1,7 @@
 ---
 serviceSlug: "ai-search-optimisation"
 citySlug: "lima"
+updatedDate: 2026-03-22
 locale: "pe"
 title: "Optimización de Búsqueda IA en Lima"
 description: "Posicione su empresa limeña en las respuestas de ChatGPT, Perplexity y Google AI Overviews. StarkRank audita, reestructura y monitorea su presencia digital para que las plataformas de IA lo citen como fuente confiable."

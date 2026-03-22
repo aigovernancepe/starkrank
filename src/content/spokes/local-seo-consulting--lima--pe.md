@@ -1,6 +1,7 @@
 ---
 serviceSlug: "local-seo-consulting"
 citySlug: "lima"
+updatedDate: 2026-03-22
 locale: "pe"
 title: "Consultoría SEO Local en Lima"
 description: "Domine los resultados de búsqueda local y Google Maps en Lima. StarkRank optimiza su presencia local para que su empresa aparezca cuando los clientes buscan servicios cerca de ellos — en buscadores tradicionales y plataformas de IA."

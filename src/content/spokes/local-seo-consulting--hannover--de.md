@@ -1,6 +1,7 @@
 ---
 serviceSlug: "local-seo-consulting"
 citySlug: "hannover"
+updatedDate: 2026-03-22
 locale: "de"
 title: "Lokale SEO-Beratung in Hannover"
 description: "Dominieren Sie die lokalen Suchergebnisse und Google Maps in Hannover. StarkRank optimiert Ihre lokale Präsenz, damit Ihr Unternehmen erscheint, wenn Kunden in Ihrer Nähe suchen — in klassischen Suchmaschinen und KI-Plattformen."

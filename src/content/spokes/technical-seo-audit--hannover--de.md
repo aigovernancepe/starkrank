@@ -1,6 +1,7 @@
 ---
 serviceSlug: "technical-seo-audit"
 citySlug: "hannover"
+updatedDate: 2026-03-22
 locale: "de"
 title: "Technisches SEO-Audit in Hannover"
 description: "Identifizieren Sie die technischen Probleme, die Ihre Sichtbarkeit in Suchmaschinen und KI-Plattformen bremsen. StarkRank liefert eine vollständige Diagnose mit priorisierter Massnahmenplanung für Unternehmen in Hannover."
