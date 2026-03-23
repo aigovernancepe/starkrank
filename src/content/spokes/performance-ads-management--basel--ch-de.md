@@ -17,7 +17,7 @@ highlights:
   - title: "Conversion-Rate-Optimierung"
     description: "Landingpage-Audits, A/B-Tests und Funnel-Analysen verbessern die Post-Click-Performance. Höhere Conversion-Raten senken die effektiven Akquisitionskosten über alle Plattformen."
   - title: "Reporting und Attribution"
-    description: "Wöchentliche Dashboards mit kanalübergreifender Attribution, Blended-ROAS-Tracking und klarer Budget-Umsatz-Zuordnung. Keine Vanity-Metriken — nur geschäftsrelevante Kennzahlen, nDSG-konform umgesetzt."
+    description: "Wöchentliche Dashboards mit kanalübergreifender Attribution, Blended-ROAS-Tracking und klarer Budget-Umsatz-Zuordnung. Keine Vanity-Metriken wie blosse CTR (Click-Through-Rate — Klickrate) — nur geschäftsrelevante Kennzahlen, nDSG-konform umgesetzt."
 sectorsTitle: "Welche Basler Branchen profitieren von kanalübergreifendem Ads Management?"
 sectors:
   - name: "Pharma und Life Sciences"
@@ -41,7 +41,7 @@ deliverables:
 
 Basels Werbemarkt ist durch hohe Schweizer CPCs und gleichzeitig trinationale Reichweite geprägt. Pharma-Zulieferer, Finanzdienstleister und Logistikunternehmen konkurrieren um dieselben Zielgruppen — auf Deutsch, Französisch und Englisch. Wer nur auf einer Plattform wirbt, zahlt zu viel für Reichweite und verpasst Entscheider, die ihre Aufmerksamkeit auf mehrere Kanäle verteilen.
 
-Eine kanalübergreifende Strategie erreicht Basler Zielgruppen dort, wo sie sich aufhalten: Suchintention auf Google, Awareness auf Social Media und Retargeting über Plattformgrenzen hinweg — bei kontrollierter Blended Cost per Acquisition. Für die Google-Komponente arbeiten wir eng mit unserem [Google Ads Management](/ch-de/google-ads-basel/) zusammen.
+Eine kanalübergreifende Strategie erreicht Basler Zielgruppen dort, wo sie sich aufhalten: Suchintention auf Google, Awareness auf Social Media und Retargeting über Plattformgrenzen hinweg — bei kontrollierter Blended CPA (Cost per Acquisition — Kosten pro Akquisition). Für die Google-Komponente arbeiten wir eng mit unserem [Google Ads Management](/ch-de/google-ads-basel/) zusammen.
 
 ## Wie funktioniert mehrsprachiges Kampagnenmanagement am Dreiländereck?
 

@@ -4,7 +4,7 @@ citySlug: "fort-lauderdale"
 updatedDate: 2026-03-23
 locale: "en"
 title: "Google Ads Audit in Fort Lauderdale"
-description: "Free Google Ads audit for Fort Lauderdale businesses. StarkRank identifies wasted spend, structural issues, and missed opportunities in your account — with a clear action plan for the Broward County market."
+description: "Free Google Ads (PPC) audit for Fort Lauderdale businesses. StarkRank identifies wasted spend, structural issues, and missed opportunities in your account — with a clear action plan for the Broward County market."
 localCTA: "Claim Your Free Google Ads Audit for Fort Lauderdale"
 highlightsTitle: "What the Google Ads Audit Examines"
 highlights:
@@ -17,7 +17,7 @@ highlights:
   - title: "Competitive Positioning"
     description: "Auction insights benchmarking against other Fort Lauderdale advertisers in your category, including impression share, overlap rate, and position-above-rate metrics."
   - title: "Quality Score Health"
-    description: "Ad relevance, expected CTR, and landing page experience scores across your core keywords, with specific recommendations to reduce cost-per-click."
+    description: "Ad relevance, expected CTR (click-through rate), and landing page experience scores across your core keywords, with specific recommendations to reduce CPC (cost per click)."
 sectors:
   - name: "Home Services and Trades"
     description: "Contractors and service providers in Fort Lauderdale often inherit poorly built accounts from previous agencies. An audit reveals where budget is leaking into Miami searches, irrelevant services, or broad match waste."

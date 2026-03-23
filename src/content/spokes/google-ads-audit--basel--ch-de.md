@@ -33,13 +33,13 @@ deliverables:
   - "Budget-Effizienz-Analyse mit Identifikation verschwendeter Ausgaben"
   - "nDSG-Compliance-Check für Conversion-Tracking und Consent-Mode"
   - "Mehrsprachige Keyword-Gap-Analyse für DE/FR/EN-Suchvolumen"
-  - "Wettbewerber-Benchmarking mit Auction-Insights-Auswertung"
+  - "Wettbewerber-Benchmarking mit Auction-Insights-Auswertung und CTR-Vergleich (Click-Through-Rate — Klickrate)"
   - "Konkrete Handlungsempfehlungen mit geschätztem ROI-Potenzial"
 ---
 
 ## Warum ist ein Google Ads Audit im Schweizer Markt unverzichtbar?
 
-Die Schweiz gehört zu den teuersten Google-Ads-Märkten weltweit. Basler Unternehmen in Pharma, Finanzen und Chemie zahlen CPCs, bei denen jede Ineffizienz direkt auf den ROI durchschlägt. Ein professionelles Audit identifiziert systematisch, wo Budget verschwendet wird — durch falsche Match Types, fehlende Negativ-Keywords, suboptimale Gebotsstrategien oder unvollständiges Conversion-Tracking.
+Die Schweiz gehört zu den teuersten Google-Ads-Märkten weltweit. Basler Unternehmen in Pharma, Finanzen und Chemie zahlen CPCs (Cost per Click — Kosten pro Klick), bei denen jede PPC-Ineffizienz (Pay-per-Click — Bezahlung pro Klick) direkt auf den ROI durchschlägt. Ein professionelles Audit identifiziert systematisch, wo Budget verschwendet wird — durch falsche Match Types, fehlende Negativ-Keywords, suboptimale Gebotsstrategien oder unvollständiges Conversion-Tracking.
 
 Besonders kritisch: Seit Inkrafttreten des revidierten nDSG müssen Tracking-Implementierungen in der Schweiz den Datenschutzanforderungen entsprechen. Falsch konfigurierter Consent Mode führt zu lückenhaften Conversion-Daten und damit zu fehlerhafter Kampagnenoptimierung. Starten Sie mit unserem [kostenlosen Google Ads Check](/audits/free-google-ads-check/) für eine erste Einschätzung.
 

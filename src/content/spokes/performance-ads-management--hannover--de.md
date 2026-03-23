@@ -41,7 +41,7 @@ deliverables:
 
 Hannover ist einer der stärksten B2B-Standorte Deutschlands — geprägt von Mittelstand, Maschinenbau, IT und der weltweit grössten Industriemesse. Einkäufer und technische Entscheider recherchieren über Google, bewerten Anbieter auf LinkedIn und konsumieren Fachinhalte über verschiedene Plattformen. Wer nur auf einem Kanal wirbt, überzahlt für Reichweite und verpasst Entscheider, die ihre Aufmerksamkeit über mehrere Touchpoints verteilen.
 
-Ein Cross-Channel-Ansatz verbindet Suchintention auf Google mit B2B-Targeting auf LinkedIn und Awareness-Aufbau über Meta — während die Gesamtkosten pro qualifiziertem Lead kontrolliert bleiben. Besonders in Messezeiten entfaltet die Kombination ihre volle Wirkung.
+Ein Cross-Channel-Ansatz verbindet Suchintention auf Google mit B2B-Targeting auf LinkedIn und Awareness-Aufbau über Meta — während die CPA (Cost per Acquisition — Kosten pro Akquisition) kontrolliert bleibt. Besonders in Messezeiten entfaltet die Kombination ihre volle Wirkung.
 
 ## Wie verteilen wir das Budget für ein Hannoveraner Unternehmen?
 
@@ -51,6 +51,6 @@ Die Verteilung ist nicht statisch: Wir rebalancieren monatlich anhand realer Per
 
 ## Welche Ergebnisse können Sie erwarten?
 
-Vanity-Metriken wie Impressionen und Klicks sagen wenig über den geschäftlichen Einfluss. Wir messen und berichten auf umsatzrelevante KPIs: Cost per Qualified Lead, Blended ROAS, Pipeline-Wert pro Kanal und Kundenakquisitionskosten. Jedes Dashboard verknüpft Werbeausgaben direkt mit Geschäftsergebnissen.
+Vanity-Metriken wie Impressionen, Klicks und CTR (Click-Through-Rate — Klickrate) sagen wenig über den geschäftlichen Einfluss. Wir messen und berichten auf umsatzrelevante KPIs: Cost per Qualified Lead, Blended ROAS, Pipeline-Wert pro Kanal und Kundenakquisitionskosten. Jedes Dashboard verknüpft Werbeausgaben direkt mit Geschäftsergebnissen.
 
 Wenn Sie vermuten, dass Ihre aktuellen Kampagnen unterperformen, starten Sie mit einem [Google Ads Audit](/de/google-ads-audit-hannover/), um Budgetverschwendung zu identifizieren, bevor Sie umstrukturieren.

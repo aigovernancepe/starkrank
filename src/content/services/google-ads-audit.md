@@ -18,7 +18,7 @@ relatedServices:
   - "roi-reporting-transparency"
 ---
 
-Most Google Ads accounts leak budget. Irrelevant search terms trigger your ads. Conversion tracking is misconfigured or missing entirely. Bid strategies fight against poorly structured campaigns. The result: you spend more and get less.
+Most Google Ads (PPC) accounts leak budget. Irrelevant search terms trigger your ads. Conversion tracking is misconfigured or missing entirely. Bid strategies fight against poorly structured campaigns. The result: higher CPC (cost per click), lower CTR (click-through rate), and rising CPA (cost per acquisition) — you spend more and get less.
 
 StarkRank's Google Ads Audit gives you an honest, expert assessment of your paid search performance — and the practical steps needed to fix it.
 

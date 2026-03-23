@@ -4,7 +4,7 @@ citySlug: "miami"
 updatedDate: 2026-03-23
 locale: "en"
 title: "Google Ads Audit in Miami"
-description: "Identify wasted spend and missed opportunities in your Google Ads account. StarkRank's audit analyses campaign structure, keyword efficiency, and conversion tracking for Miami businesses competing in high-CPC markets."
+description: "Identify wasted spend and missed opportunities in your Google Ads (PPC) account. StarkRank's audit analyses campaign structure, keyword efficiency, and conversion tracking for Miami businesses competing in high-CPC markets."
 localCTA: "Claim Your Free Google Ads Audit for Miami"
 highlightsTitle: "What the Google Ads Audit Examines"
 highlights:
@@ -36,7 +36,7 @@ deliverables:
 
 ## How do you know your Miami Google Ads account is wasting money?
 
-Most businesses running Google Ads in Miami are overspending without realising it. The symptoms are predictable: broad match keywords triggering irrelevant queries, ad groups with dozens of unrelated keywords sharing the same ad copy, and conversion tracking that either double-counts or misses actions entirely. In a market where real estate clicks can cost $30+ and legal keywords exceed $50, even small inefficiencies add up to thousands of dollars per month in wasted spend.
+Most businesses running Google Ads in Miami are overspending without realising it. The symptoms are predictable: broad match keywords triggering irrelevant queries, ad groups with dozens of unrelated keywords sharing the same ad copy, and conversion tracking that either double-counts or misses actions entirely. In a market where real estate clicks can cost $30+ and legal keywords exceed $50 CPC (cost per click), even small inefficiencies add up to thousands of dollars per month in wasted PPC (pay-per-click) spend.
 
 Our audit starts with a [free Google Ads health check](/audits/free-google-ads-check/) that surfaces the biggest issues within 48 hours. The full audit goes deeper — analysing every campaign, ad group, and keyword for structural problems, tracking gaps, and competitive blind spots.
 

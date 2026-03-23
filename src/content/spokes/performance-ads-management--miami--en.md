@@ -15,7 +15,7 @@ highlights:
   - title: "Creative Coordination"
     description: "We align ad creative across channels — adapting formats for Search, Display, Reels, Stories, and video — while maintaining brand consistency and bilingual messaging for Miami's EN/ES market."
   - title: "Conversion Rate Optimisation"
-    description: "Landing page audits, A/B tests, and funnel analysis to improve post-click performance. Higher conversion rates mean lower effective cost per acquisition across all platforms."
+    description: "Landing page audits, A/B tests, and funnel analysis to improve post-click performance. Higher conversion rates mean lower effective CPA (cost per acquisition) across all platforms."
   - title: "Reporting and Attribution"
     description: "Weekly dashboards with cross-channel attribution modelling, blended ROAS tracking, and clear spend-to-revenue visibility. No vanity metrics — only numbers tied to business outcomes."
 sectorsTitle: "Which Miami industries gain from cross-channel ads management?"
@@ -51,6 +51,6 @@ Budget splits are not static. We rebalance monthly based on platform performance
 
 ## What reporting should you expect from a performance ads partner?
 
-Vanity metrics — impressions, clicks, CTR — tell you very little about business impact. We report on revenue-linked metrics: cost per qualified lead, blended ROAS, pipeline value by channel, and customer acquisition cost. Every weekly dashboard ties ad spend directly to outcomes, and our quarterly reviews include reallocation recommendations based on the previous period's data.
+Vanity metrics — impressions, clicks, CTR (click-through rate) — tell you very little about business impact. We report on revenue-linked metrics: cost per qualified lead, blended ROAS, pipeline value by channel, and customer acquisition cost. Every weekly dashboard ties ad spend directly to outcomes, and our quarterly reviews include reallocation recommendations based on the previous period's data.
 
 If you suspect your current campaigns are underperforming, start with a [Google Ads Audit](/ads-audit-miami/) to identify where budget is being wasted before restructuring.

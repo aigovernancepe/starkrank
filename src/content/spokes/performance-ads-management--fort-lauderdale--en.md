@@ -47,8 +47,8 @@ The difference is efficiency. A marine service company running Google Ads alone 
 
 We start with a [Google Ads audit](/ads-audit-fort-lauderdale/) to eliminate wasted spend, then build a unified campaign structure across platforms. Budget flows to whatever converts best — not whatever platform a previous agency defaulted to.
 
-For businesses already running [Google Ads](/google-ads-fort-lauderdale/), we layer in [paid social](/paid-social-fort-lauderdale/) to retarget warm audiences and expand reach into segments that search alone cannot capture. Every decision is tied to your cost-per-lead target, not platform-level vanity metrics.
+For businesses already running [Google Ads](/google-ads-fort-lauderdale/), we layer in [paid social](/paid-social-fort-lauderdale/) to retarget warm audiences and expand reach into segments that search alone cannot capture. Every decision is tied to your CPA (cost per acquisition) target, not platform-level vanity metrics.
 
 ## What makes Fort Lauderdale different from Miami for paid media?
 
-Proximity to Miami creates both overlap and opportunity. Fort Lauderdale keywords are often cheaper than their Miami equivalents, and hyper-local targeting in Broward County reduces competition from Miami-focused advertisers. We use geo-bid adjustments and location-specific ad copy to ensure your campaigns speak directly to the Fort Lauderdale market rather than blending into broader South Florida noise.
+Proximity to Miami creates both overlap and opportunity. Fort Lauderdale keywords often have lower CPCs (cost per click) than their Miami equivalents, and hyper-local targeting in Broward County reduces competition from Miami-focused advertisers. We use geo-bid adjustments and location-specific ad copy to ensure your campaigns speak directly to the Fort Lauderdale market rather than blending into broader South Florida noise.

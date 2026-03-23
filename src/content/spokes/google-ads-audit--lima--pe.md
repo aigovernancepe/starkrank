@@ -20,7 +20,7 @@ sectors:
   - name: "E-commerce en crecimiento"
     description: "Tiendas online peruanas que escalan inversión necesitan asegurar que su estructura de Shopping y Performance Max soporte el crecimiento sin desperdiciar presupuesto."
   - name: "Fintech y servicios digitales"
-    description: "Apps financieras con CPAs crecientes requieren auditoría para identificar si el problema es la cuenta, el mercado o la landing page."
+    description: "Apps financieras con CPA (coste por adquisición) crecientes requieren auditoría para identificar si el problema es la cuenta, el mercado o la landing page."
   - name: "Agroexportación"
     description: "Exportadores que invierten en campañas internacionales necesitan verificar que sus keywords en inglés y segmentación geográfica sean precisas para mercados objetivo."
   - name: "Servicios profesionales B2B"
@@ -45,7 +45,7 @@ Ofrecemos una [auditoría gratuita inicial](/audits/free-google-ads-check/) que 
 
 ## ¿Qué hace diferente una auditoría enfocada en el mercado peruano?
 
-Una auditoría genérica detecta problemas técnicos, pero no entiende el contexto local. Nosotros evaluamos su cuenta considerando el paisaje competitivo específico de Lima: qué keywords usan sus competidores locales, cuáles son los costos por clic reales en su sector, y cómo se comporta el usuario peruano después del clic.
+Una auditoría genérica detecta problemas técnicos, pero no entiende el contexto local. Nosotros evaluamos su cuenta considerando el paisaje competitivo específico de Lima: qué keywords usan sus competidores locales, cuáles son los CPC (coste por clic) reales en su sector, y cómo se comporta el usuario peruano después del clic.
 
 Por ejemplo, si su embudo termina en un formulario pero su público objetivo en Lima prefiere WhatsApp, su tasa de conversión está artificialmente baja — y las pujas automáticas de Google están optimizando con datos incompletos. Nuestra auditoría detecta estos desajustes entre configuración técnica y realidad de mercado.
 

@@ -18,7 +18,7 @@ relatedServices:
   - "roi-reporting-transparency"
 ---
 
-Google Ads puts your business in front of people actively searching for what you offer. The difference between a profitable account and a money pit is how it is built, targeted, and optimised. StarkRank manages the full lifecycle of your Google Ads account — from keyword research and campaign structure through to bid management, creative testing, and performance reporting.
+Google Ads — also known as PPC (pay-per-click) or paid search — puts your business in front of people actively searching for what you offer. You pay only when someone clicks your ad, which makes it one of the most measurable marketing channels available. But the difference between a profitable PPC account and a money pit is how it is built, targeted, and optimised. StarkRank manages the full lifecycle of your Google Ads account — from keyword research and campaign structure through to bid management, creative testing, and performance reporting.
 
 ## What campaign types do you manage?
 
@@ -37,7 +37,7 @@ Account structure determines performance. A poorly organised account wastes budg
 We structure accounts around three principles:
 
 1. **Intent tiers** — Campaigns are grouped by search intent (brand, high-intent commercial, informational), not just by product category. This ensures bid strategies and budgets align with conversion likelihood.
-2. **Tight ad group theming** — Each ad group targets a focused cluster of closely related keywords with dedicated ad copy. This improves Quality Score, lowers cost per click, and increases ad relevance.
+2. **Tight ad group theming** — Each ad group targets a focused cluster of closely related keywords with dedicated ad copy. This improves Quality Score, lowers CPC (cost per click), and increases ad relevance.
 3. **Negative keyword architecture** — We build negative keyword lists at account, campaign, and ad group level to prevent budget leaking to irrelevant searches. This is the single highest-impact optimisation most accounts are missing.
 
 ## What does ongoing optimisation look like?
@@ -46,7 +46,7 @@ We do not set up campaigns and check in monthly. Our optimisation cycle runs wee
 
 - **Bid adjustments** — Based on device, location, time of day, and audience performance data
 - **Search term mining** — Weekly review of actual search queries to add high-performing terms and negative keywords
-- **Ad copy testing** — Continuous A/B tests on headlines, descriptions, and call-to-action variations
+- **Ad copy testing** — Continuous A/B tests on headlines, descriptions, and call-to-action variations to improve CTR (click-through rate) and conversion rates
 - **Landing page alignment** — Ensuring the post-click experience matches the ad promise (coordinated with our [Technical Web Design](/services/technical-web-design/) team when needed)
 - **Budget reallocation** — Shifting spend from underperforming campaigns to those generating results
 

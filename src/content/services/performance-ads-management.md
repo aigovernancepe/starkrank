@@ -29,7 +29,7 @@ faq:
     answer: "Yes — we offer a free Google Ads audit that reviews your current account structure, targeting, spend efficiency, and conversion tracking. This gives both sides a clear picture of what is working, what is wasted, and what the improvement potential is before any commitment."
 ---
 
-Every euro, dollar, or franc you spend on advertising should be accountable. StarkRank manages paid media campaigns across Google, Meta, LinkedIn, and TikTok with a single objective: measurable return on investment. We build the strategy, execute the campaigns, and optimise continuously — so your budget works harder every month.
+Every euro, dollar, or franc you spend on advertising should be accountable. StarkRank manages PPC (pay-per-click) and paid media campaigns across Google, Meta, LinkedIn, and TikTok with a single objective: measurable return on investment. We build the strategy, execute the campaigns, and optimise continuously — so your budget works harder every month.
 
 ## How does cross-channel paid media management work?
 
