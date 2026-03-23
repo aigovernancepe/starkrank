@@ -4,6 +4,7 @@ import HeroSection from '../../components/ui/HeroSection.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import Button from '../../components/ui/Button.astro';
+import ContactForm from '../../components/ui/ContactForm.astro';
 ---
 
 <BaseLayout
@@ -20,21 +21,7 @@ import Button from '../../components/ui/Button.astro';
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
       <div>
         <SectionHeader label="Nachricht Senden" title="Erzählen Sie uns von Ihren Zielen" />
-        <form class="space-y-6" method="POST" action="/de/kontakt/">
-          <div>
-            <label for="name" class="block text-sm font-label font-semibold uppercase tracking-wide text-dark mb-2">Name</label>
-            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-light rounded-md font-body text-dark bg-white focus:border-blue focus:outline-none" />
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-label font-semibold uppercase tracking-wide text-dark mb-2">E-Mail</label>
-            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-light rounded-md font-body text-dark bg-white focus:border-blue focus:outline-none" />
-          </div>
-          <div>
-            <label for="message" class="block text-sm font-label font-semibold uppercase tracking-wide text-dark mb-2">Nachricht</label>
-            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-light rounded-md font-body text-dark bg-white focus:border-blue focus:outline-none resize-y"></textarea>
-          </div>
-          <Button variant="primary" size="lg">Nachricht Senden</Button>
-        </form>
+        <ContactForm locale="de" />
       </div>
 
       <div>
