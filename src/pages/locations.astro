@@ -16,6 +16,7 @@ const locations = [
     localePath: '',
     description: 'South Florida\'s business hub. StarkRank delivers AI search optimisation, performance media, and technical SEO for Miami\'s diverse economy — from hospitality and real estate to fintech and healthcare.',
     image: '/images/cities/miami.webp',
+    imageAlt: 'Miami downtown skyline and Biscayne Bay — StarkRank digital marketing services in South Florida',
     focus: 'Performance Media & AI Search',
   },
   {
@@ -26,6 +27,7 @@ const locations = [
     localePath: '',
     description: 'Greater Fort Lauderdale is one of the fastest-growing business corridors in the US. We help local companies compete in traditional and AI-powered search with data-driven strategies.',
     image: '/images/cities/fort-lauderdale.webp',
+    imageAlt: 'Fort Lauderdale waterfront and Intracoastal Waterway — StarkRank local SEO and technical SEO services',
     focus: 'Local SEO & Technical SEO',
   },
   {
@@ -36,6 +38,7 @@ const locations = [
     localePath: '/ch-de',
     description: 'At the crossroads of Switzerland, Germany, and France, Basel\'s pharma and life sciences cluster demands multilingual, cross-border digital visibility. Our Swiss headquarters serves the trinational region.',
     image: '/images/cities/basel.webp',
+    imageAlt: 'Basel skyline with Mittlere Brücke over the Rhine and Basel Münster — StarkRank Switzerland headquarters',
     focus: 'AI Search & Multilingual SEO',
   },
   {
@@ -46,6 +49,7 @@ const locations = [
     localePath: '/de',
     description: 'Home of the Hannover Messe and a stronghold of German Mittelstand. We position B2B companies, manufacturers, and IT services for visibility in AI-powered search and traditional SEO.',
     image: '/images/cities/hannover.webp',
+    imageAlt: 'Hannover New Town Hall and Maschsee — StarkRank B2B digital marketing for Niedersachsen',
     focus: 'B2B & Mittelstand SEO',
   },
   {
@@ -56,6 +60,7 @@ const locations = [
     localePath: '/pe',
     description: 'Peru\'s digital economy is centred in Lima. We help fintech, e-commerce, and professional services companies gain visibility in both Spanish and English AI search platforms.',
     image: '/images/cities/lima.webp',
+    imageAlt: 'Lima cityscape with Plaza Mayor and historic centre — StarkRank digital growth services in Peru',
     focus: 'LATAM Digital Growth',
   },
 ];
@@ -86,7 +91,7 @@ const serviceNames: Record<string, string> = {
           <div class:list={[i % 2 === 1 && 'lg:order-2']}>
             <img
               src={loc.image}
-              alt={`StarkRank office location — ${loc.city}, ${loc.country}`}
+              alt={loc.imageAlt}
               width="640"
               height="400"
               class="w-full h-64 lg:h-80 object-cover rounded-lg shadow-lg"
