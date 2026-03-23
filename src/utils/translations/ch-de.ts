@@ -73,7 +73,7 @@ export const chde: Record<string, string> = {
   'spoke.allServices': 'Alle Dienstleistungen in {city}',
   'spoke.contactIn': 'Kontaktieren Sie uns in {city}',
   'spoke.growBusiness': 'Wachsen Sie in {city}',
-  'spoke.bookConsultation': 'Buchen Sie eine kostenlose Beratung mit unserem lokalen Team.',
+  'spoke.bookConsultation': 'Buchen Sie eine kostenlose Erstberatung mit unserem lokalen Team.',
   'spoke.getStarted': 'Jetzt starten',
   'spoke.home': 'Startseite',
 
