@@ -1,17 +1,17 @@
 ---
 title: "Google Ads Management"
 slug: "google-ads-management"
-description: "Expert Google Ads management that maximises your return on every dollar spent. StarkRank builds and optimises Search, Shopping, Display, and YouTube campaigns aligned to your revenue targets."
+description: "Expert Google Ads and Microsoft Ads (PPC) management that maximises your return on every dollar spent. StarkRank builds and optimises Search, Shopping, Display, and YouTube campaigns aligned to your revenue targets."
 pillar: "performance-media"
 isPillarHub: false
 updatedDate: 2026-03-23
 features:
-  - "Google Search and Shopping campaign management"
+  - "Google Ads and Microsoft Ads (Bing) campaign management"
   - "Keyword research and negative keyword refinement"
-  - "Ad copy creation and A/B testing"
+  - "Ad copywriting, A/B testing, and creative iteration"
   - "Bid strategy optimisation (manual and automated)"
   - "Conversion tracking and attribution setup"
-  - "Monthly performance reporting with optimisation log"
+  - "Weekly performance reporting with optimisation log and next-steps"
 relatedServices:
   - "performance-ads-management"
   - "google-ads-audit"
@@ -60,6 +60,35 @@ Accurate conversion tracking is non-negotiable. We audit and configure:
 - Offline conversion imports for businesses with long sales cycles (connecting ad clicks to CRM outcomes)
 
 Without this foundation, every optimisation decision is guesswork. If your current tracking is incomplete, we fix it before making any campaign changes. For a comprehensive tracking review, see our [Google Analytics Consultancy](/services/google-analytics-consultancy/) service.
+
+## Do you manage Microsoft Ads (Bing) as well?
+
+Yes. Microsoft Ads (formerly Bing Ads) runs across Bing, Yahoo, DuckDuckGo, and — critically — Microsoft Copilot's AI-powered search. For many businesses, Microsoft Ads delivers lower CPC and higher conversion rates than Google because the platform is less competitive, yet the audience skews professional and higher-income.
+
+We manage Microsoft Ads alongside Google Ads from a single strategy. Campaign structures, keyword lists, and ad copy are adapted (not simply copied) between platforms. For B2B businesses especially, Microsoft's integration with LinkedIn audience targeting makes it a valuable complement to Google.
+
+## How do you approach ad copywriting?
+
+Ad copy is not an afterthought — it is the first thing a potential customer sees. We write ads that are specific, relevant, and aligned with the search intent behind each keyword group:
+
+- **Headline testing** — We run structured A/B tests on headlines, rotating variations that address different angles (benefit-led, problem-led, urgency-led) to find what drives the highest CTR and conversion rate
+- **Description refinement** — Clear value propositions and calls to action tailored to each ad group's intent tier, not generic copy shared across campaigns
+- **Responsive search ads** — We provide Google with a range of tested headline and description combinations, then monitor which auto-generated combinations perform best
+- **Landing page alignment** — Ad copy promises are matched to landing page content so users find exactly what they expected. Misalignment is one of the most common causes of poor Quality Scores and high bounce rates
+
+For businesses that need broader content support, our [SEO Copywriting](/services/seo-copywriting/) service covers website copy, landing pages, and editorial content.
+
+## What does reporting look like?
+
+We report weekly, not monthly — because a month of unmonitored spend is a month of potential waste. Every report includes:
+
+- **Spend and performance summary** — Where your budget went, what it generated, and how key metrics (CPA, ROAS, CTR) are trending
+- **Optimisation log** — A documented record of every change we made and why: bid adjustments, paused keywords, new ad tests, budget shifts
+- **Search term report** — The actual queries that triggered your ads, with new negatives added and high-performers promoted
+- **Competitive context** — Auction insights showing how your impression share, average position, and overlap rate compare to key competitors
+- **Next steps** — What we plan to test, change, or scale in the coming week
+
+Reports are delivered in a live dashboard with commentary, not a static PDF. For full-funnel attribution that connects ad clicks to actual revenue, we integrate with our [ROI Reporting & Transparency](/services/roi-reporting-transparency/) service.
 
 ## Not sure where your current account stands?
 

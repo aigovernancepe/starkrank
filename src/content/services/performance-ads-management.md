@@ -49,6 +49,7 @@ Our process follows four phases that repeat monthly:
 ## Which advertising platforms do you manage?
 
 - **Google Ads** — Search, Shopping, Display, YouTube, and Performance Max. The primary channel for capturing high-intent demand. See our dedicated [Google Ads Management](/services/google-ads-management/) service for details.
+- **Microsoft Ads (Bing)** — Lower CPCs and a professional-skewing audience across Bing, Yahoo, DuckDuckGo, and Microsoft Copilot. Managed alongside Google Ads with adapted campaign structures.
 - **Meta (Facebook & Instagram)** — Awareness, retargeting, and conversion campaigns with advanced audience targeting. Lead generation forms and catalogue ads for e-commerce.
 - **LinkedIn** — B2B targeting by job title, company, industry, and seniority. Particularly effective for professional services and SaaS businesses.
 - **TikTok** — Reach younger demographics with video-first creative. Growing rapidly as an e-commerce and brand awareness channel.
