@@ -105,9 +105,16 @@ const auditKeys: Record<string, string> = {
       <p class="text-xs text-gray font-body">
         &copy; {year} StarkRank. {t('footer.rights', locale)}
       </p>
-      <a href={getLocalizedNavHref('/privacy/', locale)} class="text-xs text-gray font-body hover:text-cream transition-colors">
-        {t('footer.privacy', locale)}
-      </a>
+      <div class="flex gap-4">
+        <a href={getLocalizedNavHref('/privacy/', locale)} class="text-xs text-gray font-body hover:text-cream transition-colors">
+          {t('footer.privacy', locale)}
+        </a>
+        {(locale === 'de' || locale === 'ch-de') && (
+          <a href={getLocalizedNavHref('/impressum/', locale)} class="text-xs text-gray font-body hover:text-cream transition-colors">
+            Impressum
+          </a>
+        )}
+      </div>
     </div>
   </div>
 </footer>

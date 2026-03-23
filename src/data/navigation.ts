@@ -88,6 +88,7 @@ export const footerNav = {
   ],
   legal: [
     { label: 'Privacy Policy', href: '/privacy/' },
+    { label: 'Impressum', href: '/impressum/' },
   ],
 };
 
@@ -106,6 +107,11 @@ const privacyPaths: Record<Locale, string> = {
   'ch-de': '/ch-de/datenschutz/',
 };
 
+const impressumPaths: Record<string, string> = {
+  de: '/de/impressum/',
+  'ch-de': '/ch-de/impressum/',
+};
+
 /**
  * Convert a navigation href to its locale-aware equivalent.
  * - EN locale: returns the original href (global master pages).
@@ -122,6 +128,9 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
 
   // Privacy page
   if (href === '/privacy/') return privacyPaths[locale];
+
+  // Impressum (DE/CH-DE only)
+  if (href === '/impressum/') return impressumPaths[locale] ?? null;
 
   // Top-level /services/ link → locale homepage (shows pillar cards)
   if (href === '/services/') return `${localePrefix}/`;
