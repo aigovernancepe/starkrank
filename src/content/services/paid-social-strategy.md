@@ -24,9 +24,9 @@ Social advertising reaches people before they search — building awareness, gen
 
 The answer depends on who you are trying to reach and what you want them to do:
 
-- **Meta (Facebook & Instagram)** — The broadest reach and most sophisticated targeting. Best for B2C, e-commerce, lead generation, and retargeting. Advanced lookalike audiences let you scale beyond your existing customer base. Instagram excels for visual products and lifestyle brands.
-- **LinkedIn** — The only platform where you can target by job title, company size, industry, and seniority. Essential for B2B lead generation, recruitment marketing, and professional services. Higher cost per click, but significantly higher lead quality for the right business.
-- **TikTok** — Fastest-growing platform for reaching younger demographics (18–34). Video-first format requires different creative than other platforms, but cost per impression is currently lower than Meta. Strong for brand awareness and e-commerce.
+- **Meta (Facebook & Instagram)** — The broadest reach and most sophisticated targeting. Meta's Advantage+ automated campaigns use AI to optimise creative, audience, and placement simultaneously — reducing cost per result while scaling. We configure Advantage+ with appropriate guardrails and feed it high-quality first-party data through Meta's Conversion API (CAPI) for accurate attribution, even with iOS privacy restrictions (SKAdNetwork).
+- **LinkedIn** — The only platform where you can target by job title, company size, industry, and seniority. Essential for B2B lead generation, recruitment marketing, and professional services. Higher cost per click, but significantly higher lead quality for the right business. LinkedIn's AI-powered audience expansion helps scale without sacrificing targeting precision.
+- **TikTok** — Fastest-growing platform for reaching younger demographics (18–34). Video-first format requires different creative than other platforms, but cost per impression is currently lower than Meta. TikTok Shop enables in-app checkout with conversion rates significantly higher than standard ad campaigns. TikTok Search Ads capture users actively looking for products and tutorials — a hybrid of social and search advertising.
 
 Most clients benefit from two platforms: one for demand generation (Meta or TikTok) and one for high-intent targeting (LinkedIn for B2B, or Meta retargeting for B2C). We advise against spreading budget across every platform — better to dominate two than underperform on four.
 
@@ -71,3 +71,5 @@ Social advertising metrics can be misleading. We focus on the ones that matter:
 - **Frequency** — How often the same person sees your ad. Too high means ad fatigue and wasted budget.
 - **Thumb-stop rate** — For video: the percentage of people who stopped scrolling to watch. The best proxy for creative effectiveness.
 - **Assisted conversions** — Social campaigns often assist conversions that happen later through search or direct. We track the full attribution path, not just last-click.
+
+Accurate measurement on social platforms requires server-side tracking infrastructure. Browser-based pixels miss conversions due to ad blockers and iOS privacy restrictions. We implement Meta's Conversion API (CAPI), TikTok's Events API, and LinkedIn's Conversions API to ensure your data is complete — feeding the platform algorithms the signals they need to optimise effectively. For the full tracking setup, see our [Google Analytics Consultancy](/services/google-analytics-consultancy/) service.

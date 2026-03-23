@@ -28,7 +28,8 @@ We manage all Google Ads formats, each serving a distinct role:
 - **Shopping campaigns** — Product listing ads for e-commerce. We optimise product feeds, bidding, and segmentation to maximise return on ad spend per product category.
 - **Display campaigns** — Banner and responsive ads across Google's display network. Used for retargeting site visitors and building brand awareness at lower cost per impression.
 - **YouTube campaigns** — Video ads for awareness and consideration. Effective for demonstrating products, building trust, and reaching audiences who are not yet searching.
-- **Performance Max** — Google's AI-driven cross-channel format. We set the guardrails (audience signals, creative assets, goals) and monitor performance to ensure Google's automation works in your favour, not against it.
+- **Performance Max (PMax)** — Google's AI-driven cross-channel format that serves ads across Search, Shopping, Display, YouTube, Gmail, and Maps from a single campaign. We set the guardrails (audience signals, creative assets, margin constraints) and govern the automation — ensuring PMax operates within your strategic boundaries, not just Google's defaults.
+- **Demand Gen campaigns** — Google's visual discovery format for YouTube, Discover, and Gmail. Designed to reach users earlier in the funnel with engaging creative before they actively search. Effective for building awareness that later converts through Search or PMax.
 
 ## How do you structure a Google Ads account?
 
@@ -44,6 +45,7 @@ We structure accounts around three principles:
 
 We do not set up campaigns and check in monthly. Our optimisation cycle runs weekly:
 
+- **Smart Bidding governance** — We configure and monitor Google's AI bidding strategies (Target CPA, Target ROAS, Maximise Conversions) with appropriate guardrails. Smart Bidding performs best when fed high-quality conversion data — which is why we fix tracking before adjusting bids
 - **Bid adjustments** — Based on device, location, time of day, and audience performance data
 - **Search term mining** — Weekly review of actual search queries to add high-performing terms and negative keywords
 - **Ad copy testing** — Continuous A/B tests on headlines, descriptions, and call-to-action variations to improve CTR (click-through rate) and conversion rates

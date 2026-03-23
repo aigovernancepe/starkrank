@@ -52,7 +52,9 @@ Our process follows four phases that repeat monthly:
 - **Microsoft Ads (Bing)** — Lower CPCs and a professional-skewing audience across Bing, Yahoo, DuckDuckGo, and Microsoft Copilot. Managed alongside Google Ads with adapted campaign structures.
 - **Meta (Facebook & Instagram)** — Awareness, retargeting, and conversion campaigns with advanced audience targeting. Lead generation forms and catalogue ads for e-commerce.
 - **LinkedIn** — B2B targeting by job title, company, industry, and seniority. Particularly effective for professional services and SaaS businesses.
-- **TikTok** — Reach younger demographics with video-first creative. Growing rapidly as an e-commerce and brand awareness channel.
+- **TikTok** — Reach younger demographics with video-first creative. TikTok Shop and Search Ads make it a full-funnel channel, not just awareness.
+- **Connected TV (CTV)** — Programmatic video ads on streaming platforms, measured with performance KPIs (site visits, leads, conversions) rather than just brand metrics. CTV bridges the gap between TV-scale reach and digital-level attribution.
+- **Retail Media** — For e-commerce: advertising within retail platforms (Amazon, marketplace networks) that connects ad spend directly to purchase data in a closed-loop measurement environment.
 
 See our [Paid Social Strategy](/services/paid-social-strategy/) service for platform-specific details.
 
@@ -66,6 +68,17 @@ We do not split budget evenly across channels and hope for the best. We use a pe
 - **Quarterly**: Strategic review of channel mix, audience performance, and competitive landscape
 
 The goal is that by month three, your budget allocation reflects actual performance data, not assumptions.
+
+## How do you measure what matters in a privacy-first world?
+
+Traditional tracking relies on browser cookies that are increasingly blocked or restricted. We build measurement infrastructure that works regardless:
+
+- **Server-side tracking** — Conversion APIs (Meta CAPI, Google Enhanced Conversions, LinkedIn CAPI) send conversion data from your server, not the browser. This recovers the attribution data that ad blockers and iOS privacy restrictions would otherwise hide.
+- **First-party data activation** — Your CRM and customer data becomes the foundation for targeting and measurement. We connect customer lists, email audiences, and purchase data to platform algorithms so they optimise toward your highest-value customers.
+- **Predictive Lifetime Value (pLTV)** — Instead of optimising for the immediate sale, we configure platform algorithms to identify leads with the highest long-term value based on CRM and behavioural signals. This shifts spend toward profitable growth, not just volume.
+- **Data clean rooms** — For clients with sensitive customer data, we use privacy-preserving environments that match first-party data with platform data without exposing raw personally identifiable information. This enables precise targeting and measurement within GDPR/nDSG constraints.
+
+For the full analytics and attribution setup, see our [Google Analytics Consultancy](/services/google-analytics-consultancy/) and [ROI Reporting](/services/roi-reporting-transparency/) services.
 
 ## Is your ad spend working as hard as it should?
 
