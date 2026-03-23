@@ -30,6 +30,7 @@ export const en: Record<string, string> = {
   'footer.company': 'Company',
   'footer.audits': 'Free Audits',
   'footer.rights': 'All rights reserved.',
+  'footer.privacy': 'Privacy Policy',
   'footer.freeAdsAudit': 'Free Google Ads Audit',
   'footer.copywritingAudit': 'Copywriting Audit',
 

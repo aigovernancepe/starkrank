@@ -86,6 +86,9 @@ export const footerNav = {
     { label: 'Free Google Ads Audit', href: '/audits/free-google-ads-check/' },
     { label: 'Copywriting Audit', href: '/audits/copywriting-ux-analysis/' },
   ],
+  legal: [
+    { label: 'Privacy Policy', href: '/privacy/' },
+  ],
 };
 
 /** Locale-specific overrides for non-service navigation paths. */
@@ -94,6 +97,13 @@ const contactPaths: Record<Locale, string> = {
   pe: '/pe/contacto/',
   de: '/de/kontakt/',
   'ch-de': '/ch-de/kontakt/',
+};
+
+const privacyPaths: Record<Locale, string> = {
+  en: '/privacy/',
+  pe: '/pe/privacidad/',
+  de: '/de/datenschutz/',
+  'ch-de': '/ch-de/datenschutz/',
 };
 
 /**
@@ -109,6 +119,9 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
 
   // Contact page
   if (href === '/contact/') return contactPaths[locale];
+
+  // Privacy page
+  if (href === '/privacy/') return privacyPaths[locale];
 
   // Top-level /services/ link → locale homepage (shows pillar cards)
   if (href === '/services/') return `${localePrefix}/`;

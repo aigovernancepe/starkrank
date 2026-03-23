@@ -26,6 +26,7 @@ export const pe: Record<string, string> = {
   'footer.company': 'Empresa',
   'footer.audits': 'Auditorías Gratuitas',
   'footer.rights': 'Todos los derechos reservados.',
+  'footer.privacy': 'Política de Privacidad',
   'footer.freeAdsAudit': 'Auditoría Gratuita de Google Ads',
   'footer.copywritingAudit': 'Auditoría de Redacción',
 

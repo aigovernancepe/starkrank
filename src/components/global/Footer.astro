@@ -101,10 +101,13 @@ const auditKeys: Record<string, string> = {
       </div>
     </div>
 
-    <div class="mt-16 pt-8 border-t border-gray/20 text-center">
+    <div class="mt-16 pt-8 border-t border-gray/20 flex flex-col sm:flex-row items-center justify-between gap-2">
       <p class="text-xs text-gray font-body">
         &copy; {year} StarkRank. {t('footer.rights', locale)}
       </p>
+      <a href={getLocalizedNavHref('/privacy/', locale)} class="text-xs text-gray font-body hover:text-cream transition-colors">
+        {t('footer.privacy', locale)}
+      </a>
     </div>
   </div>
 </footer>

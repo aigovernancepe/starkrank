@@ -26,6 +26,7 @@ export const chde: Record<string, string> = {
   'footer.company': 'Unternehmen',
   'footer.audits': 'Kostenlose Audits',
   'footer.rights': 'Alle Rechte vorbehalten.',
+  'footer.privacy': 'Datenschutzerklärung',
   'footer.freeAdsAudit': 'Kostenloses Google Ads Audit',
   'footer.copywritingAudit': 'Texterstellungs-Audit',
 
