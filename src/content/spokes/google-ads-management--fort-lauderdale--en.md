@@ -16,6 +16,10 @@ highlights:
     description: "Ad-to-page message match audits and recommendations so Quality Scores stay high and cost-per-click stays low in competitive Fort Lauderdale verticals."
   - title: "Bid Strategy Optimisation"
     description: "Data-driven selection and tuning of automated bid strategies — Target CPA, Target ROAS, or Maximise Conversions — based on your account maturity and conversion volume."
+  - title: "Microsoft Ads (Bing)"
+    description: "We run your campaigns on Microsoft Ads alongside Google, tapping into Bing, Yahoo, and Microsoft Copilot traffic. Fort Lauderdale's professional and 45+ demographics over-index on Bing, delivering qualified leads at lower CPCs."
+  - title: "Ad Copywriting and RSA Testing"
+    description: "Structured headline and description testing for Responsive Search Ads. We write conversion-focused ad copy tailored to Fort Lauderdale search intent and continuously refine based on performance data."
   - title: "Search Term Mining"
     description: "Weekly search query analysis to find new converting terms and block irrelevant traffic that inflates cost in the South Florida market."
 sectors:

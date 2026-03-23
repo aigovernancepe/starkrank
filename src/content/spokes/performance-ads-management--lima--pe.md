@@ -41,7 +41,7 @@ deliverables:
 
 Lima concentra la mayor parte de la inversión publicitaria digital del Perú, pero la adopción de gestión profesional de campañas aún está en etapa temprana. Muchas empresas limeñas invierten en Google Ads o Meta sin una estrategia integrada, lo que resulta en audiencias duplicadas, presupuesto fragmentado y atribución incorrecta.
 
-El consumidor limeño es mobile-first y sensible al precio. Compara en múltiples plataformas antes de convertir, y frecuentemente completa la transacción por WhatsApp. Una estrategia de medios pagados efectiva debe contemplar todo este recorrido, no solo el clic inicial.
+El consumidor limeño es mobile-first y sensible al precio. Compara en múltiples plataformas antes de convertir, y frecuentemente completa la transacción por WhatsApp. También gestionamos Microsoft Ads (Bing) para capturar la audiencia profesional y corporativa en Lima que utiliza Bing, Yahoo y Microsoft Copilot — un canal con CPCs más bajos y menor competencia. Una estrategia de medios pagados efectiva debe contemplar todo este recorrido, no solo el clic inicial.
 
 ## ¿Cómo optimizamos su inversión publicitaria en el mercado peruano?
 

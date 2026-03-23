@@ -41,7 +41,7 @@ deliverables:
 
 Basels Werbemarkt ist durch hohe Schweizer CPCs und gleichzeitig trinationale Reichweite geprägt. Pharma-Zulieferer, Finanzdienstleister und Logistikunternehmen konkurrieren um dieselben Zielgruppen — auf Deutsch, Französisch und Englisch. Wer nur auf einer Plattform wirbt, zahlt zu viel für Reichweite und verpasst Entscheider, die ihre Aufmerksamkeit auf mehrere Kanäle verteilen.
 
-Eine kanalübergreifende Strategie erreicht Basler Zielgruppen dort, wo sie sich aufhalten: Suchintention auf Google, Awareness auf Social Media und Retargeting über Plattformgrenzen hinweg — bei kontrollierter Blended CPA (Cost per Acquisition — Kosten pro Akquisition). Für die Google-Komponente arbeiten wir eng mit unserem [Google Ads Management](/ch-de/google-ads-basel/) zusammen.
+Eine kanalübergreifende Strategie erreicht Basler Zielgruppen dort, wo sie sich aufhalten: Suchintention auf Google, Awareness auf Social Media und Retargeting über Plattformgrenzen hinweg — bei kontrollierter Blended CPA (Cost per Acquisition — Kosten pro Akquisition). Ergänzend bewirtschaften wir Microsoft Ads (Bing), um die professionelle Zielgruppe über Bing, Yahoo und Microsoft Copilot zu erreichen — im Schweizer Markt oft zu tieferen CPCs als bei Google. Für die Google-Komponente arbeiten wir eng mit unserem [Google Ads Management](/ch-de/google-ads-basel/) zusammen.
 
 ## Wie funktioniert mehrsprachiges Kampagnenmanagement am Dreiländereck?
 

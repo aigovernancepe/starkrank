@@ -41,7 +41,7 @@ deliverables:
 
 Hannover ist einer der stärksten B2B-Standorte Deutschlands — geprägt von Mittelstand, Maschinenbau, IT und der weltweit grössten Industriemesse. Einkäufer und technische Entscheider recherchieren über Google, bewerten Anbieter auf LinkedIn und konsumieren Fachinhalte über verschiedene Plattformen. Wer nur auf einem Kanal wirbt, überzahlt für Reichweite und verpasst Entscheider, die ihre Aufmerksamkeit über mehrere Touchpoints verteilen.
 
-Ein Cross-Channel-Ansatz verbindet Suchintention auf Google mit B2B-Targeting auf LinkedIn und Awareness-Aufbau über Meta — während die CPA (Cost per Acquisition — Kosten pro Akquisition) kontrolliert bleibt. Besonders in Messezeiten entfaltet die Kombination ihre volle Wirkung.
+Ein Cross-Channel-Ansatz verbindet Suchintention auf Google mit B2B-Targeting auf LinkedIn und Awareness-Aufbau über Meta — während die CPA (Cost per Acquisition — Kosten pro Akquisition) kontrolliert bleibt. Zusätzlich steuern wir Microsoft Ads (Bing), um die B2B-affine Zielgruppe über Bing, Yahoo und Microsoft Copilot zu erreichen — oft zu deutlich niedrigeren CPCs als bei Google. Besonders in Messezeiten entfaltet die Kombination ihre volle Wirkung.
 
 ## Wie verteilen wir das Budget für ein Hannoveraner Unternehmen?
 

@@ -41,7 +41,7 @@ deliverables:
 
 Miami's advertising market is among the most expensive in the US. Real estate developers, hospitality brands, and fintech firms all compete for the same high-intent audiences across Google, Instagram, TikTok, and LinkedIn. Running campaigns on a single platform means overpaying for reach while missing buyers who split their attention across channels.
 
-A cross-channel strategy lets you meet Miami audiences wherever they are — capturing search intent on Google, building awareness on social, and retargeting across platforms — while keeping your blended cost per acquisition under control.
+A cross-channel strategy lets you meet Miami audiences wherever they are — capturing search intent on Google, building awareness on social, and retargeting across platforms — while keeping your blended cost per acquisition under control. We also manage Microsoft Ads (Bing) alongside Google, capturing the professional-skewing audience across Bing, Yahoo, and Microsoft Copilot at lower CPCs.
 
 ## How do you allocate budget across platforms for a Miami business?
 

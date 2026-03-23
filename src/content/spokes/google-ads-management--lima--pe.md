@@ -16,6 +16,10 @@ highlights:
     description: "Organizamos campañas, grupos de anuncios y pujas con una arquitectura que permite escalar inversión sin perder eficiencia ni control."
   - title: "Optimización de Conversiones"
     description: "Configuramos tracking de conversiones completo — formularios, llamadas, WhatsApp y ventas offline — para que las pujas automáticas optimicen hacia resultados reales."
+  - title: "Microsoft Ads (Bing)"
+    description: "Extendemos sus campañas a Microsoft Ads para capturar tráfico en Bing, Yahoo y Microsoft Copilot — una audiencia profesional y corporativa en Lima con CPCs significativamente más bajos que en Google."
+  - title: "Redacción y Testing de Anuncios"
+    description: "Creamos anuncios de búsqueda responsivos (RSAs) con testing sistemático de titulares y descripciones. Optimizamos el copy publicitario para el mercado peruano, maximizando CTR y Quality Score."
   - title: "Landing Pages Optimizadas"
     description: "Asesoramos en diseño y copy de páginas de destino que convierten tráfico de Google Ads en leads y ventas para el público limeño."
 sectors:
