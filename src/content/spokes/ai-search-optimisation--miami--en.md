@@ -5,7 +5,7 @@ updatedDate: 2026-03-23
 locale: "en"
 title: "AI Search Optimisation in Miami"
 description: "Position your Miami business in the answers of ChatGPT, Perplexity, and Google AI Overviews. StarkRank audits, restructures, and monitors your digital presence so AI platforms cite you as a trusted source."
-localCTA: "Request Your Free AI Visibility Audit for Miami"
+localCTA: "Request Your Free AI Visibility Assessment for Miami"
 highlightsTitle: "The AISO Score: Six Dimensions"
 highlights:
   - title: "Crawlability"

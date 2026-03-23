@@ -5,7 +5,7 @@ updatedDate: 2026-03-23
 locale: "en"
 title: "AI Search Optimisation in Fort Lauderdale"
 description: "Position your Fort Lauderdale business in the answers of ChatGPT, Perplexity, and Google AI Overviews. StarkRank audits, restructures, and monitors your digital presence for maximum AI visibility in South Florida."
-localCTA: "Request Your Free AI Visibility Audit for Fort Lauderdale"
+localCTA: "Request Your Free AI Visibility Assessment for Fort Lauderdale"
 highlightsTitle: "The AISO Score: Six Dimensions"
 highlights:
   - title: "Crawlability"

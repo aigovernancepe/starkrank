@@ -29,7 +29,7 @@ export const de: Record<string, string> = {
   'footer.rights': 'Alle Rechte vorbehalten.',
   'footer.privacy': 'Datenschutzerklärung',
   'footer.freeAdsAudit': 'Kostenloses Google Ads Audit',
-  'footer.copywritingAudit': 'Texterstellungs-Audit',
+  'footer.copywritingAudit': 'Text-Ersteinschätzung',
 
   'services.title': 'Unsere Leistungen',
   'services.subtitle': 'Ganzheitliches digitales Wachstum, von KI-Suche bis transparentes Reporting.',

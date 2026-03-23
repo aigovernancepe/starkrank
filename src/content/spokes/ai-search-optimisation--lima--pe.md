@@ -5,7 +5,7 @@ updatedDate: 2026-03-22
 locale: "pe"
 title: "Optimización de Búsqueda IA en Lima"
 description: "Posicione su empresa limeña en las respuestas de ChatGPT, Perplexity y Google AI Overviews. StarkRank audita, reestructura y monitorea su presencia digital para que las plataformas de IA lo citen como fuente confiable."
-localCTA: "Solicite su Auditoría AISO Gratuita para Lima"
+localCTA: "Solicite su Evaluación AISO Inicial Gratuita para Lima"
 highlightsTitle: "El AISO Score: Seis Dimensiones"
 highlights:
   - title: "Rastreabilidad"

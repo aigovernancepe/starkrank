@@ -33,7 +33,7 @@ export const en: Record<string, string> = {
   'footer.rights': 'All rights reserved.',
   'footer.privacy': 'Privacy Policy',
   'footer.freeAdsAudit': 'Free Google Ads Audit',
-  'footer.copywritingAudit': 'Copywriting Audit',
+  'footer.copywritingAudit': 'Copywriting Assessment',
 
   // Services
   'services.title': 'Our Services',
