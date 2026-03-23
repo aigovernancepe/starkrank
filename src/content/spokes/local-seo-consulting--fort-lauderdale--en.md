@@ -13,7 +13,7 @@ highlights:
   - title: "NAP+W Consistency"
     description: "Audit of Name, Address, Phone, and Website across Google, Yelp, industry directories, Chamber of Commerce listings, and social profiles. Every inconsistency resolved."
   - title: "LocalBusiness Schema"
-    description: "JSON-LD implementation with geo-coordinates, opening hours, service area, and aggregate ratings linked to your review platforms."
+    description: "JSON-LD markup with Broward County service area coverage, geo-coordinates for your Fort Lauderdale location, and review aggregation from Google and marine industry directories."
   - title: "Review Management"
     description: "Sustainable review generation process with post-service workflows, staff training, and response templates. Consistent review volume is what drives AI recommendations."
 sectors:
@@ -29,10 +29,10 @@ sectorsTitle: "Which Fort Lauderdale businesses benefit most from local SEO?"
 deliverables:
   - "NAP+W audit across all relevant platforms for the Fort Lauderdale and Broward County market"
   - "Complete Google Business Profile optimisation with Broward County service areas"
-  - "LocalBusiness schema implementation with validated geo-structured data"
+  - "LocalBusiness schema with Broward County geo-data, service area configuration, and review integration"
   - "Review generation and management strategy for Fort Lauderdale's business community"
   - "Local competitor analysis: who appears when customers search for your services in Fort Lauderdale"
-  - "Monthly local performance report with KPIs and action recommendations"
+  - "Monthly Broward County performance report tracking local pack rankings, review velocity, and AI citation frequency"
 ---
 
 ## Why is local SEO critical for businesses in Fort Lauderdale?

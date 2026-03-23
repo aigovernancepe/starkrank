@@ -9,17 +9,17 @@ localCTA: "Request Your Free AI Visibility Audit for Fort Lauderdale"
 highlightsTitle: "The AISO Score: Six Dimensions"
 highlights:
   - title: "Crawlability"
-    description: "Can GPTBot, ClaudeBot, and PerplexityBot access your content? We verify robots.txt, llms.txt, rendering barriers, and server log evidence of AI crawler activity."
+    description: "Many Fort Lauderdale business sites built on template platforms inadvertently block AI crawlers. We verify GPTBot, ClaudeBot, and PerplexityBot access through robots.txt, server logs, and platform-specific configuration."
   - title: "Structure"
-    description: "Is your markup AI-readable? We assess structured data (JSON-LD), semantic HTML, heading hierarchy, and chunk-optimised formatting."
+    description: "Template-built sites often lack proper structured data. We assess JSON-LD markup, semantic HTML, and whether your content is formatted for the chunk-based retrieval AI platforms use."
   - title: "Authority"
-    description: "Does your brand exist as a recognised entity? We check Organisation schema, sameAs links, author bios, and entity data consistency across platforms."
+    description: "Fort Lauderdale businesses need distinct entity signals to avoid being overshadowed by Miami in AI answers. We verify Organisation schema, sameAs links, and data consistency across Broward County directories."
   - title: "Citability"
-    description: "Is your content answer-formatted and original? We evaluate direct answers, question-phrased headings, comparison tables, and original data sources."
+    description: "Is your content structured to answer the specific questions Fort Lauderdale customers ask? We evaluate answer-first formatting, question headings, and whether your pages contain original local insights."
   - title: "Freshness"
-    description: "How current is your content? AI models deprioritise stale content. We audit publication dates, update frequency, and topical relevance."
+    description: "Seasonal businesses in Fort Lauderdale need content that reflects current offerings. We audit publication dates, update cycles, and whether your service pages reflect the latest market conditions."
   - title: "Measurability"
-    description: "Are you tracking AI search performance? We review GA4 AI referral segmentation, brand mention monitoring, and baseline share of voice data."
+    description: "Are you tracking which AI platforms send traffic to your Fort Lauderdale business? We configure GA4 segments for AI referrals and set up brand mention monitoring against local competitors."
 sectors:
   - name: "Marine and Yachting"
     description: "Fort Lauderdale is the yachting capital of the world. Buyers, charterers, and service providers research via AI — being cited as a trusted source for marine services drives high-value enquiries."
@@ -31,10 +31,10 @@ sectors:
     description: "Fort Lauderdale's growing business community includes companies that lack the dedicated marketing teams of larger competitors. AI search optimisation levels the playing field by focusing on content quality over budget size."
 deliverables:
   - "Full AISO Score audit with per-dimension scoring and Fort Lauderdale market benchmarking"
-  - "AI crawler access verification for GPTBot, ClaudeBot, and PerplexityBot"
-  - "Content restructuring plan with question-phrased headings and direct answers"
-  - "Brand entity strategy for the Fort Lauderdale and Broward County market"
-  - "AI mention monitoring setup and monthly performance dashboard"
+  - "AI crawler access review with platform-specific checks for template-built and managed hosting sites"
+  - "Content restructuring plan focused on Fort Lauderdale service queries and local search patterns"
+  - "Brand entity strategy to differentiate your Fort Lauderdale presence from Miami competitors in AI answers"
+  - "AI mention monitoring configured for Broward County market with competitor benchmarking"
 ---
 
 ## Why does AI search matter for businesses in Fort Lauderdale?

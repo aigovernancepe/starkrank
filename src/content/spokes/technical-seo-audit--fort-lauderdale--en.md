@@ -9,15 +9,15 @@ localCTA: "Request Your Technical SEO Audit for Fort Lauderdale"
 highlightsTitle: "What We Audit"
 highlights:
   - title: "Crawlability"
-    description: "We verify access for Googlebot, Bingbot, and AI crawlers (GPTBot, ClaudeBot, PerplexityBot). Server log analysis confirms which bots are actually reaching your content."
+    description: "We verify bot access with particular attention to the platform-level restrictions common in Fort Lauderdale's SMB websites — Wix, Squarespace, and managed WordPress hosts that may block AI crawlers by default."
   - title: "Rendering"
     description: "We test whether critical content appears in the initial HTML or requires JavaScript execution. Many Fort Lauderdale business sites use template builders that generate bloated, crawler-unfriendly code."
   - title: "Performance"
     description: "We measure against Google's thresholds (LCP < 2.5s, CLS < 0.1, INP < 200ms). Page speed directly impacts rankings and user experience — especially for mobile visitors."
   - title: "Structured Data"
-    description: "We audit existing markup and implement JSON-LD for relevant schema types: Service, FAQPage, Product, Organization, and LocalBusiness."
+    description: "Most Fort Lauderdale service business sites lack schema markup entirely. We implement JSON-LD for Service, LocalBusiness, FAQPage, and review aggregation — the signals that drive local pack and AI citations."
   - title: "Indexation"
-    description: "We review Google Search Console status, identify excluded pages, and verify canonical and sitemap architecture."
+    description: "For multi-location businesses in Broward County, we verify that Fort Lauderdale pages are indexed independently from Miami pages — correct canonicals, unique content, and proper sitemap segmentation."
 sectors:
   - name: "Template-Built Websites"
     description: "Many small and mid-size businesses in Fort Lauderdale use website builders (Wix, Squarespace, WordPress themes) that produce bloated HTML, slow load times, and poor structured data support."
@@ -29,11 +29,11 @@ sectors:
     description: "Businesses serving both Fort Lauderdale and Miami need distinct local pages with correct canonical tags, unique content, and separate LocalBusiness schema — not duplicate pages."
 sectorsTitle: "What technical issues do we find most often in Fort Lauderdale?"
 deliverables:
-  - "Crawl health report with bot access status for all major search and AI crawlers"
-  - "Rendering diagnosis comparing what bots see versus what users see"
-  - "Core Web Vitals scorecard with specific fix recommendations per page template"
-  - "Structured data audit with validated JSON-LD scripts ready for implementation"
-  - "Prioritised roadmap ordered by impact and implementation effort"
+  - "Crawl health report covering search engines and AI bots, with platform-specific findings for template-built sites"
+  - "Rendering comparison showing what Googlebot and GPTBot see versus your actual page content"
+  - "Core Web Vitals scorecard with mobile-first recommendations tailored to Fort Lauderdale's visitor traffic patterns"
+  - "Structured data implementation plan with validated JSON-LD scripts for LocalBusiness, Service, and review markup"
+  - "Prioritised action plan with estimated impact, categorised by quick wins versus development projects"
 ---
 
 ## Why is a technical audit the starting point for Fort Lauderdale businesses?
