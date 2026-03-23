@@ -8,6 +8,7 @@ import Card from '../../components/ui/Card.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import { getCollection, render } from 'astro:content';
 import { getPillarById } from '../../data/pillars';
+import { getSpokePath } from '../../data/service-slugs';
 
 export async function getStaticPaths() {
   const services = await getCollection('services');
@@ -25,6 +26,15 @@ const allServices = await getCollection('services');
 const relatedServices = service.data.relatedServices
   ? allServices.filter((s) => service.data.relatedServices!.includes(s.data.slug))
   : [];
+
+// EN cities that offer this service — for sidebar local page links
+const allCities = await getCollection('cities');
+const enCities = allCities
+  .filter((c) => c.data.locale === 'en' && c.data.services.includes(service.data.slug))
+  .map((c) => ({
+    city: c.data.city,
+    href: `/${getSpokePath(service.data.slug, c.data.citySlug, 'en')}/`,
+  }));
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -138,6 +148,19 @@ const breadcrumbs = [
                 {relatedServices.map((related) => (
                   <Card href={`/services/${related.data.slug}/`}>
                     <h4 class="text-sm font-headline font-bold text-navy">{related.data.title}</h4>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {enCities.length > 0 && (
+            <div class="mt-8">
+              <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Local Pages</h3>
+              <div class="space-y-3">
+                {enCities.map((c) => (
+                  <Card href={c.href}>
+                    <h4 class="text-sm font-headline font-bold text-navy">{service.data.title} in {c.city}</h4>
                   </Card>
                 ))}
               </div>

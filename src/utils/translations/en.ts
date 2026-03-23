@@ -5,6 +5,7 @@ export const en: Record<string, string> = {
   'nav.blog': 'Blog',
   'nav.about': 'About',
   'nav.contact': 'Contact',
+  'nav.locations': 'Locations',
 
   // Pillar Names
   'pillar.search-ai-intelligence': 'Search & AI Intelligence',

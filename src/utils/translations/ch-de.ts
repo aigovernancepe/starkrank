@@ -4,6 +4,7 @@ export const chde: Record<string, string> = {
   'nav.blog': 'Blog',
   'nav.about': 'Über uns',
   'nav.contact': 'Kontakt',
+  'nav.locations': 'Standorte',
 
   // Pillar Names
   'pillar.search-ai-intelligence': 'Suche & KI-Intelligenz',

@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/ui/HeroSection.astro';
+import Section from '../components/ui/Section.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import Button from '../components/ui/Button.astro';
+import CTABanner from '../components/ui/CTABanner.astro';
+import { getSpokePath } from '../data/service-slugs';
+
+const locations = [
+  {
+    city: 'Miami',
+    citySlug: 'miami',
+    country: 'United States',
+    locale: 'en',
+    localePath: '',
+    description: 'South Florida\'s business hub. StarkRank delivers AI search optimisation, performance media, and technical SEO for Miami\'s diverse economy — from hospitality and real estate to fintech and healthcare.',
+    image: '/images/cities/miami.webp',
+    focus: 'Performance Media & AI Search',
+  },
+  {
+    city: 'Fort Lauderdale',
+    citySlug: 'fort-lauderdale',
+    country: 'United States',
+    locale: 'en',
+    localePath: '',
+    description: 'Greater Fort Lauderdale is one of the fastest-growing business corridors in the US. We help local companies compete in traditional and AI-powered search with data-driven strategies.',
+    image: '/images/cities/fort-lauderdale.webp',
+    focus: 'Local SEO & Technical SEO',
+  },
+  {
+    city: 'Basel',
+    citySlug: 'basel',
+    country: 'Switzerland',
+    locale: 'ch-de',
+    localePath: '/ch-de',
+    description: 'At the crossroads of Switzerland, Germany, and France, Basel\'s pharma and life sciences cluster demands multilingual, cross-border digital visibility. Our Swiss headquarters serves the trinational region.',
+    image: '/images/cities/basel.webp',
+    focus: 'AI Search & Multilingual SEO',
+  },
+  {
+    city: 'Zürich',
+    citySlug: 'zuerich',
+    country: 'Switzerland',
+    locale: 'ch-de',
+    localePath: '/ch-de',
+    description: 'Switzerland\'s financial capital and tech hub. We help Zürich-based companies — from banking to SaaS — build AI search visibility in the German-speaking market and beyond.',
+    image: '/images/cities/zuerich.webp',
+    focus: 'Technical SEO & Analytics',
+  },
+  {
+    city: 'Hannover',
+    citySlug: 'hannover',
+    country: 'Germany',
+    locale: 'de',
+    localePath: '/de',
+    description: 'Home of the Hannover Messe and a stronghold of German Mittelstand. We position B2B companies, manufacturers, and IT services for visibility in AI-powered search and traditional SEO.',
+    image: '/images/cities/hannover.webp',
+    focus: 'B2B & Mittelstand SEO',
+  },
+  {
+    city: 'Lima',
+    citySlug: 'lima',
+    country: 'Peru',
+    locale: 'pe',
+    localePath: '/pe',
+    description: 'Peru\'s digital economy is centred in Lima. We help fintech, e-commerce, and professional services companies gain visibility in both Spanish and English AI search platforms.',
+    image: '/images/cities/lima.webp',
+    focus: 'LATAM Digital Growth',
+  },
+];
+
+// Top 3 services to link per city
+const topServices = ['ai-search-optimisation', 'technical-seo-audit', 'local-seo-consulting'];
+const serviceNames: Record<string, string> = {
+  'ai-search-optimisation': 'AI Search',
+  'technical-seo-audit': 'Technical SEO',
+  'local-seo-consulting': 'Local SEO',
+};
+---
+
+<BaseLayout
+  title="Locations — StarkRank Global Offices"
+  description="StarkRank operates from six cities across four countries. Find our local digital marketing services in Miami, Fort Lauderdale, Basel, Zürich, Hannover, and Lima."
+>
+  <HeroSection
+    headline="Four Countries. Six Cities. **One Strategy.**"
+    subheadline="We combine global expertise with local market knowledge in every region we serve."
+  />
+
+  <Section bg="cream">
+    <SectionHeader label="Where We Operate" title="Our Locations" align="center" />
+    <div class="space-y-16">
+      {locations.map((loc, i) => (
+        <div class:list={['grid grid-cols-1 lg:grid-cols-2 gap-8 items-center', i % 2 === 1 && 'lg:direction-rtl']}>
+          <div class:list={[i % 2 === 1 && 'lg:order-2']}>
+            <img
+              src={loc.image}
+              alt={`StarkRank office location — ${loc.city}, ${loc.country}`}
+              width="640"
+              height="400"
+              class="w-full h-64 lg:h-80 object-cover rounded-lg shadow-lg"
+              loading="lazy"
+            />
+          </div>
+          <div class:list={[i % 2 === 1 && 'lg:order-1']}>
+            <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-2 block">
+              {loc.focus}
+            </span>
+            <h2 class="text-3xl font-headline font-black tracking-tight text-navy">
+              {loc.city}
+            </h2>
+            <p class="mt-1 text-sm font-body text-gray">{loc.country}</p>
+            <p class="mt-4 text-base font-body text-gray leading-relaxed">
+              {loc.description}
+            </p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              {topServices.map((svc) => {
+                const spokePath = getSpokePath(svc, loc.citySlug, loc.locale);
+                return (
+                  <a
+                    href={`${loc.localePath}/${spokePath}/`}
+                    class="inline-flex items-center px-4 py-2 text-xs font-label font-semibold uppercase tracking-wide text-blue border border-blue/30 rounded-md hover:bg-blue hover:text-white transition-colors"
+                  >
+                    {serviceNames[svc]}
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <CTABanner bg="navy" title="Ready to Grow?" subtitle="Book a free consultation with our local team.">
+    <Button href="/contact/" variant="primary" size="lg">Contact Us</Button>
+  </CTABanner>
+</BaseLayout>
