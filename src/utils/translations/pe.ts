@@ -69,6 +69,8 @@ export const pe: Record<string, string> = {
   'spoke.approach': 'Nuestro Enfoque',
   'spoke.approachText': 'Comenzamos con datos. Cada estrategia de {service} que construimos para empresas en {city} está fundamentada en inteligencia de búsqueda, análisis competitivo y métricas claras de ROI.',
   'spoke.otherServices': 'Otros Servicios en {city}',
+  'spoke.pillarServices': 'Más Servicios de {pillar}',
+  'spoke.allServices': 'Todos los Servicios en {city}',
   'spoke.contactIn': 'Contáctenos en {city}',
   'spoke.growBusiness': 'Haga Crecer su Negocio en {city}',
   'spoke.bookConsultation': 'Agende una consulta gratuita con nuestro equipo local.',

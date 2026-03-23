@@ -1,5 +1,5 @@
 export const chde: Record<string, string> = {
-  'nav.services': 'Leistungen',
+  'nav.services': 'Dienstleistungen',
   'nav.caseStudies': 'Referenzen',
   'nav.blog': 'Blog',
   'nav.about': 'Über uns',
@@ -20,10 +20,10 @@ export const chde: Record<string, string> = {
   'cta.freeAudit': 'Kostenloses Audit',
   'cta.contactUs': 'Kontaktieren Sie uns',
   'cta.learnMore': 'Mehr erfahren',
-  'cta.viewServices': 'Alle Leistungen',
+  'cta.viewServices': 'Alle Dienstleistungen',
 
   'footer.tagline': 'Suchintelligenz. Globale Reichweite.',
-  'footer.services': 'Leistungen',
+  'footer.services': 'Dienstleistungen',
   'footer.company': 'Unternehmen',
   'footer.audits': 'Kostenlose Audits',
   'footer.rights': 'Alle Rechte vorbehalten.',
@@ -31,7 +31,7 @@ export const chde: Record<string, string> = {
   'footer.freeAdsAudit': 'Kostenloses Google Ads Audit',
   'footer.copywritingAudit': 'Text-Ersteinschätzung',
 
-  'services.title': 'Unsere Leistungen',
+  'services.title': 'Unsere Dienstleistungen',
   'services.subtitle': 'Ganzheitliches digitales Wachstum, von KI-Suche bis transparentes Reporting.',
 
   'blog.title': 'Einblicke',
@@ -68,7 +68,9 @@ export const chde: Record<string, string> = {
   'spoke.whyCityText': 'Der Markt in {city} verlangt einen Partner, der lokales Suchverhalten und globale Best Practices versteht. StarkRank verbindet tiefgehende technische Expertise mit lokalem Marktwissen, um messbare Ergebnisse zu liefern.',
   'spoke.approach': 'Unser Ansatz',
   'spoke.approachText': 'Wir beginnen mit Daten. Jede {service}-Strategie, die wir für Unternehmen in {city} entwickeln, basiert auf Suchintelligenz, Wettbewerbsanalyse und klaren ROI-Kennzahlen.',
-  'spoke.otherServices': 'Weitere Leistungen in {city}',
+  'spoke.otherServices': 'Weitere Dienstleistungen in {city}',
+  'spoke.pillarServices': 'Weitere {pillar}-Dienstleistungen',
+  'spoke.allServices': 'Alle Dienstleistungen in {city}',
   'spoke.contactIn': 'Kontaktieren Sie uns in {city}',
   'spoke.growBusiness': 'Wachsen Sie in {city}',
   'spoke.bookConsultation': 'Buchen Sie eine kostenlose Beratung mit unserem lokalen Team.',

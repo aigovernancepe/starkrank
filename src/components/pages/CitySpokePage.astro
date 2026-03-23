@@ -12,6 +12,7 @@ import { t, tf } from '../../utils/i18n';
 import { getSpokePath } from '../../data/service-slugs';
 import { getLocalizedNavHref } from '../../data/navigation';
 import { render } from 'astro:content';
+import { getPillarById } from '../../data/pillars';
 
 interface Props {
   city: {
@@ -35,6 +36,12 @@ const { city, service, locale, spokeSlug, spoke } = Astro.props;
 
 // Support both full collection entry (new) and plain data object (legacy)
 const serviceData = service.data ?? service;
+
+// Pillar grouping for service sections
+const pillar = serviceData.pillar ? getPillarById(serviceData.pillar) : null;
+const pillarServices = pillar ? pillar.services.filter((s: string) => s !== serviceData.slug) : [];
+const otherServices = city.services.filter((s: string) => s !== serviceData.slug && !pillarServices.includes(s));
+const localPillarName = pillar ? t(`pillar.${pillar.id}`, locale) : '';
 
 const site = Astro.site?.origin ?? 'https://starkrank.com';
 const localePath = locale === 'en' ? '' : `/${locale}`;
@@ -240,22 +247,43 @@ const ctaTitle = spoke?.data?.localCTA ?? tf('spoke.growBusiness', vars, locale)
         </Section>
       )}
 
-      {/* Section 6: Other services */}
-      <Section bg="cream">
-        <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.otherServices', vars, locale)}</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {city.services.filter((s: string) => s !== serviceData.slug).slice(0, 6).map((serviceSlug: string) => {
-            const spokePath = getSpokePath(serviceSlug, city.citySlug, locale);
-            return (
-              <Card href={`${localePath}/${spokePath}/`}>
-                <h4 class="text-sm font-headline font-bold text-navy">
-                  {t(`service.${serviceSlug}`, locale)}
-                </h4>
-              </Card>
-            );
-          })}
-        </div>
-      </Section>
+      {/* Section 6: Same-pillar services */}
+      {pillarServices.length > 0 && (
+        <Section bg="white">
+          <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.pillarServices', { ...vars, pillar: localPillarName }, locale)}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {pillarServices.map((serviceSlug: string) => {
+              const spokePath = getSpokePath(serviceSlug, city.citySlug, locale);
+              return (
+                <Card href={`${localePath}/${spokePath}/`}>
+                  <h4 class="text-sm font-headline font-bold text-navy">
+                    {t(`service.${serviceSlug}`, locale)}
+                  </h4>
+                </Card>
+              );
+            })}
+          </div>
+        </Section>
+      )}
+
+      {/* Section 7: All other services in this city */}
+      {otherServices.length > 0 && (
+        <Section bg="cream">
+          <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.allServices', vars, locale)}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {otherServices.map((serviceSlug: string) => {
+              const spokePath = getSpokePath(serviceSlug, city.citySlug, locale);
+              return (
+                <Card href={`${localePath}/${spokePath}/`}>
+                  <h4 class="text-sm font-headline font-bold text-navy">
+                    {t(`service.${serviceSlug}`, locale)}
+                  </h4>
+                </Card>
+              );
+            })}
+          </div>
+        </Section>
+      )}
     </>
   ) : (
     <Section bg="cream">
@@ -276,21 +304,41 @@ const ctaTitle = spoke?.data?.localCTA ?? tf('spoke.growBusiness', vars, locale)
         </div>
       </div>
 
-      <div class="mt-12">
-        <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.otherServices', vars, locale)}</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {city.services.filter((s: string) => s !== serviceData.slug).slice(0, 6).map((serviceSlug: string) => {
-            const spokePath = getSpokePath(serviceSlug, city.citySlug, locale);
-            return (
-              <Card href={`${localePath}/${spokePath}/`}>
-                <h4 class="text-sm font-headline font-bold text-navy">
-                  {t(`service.${serviceSlug}`, locale)}
-                </h4>
-              </Card>
-            );
-          })}
+      {pillarServices.length > 0 && (
+        <div class="mt-12">
+          <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.pillarServices', { ...vars, pillar: localPillarName }, locale)}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {pillarServices.map((serviceSlug: string) => {
+              const spokePath = getSpokePath(serviceSlug, city.citySlug, locale);
+              return (
+                <Card href={`${localePath}/${spokePath}/`}>
+                  <h4 class="text-sm font-headline font-bold text-navy">
+                    {t(`service.${serviceSlug}`, locale)}
+                  </h4>
+                </Card>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      )}
+
+      {otherServices.length > 0 && (
+        <div class="mt-12">
+          <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.allServices', vars, locale)}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {otherServices.map((serviceSlug: string) => {
+              const spokePath = getSpokePath(serviceSlug, city.citySlug, locale);
+              return (
+                <Card href={`${localePath}/${spokePath}/`}>
+                  <h4 class="text-sm font-headline font-bold text-navy">
+                    {t(`service.${serviceSlug}`, locale)}
+                  </h4>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </Section>
   )}
 

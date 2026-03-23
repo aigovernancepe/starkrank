@@ -65,13 +65,28 @@ const locations = [
   },
 ];
 
-// Top 3 services to link per city
-const topServices = ['ai-search-optimisation', 'technical-seo-audit', 'local-seo-consulting'];
+// Key services to highlight per city (grouped by pillar)
 const serviceNames: Record<string, string> = {
   'ai-search-optimisation': 'AI Search',
   'technical-seo-audit': 'Technical SEO',
   'local-seo-consulting': 'Local SEO',
+  'performance-ads-management': 'Performance Ads',
+  'google-ads-management': 'Google Ads',
+  'google-ads-audit': 'Ads Audit',
+  'paid-social-strategy': 'Paid Social',
+  'digital-pr-strategy': 'Digital PR',
+  'reactive-pr': 'Reactive PR',
+  'authority-link-building': 'Link Building',
+  'content-marketing': 'Content',
+  'seo-copywriting': 'SEO Copy',
+  'copywriting-audit': 'Copy Audit',
+  'audience-persona-mapping': 'Personas',
+  'technical-web-design': 'Web Design',
+  'google-analytics-consultancy': 'Analytics',
+  'performance-web-development': 'Web Dev',
+  'roi-reporting-transparency': 'ROI Reporting',
 };
+const allServices = Object.keys(serviceNames);
 ---
 
 <BaseLayout
@@ -110,7 +125,7 @@ const serviceNames: Record<string, string> = {
               {loc.description}
             </p>
             <div class="mt-6 flex flex-wrap gap-2">
-              {topServices.map((svc) => {
+              {allServices.map((svc) => {
                 const spokePath = getSpokePath(svc, loc.citySlug, loc.locale);
                 return (
                   <a
