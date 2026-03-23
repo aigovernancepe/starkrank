@@ -43,7 +43,7 @@ const pageUrl = `${localePath}/${spokeSlug}/`;
 const localServiceTitle = t(`service.${serviceData.slug}`, locale);
 const vars = { service: localServiceTitle, city: city.city, country: city.country };
 const inWord = t('spoke.in', locale);
-const heroImagePath = `/images/cities/${city.citySlug}.jpg`;
+const heroImagePath = `/images/cities/${city.citySlug}.webp`;
 
 const hasSpokeContent = !!spoke;
 const spokeTitle = spoke?.data?.title ?? `${localServiceTitle} ${inWord} ${city.city}`;
