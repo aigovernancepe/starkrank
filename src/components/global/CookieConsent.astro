@@ -1,0 +1,93 @@
+---
+import type { Locale } from '../../data/locales';
+import { t } from '../../utils/i18n';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+---
+
+<div
+  id="cookie-consent"
+  class="fixed bottom-0 left-0 right-0 z-50 hidden"
+  role="dialog"
+  aria-label={t('consent.title', locale)}
+>
+  <div class="max-w-4xl mx-auto px-4 pb-4">
+    <div class="bg-navy border border-gray/30 rounded-lg shadow-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+      <div class="flex-1">
+        <p class="text-sm font-body text-cream leading-relaxed">
+          {t('consent.message', locale)}
+          <a href={t('consent.policyLink', locale)} class="text-blue-light hover:text-blue underline ml-1">
+            {t('consent.policyText', locale)}
+          </a>
+        </p>
+      </div>
+      <div class="flex gap-3 shrink-0">
+        <button
+          id="cookie-decline"
+          class="px-5 py-2.5 text-xs font-label font-semibold uppercase tracking-wide text-gray-light hover:text-cream border border-gray/40 hover:border-cream/40 rounded-md transition-colors"
+        >
+          {t('consent.decline', locale)}
+        </button>
+        <button
+          id="cookie-accept"
+          class="px-5 py-2.5 text-xs font-label font-semibold uppercase tracking-wide text-white bg-blue hover:bg-blue-light rounded-md transition-colors"
+        >
+          {t('consent.accept', locale)}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function initConsent() {
+    const banner = document.getElementById('cookie-consent');
+    const acceptBtn = document.getElementById('cookie-accept');
+    const declineBtn = document.getElementById('cookie-decline');
+
+    if (!banner || !acceptBtn || !declineBtn) return;
+
+    const consent = localStorage.getItem('cookie-consent');
+
+    if (consent === null) {
+      // No decision yet — show banner
+      banner.classList.remove('hidden');
+    } else if (consent === 'granted') {
+      // Previously accepted — update consent
+      updateConsent(true);
+    }
+    // If 'denied', consent defaults already set to denied — nothing to do
+
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'granted');
+      updateConsent(true);
+      banner.classList.add('hidden');
+    });
+
+    declineBtn.addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'denied');
+      updateConsent(false);
+      banner.classList.add('hidden');
+    });
+  }
+
+  function updateConsent(granted: boolean) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', {
+        analytics_storage: granted ? 'granted' : 'denied',
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+      });
+    }
+  }
+
+  // Run on initial load
+  initConsent();
+  // Re-run after Astro view transitions (SPA navigation)
+  document.addEventListener('astro:after-swap', initConsent);
+</script>

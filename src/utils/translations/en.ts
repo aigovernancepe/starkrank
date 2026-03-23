@@ -79,6 +79,14 @@ export const en: Record<string, string> = {
   'spoke.bookConsultation': 'Book a free consultation with our local team.',
   'spoke.getStarted': 'Get Started',
   'spoke.home': 'Home',
+
+  // Cookie Consent
+  'consent.title': 'Cookie Consent',
+  'consent.message': 'We use cookies to analyse site traffic and optimise your experience. No data is collected until you consent.',
+  'consent.accept': 'Accept',
+  'consent.decline': 'Decline',
+  'consent.policyText': 'Privacy Policy',
+  'consent.policyLink': '/privacy/',
   'spoke.deliverables': 'What You Get',
   'spoke.deliverablesTitle': 'What We Deliver',
   'spoke.faqTitle': 'Frequently Asked Questions',

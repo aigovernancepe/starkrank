@@ -72,6 +72,14 @@ export const pe: Record<string, string> = {
   'spoke.bookConsultation': 'Agende una consulta gratuita con nuestro equipo local.',
   'spoke.getStarted': 'Empezar',
   'spoke.home': 'Inicio',
+
+  // Cookie Consent
+  'consent.title': 'Consentimiento de Cookies',
+  'consent.message': 'Usamos cookies para analizar el tráfico del sitio y optimizar su experiencia. No se recopilan datos hasta que usted dé su consentimiento.',
+  'consent.accept': 'Aceptar',
+  'consent.decline': 'Rechazar',
+  'consent.policyText': 'Política de Privacidad',
+  'consent.policyLink': '/pe/privacidad/',
   'spoke.deliverables': 'Lo que Recibe',
   'spoke.deliverablesTitle': 'Lo que Entregamos',
   'spoke.faqTitle': 'Preguntas Frecuentes',

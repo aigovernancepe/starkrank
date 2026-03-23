@@ -3,6 +3,7 @@ import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
 import Header from '../components/global/Header.astro';
 import Footer from '../components/global/Footer.astro';
+import CookieConsent from '../components/global/CookieConsent.astro';
 import { getLangAttribute, getHreflangAlternates } from '../utils/i18n';
 import type { Locale } from '../data/locales';
 
@@ -36,6 +37,37 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <ClientRouter />
+
+    <!-- Google Consent Mode v2 — defaults must be set before gtag loads -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500,
+      });
+      // Restore consent if previously accepted
+      if (localStorage.getItem('cookie-consent') === 'granted') {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+        });
+      }
+    </script>
+
+    <!-- GA4 — respects consent mode, loads in denied state by default -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-FCS0HH5VC0"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FCS0HH5VC0');
+    </script>
 
     <!-- SEO -->
     <title>{title}</title>
@@ -90,5 +122,6 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
       <slot />
     </main>
     <Footer locale={locale} />
+    <CookieConsent locale={locale} />
   </body>
 </html>

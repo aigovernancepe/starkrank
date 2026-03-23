@@ -72,6 +72,14 @@ export const chde: Record<string, string> = {
   'spoke.bookConsultation': 'Buchen Sie eine kostenlose Beratung mit unserem lokalen Team.',
   'spoke.getStarted': 'Jetzt starten',
   'spoke.home': 'Startseite',
+
+  // Cookie Consent
+  'consent.title': 'Cookie-Einstellungen',
+  'consent.message': 'Wir verwenden Cookies zur Analyse des Websiteverkehrs und zur Optimierung Ihres Erlebnisses. Ohne Ihre Zustimmung werden keine Daten erhoben.',
+  'consent.accept': 'Akzeptieren',
+  'consent.decline': 'Ablehnen',
+  'consent.policyText': 'Datenschutzerklärung',
+  'consent.policyLink': '/ch-de/datenschutz/',
   'spoke.deliverables': 'Unsere Leistung',
   'spoke.deliverablesTitle': 'Was wir liefern',
   'spoke.faqTitle': 'Häufig gestellte Fragen',
