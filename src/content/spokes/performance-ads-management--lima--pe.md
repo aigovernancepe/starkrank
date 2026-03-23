@@ -31,7 +31,7 @@ sectorsTitle: "¿Qué industrias en Lima se benefician de la gestión de medios 
 deliverables:
   - "Auditoría completa de cuentas publicitarias existentes con diagnóstico de ineficiencias"
   - "Estrategia cross-channel con distribución de presupuesto por plataforma y objetivo"
-  - "Configuración de tracking avanzado (GA4, conversiones offline, atribución WhatsApp)"
+  - "Configuración de tracking avanzado con server-side tracking (GA4, conversiones offline, atribución WhatsApp) — envío de datos de conversión directamente desde su servidor para mayor precisión y cumplimiento de privacidad"
   - "Creación y optimización mensual de campañas en Google Ads, Meta Ads y TikTok Ads"
   - "Dashboard de rendimiento en tiempo real con reportes semanales y revisión mensual"
   - "Plan de escalamiento con proyecciones de ROAS por canal"

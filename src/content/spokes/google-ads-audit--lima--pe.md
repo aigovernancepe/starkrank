@@ -39,7 +39,7 @@ deliverables:
 
 En nuestra experiencia auditando cuentas en mercados latinoamericanos, el 25-40% de la inversión en Google Ads se pierde en clics que nunca convertirán. En Lima, donde la adopción de publicidad digital crece rápido pero la gestión profesional va más lenta, ese porcentaje suele ser aún mayor.
 
-Las causas más comunes: keywords en concordancia amplia sin negativos, campañas de Performance Max sin señales de audiencia, tracking incompleto que impide optimización automática, y landing pages que no están adaptadas al comportamiento del usuario peruano — que frecuentemente prefiere contactar por WhatsApp antes de comprar.
+Las causas más comunes: keywords en concordancia amplia sin negativos, campañas de Performance Max (PMax) sin señales de audiencia ni exclusiones de marca configuradas, tracking incompleto que impide optimización automática, y landing pages que no están adaptadas al comportamiento del usuario peruano — que frecuentemente prefiere contactar por WhatsApp antes de comprar. Nuestro audit incluye una revisión de gobernanza PMax para verificar que estas campañas automatizadas no canibalicen su tráfico de marca ni desperdicien presupuesto en asset groups de bajo rendimiento.
 
 Ofrecemos una [auditoría gratuita inicial](/audits/free-google-ads-check/) que le muestra en minutos las áreas de mayor desperdicio en su cuenta.
 

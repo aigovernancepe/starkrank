@@ -51,6 +51,6 @@ Die Verteilung ist nicht statisch: Wir rebalancieren monatlich anhand realer Per
 
 ## Welche Ergebnisse können Sie erwarten?
 
-Vanity-Metriken wie Impressionen, Klicks und CTR (Click-Through-Rate — Klickrate) sagen wenig über den geschäftlichen Einfluss. Wir messen und berichten auf umsatzrelevante KPIs: Cost per Qualified Lead, Blended ROAS, Pipeline-Wert pro Kanal und Kundenakquisitionskosten. Jedes Dashboard verknüpft Werbeausgaben direkt mit Geschäftsergebnissen.
+Vanity-Metriken wie Impressionen, Klicks und CTR (Click-Through-Rate — Klickrate) sagen wenig über den geschäftlichen Einfluss. Wir messen und berichten auf umsatzrelevante KPIs: Cost per Qualified Lead, Blended ROAS, Pipeline-Wert pro Kanal und Kundenakquisitionskosten. Zudem integrieren wir CTV-Kampagnen (Connected TV) über Google und programmatische Kanäle, um Entscheider auch auf dem grossen Bildschirm zu erreichen — mit derselben messbaren Attribution wie bei Search und Social. Jedes Dashboard verknüpft Werbeausgaben direkt mit Geschäftsergebnissen.
 
 Wenn Sie vermuten, dass Ihre aktuellen Kampagnen unterperformen, starten Sie mit einem [Google Ads Audit](/de/google-ads-audit-hannover/), um Budgetverschwendung zu identifizieren, bevor Sie umstrukturieren.

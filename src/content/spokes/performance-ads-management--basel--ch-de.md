@@ -15,7 +15,7 @@ highlights:
   - title: "Kreativ-Koordination"
     description: "Wir stimmen Anzeigenkreation kanalübergreifend ab — für Search, Display, Reels, Stories und Video — in Deutsch, Französisch und Englisch für maximale Abdeckung im trinationalen Raum."
   - title: "Conversion-Rate-Optimierung"
-    description: "Landingpage-Audits, A/B-Tests und Funnel-Analysen verbessern die Post-Click-Performance. Höhere Conversion-Raten senken die effektiven Akquisitionskosten über alle Plattformen."
+    description: "Landingpage-Audits, A/B-Tests und Funnel-Analysen verbessern die Post-Click-Performance. Wir optimieren Kampagnen auf pLTV (Predictive Lifetime Value), sodass Budget nicht nur die günstigsten Leads bevorzugt, sondern die Kanäle und Zielgruppen mit dem höchsten langfristigen Kundenwert im Schweizer Markt."
   - title: "Reporting und Attribution"
     description: "Wöchentliche Dashboards mit kanalübergreifender Attribution, Blended-ROAS-Tracking und klarer Budget-Umsatz-Zuordnung. Keine Vanity-Metriken wie blosse CTR (Click-Through-Rate — Klickrate) — nur geschäftsrelevante Kennzahlen, nDSG-konform umgesetzt."
 sectorsTitle: "Welche Basler Branchen profitieren von kanalübergreifendem Ads Management?"

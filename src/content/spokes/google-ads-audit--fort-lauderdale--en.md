@@ -9,7 +9,7 @@ localCTA: "Claim Your Free Google Ads Audit for Fort Lauderdale"
 highlightsTitle: "What the Google Ads Audit Examines"
 highlights:
   - title: "Account Structure"
-    description: "Campaign and ad group organisation, keyword match type usage, and theme segmentation — the foundation that determines whether your Fort Lauderdale budget works efficiently."
+    description: "Campaign and ad group organisation, keyword match type usage, and theme segmentation — the foundation that determines whether your Fort Lauderdale budget works efficiently. We also evaluate Smart Bidding configuration to confirm your automated strategies have sufficient conversion data and correctly aligned targets."
   - title: "Wasted Spend Analysis"
     description: "Identification of irrelevant search terms, geographic leakage beyond Broward County, and underperforming keywords that consume budget without converting."
   - title: "Conversion Tracking"

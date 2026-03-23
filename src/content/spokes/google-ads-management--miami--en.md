@@ -15,7 +15,7 @@ highlights:
   - title: "Display and YouTube"
     description: "Awareness and remarketing campaigns across Google Display Network and YouTube, with audience targeting tuned to Miami demographics, in-market segments, and custom intent signals."
   - title: "Bid Strategy and Budget Management"
-    description: "Automated and manual bidding strategies aligned to your goals — whether that is target CPA for lead generation or target ROAS for e-commerce. Daily budget pacing prevents overspend in Miami's high-CPC verticals."
+    description: "Smart Bidding strategies — Target CPA, Target ROAS, and Maximise Conversion Value — calibrated to your goals and Miami's high-CPC verticals. We layer first-party audience signals into automated bidding and manage daily budget pacing to prevent overspend."
   - title: "Microsoft Ads (Bing)"
     description: "We extend your campaigns to Microsoft Ads, reaching the professional-skewing audience across Bing, Yahoo, and Microsoft Copilot — often at significantly lower CPCs than Google, with strong conversion rates in Miami's legal, finance, and B2B sectors."
   - title: "Ad Copy Development and Testing"

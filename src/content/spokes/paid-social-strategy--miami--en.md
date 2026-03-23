@@ -9,7 +9,7 @@ localCTA: "Get a Free Paid Social Strategy Session for Miami"
 highlightsTitle: "What Paid Social Strategy Covers"
 highlights:
   - title: "Meta Ads (Facebook and Instagram)"
-    description: "Full-funnel campaigns on Facebook and Instagram with audience segmentation, creative testing, and conversion optimisation. Instagram is especially effective in Miami's visually driven hospitality, real estate, and lifestyle sectors."
+    description: "Full-funnel campaigns on Facebook and Instagram powered by Meta Advantage+ — automated campaign structures that dynamically allocate budget across audiences and placements. Combined with audience segmentation and creative testing, Advantage+ is especially effective in Miami's visually driven hospitality, real estate, and lifestyle sectors."
   - title: "LinkedIn Advertising"
     description: "B2B lead generation through Sponsored Content, Message Ads, and Document Ads targeting Miami's fintech, professional services, and corporate decision-makers by job title, company size, and industry."
   - title: "TikTok Ads"

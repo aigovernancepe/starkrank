@@ -55,4 +55,4 @@ Für die kanalübergreifende Steuerung von Google, LinkedIn und Meta empfehlen w
 
 DSGVO-Konformität ist für Unternehmen in Deutschland nicht verhandelbar — und gerade bei Social Ads ein häufiges Problemfeld. Standard-Pixel von Meta und LinkedIn senden personenbezogene Daten ohne ausreichende Einwilligung. Das Risiko: Bussgeld und Vertrauensverlust.
 
-Wir implementieren ein vollständiges Consent-Management-Setup, Server-Side Tracking und die Conversions API (CAPI) für Meta und LinkedIn. Damit erhalten Sie zuverlässige Kampagnenmessung auch bei hohen Consent-Ablehnungsraten — ohne rechtliches Risiko. Alle Tracking-Massnahmen werden dokumentiert und regelmässig auf Konformität geprüft.
+Wir implementieren ein vollständiges Consent-Management-Setup, Server-Side Tracking und die Conversions API (CAPI) für Meta und LinkedIn. CAPI sendet Conversion-Daten direkt von Ihrem Server an die Plattformen — unabhängig von Browser-Cookies oder Ad-Blockern. Damit erhalten Sie zuverlässige Kampagnenmessung auch bei hohen Consent-Ablehnungsraten — ohne rechtliches Risiko. Alle Tracking-Massnahmen werden dokumentiert und regelmässig auf Konformität geprüft.

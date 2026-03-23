@@ -17,7 +17,7 @@ highlights:
   - title: "Conversion Rate Optimisation"
     description: "Landing page audits, A/B tests, and funnel analysis to improve post-click performance. Higher conversion rates mean lower effective CPA (cost per acquisition) across all platforms."
   - title: "Reporting and Attribution"
-    description: "Weekly dashboards with cross-channel attribution modelling, blended ROAS tracking, and clear spend-to-revenue visibility. No vanity metrics — only numbers tied to business outcomes."
+    description: "Weekly dashboards with cross-channel attribution modelling, blended ROAS tracking, and clear spend-to-revenue visibility built on server-side tracking. By sending conversion data directly from your server rather than relying on browser pixels, we maintain measurement accuracy despite cookie deprecation and ad blockers. No vanity metrics — only numbers tied to business outcomes."
 sectorsTitle: "Which Miami industries gain from cross-channel ads management?"
 sectors:
   - name: "Hospitality and Tourism"

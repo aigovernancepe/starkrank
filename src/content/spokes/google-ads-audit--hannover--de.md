@@ -13,7 +13,7 @@ highlights:
   - title: "Keyword- und Suchbegriff-Audit"
     description: "Analyse der aktiven Keywords, Match-Typen und tatsächlichen Suchbegriffe. Identifikation von irrelevanten Klicks, fehlenden negativen Keywords und ungenutztem Long-Tail-Potenzial für technische B2B-Begriffe."
   - title: "Gebotsstrategie-Bewertung"
-    description: "Prüfung der eingesetzten Smart-Bidding-Strategien: Sind Target-CPA oder Target-ROAS korrekt konfiguriert? Haben Ihre Kampagnen genügend Conversion-Daten für maschinelles Lernen?"
+    description: "Prüfung der eingesetzten Smart-Bidding-Strategien: Sind Target-CPA oder Target-ROAS korrekt konfiguriert? Haben Ihre Kampagnen genügend Conversion-Daten für maschinelles Lernen? Wir bewerten, ob Smart Bidding auf Klicks, Leads oder tatsächlichen Pipeline-Wert optimiert — und empfehlen die passende Strategie für Ihren B2B-Verkaufszyklus."
   - title: "Conversion-Tracking-Prüfung"
     description: "Vollständige Überprüfung des Conversion-Setups: Werden alle relevanten Aktionen erfasst? Ist Enhanced Conversions aktiv? Ist das Tracking DSGVO-konform implementiert?"
   - title: "Wettbewerbsanalyse"

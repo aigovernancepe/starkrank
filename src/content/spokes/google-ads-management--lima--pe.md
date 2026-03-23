@@ -51,7 +51,7 @@ El resultado es presupuesto PPC (pago por clic) desperdiciado en clics que no co
 
 El paisaje de búsqueda en Perú tiene particularidades que una agencia internacional no detecta. Los usuarios peruanos usan términos coloquiales, buscan con variaciones ortográficas específicas y tienen patrones de conversión distintos — incluyendo una fuerte preferencia por completar transacciones vía WhatsApp o llamada telefónica.
 
-Nuestra gestión contempla estas realidades desde la investigación de keywords hasta la configuración de conversiones. Complementamos con una [Auditoría de Google Ads](/pe/auditoria-google-ads-lima/) inicial para diagnosticar problemas existentes, y coordinamos con [Gestión de Anuncios](/pe/gestion-anuncios-lima/) cuando la estrategia requiere presencia en múltiples plataformas.
+Nuestra gestión contempla estas realidades desde la investigación de keywords hasta la configuración de conversiones. Implementamos estrategias de Smart Bidding (pujas automáticas basadas en aprendizaje automático) que optimizan cada puja en tiempo real según señales contextuales del usuario peruano — dispositivo, ubicación, hora del día e historial de navegación. Complementamos con una [Auditoría de Google Ads](/pe/auditoria-google-ads-lima/) inicial para diagnosticar problemas existentes, y coordinamos con [Gestión de Anuncios](/pe/gestion-anuncios-lima/) cuando la estrategia requiere presencia en múltiples plataformas.
 
 ## ¿Google Shopping funciona para el e-commerce peruano?
 

@@ -11,7 +11,7 @@ highlights:
   - title: "Dominio en Meta Ads"
     description: "Facebook e Instagram son las plataformas de mayor alcance en Perú. Diseñamos embudos completos — desde awareness hasta conversión — con segmentación precisa para audiencias limeñas."
   - title: "Crecimiento en TikTok"
-    description: "TikTok crece exponencialmente en Perú, especialmente en menores de 35 años. Creamos campañas con formatos nativos que capturan atención y generan acción."
+    description: "TikTok crece exponencialmente en Perú, especialmente en menores de 35 años. Creamos campañas con formatos nativos que capturan atención y generan acción. Además, integramos TikTok Shop para marcas de e-commerce que quieren vender directamente dentro de la plataforma, cerrando el ciclo de compra sin salir de la app."
   - title: "Integración WhatsApp"
     description: "El 90% de los peruanos usa WhatsApp. Configuramos campañas click-to-WhatsApp, catálogos y automatizaciones que convierten interés en conversaciones de venta."
   - title: "Creatividades de Alto Rendimiento"

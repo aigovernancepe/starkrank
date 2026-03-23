@@ -45,7 +45,7 @@ The difference is efficiency. A marine service company running Google Ads alone 
 
 ## How does StarkRank keep Fort Lauderdale ad spend efficient?
 
-We start with a [Google Ads audit](/ads-audit-fort-lauderdale/) to eliminate wasted spend, then build a unified campaign structure across platforms. Budget flows to whatever converts best — not whatever platform a previous agency defaulted to.
+We start with a [Google Ads audit](/ads-audit-fort-lauderdale/) to eliminate wasted spend, then build a unified campaign structure across platforms. Budget flows to whatever converts best — not whatever platform a previous agency defaulted to. We optimise toward pLTV (Predictive Lifetime Value) rather than single-conversion CPA, so budget favours the channels and audiences that deliver long-term customer value for Fort Lauderdale businesses, not just the cheapest initial lead.
 
 For businesses already running [Google Ads](/google-ads-fort-lauderdale/), we layer in [paid social](/paid-social-fort-lauderdale/) to retarget warm audiences and expand reach into segments that search alone cannot capture. Every decision is tied to your CPA (cost per acquisition) target, not platform-level vanity metrics.
 

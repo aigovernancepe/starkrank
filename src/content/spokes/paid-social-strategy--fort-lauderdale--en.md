@@ -17,7 +17,7 @@ highlights:
   - title: "Retargeting Sequences"
     description: "Multi-step retargeting funnels that re-engage website visitors, video viewers, and social engagers with progressively stronger calls to action."
   - title: "Performance Measurement"
-    description: "Attribution setup that connects social ad clicks to actual leads and revenue, cutting through the noise of impression-based reporting."
+    description: "Attribution setup that connects social ad clicks to actual leads and revenue, cutting through the noise of impression-based reporting. We implement Conversion API (CAPI) for Meta and LinkedIn to maintain accurate measurement even as browser-side cookies degrade — essential for reliable bid optimisation in Broward County's competitive verticals."
 sectors:
   - name: "Tourism and Hospitality"
     description: "Fort Lauderdale hotels, restaurants, and attractions reach visitors during trip planning on Instagram and Facebook. Seasonal campaigns scale with snowbird arrivals and spring break demand."

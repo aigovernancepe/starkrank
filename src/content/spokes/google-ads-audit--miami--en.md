@@ -11,7 +11,7 @@ highlights:
   - title: "Wasted Spend Analysis"
     description: "We review search term reports, match type settings, and negative keyword gaps to identify exactly how much budget is going to irrelevant clicks — a common problem in Miami's expensive keyword categories."
   - title: "Campaign Structure Review"
-    description: "Ad group organisation, keyword clustering, and campaign segmentation are assessed against best practices. Poor structure inflates CPCs and suppresses Quality Scores."
+    description: "Ad group organisation, keyword clustering, and campaign segmentation are assessed against best practices — including a PMax governance check to verify that Performance Max campaigns have proper asset group structures, audience signals, and brand exclusions rather than running on autopilot. Poor structure inflates CPCs and suppresses Quality Scores."
   - title: "Conversion Tracking Verification"
     description: "We verify that all conversion actions are firing correctly, that attribution settings match your sales cycle, and that no leads or sales are going untracked."
   - title: "Competitive Positioning"

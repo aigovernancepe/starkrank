@@ -11,7 +11,7 @@ highlights:
   - title: "Kontostruktur-Analyse"
     description: "Wir bewerten Kampagnen- und Anzeigengruppenstruktur, Keyword-Organisation und Match-Type-Verteilung — mit Fokus auf Effizienz im hochpreisigen Schweizer Markt."
   - title: "Budget- und Gebotsprüfung"
-    description: "Analyse von Budgetallokation, Gebotsstrategien und Impression-Share-Verlusten. Im Basler Premium-CPC-Umfeld zählt jeder Franken — wir identifizieren, wo Budget verschwendet wird."
+    description: "Analyse von Budgetallokation, Gebotsstrategien und Impression-Share-Verlusten — einschliesslich einer PMax-Governance-Prüfung, die sicherstellt, dass Performance-Max-Kampagnen korrekte Asset-Group-Strukturen, Audience-Signale und Markenausschlüsse nutzen. Im Basler Premium-CPC-Umfeld zählt jeder Franken."
   - title: "Tracking und nDSG-Compliance"
     description: "Verifizierung der Conversion-Tracking-Implementierung, Consent-Mode-Konfiguration und Server-Side-Tagging — nDSG-konform und mit korrekter Datenzuordnung."
   - title: "Mehrsprachige Abdeckung"

@@ -9,7 +9,7 @@ localCTA: "Kostenlose Paid-Social-Beratung für Basel anfordern"
 highlightsTitle: "Was unsere Paid Social Strategie umfasst"
 highlights:
   - title: "LinkedIn für Pharma und B2B"
-    description: "Zielgruppensegmentierung nach Branche, Funktion und Unternehmensgrösse — massgeschneidert für Basels Pharma-Cluster und Life-Sciences-Entscheider in der DACH-Region und darüber hinaus."
+    description: "Zielgruppensegmentierung nach Branche, Funktion und Unternehmensgrösse — massgeschneidert für Basels Pharma-Cluster und Life-Sciences-Entscheider in der DACH-Region. Auf Meta setzen wir Advantage+ Kampagnen ein, die Budget und Platzierungen automatisiert über Zielgruppen hinweg optimieren und so den manuellen Aufwand bei dreisprachigen Kampagnen erheblich reduzieren."
   - title: "Mehrsprachige Kreativstrategie"
     description: "Wir entwickeln Anzeigenkreation in Deutsch, Französisch und Englisch — abgestimmt auf kulturelle Nuancen und Plattform-Formate für maximale Resonanz im trinationalen Raum."
   - title: "Cross-Border-Targeting"

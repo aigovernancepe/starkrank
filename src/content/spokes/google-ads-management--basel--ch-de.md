@@ -15,7 +15,7 @@ highlights:
   - title: "Display und YouTube"
     description: "Awareness- und Remarketing-Kampagnen über das Google Display Network und YouTube mit Zielgruppen-Targeting für Basler Demografien, In-Market-Segmente und Custom-Intent-Signale."
   - title: "Gebotsstrategie und Budgetkontrolle"
-    description: "Automatisierte und manuelle Gebotsstrategien ausgerichtet auf Ihre Ziele — ob Target CPA für Lead-Generierung oder Target ROAS für E-Commerce. Tägliches Budget-Pacing verhindert Mehrausgaben in Basels High-CPC-Branchen."
+    description: "Smart-Bidding-Strategien — Target CPA, Target ROAS und Maximierung des Conversion-Werts — kalibriert auf Ihre Margenziele und Basels Premium-CPC-Umfeld. Tägliches Budget-Pacing und First-Party-Audience-Signale verhindern Mehrausgaben in den teuersten Branchen."
   - title: "Microsoft Ads (Bing)"
     description: "Wir erweitern Ihre Kampagnen auf Microsoft Ads und erreichen die professionelle Zielgruppe über Bing, Yahoo und Microsoft Copilot. Im Schweizer B2B-Markt — besonders Pharma und Finanzen — liefert Bing qualifizierte Leads zu tieferen CPCs als Google."
   - title: "Anzeigentexte und RSA-Testing"
