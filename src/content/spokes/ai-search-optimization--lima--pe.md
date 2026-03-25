@@ -35,6 +35,13 @@ deliverables:
   - "Plan de reestructuración de contenido con encabezados orientados a preguntas y respuestas directas"
   - "Estrategia de entidad de marca para el mercado peruano e internacional"
   - "Configuración de monitoreo de menciones en plataformas IA y panel de métricas mensual"
+faq:
+  - question: "¿Cuánto cuesta la optimización de búsqueda IA en Lima?"
+    answer: "Ofrecemos una evaluación gratuita de 2 dimensiones (Rastreabilidad y Estructura). La auditoría completa de 6 dimensiones comienza desde S/ 10,000, y la optimización mensual continua desde S/ 17,000/mes."
+  - question: "¿Cuánto tiempo tarda en aparecer mi negocio limeño en resultados de búsqueda IA?"
+    answer: "Los fundamentos técnicos se implementan en 4-8 semanas. La construcción de entidad de marca y citaciones toma 3-6 meses. La mayoría de clientes ven mejoras medibles en su AISO Score en los primeros 90 días."
+  - question: "¿Funcionan las mismas estrategias de IA en Perú que en Estados Unidos?"
+    answer: "Los principios son los mismos, pero la implementación requiere adaptación local. Optimizamos para consultas en español e inglés, y consideramos el comportamiento de búsqueda específico del mercado peruano, incluyendo la preferencia por WhatsApp como canal de conversión."
 ---
 
 ## ¿Por qué la búsqueda con IA importa para empresas en Lima?

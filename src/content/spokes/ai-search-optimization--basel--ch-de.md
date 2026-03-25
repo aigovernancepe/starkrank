@@ -36,6 +36,13 @@ deliverables:
   - "Content-Restrukturierungsplan mit frageorientierten Überschriften und direkten Antworten"
   - "Einrichtung von KI-Erwähnungsmonitoring und monatliches Performance-Dashboard"
   - "nDSG-konforme Umsetzung aller Tracking- und Monitoring-Massnahmen"
+faq:
+  - question: "Was kostet KI-Suchoptimierung in Basel?"
+    answer: "Wir bieten eine kostenlose Erstbewertung (2 Dimensionen: Crawlbarkeit und Struktur). Das umfassende 6-Dimensionen-AISO-Audit beginnt ab CHF 4.000, die laufende monatliche Optimierung ab CHF 6.000/Monat."
+  - question: "Wie lange dauert es, bis mein Basler Unternehmen in KI-Suchergebnissen erscheint?"
+    answer: "Technische Grundlagen können in 4-8 Wochen umgesetzt werden. Markenentitätsaufbau und Zitationsaufbau benötigen 3-6 Monate. Die meisten Kunden sehen messbare Verbesserungen innerhalb der ersten 90 Tage."
+  - question: "Optimieren Sie für alle drei Sprachen am Dreiländereck?"
+    answer: "Ja. Basler Unternehmen operieren in einem dreisprachigen Markt (DE/FR/EN). Wir optimieren Entitätssignale, strukturierte Daten und Content für KI-Suchanfragen in allen drei Sprachen."
 ---
 
 ## Warum ist KI-Suche für Unternehmen in Basel relevant?

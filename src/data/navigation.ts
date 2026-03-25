@@ -16,7 +16,7 @@ export const mainNav: NavItem[] = [
         label: 'Search & AI Intelligence',
         href: '/services/ai-search-optimization/',
         children: [
-          { label: 'AI Search Optimisation', href: '/services/ai-search-optimization/' },
+          { label: 'AI Search Optimization', href: '/services/ai-search-optimization/' },
           { label: 'Technical SEO Audit', href: '/services/technical-seo-audit/' },
           { label: 'Local SEO Consulting', href: '/services/local-seo-consulting/' },
         ],
