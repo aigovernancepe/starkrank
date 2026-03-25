@@ -48,7 +48,7 @@ export const en: Record<string, string> = {
   'contact.subtitle': 'Ready to grow? Let\'s talk.',
 
   // Service Names
-  'service.ai-search-optimisation': 'AI Search Optimisation',
+  'service.ai-search-optimization': 'AI Search Optimization',
   'service.technical-seo-audit': 'Technical SEO Audit',
   'service.local-seo-consulting': 'Local SEO Consulting',
   'service.performance-ads-management': 'Performance Ads Management',

@@ -4,7 +4,7 @@ citySlug: "lima"
 country: "Perú"
 locale: "pe"
 services:
-  - "ai-search-optimisation"
+  - "ai-search-optimization"
   - "technical-seo-audit"
   - "local-seo-consulting"
   - "performance-ads-management"

@@ -1,5 +1,5 @@
 ---
-serviceSlug: "ai-search-optimisation"
+serviceSlug: "ai-search-optimization"
 citySlug: "basel"
 updatedDate: 2026-03-22
 locale: "ch-de"

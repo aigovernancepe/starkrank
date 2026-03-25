@@ -15,7 +15,7 @@ features:
 relatedServices:
   - "content-marketing"
   - "copywriting-audit"
-  - "ai-search-optimisation"
+  - "ai-search-optimization"
 ---
 
 SEO copywriting in 2026 is not about inserting keywords into paragraphs. AI search engines evaluate content for semantic depth, entity coverage, and answer quality — not keyword density. A page that ranks well in Google may never appear in a ChatGPT or Perplexity answer if it lacks clear structure, direct answers, and authoritative substance.

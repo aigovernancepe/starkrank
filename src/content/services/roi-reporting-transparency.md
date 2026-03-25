@@ -65,7 +65,7 @@ AI search is a new channel that requires new metrics. Traditional web analytics 
 - **AI share of voice** — Your citation frequency compared to competitors for the same query set — the AI equivalent of traditional share of voice metrics
 - **AI-to-conversion rate** — How AI-referred visitors convert compared to visitors from other channels — showing whether AI traffic is commercially valuable, not just present
 
-These metrics connect directly to the measurability dimension of the AISO Score framework used in our [AI Search Optimisation](/services/ai-search-optimisation/) strategy.
+These metrics connect directly to the measurability dimension of the AISO Score framework used in our [AI Search Optimization](/services/ai-search-optimization/) strategy.
 
 ## What do monthly reports look like?
 

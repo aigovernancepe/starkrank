@@ -1,5 +1,5 @@
 ---
-serviceSlug: "ai-search-optimisation"
+serviceSlug: "ai-search-optimization"
 citySlug: "fort-lauderdale"
 updatedDate: 2026-03-23
 locale: "en"

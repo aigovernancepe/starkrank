@@ -22,6 +22,8 @@ export default defineConfig({
     '/schweiz/': '/ch-de/',
     '/peru/': '/pe/',
     '/deutschland/': '/de/',
+    '/services/ai-search-optimisation/': '/services/ai-search-optimization/',
+    '/services/ai-search-optimisation': '/services/ai-search-optimization/',
   },
   integrations: [sitemap()],
   vite: {

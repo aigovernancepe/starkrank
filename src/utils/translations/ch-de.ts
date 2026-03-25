@@ -41,7 +41,7 @@ export const chde: Record<string, string> = {
   'contact.subtitle': 'Bereit zu wachsen? Lassen Sie uns sprechen.',
 
   // Service Names
-  'service.ai-search-optimisation': 'KI-Suchoptimierung',
+  'service.ai-search-optimization': 'KI-Suchoptimierung',
   'service.technical-seo-audit': 'Technisches SEO-Audit',
   'service.local-seo-consulting': 'Lokale SEO-Beratung',
   'service.performance-ads-management': 'Performance-Ads-Management',

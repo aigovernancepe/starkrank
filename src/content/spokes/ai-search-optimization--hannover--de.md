@@ -1,5 +1,5 @@
 ---
-serviceSlug: "ai-search-optimisation"
+serviceSlug: "ai-search-optimization"
 citySlug: "hannover"
 updatedDate: 2026-03-22
 locale: "de"

@@ -1,6 +1,6 @@
 # StarkRank
 
-> Data-driven digital marketing agency specialising in AI search optimisation, technical SEO, and performance media.
+> Data-driven digital marketing agency specializing in AI search optimization, technical SEO, and performance media.
 
 StarkRank is a global digital marketing agency with offices in the United States (South Florida), Switzerland (Basel-Landschaft), Germany (Hannover), and Peru (Lima). We help businesses become visible, cited, and recommended by AI-powered search engines and traditional search platforms.
 
@@ -9,7 +9,7 @@ StarkRank is a global digital marketing agency with offices in the United States
 StarkRank offers 18 specialist services organised into five pillars:
 
 ### Search & AI Intelligence
-- [AI Search Optimisation](https://starkrank.com/services/ai-search-optimisation/): Visibility audits and citation strategy for ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot. Includes the proprietary AISO Score framework.
+- [AI Search Optimization](https://starkrank.com/services/ai-search-optimization/): Visibility audits and citation strategy for ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot. Includes the proprietary AISO Score framework.
 - [Technical SEO Audit](https://starkrank.com/services/technical-seo-audit/): Crawl analysis, Core Web Vitals assessment, structured data validation, and AI crawler access verification.
 - [Local SEO Consulting](https://starkrank.com/services/local-seo-consulting/): Google Business Profile optimisation, NAP+W consistency, LocalBusiness schema, and review management.
 

@@ -41,7 +41,7 @@ export const pe: Record<string, string> = {
   'contact.subtitle': '¿Listo para crecer? Hablemos.',
 
   // Service Names
-  'service.ai-search-optimisation': 'Optimización de Búsqueda IA',
+  'service.ai-search-optimization': 'Optimización de Búsqueda IA',
   'service.technical-seo-audit': 'Auditoría SEO Técnica',
   'service.local-seo-consulting': 'Consultoría SEO Local',
   'service.performance-ads-management': 'Gestión de Anuncios de Rendimiento',

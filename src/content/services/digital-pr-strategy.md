@@ -59,7 +59,7 @@ For ongoing trend-based coverage, see our [Reactive PR](/services/reactive-pr/) 
 Digital PR does not operate in isolation. It is the external authority engine that powers your entire search presence:
 
 - **Link building** — Every editorial placement earns a backlink from a trusted domain. These links flow authority to your key service pages, lifting their rankings. For targeted link acquisition, see our [Authority Link Building](/services/authority-link-building/) service.
-- **Entity reinforcement** — Media mentions train AI models to recognise your brand as an authority in specific topics. This feeds directly into your [AI Search Optimisation](/services/ai-search-optimisation/) strategy.
+- **Entity reinforcement** — Media mentions train AI models to recognise your brand as an authority in specific topics. This feeds directly into your [AI Search Optimization](/services/ai-search-optimization/) strategy.
 - **Content amplification** — PR campaigns drive traffic to your cornerstone content, increasing engagement signals. Your [Content Marketing](/services/content-marketing/) programme provides the on-site depth that converts PR-driven visitors.
 - **Brand search growth** — Effective PR increases branded search volume, which is itself a ranking signal and a KPI we track.
 

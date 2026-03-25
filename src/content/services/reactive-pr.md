@@ -51,7 +51,7 @@ Reactive PR amplifies everything else:
 
 - **[Digital PR Strategy](/services/digital-pr-strategy/)** — Proactive campaigns build the foundation; reactive PR adds high-frequency placements that keep your brand visible between planned campaigns
 - **[Authority Link Building](/services/authority-link-building/)** — Reactive coverage earns editorially placed backlinks from news sites that proactive outreach cannot easily access
-- **[AI Search Optimisation](/services/ai-search-optimisation/)** — Frequent brand mentions across authoritative news sources accelerate entity reinforcement for AI citation
+- **[AI Search Optimization](/services/ai-search-optimization/)** — Frequent brand mentions across authoritative news sources accelerate entity reinforcement for AI citation
 
 ## When is reactive PR most effective?
 

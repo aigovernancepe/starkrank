@@ -12,10 +12,12 @@ import { getSpokePath } from '../../data/service-slugs';
 
 export async function getStaticPaths() {
   const services = await getCollection('services');
-  return services.map((service) => ({
-    params: { slug: service.data.slug },
-    props: { service },
-  }));
+  return services
+    .filter((service) => service.data.slug !== 'ai-search-optimization')
+    .map((service) => ({
+      params: { slug: service.data.slug },
+      props: { service },
+    }));
 }
 
 const { service } = Astro.props;
@@ -61,7 +63,7 @@ const faqSchema = faq.length > 0 ? {
 
 const schemas = [serviceSchema, ...(faqSchema ? [faqSchema] : [])];
 
-const isAISO = service.data.slug === 'ai-search-optimisation';
+const isAISO = service.data.slug === 'ai-search-optimization';
 
 const breadcrumbs = [
   { label: 'Home', href: '/' },

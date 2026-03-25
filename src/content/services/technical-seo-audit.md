@@ -13,7 +13,7 @@ features:
   - "AI crawler access verification (GPTBot, ClaudeBot, PerplexityBot)"
   - "Prioritised technical fix roadmap"
 relatedServices:
-  - "ai-search-optimisation"
+  - "ai-search-optimization"
   - "local-seo-consulting"
   - "performance-web-development"
 ---
@@ -28,7 +28,7 @@ We examine every layer between your server and the search engine's index. The au
 
 Search engine crawlers (Googlebot, Bingbot) and AI crawlers (GPTBot, ClaudeBot, PerplexityBot) must reach your pages before anything else matters. We audit your robots.txt for unintentional blocks, verify XML sitemaps, check internal link architecture for orphaned pages, and analyse server logs to confirm which bots are actually reaching your content.
 
-AI crawlers have distinct user-agent strings and crawl behaviours. Many sites inadvertently block them through overly restrictive robots.txt rules or CDN firewall settings. We identify and resolve these gaps so your content is eligible for both traditional search results and AI-generated answers. For the broader AI search strategy that builds on this technical foundation, see [AI Search Optimisation](/services/ai-search-optimisation/).
+AI crawlers have distinct user-agent strings and crawl behaviours. Many sites inadvertently block them through overly restrictive robots.txt rules or CDN firewall settings. We identify and resolve these gaps so your content is eligible for both traditional search results and AI-generated answers. For the broader AI search strategy that builds on this technical foundation, see [AI Search Optimisation](/services/ai-search-optimization/).
 
 ## Why does rendering matter for search engines?
 

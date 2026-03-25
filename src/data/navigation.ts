@@ -14,9 +14,9 @@ export const mainNav: NavItem[] = [
     children: [
       {
         label: 'Search & AI Intelligence',
-        href: '/services/ai-search-optimisation/',
+        href: '/services/ai-search-optimization/',
         children: [
-          { label: 'AI Search Optimisation', href: '/services/ai-search-optimisation/' },
+          { label: 'AI Search Optimisation', href: '/services/ai-search-optimization/' },
           { label: 'Technical SEO Audit', href: '/services/technical-seo-audit/' },
           { label: 'Local SEO Consulting', href: '/services/local-seo-consulting/' },
         ],
@@ -70,7 +70,7 @@ export const mainNav: NavItem[] = [
 
 export const footerNav = {
   pillars: [
-    { label: 'Search & AI', href: '/services/ai-search-optimisation/' },
+    { label: 'Search & AI', href: '/services/ai-search-optimization/' },
     { label: 'Performance Media', href: '/services/performance-ads-management/' },
     { label: 'Authority & PR', href: '/services/digital-pr-strategy/' },
     { label: 'Content & Copy', href: '/services/content-marketing/' },

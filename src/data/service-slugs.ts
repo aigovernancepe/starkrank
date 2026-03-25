@@ -6,7 +6,7 @@
 type SlugMap = Record<string, string>;
 
 const enSlugs: SlugMap = {
-  'ai-search-optimisation': 'ai-search',
+  'ai-search-optimization': 'ai-search',
   'technical-seo-audit': 'seo-audit',
   'local-seo-consulting': 'seo',
   'performance-ads-management': 'ads-management',
@@ -27,7 +27,7 @@ const enSlugs: SlugMap = {
 };
 
 const peSlugs: SlugMap = {
-  'ai-search-optimisation': 'busqueda-ia',
+  'ai-search-optimization': 'busqueda-ia',
   'technical-seo-audit': 'auditoria-seo',
   'local-seo-consulting': 'seo-local',
   'performance-ads-management': 'gestion-anuncios',
@@ -48,7 +48,7 @@ const peSlugs: SlugMap = {
 };
 
 const deSlugs: SlugMap = {
-  'ai-search-optimisation': 'ki-suchoptimierung',
+  'ai-search-optimization': 'ki-suchoptimierung',
   'technical-seo-audit': 'seo-audit',
   'local-seo-consulting': 'lokale-seo-beratung',
   'performance-ads-management': 'ads-management',

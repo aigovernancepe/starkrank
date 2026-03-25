@@ -4,7 +4,7 @@ citySlug: "miami"
 country: "United States"
 locale: "en"
 services:
-  - "ai-search-optimisation"
+  - "ai-search-optimization"
   - "technical-seo-audit"
   - "local-seo-consulting"
   - "performance-ads-management"

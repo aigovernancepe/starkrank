@@ -18,7 +18,7 @@ features:
 relatedServices:
   - "roi-reporting-transparency"
   - "technical-web-design"
-  - "ai-search-optimisation"
+  - "ai-search-optimization"
 ---
 
 GA4 is the measurement backbone of modern digital marketing — but only when it is configured correctly. A default GA4 installation misses critical events, lacks consent integration, and provides surface-level data that cannot drive serious business decisions. Most businesses are collecting data; few are collecting the right data in a way that respects privacy regulations and captures the full picture of how users find and engage with their brand.
@@ -67,7 +67,7 @@ We build custom tracking to identify and measure AI traffic:
 - **AI Overviews attribution** — Where possible, we segment clicks that originate from Google's AI Overview results versus traditional organic listings.
 - **AI-specific landing page analysis** — Which of your pages are receiving AI-referred traffic? This reveals which content AI platforms are citing and helps prioritise your content strategy.
 
-This data feeds directly into the measurability dimension of your AISO Score. For a full AI visibility strategy, see our [AI Search Optimisation](/services/ai-search-optimisation/) service.
+This data feeds directly into the measurability dimension of your AISO Score. For a full AI visibility strategy, see our [AI Search Optimisation](/services/ai-search-optimization/) service.
 
 ## What is BigQuery integration and why does it matter?
 

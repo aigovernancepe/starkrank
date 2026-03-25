@@ -12,9 +12,9 @@ export const pillars: Pillar[] = [
     name: 'Search & AI Intelligence',
     tagline: 'The Visibility Engine',
     description:
-      'Future-proof your visibility with AI search optimisation, technical SEO, and local search strategies.',
+      'Future-proof your visibility with AI search optimization, technical SEO, and local search strategies.',
     services: [
-      'ai-search-optimisation',
+      'ai-search-optimization',
       'technical-seo-audit',
       'local-seo-consulting',
     ],
