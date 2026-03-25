@@ -123,5 +123,22 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     </main>
     <Footer locale={locale} />
     <CookieConsent locale={locale} />
+
+    {/* WhatsApp floating button — PE pages only */}
+    {locale === 'pe' && (
+      <a
+        href="https://wa.me/51XXXXXXXXXX?text=Hola%2C%20quiero%20saber%20si%20mi%20negocio%20aparece%20en%20Google"
+        class="fixed bottom-6 right-6 z-[1000] rounded-full shadow-lg hover:scale-110 transition-transform md:bottom-6 md:right-6"
+        style="bottom:24px;right:24px;"
+        target="_blank"
+        rel="noopener"
+        aria-label="Contactar por WhatsApp"
+      >
+        <svg viewBox="0 0 56 56" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" r="28" fill="#25D366"/>
+          <path d="M37.7 18.2A13.36 13.36 0 0028.05 14.5c-7.4 0-13.42 6.02-13.43 13.42a13.38 13.38 0 001.79 6.72L14.5 41.5l6.99-1.83a13.4 13.4 0 006.42 1.64h.01c7.4 0 13.42-6.02 13.43-13.42a13.35 13.35 0 00-3.65-9.69zM28.05 38.13a11.14 11.14 0 01-5.68-1.55l-.41-.24-4.23 1.11 1.13-4.12-.27-.42a11.12 11.12 0 01-1.7-5.96c0-6.15 5.01-11.15 11.17-11.15a11.1 11.1 0 017.89 3.28 11.1 11.1 0 013.26 7.9c-.01 6.15-5.01 11.15-11.16 11.15zm6.12-8.35c-.34-.17-1.98-1-2.29-1.1-.31-.11-.53-.17-.75.17-.22.33-.87 1.1-1.07 1.33-.2.22-.39.25-.73.08-.34-.17-1.42-.53-2.7-1.68-1-.89-1.67-2-1.87-2.33-.2-.34-.02-.52.15-.69.15-.15.34-.39.5-.59.17-.2.22-.34.34-.56.11-.22.05-.42-.03-.59-.08-.17-.75-1.82-1.03-2.49-.27-.65-.55-.56-.75-.57h-.64c-.22 0-.59.08-.89.42-.31.33-1.17 1.14-1.17 2.79s1.2 3.24 1.36 3.46c.17.22 2.36 3.6 5.72 5.05.8.34 1.42.55 1.91.7.8.26 1.53.22 2.1.13.65-.1 1.98-.81 2.26-1.59.28-.79.28-1.46.2-1.6-.09-.14-.31-.22-.64-.39z" fill="white"/>
+        </svg>
+      </a>
+    )}
   </body>
 </html>

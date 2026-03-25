@@ -18,7 +18,7 @@ export const pe: Record<string, string> = {
   'hero.cta': 'Empezar',
 
   'cta.freeAudit': 'Auditoría Gratuita',
-  'cta.contactUs': 'Contáctenos',
+  'cta.contactUs': 'Contáctanos',
   'cta.learnMore': 'Más Información',
   'cta.viewServices': 'Ver Todos los Servicios',
 
@@ -37,7 +37,7 @@ export const pe: Record<string, string> = {
   'blog.title': 'Perspectivas',
   'blog.subtitle': 'Perspectivas expertas sobre búsqueda, IA y crecimiento digital.',
 
-  'contact.title': 'Contáctenos',
+  'contact.title': 'Contáctanos',
   'contact.subtitle': '¿Listo para crecer? Hablemos.',
 
   // Service Names
@@ -71,20 +71,20 @@ export const pe: Record<string, string> = {
   'spoke.otherServices': 'Otros Servicios en {city}',
   'spoke.pillarServices': 'Más Servicios de {pillar}',
   'spoke.allServices': 'Todos los Servicios en {city}',
-  'spoke.contactIn': 'Contáctenos en {city}',
-  'spoke.growBusiness': 'Haga Crecer su Negocio en {city}',
-  'spoke.bookConsultation': 'Agende una consulta gratuita con nuestro equipo local.',
+  'spoke.contactIn': 'Contáctanos en {city}',
+  'spoke.growBusiness': 'Haz Crecer tu Negocio en {city}',
+  'spoke.bookConsultation': 'Agenda una consulta gratuita con nuestro equipo local.',
   'spoke.getStarted': 'Empezar',
   'spoke.home': 'Inicio',
 
   // Cookie Consent
   'consent.title': 'Consentimiento de Cookies',
-  'consent.message': 'Usamos cookies para analizar el tráfico del sitio y optimizar su experiencia. No se recopilan datos hasta que usted dé su consentimiento.',
+  'consent.message': 'Usamos cookies para analizar el tráfico del sitio y optimizar tu experiencia. No se recopilan datos hasta que des tu consentimiento.',
   'consent.accept': 'Aceptar',
   'consent.decline': 'Rechazar',
   'consent.policyText': 'Política de Privacidad',
   'consent.policyLink': '/pe/privacidad/',
-  'spoke.deliverables': 'Lo que Recibe',
+  'spoke.deliverables': 'Lo que Recibes',
   'spoke.deliverablesTitle': 'Lo que Entregamos',
   'spoke.faqTitle': 'Preguntas Frecuentes',
   'spoke.lastUpdated': 'Última actualización',

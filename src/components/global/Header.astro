@@ -102,6 +102,11 @@ function localizeLabel(label: string): string {
     </div>
 
     <div class="flex items-center gap-4">
+      {locale === 'pe' && (
+        <a href="/pe/apareces-en-google/" class="hidden lg:inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-4 py-2 text-xs">
+          Revisa Gratis
+        </a>
+      )}
       <LocaleSwitcher />
       <!-- Mobile menu button -->
       <button
@@ -124,6 +129,11 @@ function localizeLabel(label: string): string {
           {localizeLabel(item.label)}
         </a>
       ))}
+      {locale === 'pe' && (
+        <a href="/pe/apareces-en-google/" class="block text-sm font-label font-semibold uppercase tracking-wide text-blue">
+          Revisa Gratis &rarr;
+        </a>
+      )}
     </div>
   </div>
 </header>
