@@ -1,0 +1,132 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import '../styles/global.css';
+import Logo from '../components/global/Logo.astro';
+import Footer from '../components/global/Footer.astro';
+import CookieConsent from '../components/global/CookieConsent.astro';
+import { getLangAttribute } from '../utils/i18n';
+import type { Locale } from '../data/locales';
+
+interface Props {
+  title: string;
+  description: string;
+  locale?: Locale;
+  ogImage?: string;
+  canonical?: string;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+  backLink?: { label: string; href: string };
+}
+
+const {
+  title,
+  description,
+  locale = 'en',
+  ogImage = '/images/logos/starkrank-dark-avatar.svg',
+  canonical,
+  schema,
+  backLink = { label: 'Back to Services', href: '/services/ai-search-optimization/' },
+} = Astro.props;
+
+const lang = getLangAttribute(locale);
+const site = Astro.site?.origin ?? 'https://starkrank.com';
+const canonicalUrl = canonical ?? `${site}${Astro.url.pathname}`;
+const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <ClientRouter />
+
+    <!-- Google Consent Mode v2 -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500,
+      });
+      if (localStorage.getItem('cookie-consent') === 'granted') {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+        });
+      }
+    </script>
+
+    <!-- GA4 -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-FCS0HH5VC0"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FCS0HH5VC0');
+    </script>
+
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="StarkRank" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Font preloads -->
+    <link rel="preload" href="/fonts/InterTight-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/DMSans-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- JSON-LD Schema -->
+    {schema && (
+      Array.isArray(schema)
+        ? schema.map((s) => (
+            <script type="application/ld+json" set:html={JSON.stringify(s)} />
+          ))
+        : <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+
+    <slot name="head" />
+  </head>
+  <body class="bg-cream text-dark antialiased">
+    <!-- Minimal header: logo + back link -->
+    <header class="py-4 px-6 border-b border-gray-light/30">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <Logo variant="inline-dark" size="md" />
+        <a href={backLink.href} class="text-sm font-body text-blue hover:text-blue-light font-semibold transition-colors">
+          &larr; {backLink.label}
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer locale={locale} />
+    <CookieConsent locale={locale} />
+  </body>
+</html>

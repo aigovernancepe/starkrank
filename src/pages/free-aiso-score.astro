@@ -1,0 +1,330 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+import Section from '../components/ui/Section.astro';
+import Button from '../components/ui/Button.astro';
+
+const title = 'Free AISO Score — Is Your Site Ready for AI Search? | StarkRank';
+const description = "ChatGPT, Perplexity, and Google AI cite your competitors — not you. Get your free AISO Score in 24 hours. 2 dimensions checked. No commitment.";
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Free AISO Score — AI Search Readiness Assessment',
+  description: 'Get your free AISO Score and find out if ChatGPT, Perplexity, and Google AI can find and cite your business. 2-dimension assessment delivered in 24 hours.',
+  url: 'https://starkrank.com/free-aiso-score/',
+  inLanguage: 'en-US',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'StarkRank',
+    url: 'https://starkrank.com',
+  },
+  mainEntity: {
+    '@type': 'Service',
+    name: 'Free AISO Score Assessment',
+    description: '2-dimension AI search readiness check covering Crawlability and Structure. Benchmarked against competitors.',
+    provider: {
+      '@type': 'Organization',
+      name: 'StarkRank',
+      url: 'https://starkrank.com',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      description: 'Free 2-dimension AISO Score assessment',
+    },
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://starkrank.com/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Free AISO Score',
+      item: 'https://starkrank.com/free-aiso-score/',
+    },
+  ],
+};
+
+const schemas = [webPageSchema, breadcrumbSchema];
+
+const upsellDimensions = [
+  { name: 'Authority', weight: '15%', description: 'Does AI trust your brand? Entity presence, sameAs links, E-E-A-T signals' },
+  { name: 'Citability', weight: '20%', description: 'Is your content structured to be quoted? Answer-first format, original data' },
+  { name: 'Freshness', weight: '10%', description: 'Is your content current enough for AI? Update frequency, timestamps' },
+  { name: 'Measurability', weight: '15%', description: 'Are you tracking AI search performance? GA4 setup, AI referral segments' },
+];
+---
+
+<LandingLayout
+  title={title}
+  description={description}
+  ogImage="/images/aiso-score-preview.png"
+  schema={schemas}
+  backLink={{ label: 'Back to AI Search Optimization', href: '/services/ai-search-optimization/' }}
+>
+  <!-- Custom hreflang tags -->
+  <Fragment slot="head">
+    <link rel="alternate" hreflang="en" href="https://starkrank.com/free-aiso-score/" />
+    <link rel="alternate" hreflang="es-PE" href="https://starkrank.com/pe/apareces-en-google/" />
+    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/free-aiso-score/" />
+  </Fragment>
+
+  <!-- Hero + Form -->
+  <Section bg="cream">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- Hero text -->
+      <div>
+        <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy leading-tight">
+          How Ready Is Your Website for AI Search?
+        </h1>
+        <p class="mt-6 text-lg font-body text-gray leading-relaxed">
+          ChatGPT, Perplexity, and Google AI Overviews cite sources when they answer questions. If they're citing your competitors and not you — you're losing the fastest-growing search channel.
+        </p>
+        <p class="mt-4 text-lg font-body text-dark font-semibold">
+          The AISO Score tells you exactly where you stand. Get your free 2-dimension assessment in 24 hours.
+        </p>
+
+        <!-- Value bullets -->
+        <div class="mt-8">
+          <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">What you'll learn</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+              <p class="text-base font-body text-gray"><strong class="text-dark">Can AI bots access your site?</strong> — We check if GPTBot, ClaudeBot, and PerplexityBot can crawl your content, or if your robots.txt is blocking them</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+              <p class="text-base font-body text-gray"><strong class="text-dark">Does AI understand your content?</strong> — We audit your JSON-LD schema, heading structure, and whether your content is formatted for AI extraction</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+              <p class="text-base font-body text-gray"><strong class="text-dark">How you compare to competitors</strong> — We benchmark your scores against the top 3 competitors in your space</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div id="get-your-free-aiso-score" class="bg-white border border-gray-light/40 rounded-lg p-8 shadow-lg">
+        <h2 class="text-2xl font-headline font-black text-navy mb-6">Get Your Free AISO Score</h2>
+        <form id="aiso-form" class="space-y-4" method="POST" action="/api/free-aiso-score">
+          <div>
+            <label for="website" class="block text-sm font-label font-semibold text-dark mb-1">Website URL <span class="text-blue">*</span></label>
+            <input
+              type="url"
+              id="website"
+              name="website"
+              required
+              placeholder="https://yoursite.com"
+              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-label font-semibold text-dark mb-1">Work Email <span class="text-blue">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="you@company.com"
+              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
+            />
+          </div>
+          <div>
+            <label for="name" class="block text-sm font-label font-semibold text-dark mb-1">Full Name <span class="text-blue">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Jane Smith"
+              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
+            />
+          </div>
+          <div>
+            <label for="company" class="block text-sm font-label font-semibold text-dark mb-1">Company Name <span class="text-gray text-xs font-normal">(optional)</span></label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Acme Corp"
+              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-8 py-4 text-sm mt-2"
+          >
+            Get My Free AISO Score &rarr;
+          </button>
+          <p class="text-xs font-body text-gray text-center mt-2">
+            Takes 2 minutes to request. No credit card. No commitment.
+          </p>
+        </form>
+      </div>
+    </div>
+  </Section>
+
+  <!-- What your report includes -->
+  <Section bg="white">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- AISO Radar chart placeholder -->
+      <div class="bg-cream border border-gray-light/40 rounded-lg p-8 flex flex-col items-center justify-center min-h-[320px]">
+        <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-6">Sample AISO Score</p>
+        <!-- Radar chart placeholder: 2 dims colored, 4 grayed with locks -->
+        <div class="relative w-64 h-64">
+          <svg viewBox="0 0 200 200" class="w-full h-full">
+            <!-- Hexagonal grid lines -->
+            <polygon points="100,20 170,55 170,125 100,160 30,125 30,55" fill="none" stroke="#e5e7eb" stroke-width="0.5" />
+            <polygon points="100,40 155,65 155,115 100,140 45,115 45,65" fill="none" stroke="#e5e7eb" stroke-width="0.5" />
+            <polygon points="100,60 140,75 140,105 100,120 60,105 60,75" fill="none" stroke="#e5e7eb" stroke-width="0.5" />
+            <!-- Axis lines -->
+            <line x1="100" y1="20" x2="100" y2="160" stroke="#e5e7eb" stroke-width="0.5" />
+            <line x1="30" y1="55" x2="170" y2="125" stroke="#e5e7eb" stroke-width="0.5" />
+            <line x1="170" y1="55" x2="30" y2="125" stroke="#e5e7eb" stroke-width="0.5" />
+            <!-- Scored area (Crawlability + Structure - top two vertices) -->
+            <polygon points="100,35 148,62 100,90 52,62" fill="#0055FF" fill-opacity="0.15" stroke="#0055FF" stroke-width="2" />
+            <!-- Score dots for active dimensions -->
+            <circle cx="100" cy="35" r="4" fill="#0055FF" />
+            <circle cx="148" cy="62" r="4" fill="#0055FF" />
+            <!-- Grayed lock dots for inactive dimensions -->
+            <circle cx="148" cy="118" r="4" fill="#d1d5db" />
+            <circle cx="100" cy="145" r="4" fill="#d1d5db" />
+            <circle cx="52" cy="118" r="4" fill="#d1d5db" />
+            <circle cx="52" cy="62" r="4" fill="#d1d5db" />
+          </svg>
+          <!-- Dimension labels -->
+          <span class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1 text-xs font-label font-bold text-blue">Crawlability</span>
+          <span class="absolute top-[22%] right-0 translate-x-2 text-xs font-label font-bold text-blue">Structure</span>
+          <span class="absolute bottom-[22%] right-0 translate-x-2 text-xs font-label text-gray-light">Authority 🔒</span>
+          <span class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1 text-xs font-label text-gray-light">Citability 🔒</span>
+          <span class="absolute bottom-[22%] left-0 -translate-x-2 text-xs font-label text-gray-light text-right">Freshness 🔒</span>
+          <span class="absolute top-[22%] left-0 -translate-x-2 text-xs font-label text-gray-light text-right">Measurability 🔒</span>
+        </div>
+        <p class="text-xs font-body text-gray mt-4 text-center">Free assessment scores 2 of 6 dimensions</p>
+      </div>
+
+      <!-- Report description -->
+      <div>
+        <p class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3">Your Report Includes</p>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-lg font-headline font-bold text-navy mb-2">Crawlability Score (out of 20)</h3>
+            <p class="text-base font-body text-gray leading-relaxed">
+              Can AI crawlers find and access your content? We check robots.txt rules for 5 AI bots, llms.txt presence, JavaScript rendering, and server-side accessibility.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-headline font-bold text-navy mb-2">Structure Score (out of 20)</h3>
+            <p class="text-base font-body text-gray leading-relaxed">
+              Does AI understand your content? We audit JSON-LD structured data coverage, heading hierarchy, semantic HTML, and whether your content is formatted for chunk-based retrieval.
+            </p>
+          </div>
+          <div>
+            <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-3">Plus</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-3 text-base font-body text-gray">
+                <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                3-5 priority quick wins you can implement immediately
+              </li>
+              <li class="flex items-start gap-3 text-base font-body text-gray">
+                <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                A clear pass/fail on each crawlability and structure criterion
+              </li>
+              <li class="flex items-start gap-3 text-base font-body text-gray">
+                <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                Competitive context — where you fall relative to your market
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Upsell: Want the Full Picture? -->
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-4">
+        Want the Full Picture?
+      </h2>
+      <p class="text-base font-body text-gray leading-relaxed mb-8">
+        The free assessment covers 2 of 6 dimensions. The comprehensive AISO audit adds:
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm font-body border-collapse">
+          <thead>
+            <tr class="border-b-2 border-navy/20">
+              <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Dimension</th>
+              <th class="text-left py-3 font-headline font-bold text-navy">What It Reveals</th>
+            </tr>
+          </thead>
+          <tbody>
+            {upsellDimensions.map((d) => (
+              <tr class="border-b border-gray-light/40">
+                <td class="py-3 pr-4 whitespace-nowrap">
+                  <span class="font-semibold text-dark">{d.name}</span>
+                  <span class="text-gray ml-1">({d.weight})</span>
+                </td>
+                <td class="py-3 text-gray leading-relaxed">{d.description}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-6 text-base font-body text-gray">
+        Full AISO audit starts at $3,000.
+        <a href="/services/ai-search-optimization/" class="text-blue font-semibold hover:text-blue-light">Learn more about AI Search Optimization &rarr;</a>
+      </p>
+    </div>
+  </Section>
+
+  <!-- Social Proof -->
+  <Section bg="white">
+    <div class="max-w-3xl text-center mx-auto">
+      <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-6">Trusted by Businesses Across 4 Markets</p>
+      <p class="text-3xl font-headline font-black text-navy mb-6">150+ AISO Scores delivered</p>
+      <p class="text-sm font-body text-gray mb-2">across the US, Peru, Germany, and Switzerland.</p>
+      <blockquote class="mt-8 border-l-4 border-blue pl-6 text-left">
+        <p class="text-base font-body text-gray italic leading-relaxed">
+          "Most businesses score between 15 and 45 out of 100 on their first assessment. The gap between that and their top-cited competitor is the opportunity we help close."
+        </p>
+        <footer class="mt-3 text-sm font-body text-dark font-semibold">
+          — Wilko Feye, StarkRank
+        </footer>
+      </blockquote>
+    </div>
+  </Section>
+
+  <!-- Closing CTA -->
+  <section class="bg-navy text-cream py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-headline font-black tracking-tight text-cream">
+        Your Competitors Aren't Waiting
+      </h2>
+      <p class="mt-4 text-lg font-body text-gray-light">
+        Every day without an AI search strategy is a day your competitors build a citation advantage that compounds. AI models learn from patterns — the earlier you're cited, the more you'll continue to be cited.
+      </p>
+      <div class="mt-8">
+        <a
+          href="#get-your-free-aiso-score"
+          class="inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-8 py-4 text-sm"
+        >
+          Get Your Free AISO Score Now &uarr;
+        </a>
+      </div>
+    </div>
+  </section>
+</LandingLayout>
