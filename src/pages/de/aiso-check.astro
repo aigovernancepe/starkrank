@@ -1,0 +1,297 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro';
+import Section from '../../components/ui/Section.astro';
+
+const title = 'Kostenloser AISO-Check — Ist Ihre Website KI-ready? | StarkRank';
+const description = 'ChatGPT und Google AI zitieren Ihre Konkurrenz — aber nicht Sie. Kostenloser AISO-Check in 24 Stunden. 2 Dimensionen geprüft. Unverbindlich.';
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Kostenloser AISO-Check — Wie KI-ready ist Ihre Website?',
+  description,
+  url: 'https://starkrank.com/de/aiso-check/',
+  inLanguage: 'de-DE',
+  isPartOf: { '@type': 'WebSite', name: 'StarkRank', url: 'https://starkrank.com' },
+  mainEntity: {
+    '@type': 'Service',
+    name: 'Kostenloser AISO-Check',
+    description: 'Kostenlose KI-Suchbereitschaftsbewertung: 2 Dimensionen (Crawlability + Struktur) mit Wettbewerbsvergleich.',
+    provider: { '@type': 'Organization', name: 'StarkRank', url: 'https://starkrank.com' },
+    areaServed: { '@type': 'Country', name: 'Germany' },
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Kostenlose Erstbewertung — 2 von 6 AISO-Dimensionen' },
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://starkrank.com/de/' },
+    { '@type': 'ListItem', position: 2, name: 'AISO-Check', item: 'https://starkrank.com/de/aiso-check/' },
+  ],
+};
+
+const schemas = [webPageSchema, breadcrumbSchema];
+
+const upsellDimensions = [
+  { name: 'Autorität', weight: '15%', description: 'Vertraut KI Ihrer Marke? Wikidata-Präsenz, sameAs-Links, E-E-A-T-Signale' },
+  { name: 'Zitierbarkeit', weight: '20%', description: 'Wird Ihr Content zitiert? Answer-First-Format, originale Daten und Studien' },
+  { name: 'Aktualität', weight: '10%', description: 'Ist Ihr Content aktuell genug? Aktualisierungszyklen, Zeitstempel' },
+  { name: 'Messbarkeit', weight: '15%', description: 'Tracken Sie KI-Suchleistung? GA4-Setup, KI-Referral-Segmente, Consent Mode' },
+];
+---
+
+<LandingLayout
+  title={title}
+  description={description}
+  locale="de"
+  ogImage="/images/aiso-score-preview-de.png"
+  schema={schemas}
+  backLink={{ label: 'Zurück zur Startseite', href: '/de/' }}
+>
+  <Fragment slot="head">
+    <link rel="alternate" hreflang="de-DE" href="https://starkrank.com/de/aiso-check/" />
+    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/aiso-check/" />
+    <link rel="alternate" hreflang="en" href="https://starkrank.com/free-aiso-score/" />
+    <link rel="alternate" hreflang="es-PE" href="https://starkrank.com/pe/apareces-en-google/" />
+    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/free-aiso-score/" />
+  </Fragment>
+
+  <!-- Hero + Form -->
+  <Section bg="cream">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- Hero text -->
+      <div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-headline font-black tracking-tight text-navy leading-tight">
+          Wie KI-ready ist Ihre Website?
+        </h1>
+        <p class="mt-4 text-lg font-body text-gray leading-relaxed">
+          ChatGPT, Perplexity und Google AI Overviews zitieren Quellen, wenn sie Fragen beantworten. Wenn Ihre Konkurrenz zitiert wird und Sie nicht — verlieren Sie Sichtbarkeit im am schnellsten wachsenden Suchkanal.
+        </p>
+        <p class="mt-4 text-lg font-body text-dark font-semibold">
+          Der AISO-Check zeigt Ihnen in 24 Stunden, wo Sie stehen.
+        </p>
+
+        <div class="mt-8">
+          <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Was wir prüfen</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+              <p class="text-base font-body text-gray"><strong class="text-dark">Können KI-Bots auf Ihre Website zugreifen?</strong> — Wir prüfen, ob GPTBot, ClaudeBot und PerplexityBot Ihre Inhalte crawlen können, oder ob Ihre robots.txt sie blockiert</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+              <p class="text-base font-body text-gray"><strong class="text-dark">Versteht KI Ihre Inhalte?</strong> — Wir analysieren Ihre strukturierten Daten (JSON-LD), Überschriftenstruktur und ob Ihre Inhalte für KI-Extraktion formatiert sind</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+              <p class="text-base font-body text-gray"><strong class="text-dark">Wie stehen Sie im Vergleich zum Wettbewerb?</strong> — Wir vergleichen Ihre Ergebnisse mit den Top-3-Wettbewerbern in Ihrem Markt</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div id="kostenlose-erstbewertung-anfordern" class="bg-white border border-gray-light/40 rounded-lg p-6 md:p-8 shadow-lg">
+        <h2 class="text-xl md:text-2xl font-headline font-black text-navy mb-6">Kostenlose Erstbewertung anfordern</h2>
+        <form class="contact-form space-y-4" data-success="Vielen Dank! Wir analysieren Ihre Website und senden Ihnen die Ergebnisse innerhalb von 24 Stunden per E-Mail." data-error="Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie an kontakt@starkrank.com.">
+          <input type="hidden" name="access_key" value="c6c510f0-14d6-42e3-b16b-c4db8ac4e71b" />
+          <input type="hidden" name="subject" value="Neuer AISO-Check (DE)" />
+          <input type="hidden" name="from_name" value="StarkRank Deutschland — AISO-Check" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
+          <div>
+            <label for="website" class="block text-sm font-label font-semibold text-dark mb-1">Website-URL <span class="text-blue">*</span></label>
+            <input type="url" id="website" name="website" required placeholder="https://ihre-website.de" class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-label font-semibold text-dark mb-1">Geschäftliche E-Mail <span class="text-blue">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="name@unternehmen.de" class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors" />
+          </div>
+          <div>
+            <label for="name" class="block text-sm font-label font-semibold text-dark mb-1">Name <span class="text-blue">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="Max Mustermann" class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors" />
+          </div>
+          <div>
+            <label for="company" class="block text-sm font-label font-semibold text-dark mb-1">Unternehmen <span class="text-blue">*</span></label>
+            <input type="text" id="company" name="company" required placeholder="Mustermann GmbH" class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors" />
+          </div>
+          <div>
+            <label for="branche" class="block text-sm font-label font-semibold text-dark mb-1">Branche <span class="text-gray text-xs font-normal">(optional)</span></label>
+            <select id="branche" name="branche" class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors">
+              <option value="">Bitte wählen</option>
+              <option value="IT & Software">IT & Software</option>
+              <option value="Maschinenbau">Maschinenbau</option>
+              <option value="Gesundheitswesen">Gesundheitswesen</option>
+              <option value="Professional Services">Professional Services</option>
+              <option value="Handel">Handel</option>
+              <option value="Sonstige">Sonstige</option>
+            </select>
+          </div>
+          <div>
+            <button type="submit" class="w-full inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-8 py-4 text-sm mt-2">
+              <span class="submit-text">Jetzt kostenlos prüfen &rarr;</span>
+              <svg class="submit-spinner hidden w-5 h-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+            </button>
+          </div>
+          <p class="text-xs font-body text-gray text-center">
+            Kostenlos. Unverbindlich. Keine Kreditkarte erforderlich.<br />
+            Datenhaltung in Frankfurt (DSGVO-konform).
+          </p>
+          <div class="form-status hidden rounded-lg p-4 text-sm font-body"></div>
+        </form>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Report contents -->
+  <Section bg="white">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- Radar chart placeholder -->
+      <div class="bg-cream border border-gray-light/40 rounded-lg p-8 flex flex-col items-center justify-center min-h-[320px]">
+        <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-6">AISO Score — Beispiel</p>
+        <div class="relative w-64 h-64">
+          <svg viewBox="0 0 200 200" class="w-full h-full">
+            <polygon points="100,20 170,55 170,125 100,160 30,125 30,55" fill="none" stroke="#e5e7eb" stroke-width="0.5" />
+            <polygon points="100,40 155,65 155,115 100,140 45,115 45,65" fill="none" stroke="#e5e7eb" stroke-width="0.5" />
+            <polygon points="100,60 140,75 140,105 100,120 60,105 60,75" fill="none" stroke="#e5e7eb" stroke-width="0.5" />
+            <line x1="100" y1="20" x2="100" y2="160" stroke="#e5e7eb" stroke-width="0.5" />
+            <line x1="30" y1="55" x2="170" y2="125" stroke="#e5e7eb" stroke-width="0.5" />
+            <line x1="170" y1="55" x2="30" y2="125" stroke="#e5e7eb" stroke-width="0.5" />
+            <polygon points="100,35 148,62 100,90 52,62" fill="#0055FF" fill-opacity="0.15" stroke="#0055FF" stroke-width="2" />
+            <circle cx="100" cy="35" r="4" fill="#0055FF" />
+            <circle cx="148" cy="62" r="4" fill="#0055FF" />
+            <circle cx="148" cy="118" r="4" fill="#d1d5db" />
+            <circle cx="100" cy="145" r="4" fill="#d1d5db" />
+            <circle cx="52" cy="118" r="4" fill="#d1d5db" />
+            <circle cx="52" cy="62" r="4" fill="#d1d5db" />
+          </svg>
+          <span class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1 text-xs font-label font-bold text-blue">Crawlability</span>
+          <span class="absolute top-[22%] right-0 translate-x-2 text-xs font-label font-bold text-blue">Struktur</span>
+          <span class="absolute bottom-[22%] right-0 translate-x-2 text-xs font-label text-gray-light">Autorität 🔒</span>
+          <span class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1 text-xs font-label text-gray-light">Zitierbarkeit 🔒</span>
+          <span class="absolute bottom-[22%] left-0 -translate-x-2 text-xs font-label text-gray-light text-right">Aktualität 🔒</span>
+          <span class="absolute top-[22%] left-0 -translate-x-2 text-xs font-label text-gray-light text-right">Messbarkeit 🔒</span>
+        </div>
+        <p class="text-xs font-body text-gray mt-4 text-center">Kostenlose Bewertung: 2 von 6 Dimensionen</p>
+      </div>
+
+      <!-- Report description -->
+      <div>
+        <p class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3">Ihr Bericht enthält</p>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-lg font-headline font-bold text-navy mb-2">Crawlability-Score (von 20 Punkten)</h3>
+            <p class="text-base font-body text-gray leading-relaxed">Können KI-Crawler Ihre Inhalte finden und abrufen? Wir prüfen robots.txt-Regeln für 5 KI-Bots, llms.txt-Präsenz, JavaScript-Rendering und serverseitige Zugänglichkeit.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-headline font-bold text-navy mb-2">Struktur-Score (von 20 Punkten)</h3>
+            <p class="text-base font-body text-gray leading-relaxed">Versteht KI Ihre Inhalte? Wir analysieren die JSON-LD-Abdeckung, Überschriftenhierarchie, semantisches HTML und ob Ihre Inhalte für fragmentbasierte Extraktion formatiert sind.</p>
+          </div>
+          <div>
+            <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-3">Zusätzlich</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-3 text-base font-body text-gray"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>3-5 priorisierte Quick Wins, die Sie sofort umsetzen können</li>
+              <li class="flex items-start gap-3 text-base font-body text-gray"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>Klare Bewertung jedes Crawlability- und Struktur-Kriteriums</li>
+              <li class="flex items-start gap-3 text-base font-body text-gray"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>Wettbewerbskontext — wie Sie im Vergleich zu Ihrem Markt stehen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Upsell -->
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-4">Das vollständige Bild</h2>
+      <p class="text-base font-body text-gray leading-relaxed mb-8">Die kostenlose Erstbewertung umfasst 2 von 6 Dimensionen. Das umfassende AISO-Audit ergänzt:</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm font-body border-collapse">
+          <thead>
+            <tr class="border-b-2 border-navy/20">
+              <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Dimension</th>
+              <th class="text-left py-3 font-headline font-bold text-navy">Was es zeigt</th>
+            </tr>
+          </thead>
+          <tbody>
+            {upsellDimensions.map((d) => (
+              <tr class="border-b border-gray-light/40">
+                <td class="py-3 pr-4 whitespace-nowrap"><span class="font-semibold text-dark">{d.name}</span> <span class="text-gray">({d.weight})</span></td>
+                <td class="py-3 text-gray leading-relaxed">{d.description}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-6 text-base font-body text-gray">
+        Umfassendes AISO-Audit ab €3.000.
+        <a href="/de/ki-suchoptimierung-hannover/" class="text-blue font-semibold hover:text-blue-light">Mehr über KI-Suchoptimierung erfahren &rarr;</a>
+      </p>
+    </div>
+  </Section>
+
+  <!-- Trust / DSGVO -->
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">Warum StarkRank</h2>
+      <div class="space-y-4">
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">DSGVO-konform</strong> — Ihre Daten werden ausschließlich auf Servern in Frankfurt verarbeitet. Keine Datenübertragung außerhalb der EU.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Internationale Expertise</strong> — Wir betreuen Unternehmen in den USA, Peru, Deutschland und der Schweiz — mit denselben Methoden, die im US-Markt bereits Ergebnisse liefern.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Mittelstandserfahrung</strong> — Wir verstehen die Anforderungen von B2B-Unternehmen, Praxen und Dienstleistern im DACH-Raum.</p>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-wrap items-center gap-6 text-sm font-body text-dark font-semibold">
+        <span>150+ AISO-Bewertungen durchgeführt</span>
+        <span>4 Märkte</span>
+        <span>6-Dimensionen-Framework</span>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Closing CTA -->
+  <section class="bg-navy text-cream py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-headline font-black tracking-tight text-cream">Ihre Konkurrenz wartet nicht</h2>
+      <p class="mt-4 text-lg font-body text-gray-light">KI-Modelle lernen aus Mustern — je früher Sie zitiert werden, desto häufiger werden Sie weiterhin zitiert. Der kostenlose AISO-Check ist der erste Schritt.</p>
+      <div class="mt-8">
+        <a href="#kostenlose-erstbewertung-anfordern" class="inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-8 py-4 text-sm">Jetzt kostenlos prüfen &uarr;</a>
+      </div>
+    </div>
+  </section>
+</LandingLayout>
+
+<script>
+  function initForms() {
+    document.querySelectorAll('.contact-form').forEach((form) => {
+      if ((form as HTMLFormElement).dataset.initialized) return;
+      (form as HTMLFormElement).dataset.initialized = 'true';
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const f = e.target as HTMLFormElement;
+        const submitText = f.querySelector('.submit-text') as HTMLElement;
+        const spinner = f.querySelector('.submit-spinner') as HTMLElement;
+        const status = f.querySelector('.form-status') as HTMLElement;
+        const button = f.querySelector('button[type="submit"]') as HTMLButtonElement;
+        submitText.classList.add('hidden'); spinner.classList.remove('hidden'); button.disabled = true; status.classList.add('hidden');
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(f))) });
+          const data = await res.json();
+          if (data.success) { status.textContent = f.dataset.success || 'Nachricht gesendet!'; status.className = 'form-status rounded-lg p-4 text-sm font-body bg-blue/10 text-blue border border-blue/20'; f.reset(); }
+          else { status.textContent = f.dataset.error || 'Etwas ist schiefgelaufen.'; status.className = 'form-status rounded-lg p-4 text-sm font-body bg-red-50 text-red-700 border border-red-200'; }
+        } catch { status.textContent = f.dataset.error || 'Etwas ist schiefgelaufen.'; status.className = 'form-status rounded-lg p-4 text-sm font-body bg-red-50 text-red-700 border border-red-200'; }
+        submitText.classList.remove('hidden'); spinner.classList.add('hidden'); button.disabled = false;
+      });
+    });
+  }
+  initForms();
+  document.addEventListener('astro:after-swap', initForms);
+</script>

@@ -139,8 +139,8 @@ const ctaTitle = spoke?.data?.localCTA ?? tf('spoke.growBusiness', vars, locale)
 const aisoCtaHref: Record<string, string> = {
   en: '/free-aiso-score/',
   pe: '/pe/apareces-en-google/',
-  de: '/de/kontakt/',
-  'ch-de': '/ch-de/kontakt/',
+  de: '/de/aiso-check/',
+  'ch-de': '/ch-de/aiso-check/',
 };
 const ctaHref = isAISO ? (aisoCtaHref[locale] ?? getLocalizedNavHref('/contact/', locale)) : getLocalizedNavHref('/contact/', locale);
 
@@ -228,7 +228,7 @@ const allSchemas = [
     <div class="bg-blue text-white">
       <div class="max-w-7xl mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-4">
         <span class="text-sm font-body font-semibold">Wie KI-ready ist Ihre Website? Kostenlose Erstbewertung anfordern &rarr;</span>
-        <a href={locale === 'de' ? '/de/kontakt/' : '/ch-de/kontakt/'} class="text-xs font-label font-semibold uppercase tracking-wide bg-white text-blue hover:bg-cream rounded-md px-4 py-2 transition-colors">
+        <a href={locale === 'de' ? '/de/aiso-check/' : '/ch-de/aiso-check/'} class="text-xs font-label font-semibold uppercase tracking-wide bg-white text-blue hover:bg-cream rounded-md px-4 py-2 transition-colors">
           Erstbewertung anfordern
         </a>
       </div>
