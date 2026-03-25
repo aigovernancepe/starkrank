@@ -203,16 +203,33 @@ const allSchemas = [
     align="left"
     backgroundImage={heroImagePath}
   >
-    <Button href={ctaHref} variant="primary" size="lg">{locale === 'pe' ? 'Revisa Gratis →' : isAISO ? ctaTitle : tf('spoke.contactIn', vars, locale)}</Button>
+    <Button href={ctaHref} variant="primary" size="lg">{
+      locale === 'pe' ? 'Revisa Gratis →'
+      : (locale === 'de' || locale === 'ch-de') && isAISO ? 'Kostenlose Erstbewertung →'
+      : isAISO ? ctaTitle
+      : tf('spoke.contactIn', vars, locale)
+    }</Button>
   </HeroSection>
 
   {/* PE CTA banner — all PE spoke pages */}
   {locale === 'pe' && (
     <div class="bg-blue text-white">
       <div class="max-w-7xl mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-4">
-        <span class="text-sm font-body font-semibold">¿Tu negocio aparece en Google? Revísalo gratis →</span>
+        <span class="text-sm font-body font-semibold">¿Tu negocio aparece en Google? Revísalo gratis &rarr;</span>
         <a href="/pe/apareces-en-google/" class="text-xs font-label font-semibold uppercase tracking-wide bg-white text-blue hover:bg-cream rounded-md px-4 py-2 transition-colors">
           Revisa Gratis
+        </a>
+      </div>
+    </div>
+  )}
+
+  {/* DE/CH-DE CTA banner — all DE/CH spoke pages */}
+  {(locale === 'de' || locale === 'ch-de') && (
+    <div class="bg-blue text-white">
+      <div class="max-w-7xl mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-4">
+        <span class="text-sm font-body font-semibold">Wie KI-ready ist Ihre Website? Kostenlose Erstbewertung anfordern &rarr;</span>
+        <a href={locale === 'de' ? '/de/kontakt/' : '/ch-de/kontakt/'} class="text-xs font-label font-semibold uppercase tracking-wide bg-white text-blue hover:bg-cream rounded-md px-4 py-2 transition-colors">
+          Erstbewertung anfordern
         </a>
       </div>
     </div>

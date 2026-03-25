@@ -107,6 +107,16 @@ function localizeLabel(label: string): string {
           Revisa Gratis
         </a>
       )}
+      {locale === 'de' && (
+        <a href="/de/kontakt/" class="hidden lg:inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-4 py-2 text-xs">
+          Kostenloser AISO-Score
+        </a>
+      )}
+      {locale === 'ch-de' && (
+        <a href="/ch-de/kontakt/" class="hidden lg:inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-4 py-2 text-xs">
+          Kostenloser AISO-Score
+        </a>
+      )}
       <LocaleSwitcher />
       <!-- Mobile menu button -->
       <button
@@ -132,6 +142,16 @@ function localizeLabel(label: string): string {
       {locale === 'pe' && (
         <a href="/pe/apareces-en-google/" class="block text-sm font-label font-semibold uppercase tracking-wide text-blue">
           Revisa Gratis &rarr;
+        </a>
+      )}
+      {locale === 'de' && (
+        <a href="/de/kontakt/" class="block text-sm font-label font-semibold uppercase tracking-wide text-blue">
+          Kostenloser AISO-Score &rarr;
+        </a>
+      )}
+      {locale === 'ch-de' && (
+        <a href="/ch-de/kontakt/" class="block text-sm font-label font-semibold uppercase tracking-wide text-blue">
+          Kostenloser AISO-Score &rarr;
         </a>
       )}
     </div>
