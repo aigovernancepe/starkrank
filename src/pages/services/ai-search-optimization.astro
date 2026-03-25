@@ -4,7 +4,6 @@ import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
 import Button from '../../components/ui/Button.astro';
-import Card from '../../components/ui/Card.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import { getCollection } from 'astro:content';
 import { getPillarById } from '../../data/pillars';
@@ -182,83 +181,71 @@ const comparisonRows = [
   <Section bg="cream">
     <Breadcrumbs items={breadcrumbs} />
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-      <div class="lg:col-span-2">
-        <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
-          {pillar?.tagline}
-        </span>
-        <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
-          AI Search Optimization
-        </h1>
-        <p class="mt-4 text-lg text-gray font-body leading-relaxed">
-          Your competitors are getting cited by ChatGPT, Perplexity, and Google AI Overviews. If you're not — you're losing visibility in the fastest-growing search channel. The AISO Score tells you exactly where you stand.
-        </p>
+    <div class="max-w-3xl">
+      <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+        {pillar?.tagline}
+      </span>
+      <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+        AI Search Optimization
+      </h1>
+      <p class="mt-4 text-lg text-gray font-body leading-relaxed">
+        Your competitors are getting cited by ChatGPT, Perplexity, and Google AI Overviews. If you're not — you're losing visibility in the fastest-growing search channel. The AISO Score tells you exactly where you stand.
+      </p>
 
-        <div class="mt-8 flex flex-wrap gap-4">
-          <Button href="/free-aiso-score/" variant="primary" size="lg">Get Your Free AISO Score</Button>
-          <Button href="#whats-included" variant="ghost" size="lg">See What's Included</Button>
-        </div>
-
-        <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
-          <span>
-            Last updated: <time datetime="2026-03-01">March 2026</time>
-          </span>
-          <span>
-            By <a href="/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
-          </span>
-        </div>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <Button href="/free-aiso-score/" variant="primary" size="lg">Get Your Free AISO Score</Button>
+        <Button href="#whats-included" variant="ghost" size="lg">See What's Included</Button>
       </div>
 
-      <!-- Sidebar -->
-      <aside class="lg:col-span-1">
-        <div class="lg:sticky lg:top-8">
-          <!-- Trust bar -->
-          <div class="bg-white border border-gray-light/40 rounded-lg p-6 mb-6">
-            <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Trusted across 4 markets</p>
-            <div class="space-y-2 text-sm font-body text-gray">
-              <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
-                <span>150+ AISO Scores Delivered</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
-                <span>4 Markets (US, Peru, DE, CH)</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
-                <span>6-Dimension Framework</span>
-              </div>
+      <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+        <span>
+          Last updated: <time datetime="2026-03-01">March 2026</time>
+        </span>
+        <span>
+          By <a href="/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
+        </span>
+      </div>
+    </div>
+
+    <!-- Trust stats — full-width horizontal band -->
+    <div class="mt-12 flex flex-wrap items-center gap-6 md:gap-10 pt-8 border-t border-gray-light/30">
+      <p class="text-xs font-label font-bold uppercase tracking-widest text-blue">Trusted across 4 markets</p>
+      <div class="flex flex-wrap items-center gap-6 md:gap-10 text-sm font-body text-dark font-semibold">
+        <span>150+ AISO Scores Delivered</span>
+        <span>4 Markets (US, Peru, DE, CH)</span>
+        <span>6-Dimension Framework</span>
+      </div>
+    </div>
+
+    <!-- Related services + local pages — compact row -->
+    {(relatedServices.length > 0 || enCities.length > 0) && (
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {relatedServices.length > 0 && (
+          <div>
+            <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-3">Related Services</h3>
+            <div class="flex flex-wrap gap-2">
+              {relatedServices.map((related) => (
+                <a href={`/services/${related.data.slug}/`} class="text-sm font-body text-blue hover:text-blue-light font-semibold">
+                  {related.data.title}
+                </a>
+              ))}
             </div>
           </div>
-
-          {relatedServices.length > 0 && (
-            <div>
-              <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Related Services</h3>
-              <div class="space-y-3">
-                {relatedServices.map((related) => (
-                  <Card href={`/services/${related.data.slug}/`}>
-                    <h4 class="text-sm font-headline font-bold text-navy">{related.data.title}</h4>
-                  </Card>
-                ))}
-              </div>
+        )}
+        {enCities.length > 0 && (
+          <div>
+            <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-3">Local Pages</h3>
+            <div class="flex flex-wrap gap-x-4 gap-y-1">
+              {enCities.map((c) => (
+                <a href={c.href} class="text-sm font-body text-blue hover:text-blue-light font-semibold">
+                  {c.city}
+                </a>
+              ))}
             </div>
-          )}
-
-          {enCities.length > 0 && (
-            <div class="mt-8">
-              <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Local Pages</h3>
-              <div class="space-y-3">
-                {enCities.map((c) => (
-                  <Card href={c.href}>
-                    <h4 class="text-sm font-headline font-bold text-navy">AI Search Optimization in {c.city}</h4>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </aside>
-    </div>
+          </div>
+        )}
+      </div>
+    )}
   </Section>
 
   <!-- Why it matters -->
