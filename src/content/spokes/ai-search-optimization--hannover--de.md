@@ -38,11 +38,13 @@ deliverables:
   - "DSGVO-konforme Umsetzung aller Tracking- und Monitoring-Massnahmen"
 faq:
   - question: "Was kostet KI-Suchoptimierung in Hannover?"
-    answer: "Wir bieten eine kostenlose Erstbewertung (2 Dimensionen: Crawlbarkeit und Struktur). Das umfassende 6-Dimensionen-AISO-Audit beginnt ab €3.000, die laufende monatliche Optimierung ab €5.000/Monat."
+    answer: "Die kostenlose Erstbewertung (2 Dimensionen) ist unverbindlich. Das umfassende 6-Dimensionen-Audit beginnt ab €3.000. Laufende Optimierung ab €3.000/Monat."
   - question: "Wie lange dauert es, bis mein Unternehmen in KI-Suchergebnissen erscheint?"
-    answer: "Technische Grundlagen wie Crawler-Zugang und strukturierte Daten können in 4-8 Wochen umgesetzt werden. Markenentitätsaufbau und Zitationsaufbau benötigen 3-6 Monate. Die meisten Kunden sehen messbare AISO-Score-Verbesserungen innerhalb der ersten 90 Tage."
-  - question: "Können Sie mit unserer bestehenden SEO-Agentur in Hannover zusammenarbeiten?"
-    answer: "Ja. KI-Suchoptimierung ist eine Spezialisierung, die traditionelles SEO ergänzt. Wir arbeiten mit bestehenden Agenturen zusammen und fokussieren uns auf die KI-Sichtbarkeitslücke, die die meisten SEO-Anbieter nicht adressieren."
+    answer: "Technische Grundlagen werden in 4-8 Wochen implementiert. Markenentität und Zitationsaufbau benötigen 3-6 Monate. Die meisten Kunden sehen eine Verbesserung von 15-25 Punkten in den ersten 90 Tagen."
+  - question: "Können Sie mit unserer bestehenden SEO-Agentur zusammenarbeiten?"
+    answer: "Ja. KI-Suchoptimierung ist eine spezialisierte Ergänzung zum traditionellen SEO. Wir koordinieren uns mit Ihrem bestehenden Team."
+  - question: "Was unterscheidet KI-Suchoptimierung von klassischem SEO?"
+    answer: "SEO fokussiert auf Rankings in Suchergebnissen. KI-Suchoptimierung fokussiert darauf, in KI-generierten Antworten von ChatGPT, Perplexity und Google AI zitiert zu werden."
 ---
 
 ## Warum ist KI-Suche für Unternehmen in Hannover relevant?

@@ -162,6 +162,122 @@ const pricingSignals: Record<string, string> = {
 };
 const pricingSignal = pricingSignals[locale] ?? pricingSignals.en;
 
+// Scoring rubric (locale-aware)
+type ScoringTier = { score: string; rating: string; meaning: string };
+const scoringRubrics: Record<string, { tiers: ScoringTier[]; footnote: string }> = {
+  en: {
+    tiers: [
+      { score: '85-100', rating: 'Excellent', meaning: 'AI search ready — actively earning citations' },
+      { score: '70-84', rating: 'Good', meaning: 'Strong foundation, specific gaps to close' },
+      { score: '50-69', rating: 'Fair', meaning: 'Significant gaps in AI readiness' },
+      { score: '30-49', rating: 'Poor', meaning: 'Major structural issues preventing AI visibility' },
+      { score: '0-29', rating: 'Critical', meaning: 'Minimal AI search presence' },
+    ],
+    footnote: 'Most businesses score between 15 and 45 on their first assessment.',
+  },
+  pe: {
+    tiers: [
+      { score: '85-100', rating: 'Excelente', meaning: 'Listo para búsqueda IA — ganando citaciones activamente' },
+      { score: '70-84', rating: 'Bueno', meaning: 'Base sólida, brechas específicas por cerrar' },
+      { score: '50-69', rating: 'Regular', meaning: 'Brechas significativas en preparación para IA' },
+      { score: '30-49', rating: 'Deficiente', meaning: 'Problemas estructurales mayores' },
+      { score: '0-29', rating: 'Crítico', meaning: 'Presencia mínima en búsqueda IA' },
+    ],
+    footnote: 'La mayoría de negocios obtienen entre 15 y 45 puntos en su primera evaluación.',
+  },
+  de: {
+    tiers: [
+      { score: '85-100', rating: 'Exzellent', meaning: 'KI-suchbereit — aktiv Zitationen verdienend' },
+      { score: '70-84', rating: 'Gut', meaning: 'Solide Grundlage, spezifische Lücken zu schließen' },
+      { score: '50-69', rating: 'Befriedigend', meaning: 'Erhebliche Lücken in der KI-Bereitschaft' },
+      { score: '30-49', rating: 'Mangelhaft', meaning: 'Strukturelle Probleme verhindern KI-Sichtbarkeit' },
+      { score: '0-29', rating: 'Kritisch', meaning: 'Minimale KI-Suchpräsenz' },
+    ],
+    footnote: 'Die meisten Unternehmen erreichen bei ihrer Erstbewertung zwischen 15 und 45 Punkten.',
+  },
+};
+scoringRubrics['ch-de'] = scoringRubrics.de;
+const scoringRubric = scoringRubrics[locale] ?? scoringRubrics.en;
+
+// Scoring rubric table headers
+const rubricHeaders: Record<string, [string, string, string]> = {
+  en: ['Score', 'Rating', 'What It Means'],
+  pe: ['Puntaje', 'Calificación', 'Significado'],
+  de: ['Score', 'Bewertung', 'Bedeutung'],
+  'ch-de': ['Score', 'Bewertung', 'Bedeutung'],
+};
+const rHeaders = rubricHeaders[locale] ?? rubricHeaders.en;
+
+// Tier comparison table (locale-aware)
+type TierRow = { feature: string; free: boolean; audit: boolean };
+const tierData: Record<string, { freeLabel: string; auditLabel: string; rows: TierRow[]; freePrice: string; auditPrice: string; freeHref: string; auditHref: string; freeCta: string; auditCta: string }> = {
+  en: {
+    freeLabel: 'Free Assessment', auditLabel: 'Comprehensive Audit',
+    rows: [
+      { feature: 'Crawlability check', free: true, audit: true },
+      { feature: 'Structure analysis', free: true, audit: true },
+      { feature: 'Authority analysis', free: false, audit: true },
+      { feature: 'Citability analysis', free: false, audit: true },
+      { feature: 'Freshness analysis', free: false, audit: true },
+      { feature: 'Measurability analysis', free: false, audit: true },
+      { feature: 'Competitor benchmark', free: false, audit: true },
+      { feature: '90-day roadmap', free: false, audit: true },
+    ],
+    freePrice: 'Free', auditPrice: 'From $3,000',
+    freeHref: '/free-aiso-score/', auditHref: '/contact/',
+    freeCta: 'Get Free Score →', auditCta: 'Request Audit →',
+  },
+  pe: {
+    freeLabel: 'Evaluación Gratuita', auditLabel: 'Auditoría Completa',
+    rows: [
+      { feature: 'Rastreabilidad', free: true, audit: true },
+      { feature: 'Estructura', free: true, audit: true },
+      { feature: 'Autoridad', free: false, audit: true },
+      { feature: 'Citabilidad', free: false, audit: true },
+      { feature: 'Actualización', free: false, audit: true },
+      { feature: 'Medición', free: false, audit: true },
+      { feature: 'Comparación competitiva', free: false, audit: true },
+      { feature: 'Hoja de ruta 90 días', free: false, audit: true },
+    ],
+    freePrice: 'Gratis', auditPrice: 'Desde S/ 3,500',
+    freeHref: '/pe/apareces-en-google/', auditHref: '/pe/contacto/',
+    freeCta: 'Revisa Gratis →', auditCta: 'Solicitar →',
+  },
+  de: {
+    freeLabel: 'Kostenlose Erstbewertung', auditLabel: 'Umfassendes Audit',
+    rows: [
+      { feature: 'Crawlability', free: true, audit: true },
+      { feature: 'Struktur', free: true, audit: true },
+      { feature: 'Autorität', free: false, audit: true },
+      { feature: 'Zitierbarkeit', free: false, audit: true },
+      { feature: 'Aktualität', free: false, audit: true },
+      { feature: 'Messbarkeit', free: false, audit: true },
+      { feature: 'Wettbewerbsvergleich', free: false, audit: true },
+      { feature: '90-Tage-Roadmap', free: false, audit: true },
+    ],
+    freePrice: 'Kostenlos', auditPrice: 'Ab €3.000',
+    freeHref: '/de/aiso-check/', auditHref: '/de/kontakt/',
+    freeCta: 'Jetzt prüfen →', auditCta: 'Audit anfordern →',
+  },
+  'ch-de': {
+    freeLabel: 'Kostenlose Erstbewertung', auditLabel: 'Umfassendes Audit',
+    rows: [
+      { feature: 'Crawlability', free: true, audit: true },
+      { feature: 'Struktur', free: true, audit: true },
+      { feature: 'Autorität', free: false, audit: true },
+      { feature: 'Zitierbarkeit', free: false, audit: true },
+      { feature: 'Aktualität', free: false, audit: true },
+      { feature: 'Messbarkeit', free: false, audit: true },
+      { feature: 'Wettbewerbsvergleich', free: false, audit: true },
+      { feature: '90-Tage-Roadmap', free: false, audit: true },
+    ],
+    freePrice: 'Kostenlos', auditPrice: 'Ab CHF 4.000',
+    freeHref: '/ch-de/aiso-check/', auditHref: '/ch-de/kontakt/',
+    freeCta: 'Jetzt prüfen →', auditCta: 'Audit anfordern →',
+  },
+};
+const tier = tierData[locale] ?? tierData.en;
+
 // Enhanced schemas for AISO pages
 const serviceSchema = isAISO ? {
   '@context': 'https://schema.org',
@@ -291,6 +407,69 @@ const allSchemas = [
                   <p class="text-sm font-body text-gray leading-relaxed">{h.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* Scoring rubric table — AISO pages only */}
+        {isAISO && (
+          <div class="mt-10">
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm font-body border-collapse">
+                <thead>
+                  <tr class="border-b-2 border-navy/20">
+                    <th class="text-left py-3 pr-4 font-headline font-bold text-navy">{rHeaders[0]}</th>
+                    <th class="text-left py-3 pr-4 font-headline font-bold text-navy">{rHeaders[1]}</th>
+                    <th class="text-left py-3 font-headline font-bold text-navy">{rHeaders[2]}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {scoringRubric.tiers.map((t) => (
+                    <tr class="border-b border-gray-light/40">
+                      <td class="py-3 pr-4 font-semibold text-dark">{t.score}</td>
+                      <td class="py-3 pr-4 font-semibold text-dark">{t.rating}</td>
+                      <td class="py-3 text-gray">{t.meaning}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-4 text-base font-body text-dark font-semibold">{scoringRubric.footnote}</p>
+          </div>
+        )}
+
+        {/* Tier comparison table — AISO pages only */}
+        {isAISO && (
+          <div class="mt-10">
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm font-body border-collapse">
+                <thead>
+                  <tr class="border-b-2 border-navy/20">
+                    <th class="text-left py-3 pr-4 font-headline font-bold text-navy"></th>
+                    <th class="text-center py-3 px-4 font-headline font-bold text-navy">{tier.freeLabel}</th>
+                    <th class="text-center py-3 px-4 font-headline font-bold text-navy">{tier.auditLabel}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tier.rows.map((row) => (
+                    <tr class="border-b border-gray-light/40">
+                      <td class="py-3 pr-4 text-dark">{row.feature}</td>
+                      <td class="py-3 px-4 text-center">{row.free ? <span class="text-blue font-bold">&#10003;</span> : ''}</td>
+                      <td class="py-3 px-4 text-center">{row.audit ? <span class="text-blue font-bold">&#10003;</span> : ''}</td>
+                    </tr>
+                  ))}
+                  <tr class="border-t-2 border-navy/20">
+                    <td class="py-3 pr-4 font-headline font-bold text-navy">{locale === 'pe' ? 'Precio' : locale === 'en' ? 'Price' : 'Preis'}</td>
+                    <td class="py-3 px-4 text-center font-headline font-bold text-navy">{tier.freePrice}</td>
+                    <td class="py-3 px-4 text-center font-headline font-bold text-navy">{tier.auditPrice}</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="py-3 px-4 text-center"><a href={tier.freeHref} class="text-sm text-blue font-semibold hover:text-blue-light">{tier.freeCta}</a></td>
+                    <td class="py-3 px-4 text-center"><a href={tier.auditHref} class="text-sm text-blue font-semibold hover:text-blue-light">{tier.auditCta}</a></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         )}

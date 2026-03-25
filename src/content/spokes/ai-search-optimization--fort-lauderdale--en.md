@@ -37,11 +37,13 @@ deliverables:
   - "AI mention monitoring configured for Broward County market with competitor benchmarking"
 faq:
   - question: "How much does AI search optimization cost in Fort Lauderdale?"
-    answer: "We offer a free 2-dimension assessment covering Crawlability and Structure. The comprehensive 6-dimension AISO audit starts at $3,000, and ongoing monthly optimization starts at $5,000/month."
+    answer: "A free 2-dimension assessment is available at no cost. The comprehensive 6-dimension AISO audit starts at $3,000. Ongoing optimization retainers start at $5,000/month."
   - question: "How long before my Fort Lauderdale business appears in AI search results?"
-    answer: "Technical foundations like crawler access and structured data can be implemented in 4-8 weeks. Brand entity building and citation growth take 3-6 months. Most clients see measurable AISO Score improvements within the first 90 days."
+    answer: "Technical foundations take 4-8 weeks to implement. Brand entity and citation building take 3-6 months. Most clients see their AISO Score improve by 15-25 points in the first 90 days."
   - question: "Can you work with my existing SEO agency in South Florida?"
-    answer: "Yes. AI search optimization is a specialist layer that complements traditional SEO. We work alongside existing agencies or in-house teams, focusing specifically on the AI visibility gap that most SEO providers don't address."
+    answer: "Yes. AI search optimization is a specialist layer that complements traditional SEO. We coordinate with your existing team on technical changes."
+  - question: "Is AI search optimization different from regular SEO?"
+    answer: "Yes. SEO focuses on ranking in search results. AI search optimization focuses on being cited in AI-generated answers from ChatGPT, Perplexity, and Google AI. The foundations overlap but AI search requires additional strategies."
 ---
 
 ## Why does AI search matter for businesses in Fort Lauderdale?

@@ -37,11 +37,13 @@ deliverables:
   - "AI mention monitoring setup and monthly performance dashboard"
 faq:
   - question: "How much does AI search optimization cost in Miami?"
-    answer: "We offer a free 2-dimension assessment covering Crawlability and Structure. The comprehensive 6-dimension AISO audit starts at $3,000, and ongoing monthly optimization starts at $5,000/month."
+    answer: "A free 2-dimension assessment is available at no cost. The comprehensive 6-dimension AISO audit starts at $3,000. Ongoing optimization retainers start at $5,000/month."
   - question: "How long before my Miami business appears in AI search results?"
-    answer: "Technical foundations can be implemented in 4-8 weeks. Brand entity and citation building take 3-6 months to mature. Most clients see their AISO Score improve by 15-25 points in the first 90 days."
-  - question: "Do you optimize for both English and Spanish AI searches in Miami?"
-    answer: "Yes. Miami's bilingual market means AI platforms receive queries in both languages. We optimize entity signals, structured data, and content for English and Spanish search patterns."
+    answer: "Technical foundations take 4-8 weeks to implement. Brand entity and citation building take 3-6 months. Most clients see their AISO Score improve by 15-25 points in the first 90 days."
+  - question: "Can you work with my existing SEO agency in South Florida?"
+    answer: "Yes. AI search optimization is a specialist layer that complements traditional SEO. We coordinate with your existing team on technical changes."
+  - question: "Is AI search optimization different from regular SEO?"
+    answer: "Yes. SEO focuses on ranking in search results. AI search optimization focuses on being cited in AI-generated answers from ChatGPT, Perplexity, and Google AI. The foundations overlap but AI search requires additional strategies."
 ---
 
 ## Why does AI search matter for businesses in Miami?
