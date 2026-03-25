@@ -4,6 +4,7 @@ import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
 import Button from '../../components/ui/Button.astro';
+import Card from '../../components/ui/Card.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import { getCollection } from 'astro:content';
 import { getPillarById } from '../../data/pillars';
@@ -181,262 +182,266 @@ const comparisonRows = [
   <Section bg="cream">
     <Breadcrumbs items={breadcrumbs} />
 
-    <div class="max-w-3xl">
-      <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
-        {pillar?.tagline}
+    <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+      {pillar?.tagline}
+    </span>
+    <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+      AI Search Optimization
+    </h1>
+    <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-3xl">
+      Your competitors are getting cited by ChatGPT, Perplexity, and Google AI Overviews. If you're not — you're losing visibility in the fastest-growing search channel. The AISO Score tells you exactly where you stand.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <Button href="/free-aiso-score/" variant="primary" size="lg">Get Your Free AISO Score</Button>
+      <Button href="#whats-included" variant="ghost" size="lg">See What's Included</Button>
+    </div>
+
+    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+      <span>
+        Last updated: <time datetime="2026-03-01">March 2026</time>
       </span>
-      <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
-        AI Search Optimization
-      </h1>
-      <p class="mt-4 text-lg text-gray font-body leading-relaxed">
-        Your competitors are getting cited by ChatGPT, Perplexity, and Google AI Overviews. If you're not — you're losing visibility in the fastest-growing search channel. The AISO Score tells you exactly where you stand.
-      </p>
-
-      <div class="mt-8 flex flex-wrap gap-4">
-        <Button href="/free-aiso-score/" variant="primary" size="lg">Get Your Free AISO Score</Button>
-        <Button href="#whats-included" variant="ghost" size="lg">See What's Included</Button>
-      </div>
-
-      <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
-        <span>
-          Last updated: <time datetime="2026-03-01">March 2026</time>
-        </span>
-        <span>
-          By <a href="/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
-        </span>
-      </div>
+      <span>
+        By <a href="/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
+      </span>
     </div>
+  </Section>
 
-    <!-- Trust stats — full-width horizontal band -->
-    <div class="mt-12 flex flex-wrap items-center gap-6 md:gap-10 pt-8 border-t border-gray-light/30">
-      <p class="text-xs font-label font-bold uppercase tracking-widest text-blue">Trusted across 4 markets</p>
-      <div class="flex flex-wrap items-center gap-6 md:gap-10 text-sm font-body text-dark font-semibold">
-        <span>150+ AISO Scores Delivered</span>
-        <span>4 Markets (US, Peru, DE, CH)</span>
-        <span>6-Dimension Framework</span>
-      </div>
-    </div>
+  <!-- Main content + sidebar -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main content (~65%) -->
+        <div class="lg:col-span-2 space-y-0">
 
-    <!-- Related services + local pages — compact row -->
-    {(relatedServices.length > 0 || enCities.length > 0) && (
-      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {relatedServices.length > 0 && (
-          <div>
-            <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-3">Related Services</h3>
-            <div class="flex flex-wrap gap-2">
-              {relatedServices.map((related) => (
-                <a href={`/services/${related.data.slug}/`} class="text-sm font-body text-blue hover:text-blue-light font-semibold">
-                  {related.data.title}
-                </a>
-              ))}
+          <!-- Why it matters -->
+          <div class="pb-14">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              Why does AI search optimization matter right now?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>AI-powered search engines — ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot — now answer questions directly and cite their sources inline. Traditional SEO gets you ranked. AI search optimization gets you <strong class="text-dark">cited</strong>.</p>
+              <p>The shift is measurable: AI platforms process billions of queries monthly, and when they cite a source, that brand earns trust at a scale no ad campaign can match. Yet most businesses have zero strategy for it. Their content is invisible to AI — not because it's bad, but because it's not structured for how AI retrieves and references information.</p>
+              <p>StarkRank closes that gap. We audit, restructure, and monitor your digital presence so AI platforms cite you as a trusted source — not your competitors.</p>
             </div>
           </div>
-        )}
-        {enCities.length > 0 && (
-          <div>
-            <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-3">Local Pages</h3>
-            <div class="flex flex-wrap gap-x-4 gap-y-1">
-              {enCities.map((c) => (
-                <a href={c.href} class="text-sm font-body text-blue hover:text-blue-light font-semibold">
-                  {c.city}
-                </a>
-              ))}
+
+          <!-- AISO Score -->
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-4">
+              What is the AISO Score?
+            </h2>
+            <p class="text-base font-body text-gray leading-relaxed mb-8">
+              The AISO Score (AI Search Optimization Score) is StarkRank's proprietary framework for measuring AI search readiness. It's a composite 0-100 score across six dimensions, benchmarked against your competitors. Every engagement starts here.
+            </p>
+
+            <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">The 6 Dimensions</h3>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm font-body border-collapse">
+                <thead>
+                  <tr class="border-b-2 border-navy/20">
+                    <th class="text-left py-3 pr-4 font-headline font-bold text-navy">#</th>
+                    <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Dimension</th>
+                    <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Weight</th>
+                    <th class="text-left py-3 font-headline font-bold text-navy">What We Measure</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {dimensions.map((d) => (
+                    <tr class="border-b border-gray-light/40">
+                      <td class="py-3 pr-4 text-blue font-bold">{d.num}</td>
+                      <td class="py-3 pr-4 font-semibold text-dark whitespace-nowrap">{d.name}</td>
+                      <td class="py-3 pr-4 text-gray">{d.weight}</td>
+                      <td class="py-3 text-gray leading-relaxed">{d.description}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mt-10 mb-4">Scoring Tiers</h3>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm font-body border-collapse">
+                <thead>
+                  <tr class="border-b-2 border-navy/20">
+                    <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Score</th>
+                    <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Rating</th>
+                    <th class="text-left py-3 font-headline font-bold text-navy">What It Means</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {scoringTiers.map((t) => (
+                    <tr class="border-b border-gray-light/40">
+                      <td class="py-3 pr-4 font-semibold text-dark">{t.score}</td>
+                      <td class="py-3 pr-4 font-semibold text-dark">{t.rating}</td>
+                      <td class="py-3 text-gray">{t.meaning}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <p class="mt-6 text-base font-body text-dark font-semibold">
+              Most businesses score between 15 and 45 on their first assessment. The gap between where they are and where their top-cited competitor is — that's the opportunity.
+            </p>
+          </div>
+
+          <!-- How AI search engines decide -->
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              How do AI search engines decide what to cite?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Traditional search engines rank pages by links and relevance signals. AI search engines work differently. They retrieve content chunks using semantic embeddings, then generate answers with inline citations. AI platforms evaluate your content on three axes: whether they can <strong class="text-dark">access</strong> it, whether it directly <strong class="text-dark">answers</strong> the query, and whether the source is <strong class="text-dark">trustworthy</strong>.</p>
+              <p>A page that ranks #1 in Google may never appear in an AI-generated answer if it lacks clear structure, entity signals, or crawler access. Optimizing for AI search requires a distinct set of strategies layered on top of — not replacing — traditional SEO.</p>
             </div>
           </div>
-        )}
-      </div>
-    )}
-  </Section>
 
-  <!-- Why it matters -->
-  <Section bg="white">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
-        Why does AI search optimization matter right now?
-      </h2>
-      <div class="space-y-4 text-base font-body text-gray leading-relaxed">
-        <p>AI-powered search engines — ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot — now answer questions directly and cite their sources inline. Traditional SEO gets you ranked. AI search optimization gets you <strong class="text-dark">cited</strong>.</p>
-        <p>The shift is measurable: AI platforms process billions of queries monthly, and when they cite a source, that brand earns trust at a scale no ad campaign can match. Yet most businesses have zero strategy for it. Their content is invisible to AI — not because it's bad, but because it's not structured for how AI retrieves and references information.</p>
-        <p>StarkRank closes that gap. We audit, restructure, and monitor your digital presence so AI platforms cite you as a trusted source — not your competitors.</p>
-      </div>
-    </div>
-  </Section>
+          <!-- AI crawler access -->
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              How does AI crawler access differ from traditional crawling?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Google and Bing have crawled the web for decades. AI platforms like OpenAI (GPTBot), Anthropic (ClaudeBot), and Perplexity (PerplexityBot) operate their own crawlers with distinct user-agent strings. Many websites inadvertently block these bots through restrictive robots.txt rules, JavaScript-heavy rendering, or CDN-level firewall settings.</p>
+              <p>We audit your server logs for AI bot activity, verify that your robots.txt explicitly permits AI crawlers, and implement an llms.txt file — a markdown-formatted site summary designed specifically for AI ingestion. For the full technical infrastructure layer, see our <a href="/services/technical-seo-audit/" class="text-blue font-semibold hover:text-blue-light">Technical SEO Audit</a>.</p>
+            </div>
+          </div>
 
-  <!-- AISO Score -->
-  <Section bg="cream">
-    <div class="max-w-4xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-4">
-        What is the AISO Score?
-      </h2>
-      <p class="text-base font-body text-gray leading-relaxed mb-8">
-        The AISO Score (AI Search Optimization Score) is StarkRank's proprietary framework for measuring AI search readiness. It's a composite 0-100 score across six dimensions, benchmarked against your competitors. Every engagement starts here.
-      </p>
+          <!-- Content structure -->
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              Why does content structure matter more for AI search?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>RAG (Retrieval-Augmented Generation) systems extract information in chunks — typically the opening sentences of a section. If your key answer is buried in paragraph four beneath a marketing introduction, AI models skip it. We restructure content using an answer-first approach:</p>
+              <ul class="space-y-3 list-none pl-0">
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">Question-phrased headings</strong> that match how users prompt AI assistants</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">Atomic answers</strong> (40-60 words) placed immediately under each heading — we call this the "Capsule Technique"</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">Comparison tables</strong> and numbered lists that AI models extract verbatim</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">FAQ sections</strong> with schema markup for direct question-answer mapping</span>
+                </li>
+              </ul>
+              <p>This is not formatting — it determines whether your content gets cited or ignored. For ongoing content creation, our <a href="/services/content-marketing/" class="text-blue font-semibold hover:text-blue-light">Content Marketing</a> team works alongside AISO strategy using NeuronWriter semantic optimization.</p>
+            </div>
+          </div>
 
-      <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">The 6 Dimensions</h3>
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm font-body border-collapse">
-          <thead>
-            <tr class="border-b-2 border-navy/20">
-              <th class="text-left py-3 pr-4 font-headline font-bold text-navy">#</th>
-              <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Dimension</th>
-              <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Weight</th>
-              <th class="text-left py-3 font-headline font-bold text-navy">What We Measure</th>
-            </tr>
-          </thead>
-          <tbody>
-            {dimensions.map((d) => (
-              <tr class="border-b border-gray-light/40">
-                <td class="py-3 pr-4 text-blue font-bold">{d.num}</td>
-                <td class="py-3 pr-4 font-semibold text-dark whitespace-nowrap">{d.name}</td>
-                <td class="py-3 pr-4 text-gray">{d.weight}</td>
-                <td class="py-3 text-gray leading-relaxed">{d.description}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+          <!-- Brand entity -->
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              How do brand entity and trust signals affect AI citations?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>AI models don't just read your website. They cross-reference your brand against knowledge graphs, Wikipedia, Wikidata, review platforms, and third-party mentions. A brand with a clear, consistent entity — same name, same description, same credentials everywhere — is treated as trustworthy. Inconsistencies trigger doubt.</p>
+              <p>We build and verify your entity profile: Organization schema with sameAs links, author bios that AI can cross-reference against LinkedIn and publications, and consistent NAP+W (Name, Address, Phone, Website) across all platforms. For location-specific entity work, see our <a href="/services/local-seo-consulting/" class="text-blue font-semibold hover:text-blue-light">Local SEO Consulting</a>.</p>
+            </div>
+          </div>
 
-      <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mt-10 mb-4">Scoring Tiers</h3>
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm font-body border-collapse">
-          <thead>
-            <tr class="border-b-2 border-navy/20">
-              <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Score</th>
-              <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Rating</th>
-              <th class="text-left py-3 font-headline font-bold text-navy">What It Means</th>
-            </tr>
-          </thead>
-          <tbody>
-            {scoringTiers.map((t) => (
-              <tr class="border-b border-gray-light/40">
-                <td class="py-3 pr-4 font-semibold text-dark">{t.score}</td>
-                <td class="py-3 pr-4 font-semibold text-dark">{t.rating}</td>
-                <td class="py-3 text-gray">{t.meaning}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+          <!-- Original content -->
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              What original content earns AI citations?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>AI models prioritize information gain — data, analysis, or research that doesn't exist elsewhere. If your page summarizes what ten other pages already say, it won't be cited. If it contains a proprietary benchmark, a unique dataset, or an original industry survey, AI models treat it as a primary source.</p>
+              <p>We help clients identify and publish original data assets: industry benchmarks, anonymized performance studies, market surveys, and trend analyses. These become citation magnets that compound in value as AI models reference them repeatedly.</p>
+            </div>
+          </div>
 
-      <p class="mt-6 text-base font-body text-dark font-semibold">
-        Most businesses score between 15 and 45 on their first assessment. The gap between where they are and where their top-cited competitor is — that's the opportunity.
-      </p>
-    </div>
-  </Section>
+          <!-- Measurement -->
+          <div id="ai-sov" class="pt-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              How do you measure AI search performance?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Traditional analytics miss most AI search impact. A user who gets your information via ChatGPT may never click through to your site — but your brand was cited. We implement a measurement stack that captures what standard SEO tools can't:</p>
+              <ul class="space-y-3 list-none pl-0">
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">AI referral tracking</strong> in GA4 — segmenting traffic from chatgpt.com, perplexity.ai, gemini.google.com, copilot.microsoft.com</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">AI Share of Voice</strong> — your citation frequency versus competitors for target queries, tracked monthly across all major AI platforms</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">Brand mention monitoring</strong> — how often and in what context AI models reference your brand</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">Sentiment analysis</strong> — whether AI models describe your brand positively, neutrally, or critically</span>
+                </li>
+              </ul>
+              <p>We deliver monthly reporting with these AI-specific KPIs alongside traditional SEO metrics.</p>
+            </div>
+          </div>
 
-  <!-- How AI search engines decide -->
-  <Section bg="white">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
-        How do AI search engines decide what to cite?
-      </h2>
-      <div class="space-y-4 text-base font-body text-gray leading-relaxed">
-        <p>Traditional search engines rank pages by links and relevance signals. AI search engines work differently. They retrieve content chunks using semantic embeddings, then generate answers with inline citations. AI platforms evaluate your content on three axes: whether they can <strong class="text-dark">access</strong> it, whether it directly <strong class="text-dark">answers</strong> the query, and whether the source is <strong class="text-dark">trustworthy</strong>.</p>
-        <p>A page that ranks #1 in Google may never appear in an AI-generated answer if it lacks clear structure, entity signals, or crawler access. Optimizing for AI search requires a distinct set of strategies layered on top of — not replacing — traditional SEO.</p>
-      </div>
-    </div>
-  </Section>
+        </div>
 
-  <!-- AI crawler access -->
-  <Section bg="cream">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
-        How does AI crawler access differ from traditional crawling?
-      </h2>
-      <div class="space-y-4 text-base font-body text-gray leading-relaxed">
-        <p>Google and Bing have crawled the web for decades. AI platforms like OpenAI (GPTBot), Anthropic (ClaudeBot), and Perplexity (PerplexityBot) operate their own crawlers with distinct user-agent strings. Many websites inadvertently block these bots through restrictive robots.txt rules, JavaScript-heavy rendering, or CDN-level firewall settings.</p>
-        <p>We audit your server logs for AI bot activity, verify that your robots.txt explicitly permits AI crawlers, and implement an llms.txt file — a markdown-formatted site summary designed specifically for AI ingestion. For the full technical infrastructure layer, see our <a href="/services/technical-seo-audit/" class="text-blue font-semibold hover:text-blue-light">Technical SEO Audit</a>.</p>
-      </div>
-    </div>
-  </Section>
+        <!-- Sidebar (~35%) -->
+        <aside class="lg:col-span-1">
+          <div class="lg:sticky lg:top-8 space-y-6">
+            <!-- Trust bar -->
+            <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+              <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Trusted across 4 markets</p>
+              <div class="space-y-2 text-sm font-body text-gray">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>150+ AISO Scores Delivered</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>4 Markets (US, Peru, DE, CH)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>6-Dimension Framework</span>
+                </div>
+              </div>
+            </div>
 
-  <!-- Content structure -->
-  <Section bg="white">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
-        Why does content structure matter more for AI search?
-      </h2>
-      <div class="space-y-4 text-base font-body text-gray leading-relaxed">
-        <p>RAG (Retrieval-Augmented Generation) systems extract information in chunks — typically the opening sentences of a section. If your key answer is buried in paragraph four beneath a marketing introduction, AI models skip it. We restructure content using an answer-first approach:</p>
-        <ul class="space-y-3 list-none pl-0">
-          <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
-            <span><strong class="text-dark">Question-phrased headings</strong> that match how users prompt AI assistants</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
-            <span><strong class="text-dark">Atomic answers</strong> (40-60 words) placed immediately under each heading — we call this the "Capsule Technique"</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
-            <span><strong class="text-dark">Comparison tables</strong> and numbered lists that AI models extract verbatim</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
-            <span><strong class="text-dark">FAQ sections</strong> with schema markup for direct question-answer mapping</span>
-          </li>
-        </ul>
-        <p>This is not formatting — it determines whether your content gets cited or ignored. For ongoing content creation, our <a href="/services/content-marketing/" class="text-blue font-semibold hover:text-blue-light">Content Marketing</a> team works alongside AISO strategy using NeuronWriter semantic optimization.</p>
-      </div>
-    </div>
-  </Section>
+            {relatedServices.length > 0 && (
+              <div>
+                <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Related Services</h3>
+                <div class="space-y-3">
+                  {relatedServices.map((related) => (
+                    <Card href={`/services/${related.data.slug}/`}>
+                      <h4 class="text-sm font-headline font-bold text-navy">{related.data.title}</h4>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
 
-  <!-- Brand entity -->
-  <Section bg="cream">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
-        How do brand entity and trust signals affect AI citations?
-      </h2>
-      <div class="space-y-4 text-base font-body text-gray leading-relaxed">
-        <p>AI models don't just read your website. They cross-reference your brand against knowledge graphs, Wikipedia, Wikidata, review platforms, and third-party mentions. A brand with a clear, consistent entity — same name, same description, same credentials everywhere — is treated as trustworthy. Inconsistencies trigger doubt.</p>
-        <p>We build and verify your entity profile: Organization schema with sameAs links, author bios that AI can cross-reference against LinkedIn and publications, and consistent NAP+W (Name, Address, Phone, Website) across all platforms. For location-specific entity work, see our <a href="/services/local-seo-consulting/" class="text-blue font-semibold hover:text-blue-light">Local SEO Consulting</a>.</p>
+            {enCities.length > 0 && (
+              <div>
+                <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Local Pages</h3>
+                <div class="space-y-3">
+                  {enCities.map((c) => (
+                    <Card href={c.href}>
+                      <h4 class="text-sm font-headline font-bold text-navy">AI Search Optimization in {c.city}</h4>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </aside>
       </div>
     </div>
-  </Section>
-
-  <!-- Original content -->
-  <Section bg="white">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
-        What original content earns AI citations?
-      </h2>
-      <div class="space-y-4 text-base font-body text-gray leading-relaxed">
-        <p>AI models prioritize information gain — data, analysis, or research that doesn't exist elsewhere. If your page summarizes what ten other pages already say, it won't be cited. If it contains a proprietary benchmark, a unique dataset, or an original industry survey, AI models treat it as a primary source.</p>
-        <p>We help clients identify and publish original data assets: industry benchmarks, anonymized performance studies, market surveys, and trend analyses. These become citation magnets that compound in value as AI models reference them repeatedly.</p>
-      </div>
-    </div>
-  </Section>
-
-  <!-- Measurement -->
-  <Section bg="cream" id="ai-sov">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
-        How do you measure AI search performance?
-      </h2>
-      <div class="space-y-4 text-base font-body text-gray leading-relaxed">
-        <p>Traditional analytics miss most AI search impact. A user who gets your information via ChatGPT may never click through to your site — but your brand was cited. We implement a measurement stack that captures what standard SEO tools can't:</p>
-        <ul class="space-y-3 list-none pl-0">
-          <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
-            <span><strong class="text-dark">AI referral tracking</strong> in GA4 — segmenting traffic from chatgpt.com, perplexity.ai, gemini.google.com, copilot.microsoft.com</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
-            <span><strong class="text-dark">AI Share of Voice</strong> — your citation frequency versus competitors for target queries, tracked monthly across all major AI platforms</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
-            <span><strong class="text-dark">Brand mention monitoring</strong> — how often and in what context AI models reference your brand</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
-            <span><strong class="text-dark">Sentiment analysis</strong> — whether AI models describe your brand positively, neutrally, or critically</span>
-          </li>
-        </ul>
-        <p>We deliver monthly reporting with these AI-specific KPIs alongside traditional SEO metrics.</p>
-      </div>
-    </div>
-  </Section>
+  </section>
 
   <!-- What's Included -->
   <Section bg="white" id="whats-included">
