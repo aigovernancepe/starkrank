@@ -13,7 +13,7 @@ import { getSpokePath } from '../../data/service-slugs';
 export async function getStaticPaths() {
   const services = await getCollection('services');
   return services
-    .filter((service) => !['ai-search-optimization', 'seo-for-dentists', 'seo-for-law-firms', 'seo-for-auto-services', 'seo-for-med-spas'].includes(service.data.slug))
+    .filter((service) => !['ai-search-optimization', 'seo-for-dentists', 'seo-for-law-firms', 'seo-for-auto-services', 'seo-for-med-spas', 'seo-for-home-services', 'multi-location-seo'].includes(service.data.slug))
     .map((service) => ({
       params: { slug: service.data.slug },
       props: { service },
