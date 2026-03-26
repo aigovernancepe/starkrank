@@ -101,8 +101,21 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- HubSpot Forms -->
-    <script is:inline src="https://js-eu1.hsforms.net/forms/embed/148108624.js" defer></script>
+    <!-- HubSpot Forms — loaded dynamically to work with View Transitions -->
+    <script is:inline>
+      (function() {
+        function loadHsForms() {
+          if (!document.querySelector('.hs-form-frame')) return;
+          var existing = document.querySelectorAll('script[data-hs-embed]');
+          existing.forEach(function(s) { s.remove(); });
+          var s = document.createElement('script');
+          s.src = 'https://js-eu1.hsforms.net/forms/embed/148108624.js';
+          s.setAttribute('data-hs-embed', 'true');
+          document.head.appendChild(s);
+        }
+        document.addEventListener('astro:page-load', loadHsForms);
+      })();
+    </script>
 
     <!-- Font preloads -->
     <link rel="preload" href="/fonts/InterTight-latin.woff2" as="font" type="font/woff2" crossorigin />
@@ -145,16 +158,5 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     )}
     <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148108624.js"></script>
-    <!-- Re-init HubSpot embeds after View Transitions navigation -->
-    <script is:inline>
-      document.addEventListener('astro:after-swap', function() {
-        var frames = document.querySelectorAll('.hs-form-frame');
-        if (frames.length > 0) {
-          var s = document.createElement('script');
-          s.src = 'https://js-eu1.hsforms.net/forms/embed/148108624.js';
-          document.body.appendChild(s);
-        }
-      });
-    </script>
   </body>
 </html>
