@@ -147,12 +147,13 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148108624.js"></script>
     <!-- Re-init HubSpot embeds after View Transitions navigation -->
     <script is:inline>
-      document.addEventListener('astro:page-load', function() {
-        document.querySelectorAll('.hs-form-frame').forEach(function(el) {
-          if (!el.querySelector('iframe') && window.hsFormEmbed) {
-            window.hsFormEmbed.render();
-          }
-        });
+      document.addEventListener('astro:after-swap', function() {
+        var frames = document.querySelectorAll('.hs-form-frame');
+        if (frames.length > 0) {
+          var s = document.createElement('script');
+          s.src = 'https://js-eu1.hsforms.net/forms/embed/148108624.js';
+          document.body.appendChild(s);
+        }
       });
     </script>
   </body>
