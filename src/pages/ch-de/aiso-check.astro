@@ -95,51 +95,7 @@ const upsellDimensions = [
       <!-- Form -->
       <div id="kostenlose-erstbewertung-anfordern" class="bg-white border border-gray-light/40 rounded-lg p-6 md:p-8 shadow-lg">
         <h2 class="text-xl md:text-2xl font-headline font-black text-navy mb-6">Kostenlose Erstbewertung anfordern</h2>
-        <form class="contact-form space-y-4" data-success="Vielen Dank! Wir analysieren Ihre Website und senden Ihnen die Ergebnisse innerhalb von 24 Stunden per E-Mail." data-error="Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie an info@starkrank.com.">
-          <input type="hidden" name="access_key" value="c6c510f0-14d6-42e3-b16b-c4db8ac4e71b" />
-          <input type="hidden" name="subject" value="Neuer AISO-Check (CH)" />
-          <input type="hidden" name="from_name" value="StarkRank Schweiz — AISO-Check" />
-          <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
-          <div>
-            <label for="website" class="block text-sm font-label font-semibold text-dark mb-1">Website-URL <span class="text-blue">*</span></label>
-            <input type="url" id="website" name="website" required placeholder="https://ihre-website.ch" class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors" />
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-label font-semibold text-dark mb-1">Geschäftliche E-Mail <span class="text-blue">*</span></label>
-            <input type="email" id="email" name="email" required placeholder="name@unternehmen.ch" class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors" />
-          </div>
-          <div>
-            <label for="name" class="block text-sm font-label font-semibold text-dark mb-1">Name <span class="text-blue">*</span></label>
-            <input type="text" id="name" name="name" required placeholder="Max Mustermann" class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors" />
-          </div>
-          <div>
-            <label for="company" class="block text-sm font-label font-semibold text-dark mb-1">Unternehmen <span class="text-blue">*</span></label>
-            <input type="text" id="company" name="company" required placeholder="Mustermann GmbH" class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors" />
-          </div>
-          <div>
-            <label for="branche" class="block text-sm font-label font-semibold text-dark mb-1">Branche <span class="text-gray text-xs font-normal">(optional)</span></label>
-            <select id="branche" name="branche" class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors">
-              <option value="">Bitte wählen</option>
-              <option value="IT & Software">IT & Software</option>
-              <option value="Maschinenbau">Maschinenbau</option>
-              <option value="Gesundheitswesen">Gesundheitswesen</option>
-              <option value="Professional Services">Professional Services</option>
-              <option value="Handel">Handel</option>
-              <option value="Sonstige">Sonstige</option>
-            </select>
-          </div>
-          <div>
-            <button type="submit" class="w-full inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-8 py-4 text-sm mt-2">
-              <span class="submit-text">Jetzt kostenlos prüfen &rarr;</span>
-              <svg class="submit-spinner hidden w-5 h-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-            </button>
-          </div>
-          <p class="text-xs font-body text-gray text-center">
-            Kostenlos. Unverbindlich. Keine Kreditkarte erforderlich.<br />
-            Datenhaltung in Zürich (DSGVO- und nDSG-konform).
-          </p>
-          <div class="form-status hidden rounded-lg p-4 text-sm font-body"></div>
-        </form>
+        <div class="hs-form-frame" data-region="eu1" data-form-id="13684617-92bc-405e-98e5-739c474ff8fa" data-portal-id="148108624"></div>
       </div>
     </div>
   </Section>
@@ -268,30 +224,3 @@ const upsellDimensions = [
     </div>
   </section>
 </LandingLayout>
-
-<script>
-  function initForms() {
-    document.querySelectorAll('.contact-form').forEach((form) => {
-      if ((form as HTMLFormElement).dataset.initialized) return;
-      (form as HTMLFormElement).dataset.initialized = 'true';
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const f = e.target as HTMLFormElement;
-        const submitText = f.querySelector('.submit-text') as HTMLElement;
-        const spinner = f.querySelector('.submit-spinner') as HTMLElement;
-        const status = f.querySelector('.form-status') as HTMLElement;
-        const button = f.querySelector('button[type="submit"]') as HTMLButtonElement;
-        submitText.classList.add('hidden'); spinner.classList.remove('hidden'); button.disabled = true; status.classList.add('hidden');
-        try {
-          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(f))) });
-          const data = await res.json();
-          if (data.success) { status.textContent = f.dataset.success || 'Nachricht gesendet!'; status.className = 'form-status rounded-lg p-4 text-sm font-body bg-blue/10 text-blue border border-blue/20'; f.reset(); }
-          else { status.textContent = f.dataset.error || 'Etwas ist schiefgelaufen.'; status.className = 'form-status rounded-lg p-4 text-sm font-body bg-red-50 text-red-700 border border-red-200'; }
-        } catch { status.textContent = f.dataset.error || 'Etwas ist schiefgelaufen.'; status.className = 'form-status rounded-lg p-4 text-sm font-body bg-red-50 text-red-700 border border-red-200'; }
-        submitText.classList.remove('hidden'); spinner.classList.add('hidden'); button.disabled = false;
-      });
-    });
-  }
-  initForms();
-  document.addEventListener('astro:after-swap', initForms);
-</script>

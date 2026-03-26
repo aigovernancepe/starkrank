@@ -1,8 +1,6 @@
 ---
 import LandingLayout from '../layouts/LandingLayout.astro';
 import Section from '../components/ui/Section.astro';
-import Button from '../components/ui/Button.astro';
-
 const title = 'AISO Score — Is Your Site Ready for AI Search? | StarkRank';
 const description = "ChatGPT, Perplexity, and Google AI cite your competitors — not you. Get your free AISO Score in 24 hours. 2 dimensions checked. No commitment.";
 
@@ -117,71 +115,7 @@ const upsellDimensions = [
       <!-- Form -->
       <div id="get-your-free-aiso-score" class="bg-white border border-gray-light/40 rounded-lg p-8 shadow-lg">
         <h2 class="text-2xl font-headline font-black text-navy mb-6">Get Your Free AISO Score</h2>
-        <form class="contact-form space-y-4" data-success="Thank you! We're analyzing your site now. You'll receive your AISO Score within 24 hours." data-error="Something went wrong. Please try again or email us at contact@starkrank.com.">
-          <input type="hidden" name="access_key" value="c6c510f0-14d6-42e3-b16b-c4db8ac4e71b" />
-          <input type="hidden" name="subject" value="New Free AISO Score Request" />
-          <input type="hidden" name="from_name" value="StarkRank AISO Score" />
-          <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
-          <div>
-            <label for="website" class="block text-sm font-label font-semibold text-dark mb-1">Website URL <span class="text-blue">*</span></label>
-            <input
-              type="url"
-              id="website"
-              name="website"
-              required
-              placeholder="https://yoursite.com"
-              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
-            />
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-label font-semibold text-dark mb-1">Work Email <span class="text-blue">*</span></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="you@company.com"
-              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
-            />
-          </div>
-          <div>
-            <label for="name" class="block text-sm font-label font-semibold text-dark mb-1">Full Name <span class="text-blue">*</span></label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              placeholder="Jane Smith"
-              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
-            />
-          </div>
-          <div>
-            <label for="company" class="block text-sm font-label font-semibold text-dark mb-1">Company Name <span class="text-gray text-xs font-normal">(optional)</span></label>
-            <input
-              type="text"
-              id="company"
-              name="company"
-              placeholder="Acme Corp"
-              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
-            />
-          </div>
-          <div>
-            <button
-              type="submit"
-              class="w-full inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-8 py-4 text-sm mt-2"
-            >
-              <span class="submit-text">Get My Free AISO Score &rarr;</span>
-              <svg class="submit-spinner hidden w-5 h-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-            </button>
-          </div>
-          <p class="text-xs font-body text-gray text-center mt-2">
-            Takes 2 minutes to request. No credit card. No commitment.
-          </p>
-          <div class="form-status hidden rounded-lg p-4 text-sm font-body"></div>
-        </form>
+        <div class="hs-form-frame" data-region="eu1" data-form-id="74d6466f-fe1c-498d-b6e2-1829ffa22695" data-portal-id="148108624"></div>
       </div>
     </div>
   </Section>
@@ -339,54 +273,3 @@ const upsellDimensions = [
     </div>
   </section>
 </LandingLayout>
-
-<script>
-  function initForms() {
-    document.querySelectorAll('.contact-form').forEach((form) => {
-      if ((form as HTMLFormElement).dataset.initialized) return;
-      (form as HTMLFormElement).dataset.initialized = 'true';
-
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const f = e.target as HTMLFormElement;
-        const submitText = f.querySelector('.submit-text') as HTMLElement;
-        const spinner = f.querySelector('.submit-spinner') as HTMLElement;
-        const status = f.querySelector('.form-status') as HTMLElement;
-        const button = f.querySelector('button[type="submit"]') as HTMLButtonElement;
-
-        submitText.classList.add('hidden');
-        spinner.classList.remove('hidden');
-        button.disabled = true;
-        status.classList.add('hidden');
-
-        try {
-          const res = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(Object.fromEntries(new FormData(f))),
-          });
-          const data = await res.json();
-
-          if (data.success) {
-            status.textContent = f.dataset.success || 'Message sent!';
-            status.className = 'form-status rounded-lg p-4 text-sm font-body bg-blue/10 text-blue border border-blue/20';
-            f.reset();
-          } else {
-            status.textContent = f.dataset.error || 'Something went wrong.';
-            status.className = 'form-status rounded-lg p-4 text-sm font-body bg-red-50 text-red-700 border border-red-200';
-          }
-        } catch {
-          status.textContent = f.dataset.error || 'Something went wrong.';
-          status.className = 'form-status rounded-lg p-4 text-sm font-body bg-red-50 text-red-700 border border-red-200';
-        }
-
-        submitText.classList.remove('hidden');
-        spinner.classList.add('hidden');
-        button.disabled = false;
-      });
-    });
-  }
-
-  initForms();
-  document.addEventListener('astro:after-swap', initForms);
-</script>
