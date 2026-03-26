@@ -2,23 +2,3 @@
 ---
 
 <div class="hs-form-frame" data-region="eu1" data-form-id="5c38981a-8f6a-4a5f-95e3-fc1658431b53" data-portal-id="148108624"></div>
-<script is:inline>
-  (function() {
-    var target = document.currentScript.previousElementSibling;
-    function init() {
-      if (!target || target.querySelector('iframe') || target.querySelector('form')) return;
-      if (window.hbspt && window.hbspt.forms) {
-        if (!target.id) target.id = 'hs-contact-' + Math.random().toString(36).slice(2, 8);
-        window.hbspt.forms.create({
-          region: 'eu1',
-          portalId: '148108624',
-          formId: '5c38981a-8f6a-4a5f-95e3-fc1658431b53',
-          target: '#' + target.id
-        });
-      } else {
-        setTimeout(init, 300);
-      }
-    }
-    setTimeout(init, 300);
-  })();
-</script>

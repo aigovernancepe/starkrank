@@ -14,6 +14,7 @@ interface Props {
   ogImage?: string;
   canonical?: string;
   schema?: Record<string, unknown> | Record<string, unknown>[];
+  noViewTransitions?: boolean;
 }
 
 const {
@@ -23,6 +24,7 @@ const {
   ogImage = '/images/logos/starkrank-dark-avatar.svg',
   canonical,
   schema,
+  noViewTransitions = false,
 } = Astro.props;
 
 const lang = getLangAttribute(locale);
@@ -36,7 +38,7 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <ClientRouter />
+    {!noViewTransitions && <ClientRouter />}
 
     <!-- Google Consent Mode v2 — defaults must be set before gtag loads -->
     <script is:inline>
@@ -101,32 +103,8 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- HubSpot Forms — static load + View Transitions re-init -->
+    <!-- HubSpot Forms -->
     <script is:inline src="https://js-eu1.hsforms.net/forms/embed/148108624.js" defer></script>
-    <script is:inline>
-      (function() {
-        var hsCounter = 0;
-        function hsReinit() {
-          document.querySelectorAll('.hs-form-frame').forEach(function(el) {
-            if (el.querySelector('iframe') || el.querySelector('form')) return;
-            var formId = el.getAttribute('data-form-id');
-            var portalId = el.getAttribute('data-portal-id');
-            var region = el.getAttribute('data-region');
-            if (!formId || !portalId || !window.hbspt || !window.hbspt.forms) return;
-            if (!el.id) { el.id = 'hs-reinit-' + (++hsCounter); }
-            window.hbspt.forms.create({
-              region: region || 'eu1',
-              portalId: portalId,
-              formId: formId,
-              target: '#' + el.id
-            });
-          });
-        }
-        document.addEventListener('astro:page-load', function() {
-          setTimeout(hsReinit, 200);
-        });
-      })();
-    </script>
 
     <!-- Font preloads -->
     <link rel="preload" href="/fonts/InterTight-latin.woff2" as="font" type="font/woff2" crossorigin />
