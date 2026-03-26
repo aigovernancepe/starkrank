@@ -160,11 +160,6 @@
    HubSpot Embedded Form Overrides
    ---------------------------------------------------------------- */
 
-.hs-form-frame iframe {
-  width: 100% !important;
-}
-
-/* Styles injected into HubSpot shadow DOM via ::part or global overrides */
 .hs-form fieldset {
   max-width: 100% !important;
 }
