@@ -1,6 +1,6 @@
 ---
 import Logo from './Logo.astro';
-import { footerNav, getLocalizedNavHref } from '../../data/navigation';
+import { footerNav, getLocalizedNavHref, getLocalizedAudits } from '../../data/navigation';
 import { getCurrentLocale, t } from '../../utils/i18n';
 import type { Locale } from '../../data/locales';
 
@@ -11,6 +11,7 @@ interface Props {
 const { locale: localeProp } = Astro.props;
 const locale = (localeProp ?? getCurrentLocale(Astro.url) ?? 'en') as Locale;
 const year = new Date().getFullYear();
+const localizedAudits = getLocalizedAudits(locale);
 
 const pillarKeys: Record<string, string> = {
   'Search & AI': 'pillar.search-ai-intelligence',
@@ -91,10 +92,10 @@ const auditKeys: Record<string, string> = {
           {t('footer.audits', locale)}
         </h4>
         <ul class="space-y-2">
-          {footerNav.audits.map((item) => (
+          {localizedAudits.map((item) => (
             <li>
               <a href={item.href} class="text-sm font-body text-gray-light hover:text-cream transition-colors">
-                {t(auditKeys[item.label] ?? item.label, locale)}
+                {item.label}
               </a>
             </li>
           ))}

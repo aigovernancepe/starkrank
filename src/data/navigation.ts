@@ -84,8 +84,9 @@ export const footerNav = {
     { label: 'Contact', href: '/contact/' },
   ],
   audits: [
-    { label: 'Free Google Ads Audit', href: '/audits/free-google-ads-check/' },
-    { label: 'Copywriting Audit', href: '/audits/copywriting-ux-analysis/' },
+    { label: 'Free Google Ads Audit', href: '/free-google-ads-audit/' },
+    { label: 'Copywriting Audit', href: '/free-copywriting-audit/' },
+    { label: 'Free AISO Score', href: '/aiso-score/' },
   ],
   legal: [
     { label: 'Privacy Policy', href: '/privacy/' },
@@ -112,6 +113,29 @@ const impressumPaths: Record<string, string> = {
   de: '/de/impressum/',
   'ch-de': '/ch-de/impressum/',
 };
+
+/** Locale-specific lead magnet overrides for footer audits section. */
+const auditPaths: Record<Locale, NavItem[]> = {
+  en: [
+    { label: 'Free AISO Score', href: '/aiso-score/' },
+    { label: 'Free Google Ads Audit', href: '/free-google-ads-audit/' },
+    { label: 'Free Copywriting Audit', href: '/free-copywriting-audit/' },
+  ],
+  pe: [
+    { label: '¿Apareces en Google?', href: '/pe/apareces-en-google/' },
+  ],
+  de: [
+    { label: 'Kostenloser AISO-Check', href: '/de/aiso-check/' },
+  ],
+  'ch-de': [
+    { label: 'Kostenloser AISO-Check', href: '/ch-de/aiso-check/' },
+  ],
+};
+
+/** Get locale-specific audit lead magnets for footer. */
+export function getLocalizedAudits(locale: Locale): NavItem[] {
+  return auditPaths[locale] ?? auditPaths.en;
+}
 
 /**
  * Convert a navigation href to its locale-aware equivalent.
