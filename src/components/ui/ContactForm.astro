@@ -2,17 +2,4 @@
 const uniqueId = `hs-form-contact-${Math.random().toString(36).slice(2, 8)}`;
 ---
 
-<div id={uniqueId}></div>
-<script is:inline define:vars={{ uniqueId }}>
-  window.addEventListener('load', function() {
-    if (window.hbspt) {
-      window.hbspt.forms.create({
-        region: "eu1",
-        portalId: "148108624",
-        formId: "5c38981a-8f6a-4a5f-95e3-fc1658431b53",
-        target: "#" + uniqueId,
-        css: ""
-      });
-    }
-  });
-</script>
+<div id={uniqueId} data-hs-form-id="5c38981a-8f6a-4a5f-95e3-fc1658431b53"></div>
