@@ -1,4 +1,22 @@
 ---
+const formId = '5c38981a-8f6a-4a5f-95e3-fc1658431b53';
+const portalId = '148108624';
+const containerId = `hs-contact-${Math.random().toString(36).slice(2, 8)}`;
 ---
 
-<div class="hs-form-frame" data-region="eu1" data-form-id="5c38981a-8f6a-4a5f-95e3-fc1658431b53" data-portal-id="148108624"></div>
+<div id={containerId}></div>
+<script define:vars={{ formId, portalId, containerId }}>
+  function initContactForm() {
+    if (window.hbspt && window.hbspt.forms) {
+      window.hbspt.forms.create({
+        region: 'eu1',
+        portalId: portalId,
+        formId: formId,
+        target: '#' + containerId
+      });
+    } else {
+      setTimeout(initContactForm, 200);
+    }
+  }
+  initContactForm();
+</script>
