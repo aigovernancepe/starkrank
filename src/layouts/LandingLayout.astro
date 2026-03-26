@@ -1,5 +1,4 @@
 ---
-import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
 import Logo from '../components/global/Logo.astro';
 import Footer from '../components/global/Footer.astro';
@@ -37,8 +36,6 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <ClientRouter />
-
     <!-- Google Consent Mode v2 -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
@@ -96,31 +93,8 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- HubSpot Forms — static load + View Transitions re-init -->
+    <!-- HubSpot Forms -->
     <script is:inline src="https://js-eu1.hsforms.net/forms/embed/148108624.js" defer></script>
-    <script is:inline>
-      (function() {
-        function hsReinit() {
-          document.querySelectorAll('.hs-form-frame').forEach(function(el) {
-            if (el.querySelector('iframe') || el.querySelector('form')) return;
-            var formId = el.getAttribute('data-form-id');
-            var portalId = el.getAttribute('data-portal-id');
-            var region = el.getAttribute('data-region');
-            if (formId && portalId && window.hbspt && window.hbspt.forms) {
-              window.hbspt.forms.create({
-                region: region || 'eu1',
-                portalId: portalId,
-                formId: formId,
-                target: el
-              });
-            }
-          });
-        }
-        document.addEventListener('astro:page-load', function() {
-          setTimeout(hsReinit, 100);
-        });
-      })();
-    </script>
 
     <!-- Font preloads -->
     <link rel="preload" href="/fonts/InterTight-latin.woff2" as="font" type="font/woff2" crossorigin />
