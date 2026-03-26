@@ -97,7 +97,7 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- HubSpot Forms -->
-    <script is:inline src="//js-eu1.hsforms.net/forms/v2.js" defer></script>
+    <script is:inline src="https://js-eu1.hsforms.net/forms/embed/148108624.js" defer></script>
 
     <!-- Font preloads -->
     <link rel="preload" href="/fonts/InterTight-latin.woff2" as="font" type="font/woff2" crossorigin />
@@ -133,37 +133,15 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     <CookieConsent locale={locale} />
     <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148108624.js"></script>
-    <!-- HubSpot form initializer — works with View Transitions -->
+    <!-- Re-init HubSpot embeds after View Transitions navigation -->
     <script is:inline>
-      var HS_BTN_STYLE = 'background-color:#3B7DD8!important;background:#3B7DD8!important;color:#fff!important;border:none!important;border-radius:0.375rem!important;font-family:"Outfit",sans-serif!important;font-weight:600!important;text-transform:uppercase!important;letter-spacing:0.05em!important;padding:1rem 2rem!important;width:100%!important;cursor:pointer!important;font-size:0.875rem!important;transition:background-color 0.15s ease!important;';
-      function hsInitForms() {
-        if (!window.hbspt) return;
-        document.querySelectorAll('[data-hs-form-id]').forEach(function(el) {
-          if (el.dataset.hsInitialized) return;
-          el.dataset.hsInitialized = 'true';
-          window.hbspt.forms.create({
-            region: 'eu1',
-            portalId: '148108624',
-            formId: el.dataset.hsFormId,
-            target: '#' + el.id,
-            css: '',
-            onFormReady: function($form) {
-              var form = $form[0] || $form;
-              var btns = form.querySelectorAll('.hs-button, input[type="submit"]');
-              btns.forEach(function(btn) {
-                btn.style.cssText = HS_BTN_STYLE;
-                btn.addEventListener('mouseenter', function() { btn.style.backgroundColor = '#5A9AE6'; });
-                btn.addEventListener('mouseleave', function() { btn.style.backgroundColor = '#3B7DD8'; });
-              });
-              var links = form.querySelectorAll('.hubspot-link__container');
-              links.forEach(function(l) { l.style.cssText = 'display:none!important;'; });
-            }
-          });
+      document.addEventListener('astro:page-load', function() {
+        document.querySelectorAll('.hs-form-frame').forEach(function(el) {
+          if (!el.querySelector('iframe') && window.hsFormEmbed) {
+            window.hsFormEmbed.render();
+          }
         });
-      }
-      document.addEventListener('astro:page-load', hsInitForms);
-      if (document.readyState === 'complete') { hsInitForms(); }
-      else { window.addEventListener('load', hsInitForms); }
+      });
     </script>
   </body>
 </html>
