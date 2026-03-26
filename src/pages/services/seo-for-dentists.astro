@@ -1,0 +1,473 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Card from '../../components/ui/Card.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import { getCollection } from 'astro:content';
+import { getPillarById } from '../../data/pillars';
+import { getSpokePath } from '../../data/service-slugs';
+
+const slug = 'seo-for-dentists';
+const allServices = await getCollection('services');
+const service = allServices.find((s) => s.data.slug === slug)!;
+const pillar = getPillarById(service.data.pillar);
+
+const relatedServices = service.data.relatedServices
+  ? allServices.filter((s) => service.data.relatedServices!.includes(s.data.slug))
+  : [];
+
+const allCities = await getCollection('cities');
+const enCities = allCities
+  .filter((c) => c.data.locale === 'en' && c.data.services.includes(slug))
+  .map((c) => ({
+    city: c.data.city,
+    href: `/${getSpokePath(slug, c.data.citySlug, 'en')}/`,
+  }));
+
+const title = 'SEO for Dentists — More Patients From Google & AI | StarkRank';
+const description = "Your dental practice deserves more patients from Google. We handle GBP, local SEO, HIPAA-safe content, and AI search optimization. Results in 90 days.";
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'SEO for Dentists',
+  description: 'HIPAA-compliant dental SEO covering Google Business Profile optimization, procedure-specific content, review management, and AI search optimization for dental practices.',
+  url: 'https://starkrank.com/services/seo-for-dentists/',
+  provider: {
+    '@type': 'Organization',
+    name: 'StarkRank',
+    url: 'https://starkrank.com',
+  },
+  areaServed: [
+    { '@type': 'Country', name: 'United States' },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Dental SEO Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        name: 'Starter Dental SEO',
+        description: 'Single location dental SEO for practices with fewer than 3 direct competitors. Includes GBP optimization, technical audit, 5 procedure pages, review setup, 1 blog per month, basic AISO, and monthly reporting.',
+        price: '1500',
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '1500',
+          priceCurrency: 'USD',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'month' },
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Growth Dental SEO',
+        description: 'Competitive single location dental SEO with all procedures covered, active review campaign, 2 blogs and 1 service page per month, full AISO, and weekly rank tracking.',
+        price: '2500',
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '2500',
+          priceCurrency: 'USD',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'month' },
+        },
+      },
+    ],
+  },
+};
+
+const faqItems = [
+  {
+    question: 'How long does dental SEO take to work?',
+    answer: 'Most dental practices see measurable improvements in Google Maps visibility within 60-90 days. Organic search traffic typically increases within 3-6 months. SEO compounds over time — the longer you invest, the wider the gap between you and competitors who stop.',
+  },
+  {
+    question: 'Do I need SEO if I already run Google Ads?',
+    answer: 'Yes. Google Ads stops generating leads the moment you stop paying. SEO builds an asset that compounds — organic rankings, review profiles, and AI citations continue working without ongoing ad spend.',
+  },
+  {
+    question: 'How important are Google reviews for dental SEO?',
+    answer: 'Critical. Review velocity (how many new reviews you get per week) matters more than total count. A practice with 200 reviews getting 5 new reviews per week will outrank a practice with 1,000 reviews that hasn\'t gotten a new one in months.',
+  },
+  {
+    question: 'What\'s the difference between dental SEO and regular SEO?',
+    answer: 'Dental SEO requires HIPAA-compliant content, procedure-specific keyword targeting, and dental-specific schema markup (Dentist type, not just LocalBusiness). It also requires understanding dental patient search behavior.',
+  },
+  {
+    question: 'Can you help with multiple dental office locations?',
+    answer: 'Yes. We manage per-location GBP optimization, unique city pages (no duplicate content), centralized review management, and location-specific rank tracking.',
+  },
+  {
+    question: 'What if I was burned by a previous SEO agency?',
+    answer: 'We hear this constantly. The difference: we show you exactly what we do, give you access to all tools and data, and report on patient acquisition metrics — not just rankings. Month-to-month contracts available so you\'re never locked in.',
+  },
+  {
+    question: 'How do you handle HIPAA compliance in dental marketing?',
+    answer: 'Every piece of content goes through an automated compliance check before publication. We never confirm patient relationships in review responses, never use guaranteed outcome language, and never claim specialist credentials without board certification verification.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const schemas = [serviceSchema, faqSchema];
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'SEO for Dentists', href: '/services/seo-for-dentists/' },
+];
+
+const comparisonRows = [
+  { feature: 'GBP optimization', starter: true, growth: true, premium: true },
+  { feature: 'Technical audit', starter: true, growth: true, premium: true },
+  { feature: 'Service pages', starter: '5 procedures', growth: 'All procedures', premium: 'All + city pages' },
+  { feature: 'Review management', starter: 'Setup only', growth: 'Active campaign', premium: 'All locations' },
+  { feature: 'Content (monthly)', starter: '1 blog', growth: '2 blogs + 1 page', premium: '4 blogs + 2 pages' },
+  { feature: 'AI search optimization', starter: 'Basic AISO', growth: 'Full AISO', premium: 'AISO + AI SoV' },
+  { feature: 'Reporting', starter: 'Monthly', growth: 'Weekly rank tracking', premium: 'ROI attribution' },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schema={schemas}
+>
+  <!-- Hero -->
+  <Section bg="cream">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+      {pillar?.tagline}
+    </span>
+    <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+      SEO for Dentists — More Patients From Google &amp; AI Search
+    </h1>
+    <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-3xl">
+      Every day, hundreds of people near your practice search for a dentist on Google. They check Maps, read reviews, and ask ChatGPT for recommendations. If your practice doesn't show up — or shows up with a thin profile and outdated photos — those patients go to the practice that does. We fix that.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <Button href="/aiso-score/" variant="primary" size="lg">Get Your Free AISO Score</Button>
+      <Button href="#whats-included" variant="ghost" size="lg">See What's Included</Button>
+    </div>
+
+    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+      <span>
+        Last updated: <time datetime="2026-03-26">March 2026</time>
+      </span>
+      <span>
+        By <a href="/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
+      </span>
+    </div>
+  </Section>
+
+  <!-- Main content + sidebar -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main content (~65%) -->
+        <div class="lg:col-span-2 space-y-0">
+
+          <!-- Why dental practices need SEO -->
+          <div class="pb-14">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              Why dental practices need SEO in 2026
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Local search is the most competitive it has ever been for dental practices. Google's Local Pack (the map results at the top of the page) now shows three results instead of seven. If you're not in that top three for your core procedures and neighborhoods, you're invisible to the patients who are actively searching for care right now. Paid ads can supplement, but they stop the moment you stop paying. SEO builds a durable asset.</p>
+              <p>Procedure-specific targeting is what separates dental SEO from generic local SEO. A patient searching "dental implants near me" has a fundamentally different intent — and a much higher case value — than someone searching "teeth cleaning." Every high-value procedure your practice offers (implants, Invisalign, veneers, emergency dental care) needs its own optimized page with procedure-specific schema markup, relevant FAQs, and localized content.</p>
+              <p>AI search is the next front. ChatGPT, Perplexity, and Google AI Overviews now answer dental questions directly and recommend practices by name. If your practice isn't structured for AI retrieval — proper entity markup, answer-first content, verified credentials — you're missing a channel that's growing faster than any other in search.</p>
+            </div>
+          </div>
+
+          <!-- What's included -->
+          <div id="whats-included-detail" class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              What's included in dental SEO
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Every engagement is tailored to your practice, but the core deliverables cover the full spectrum of dental search visibility:</p>
+              <ul class="space-y-3 list-none pl-0">
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">Google Business Profile optimization</strong> — 25+ photos, weekly posts, Q&amp;A management, category optimization, and appointment link setup</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">Procedure-specific service pages</strong> — dedicated pages for every procedure you offer, with FAQ schema, before/after guidelines, and localized content</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">City and area pages</strong> — genuine local content for each neighborhood and suburb you serve, not templated doorway pages</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">Technical SEO audit</strong> — site speed, mobile usability, crawl errors, structured data (Dentist schema, not generic LocalBusiness), and Core Web Vitals</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">HIPAA-compliant review management</strong> — review solicitation workflows, response drafting that never confirms patient relationships, and reputation monitoring</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">AI search optimization</strong> — AISO Score assessment, entity verification, answer-first content restructuring, and AI citation monitoring</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">Monthly reporting</strong> — patient acquisition metrics (calls, form fills, appointment bookings), not just rankings and traffic</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Results timeline -->
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              What results to expect and when
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p><strong class="text-dark">30 days:</strong> Technical foundation complete. GBP fully optimized with photos, posts, and correct categories. Technical audit issues resolved. Review solicitation workflow live. You'll see your GBP insights start improving within weeks.</p>
+              <p><strong class="text-dark">60-90 days:</strong> Google Maps visibility improves for core procedures. First procedure-specific service pages indexed and ranking. Review velocity increasing. AISO Score baseline established. Most practices see a measurable increase in calls and form submissions by this point.</p>
+              <p><strong class="text-dark">6 months:</strong> Organic search traffic increasing for procedure and location keywords. City pages driving traffic from surrounding areas. AI search citations beginning to appear. Content library building authority. The compounding effect becomes visible in your analytics.</p>
+              <p><strong class="text-dark">12 months:</strong> Dominant local presence for core procedures and areas. Strong review profile with consistent velocity. AI platforms citing your practice for dental queries. Patient acquisition cost from organic significantly lower than paid channels. The gap between you and competitors who aren't investing in SEO is now substantial.</p>
+            </div>
+          </div>
+
+          <!-- AI and dental marketing -->
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              How AI is changing dental marketing
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Patients are increasingly asking AI assistants dental questions: "What's the best dentist near me for implants?" "How much do veneers cost?" "Is Invisalign worth it?" When ChatGPT or Google AI Overviews answers these questions, they cite specific practices and sources. If your practice isn't structured for AI retrieval, you're invisible in this channel.</p>
+              <p>We structure your content using the Capsule Technique — answer-first paragraphs of 40-60 words placed directly under question-phrased headings. This is exactly how AI models extract and cite information. Combined with proper Dentist schema markup, entity verification, and AI crawler access, your practice becomes a source that AI platforms reference by name.</p>
+              <p>Every dental SEO engagement includes an <a href="/aiso-score/" class="text-blue font-semibold hover:text-blue-light">AISO Score assessment</a> — our proprietary framework for measuring AI search readiness across six dimensions. It shows you exactly where you stand compared to competing practices and what to fix first.</p>
+            </div>
+          </div>
+
+          <!-- Compliance section -->
+          <div class="pt-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              Compliance built into every deliverable
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Dental marketing operates under strict regulatory requirements. Every piece of content we produce is built with compliance in mind from the start — not checked after the fact.</p>
+              <ul class="space-y-3 list-none pl-0">
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">HIPAA &sect;164.502</strong> — Protected health information (PHI) is never disclosed in any content, review response, or marketing material. We never confirm or deny patient relationships in public-facing responses.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">FL Statute 466.0282 and ADA Advertising Guidelines</strong> — No guaranteed outcomes, no misleading before/after claims, no specialist credentials without board certification verification. Content accurately represents the scope of services and qualifications.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">FTC Act &sect;5</strong> — All testimonials and endorsements comply with FTC disclosure requirements. No deceptive claims, no fake reviews, no undisclosed material connections.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar (~35%) -->
+        <aside class="lg:col-span-1">
+          <div class="lg:sticky lg:top-8 space-y-6">
+            <!-- Trust bar -->
+            <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+              <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">We know dental compliance</p>
+              <div class="space-y-2 text-sm font-body text-gray">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>HIPAA &sect;164.502</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>FL Statute 466.0282</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>ADA Advertising Guidelines</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>FTC Act &sect;5</span>
+                </div>
+              </div>
+            </div>
+
+            {relatedServices.length > 0 && (
+              <div>
+                <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Related Services</h3>
+                <div class="space-y-3">
+                  {relatedServices.map((related) => (
+                    <Card href={`/services/${related.data.slug}/`}>
+                      <h4 class="text-sm font-headline font-bold text-navy">{related.data.title}</h4>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {enCities.length > 0 && (
+              <div>
+                <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Local Pages</h3>
+                <div class="space-y-3">
+                  {enCities.map((c) => (
+                    <Card href={c.href}>
+                      <h4 class="text-sm font-headline font-bold text-navy">SEO for Dentists in {c.city}</h4>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <Section bg="white" id="whats-included">
+    <SectionHeader label="Packages" title="Dental SEO Pricing" />
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <!-- Starter -->
+      <div class="bg-cream border border-gray-light/40 rounded-lg p-6 flex flex-col">
+        <h3 class="text-lg font-headline font-black text-navy mb-2">Starter</h3>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">Single Location</p>
+        <p class="text-sm font-body text-gray mb-4">For practices with fewer than 3 direct competitors. The essentials to get your GBP and core procedures ranking.</p>
+        <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Google Business Profile optimization</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Technical SEO audit + fixes</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 5 procedure-specific service pages</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Review solicitation setup</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 1 blog post per month</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Basic AISO Score assessment</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Monthly reporting</li>
+        </ul>
+        <p class="text-2xl font-headline font-black text-navy mb-4">$1,500/mo</p>
+        <Button href="/contact/" variant="primary" size="md">Get Started</Button>
+      </div>
+
+      <!-- Growth -->
+      <div class="bg-cream border-2 border-blue rounded-lg p-6 flex flex-col relative">
+        <h3 class="text-lg font-headline font-black text-navy mb-2">Growth</h3>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">Competitive Market</p>
+        <p class="text-sm font-body text-gray mb-4">For single-location practices in competitive markets. Full procedure coverage with active review and content campaigns.</p>
+        <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Everything in Starter</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> All procedure service pages</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Active review campaign with response drafting</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 2 blog posts + 1 service page per month</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Full AISO Score + optimization</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Weekly rank tracking</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Competitor monitoring</li>
+        </ul>
+        <p class="text-2xl font-headline font-black text-navy mb-4">$2,500/mo</p>
+        <Button href="/contact/" variant="primary" size="md">Get Started</Button>
+      </div>
+
+      <!-- Premium -->
+      <div class="bg-cream border border-gray-light/40 rounded-lg p-6 flex flex-col">
+        <h3 class="text-lg font-headline font-black text-navy mb-2">Premium</h3>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">Multi-Location</p>
+        <p class="text-sm font-body text-gray mb-4">For multi-location practices. Per-location optimization with centralized management and ROI attribution.</p>
+        <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Everything in Growth, per location</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> All procedures + city/area pages</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Active review campaign, all locations</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 4 blog posts + 2 service pages per month</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> AISO + AI Share of Voice tracking</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Full ROI attribution reporting</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Dedicated account strategist</li>
+        </ul>
+        <p class="text-2xl font-headline font-black text-navy mb-4">$4,000/mo per location</p>
+        <Button href="/contact/" variant="primary" size="md">Let's Talk</Button>
+      </div>
+    </div>
+
+    <!-- Comparison table -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm font-body border-collapse">
+        <thead>
+          <tr class="border-b-2 border-navy/20">
+            <th class="text-left py-3 pr-4 font-headline font-bold text-navy"></th>
+            <th class="text-center py-3 px-4 font-headline font-bold text-navy">Starter</th>
+            <th class="text-center py-3 px-4 font-headline font-bold text-navy">Growth</th>
+            <th class="text-center py-3 px-4 font-headline font-bold text-navy">Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparisonRows.map((row) => (
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark">{row.feature}</td>
+              <td class="py-3 px-4 text-center text-gray">
+                {row.starter === true ? <span class="text-blue font-bold">&#10003;</span> : row.starter === false ? '' : row.starter}
+              </td>
+              <td class="py-3 px-4 text-center text-gray">
+                {row.growth === true ? <span class="text-blue font-bold">&#10003;</span> : row.growth === false ? '' : row.growth}
+              </td>
+              <td class="py-3 px-4 text-center text-gray">
+                {row.premium === true ? <span class="text-blue font-bold">&#10003;</span> : row.premium === false ? '' : row.premium}
+              </td>
+            </tr>
+          ))}
+          <tr class="border-t-2 border-navy/20">
+            <td class="py-3 pr-4 font-headline font-bold text-navy">Price</td>
+            <td class="py-3 px-4 text-center font-headline font-bold text-navy">$1,500/mo</td>
+            <td class="py-3 px-4 text-center font-headline font-bold text-navy">$2,500/mo</td>
+            <td class="py-3 px-4 text-center font-headline font-bold text-navy">$4,000/mo per loc.</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="py-3 px-4 text-center"><Button href="/contact/" variant="ghost" size="sm">Get Started</Button></td>
+            <td class="py-3 px-4 text-center"><Button href="/contact/" variant="ghost" size="sm">Get Started</Button></td>
+            <td class="py-3 px-4 text-center"><Button href="/contact/" variant="ghost" size="sm">Let's Talk</Button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </Section>
+
+  <!-- FAQ -->
+  <Section bg="cream">
+    <SectionHeader label="FAQ" title="Frequently Asked Questions" />
+    <div class="max-w-3xl space-y-6">
+      {faqItems.map((item) => (
+        <details class="group bg-white border border-gray-light/40 rounded-lg">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer p-6 font-headline font-bold text-navy text-base md:text-lg select-none">
+            {item.question}
+            <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm font-body text-gray leading-relaxed">
+            {item.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <CTABanner bg="navy" title="Ready to Grow Your Dental Practice?" subtitle="Your competitors are ranking above you in Google Maps, earning more reviews, and getting cited by AI platforms. Every month without a dental SEO strategy is a month they pull further ahead. Start with a free AISO Score to see where you stand.">
+    <Button href="/aiso-score/" variant="primary" size="lg">Get Your Free AISO Score</Button>
+    <Button href="/contact/" variant="secondary" size="lg">Book a Call</Button>
+  </CTABanner>
+</BaseLayout>

@@ -1,0 +1,477 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Card from '../../components/ui/Card.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import { getCollection } from 'astro:content';
+import { getPillarById } from '../../data/pillars';
+import { getSpokePath } from '../../data/service-slugs';
+
+const slug = 'seo-for-law-firms';
+const allServices = await getCollection('services');
+const service = allServices.find((s) => s.data.slug === slug)!;
+const pillar = getPillarById(service.data.pillar);
+
+const relatedServices = service.data.relatedServices
+  ? allServices.filter((s) => service.data.relatedServices!.includes(s.data.slug))
+  : [];
+
+const allCities = await getCollection('cities');
+const enCities = allCities
+  .filter((c) => c.data.locale === 'en' && c.data.services.includes(slug))
+  .map((c) => ({
+    city: c.data.city,
+    href: `/${getSpokePath(slug, c.data.citySlug, 'en')}/`,
+  }));
+
+const title = 'SEO for Law Firms — More Clients From Google & AI | StarkRank';
+const description = "Your law firm needs more qualified clients from Google. We handle GBP, local SEO, Bar-compliant content, and AI search optimization. Results in 90 days.";
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'SEO for Law Firms',
+  description: "Legal SEO covering Google Business Profile optimization, practice area content, Bar-compliant review management, and AI search optimization for law firms.",
+  url: 'https://starkrank.com/services/seo-for-law-firms/',
+  provider: {
+    '@type': 'Organization',
+    name: 'StarkRank',
+    url: 'https://starkrank.com',
+  },
+  areaServed: [
+    { '@type': 'Country', name: 'United States' },
+    { '@type': 'Country', name: 'Peru' },
+    { '@type': 'Country', name: 'Germany' },
+    { '@type': 'Country', name: 'Switzerland' },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'SEO for Law Firms Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        name: 'Starter',
+        description: 'Law firm SEO for solo and small firms, 1-2 practice areas',
+        price: '1500',
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '1500',
+          priceCurrency: 'USD',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'month' },
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Growth',
+        description: 'Law firm SEO for mid-size firms in competitive markets',
+        price: '3000',
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '3000',
+          priceCurrency: 'USD',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'month' },
+        },
+      },
+    ],
+  },
+};
+
+const faqItems = [
+  {
+    question: 'How long does law firm SEO take to work?',
+    answer: 'Legal SEO typically shows initial improvements in 60-90 days. Significant organic traffic growth usually takes 4-6 months in moderately competitive markets. In highly competitive PI or family law markets, expect 6-9 months.',
+  },
+  {
+    question: 'Is SEO worth it for a solo attorney?',
+    answer: 'Yes. A solo practitioner who ranks in the local pack for 2-3 practice areas can generate a full caseload from organic search alone. At $1,500/month, one new client from organic search typically pays for 3-6 months of SEO investment.',
+  },
+  {
+    question: 'How important are attorney reviews for SEO?',
+    answer: 'Very important. Review velocity directly impacts local pack rankings. AI platforms weigh review sentiment when generating recommendations. A firm with consistent, recent positive reviews will be cited over a firm with a stale review profile.',
+  },
+  {
+    question: 'Can you help with multi-practice or multi-location firms?',
+    answer: 'Yes. Multi-practice firms need separate pages per practice area, and multi-location firms need per-location GBP management and unique jurisdiction pages. We manage the complexity — consistent brand, location-specific strategy.',
+  },
+  {
+    question: "What's the difference between law firm SEO and Google Ads for attorneys?",
+    answer: 'Google Ads for legal keywords can cost $100-500+ per click. SEO builds organic visibility without per-click payments. Many firms use both: Ads for immediate client flow while SEO builds long-term visibility.',
+  },
+  {
+    question: 'How do you handle legal advertising compliance?',
+    answer: 'Every piece of content goes through a compliance check against FL Bar Rules, ABA Model Rules, and FTC regulations before publication. We never claim specialist status without board certification, always include case result disclaimers, and avoid guaranteed outcome language.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const schemas = [serviceSchema, faqSchema];
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'SEO for Law Firms', href: '/services/seo-for-law-firms/' },
+];
+
+const includedItems = [
+  { name: 'Google Business Profile Optimization', description: 'Complete GBP setup and optimization with attorney photos, practice area categories, service area configuration, and weekly post scheduling. Multi-location firms get per-location GBP management.' },
+  { name: 'Practice Area Pages', description: 'Dedicated landing pages for each practice area — personal injury, family law, criminal defense, estate planning — with FAQ schema per case type, answer-first content structure, and internal linking.' },
+  { name: 'City and Jurisdiction Pages', description: 'Unique local content for each city and jurisdiction you serve. Not templated filler — real local court information, jurisdiction-specific procedures, and geo-targeted landing pages.' },
+  { name: 'Technical SEO Audit', description: 'Site speed, Core Web Vitals, crawlability, mobile usability, and structured data review. Law firm websites built on WordPress or custom CMS often have technical debt that suppresses rankings.' },
+  { name: 'Review Management', description: 'Bar-compliant review request workflows, response drafting for positive and negative reviews, and review velocity tracking. We never incentivize reviews or draft fake testimonials.' },
+  { name: 'AI Search Optimization', description: 'AISO Score assessment, attorney Person schema with sameAs links to bar associations and LinkedIn, answer-first content formatting, and AI crawler access verification. AI platforms are already recommending attorneys — make sure they recommend you.' },
+  { name: 'Monthly Reporting', description: 'Keyword rankings, local pack positions, organic traffic, lead form submissions, phone call tracking, review velocity, and AISO Score trends. Every metric tied to client acquisition, not vanity numbers.' },
+];
+
+const comparisonRows = [
+  { feature: 'Google Business Profile optimization', starter: true, growth: true, premium: true },
+  { feature: 'Practice area pages', starter: '1-2', growth: '3-5', premium: 'Unlimited' },
+  { feature: 'City/jurisdiction pages', starter: '1', growth: '3-5', premium: 'Unlimited' },
+  { feature: 'Technical SEO audit', starter: true, growth: true, premium: true },
+  { feature: 'Review management', starter: 'Basic', growth: true, premium: true },
+  { feature: 'AI search optimization (AISO)', starter: false, growth: true, premium: true },
+  { feature: 'Attorney Person schema', starter: true, growth: true, premium: true },
+  { feature: 'Content creation (pages/mo)', starter: '2', growth: '4', premium: '8+' },
+  { feature: 'Monthly reporting', starter: true, growth: true, premium: true },
+  { feature: 'Dedicated strategist', starter: false, growth: true, premium: true },
+  { feature: 'Quarterly strategy review', starter: false, growth: true, premium: true },
+  { feature: 'Multi-location GBP management', starter: false, growth: false, premium: true },
+];
+
+const timelineSteps = [
+  { period: '30 Days', title: 'Foundation', items: ['Technical SEO audit and fix implementation', 'Google Business Profile optimization', 'Attorney Person schema and structured data', 'Review management workflow setup'] },
+  { period: '60-90 Days', title: 'Content Build', items: ['Practice area pages live with FAQ schema', 'First city/jurisdiction pages published', 'Review velocity increasing', 'Initial ranking improvements visible'] },
+  { period: '6 Months', title: 'Growth', items: ['Local pack rankings for primary practice areas', 'Organic traffic growth measurable', 'AI search citations appearing', 'Consistent lead flow from organic search'] },
+  { period: '12 Months', title: 'Dominance', items: ['Top 3 local pack for target practice areas', 'Organic traffic as primary client acquisition channel', 'Strong AISO Score with AI platform citations', 'Review profile outpacing competitors'] },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schema={schemas}
+>
+  <!-- Hero -->
+  <Section bg="cream">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+      {pillar?.tagline}
+    </span>
+    <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+      SEO for Law Firms — More Clients From Google & AI Search
+    </h1>
+    <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-3xl">
+      Legal search is one of the most competitive verticals in SEO. Potential clients search for attorneys by practice area and location — "personal injury lawyer near me," "family law attorney in Miami." If your firm does not appear in the local pack and organic results, those clients go to the firm that does. AI search platforms like ChatGPT and Perplexity are now recommending attorneys too. You need a strategy that covers both.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <Button href="/aiso-score/" variant="primary" size="lg">Get Your Free AISO Score</Button>
+      <Button href="#whats-included" variant="ghost" size="lg">See What's Included</Button>
+    </div>
+
+    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+      <span>
+        Last updated: <time datetime="2026-03-26">March 2026</time>
+      </span>
+      <span>
+        By <a href="/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
+      </span>
+    </div>
+  </Section>
+
+  <!-- Main content + sidebar -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main content (~65%) -->
+        <div class="lg:col-span-2 space-y-0">
+
+          <!-- Why law firms need SEO -->
+          <div class="pb-14">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              Why do law firms need specialized SEO?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Legal keywords are among the most expensive in Google Ads — personal injury, DUI defense, and family law terms regularly exceed $100 per click. That makes organic search the highest-ROI client acquisition channel for most law firms. But legal SEO is different from general SEO in three critical ways.</p>
+              <p><strong class="text-dark">Competition is hyper-local.</strong> You are not competing globally — you are competing against every firm in your city for the same practice areas. The Google local pack (the map results) drives the majority of clicks for "lawyer near me" queries, and appearing there requires a distinct set of signals: Google Business Profile optimization, local citations, review velocity, and geo-targeted content.</p>
+              <p><strong class="text-dark">Practice area targeting matters.</strong> A general "we do everything" website ranks for nothing. Each practice area needs its own optimized page with case-type-specific FAQ schema, relevant internal links, and content that answers the exact questions potential clients ask before hiring an attorney.</p>
+              <p><strong class="text-dark">AI search is changing legal marketing.</strong> ChatGPT, Perplexity, and Google AI Overviews now answer questions like "best personal injury lawyer in Tampa" with direct recommendations. If your firm lacks structured data, attorney entity signals, and answer-formatted content, AI platforms will recommend your competitors instead.</p>
+            </div>
+          </div>
+
+          <!-- What's included (inline version) -->
+          <div id="whats-included" class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              What's included in law firm SEO?
+            </h2>
+            <div class="space-y-6">
+              {includedItems.map((item) => (
+                <div>
+                  <h3 class="text-lg font-headline font-bold text-navy mb-2">{item.name}</h3>
+                  <p class="text-base font-body text-gray leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Results timeline -->
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              What results can you expect and when?
+            </h2>
+            <div class="space-y-8">
+              {timelineSteps.map((step) => (
+                <div>
+                  <h3 class="text-lg font-headline font-bold text-navy mb-1">{step.period} — {step.title}</h3>
+                  <ul class="space-y-2 text-base font-body text-gray leading-relaxed list-none pl-0">
+                    {step.items.map((item) => (
+                      <li class="flex items-start gap-3">
+                        <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- AI and legal marketing -->
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              How does AI search affect legal marketing?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>AI platforms are already answering legal queries with attorney recommendations. When someone asks ChatGPT "who is the best estate planning lawyer in Denver," the response cites firms with strong entity signals, structured data, and authoritative content. Most law firms have none of these.</p>
+              <p><strong class="text-dark">Attorney bio pages are critical.</strong> AI models cross-reference attorney information across bar association directories, LinkedIn, Avvo, and your website. A well-structured attorney bio with Person schema, sameAs links to bar registrations, and verifiable credentials signals trustworthiness. We implement Person schema for every attorney, linking to bar association profiles, LinkedIn, and any published articles or speaking engagements.</p>
+              <p><strong class="text-dark">Practice area content must be answer-formatted.</strong> AI models retrieve content in chunks. If your personal injury page buries the answer to "what is the statute of limitations in Florida" in paragraph six, AI skips it. We restructure every practice area page with question-phrased headings and direct answers in the first 40-60 words of each section.</p>
+              <p>For a full AI search readiness assessment, our <a href="/services/ai-search-optimization/" class="text-blue font-semibold hover:text-blue-light">AI Search Optimization</a> service provides an AISO Score across six dimensions.</p>
+            </div>
+          </div>
+
+          <!-- Compliance -->
+          <div class="pt-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              How do you handle legal advertising compliance?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Legal marketing is regulated. Every state bar has advertising rules, and violations can result in disciplinary action. We build compliance into every step of the process — not as an afterthought, but as a requirement before any content goes live.</p>
+              <ul class="space-y-3 list-none pl-0">
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">FL Bar Rules 4-7.2</strong> — All advertising content reviewed for compliance with Florida Bar advertising rules, including requirements for disclaimers, prohibited statements, and specialist designation restrictions</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">ABA Model Rules</strong> — Content adheres to American Bar Association Model Rules of Professional Conduct, particularly Rules 7.1 through 7.3 governing communications about legal services</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                  <span><strong class="text-dark">FTC Act Section 5</strong> — All claims are truthful and non-deceptive per Federal Trade Commission standards, including proper disclosure of paid endorsements and testimonial disclaimers</span>
+                </li>
+              </ul>
+              <p>We never claim specialist status without board certification, never use guaranteed outcome language, and always include appropriate case result disclaimers. Review response drafts are written to avoid creating an attorney-client relationship.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar (~35%) -->
+        <aside class="lg:col-span-1">
+          <div class="lg:sticky lg:top-8 space-y-6">
+            <!-- Trust bar -->
+            <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+              <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">We know legal marketing compliance</p>
+              <div class="space-y-2 text-sm font-body text-gray">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>FL Bar Rules 4-7.2</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>ABA Model Rules</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>FTC Act Section 5</span>
+                </div>
+              </div>
+            </div>
+
+            {relatedServices.length > 0 && (
+              <div>
+                <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Related Services</h3>
+                <div class="space-y-3">
+                  {relatedServices.map((related) => (
+                    <Card href={`/services/${related.data.slug}/`}>
+                      <h4 class="text-sm font-headline font-bold text-navy">{related.data.title}</h4>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {enCities.length > 0 && (
+              <div>
+                <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Local Pages</h3>
+                <div class="space-y-3">
+                  {enCities.map((c) => (
+                    <Card href={c.href}>
+                      <h4 class="text-sm font-headline font-bold text-navy">SEO for Law Firms in {c.city}</h4>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <Section bg="white" id="pricing">
+    <SectionHeader label="Pricing" title="Law Firm SEO Packages" />
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <!-- Starter -->
+      <div class="bg-cream border border-gray-light/40 rounded-lg p-6 flex flex-col">
+        <h3 class="text-lg font-headline font-black text-navy mb-2">Starter</h3>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">Solo & Small Firms</p>
+        <p class="text-sm font-body text-gray mb-4">For solo practitioners and small firms targeting 1-2 practice areas in a single market. The foundation for organic client acquisition.</p>
+        <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Google Business Profile optimization</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 1-2 practice area pages with FAQ schema</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 1 city/jurisdiction page</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Technical SEO audit and fixes</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Attorney Person schema</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Basic review management</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 2 content pages per month</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Monthly reporting</li>
+        </ul>
+        <p class="text-2xl font-headline font-black text-navy mb-4">$1,500/mo</p>
+        <Button href="/contact/" variant="primary" size="md">Get Started</Button>
+      </div>
+
+      <!-- Growth -->
+      <div class="bg-cream border-2 border-blue rounded-lg p-6 flex flex-col relative">
+        <h3 class="text-lg font-headline font-black text-navy mb-2">Growth</h3>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">Mid-Size Firms</p>
+        <p class="text-sm font-body text-gray mb-4">For mid-size firms in competitive markets with 3-5 practice areas. Everything in Starter, plus:</p>
+        <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 3-5 practice area pages with FAQ schema</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 3-5 city/jurisdiction pages</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> AI search optimization (AISO Score)</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Full review management with response drafting</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 4 content pages per month</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Dedicated strategist</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Quarterly strategy review</li>
+        </ul>
+        <p class="text-2xl font-headline font-black text-navy mb-4">$3,000/mo</p>
+        <Button href="/contact/" variant="primary" size="md">Request Growth Plan</Button>
+      </div>
+
+      <!-- Premium -->
+      <div class="bg-cream border border-gray-light/40 rounded-lg p-6 flex flex-col">
+        <h3 class="text-lg font-headline font-black text-navy mb-2">Premium</h3>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">Multi-Location & High-Volume</p>
+        <p class="text-sm font-body text-gray mb-4">For multi-location firms or high-volume PI/family law practices. Everything in Growth, plus:</p>
+        <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Unlimited practice area pages</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Unlimited city/jurisdiction pages</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Multi-location GBP management</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 8+ content pages per month</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Competitive AISO monitoring</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Priority support</li>
+        </ul>
+        <p class="text-2xl font-headline font-black text-navy mb-4">$5,000/mo</p>
+        <Button href="/contact/" variant="primary" size="md">Request Premium Plan</Button>
+      </div>
+    </div>
+
+    <!-- Comparison table -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm font-body border-collapse">
+        <thead>
+          <tr class="border-b-2 border-navy/20">
+            <th class="text-left py-3 pr-4 font-headline font-bold text-navy"></th>
+            <th class="text-center py-3 px-4 font-headline font-bold text-navy">Starter</th>
+            <th class="text-center py-3 px-4 font-headline font-bold text-navy">Growth</th>
+            <th class="text-center py-3 px-4 font-headline font-bold text-navy">Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparisonRows.map((row) => (
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark">{row.feature}</td>
+              <td class="py-3 px-4 text-center text-gray">
+                {row.starter === true ? <span class="text-blue font-bold">&#10003;</span> : row.starter === false ? '' : row.starter}
+              </td>
+              <td class="py-3 px-4 text-center text-gray">
+                {row.growth === true ? <span class="text-blue font-bold">&#10003;</span> : row.growth === false ? '' : row.growth}
+              </td>
+              <td class="py-3 px-4 text-center text-gray">
+                {row.premium === true ? <span class="text-blue font-bold">&#10003;</span> : row.premium === false ? '' : row.premium}
+              </td>
+            </tr>
+          ))}
+          <tr class="border-t-2 border-navy/20">
+            <td class="py-3 pr-4 font-headline font-bold text-navy">Price</td>
+            <td class="py-3 px-4 text-center font-headline font-bold text-navy">$1,500/mo</td>
+            <td class="py-3 px-4 text-center font-headline font-bold text-navy">$3,000/mo</td>
+            <td class="py-3 px-4 text-center font-headline font-bold text-navy">$5,000/mo</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="py-3 px-4 text-center"><Button href="/contact/" variant="ghost" size="sm">Get Started</Button></td>
+            <td class="py-3 px-4 text-center"><Button href="/contact/" variant="ghost" size="sm">Growth Plan</Button></td>
+            <td class="py-3 px-4 text-center"><Button href="/contact/" variant="ghost" size="sm">Premium Plan</Button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </Section>
+
+  <!-- FAQ -->
+  <Section bg="cream">
+    <SectionHeader label="FAQ" title="Frequently Asked Questions" />
+    <div class="max-w-3xl space-y-6">
+      {faqItems.map((item) => (
+        <details class="group bg-white border border-gray-light/40 rounded-lg">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer p-6 font-headline font-bold text-navy text-base md:text-lg select-none">
+            {item.question}
+            <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm font-body text-gray leading-relaxed">
+            {item.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <CTABanner bg="navy" title="Ready to Grow Your Law Firm?" subtitle="Your competitors are ranking in the local pack and getting cited by AI platforms. Every month without a legal SEO strategy is a month they build an advantage that compounds over time. Start with a free AISO Score assessment.">
+    <Button href="/aiso-score/" variant="primary" size="lg">Get Your Free AISO Score</Button>
+    <Button href="/contact/" variant="secondary" size="lg">Request a Consultation</Button>
+  </CTABanner>
+</BaseLayout>

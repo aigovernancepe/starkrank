@@ -1,0 +1,522 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Card from '../../components/ui/Card.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import { getCollection } from 'astro:content';
+import { getPillarById } from '../../data/pillars';
+import { getSpokePath } from '../../data/service-slugs';
+
+const slug = 'seo-for-med-spas';
+const allServices = await getCollection('services');
+const service = allServices.find((s) => s.data.slug === slug)!;
+const pillar = getPillarById(service.data.pillar);
+
+const relatedServices = service.data.relatedServices
+  ? allServices.filter((s) => service.data.relatedServices!.includes(s.data.slug))
+  : [];
+
+const allCities = await getCollection('cities');
+const enCities = allCities
+  .filter((c) => c.data.locale === 'en' && c.data.services.includes(slug))
+  .map((c) => ({
+    city: c.data.city,
+    href: `/${getSpokePath(slug, c.data.citySlug, 'en')}/`,
+  }));
+
+const title = 'SEO for Med Spas — More Clients From Google & AI | StarkRank';
+const description = "Your med spa deserves more clients from Google. We handle GBP, HIPAA-safe content, FDA-compliant treatment pages, and AI search optimization. Results in 90 days.";
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'SEO for Med Spas',
+  description: "HIPAA-compliant, FDA-safe med spa SEO covering GBP optimization, treatment-specific content, review management, provider credentialing, and AI search optimization.",
+  url: 'https://starkrank.com/services/seo-for-med-spas/',
+  provider: {
+    '@type': 'Organization',
+    name: 'StarkRank',
+    url: 'https://starkrank.com',
+  },
+  areaServed: [
+    { '@type': 'Country', name: 'United States' },
+    { '@type': 'Country', name: 'Peru' },
+    { '@type': 'Country', name: 'Germany' },
+    { '@type': 'Country', name: 'Switzerland' },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Med Spa SEO Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        name: 'Starter Med Spa SEO',
+        description: 'Single location, fewer than 3 direct competitors',
+        price: '1500',
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '1500',
+          priceCurrency: 'USD',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'month' },
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Growth Med Spa SEO',
+        description: 'Single location, competitive market',
+        price: '3000',
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '3000',
+          priceCurrency: 'USD',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'month' },
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Premium Med Spa SEO',
+        description: 'Multi-location med spa chain, per-location pricing',
+        price: '5000',
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '5000',
+          priceCurrency: 'USD',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'month' },
+        },
+      },
+    ],
+  },
+};
+
+const faqItems = [
+  {
+    question: 'How do I choose the right med spa for a treatment?',
+    answer: 'The most important factors are provider credentials, treatment-specific experience, and transparent pricing. Look for a med spa with a board-certified medical director, before/after photos of actual patients, and clear information about what each treatment costs.',
+  },
+  {
+    question: 'What should I expect during a med spa consultation?',
+    answer: 'A reputable consultation includes a thorough assessment of your goals, a review of your medical history, and an honest conversation about which treatments are appropriate. The provider should explain the procedure, expected recovery time, potential side effects, and realistic outcomes.',
+  },
+  {
+    question: 'How long is recovery for most med spa treatments?',
+    answer: 'Recovery times vary significantly by treatment. Non-invasive treatments like facials typically require zero downtime. Injectables may involve mild swelling for 24-48 hours. Laser treatments and body contouring can require several days of recovery depending on the technology used.',
+  },
+  {
+    question: 'Why are med spa prices so different from place to place?',
+    answer: 'Pricing differences reflect provider experience, product quality, geographic market, and overhead costs. Be cautious of prices significantly below market rate, as they may indicate diluted products, undertrained staff, or insufficient medical oversight.',
+  },
+  {
+    question: 'How important are Google reviews for med spa SEO?',
+    answer: "Critical. Review velocity (how many new reviews you get per week) matters more than total count. A med spa with 150 reviews getting 5 new reviews per week will outrank a practice with 800 reviews that hasn't gotten a new one in months.",
+  },
+  {
+    question: "What's the difference between med spa SEO and regular SEO?",
+    answer: 'Med spa SEO requires HIPAA-compliant content, FDA-compliant treatment descriptions, trademark compliance for branded products, and medical-specific schema markup (MedicalBusiness + Person for medical director). It also requires understanding aesthetic patient search behavior.',
+  },
+  {
+    question: 'Can you help med spas with multiple locations?',
+    answer: "Yes. We manage per-location GBP optimization, unique city pages, centralized review management, provider credentialing schema for each location's medical director, and location-specific rank tracking.",
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const schemas = [serviceSchema, faqSchema];
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'SEO for Med Spas', href: '/services/seo-for-med-spas/' },
+];
+
+const includedItems = [
+  { name: 'Google Business Profile Optimization', description: '25+ photos, weekly posts, category optimization, Q&A management, and service/menu setup for every treatment you offer.' },
+  { name: 'Treatment-Specific Service Pages', description: 'Dedicated pages for each treatment (Botox&reg;, fillers, laser, body contouring) with FAQ schema, procedure details, and recovery information.' },
+  { name: 'City and Area Pages', description: 'Unique local pages targeting your service areas with genuine neighborhood content — not templated filler.' },
+  { name: 'Technical SEO Audit', description: 'Site speed, mobile performance, crawl errors, schema validation, and Core Web Vitals — the foundation everything else builds on.' },
+  { name: 'Review Management', description: 'HIPAA-compliant review response drafting, review velocity strategy, and reputation monitoring across Google, Yelp, and RealSelf.' },
+  { name: 'AI Search Optimization', description: 'AISO Score assessment, entity verification, answer-first content structuring, and AI crawler access configuration.' },
+  { name: 'Provider Credentialing Schema', description: 'MedicalBusiness + Person schema for your medical director and providers, with sameAs links to licensing boards and professional profiles.' },
+  { name: 'Monthly Reporting', description: 'Client acquisition metrics (not just rankings), call tracking, form submissions, GBP insights, review velocity, and AISO Score trends.' },
+];
+
+const comparisonRows = [
+  { feature: 'GBP optimization', starter: true, growth: true, premium: true },
+  { feature: 'Technical audit', starter: 'Basic', growth: true, premium: true },
+  { feature: 'Treatment pages', starter: '4 pages', growth: '8 pages', premium: 'Unlimited' },
+  { feature: 'Review management', starter: 'Response drafting', growth: 'Full management', premium: 'Full management' },
+  { feature: 'Content creation', starter: '2 posts/mo', growth: '4 posts/mo', premium: '8 posts/mo' },
+  { feature: 'AI search optimization', starter: false, growth: true, premium: true },
+  { feature: 'Provider credentialing', starter: 'Basic schema', growth: 'Full schema', premium: 'Per-location schema' },
+  { feature: 'Reporting', starter: 'Monthly', growth: 'Monthly + strategy call', premium: 'Monthly + dedicated strategist' },
+];
+
+const timelineSteps = [
+  { period: '30 Days', items: ['Technical audit and fixes', 'GBP optimization', 'Schema markup implementation', 'Review strategy kickoff'] },
+  { period: '60-90 Days', items: ['Treatment pages live', 'City pages published', 'Review velocity increasing', 'First ranking improvements visible'] },
+  { period: '6 Months', items: ['Consistent top-3 Map Pack presence', 'Treatment pages ranking for target keywords', 'AI search citations appearing', 'Measurable increase in consultation bookings'] },
+  { period: '12 Months', items: ['Dominant local visibility', 'Strong AI search presence', 'Review profile as a competitive moat', 'Client acquisition cost decreasing quarter over quarter'] },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schema={schemas}
+>
+  <!-- Hero -->
+  <Section bg="cream">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+      {pillar?.tagline}
+    </span>
+    <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+      SEO for Med Spas — More Clients From Google &amp; AI Search
+    </h1>
+    <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-3xl">
+      Your med spa deserves more clients from the channels where people actually search for treatments. We build HIPAA-compliant, FDA-safe SEO strategies that get your practice found on Google, Google Maps, and AI search platforms like ChatGPT and Perplexity.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <Button href="/aiso-score/" variant="primary" size="lg">Get Your Free AISO Score</Button>
+      <Button href="#whats-included" variant="ghost" size="lg">See What's Included</Button>
+    </div>
+
+    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+      <span>
+        Last updated: <time datetime="2026-03-26">March 2026</time>
+      </span>
+      <span>
+        By <a href="/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
+      </span>
+    </div>
+  </Section>
+
+  <!-- Main content + sidebar -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main content (~65%) -->
+        <div class="lg:col-span-2 space-y-0">
+
+          <!-- Why med spas need specialized SEO -->
+          <div class="pb-14">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              Why do med spas need specialized SEO?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Med spa marketing operates under regulatory constraints that generic SEO agencies don't understand. HIPAA governs how you can respond to patient reviews. The FDA restricts how you describe treatments — promoting off-label uses of injectable products can trigger enforcement action. Branded product names like Botox&reg;, Juv&eacute;derm&reg;, and CoolSculpting&reg; carry trademark requirements that affect your content strategy.</p>
+              <p>Beyond compliance, med spa search behavior is uniquely local and treatment-specific. Prospective clients search for exact procedures ("lip filler near me," "CoolSculpting cost"), compare providers using reviews and before/after photos, and often make decisions within a single search session. If your practice doesn't appear in that session — in Google Maps, in organic results, and increasingly in AI-generated answers — you lose the client to a competitor who does.</p>
+              <p>StarkRank combines regulatory awareness with technical SEO depth. We build strategies that grow your visibility without putting your practice at compliance risk.</p>
+            </div>
+          </div>
+
+          <!-- What's included -->
+          <div id="whats-included" class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              What's included in med spa SEO?
+            </h2>
+            <div class="space-y-6">
+              {includedItems.map((item) => (
+                <div>
+                  <h3 class="text-lg font-headline font-bold text-navy mb-2">{item.name}</h3>
+                  <p class="text-base font-body text-gray leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Results timeline -->
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              What results can you expect, and when?
+            </h2>
+            <div class="space-y-6">
+              {timelineSteps.map((step) => (
+                <div>
+                  <h3 class="text-lg font-headline font-bold text-navy mb-2">{step.period}</h3>
+                  <ul class="space-y-2 text-base font-body text-gray leading-relaxed list-none pl-0">
+                    {step.items.map((item) => (
+                      <li class="flex items-start gap-3">
+                        <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <p class="mt-6 text-sm font-body text-gray italic">
+              Individual results may vary based on market competitiveness, existing website authority, and engagement level. Timelines above represent typical outcomes for practices that implement recommendations consistently.
+            </p>
+          </div>
+
+          <!-- AI and med spa marketing -->
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              How does AI search affect med spa marketing?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>When a prospective client asks ChatGPT or Perplexity "best med spa for Botox near me," the AI doesn't just list websites. It synthesizes information from multiple sources and cites providers it considers trustworthy. Practices with strong entity signals — verified provider credentials, consistent business information, and structured content — get cited. Practices without them don't.</p>
+              <p>Provider credentialing is especially important for med spas. We implement Person schema for your medical director and key providers, linking to licensing boards and professional profiles. This gives AI models the verification signals they need to recommend your practice with confidence.</p>
+              <p>We use the Capsule Technique — answer-first content blocks of 40-60 words placed immediately under question-phrased headings — to structure your treatment pages for AI retrieval. Combined with FAQ schema and MedicalBusiness markup, this positions your practice to earn AI citations alongside traditional search rankings.</p>
+              <p>Want to see where you stand today? <a href="/aiso-score/" class="text-blue font-semibold hover:text-blue-light">Get your free AISO Score</a> — it takes 2 minutes and shows exactly where AI search platforms can and can't find your practice.</p>
+            </div>
+          </div>
+
+          <!-- Compliance section -->
+          <div class="pt-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              Med spa marketing compliance: what you need to know
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed mb-8">
+              <p>Med spa marketing is governed by multiple overlapping regulations. Violations carry real consequences — from FTC enforcement actions to FDA warning letters to state medical board sanctions. Every piece of content we create is reviewed against these requirements before publication.</p>
+            </div>
+
+            <!-- HIPAA -->
+            <div class="mb-8">
+              <h3 class="text-lg font-headline font-bold text-navy mb-2">HIPAA &sect;164.502 — Review Responses</h3>
+              <div class="space-y-3 text-base font-body text-gray leading-relaxed">
+                <p>HIPAA's minimum necessary standard applies to review responses. You cannot confirm or deny that a reviewer is a patient, reference specific treatments they received, or share any protected health information — even if the reviewer mentioned it first. Our review response templates are designed to acknowledge feedback without confirming a patient relationship.</p>
+              </div>
+            </div>
+
+            <!-- FDA -->
+            <div class="mb-8">
+              <h3 class="text-lg font-headline font-bold text-navy mb-2">FDA Off-Label Promotion — Critical Severity</h3>
+              <div class="space-y-3 text-base font-body text-gray leading-relaxed">
+                <p>The FDA prohibits promoting drugs and devices for uses not approved in their labeling. This is especially relevant for injectables: Botox&reg; is FDA-approved for specific cosmetic indications (glabellar lines, crow's feet, forehead lines), and promoting it for unapproved uses in marketing materials can trigger FDA enforcement. We write treatment descriptions that stay within approved indications and clearly distinguish between FDA-cleared and off-label applications.</p>
+              </div>
+            </div>
+
+            <!-- FTC -->
+            <div class="mb-8">
+              <h3 class="text-lg font-headline font-bold text-navy mb-2">FTC Act &sect;5 — Advertising Claims</h3>
+              <div class="space-y-3 text-base font-body text-gray leading-relaxed">
+                <p>The Federal Trade Commission prohibits deceptive advertising, including unsubstantiated claims and misleading before/after comparisons. For med spas, this means no guaranteed outcomes ("eliminate wrinkles permanently"), no misleading claims about treatment efficacy, and clear disclosure of typical results. All content includes "results may vary" language where appropriate, and before/after photos are presented with accurate, unmanipulated images.</p>
+              </div>
+            </div>
+
+            <!-- Trademark -->
+            <div class="mb-8">
+              <h3 class="text-lg font-headline font-bold text-navy mb-2">Trademark Compliance — Branded Treatment Names</h3>
+              <div class="space-y-3 text-base font-body text-gray leading-relaxed">
+                <p>Branded product names used in med spa marketing are registered trademarks of their respective manufacturers. Botox&reg; and Juv&eacute;derm&reg; are trademarks of AbbVie Inc. CoolSculpting&reg; is a trademark of AbbVie Inc. Kybella&reg; is a trademark of AbbVie Inc. Sculptra&reg; is a trademark of Galderma. These names must be used with the &reg; symbol on first reference and should not be used as generic terms for their treatment categories. We ensure trademark compliance across all content we produce.</p>
+              </div>
+            </div>
+
+            <!-- Before/after photos -->
+            <div>
+              <h3 class="text-lg font-headline font-bold text-navy mb-2">Before/After Photo Compliance</h3>
+              <div class="space-y-3 text-base font-body text-gray leading-relaxed">
+                <p>Before/after photos are among the most effective marketing assets for med spas — and among the most regulated. Photos must be of actual patients (not stock images), taken under consistent lighting and positioning, unmanipulated, and published only with documented patient consent. Many states have additional requirements, including mandatory disclosure of whether photos are "typical" results. We help establish photo documentation protocols and consent workflows that protect your practice.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar (~35%) -->
+        <aside class="lg:col-span-1">
+          <div class="lg:sticky lg:top-8 space-y-6">
+            <!-- Trust bar -->
+            <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+              <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">We know med spa compliance</p>
+              <div class="space-y-2 text-sm font-body text-gray">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>HIPAA &sect;164.502</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>FTC Act &sect;5</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>FDA Off-Label Promotion Rules</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-blue shrink-0"></span>
+                  <span>Trademark Law (Botox&reg;, Juv&eacute;derm&reg;, CoolSculpting&reg;)</span>
+                </div>
+              </div>
+            </div>
+
+            {relatedServices.length > 0 && (
+              <div>
+                <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Related Services</h3>
+                <div class="space-y-3">
+                  {relatedServices.map((related) => (
+                    <Card href={`/services/${related.data.slug}/`}>
+                      <h4 class="text-sm font-headline font-bold text-navy">{related.data.title}</h4>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {enCities.length > 0 && (
+              <div>
+                <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Local Pages</h3>
+                <div class="space-y-3">
+                  {enCities.map((c) => (
+                    <Card href={c.href}>
+                      <h4 class="text-sm font-headline font-bold text-navy">Med Spa SEO in {c.city}</h4>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <Section bg="white">
+    <SectionHeader label="Pricing" title="Med Spa SEO Packages" />
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <!-- Starter -->
+      <div class="bg-cream border border-gray-light/40 rounded-lg p-6 flex flex-col">
+        <h3 class="text-lg font-headline font-black text-navy mb-2">Starter</h3>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">Single Location, &lt;3 Competitors</p>
+        <p class="text-sm font-body text-gray mb-4">For med spas in smaller markets with limited direct competition. Covers the essentials: GBP, basic content, and review management.</p>
+        <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Google Business Profile optimization</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Basic technical audit</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 4 treatment-specific pages</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Review response drafting</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 2 blog posts per month</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Basic provider credentialing schema</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Monthly reporting</li>
+        </ul>
+        <p class="text-2xl font-headline font-black text-navy mb-4">$1,500/mo</p>
+        <Button href="/contact/" variant="primary" size="md">Get Started</Button>
+      </div>
+
+      <!-- Growth -->
+      <div class="bg-cream border-2 border-blue rounded-lg p-6 flex flex-col relative">
+        <h3 class="text-lg font-headline font-black text-navy mb-2">Growth</h3>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">Single Location, Competitive Market</p>
+        <p class="text-sm font-body text-gray mb-4">For med spas in competitive metros. Everything in Starter plus AI search optimization, more content, and full review management.</p>
+        <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Everything in Starter</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Full technical audit</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 8 treatment-specific pages</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Full review management</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 4 blog posts per month</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> AI search optimization (AISO Score)</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Full provider credentialing schema</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Monthly reporting + strategy call</li>
+        </ul>
+        <p class="text-2xl font-headline font-black text-navy mb-4">$3,000/mo</p>
+        <Button href="/contact/" variant="primary" size="md">Get Started</Button>
+      </div>
+
+      <!-- Premium -->
+      <div class="bg-cream border border-gray-light/40 rounded-lg p-6 flex flex-col">
+        <h3 class="text-lg font-headline font-black text-navy mb-2">Premium</h3>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">Multi-Location Chain</p>
+        <p class="text-sm font-body text-gray mb-4">For med spa chains with multiple locations. Per-location pricing with centralized strategy and dedicated account management.</p>
+        <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Everything in Growth, per location</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Unlimited treatment pages</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> 8 blog posts per month</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Per-location provider credentialing schema</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Dedicated strategist</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Cross-location performance benchmarking</li>
+        </ul>
+        <p class="text-2xl font-headline font-black text-navy mb-4">$5,000/mo per location</p>
+        <Button href="/contact/" variant="primary" size="md">Let's Talk</Button>
+      </div>
+    </div>
+
+    <!-- Comparison table -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm font-body border-collapse">
+        <thead>
+          <tr class="border-b-2 border-navy/20">
+            <th class="text-left py-3 pr-4 font-headline font-bold text-navy"></th>
+            <th class="text-center py-3 px-4 font-headline font-bold text-navy">Starter</th>
+            <th class="text-center py-3 px-4 font-headline font-bold text-navy">Growth</th>
+            <th class="text-center py-3 px-4 font-headline font-bold text-navy">Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparisonRows.map((row) => (
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark">{row.feature}</td>
+              <td class="py-3 px-4 text-center text-gray">
+                {row.starter === true ? <span class="text-blue font-bold">&#10003;</span> : row.starter === false ? '' : row.starter}
+              </td>
+              <td class="py-3 px-4 text-center text-gray">
+                {row.growth === true ? <span class="text-blue font-bold">&#10003;</span> : row.growth === false ? '' : row.growth}
+              </td>
+              <td class="py-3 px-4 text-center text-gray">
+                {row.premium === true ? <span class="text-blue font-bold">&#10003;</span> : row.premium === false ? '' : row.premium}
+              </td>
+            </tr>
+          ))}
+          <tr class="border-t-2 border-navy/20">
+            <td class="py-3 pr-4 font-headline font-bold text-navy">Price</td>
+            <td class="py-3 px-4 text-center font-headline font-bold text-navy">$1,500/mo</td>
+            <td class="py-3 px-4 text-center font-headline font-bold text-navy">$3,000/mo</td>
+            <td class="py-3 px-4 text-center font-headline font-bold text-navy">$5,000/mo per location</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="py-3 px-4 text-center"><Button href="/contact/" variant="ghost" size="sm">Get Started</Button></td>
+            <td class="py-3 px-4 text-center"><Button href="/contact/" variant="ghost" size="sm">Get Started</Button></td>
+            <td class="py-3 px-4 text-center"><Button href="/contact/" variant="ghost" size="sm">Let's Talk</Button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </Section>
+
+  <!-- FAQ -->
+  <Section bg="cream">
+    <SectionHeader label="FAQ" title="Frequently Asked Questions" />
+    <div class="max-w-3xl space-y-6">
+      {faqItems.map((item) => (
+        <details class="group bg-white border border-gray-light/40 rounded-lg">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer p-6 font-headline font-bold text-navy text-base md:text-lg select-none">
+            {item.question}
+            <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm font-body text-gray leading-relaxed">
+            {item.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <CTABanner bg="navy" title="Ready to Grow Your Med Spa?" subtitle="Your competitors are already ranking for the treatments your clients search for. Every month without a strategy is a month they build review velocity, content depth, and AI citations that compound over time. Let's fix that.">
+    <Button href="/aiso-score/" variant="primary" size="lg">Get Your Free AISO Score</Button>
+    <Button href="/contact/" variant="secondary" size="lg">Book a Strategy Call</Button>
+  </CTABanner>
+</BaseLayout>
