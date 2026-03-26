@@ -66,7 +66,7 @@ export function getHreflangAlternates(
   const alternates: Array<{ hreflang: string; href: string }> = [];
 
   // For global service pages (no locale prefix), only en + x-default
-  if (pathname.startsWith('/services/') || pathname.startsWith('/blog/') || pathname.startsWith('/audits/')) {
+  if (pathname.startsWith('/services/') || pathname.startsWith('/blog/')) {
     alternates.push(
       { hreflang: 'en', href: `${site}${pathname}` },
       { hreflang: 'x-default', href: `${site}${pathname}` }

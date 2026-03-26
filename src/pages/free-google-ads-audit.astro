@@ -1,0 +1,440 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+import Section from '../components/ui/Section.astro';
+
+const title = 'Free Google Ads Audit — 9-Area Diagnostic | StarkRank';
+const description = "Are you wasting ad spend? Our free 9-area Google Ads diagnostic reveals missed opportunities, wasted budget, and quick wins. No account access needed.";
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Free Google Ads Audit — 9-Area Diagnostic',
+  description: 'Free 9-area Google Ads diagnostic revealing wasted spend, missed keyword opportunities, and quick wins. No account access needed.',
+  url: 'https://starkrank.com/free-google-ads-audit/',
+  inLanguage: 'en-US',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'StarkRank',
+    url: 'https://starkrank.com',
+  },
+  mainEntity: {
+    '@type': 'Service',
+    name: 'Free Google Ads Audit',
+    description: '9-area Google Ads diagnostic using competitive intelligence. Covers keyword opportunities, CPC efficiency, landing page performance, and organic/paid overlap.',
+    provider: {
+      '@type': 'Organization',
+      name: 'StarkRank',
+      url: 'https://starkrank.com',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      description: 'Free 9-area Google Ads diagnostic',
+    },
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://starkrank.com/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Free Google Ads Audit',
+      item: 'https://starkrank.com/free-google-ads-audit/',
+    },
+  ],
+};
+
+const schemas = [webPageSchema, breadcrumbSchema];
+
+const auditAreas = [
+  { num: 1, area: 'Competitive Landscape', check: "Who's bidding on your keywords? What's their estimated spend? Where do they show up that you don't?" },
+  { num: 2, area: 'Keyword Opportunities', check: 'High-intent keywords in your market with strong search volume and realistic CPCs' },
+  { num: 3, area: 'Keyword Gaps', check: "Terms your competitors bid on that you're missing — and terms you bid on that aren't worth it" },
+  { num: 4, area: 'CPC & Budget Efficiency', check: 'Are you paying more than you should? How do your CPCs compare to market averages?' },
+  { num: 5, area: 'Ad Position & Impression Share', check: 'Where do your ads show up relative to competitors? How much of the market are you capturing?' },
+  { num: 6, area: 'Landing Page Performance', check: 'Core Web Vitals, mobile experience, and conversion signals on your top landing pages' },
+  { num: 7, area: 'Local vs National Mix', check: 'Are you targeting the right geographic radius? Is budget leaking to irrelevant areas?' },
+  { num: 8, area: 'Organic + Paid Overlap', check: 'Are you paying for clicks you could get organically? Where should you shift budget to SEO?' },
+  { num: 9, area: 'Quick Wins', check: '3-5 immediate changes that could improve ROI within 30 days' },
+];
+---
+
+<LandingLayout
+  title={title}
+  description={description}
+  ogImage="/images/ads-audit-preview.png"
+  schema={schemas}
+  backLink={{ label: 'Back to Services', href: '/services/performance-ads-management/' }}
+>
+  <Fragment slot="head">
+    <link rel="alternate" hreflang="en" href="https://starkrank.com/free-google-ads-audit/" />
+    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/free-google-ads-audit/" />
+  </Fragment>
+
+  <!-- Hero + Form -->
+  <Section bg="cream">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- Hero text -->
+      <div>
+        <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy leading-tight">
+          Is Your Google Ads Budget Working Hard Enough?
+        </h1>
+        <p class="mt-6 text-lg font-body text-gray leading-relaxed">
+          Most businesses waste 20-40% of their Google Ads budget on irrelevant clicks, poor keyword targeting, and landing pages that don't convert. Our free 9-area diagnostic shows you exactly where the money is going — and where it should go instead.
+        </p>
+        <p class="mt-4 text-base font-body text-dark font-semibold">
+          Works with or without an active Google Ads account.
+        </p>
+
+        <!-- Value bullets -->
+        <div class="mt-8">
+          <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">What you'll learn</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+              <p class="text-base font-body text-gray"><strong class="text-dark">Where your competitors are spending</strong> — We map the paid search landscape for your keywords, showing who's bidding, what they're paying, and where the gaps are</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+              <p class="text-base font-body text-gray"><strong class="text-dark">Which keywords are worth the investment</strong> — We identify high-intent keywords with strong commercial value and manageable CPCs in your market</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+              <p class="text-base font-body text-gray"><strong class="text-dark">Whether your landing pages convert</strong> — We audit your top landing pages for Core Web Vitals, mobile experience, and conversion signals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div id="get-your-free-google-ads-audit" class="bg-white border border-gray-light/40 rounded-lg p-8 shadow-lg">
+        <h2 class="text-2xl font-headline font-black text-navy mb-6">Get Your Free Google Ads Audit</h2>
+        <form class="contact-form space-y-4" data-success="Thank you! We're analyzing the paid search landscape for your domain now. You'll receive your 9-area diagnostic within 48 hours." data-error="Something went wrong. Please try again or email us at contact@starkrank.com.">
+          <input type="hidden" name="access_key" value="c6c510f0-14d6-42e3-b16b-c4db8ac4e71b" />
+          <input type="hidden" name="subject" value="Free Google Ads Audit Request" />
+          <input type="hidden" name="from_name" value="StarkRank — Ads Audit" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
+          <div>
+            <label for="website" class="block text-sm font-label font-semibold text-dark mb-1">Website URL <span class="text-blue">*</span></label>
+            <input
+              type="url"
+              id="website"
+              name="website"
+              required
+              placeholder="https://yoursite.com"
+              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
+            />
+          </div>
+          <div>
+            <label for="spend" class="block text-sm font-label font-semibold text-dark mb-1">Monthly Ad Spend <span class="text-blue">*</span></label>
+            <select
+              id="spend"
+              name="spend"
+              required
+              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
+            >
+              <option value="">Select...</option>
+              <option value="$0 (not running ads yet)">$0 (not running ads yet)</option>
+              <option value="Under $1,000">Under $1,000</option>
+              <option value="$1,000-5,000">$1,000-5,000</option>
+              <option value="$5,000-15,000">$5,000-15,000</option>
+              <option value="$15,000+">$15,000+</option>
+            </select>
+          </div>
+          <div>
+            <label for="industry" class="block text-sm font-label font-semibold text-dark mb-1">Industry <span class="text-gray text-xs font-normal">(optional)</span></label>
+            <select
+              id="industry"
+              name="industry"
+              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
+            >
+              <option value="">Select...</option>
+              <option value="Dental">Dental</option>
+              <option value="Legal">Legal</option>
+              <option value="Auto Services">Auto Services</option>
+              <option value="Med Spa">Med Spa</option>
+              <option value="Home Services">Home Services</option>
+              <option value="Financial">Financial</option>
+              <option value="E-Commerce">E-Commerce</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-label font-semibold text-dark mb-1">Work Email <span class="text-blue">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="you@company.com"
+              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
+            />
+          </div>
+          <div>
+            <label for="name" class="block text-sm font-label font-semibold text-dark mb-1">Full Name <span class="text-blue">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Jane Smith"
+              class="w-full px-4 py-3 border border-gray-light/60 rounded-md text-sm font-body text-dark placeholder-gray focus:outline-none focus:ring-2 focus:ring-blue/40 focus:border-blue transition-colors"
+            />
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="w-full inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-8 py-4 text-sm mt-2"
+            >
+              <span class="submit-text">Get My Free Ads Audit &rarr;</span>
+              <svg class="submit-spinner hidden w-5 h-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs font-body text-gray text-center mt-2">
+            Takes 2 minutes to request. No account access needed. No commitment.
+          </p>
+          <div class="form-status hidden rounded-lg p-4 text-sm font-body"></div>
+        </form>
+      </div>
+    </div>
+  </Section>
+
+  <!-- The 9 Areas -->
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <p class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3">What We Audit</p>
+      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-4">
+        9 Areas of Paid Search Performance
+      </h2>
+      <p class="text-base font-body text-gray leading-relaxed mb-8">
+        Our diagnostic covers 9 areas of paid search performance — using competitive intelligence data, not your ad account. This means we can audit your market even if you don't run ads yet.
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm font-body border-collapse">
+          <thead>
+            <tr class="border-b-2 border-navy/20">
+              <th class="text-left py-3 pr-4 font-headline font-bold text-navy w-8">#</th>
+              <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Area</th>
+              <th class="text-left py-3 font-headline font-bold text-navy">What We Check</th>
+            </tr>
+          </thead>
+          <tbody>
+            {auditAreas.map((a) => (
+              <tr class="border-b border-gray-light/40">
+                <td class="py-3 pr-4 text-blue font-headline font-bold">{a.num}</td>
+                <td class="py-3 pr-4 whitespace-nowrap font-semibold text-dark">{a.area}</td>
+                <td class="py-3 text-gray leading-relaxed">{a.check}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Why No Account Access -->
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-4">
+        Why We Don't Need Your Ad Account
+      </h2>
+      <p class="text-base font-body text-gray leading-relaxed mb-6">
+        Traditional Google Ads audits require login access to your account. Ours doesn't. We use competitive intelligence tools (DataForSEO SERP analysis, keyword data, and traffic estimation) to analyze your market from the outside in. This means:
+      </p>
+      <div class="space-y-4">
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">No risk</strong> — we never touch your campaigns</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Works for non-advertisers</strong> — considering Google Ads? We'll show you if it's worth it before you spend a dollar</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Unbiased</strong> — we see what your customers see, not just what your dashboard shows</p>
+        </div>
+      </div>
+      <p class="mt-6 text-sm font-body text-gray">
+        If you do share account access later, we can run a deeper diagnostic with granular campaign-level insights.
+      </p>
+    </div>
+  </Section>
+
+  <!-- Upsell -->
+  <Section bg="white">
+    <div class="max-w-4xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-4">
+        Want Ongoing Ads Management?
+      </h2>
+      <p class="text-base font-body text-gray leading-relaxed mb-8">
+        The free audit is a one-time diagnostic. For businesses ready to optimize continuously:
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm font-body border-collapse">
+          <thead>
+            <tr class="border-b-2 border-navy/20">
+              <th class="text-left py-3 pr-4 font-headline font-bold text-navy"></th>
+              <th class="text-center py-3 px-4 font-headline font-bold text-navy">Free Audit</th>
+              <th class="text-center py-3 px-4 font-headline font-bold text-navy">Paid Strategy</th>
+              <th class="text-center py-3 px-4 font-headline font-bold text-navy">Ongoing Management</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark font-semibold">9-area diagnostic</td>
+              <td class="py-3 px-4 text-center text-blue">Yes</td>
+              <td class="py-3 px-4 text-center text-blue">Yes</td>
+              <td class="py-3 px-4 text-center text-blue">Yes</td>
+            </tr>
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark font-semibold">Competitive monitoring</td>
+              <td class="py-3 px-4 text-center text-gray">One-time</td>
+              <td class="py-3 px-4 text-center text-gray">Monthly</td>
+              <td class="py-3 px-4 text-center text-gray">Monthly</td>
+            </tr>
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark font-semibold">Campaign recommendations</td>
+              <td class="py-3 px-4 text-center text-gray">Report only</td>
+              <td class="py-3 px-4 text-center text-gray">Actionable plan</td>
+              <td class="py-3 px-4 text-center text-gray">Done for you</td>
+            </tr>
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark font-semibold">Budget reallocation</td>
+              <td class="py-3 px-4 text-center text-gray">Suggestion</td>
+              <td class="py-3 px-4 text-center text-gray">Detailed proposal</td>
+              <td class="py-3 px-4 text-center text-gray">Managed</td>
+            </tr>
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark font-semibold">Reporting</td>
+              <td class="py-3 px-4 text-center text-gray">One-time report</td>
+              <td class="py-3 px-4 text-center text-gray">Monthly</td>
+              <td class="py-3 px-4 text-center text-gray">Weekly</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-headline font-bold text-navy">Price</td>
+              <td class="py-3 px-4 text-center font-headline font-bold text-navy">Free</td>
+              <td class="py-3 px-4 text-center font-headline font-bold text-navy">From $1,000</td>
+              <td class="py-3 px-4 text-center font-headline font-bold text-navy">From $2,000/mo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-6 text-base font-body text-gray">
+        <a href="/services/performance-ads-management/" class="text-blue font-semibold hover:text-blue-light">Learn about our Performance Media services &rarr;</a>
+      </p>
+    </div>
+  </Section>
+
+  <!-- Who This Is For -->
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-6">Who This Is For</p>
+      <div class="space-y-4">
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Running Google Ads but unsure if it's working</strong> — Get an objective second opinion</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Burned by a previous agency</strong> — See exactly what they should have been doing</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Considering Google Ads for the first time</strong> — Understand the landscape before you invest</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Spending on ads AND SEO</strong> — Find out if you're paying for clicks you could earn organically</p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Closing CTA -->
+  <section class="bg-navy text-cream py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-headline font-black tracking-tight text-cream">
+        Stop Guessing. Start Knowing.
+      </h2>
+      <p class="mt-4 text-lg font-body text-gray-light">
+        Every day of wasted ad spend is money that could have gone to keywords that actually convert. The free audit takes 2 minutes to request and delivers actionable insights within 48 hours.
+      </p>
+      <div class="mt-8">
+        <a
+          href="#get-your-free-google-ads-audit"
+          class="inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-8 py-4 text-sm"
+        >
+          Get Your Free Google Ads Audit Now &uarr;
+        </a>
+      </div>
+    </div>
+  </section>
+</LandingLayout>
+
+<script>
+  function initForms() {
+    document.querySelectorAll('.contact-form').forEach((form) => {
+      if ((form as HTMLFormElement).dataset.initialized) return;
+      (form as HTMLFormElement).dataset.initialized = 'true';
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const f = e.target as HTMLFormElement;
+        const submitText = f.querySelector('.submit-text') as HTMLElement;
+        const spinner = f.querySelector('.submit-spinner') as HTMLElement;
+        const status = f.querySelector('.form-status') as HTMLElement;
+        const button = f.querySelector('button[type="submit"]') as HTMLButtonElement;
+
+        submitText.classList.add('hidden');
+        spinner.classList.remove('hidden');
+        button.disabled = true;
+        status.classList.add('hidden');
+
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(Object.fromEntries(new FormData(f))),
+          });
+          const data = await res.json();
+
+          if (data.success) {
+            status.textContent = f.dataset.success || 'Message sent!';
+            status.className = 'form-status rounded-lg p-4 text-sm font-body bg-blue/10 text-blue border border-blue/20';
+            f.reset();
+          } else {
+            status.textContent = f.dataset.error || 'Something went wrong.';
+            status.className = 'form-status rounded-lg p-4 text-sm font-body bg-red-50 text-red-700 border border-red-200';
+          }
+        } catch {
+          status.textContent = f.dataset.error || 'Something went wrong.';
+          status.className = 'form-status rounded-lg p-4 text-sm font-body bg-red-50 text-red-700 border border-red-200';
+        }
+
+        submitText.classList.remove('hidden');
+        spinner.classList.add('hidden');
+        button.disabled = false;
+      });
+    });
+  }
+
+  initForms();
+  document.addEventListener('astro:after-swap', initForms);
+</script>

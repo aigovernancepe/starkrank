@@ -24,6 +24,9 @@ export default defineConfig({
     '/deutschland/': '/de/',
     '/services/ai-search-optimisation/': '/services/ai-search-optimization/',
     '/services/ai-search-optimisation': '/services/ai-search-optimization/',
+    '/free-aiso-score/': '/aiso-score/',
+    '/audits/free-google-ads-check/': '/free-google-ads-audit/',
+    '/audits/copywriting-ux-analysis/': '/free-copywriting-audit/',
   },
   integrations: [sitemap()],
   vite: {

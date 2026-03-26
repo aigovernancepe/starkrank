@@ -137,7 +137,7 @@ const ctaTitle = spoke?.data?.localCTA ?? tf('spoke.growBusiness', vars, locale)
 
 // CTA href: AISO pages use lead magnet, others use contact
 const aisoCtaHref: Record<string, string> = {
-  en: '/free-aiso-score/',
+  en: '/aiso-score/',
   pe: '/pe/apareces-en-google/',
   de: '/de/aiso-check/',
   'ch-de': '/ch-de/aiso-check/',
@@ -224,7 +224,7 @@ const tierData: Record<string, { freeLabel: string; auditLabel: string; rows: Ti
       { feature: '90-day roadmap', free: false, audit: true },
     ],
     freePrice: 'Free', auditPrice: 'From $3,000',
-    freeHref: '/free-aiso-score/', auditHref: '/contact/',
+    freeHref: '/aiso-score/', auditHref: '/contact/',
     freeCta: 'Get Free Score →', auditCta: 'Request Audit →',
   },
   pe: {
