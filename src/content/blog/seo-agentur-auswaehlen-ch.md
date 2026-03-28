@@ -1,8 +1,8 @@
 ---
 title: "SEO-Agentur auswählen: Worauf Schweizer Unternehmen achten sollten"
 description: "Woran Sie eine gute SEO-Agentur in der Schweiz erkennen — 8 Prüfkriterien inkl. nDSG-Kompetenz, Mehrsprachigkeit und persönlicher Betreuung."
-pubDate: 2026-04-16
-updatedDate: 2026-04-16
+pubDate: 2026-03-05
+updatedDate: 2026-03-05
 author: "Wilko Feye"
 tags: ["seo agentur schweiz", "seo agentur auswählen", "seo beratung schweiz"]
 locale: "ch-de"

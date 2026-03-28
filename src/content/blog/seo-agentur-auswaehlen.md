@@ -1,9 +1,9 @@
 ---
 title: "SEO-Agentur auswählen: Worauf Sie achten sollten"
 description: "Woran Sie eine gute SEO-Agentur erkennen — 8 Prüfkriterien, Warnsignale und was ein seriöser Dienstleister erklären können muss."
-pubDate: 2026-04-09
-updatedDate: 2026-04-09
-author: "Wilko Feye"
+pubDate: 2026-03-18
+updatedDate: 2026-03-18
+author: "Janko Feye"
 tags: ["seo agentur", "seo agentur auswählen", "seo dienstleister", "seo vergleich"]
 locale: "de"
 category: "SEO-Strategie"
