@@ -40,6 +40,7 @@ const blog = defineCollection({
     author: z.string().default('StarkRank'),
     tags: z.array(z.string()).optional(),
     locale: z.enum(['en', 'pe', 'de', 'ch-de']).default('en'),
+    category: z.string().optional(),
     ogImage: z.string().optional(),
     faq: z.array(faqItem).optional(),
   }),

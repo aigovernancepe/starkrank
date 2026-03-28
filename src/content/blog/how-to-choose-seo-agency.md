@@ -6,6 +6,7 @@ updatedDate: 2026-04-01
 author: "Wilko Feye"
 tags: ["seo agency", "agency selection", "seo red flags", "seo guide"]
 locale: "en"
+category: "SEO Strategy"
 ogImage: "/images/blog/how-to-choose-seo-agency.webp"
 faq:
   - question: "How long should I commit to a new SEO agency?"
@@ -20,16 +21,9 @@ faq:
     answer: "First, reclaim all account access. Second, audit for damage: check GSC for manual actions, review backlinks for spam, verify content isn't duplicated. Third, get a technical audit from a new agency before they start any work."
 ---
 
-# How to Choose an SEO Agency After Being Burned
-
 Yes, we published this on April Fools' Day. No, it's not a joke — though the SEO industry sometimes feels like one. If you're reading this, you've probably already paid an agency $1,000-3,000 a month for six months to a year and have nothing to show for it. No rankings. No leads. Maybe a few jargon-heavy reports you couldn't understand and a contract that was harder to cancel than a gym membership. You're not alone — bad SEO experiences are the industry's biggest marketing problem.
 
 This guide gives you a 10-point framework for vetting your next SEO agency. Not theory — specific questions, specific answers to demand, and specific red flags that should end the conversation immediately.
-
-[Get a Free AISO Score — See Where You Actually Stand →](/aiso-score/)
-
-Last updated: April 2026
-By [Wilko Feye](https://starkrank.com/about/), StarkRank
 
 ---
 
@@ -145,27 +139,3 @@ Use this 10-point framework. Ask every question. Demand specific answers. And if
 
 [Get Your Free AISO Score →](/aiso-score/) — See exactly where your SEO stands before talking to any agency.
 [Read: What Does SEO Cost? Pricing Guide 2026 →](/blog/seo-pricing-guide/)
-
----
-
-## FAQ
-
-### How long should I commit to a new SEO agency?
-
-A 90-day initial commitment is reasonable — long enough to see early results, short enough to limit risk. After 90 days, switch to month-to-month if the agency delivers. Avoid 12-month contracts with no performance clauses.
-
-### Should I hire a local SEO agency or a national one?
-
-For local businesses, an agency with local SEO expertise matters more than physical proximity. What matters is: do they understand Google Business Profile optimization, local pack ranking factors, and your specific vertical? A specialized remote agency typically outperforms a generalist local one.
-
-### What's a fair price for SEO services?
-
-For local businesses: $1,500-3,000/month for single-location, $3,000-5,000/month per location for multi-location. For e-commerce or national SEO: $3,000-10,000+/month depending on competition. Anything under $1,000/month is likely automated or offshore. See our full [SEO Pricing Guide 2026](/blog/seo-pricing-guide/).
-
-### Can I do SEO myself instead of hiring an agency?
-
-For basic technical SEO and Google Business Profile optimization — yes, if you have 5-10 hours/month. For competitive markets, content creation, link building, and AI search optimization — the expertise gap makes DIY impractical. Most business owners are better off focusing on their business and delegating SEO to specialists.
-
-### How do I recover from a bad SEO agency experience?
-
-First, reclaim all account access (Google Search Console, Analytics, GBP, domain registrar). Second, audit for damage: check Google Search Console for manual actions, review your backlink profile for spam links, and verify your content hasn't been duplicated. Third, get a technical audit from a new agency before they start any work — you need a clean baseline.

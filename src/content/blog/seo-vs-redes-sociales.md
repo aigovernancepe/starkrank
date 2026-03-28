@@ -6,6 +6,7 @@ updatedDate: 2026-01-22
 author: "Wilko Feye"
 tags: ["seo vs redes sociales", "marketing digital peru", "seo lima", "redes sociales"]
 locale: "pe"
+category: "Estrategia SEO"
 ogImage: "/images/pe/blog/seo-vs-redes-sociales.webp"
 faq:
   - question: "¿Las redes sociales están muertas?"
@@ -18,16 +19,9 @@ faq:
     answer: "Para lo básico sí, si tienes 5-10 horas al mes. Para mercados competitivos, la brecha de conocimiento hace que el SEO casero no sea práctico."
 ---
 
-# ¿SEO o Redes Sociales? Qué Funciona Mejor para tu Negocio
-
 Si tu negocio depende de Facebook e Instagram para conseguir clientes, no estás solo — la mayoría de empresas en Lima invierten todo su presupuesto de marketing en redes sociales. El problema es que las redes sociales te alquilan la atención: publicas hoy, mañana tu post desaparece. Google es diferente. Cuando alguien busca "clínica dental en Miraflores" o "abogado de divorcios en Lima," está listo para comprar — y tu página web puede aparecer en ese momento exacto, sin pagar por cada clic, durante meses o años.
 
 Esta guía compara SEO y redes sociales con datos reales para que decidas dónde invertir tu presupuesto.
-
-[¿Apareces en Google? Descúbrelo Gratis →](/pe/apareces-en-google/)
-
-Última actualización: Enero 2026
-Por [Wilko Feye](https://starkrank.com/about/), StarkRank
 
 ---
 
@@ -119,23 +113,3 @@ Las publicaciones de redes sociales NO aparecen en las respuestas de IA. Si la b
 
 [¿Apareces en Google? Descúbrelo Gratis →](/pe/apareces-en-google/)
 [¿Cuánto cuesta el SEO en Perú? →](/pe/blog/precios-seo-peru/)
-
----
-
-## Preguntas Frecuentes
-
-### ¿Las redes sociales están muertas?
-
-No — las redes sociales siguen siendo efectivas para construir marca, crear comunidad y publicidad pagada. Pero como canal de generación de clientes para negocios de servicios, son significativamente menos eficientes que el SEO.
-
-### ¿Cuánto tiempo tarda el SEO en dar resultados?
-
-La mayoría de negocios ven mejoras en posiciones de Google en 3-4 meses y aumento significativo de tráfico y consultas en 5-6 meses. A diferencia de las redes sociales, los resultados del SEO se acumulan — el mes 12 es dramáticamente mejor que el mes 3.
-
-### ¿Cuánto debo invertir en SEO vs redes sociales?
-
-Para negocios de servicios en Lima: 60-70% SEO, 20-30% publicidad en redes, 10% contenido orgánico en redes. Para negocios visuales (restaurantes, moda): 40% SEO, 40% publicidad en redes, 20% contenido orgánico. Mide de dónde vienen tus clientes antes de decidir.
-
-### ¿Puedo hacer SEO yo mismo?
-
-Para lo básico (optimizar tu Google Business Profile, subir fotos, responder reseñas) — sí, si tienes 5-10 horas al mes. Para mercados competitivos, creación de contenido y posicionamiento avanzado, la brecha de conocimiento hace que el SEO por cuenta propia no sea práctico para la mayoría de empresarios.

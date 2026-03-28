@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../ui/Section.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+import Breadcrumbs from '../ui/Breadcrumbs.astro';
+import Button from '../ui/Button.astro';
+import CTABanner from '../ui/CTABanner.astro';
+import Card from '../ui/Card.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface CTA {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  Content: any;
+  headings: { depth: number; slug: string; text: string }[];
+  relatedPosts?: CollectionEntry<'blog'>[];
+  ctaTitle?: string;
+  ctaSubtitle?: string;
+  primaryCTA?: CTA;
+  secondaryCTA?: CTA;
+  hreflangAlternate?: { hreflang: string; href: string };
+  schemas: Record<string, unknown>[];
+  breadcrumbs: { label: string; href: string }[];
+  locale?: string;
+  blogBasePath?: string;
+}
+
+const {
+  post,
+  Content,
+  headings,
+  relatedPosts = [],
+  ctaTitle,
+  ctaSubtitle,
+  primaryCTA = { label: 'Get Your Free AISO Score', href: '/aiso-score/' },
+  secondaryCTA = { label: 'Contact Us', href: '/contact/' },
+  hreflangAlternate,
+  schemas,
+  breadcrumbs,
+  locale = 'en',
+  blogBasePath = '/blog',
+} = Astro.props;
+
+const isPe = locale === 'pe';
+const tocHeadings = headings.filter((h) => h.depth === 2);
+const dateLocale = isPe ? 'es-PE' : 'en-US';
+const faqLabel = 'FAQ';
+const faqTitle = isPe ? 'Preguntas Frecuentes' : 'Frequently Asked Questions';
+const defaultCtaTitle = isPe
+  ? '¿Listo para crecer tu negocio?'
+  : 'Ready to Grow Your Business?';
+const defaultCtaSubtitle = isPe
+  ? 'Descubre cómo está tu presencia en Google y en búsquedas con inteligencia artificial.'
+  : 'Get a clear picture of where you stand in search — traditional and AI.';
+---
+
+<BaseLayout
+  title={`${post.data.title} — StarkRank${isPe ? ' Perú' : ''}`}
+  description={post.data.description}
+  locale={locale}
+  schema={schemas}
+>
+  {hreflangAlternate && (
+    <link slot="head" rel="alternate" hreflang={hreflangAlternate.hreflang} href={`https://starkrank.com${hreflangAlternate.href}`} />
+  )}
+
+  <!-- Hero -->
+  <Section bg="cream">
+    <Breadcrumbs items={breadcrumbs} />
+
+    {post.data.category && (
+      <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+        {post.data.category}
+      </span>
+    )}
+    <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+      {post.data.title}
+    </h1>
+    <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-3xl">
+      {post.data.description}
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <Button href={primaryCTA.href} variant="primary" size="lg">{primaryCTA.label}</Button>
+      <Button href={secondaryCTA.href} variant="ghost" size="lg">{secondaryCTA.label}</Button>
+    </div>
+
+    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+      <span>
+        {isPe ? 'Última actualización: ' : 'Last updated: '}
+        <time datetime={post.data.pubDate.toISOString()}>
+          {post.data.pubDate.toLocaleDateString(dateLocale, { year: 'numeric', month: 'long' })}
+        </time>
+      </span>
+      <span>
+        {isPe ? 'Por ' : 'By '}
+        <a href="/about/" class="text-blue hover:text-blue-light font-semibold">{post.data.author}</a>, StarkRank
+      </span>
+    </div>
+  </Section>
+
+  <!-- Main content + sidebar -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Article -->
+        <article class="lg:col-span-2 overflow-x-auto blog-prose">
+          <Content />
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-1">
+          <div class="lg:sticky lg:top-8 space-y-6">
+            {tocHeadings.length > 0 && (
+              <nav class="bg-cream border border-gray-light/40 rounded-lg p-6">
+                <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">
+                  {isPe ? 'En este artículo' : 'In this article'}
+                </p>
+                <ul class="space-y-2 list-none pl-0">
+                  {tocHeadings.map((h) => (
+                    <li class="before:hidden">
+                      <a href={`#${h.slug}`} class="text-sm font-body text-gray hover:text-blue transition-colors">
+                        {h.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
+
+            <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+              <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-3">
+                {isPe ? 'Evaluación gratuita' : 'Free Assessment'}
+              </p>
+              <p class="text-sm font-body text-gray mb-4">
+                {isPe
+                  ? '¿Tu negocio aparece en Google? Descúbrelo en 60 segundos.'
+                  : 'See where you stand in traditional and AI search — in 60 seconds.'}
+              </p>
+              <Button href={primaryCTA.href} variant="primary" size="md">{primaryCTA.label}</Button>
+            </div>
+
+            {relatedPosts.length > 0 && (
+              <div>
+                <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">
+                  {isPe ? 'Artículos relacionados' : 'Related Articles'}
+                </p>
+                <div class="space-y-3">
+                  {relatedPosts.map((related) => (
+                    <Card href={`${blogBasePath}/${related.id}/`}>
+                      <h4 class="text-sm font-headline font-bold text-navy">{related.data.title}</h4>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  {post.data.faq && post.data.faq.length > 0 && (
+    <Section bg="cream">
+      <SectionHeader label={faqLabel} title={faqTitle} />
+      <div class="max-w-3xl space-y-6">
+        {post.data.faq.map((item) => (
+          <details class="group bg-white border border-gray-light/40 rounded-lg">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer p-6 font-headline font-bold text-navy text-base md:text-lg select-none">
+              {item.question}
+              <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-sm font-body text-gray leading-relaxed">
+              {item.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </Section>
+  )}
+
+  <!-- Bottom CTA -->
+  <CTABanner bg="navy" title={ctaTitle ?? defaultCtaTitle} subtitle={ctaSubtitle ?? defaultCtaSubtitle}>
+    <Button href={primaryCTA.href} variant="primary" size="lg">{primaryCTA.label}</Button>
+    <Button href={secondaryCTA.href} variant="secondary" size="lg">{secondaryCTA.label}</Button>
+  </CTABanner>
+</BaseLayout>

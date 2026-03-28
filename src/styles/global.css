@@ -157,6 +157,160 @@
 }
 
 /* ----------------------------------------------------------------
+   Blog Prose Styles
+   ---------------------------------------------------------------- */
+
+.blog-prose {
+  font-family: var(--font-body);
+  color: var(--color-gray);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.blog-prose p {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.blog-prose p:first-child {
+  margin-top: 0;
+}
+
+/* Headings */
+.blog-prose h2 {
+  font-family: var(--font-headline);
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--color-navy);
+  letter-spacing: -0.025em;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .blog-prose h2 {
+    font-size: 1.875rem;
+  }
+}
+
+.blog-prose h3 {
+  font-family: var(--font-headline);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--color-navy);
+  letter-spacing: -0.015em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Inline styles */
+.blog-prose strong {
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+.blog-prose a {
+  color: var(--color-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.blog-prose a:hover {
+  color: var(--color-blue-light);
+}
+
+/* Lists */
+.blog-prose ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog-prose ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.625rem;
+}
+
+.blog-prose ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.625rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-blue);
+}
+
+.blog-prose ol {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog-prose ol li {
+  margin-bottom: 0.625rem;
+}
+
+.blog-prose ol li::marker {
+  color: var(--color-blue);
+  font-weight: 700;
+}
+
+/* Tables */
+.blog-prose table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-prose thead tr {
+  border-bottom: 2px solid color-mix(in srgb, var(--color-navy) 20%, transparent);
+}
+
+.blog-prose th {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  color: var(--color-navy);
+  text-align: left;
+  padding: 0.75rem 1rem;
+}
+
+.blog-prose td {
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-gray-light) 40%, transparent);
+}
+
+/* Blockquotes as callouts */
+.blog-prose blockquote {
+  border-left: 4px solid var(--color-blue);
+  background-color: color-mix(in srgb, var(--color-blue) 5%, transparent);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.blog-prose blockquote p {
+  margin: 0;
+  color: var(--color-dark);
+}
+
+/* Horizontal rules as section dividers */
+.blog-prose hr {
+  border: none;
+  border-top: 1px solid color-mix(in srgb, var(--color-gray-light) 30%, transparent);
+  margin: 2.5rem 0;
+}
+
+/* ----------------------------------------------------------------
    HubSpot Embedded Form Overrides
    ---------------------------------------------------------------- */
 
