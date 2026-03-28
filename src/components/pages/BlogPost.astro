@@ -22,7 +22,7 @@ interface Props {
   ctaSubtitle?: string;
   primaryCTA?: CTA;
   secondaryCTA?: CTA;
-  hreflangAlternate?: { hreflang: string; href: string };
+  hreflangAlternates?: { hreflang: string; href: string }[];
   schemas: Record<string, unknown>[];
   breadcrumbs: { label: string; href: string }[];
   locale?: string;
@@ -38,35 +38,47 @@ const {
   ctaSubtitle,
   primaryCTA = { label: 'Get Your Free AISO Score', href: '/aiso-score/' },
   secondaryCTA = { label: 'Contact Us', href: '/contact/' },
-  hreflangAlternate,
+  hreflangAlternates = [],
   schemas,
   breadcrumbs,
   locale = 'en',
   blogBasePath = '/blog',
 } = Astro.props;
 
+const isDe = locale === 'de' || locale === 'ch-de';
 const isPe = locale === 'pe';
 const tocHeadings = headings.filter((h) => h.depth === 2);
-const dateLocale = isPe ? 'es-PE' : 'en-US';
+
+const dateLocaleMap: Record<string, string> = { en: 'en-US', pe: 'es-PE', de: 'de-DE', 'ch-de': 'de-CH' };
+const dateLocale = dateLocaleMap[locale] ?? 'en-US';
+
 const faqLabel = 'FAQ';
-const faqTitle = isPe ? 'Preguntas Frecuentes' : 'Frequently Asked Questions';
-const defaultCtaTitle = isPe
-  ? '¿Listo para crecer tu negocio?'
-  : 'Ready to Grow Your Business?';
-const defaultCtaSubtitle = isPe
-  ? 'Descubre cómo está tu presencia en Google y en búsquedas con inteligencia artificial.'
-  : 'Get a clear picture of where you stand in search — traditional and AI.';
+const faqTitleMap: Record<string, string> = { en: 'Frequently Asked Questions', pe: 'Preguntas Frecuentes', de: 'Häufig gestellte Fragen', 'ch-de': 'Häufig gestellte Fragen' };
+const faqTitle = faqTitleMap[locale] ?? 'Frequently Asked Questions';
+
+const titleSuffixMap: Record<string, string> = { en: '', pe: ' Perú', de: '', 'ch-de': ' Schweiz' };
+const titleSuffix = titleSuffixMap[locale] ?? '';
+
+const updatedLabelMap: Record<string, string> = { en: 'Last updated: ', pe: 'Última actualización: ', de: 'Letzte Aktualisierung: ', 'ch-de': 'Letzte Aktualisierung: ' };
+const byLabelMap: Record<string, string> = { en: 'By ', pe: 'Por ', de: 'Von ', 'ch-de': 'Von ' };
+const tocLabelMap: Record<string, string> = { en: 'In this article', pe: 'En este artículo', de: 'In diesem Artikel', 'ch-de': 'In diesem Artikel' };
+const assessmentLabelMap: Record<string, string> = { en: 'Free Assessment', pe: 'Evaluación gratuita', de: 'Kostenlose Bewertung', 'ch-de': 'Kostenlose Bewertung' };
+const assessmentDescMap: Record<string, string> = { en: 'See where you stand in traditional and AI search — in 60 seconds.', pe: '¿Tu negocio aparece en Google? Descúbrelo en 60 segundos.', de: 'Wie steht Ihre Website in der klassischen und KI-Suche? In 60 Sekunden.', 'ch-de': 'Wie steht Ihre Website in der klassischen und KI-Suche? In 60 Sekunden.' };
+const relatedLabelMap: Record<string, string> = { en: 'Related Articles', pe: 'Artículos relacionados', de: 'Verwandte Artikel', 'ch-de': 'Verwandte Artikel' };
+
+const defaultCtaTitleMap: Record<string, string> = { en: 'Ready to Grow Your Business?', pe: '¿Listo para crecer tu negocio?', de: 'Bereit für mehr Sichtbarkeit?', 'ch-de': 'Bereit für mehr Sichtbarkeit?' };
+const defaultCtaSubtitleMap: Record<string, string> = { en: 'Get a clear picture of where you stand in search — traditional and AI.', pe: 'Descubre cómo está tu presencia en Google y en búsquedas con inteligencia artificial.', de: 'Sehen Sie, wo Sie in der klassischen und KI-Suche stehen.', 'ch-de': 'Sehen Sie, wo Sie in der klassischen und KI-Suche stehen.' };
 ---
 
 <BaseLayout
-  title={`${post.data.title} — StarkRank${isPe ? ' Perú' : ''}`}
+  title={`${post.data.title} — StarkRank${titleSuffix}`}
   description={post.data.description}
   locale={locale}
   schema={schemas}
 >
-  {hreflangAlternate && (
-    <link slot="head" rel="alternate" hreflang={hreflangAlternate.hreflang} href={`https://starkrank.com${hreflangAlternate.href}`} />
-  )}
+  {hreflangAlternates.map((alt) => (
+    <link slot="head" rel="alternate" hreflang={alt.hreflang} href={`https://starkrank.com${alt.href}`} />
+  ))}
 
   <!-- Hero -->
   <Section bg="cream">
@@ -91,13 +103,13 @@ const defaultCtaSubtitle = isPe
 
     <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
       <span>
-        {isPe ? 'Última actualización: ' : 'Last updated: '}
+        {updatedLabelMap[locale]}
         <time datetime={post.data.pubDate.toISOString()}>
           {post.data.pubDate.toLocaleDateString(dateLocale, { year: 'numeric', month: 'long' })}
         </time>
       </span>
       <span>
-        {isPe ? 'Por ' : 'By '}
+        {byLabelMap[locale]}
         <a href="/about/" class="text-blue hover:text-blue-light font-semibold">{post.data.author}</a>, StarkRank
       </span>
     </div>
@@ -118,7 +130,7 @@ const defaultCtaSubtitle = isPe
             {tocHeadings.length > 0 && (
               <nav class="bg-cream border border-gray-light/40 rounded-lg p-6">
                 <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">
-                  {isPe ? 'En este artículo' : 'In this article'}
+                  {tocLabelMap[locale]}
                 </p>
                 <ul class="space-y-2 list-none pl-0">
                   {tocHeadings.map((h) => (
@@ -134,12 +146,10 @@ const defaultCtaSubtitle = isPe
 
             <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
               <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-3">
-                {isPe ? 'Evaluación gratuita' : 'Free Assessment'}
+                {assessmentLabelMap[locale]}
               </p>
               <p class="text-sm font-body text-gray mb-4">
-                {isPe
-                  ? '¿Tu negocio aparece en Google? Descúbrelo en 60 segundos.'
-                  : 'See where you stand in traditional and AI search — in 60 seconds.'}
+                {assessmentDescMap[locale]}
               </p>
               <Button href={primaryCTA.href} variant="primary" size="md">{primaryCTA.label}</Button>
             </div>
@@ -147,7 +157,7 @@ const defaultCtaSubtitle = isPe
             {relatedPosts.length > 0 && (
               <div>
                 <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">
-                  {isPe ? 'Artículos relacionados' : 'Related Articles'}
+                  {relatedLabelMap[locale]}
                 </p>
                 <div class="space-y-3">
                   {relatedPosts.map((related) => (
@@ -187,7 +197,7 @@ const defaultCtaSubtitle = isPe
   )}
 
   <!-- Bottom CTA -->
-  <CTABanner bg="navy" title={ctaTitle ?? defaultCtaTitle} subtitle={ctaSubtitle ?? defaultCtaSubtitle}>
+  <CTABanner bg="navy" title={ctaTitle ?? defaultCtaTitleMap[locale]} subtitle={ctaSubtitle ?? defaultCtaSubtitleMap[locale]}>
     <Button href={primaryCTA.href} variant="primary" size="lg">{primaryCTA.label}</Button>
     <Button href={secondaryCTA.href} variant="secondary" size="lg">{secondaryCTA.label}</Button>
   </CTABanner>

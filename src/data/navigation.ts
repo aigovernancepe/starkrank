@@ -157,8 +157,8 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
   // Impressum (DE/CH-DE only)
   if (href === '/impressum/') return impressumPaths[locale] ?? null;
 
-  // Blog index
-  if (href === '/blog/') return `${localePrefix}/blog/`;
+  // Blog index (locales with their own blog)
+  if (href === '/blog/' && (locale === 'pe' || locale === 'de' || locale === 'ch-de')) return `${localePrefix}/blog/`;
 
   // Top-level /services/ link → locale homepage (shows pillar cards)
   if (href === '/services/') return `${localePrefix}/`;

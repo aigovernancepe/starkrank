@@ -54,12 +54,12 @@ const breadcrumbs = [
   { label: post.data.title, href: `/pe/blog/${post.id}/` },
 ];
 
-const enHreflangPairs: Record<string, string> = {
-  'seo-vs-redes-sociales': '/blog/seo-vs-social-media/',
-  'precios-seo-peru': '/blog/seo-pricing-guide/',
+const blogHreflangPairs: Record<string, Record<string, string>> = {
+  'seo-vs-redes-sociales': { 'en': '/blog/seo-vs-social-media/' },
+  'precios-seo-peru': { 'en': '/blog/seo-pricing-guide/', 'de': '/de/blog/seo-kosten/', 'de-CH': '/ch-de/blog/seo-kosten-schweiz/' },
 };
-const enPair = enHreflangPairs[post.id];
-const hreflangAlternate = enPair ? { hreflang: 'en', href: enPair } : undefined;
+const pairs = blogHreflangPairs[post.id] ?? {};
+const hreflangAlternates = Object.entries(pairs).map(([hreflang, href]) => ({ hreflang, href }));
 ---
 
 <BlogPost
@@ -69,7 +69,7 @@ const hreflangAlternate = enPair ? { hreflang: 'en', href: enPair } : undefined;
   relatedPosts={relatedPosts}
   schemas={schemas}
   breadcrumbs={breadcrumbs}
-  hreflangAlternate={hreflangAlternate}
+  hreflangAlternates={hreflangAlternates}
   locale="pe"
   blogBasePath="/pe/blog"
   primaryCTA={{ label: '¿Apareces en Google?', href: '/pe/apareces-en-google/' }}

@@ -1,11 +1,11 @@
 ---
-import BlogPost from '../../components/pages/BlogPost.astro';
+import BlogPost from '../../../components/pages/BlogPost.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts
-    .filter((post) => post.data.locale === 'en')
+    .filter((post) => post.data.locale === 'de')
     .map((post) => ({
       params: { slug: post.id },
       props: { post },
@@ -17,7 +17,7 @@ const { Content, headings } = await render(post);
 
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
-  .filter((p) => p.data.locale === 'en' && p.id !== post.id)
+  .filter((p) => p.data.locale === 'de' && p.id !== post.id)
   .filter((p) => p.data.tags?.some((t) => post.data.tags?.includes(t)))
   .slice(0, 3);
 
@@ -26,11 +26,12 @@ const articleSchema = {
   '@type': 'Article',
   headline: post.data.title,
   description: post.data.description,
+  inLanguage: 'de',
   datePublished: post.data.pubDate.toISOString(),
   ...(post.data.updatedDate && { dateModified: post.data.updatedDate.toISOString() }),
   author: { '@type': 'Person', name: post.data.author, url: 'https://starkrank.com/about/' },
   publisher: { '@id': 'https://starkrank.com/#organization' },
-  url: `https://starkrank.com/blog/${post.id}/`,
+  url: `https://starkrank.com/de/blog/${post.id}/`,
 };
 
 const schemas: Record<string, unknown>[] = [articleSchema];
@@ -48,16 +49,15 @@ if (post.data.faq?.length) {
 }
 
 const breadcrumbs = [
-  { label: 'Home', href: '/' },
-  { label: 'Blog', href: '/blog/' },
-  { label: post.data.title, href: `/blog/${post.id}/` },
+  { label: 'Startseite', href: '/de/' },
+  { label: 'Blog', href: '/de/blog/' },
+  { label: post.data.title, href: `/de/blog/${post.id}/` },
 ];
 
 const blogHreflangPairs: Record<string, Record<string, string>> = {
-  'seo-vs-social-media': { 'es-PE': '/pe/blog/seo-vs-redes-sociales/' },
-  'seo-pricing-guide': { 'es-PE': '/pe/blog/precios-seo-peru/', 'de': '/de/blog/seo-kosten/', 'de-CH': '/ch-de/blog/seo-kosten-schweiz/' },
-  'seo-vs-google-ads': { 'de': '/de/blog/seo-vs-google-ads-de/', 'de-CH': '/ch-de/blog/seo-vs-google-ads-ch/' },
-  'how-to-choose-seo-agency': { 'de': '/de/blog/seo-agentur-auswaehlen/', 'de-CH': '/ch-de/blog/seo-agentur-auswaehlen-ch/' },
+  'seo-kosten': { 'en': '/blog/seo-pricing-guide/', 'es-PE': '/pe/blog/precios-seo-peru/', 'de-CH': '/ch-de/blog/seo-kosten-schweiz/' },
+  'seo-vs-google-ads-de': { 'en': '/blog/seo-vs-google-ads/', 'de-CH': '/ch-de/blog/seo-vs-google-ads-ch/' },
+  'seo-agentur-auswaehlen': { 'en': '/blog/how-to-choose-seo-agency/', 'de-CH': '/ch-de/blog/seo-agentur-auswaehlen-ch/' },
 };
 const pairs = blogHreflangPairs[post.id] ?? {};
 const hreflangAlternates = Object.entries(pairs).map(([hreflang, href]) => ({ hreflang, href }));
@@ -71,4 +71,8 @@ const hreflangAlternates = Object.entries(pairs).map(([hreflang, href]) => ({ hr
   schemas={schemas}
   breadcrumbs={breadcrumbs}
   hreflangAlternates={hreflangAlternates}
+  locale="de"
+  blogBasePath="/de/blog"
+  primaryCTA={{ label: 'Kostenloser AISO-Check', href: '/de/aiso-check/' }}
+  secondaryCTA={{ label: 'Kontakt', href: '/de/kontakt/' }}
 />

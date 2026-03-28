@@ -1,8 +1,8 @@
 ---
 title: "¿Cuánto Cuesta el SEO en Perú? Guía de Precios 2026"
 description: "El SEO en Perú cuesta entre S/ 800 y S/ 5,000 al mes según tu negocio. Conoce qué incluye cada rango de precio y cómo evitar pagar de más."
-pubDate: 2026-05-14
-updatedDate: 2026-05-14
+pubDate: 2026-03-12
+updatedDate: 2026-03-12
 author: "Wilko Feye"
 tags: ["precios seo peru", "cuanto cuesta seo", "agencia seo lima", "seo precios"]
 locale: "pe"

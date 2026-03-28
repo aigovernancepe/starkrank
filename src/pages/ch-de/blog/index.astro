@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroSection from '../../../components/ui/HeroSection.astro';
+import Section from '../../../components/ui/Section.astro';
+import Card from '../../../components/ui/Card.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter((p) => p.data.locale === 'ch-de')
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<BaseLayout
+  title="Blog — StarkRank Schweiz"
+  description="Expertenwissen zu SEO, KI-Suchoptimierung und digitalem Wachstum für Schweizer Unternehmen."
+  locale="ch-de"
+>
+  <HeroSection headline="Blog" subheadline="Expertenwissen zu SEO, KI-Suche und digitalem Wachstum für Schweizer Unternehmen." />
+
+  <Section bg="cream">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {posts.map((post) => (
+        <Card href={`/ch-de/blog/${post.id}/`}>
+          <time class="text-xs font-label font-semibold uppercase tracking-wide text-blue">
+            {post.data.pubDate.toLocaleDateString('de-CH', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          <h3 class="mt-2 text-lg font-headline font-bold text-navy">{post.data.title}</h3>
+          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{post.data.description}</p>
+        </Card>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>
