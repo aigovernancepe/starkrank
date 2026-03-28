@@ -1,13 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Section from '../../components/ui/Section.astro';
-import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Section from '../../../components/ui/Section.astro';
+import Breadcrumbs from '../../../components/ui/Breadcrumbs.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts
-    .filter((post) => post.data.locale === 'en')
+    .filter((post) => post.data.locale === 'pe')
     .map((post) => ({
       params: { slug: post.id },
       props: { post },
@@ -22,11 +22,12 @@ const articleSchema = {
   '@type': 'Article',
   headline: post.data.title,
   description: post.data.description,
+  inLanguage: 'es-PE',
   datePublished: post.data.pubDate.toISOString(),
   ...(post.data.updatedDate && { dateModified: post.data.updatedDate.toISOString() }),
   author: { '@type': 'Person', name: post.data.author, url: 'https://starkrank.com/about/' },
   publisher: { '@id': 'https://starkrank.com/#organization' },
-  url: `https://starkrank.com/blog/${post.id}/`,
+  url: `https://starkrank.com/pe/blog/${post.id}/`,
 };
 
 const schemas: Record<string, unknown>[] = [articleSchema];
@@ -47,31 +48,32 @@ if (post.data.faq?.length) {
 }
 
 const breadcrumbs = [
-  { label: 'Home', href: '/' },
-  { label: 'Blog', href: '/blog/' },
-  { label: post.data.title, href: `/blog/${post.id}/` },
+  { label: 'Inicio', href: '/pe/' },
+  { label: 'Blog', href: '/pe/blog/' },
+  { label: post.data.title, href: `/pe/blog/${post.id}/` },
 ];
 
-const blogHreflangPairs: Record<string, string> = {
-  'seo-vs-social-media': '/pe/blog/seo-vs-redes-sociales/',
-  'seo-pricing-guide': '/pe/blog/precios-seo-peru/',
+const enHreflangPairs: Record<string, string> = {
+  'seo-vs-redes-sociales': '/blog/seo-vs-social-media/',
+  'precios-seo-peru': '/blog/seo-pricing-guide/',
 };
-const pePair = blogHreflangPairs[post.id];
+const enPair = enHreflangPairs[post.id];
 ---
 
 <BaseLayout
-  title={`${post.data.title} — StarkRank`}
+  title={`${post.data.title} — StarkRank Perú`}
   description={post.data.description}
+  locale="pe"
   schema={schemas}
 >
-  {pePair && (
-    <link slot="head" rel="alternate" hreflang="es-PE" href={`https://starkrank.com${pePair}`} />
+  {enPair && (
+    <link slot="head" rel="alternate" hreflang="en" href={`https://starkrank.com${enPair}`} />
   )}
   <Section bg="cream">
     <Breadcrumbs items={breadcrumbs} />
     <article class="max-w-3xl">
       <time class="text-xs font-label font-semibold uppercase tracking-wide text-blue">
-        {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        {post.data.pubDate.toLocaleDateString('es-PE', { year: 'numeric', month: 'long', day: 'numeric' })}
       </time>
       <h1 class="mt-3 text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
         {post.data.title}

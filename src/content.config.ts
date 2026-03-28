@@ -41,6 +41,7 @@ const blog = defineCollection({
     tags: z.array(z.string()).optional(),
     locale: z.enum(['en', 'pe', 'de', 'ch-de']).default('en'),
     ogImage: z.string().optional(),
+    faq: z.array(faqItem).optional(),
   }),
 });
 
