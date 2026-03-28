@@ -76,7 +76,7 @@ El SEO supera a las redes sociales para:
 - **Negocios de servicios** — Clínicas, estudios de abogados, contadores, cerrajeros, empresas de mudanzas. La gente busca estos servicios en Google cuando los necesita. Nadie busca un abogado en TikTok.
 - **Negocios que quieren aparecer en Google Maps** — El "local pack" de Google (los 3 resultados con mapa) genera llamadas y visitas directas. No hay equivalente en redes sociales.
 - **Empresas B2B** — Si vendes a otras empresas, tus clientes investigan por Google, no por Instagram.
-- **Negocios que quieren exportar o vender a gringos** — Si tu objetivo es el mercado norteamericano, el SEO en inglés es obligatorio. Los gringos buscan en Google, no en tu Facebook peruano.
+- **Negocios que quieren exportar o vender a extranjeros** — Si tu objetivo es el mercado norteamericano, el SEO en inglés es obligatorio. Los extranjeros buscan en Google, no en tu Facebook peruano.
 - **Cualquier negocio pensando en el futuro** — ChatGPT, Google AI y Perplexity ya están cambiando cómo la gente encuentra negocios. Estas plataformas de IA usan contenido web, no posts de redes sociales.
 
 ---

@@ -90,7 +90,7 @@ Cada local adicional necesita su propio perfil de Google Maps, páginas de ubica
 
 Negocios de salud, legal y financiero requieren contenido más cuidadoso con regulaciones específicas. Esto agrega costo pero es indispensable.
 
-### 5. Objetivos: ¿Lima o también gringos?
+### 5. Objetivos: ¿Lima o también extranjeros?
 
 Si quieres posicionarte solo en Lima, el costo es menor. Si tu objetivo es vender al mercado norteamericano (SEO en inglés), necesitas una estrategia bilingüe con precios de mercado US.
 
