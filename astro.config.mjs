@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import react from '@astrojs/react';
 
 export default defineConfig({
   site: 'https://starkrank.com',
@@ -28,7 +29,7 @@ export default defineConfig({
     '/audits/free-google-ads-check/': '/free-google-ads-audit/',
     '/audits/copywriting-ux-analysis/': '/free-copywriting-audit/',
   },
-  integrations: [sitemap()],
+  integrations: [react(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },

@@ -27,6 +27,9 @@ jobs:
           path: .
           node-version: '22'
           package-manager: npm
+        env:
+          PUBLIC_HUBSPOT_PORTAL_ID: ${{ secrets.PUBLIC_HUBSPOT_PORTAL_ID }}
+          PUBLIC_HUBSPOT_SCHNELLCHECK_FORM_ID: ${{ secrets.PUBLIC_HUBSPOT_SCHNELLCHECK_FORM_ID }}
 
   deploy:
     needs: build
