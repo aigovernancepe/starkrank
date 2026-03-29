@@ -27,7 +27,7 @@ sectors:
   - name: "Messe- und Eventdienstleister"
     description: "Unternehmen, die rund um die Hannover Messe werben, brauchen effiziente saisonale Kampagnen. Ein Audit vor der Messesaison stellt sicher, dass kein Budget in irrelevante Suchanfragen fliesst."
   - name: "Automotive-Zulieferer"
-    description: "Die VW-Nähe bringt spezialisierte Zulieferer hervor, die über Google Ads neue OEM- und Tier-1-Kontakte gewinnen. Ein Audit prüft, ob die Kampagnen auf die richtigen Entscheider und Suchintentionen ausgerichtet sind."
+    description: "Die Nähe zur Automobilbranche bringt spezialisierte Zulieferer hervor, die über Google Ads neue OEM- und Tier-1-Kontakte gewinnen. Ein Audit prüft, ob die Kampagnen auf die richtigen Entscheider und Suchintentionen ausgerichtet sind."
 deliverables:
   - "Vollständiges Konto-Audit mit Score pro Kategorie (Struktur, Keywords, Gebote, Tracking, Wettbewerb)"
   - "Suchbegriff-Analyse mit identifizierter Budgetverschwendung und negativen Keyword-Empfehlungen"
