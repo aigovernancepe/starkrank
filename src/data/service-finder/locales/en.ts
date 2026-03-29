@@ -136,7 +136,7 @@ export const en: ServiceFinderLocale = {
       secondaryCta: {
         text: 'Not sure where to start? Get a free AISO Score \u2014 our AI search readiness diagnostic.',
         buttonText: 'Get My Free AISO Score',
-        link: '/aiso-score/',
+        link: '/free-aiso-score/',
       },
       emailCapture: {
         heading: 'Want these recommendations sent to your inbox?',
