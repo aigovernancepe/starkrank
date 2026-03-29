@@ -159,9 +159,9 @@ function localizeLabel(label: string): string {
 </header>
 
 <script>
-  const toggle = document.getElementById('mobile-menu-toggle');
-  const menu = document.getElementById('mobile-menu');
-  toggle?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden');
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('#mobile-menu-toggle')) {
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    }
   });
 </script>

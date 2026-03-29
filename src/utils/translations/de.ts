@@ -13,7 +13,7 @@ export const de: Record<string, string> = {
   'pillar.content-copywriting': 'Content & Texterstellung',
   'pillar.data-web': 'Daten & Web',
 
-  'hero.headline': 'Datengetriebenes Wachstum für das KI-Zeitalter',
+  'hero.headline': 'Datenbasiertes Wachstum für das KI-Zeitalter',
   'hero.subheadline': 'Wir optimieren Ihre Marke für Suchmaschinen, KI-Plattformen und die Menschen dahinter.',
   'hero.cta': 'Jetzt starten',
 
