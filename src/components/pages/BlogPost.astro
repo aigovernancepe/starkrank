@@ -6,6 +6,7 @@ import Breadcrumbs from '../ui/Breadcrumbs.astro';
 import Button from '../ui/Button.astro';
 import CTABanner from '../ui/CTABanner.astro';
 import Card from '../ui/Card.astro';
+import ServiceFinderCta from '../ui/ServiceFinderCta.astro';
 import type { CollectionEntry } from 'astro:content';
 
 interface CTA {
@@ -173,6 +174,9 @@ const defaultCtaSubtitleMap: Record<string, string> = { en: 'Get a clear picture
       </div>
     </div>
   </section>
+
+  <!-- Service Finder CTA -->
+  <ServiceFinderCta locale={locale} />
 
   <!-- FAQ -->
   {post.data.faq && post.data.faq.length > 0 && (
