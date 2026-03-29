@@ -69,7 +69,6 @@ export const routingRules: RoutingRule[] = [
   ]},
   { questionId: 'Q-U5', services: [
     { serviceId: 'roi-analytics', weight: 1 },
-    { serviceId: 'monthly-reporting', weight: 0.5 },
   ]},
 
   // Role: Owner / Startup
@@ -281,12 +280,22 @@ export function computeResults(
     }
   }
 
-  return Object.entries(scores)
+  const sorted = Object.entries(scores)
     .map(([serviceId, score]) => ({ serviceId, score }))
     .filter(s => {
       const svc = services.find(d => d.id === s.serviceId);
       return svc?.links[market] != null;
     })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 3);
+    .sort((a, b) => b.score - a.score);
+
+  const seenUrls = new Set<string>();
+  const deduped: ScoredService[] = [];
+  for (const result of sorted) {
+    const url = services.find(s => s.id === result.serviceId)?.links[market];
+    if (url && seenUrls.has(url)) continue;
+    if (url) seenUrls.add(url);
+    deduped.push(result);
+  }
+
+  return deduped.slice(0, 3);
 }
