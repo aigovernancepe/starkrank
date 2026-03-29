@@ -27,7 +27,7 @@ sectors:
   - name: "IT und Softwareunternehmen"
     description: "Der wachsende Technologiestandort Hannover bringt SaaS- und IT-Dienstleister hervor, die über Google Ads und LinkedIn gleichzeitig Sichtbarkeit bei Enterprise-Kunden aufbauen müssen."
   - name: "Logistik und Automotive"
-    description: "Die Nähe zu VW und die zentrale Lage machen Hannover zum Logistik-Knotenpunkt. Kanalübergreifende Kampagnen erreichen Flottenmanager, Einkäufer und Logistikentscheider dort, wo sie recherchieren."
+    description: "Die Nähe zur Automobilbranche und die zentrale Lage machen Hannover zum Logistik-Knotenpunkt. Kanalübergreifende Kampagnen erreichen Flottenmanager, Einkäufer und Logistikentscheider dort, wo sie recherchieren."
 deliverables:
   - "Cross-Channel-Audit mit plattformspezifischer Ausgaben- und Performance-Analyse"
   - "Budgetallokationsmodell mit empfohlener monatlicher Verteilung über Google, Meta und LinkedIn"

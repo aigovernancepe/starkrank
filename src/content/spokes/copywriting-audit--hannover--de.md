@@ -22,7 +22,7 @@ sectors:
   - name: "IT und B2B-Software"
     description: "SaaS-Anbieter und IT-Dienstleister in Hannover stehen im nationalen Wettbewerb um KI-Sichtbarkeit. Ein Text-Audit deckt auf, wo die Content-Strategie Lücken hat."
   - name: "Automotive und Mobilität"
-    description: "Im VW-Umfeld konkurrieren Zulieferer um digitale Sichtbarkeit. Unser Audit bewertet, ob technische Inhalte den Qualitätsstandards entsprechen, die Google und KI-Modelle erwarten."
+    description: "Im Automotive-Umfeld konkurrieren Zulieferer um digitale Sichtbarkeit. Unser Audit bewertet, ob technische Inhalte den Qualitätsstandards entsprechen, die Google und KI-Modelle erwarten."
   - name: "Beratung und Professional Services"
     description: "Für Beratungsfirmen und Dienstleister in Hannover ist Thought Leadership essentiell. Der Text-Audit zeigt, ob vorhandene Inhalte diese Positionierung tatsächlich stützen."
 sectorsTitle: "Welche Branchen in Hannover sollten ihren Content dringend auditieren?"

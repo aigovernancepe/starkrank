@@ -28,7 +28,7 @@ sectors:
   - name: "IT und Softwareunternehmen"
     description: "B2B-SaaS- und IT-Dienstleister am wachsenden Technologiestandort Hannover konkurrieren um Sichtbarkeit bei KI-gestützten Evaluierungen."
   - name: "Logistik und Automotive"
-    description: "Die Nähe zu VW und die zentrale Lage machen Hannover zum Logistik-Hub. Unternehmen werden zunehmend über KI-Suche verglichen."
+    description: "Die Nähe zur Automobilbranche und die zentrale Lage machen Hannover zum Logistik-Hub. Unternehmen werden zunehmend über KI-Suche verglichen."
 deliverables:
   - "Vollständige AISO-Score-Analyse mit Bewertung pro Dimension und Branchenvergleich"
   - "Überprüfung des Zugangs für GPTBot, ClaudeBot und PerplexityBot auf Ihrer Infrastruktur"

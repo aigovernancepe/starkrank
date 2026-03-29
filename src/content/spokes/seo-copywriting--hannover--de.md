@@ -20,7 +20,7 @@ highlights:
     description: "SEO-Texte, die nicht nur ranken, sondern konvertieren. Klare CTAs, logische Nutzerführung und eine Tonalität, die B2B-Entscheider im Mittelstand anspricht."
 sectors:
   - name: "Automotive und Zulieferer"
-    description: "SEO-Texte für die Automobilindustrie rund um Hannover und das VW-Ökosystem: Produktseiten, technische Beschreibungen und Zulieferer-Profile, die bei Einkäufern gefunden werden."
+    description: "SEO-Texte für die Automobilindustrie rund um Hannover und das Automotive-Ökosystem: Produktseiten, technische Beschreibungen und Zulieferer-Profile, die bei Einkäufern gefunden werden."
   - name: "Maschinenbau und Industrie"
     description: "Fachtexte für Maschinenbauer und Industrieunternehmen, die komplexe Produkte verständlich und suchmaschinenoptimiert darstellen — von Datenblättern bis zu Anwendungsberichten."
   - name: "IT und Digitale Dienstleistungen"

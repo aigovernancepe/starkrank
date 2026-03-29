@@ -26,7 +26,7 @@ sectors:
   - name: "IT und B2B-Software"
     description: "SaaS-Anbieter und IT-Unternehmen am Standort Hannover positionieren sich durch Thought-Leadership-Platzierungen in Computerwoche, Heise und weiteren Tech-Medien."
   - name: "Logistik und Automotive"
-    description: "Im VW-Umfeld und an Deutschlands zentralem Logistik-Knotenpunkt generiert strategische Fachpresse-Arbeit qualifizierte Aufmerksamkeit bei Entscheidern der Branche."
+    description: "Im Automotive-Umfeld und an Deutschlands zentralem Logistik-Knotenpunkt generiert strategische Fachpresse-Arbeit qualifizierte Aufmerksamkeit bei Entscheidern der Branche."
 sectorsTitle: "Welche Branchen in Hannover profitieren am stärksten von digitaler PR?"
 deliverables:
   - "Medienlandschaftsanalyse mit Mapping der relevantesten Fach- und Regionalmedien für Ihren Standort Hannover"

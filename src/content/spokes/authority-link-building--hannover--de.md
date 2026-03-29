@@ -26,7 +26,7 @@ sectors:
   - name: "Beratung und Professional Services"
     description: "Thought-Leadership-Links aus Wirtschaftsmedien und Branchenpublikationen stärken die Positionierung von Beratungsfirmen und Dienstleistern am Standort Hannover."
   - name: "Automotive und Mobilität"
-    description: "Im VW-Ökosystem und der niedersächsischen Automobilzuliefererindustrie gibt es spezialisierte Fachportale, Verbände und Medien, die hochwertige Linkquellen darstellen."
+    description: "Im Automotive-Ökosystem und der niedersächsischen Automobilzuliefererindustrie gibt es spezialisierte Fachportale, Verbände und Medien, die hochwertige Linkquellen darstellen."
 sectorsTitle: "Für welche Branchen in Hannover ist strategischer Linkaufbau entscheidend?"
 deliverables:
   - "Vollständiges Backlink-Audit mit Bewertung bestehender Links nach Autorität, Relevanz und Risiko"

@@ -24,7 +24,7 @@ sectors:
   - name: "IT und B2B-Software"
     description: "CTO, IT-Leiter, Projektmanager: B2B-Software-Entscheider in Hannover haben klar definierte Evaluierungsprozesse. Unsere Personas bilden jeden Schritt ab."
   - name: "Automotive und Zulieferer"
-    description: "Im VW-Umfeld und darüber hinaus: Zielgruppenprofile für Einkäufer und Qualitätsmanager in der Automobilzuliefererkette, die über digitale Kanäle recherchieren."
+    description: "Im Automotive-Umfeld und darüber hinaus: Zielgruppenprofile für Einkäufer und Qualitätsmanager in der Automobilzuliefererkette, die über digitale Kanäle recherchieren."
   - name: "Logistik und Supply Chain"
     description: "Logistikentscheider am Knotenpunkt Hannover: Persona-Entwicklung für Spediteure, Supply-Chain-Manager und Lagerlogistik-Verantwortliche."
 sectorsTitle: "Für welche Branchen in Hannover lohnt sich eine professionelle Zielgruppenanalyse?"
