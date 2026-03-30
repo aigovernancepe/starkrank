@@ -10,9 +10,11 @@
         portalId: '148108624',
         formId: '5c38981a-8f6a-4a5f-95e3-fc1658431b53',
         target: '#hs-form-contact',
-        onFormReady: function($form) {
-          var input = $form[0].querySelector('input[name="lead_source_page"]');
-          if (input) input.value = window.location.pathname;
+        onFormReady: function() {
+          setTimeout(function() {
+            var input = document.querySelector('#hs-form-contact input[name="lead_source_page"]');
+            if (input) input.value = window.location.pathname;
+          }, 100);
         }
       });
     }

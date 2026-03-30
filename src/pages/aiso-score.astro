@@ -124,9 +124,11 @@ const upsellDimensions = [
                 portalId: '148108624',
                 formId: '74d6466f-fe1c-498d-b6e2-1829ffa22695',
                 target: '#hs-form-aiso-score',
-                onFormReady: function($form) {
-                  var input = $form[0].querySelector('input[name="lead_source_page"]');
-                  if (input) input.value = window.location.pathname;
+                onFormReady: function() {
+                  setTimeout(function() {
+                    var input = document.querySelector('#hs-form-aiso-score input[name="lead_source_page"]');
+                    if (input) input.value = window.location.pathname;
+                  }, 100);
                 }
               });
             }

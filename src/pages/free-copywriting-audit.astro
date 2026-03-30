@@ -122,9 +122,11 @@ const auditDimensions = [
                 portalId: '148108624',
                 formId: '87ca0529-4d11-40cb-a147-470ae8d50cd1',
                 target: '#hs-form-copywriting-audit',
-                onFormReady: function($form) {
-                  var input = $form[0].querySelector('input[name="lead_source_page"]');
-                  if (input) input.value = window.location.pathname;
+                onFormReady: function() {
+                  setTimeout(function() {
+                    var input = document.querySelector('#hs-form-copywriting-audit input[name="lead_source_page"]');
+                    if (input) input.value = window.location.pathname;
+                  }, 100);
                 }
               });
             }

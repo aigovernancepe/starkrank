@@ -124,9 +124,11 @@ const waMessage = encodeURIComponent('Hola, quiero saber si mi negocio aparece e
                 portalId: '148108624',
                 formId: 'fb10550c-1787-408e-a638-f21350f82ef3',
                 target: '#hs-form-pe-google',
-                onFormReady: function($form) {
-                  var input = $form[0].querySelector('input[name="lead_source_page"]');
-                  if (input) input.value = window.location.pathname;
+                onFormReady: function() {
+                  setTimeout(function() {
+                    var input = document.querySelector('#hs-form-pe-google input[name="lead_source_page"]');
+                    if (input) input.value = window.location.pathname;
+                  }, 100);
                 }
               });
             }

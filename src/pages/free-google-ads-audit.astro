@@ -128,9 +128,11 @@ const auditAreas = [
                 portalId: '148108624',
                 formId: '00c78f95-47e8-4194-a7fd-ed881883cfbf',
                 target: '#hs-form-ads-audit',
-                onFormReady: function($form) {
-                  var input = $form[0].querySelector('input[name="lead_source_page"]');
-                  if (input) input.value = window.location.pathname;
+                onFormReady: function() {
+                  setTimeout(function() {
+                    var input = document.querySelector('#hs-form-ads-audit input[name="lead_source_page"]');
+                    if (input) input.value = window.location.pathname;
+                  }, 100);
                 }
               });
             }

@@ -104,9 +104,11 @@ const upsellDimensions = [
                 portalId: '148108624',
                 formId: '13684617-92bc-405e-98e5-739c474ff8fa',
                 target: '#hs-form-ch-de-aiso-check',
-                onFormReady: function($form) {
-                  var input = $form[0].querySelector('input[name="lead_source_page"]');
-                  if (input) input.value = window.location.pathname;
+                onFormReady: function() {
+                  setTimeout(function() {
+                    var input = document.querySelector('#hs-form-ch-de-aiso-check input[name="lead_source_page"]');
+                    if (input) input.value = window.location.pathname;
+                  }, 100);
                 }
               });
             }
