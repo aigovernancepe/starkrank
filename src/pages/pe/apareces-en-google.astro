@@ -115,25 +115,7 @@ const waMessage = encodeURIComponent('Hola, quiero saber si mi negocio aparece e
       <!-- Form — above fold on mobile (order-1), right on desktop (lg:order-2) -->
       <div id="revisa-gratis" class="order-1 lg:order-2 bg-white border border-gray-light/40 rounded-lg p-6 md:p-8 shadow-lg">
         <h2 class="text-xl md:text-2xl font-headline font-black text-navy mb-6">Revisa tu visibilidad en Google — Gratis</h2>
-        <div id="hs-form-pe-google"></div>
-        <script is:inline>
-          window.addEventListener('load', function() {
-            if (window.hbspt) {
-              hbspt.forms.create({
-                region: 'eu1',
-                portalId: '148108624',
-                formId: 'fb10550c-1787-408e-a638-f21350f82ef3',
-                target: '#hs-form-pe-google',
-                onFormReady: function() {
-                  setTimeout(function() {
-                    var input = document.querySelector('#hs-form-pe-google input[name="lead_source_page"]');
-                    if (input) input.value = window.location.pathname;
-                  }, 100);
-                }
-              });
-            }
-          });
-        </script>
+        <div class="hs-form-frame" data-region="eu1" data-form-id="fb10550c-1787-408e-a638-f21350f82ef3" data-portal-id="148108624"></div>
       </div>
     </div>
   </Section>

@@ -113,25 +113,7 @@ const auditDimensions = [
       <!-- Form -->
       <div id="get-your-free-copywriting-audit" class="bg-white border border-gray-light/40 rounded-lg p-8 shadow-lg">
         <h2 class="text-2xl font-headline font-black text-navy mb-6">Get Your Free Copywriting Audit</h2>
-        <div id="hs-form-copywriting-audit"></div>
-        <script is:inline>
-          window.addEventListener('load', function() {
-            if (window.hbspt) {
-              hbspt.forms.create({
-                region: 'eu1',
-                portalId: '148108624',
-                formId: '87ca0529-4d11-40cb-a147-470ae8d50cd1',
-                target: '#hs-form-copywriting-audit',
-                onFormReady: function() {
-                  setTimeout(function() {
-                    var input = document.querySelector('#hs-form-copywriting-audit input[name="lead_source_page"]');
-                    if (input) input.value = window.location.pathname;
-                  }, 100);
-                }
-              });
-            }
-          });
-        </script>
+        <div class="hs-form-frame" data-region="eu1" data-form-id="87ca0529-4d11-40cb-a147-470ae8d50cd1" data-portal-id="148108624"></div>
       </div>
     </div>
   </Section>

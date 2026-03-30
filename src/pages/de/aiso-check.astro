@@ -95,25 +95,7 @@ const upsellDimensions = [
       <!-- Form -->
       <div id="kostenlose-erstbewertung-anfordern" class="bg-white border border-gray-light/40 rounded-lg p-6 md:p-8 shadow-lg">
         <h2 class="text-xl md:text-2xl font-headline font-black text-navy mb-6">Kostenlose Erstbewertung anfordern</h2>
-        <div id="hs-form-de-aiso-check"></div>
-        <script is:inline>
-          window.addEventListener('load', function() {
-            if (window.hbspt) {
-              hbspt.forms.create({
-                region: 'eu1',
-                portalId: '148108624',
-                formId: '13684617-92bc-405e-98e5-739c474ff8fa',
-                target: '#hs-form-de-aiso-check',
-                onFormReady: function() {
-                  setTimeout(function() {
-                    var input = document.querySelector('#hs-form-de-aiso-check input[name="lead_source_page"]');
-                    if (input) input.value = window.location.pathname;
-                  }, 100);
-                }
-              });
-            }
-          });
-        </script>
+        <div class="hs-form-frame" data-region="eu1" data-form-id="13684617-92bc-405e-98e5-739c474ff8fa" data-portal-id="148108624"></div>
       </div>
     </div>
   </Section>

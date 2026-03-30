@@ -115,25 +115,7 @@ const upsellDimensions = [
       <!-- Form -->
       <div id="get-your-free-aiso-score" class="bg-white border border-gray-light/40 rounded-lg p-8 shadow-lg">
         <h2 class="text-2xl font-headline font-black text-navy mb-6">Get Your Free AISO Score</h2>
-        <div id="hs-form-aiso-score"></div>
-        <script is:inline>
-          window.addEventListener('load', function() {
-            if (window.hbspt) {
-              hbspt.forms.create({
-                region: 'eu1',
-                portalId: '148108624',
-                formId: '74d6466f-fe1c-498d-b6e2-1829ffa22695',
-                target: '#hs-form-aiso-score',
-                onFormReady: function() {
-                  setTimeout(function() {
-                    var input = document.querySelector('#hs-form-aiso-score input[name="lead_source_page"]');
-                    if (input) input.value = window.location.pathname;
-                  }, 100);
-                }
-              });
-            }
-          });
-        </script>
+        <div class="hs-form-frame" data-region="eu1" data-form-id="74d6466f-fe1c-498d-b6e2-1829ffa22695" data-portal-id="148108624"></div>
       </div>
     </div>
   </Section>
