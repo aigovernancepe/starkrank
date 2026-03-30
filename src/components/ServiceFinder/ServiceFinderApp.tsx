@@ -227,7 +227,9 @@ export default function ServiceFinderApp({ locale, market }: Props) {
             emailCapture={locale.steps.result.emailCapture}
             startOverLabel={locale.steps.result.startOver}
             role={state.role}
+            roleLabel={locale.steps.role.options.find(o => o.id === state.role)?.label ?? state.role ?? ''}
             industry={state.industry}
+            industryLabel={locale.steps.industry.options.find(o => o.id === state.industry)?.label ?? state.industry ?? ''}
             selectedQuestions={state.selectedQuestions}
             onReset={reset}
             onCtaClick={onCtaClick}

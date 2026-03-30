@@ -1,4 +1,20 @@
 ---
 ---
 
-<div class="hs-form-frame" data-region="eu1" data-form-id="5c38981a-8f6a-4a5f-95e3-fc1658431b53" data-portal-id="148108624"></div>
+<div id="hs-form-contact"></div>
+<script is:inline>
+  window.addEventListener('load', function() {
+    if (window.hbspt) {
+      hbspt.forms.create({
+        region: 'eu1',
+        portalId: '148108624',
+        formId: '5c38981a-8f6a-4a5f-95e3-fc1658431b53',
+        target: '#hs-form-contact',
+        onFormReady: function($form) {
+          var input = $form[0].querySelector('input[name="lead_source_page"]');
+          if (input) input.value = window.location.pathname;
+        }
+      });
+    }
+  });
+</script>

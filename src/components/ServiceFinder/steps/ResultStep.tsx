@@ -19,7 +19,9 @@ interface Props {
   };
   startOverLabel: string;
   role: string | null;
+  roleLabel: string;
   industry: string | null;
+  industryLabel: string;
   selectedQuestions: string[];
   onReset: () => void;
   onCtaClick: (serviceId: string, ctaType: string) => void;
@@ -29,7 +31,7 @@ interface Props {
 export default function ResultStep({
   heading, subheading, results, market, serviceCards,
   secondaryCta, emailCapture, startOverLabel,
-  role, industry, selectedQuestions,
+  role, roleLabel, industry, industryLabel, selectedQuestions,
   onReset, onCtaClick, onEmailSubmit,
 }: Props) {
   const [emailOpen, setEmailOpen] = useState(false);
@@ -57,12 +59,8 @@ export default function ResultStep({
           fields: [
             { name: 'email', value: formData.email || '' },
             { name: 'firstname', value: formData.firstname || '' },
-            { name: 'phone', value: formData.phone || '' },
-            { name: 'service_finder_role', value: role || '' },
-            { name: 'service_finder_industry', value: industry || '' },
-            { name: 'service_finder_questions', value: selectedQuestions.join(', ') },
-            { name: 'service_finder_market', value: market },
-            { name: 'service_finder_results', value: results.map(r => r.serviceId).join(', ') },
+            { name: 'service_finder_data', value: JSON.stringify({ role, role_label: roleLabel, industry, industry_label: industryLabel, questions: selectedQuestions, market, results: results.map(r => r.serviceId), completed: new Date().toISOString() }) },
+            { name: 'lead_source_page', value: window.location.pathname },
           ],
           context: {
             pageUri: window.location.href,
