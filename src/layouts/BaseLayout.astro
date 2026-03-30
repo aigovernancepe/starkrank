@@ -103,6 +103,16 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
+    <!-- Set lead_source_page URL param for HubSpot hidden field pre-population -->
+    <script is:inline>
+      (function() {
+        var url = new URL(window.location);
+        if (!url.searchParams.has('lead_source_page')) {
+          url.searchParams.set('lead_source_page', window.location.pathname);
+          history.replaceState(null, '', url);
+        }
+      })();
+    </script>
     <!-- HubSpot Forms -->
     <script is:inline src="https://js-eu1.hsforms.net/forms/embed/148108624.js" defer></script>
 
@@ -147,15 +157,5 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     )}
     <!-- HubSpot Tracking Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148108624.js"></script>
-    <!-- Set lead_source_page on HubSpot contact after any form submission -->
-    <script is:inline>
-      window.addEventListener('message', function(event) {
-        if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
-          var _hsq = window._hsq = window._hsq || [];
-          _hsq.push(['identify', { lead_source_page: window.location.pathname }]);
-          _hsq.push(['trackPageView']);
-        }
-      });
-    </script>
   </body>
 </html>
