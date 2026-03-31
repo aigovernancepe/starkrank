@@ -1,6 +1,6 @@
 ---
 interface Props {
-  type: 'organization' | 'localBusiness' | 'service' | 'website' | 'article';
+  type: 'organization' | 'localBusiness' | 'service' | 'website' | 'article' | 'person';
   data?: Record<string, unknown>;
 }
 
@@ -74,13 +74,23 @@ function buildSchema(type: string, data: Record<string, unknown>) {
       description: data.description,
       datePublished: data.pubDate,
       dateModified: data.updatedDate ?? data.pubDate,
-      author: {
-        '@type': 'Organization',
-        name: 'StarkRank',
-      },
+      author: data.authorSlug
+        ? { '@id': `${site}/#person-${data.authorSlug}` }
+        : { '@type': 'Organization', name: 'StarkRank' },
       publisher: { '@id': `${site}/#organization` },
       url: data.url ?? `${site}${Astro.url.pathname}`,
       ...data,
+    }),
+
+    person: () => ({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': `${site}/#person-${data.slug ?? 'author'}`,
+      name: data.name,
+      ...(data.jobTitle && { jobTitle: data.jobTitle }),
+      ...(data.url && { url: data.url }),
+      ...(data.sameAs && { sameAs: data.sameAs }),
+      worksFor: { '@id': `${site}/#organization` },
     }),
   };
 

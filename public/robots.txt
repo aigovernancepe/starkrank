@@ -3,6 +3,9 @@ Allow: /
 Sitemap: https://starkrank.com/sitemap-index.xml
 
 # AI Search Crawlers — explicitly allowed
+User-agent: Bingbot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
