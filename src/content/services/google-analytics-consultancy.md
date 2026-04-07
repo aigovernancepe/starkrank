@@ -1,7 +1,7 @@
 ---
 title: "Google Analytics Consultancy"
 slug: "google-analytics-consultancy"
-description: "Expert GA4 implementation, Consent Mode v2 integration, and analytics consultancy that turns raw data into actionable marketing intelligence. StarkRank ensures your measurement foundation is privacy-compliant, AI-aware, and built to connect activity to outcomes."
+description: "Expert GA4 implementation, Consent Mode v2 integration, and analytics consultancy. Turn raw data into actionable, privacy-compliant marketing intelligence."
 pillar: "data-web"
 isPillarHub: false
 updatedDate: 2026-03-23

@@ -1,7 +1,7 @@
 ---
 title: "Digital PR Strategy"
 slug: "digital-pr-strategy"
-description: "Strategic digital PR that builds brand authority, earns high-value media coverage, and reinforces your entity profile for AI citation. StarkRank secures press placements that drive both search visibility and trust signals for generative AI platforms."
+description: "Strategic digital PR that builds brand authority, earns high-value media coverage, and reinforces your entity profile for AI citation and search visibility."
 pillar: "authority-pr"
 isPillarHub: true
 updatedDate: 2026-03-23

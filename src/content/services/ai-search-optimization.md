@@ -2,7 +2,7 @@
 title: "AI Search Optimization"
 slug: "ai-search-optimization"
 updatedDate: 2026-03-25
-description: "Optimize your brand's visibility across AI-powered search engines like ChatGPT, Perplexity, and Google AI Overviews. StarkRank ensures your business is surfaced, cited, and recommended by the platforms reshaping how people find answers."
+description: "Optimize visibility across AI search engines like ChatGPT, Perplexity, and Google AI Overviews. Ensure your business is surfaced, cited, and recommended."
 pillar: "search-ai-intelligence"
 isPillarHub: true
 features:

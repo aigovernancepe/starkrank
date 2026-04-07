@@ -2,7 +2,7 @@
 title: "Multi-Location SEO"
 slug: "multi-location-seo"
 updatedDate: 2026-03-26
-description: "Consistent rankings across every location. Per-location GBP management, unique city pages, centralized review management, NAP audits, and per-location ROI reporting."
+description: "Consistent rankings across every location. Per-location GBP management, unique city pages, centralized review management, NAP audits, and ROI reporting."
 pillar: "search-ai-intelligence"
 isPillarHub: false
 features:

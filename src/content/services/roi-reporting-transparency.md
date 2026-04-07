@@ -1,7 +1,7 @@
 ---
 title: "ROI Reporting & Transparency"
 slug: "roi-reporting-transparency"
-description: "Clear, honest reporting that connects marketing spend to business outcomes — not vanity metrics. StarkRank's ROI reporting service delivers custom dashboards, multi-touch attribution, and strategic recommendations that show exactly what is working and where to invest next."
+description: "Clear, honest reporting that connects marketing spend to business outcomes — not vanity metrics. Custom dashboards, multi-touch attribution, and insight."
 pillar: "data-web"
 isPillarHub: false
 updatedDate: 2026-03-23

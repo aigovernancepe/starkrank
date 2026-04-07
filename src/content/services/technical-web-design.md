@@ -1,7 +1,7 @@
 ---
 title: "Technical Web Design"
 slug: "technical-web-design"
-description: "SEO-first website design and architecture that forms the foundation of your digital presence. StarkRank builds fast, accessible, AI-ready websites engineered for Core Web Vitals performance, structured data, and conversion from day one."
+description: "SEO-first website design engineered for Core Web Vitals, structured data, and AI readiness. Fast, accessible sites built to rank and convert from day one."
 pillar: "data-web"
 isPillarHub: true
 updatedDate: 2026-03-23

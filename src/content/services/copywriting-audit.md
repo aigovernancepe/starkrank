@@ -1,7 +1,7 @@
 ---
 title: "Copywriting Audit"
 slug: "copywriting-audit"
-description: "A thorough review of your existing website copy to identify gaps in messaging, search optimisation, AI citability, and conversion potential. StarkRank pinpoints exactly where your content is falling short and how to fix it."
+description: "A thorough review of your website copy to identify gaps in messaging, search optimisation, AI citability, and conversion — with a clear plan to fix it."
 pillar: "content-copywriting"
 isPillarHub: false
 updatedDate: 2026-03-23

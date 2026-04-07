@@ -1,7 +1,7 @@
 ---
 title: "Performance Web Development"
 slug: "performance-web-development"
-description: "Speed-focused web development that delivers measurable Core Web Vitals improvements. StarkRank remediates performance issues and builds optimised front-ends that load fast, rank higher, and qualify for AI Overview inclusion."
+description: "Speed-focused web development delivering measurable Core Web Vitals improvements. Fast-loading front-ends that rank higher and qualify for AI Overviews."
 pillar: "data-web"
 isPillarHub: false
 updatedDate: 2026-03-23

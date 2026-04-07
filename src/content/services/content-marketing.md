@@ -1,7 +1,7 @@
 ---
 title: "Content Marketing"
 slug: "content-marketing"
-description: "Strategic content creation for the AI era. StarkRank develops data-informed content programmes that build topical authority, earn AI citations, and drive sustainable organic growth across search engines and AI platforms."
+description: "Strategic content for the AI era. Data-informed content programmes that build topical authority, earn AI citations, and drive organic growth across search."
 pillar: "content-copywriting"
 isPillarHub: true
 updatedDate: 2026-03-23

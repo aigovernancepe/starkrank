@@ -1,7 +1,7 @@
 ---
 title: "Authority Link Building"
 slug: "authority-link-building"
-description: "Earn high-quality, editorially placed backlinks that strengthen your domain authority, drive referral traffic, and build the entity architecture AI platforms need to cite your brand. StarkRank focuses on relevance, trust, and sustainable growth."
+description: "Earn editorially placed backlinks that strengthen domain authority, drive referral traffic, and build the entity signals AI platforms need to cite your brand."
 pillar: "authority-pr"
 isPillarHub: false
 updatedDate: 2026-03-23

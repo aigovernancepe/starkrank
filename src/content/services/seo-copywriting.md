@@ -1,7 +1,7 @@
 ---
 title: "SEO Copywriting"
 slug: "seo-copywriting"
-description: "Persuasive, search-optimised copy that ranks in traditional search, gets cited by AI platforms, and converts readers into customers. StarkRank's SEO copywriting blends entity-based keyword strategy with compelling storytelling."
+description: "Persuasive, search-optimised copy that ranks in traditional search, gets cited by AI platforms, and converts — blending entity strategy with storytelling."
 pillar: "content-copywriting"
 isPillarHub: false
 updatedDate: 2026-03-23

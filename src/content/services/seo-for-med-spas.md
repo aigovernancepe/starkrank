@@ -2,7 +2,7 @@
 title: "SEO for Med Spas"
 slug: "seo-for-med-spas"
 updatedDate: 2026-03-26
-description: "More clients from Google and AI search. HIPAA-compliant, FDA-safe med spa SEO covering GBP optimization, treatment-specific content, review management, provider credentialing, and AI search optimization."
+description: "More clients from Google and AI search. HIPAA-compliant med spa SEO covering GBP optimization, treatment content, review management, and AI search strategy."
 pillar: "search-ai-intelligence"
 isPillarHub: false
 features:

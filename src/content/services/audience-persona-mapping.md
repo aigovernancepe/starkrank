@@ -1,7 +1,7 @@
 ---
 title: "Audience Persona Mapping"
 slug: "audience-persona-mapping"
-description: "Define and understand your ideal customers with detailed, data-backed audience personas. StarkRank's persona mapping ensures every piece of content and every campaign speaks directly to the people who drive your business."
+description: "Define your ideal customers with data-backed audience personas. Ensure every piece of content and every campaign speaks directly to the people who matter."
 pillar: "content-copywriting"
 isPillarHub: false
 updatedDate: 2026-03-23

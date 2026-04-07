@@ -2,7 +2,7 @@
 title: "SEO for Home Services"
 slug: "seo-for-home-services"
 updatedDate: 2026-03-26
-description: "More leads from Google and AI search. Home service SEO covering GBP optimization, emergency pages, review management, seasonal content strategy, and AI search optimization for plumbers, HVAC, electricians, and contractors."
+description: "More leads from Google and AI search. Home service SEO covering GBP optimization, emergency pages, review management, and seasonal content strategies."
 pillar: "search-ai-intelligence"
 isPillarHub: false
 features:
