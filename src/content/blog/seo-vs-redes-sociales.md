@@ -1,5 +1,5 @@
 ---
-title: "¿SEO o Redes Sociales? Qué Funciona Mejor para tu Negocio"
+title: "¿SEO o Redes Sociales? Qué Funciona Mejor"
 description: "Tu negocio depende de Facebook y WhatsApp, pero Google trae clientes que ya buscan lo que vendes. Compara SEO vs redes sociales con datos reales."
 pubDate: 2026-01-22
 updatedDate: 2026-01-22
