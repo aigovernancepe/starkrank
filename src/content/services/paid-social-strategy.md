@@ -1,7 +1,7 @@
 ---
 title: "Paid Social Strategy"
 slug: "paid-social-strategy"
-description: "Strategic paid social campaigns across Meta, LinkedIn, and TikTok that reach the right audiences and drive measurable results. StarkRank builds social advertising programmes that complement your wider performance marketing mix."
+description: "Strategic paid social campaigns across Meta, LinkedIn, and TikTok that reach the right audiences and deliver measurable results for your business growth."
 pillar: "performance-media"
 isPillarHub: false
 updatedDate: 2026-03-23
