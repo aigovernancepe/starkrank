@@ -1,7 +1,7 @@
 ---
 title: "Performance Ads Management"
 slug: "performance-ads-management"
-description: "End-to-end management of paid advertising campaigns engineered for measurable ROI. StarkRank combines data-driven targeting with creative excellence to deliver profitable growth across search, social, and display channels."
+description: "End-to-end paid advertising management engineered for measurable ROI. Data-driven targeting and creative excellence across search, social, and display channels."
 pillar: "performance-media"
 isPillarHub: true
 updatedDate: 2026-03-23
