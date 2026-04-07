@@ -1,0 +1,49 @@
+name: IndexNow — Submit URLs to Bing
+
+on:
+  workflow_run:
+    workflows: ["Deploy to GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Fetch sitemap and submit to IndexNow
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          echo "Fetching sitemap..."
+          URLS=$(curl -s https://starkrank.com/sitemap-0.xml \
+            | grep -oP '(?<=<loc>)[^<]+')
+
+          URL_COUNT=$(echo "$URLS" | wc -l | tr -d ' ')
+          echo "Found $URL_COUNT URLs to submit"
+
+          # Build JSON array of URLs
+          URL_JSON=$(echo "$URLS" | jq -R -s 'split("\n") | map(select(length > 0))')
+
+          echo "Submitting to IndexNow..."
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+            "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"host\": \"starkrank.com\",
+              \"key\": \"$INDEXNOW_KEY\",
+              \"keyLocation\": \"https://starkrank.com/$INDEXNOW_KEY.txt\",
+              \"urlList\": $URL_JSON
+            }")
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+
+          echo "Response code: $HTTP_CODE"
+          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 300 ]; then
+            echo "Successfully submitted $URL_COUNT URLs to IndexNow"
+          else
+            echo "Submission failed with HTTP $HTTP_CODE"
+            echo "$BODY"
+            exit 1
+          fi
