@@ -2,7 +2,7 @@
 title: "Local SEO Consulting"
 slug: "local-seo-consulting"
 updatedDate: 2026-03-22
-description: "Dominate local search results, Google Maps, and AI-powered local recommendations. StarkRank helps location-based businesses attract more footfall and local enquiries through optimised local visibility across every platform that matters."
+description: "Dominate local search, Google Maps, and AI-powered recommendations. StarkRank helps location-based businesses attract more footfall and local enquiries."
 pillar: "search-ai-intelligence"
 isPillarHub: false
 features:
