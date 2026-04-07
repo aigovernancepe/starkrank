@@ -2,7 +2,7 @@
 title: "Technical SEO Audit"
 slug: "technical-seo-audit"
 updatedDate: 2026-03-22
-description: "A comprehensive technical audit that uncovers the crawl, indexation, and performance issues holding your site back — for both traditional and AI search engines. StarkRank delivers a prioritised roadmap to resolve technical debt and unlock organic growth."
+description: "A technical audit that uncovers crawl, indexation, and performance issues holding your site back — with a prioritised roadmap for traditional and AI search."
 pillar: "search-ai-intelligence"
 isPillarHub: false
 features:
