@@ -6,9 +6,11 @@ interface Props {
   align?: 'left' | 'center';
   /** Optional background image URL for city spoke pages. Navy overlay is applied automatically. */
   backgroundImage?: string;
+  /** Alt text for the background image. Required when backgroundImage is set. */
+  backgroundImageAlt?: string;
 }
 
-const { headline, subheadline, align = 'center', backgroundImage } = Astro.props;
+const { headline, subheadline, align = 'center', backgroundImage, backgroundImageAlt } = Astro.props;
 const alignClass = align === 'center' ? 'text-center items-center' : 'text-left items-start';
 
 // Parse **accent** markers into spans
@@ -24,7 +26,7 @@ function renderHeadline(text: string): string {
     <div class="absolute inset-0">
       <img
         src={backgroundImage}
-        alt=""
+        alt={backgroundImageAlt || ''}
         class="w-full h-full object-cover"
         loading="eager"
       />
