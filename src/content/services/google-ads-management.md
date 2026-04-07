@@ -1,7 +1,7 @@
 ---
 title: "Google Ads Management"
 slug: "google-ads-management"
-description: "Expert Google Ads and Microsoft Ads (PPC) management that maximises your return on every dollar spent. StarkRank builds and optimises Search, Shopping, Display, and YouTube campaigns aligned to your revenue targets."
+description: "Expert Google Ads and Microsoft Ads management that maximises return on every dollar. Search, Shopping, Display, and YouTube campaigns built for revenue."
 pillar: "performance-media"
 isPillarHub: false
 updatedDate: 2026-03-23
