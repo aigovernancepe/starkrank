@@ -4,7 +4,7 @@ slug: "authority-link-building"
 description: "Earn editorially placed backlinks that strengthen domain authority, drive referral traffic, and build the entity signals AI platforms need to cite your brand."
 pillar: "authority-pr"
 isPillarHub: false
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "Authority gap analysis against competitors"
   - "Editorial outreach and content placement"

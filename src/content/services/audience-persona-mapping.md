@@ -4,7 +4,7 @@ slug: "audience-persona-mapping"
 description: "Define your ideal customers with data-backed audience personas. Ensure every piece of content and every campaign speaks directly to the people who matter."
 pillar: "content-copywriting"
 isPillarHub: false
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "Data-driven demographic and psychographic research"
   - "Search behaviour and AI prompt pattern analysis"

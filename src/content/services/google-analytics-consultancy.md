@@ -4,7 +4,7 @@ slug: "google-analytics-consultancy"
 description: "Expert GA4 implementation, Consent Mode v2 integration, and analytics consultancy. Turn raw data into actionable, privacy-compliant marketing intelligence."
 pillar: "data-web"
 isPillarHub: false
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "GA4 implementation, audit, and migration"
   - "Consent Mode v2 and cookieless measurement setup"

@@ -4,7 +4,7 @@ slug: "google-ads-audit"
 description: "An in-depth Google Ads account review to identify wasted spend, missed opportunities, and quick wins — with a clear action plan to improve profitability."
 pillar: "performance-media"
 isPillarHub: false
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "Account structure and campaign architecture review"
   - "Wasted spend and negative keyword gap analysis"

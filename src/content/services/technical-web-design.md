@@ -4,7 +4,7 @@ slug: "technical-web-design"
 description: "SEO-first website design engineered for Core Web Vitals, structured data, and AI readiness. Fast, accessible sites built to rank and convert from day one."
 pillar: "data-web"
 isPillarHub: true
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "SEO-first information architecture and URL structure"
   - "Core Web Vitals performance by design (LCP, INP, CLS)"

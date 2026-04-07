@@ -1,7 +1,7 @@
 ---
 title: "AI Search Optimization"
 slug: "ai-search-optimization"
-updatedDate: 2026-03-25
+updatedDate: 2026-04-07
 description: "Optimize visibility across AI search engines like ChatGPT, Perplexity, and Google AI Overviews. Ensure your business is surfaced, cited, and recommended."
 pillar: "search-ai-intelligence"
 isPillarHub: true

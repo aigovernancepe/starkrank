@@ -4,7 +4,7 @@ slug: "seo-copywriting"
 description: "Persuasive, search-optimised copy that ranks in traditional search, gets cited by AI platforms, and converts — blending entity strategy with storytelling."
 pillar: "content-copywriting"
 isPillarHub: false
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "Entity-based keyword targeting and search intent mapping"
   - "Answer-first page and blog copy for search and AI"

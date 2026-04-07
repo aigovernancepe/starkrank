@@ -4,7 +4,7 @@ slug: "content-marketing"
 description: "Strategic content for the AI era. Data-informed content programmes that build topical authority, earn AI citations, and drive organic growth across search."
 pillar: "content-copywriting"
 isPillarHub: true
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "Content strategy and editorial planning"
   - "Topical authority mapping and content hub architecture"

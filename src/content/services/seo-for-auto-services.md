@@ -1,7 +1,7 @@
 ---
 title: "SEO for Auto Services"
 slug: "seo-for-auto-services"
-updatedDate: 2026-03-26
+updatedDate: 2026-04-07
 description: "More customers from Google and AI search. Auto service SEO covering GBP optimization, before/after galleries, review management, and AI search optimization."
 pillar: "search-ai-intelligence"
 isPillarHub: false

@@ -1,7 +1,7 @@
 ---
 title: "SEO for Law Firms"
 slug: "seo-for-law-firms"
-updatedDate: 2026-03-26
+updatedDate: 2026-04-07
 description: "More qualified clients from Google and AI search. Bar-compliant legal SEO with GBP optimization, practice area content, reviews, and AI search strategy."
 pillar: "search-ai-intelligence"
 isPillarHub: false

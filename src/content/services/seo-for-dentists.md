@@ -1,7 +1,7 @@
 ---
 title: "SEO for Dentists"
 slug: "seo-for-dentists"
-updatedDate: 2026-03-26
+updatedDate: 2026-04-07
 description: "More patients from Google and AI search. HIPAA-compliant dental SEO with GBP optimization, procedure-specific content, reviews, and AI search strategy."
 pillar: "search-ai-intelligence"
 isPillarHub: false

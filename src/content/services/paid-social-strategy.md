@@ -4,7 +4,7 @@ slug: "paid-social-strategy"
 description: "Strategic paid social campaigns across Meta, LinkedIn, and TikTok that reach the right audiences and deliver measurable results for your business growth."
 pillar: "performance-media"
 isPillarHub: false
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "Platform selection and channel strategy"
   - "Audience building and lookalike modelling"

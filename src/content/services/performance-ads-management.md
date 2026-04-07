@@ -4,7 +4,7 @@ slug: "performance-ads-management"
 description: "End-to-end paid advertising management engineered for measurable ROI. Data-driven targeting and creative excellence across search, social, and display channels."
 pillar: "performance-media"
 isPillarHub: true
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "Full-funnel paid media strategy"
   - "Cross-channel campaign management (Google, Meta, LinkedIn, TikTok)"

@@ -1,7 +1,7 @@
 ---
 title: "SEO for Home Services"
 slug: "seo-for-home-services"
-updatedDate: 2026-03-26
+updatedDate: 2026-04-07
 description: "More leads from Google and AI search. Home service SEO covering GBP optimization, emergency pages, review management, and seasonal content strategies."
 pillar: "search-ai-intelligence"
 isPillarHub: false

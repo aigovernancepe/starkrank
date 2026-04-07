@@ -4,7 +4,7 @@ slug: "performance-web-development"
 description: "Speed-focused web development delivering measurable Core Web Vitals improvements. Fast-loading front-ends that rank higher and qualify for AI Overviews."
 pillar: "data-web"
 isPillarHub: false
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "Core Web Vitals remediation (LCP, INP, CLS)"
   - "Server-side rendering and pre-rendering implementation"

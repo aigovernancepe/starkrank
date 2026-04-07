@@ -4,7 +4,7 @@ slug: "copywriting-audit"
 description: "A thorough review of your website copy to identify gaps in messaging, search optimisation, AI citability, and conversion — with a clear plan to fix it."
 pillar: "content-copywriting"
 isPillarHub: false
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "Page-by-page copy effectiveness and readability review"
   - "Entity coverage and semantic gap analysis"

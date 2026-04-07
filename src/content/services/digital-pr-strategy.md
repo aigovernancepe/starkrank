@@ -4,7 +4,7 @@ slug: "digital-pr-strategy"
 description: "Strategic digital PR that builds brand authority, earns high-value media coverage, and reinforces your entity profile for AI citation and search visibility."
 pillar: "authority-pr"
 isPillarHub: true
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "Data-led PR campaign ideation and narrative development"
   - "Journalist outreach and relationship management"

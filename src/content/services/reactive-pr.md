@@ -4,7 +4,7 @@ slug: "reactive-pr"
 description: "Capitalise on breaking news and trending topics to earn timely, high-authority media coverage. Position your brand as the expert source journalists seek."
 pillar: "authority-pr"
 isPillarHub: false
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "Real-time news, trend, and journalist request monitoring"
   - "Rapid expert commentary and quote drafting"

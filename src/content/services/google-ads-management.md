@@ -4,7 +4,7 @@ slug: "google-ads-management"
 description: "Expert Google Ads and Microsoft Ads management that maximises return on every dollar. Search, Shopping, Display, and YouTube campaigns built for revenue."
 pillar: "performance-media"
 isPillarHub: false
-updatedDate: 2026-03-23
+updatedDate: 2026-04-07
 features:
   - "Google Ads and Microsoft Ads (Bing) campaign management"
   - "Keyword research and negative keyword refinement"

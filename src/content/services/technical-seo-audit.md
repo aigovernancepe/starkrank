@@ -1,7 +1,7 @@
 ---
 title: "Technical SEO Audit"
 slug: "technical-seo-audit"
-updatedDate: 2026-03-22
+updatedDate: 2026-04-07
 description: "A technical audit that uncovers crawl, indexation, and performance issues holding your site back — with a prioritised roadmap for traditional and AI search."
 pillar: "search-ai-intelligence"
 isPillarHub: false
