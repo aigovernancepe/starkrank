@@ -47,4 +47,4 @@ The shift toward AI-powered search changes what effective copy looks like. Tradi
 
 We write every page with dual optimisation: traditional search ranking factors like keyword placement, internal linking, and heading hierarchy, combined with AI-readiness factors like answer-first formatting, question-based headings, and structured data that establishes your Fort Lauderdale business as a known entity.
 
-This approach pairs directly with our [Content Marketing](/content-marketing-fort-lauderdale/) service for ongoing content production and our [Copywriting Audit](/copywriting-audit-fort-lauderdale/) for evaluating your existing pages before any rewriting begins.
+This approach pairs directly with our [Content Marketing](/content-fort-lauderdale/) service for ongoing content production and our [Copywriting Audit](/copy-audit-fort-lauderdale/) for evaluating your existing pages before any rewriting begins.

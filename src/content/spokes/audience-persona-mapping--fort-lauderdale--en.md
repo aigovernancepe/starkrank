@@ -47,4 +47,4 @@ Without defined personas, content marketing and paid advertising default to broa
 
 The practical impact is measurable. Ad campaigns targeted to specific persona segments consistently deliver lower cost-per-acquisition than broad campaigns. Content written for a defined audience earns higher engagement and conversion rates than generic pages.
 
-We build persona mapping as a foundation for [Content Marketing](/content-marketing-fort-lauderdale/) strategy and [SEO Copywriting](/seo-copywriting-fort-lauderdale/) production, ensuring every piece of content has a defined audience and a clear role in the buying journey.
+We build persona mapping as a foundation for [Content Marketing](/content-fort-lauderdale/) strategy and [SEO Copywriting](/copywriting-fort-lauderdale/) production, ensuring every piece of content has a defined audience and a clear role in the buying journey.

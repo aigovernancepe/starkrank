@@ -48,4 +48,4 @@ Analytics tools show you traffic and bounce rates, but they cannot tell you why 
 
 We cross-reference your content against Broward County search data to identify mismatches between what your pages say and what your customers search for. The output is a scored report with a prioritised action plan — not a generic best-practices document.
 
-The audit findings feed directly into our [SEO Copywriting](/seo-copywriting-fort-lauderdale/) service for page rewrites and our [Content Marketing](/content-marketing-fort-lauderdale/) service for filling the topic gaps the audit uncovers.
+The audit findings feed directly into our [SEO Copywriting](/copywriting-fort-lauderdale/) service for page rewrites and our [Content Marketing](/content-fort-lauderdale/) service for filling the topic gaps the audit uncovers.

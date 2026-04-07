@@ -49,4 +49,4 @@ Tourism drives a significant portion of Fort Lauderdale's economy, and search vo
 
 For marine businesses, this means publishing charter comparison guides ahead of winter season. For home service companies, it means hurricane preparedness content before storm season and outdoor living guides ahead of dry season. The editorial calendar becomes a revenue planning tool, not just a publishing schedule.
 
-We pair content strategy with [SEO Copywriting](/seo-copywriting-fort-lauderdale/) to ensure every page is structured for both search engines and AI platforms, and coordinate with [Audience Persona Mapping](/audience-persona-mapping-fort-lauderdale/) to match content topics to your highest-value customer segments in Broward County.
+We pair content strategy with [SEO Copywriting](/copywriting-fort-lauderdale/) to ensure every page is structured for both search engines and AI platforms, and coordinate with [Audience Persona Mapping](/persona-mapping-fort-lauderdale/) to match content topics to your highest-value customer segments in Broward County.
