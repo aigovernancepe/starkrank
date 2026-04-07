@@ -1,7 +1,7 @@
 ---
 title: "Google Ads Audit"
 slug: "google-ads-audit"
-description: "An in-depth review of your existing Google Ads account to identify wasted spend, missed opportunities, and quick wins. StarkRank delivers a clear action plan to improve campaign efficiency and profitability."
+description: "An in-depth Google Ads account review to identify wasted spend, missed opportunities, and quick wins — with a clear action plan to improve profitability."
 pillar: "performance-media"
 isPillarHub: false
 updatedDate: 2026-03-23
