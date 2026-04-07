@@ -46,7 +46,7 @@ The audit report includes:
 
 ## How is this different from the free assessment?
 
-Our [free copywriting assessment](/audits/copywriting-ux-analysis/) reviews your key pages at a high level — identifying the biggest opportunities and giving you a clear picture of improvement potential.
+Our [free copywriting assessment](/free-copywriting-audit/) reviews your key pages at a high level — identifying the biggest opportunities and giving you a clear picture of improvement potential.
 
 The full audit goes page-by-page: entity gap analysis, AI citability scoring, E-E-A-T evaluation, and a detailed rewrite roadmap with estimated impact per page. It is the right choice for businesses with 20+ pages of existing content who want a comprehensive diagnostic before investing in new content.
 

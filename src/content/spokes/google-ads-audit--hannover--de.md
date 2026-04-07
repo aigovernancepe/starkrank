@@ -40,7 +40,7 @@ deliverables:
 
 Viele B2B-Unternehmen in Hannover betreiben Google Ads seit Jahren, ohne das Konto jemals unabhängig prüfen zu lassen. Die häufigsten Probleme: zu breite Keywords, fehlende negative Keywords, veraltete Anzeigentexte und ein Conversion-Tracking, das nicht den tatsächlichen Geschäftswert misst. Im Mittelstand, wo PPC-Budgets (Pay-per-Click — Bezahlung pro Klick) sorgfältig eingesetzt werden müssen, kann ein Audit schnell fünfstellige Einsparungen pro Jahr aufdecken.
 
-Unser Google Ads Audit ist eine unabhängige Analyse — kein Verkaufsgespräch. Sie erhalten einen klaren Bericht mit priorisierten Massnahmen und geschätztem Einsparpotenzial. Starten Sie mit unserem [kostenlosen Google Ads Check](/audits/free-google-ads-check/), um einen ersten Eindruck zu erhalten.
+Unser Google Ads Audit ist eine unabhängige Analyse — kein Verkaufsgespräch. Sie erhalten einen klaren Bericht mit priorisierten Massnahmen und geschätztem Einsparpotenzial. Starten Sie mit unserem [kostenlosen Google Ads Check](/free-google-ads-audit/), um einen ersten Eindruck zu erhalten.
 
 ## Was unterscheidet ein B2B-Audit von einer Standard-Kontoprüfung?
 

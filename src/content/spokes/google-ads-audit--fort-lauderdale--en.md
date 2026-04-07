@@ -41,7 +41,7 @@ deliverables:
 
 Most Fort Lauderdale businesses we audit are losing between 20 and 40 percent of their ad spend on clicks that will never convert. The causes are consistent: broad match keywords pulling in Miami or Palm Beach traffic, missing negative keyword lists, conversion tracking that counts page views as leads, and campaigns that have not been restructured since they were launched.
 
-If your cost-per-lead has been creeping up or your lead volume has plateaued, the problem is almost always structural. Our [free Google Ads audit](/audits/free-google-ads-check/) identifies exactly where the waste is and what to fix first.
+If your cost-per-lead has been creeping up or your lead volume has plateaued, the problem is almost always structural. Our [free Google Ads audit](/free-google-ads-audit/) identifies exactly where the waste is and what to fix first.
 
 ## What does the audit process look like?
 

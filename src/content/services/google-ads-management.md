@@ -94,4 +94,4 @@ Reports are delivered in a live dashboard with commentary, not a static PDF. For
 
 ## Not sure where your current account stands?
 
-Our [free Google Ads audit](/audits/free-google-ads-check/) reviews your account structure, keyword targeting, Quality Scores, conversion tracking, and competitive positioning. You get a clear action plan — whether you work with us to implement it or handle it in-house.
+Our [free Google Ads audit](/free-google-ads-audit/) reviews your account structure, keyword targeting, Quality Scores, conversion tracking, and competitive positioning. You get a clear action plan — whether you work with us to implement it or handle it in-house.

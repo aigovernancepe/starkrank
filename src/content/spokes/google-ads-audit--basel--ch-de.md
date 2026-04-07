@@ -41,7 +41,7 @@ deliverables:
 
 Die Schweiz gehört zu den teuersten Google-Ads-Märkten weltweit. Basler Unternehmen in Pharma, Finanzen und Chemie zahlen CPCs (Cost per Click — Kosten pro Klick), bei denen jede PPC-Ineffizienz (Pay-per-Click — Bezahlung pro Klick) direkt auf den ROI durchschlägt. Ein professionelles Audit identifiziert systematisch, wo Budget verschwendet wird — durch falsche Match Types, fehlende Negativ-Keywords, suboptimale Gebotsstrategien oder unvollständiges Conversion-Tracking.
 
-Besonders kritisch: Seit Inkrafttreten des revidierten nDSG müssen Tracking-Implementierungen in der Schweiz den Datenschutzanforderungen entsprechen. Falsch konfigurierter Consent Mode führt zu lückenhaften Conversion-Daten und damit zu fehlerhafter Kampagnenoptimierung. Starten Sie mit unserem [kostenlosen Google Ads Check](/audits/free-google-ads-check/) für eine erste Einschätzung.
+Besonders kritisch: Seit Inkrafttreten des revidierten nDSG müssen Tracking-Implementierungen in der Schweiz den Datenschutzanforderungen entsprechen. Falsch konfigurierter Consent Mode führt zu lückenhaften Conversion-Daten und damit zu fehlerhafter Kampagnenoptimierung. Starten Sie mit unserem [kostenlosen Google Ads Check](/free-google-ads-audit/) für eine erste Einschätzung.
 
 ## Wie identifizieren wir Einsparpotenziale für Basler Unternehmen?
 

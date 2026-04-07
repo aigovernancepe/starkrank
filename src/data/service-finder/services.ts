@@ -61,7 +61,7 @@ export const services: ServiceDef[] = [
     id: 'google-ads-audit',
     icon: 'badge-dollar-sign',
     links: {
-      en: '/audits/free-google-ads-check/',
+      en: '/free-google-ads-audit/',
       es: '/pe/auditoria-google-ads-lima/',
       de: '/de/google-ads-audit-hannover/',
       'ch-de': '/ch-de/google-ads-audit-basel/',

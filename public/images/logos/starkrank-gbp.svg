@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" width="720" height="720">
+  <rect width="720" height="720" fill="#ffffff"/>
+  <g transform="translate(360,360) scale(2.2)">
+    <g transform="translate(-120,-36)">
+      <g transform="translate(0,4)">
+        <rect x="3" y="3" width="58" height="58" rx="6" stroke="#111111" stroke-width="3" fill="none"/>
+        <path d="M32 14 L44 30 L37 30 L37 50 L27 50 L27 30 L20 30 Z" fill="#3B7DD8"/>
+      </g>
+      <text x="82" y="32" font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-size="40" font-weight="900" letter-spacing="-2" fill="#111111">Stark</text>
+      <text x="82" y="64" font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-size="40" font-weight="400" letter-spacing="-1" fill="#3B7DD8">Rank</text>
+    </g>
+  </g>
+</svg>

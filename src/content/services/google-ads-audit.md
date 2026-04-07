@@ -49,7 +49,7 @@ We also walk you through the findings in a live call, so you can ask questions a
 
 ## How is this different from the free audit?
 
-Our [free Google Ads audit](/audits/free-google-ads-check/) is a high-level review designed to surface the biggest opportunities and give you a clear picture of improvement potential. It covers the critical areas — account structure, wasted spend, conversion tracking, and competitive positioning.
+Our [free Google Ads audit](/free-google-ads-audit/) is a high-level review designed to surface the biggest opportunities and give you a clear picture of improvement potential. It covers the critical areas — account structure, wasted spend, conversion tracking, and competitive positioning.
 
 The full paid audit goes deeper: granular keyword-level analysis, ad copy scoring, audience strategy review, landing page assessment, and a detailed action plan with estimated ROI for each recommendation. It is the right choice for businesses spending $5,000+ per month on Google Ads who want a comprehensive diagnostic.
 

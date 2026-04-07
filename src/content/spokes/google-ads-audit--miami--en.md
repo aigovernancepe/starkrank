@@ -38,7 +38,7 @@ deliverables:
 
 Most businesses running Google Ads in Miami are overspending without realising it. The symptoms are predictable: broad match keywords triggering irrelevant queries, ad groups with dozens of unrelated keywords sharing the same ad copy, and conversion tracking that either double-counts or misses actions entirely. In a market where real estate clicks can cost $30+ and legal keywords exceed $50 CPC (cost per click), even small inefficiencies add up to thousands of dollars per month in wasted PPC (pay-per-click) spend.
 
-Our audit starts with a [free Google Ads health check](/audits/free-google-ads-check/) that surfaces the biggest issues within 48 hours. The full audit goes deeper — analysing every campaign, ad group, and keyword for structural problems, tracking gaps, and competitive blind spots.
+Our audit starts with a [free Google Ads health check](/free-google-ads-audit/) that surfaces the biggest issues within 48 hours. The full audit goes deeper — analysing every campaign, ad group, and keyword for structural problems, tracking gaps, and competitive blind spots.
 
 ## What does the audit process look like?
 

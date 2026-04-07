@@ -82,4 +82,4 @@ For the full analytics and attribution setup, see our [Google Analytics Consulta
 
 ## Is your ad spend working as hard as it should?
 
-In our experience, many of the accounts we audit have significant room for efficiency improvements — from poor targeting and missing negative keywords to broken conversion tracking and inefficient bid strategies. Our [free Google Ads audit](/audits/free-google-ads-check/) identifies exactly where the opportunities are — before you commit to anything.
+In our experience, many of the accounts we audit have significant room for efficiency improvements — from poor targeting and missing negative keywords to broken conversion tracking and inefficient bid strategies. Our [free Google Ads audit](/free-google-ads-audit/) identifies exactly where the opportunities are — before you commit to anything.
