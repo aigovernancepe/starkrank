@@ -1,15 +1,14 @@
 name: IndexNow — Submit URLs to Bing
 
 on:
-  workflow_run:
-    workflows: ["Deploy to GitHub Pages"]
-    types: [completed]
+  push:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
   indexnow:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
     steps:
       - name: Fetch sitemap and submit to IndexNow
         env:
