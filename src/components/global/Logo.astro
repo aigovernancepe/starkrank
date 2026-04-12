@@ -1,12 +1,12 @@
 ---
 interface Props {
-  variant?: 'inline-light' | 'inline-dark' | 'stacked-dark' | 'stacked-transparent' | 'stacked-light' | 'mark';
+  variant?: 'standard' | 'negative';
   size?: 'sm' | 'md' | 'lg';
   class?: string;
   locale?: string;
 }
 
-const { variant = 'inline-dark', size = 'md', class: className = '', locale } = Astro.props;
+const { variant = 'standard', size = 'md', class: className = '', locale } = Astro.props;
 const homeHref = locale && locale !== 'en' ? `/${locale}/` : '/';
 
 const sizeClasses: Record<string, string> = {
@@ -15,16 +15,9 @@ const sizeClasses: Record<string, string> = {
   lg: 'h-12 w-auto',
 };
 
-const logoMap: Record<string, string> = {
-  'inline-light': '/images/logos/starkrank-inline-light.svg',
-  'inline-dark': '/images/logos/starkrank-inline-dark.svg',
-  'stacked-dark': '/images/logos/starkrank-dark-stacked.svg',
-  'stacked-transparent': '/images/logos/starkrank-dark-stacked-transparent.svg',
-  'stacked-light': '/images/logos/starkrank-lockup-light.svg',
-  'mark': '/images/logos/starkrank-dark-mark.svg',
-};
-
-const src = logoMap[variant] ?? logoMap['inline-dark'];
+const src = variant === 'negative'
+  ? '/SR-Logo_Negativ_high-res.png'
+  : '/SR-Logo-standard_high-res.png';
 ---
 
 <a href={homeHref} class:list={['inline-block', className]}>
