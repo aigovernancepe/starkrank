@@ -16,10 +16,18 @@ const sizeClasses: Record<string, string> = {
 };
 
 const src = variant === 'negative'
-  ? '/SR-Logo_Negativ_high-res.png'
-  : '/SR-Logo-standard_high-res.png';
+  ? '/SR-Logo-negative.png'
+  : '/SR-Logo-standard.png';
 ---
 
 <a href={homeHref} class:list={['inline-block', className]}>
-  <img src={src} alt="StarkRank" width="160" height="40" class={sizeClasses[size]} />
+  <img
+    src={src}
+    alt="StarkRank"
+    width="320"
+    height="118"
+    decoding="async"
+    fetchpriority="high"
+    class={sizeClasses[size]}
+  />
 </a>

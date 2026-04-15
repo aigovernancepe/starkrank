@@ -1,6 +1,7 @@
 ---
 import LandingLayout from '../../layouts/LandingLayout.astro';
 import Section from '../../components/ui/Section.astro';
+import ContactForm from '../../components/ui/ContactForm.astro';
 
 const title = '¿Apareces en Google? Revisa Gratis | StarkRank Perú';
 const description = 'El 70% de negocios en Lima no aparecen en Google. Descubre tu posición vs la competencia en 2 minutos. Resultado por WhatsApp en 24h. Gratis.';
@@ -115,7 +116,7 @@ const waMessage = encodeURIComponent('Hola, quiero saber si mi negocio aparece e
       <!-- Form — above fold on mobile (order-1), right on desktop (lg:order-2) -->
       <div id="revisa-gratis" class="order-1 lg:order-2 bg-white border border-gray-light/40 rounded-lg p-6 md:p-8 shadow-lg">
         <h2 class="text-xl md:text-2xl font-headline font-black text-navy mb-6">Revisa tu visibilidad en Google — Gratis</h2>
-        <div class="hs-form-frame" data-region="eu1" data-form-id="fb10550c-1787-408e-a638-f21350f82ef3" data-portal-id="148108624"></div>
+        <ContactForm formId="fb10550c-1787-408e-a638-f21350f82ef3" />
       </div>
     </div>
   </Section>

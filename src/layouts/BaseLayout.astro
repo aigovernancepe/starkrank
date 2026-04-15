@@ -38,6 +38,16 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Preconnect to 3rd-party origins used on the critical path -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://js-eu1.hsforms.net" crossorigin />
+    <link rel="preconnect" href="https://js-eu1.hs-scripts.com" crossorigin />
+    <link rel="preconnect" href="https://js-eu1.hs-analytics.net" crossorigin />
+    <link rel="preconnect" href="https://js-eu1.hs-banner.net" crossorigin />
+    <link rel="preconnect" href="https://track-eu1.hubspot.com" crossorigin />
+    <link rel="preconnect" href="https://forms-eu1.hsforms.net" crossorigin />
+
     {!noViewTransitions && <ClientRouter />}
 
     <!-- Google Consent Mode v2 — defaults must be set before gtag loads -->
@@ -113,9 +123,6 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
         }
       })();
     </script>
-    <!-- HubSpot Forms -->
-    <script is:inline src="https://js-eu1.hsforms.net/forms/embed/148108624.js" defer></script>
-
     <!-- Font preloads -->
     <link rel="preload" href="/fonts/InterTight-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/DMSans-latin.woff2" as="font" type="font/woff2" crossorigin />
@@ -155,7 +162,24 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
         </svg>
       </a>
     )}
-    <!-- HubSpot Tracking Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148108624.js"></script>
+    <!-- HubSpot Tracking Code — loaded on idle to keep the LCP path clear -->
+    <script is:inline>
+      (function(){
+        function load(){
+          if (document.getElementById('hs-script-loader')) return;
+          var s = document.createElement('script');
+          s.id = 'hs-script-loader';
+          s.async = true;
+          s.defer = true;
+          s.src = '//js-eu1.hs-scripts.com/148108624.js';
+          document.body.appendChild(s);
+        }
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(load, { timeout: 4000 });
+        } else {
+          addEventListener('load', function(){ setTimeout(load, 2000); });
+        }
+      })();
+    </script>
   </body>
 </html>
