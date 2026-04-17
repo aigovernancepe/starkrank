@@ -22,7 +22,7 @@ export const pe: Record<string, string> = {
   'cta.learnMore': 'Más Información',
   'cta.viewServices': 'Ver Todos los Servicios',
 
-  'footer.tagline': 'Inteligencia de Búsqueda. Alcance Global.',
+  'footer.tagline': 'Fuerte en Búsqueda. Fuerte en Datos. Fuerte en Crecimiento.',
   'footer.services': 'Servicios',
   'footer.company': 'Empresa',
   'footer.audits': 'Revisiones Gratuitas',

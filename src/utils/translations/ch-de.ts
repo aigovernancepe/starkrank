@@ -22,7 +22,7 @@ export const chde: Record<string, string> = {
   'cta.learnMore': 'Mehr erfahren',
   'cta.viewServices': 'Alle Dienstleistungen',
 
-  'footer.tagline': 'Suchintelligenz. Globale Reichweite.',
+  'footer.tagline': 'Stark in Search. Stark in Data. Stark in Growth.',
   'footer.services': 'Dienstleistungen',
   'footer.company': 'Unternehmen',
   'footer.audits': 'Kostenlose Audits',

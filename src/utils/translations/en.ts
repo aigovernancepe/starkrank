@@ -26,7 +26,7 @@ export const en: Record<string, string> = {
   'cta.viewServices': 'View All Services',
 
   // Footer
-  'footer.tagline': 'Search Intelligence. Global Reach.',
+  'footer.tagline': 'Strong in Search. Strong in Data. Strong in Growth.',
   'footer.services': 'Services',
   'footer.company': 'Company',
   'footer.audits': 'Free Audits',
