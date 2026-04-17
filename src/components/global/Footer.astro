@@ -13,6 +13,11 @@ const locale = (localeProp ?? getCurrentLocale(Astro.url) ?? 'en') as Locale;
 const year = new Date().getFullYear();
 const localizedAudits = getLocalizedAudits(locale);
 
+const taglineLines = t('footer.tagline', locale)
+  .split(/\.\s+/)
+  .filter(Boolean)
+  .map((line) => line.replace(/\.$/, '') + '.');
+
 const pillarKeys: Record<string, string> = {
   'Search & AI': 'pillar.search-ai-intelligence',
   'Performance Media': 'pillar.performance-media',
@@ -40,9 +45,11 @@ const auditKeys: Record<string, string> = {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
       <!-- Brand -->
       <div>
-        <Logo variant="negative" size="lg" class="mb-4" locale={locale} />
-        <p class="text-sm text-gray-light mt-4 font-body">
-          {t('footer.tagline', locale)}
+        <Logo variant="negative" size="lg" locale={locale} />
+        <p class="text-sm text-gray-light mt-2 font-body leading-snug">
+          {taglineLines.map((line) => (
+            <span class="block">{line}</span>
+          ))}
         </p>
         <div class="mt-4">
           <a href="https://www.linkedin.com/company/starkrank" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-body text-gray-light hover:text-cream transition-colors" aria-label="StarkRank on LinkedIn">
