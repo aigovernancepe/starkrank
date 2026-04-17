@@ -110,6 +110,7 @@ const privacyPaths: Record<Locale, string> = {
 };
 
 const impressumPaths: Record<string, string> = {
+  en: '/imprint/',
   de: '/de/impressum/',
   'ch-de': '/ch-de/impressum/',
 };
@@ -144,6 +145,10 @@ export function getLocalizedAudits(locale: Locale): NavItem[] {
  *   /contact/ to the localized contact page, and /services/ to the locale home.
  */
 export function getLocalizedNavHref(href: string, locale: Locale): string {
+  // Impressum/Imprint: path differs per locale (incl. EN → /imprint/), so
+  // resolve before the EN early-return shortcut below.
+  if (href === '/impressum/') return impressumPaths[locale] ?? href;
+
   if (locale === 'en') return href;
 
   const localePrefix = `/${locale}`;
@@ -153,9 +158,6 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
 
   // Privacy page
   if (href === '/privacy/') return privacyPaths[locale];
-
-  // Impressum (DE/CH-DE only)
-  if (href === '/impressum/') return impressumPaths[locale] ?? null;
 
   // Blog index (locales with their own blog)
   if (href === '/blog/' && (locale === 'pe' || locale === 'de' || locale === 'ch-de')) return `${localePrefix}/blog/`;

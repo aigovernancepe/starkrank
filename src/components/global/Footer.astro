@@ -111,9 +111,9 @@ const auditKeys: Record<string, string> = {
         <a href={getLocalizedNavHref('/privacy/', locale)} class="text-xs text-gray font-body hover:text-cream transition-colors">
           {t('footer.privacy', locale)}
         </a>
-        {(locale === 'de' || locale === 'ch-de') && (
+        {(locale === 'en' || locale === 'de' || locale === 'ch-de') && (
           <a href={getLocalizedNavHref('/impressum/', locale)} class="text-xs text-gray font-body hover:text-cream transition-colors">
-            Impressum
+            {locale === 'en' ? 'Imprint' : 'Impressum'}
           </a>
         )}
       </div>
