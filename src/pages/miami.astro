@@ -1,0 +1,115 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/ui/HeroSection.astro';
+import Section from '../components/ui/Section.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import PillarCard from '../components/ui/PillarCard.astro';
+import Button from '../components/ui/Button.astro';
+import CTABanner from '../components/ui/CTABanner.astro';
+import { pillars } from '../data/pillars';
+import { getSpokePath } from '../data/service-slugs';
+
+const pillarCityLinks: Record<string, string> = {
+  'search-ai-intelligence': `/${getSpokePath('ai-search-optimization', 'miami', 'en')}/`,
+  'performance-media': `/${getSpokePath('google-ads-management', 'miami', 'en')}/`,
+  'authority-pr': `/${getSpokePath('reactive-pr', 'miami', 'en')}/`,
+  'content-copywriting': `/${getSpokePath('seo-copywriting', 'miami', 'en')}/`,
+  'data-web': `/${getSpokePath('google-analytics-consultancy', 'miami', 'en')}/`,
+};
+
+const allSpokes = await getCollection('spokes', (s) => s.data.locale === 'en' && s.data.citySlug === 'miami');
+const spokesByPillar = pillars.map((pillar) => ({
+  pillar,
+  spokes: pillar.services
+    .flatMap((serviceSlug) => allSpokes.filter((s) => s.data.serviceSlug === serviceSlug))
+    .map((s) => ({
+      title: s.data.title,
+      description: s.data.description,
+      href: `/${getSpokePath(s.data.serviceSlug, s.data.citySlug, 'en')}/`,
+    })),
+}));
+
+const placeSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Place',
+  name: 'Miami, Florida',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Miami',
+    addressRegion: 'FL',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 25.7617,
+    longitude: -80.1918,
+  },
+};
+---
+
+<BaseLayout
+  title="Digital Marketing Miami — StarkRank Florida"
+  description="StarkRank delivers AI search optimisation, performance media, and technical SEO for Miami businesses — from hospitality and real estate to fintech and healthcare. Data-driven growth across South Florida."
+  schema={[placeSchema]}
+>
+  <HeroSection
+    headline="Miami Digital Marketing — **Built for Growth**"
+    subheadline="South Florida's business hub deserves marketing that matches its pace. StarkRank combines AI search optimisation, performance media, and technical SEO to help Miami companies compete — from hospitality and real estate to fintech and healthcare."
+  >
+    <Button href="/free-google-ads-audit/" variant="primary" size="lg">Free Google Ads Audit</Button>
+    <Button href="/contact/" variant="secondary" size="lg">Get in Touch</Button>
+  </HeroSection>
+
+  <Section bg="cream">
+    <SectionHeader
+      label="What We Do in Miami"
+      title="Five Pillars of Digital Growth"
+      subtitle="From AI search intelligence to transparent ROI reporting — the full stack of digital marketing, delivered locally in Miami."
+      align="center"
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {pillars.map((pillar) => <PillarCard pillar={pillar} href={pillarCityLinks[pillar.id]} />)}
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <SectionHeader
+      label="Services in Miami"
+      title="The Full Service Catalogue"
+      subtitle="Every service we offer, available to Miami businesses. Pick the engine you need, or combine them into a full-funnel strategy."
+      align="center"
+    />
+    <div class="space-y-12">
+      {spokesByPillar.map(({ pillar, spokes }) => spokes.length > 0 && (
+        <div>
+          <h3 class="text-sm font-label font-bold uppercase tracking-[0.2em] text-blue mb-4">{pillar.name}</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {spokes.map((spoke) => (
+              <a
+                href={spoke.href}
+                class="group block bg-cream/40 border border-gray-light/40 rounded-lg p-5 transition-all hover:shadow-md hover:border-blue/30"
+              >
+                <h4 class="text-base font-headline font-black text-navy group-hover:text-blue transition-colors leading-snug">
+                  {spoke.title}
+                </h4>
+                <p class="mt-2 text-sm font-body text-gray leading-relaxed line-clamp-2">
+                  {spoke.description}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <CTABanner
+    bg="navy"
+    title="Is Your Ad Spend Working in Miami?"
+    subtitle="Get a free Google Ads audit and discover where your budget is leaking."
+  >
+    <Button href="/free-google-ads-audit/" variant="primary" size="lg">Free Ads Audit</Button>
+    <Button href="/free-copywriting-audit/" variant="ghost" size="lg">Free Copywriting Audit</Button>
+  </CTABanner>
+</BaseLayout>

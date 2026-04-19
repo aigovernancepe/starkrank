@@ -28,15 +28,11 @@ export default defineConfig({
     '/free-aiso-score/': '/aiso-score/',
     '/audits/free-google-ads-check/': '/free-google-ads-audit/',
     '/audits/copywriting-ux-analysis/': '/free-copywriting-audit/',
+    '/locations/': '/',
   },
   integrations: [
     react(),
-    sitemap({
-      serialize(item) {
-        item.lastmod = new Date().toISOString();
-        return item;
-      },
-    }),
+    sitemap(),
   ],
   vite: {
     plugins: [tailwindcss()],
