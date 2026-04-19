@@ -78,6 +78,37 @@ const allSlugs: Record<string, SlugMap> = {
 };
 
 /**
+ * Services that publish as flat locale pages (no city suffix) instead of city-scoped spokes.
+ * Key = EN canonical service slug. Inner key = locale. Value = flat URL slug for that locale.
+ * A locale missing from the inner record means no localized flat page exists — callers
+ * should fall back to the EN hub (/services/{enSlug}/).
+ */
+const flatLocaleSlugs: Record<string, Partial<Record<string, string>>> = {
+  'ecommerce-seo-audit': {
+    de: 'ecommerce-seo-audit',
+    'ch-de': 'ecommerce-seo-audit',
+  },
+  'pre-deploy-seo-check': {
+    de: 'pre-deploy-seo-check',
+    'ch-de': 'pre-deploy-seo-check',
+  },
+  'eeat-audit': {
+    de: 'eeat-audit',
+    'ch-de': 'eeat-audit',
+  },
+  'sme-expertise-library': {
+    de: 'sme-expertise-library',
+    'ch-de': 'sme-expertise-library',
+    pe: 'biblioteca-experto',
+  },
+  'expert-interview': {
+    de: 'expert-interview',
+    'ch-de': 'expert-interview',
+    pe: 'entrevista-experto',
+  },
+};
+
+/**
  * Get the localized short slug for a service in a given locale.
  */
 export function getLocalizedServiceSlug(serviceSlug: string, locale: string): string {
@@ -91,4 +122,21 @@ export function getLocalizedServiceSlug(serviceSlug: string, locale: string): st
 export function getSpokePath(serviceSlug: string, citySlug: string, locale: string): string {
   const shortSlug = getLocalizedServiceSlug(serviceSlug, locale);
   return `${shortSlug}-${citySlug}`;
+}
+
+/**
+ * Get the flat-locale slug for a service if one exists, else null.
+ * Use to route to /{locale}/{slug}/ for services that aren't city-scoped.
+ */
+export function getFlatLocaleSlug(serviceSlug: string, locale: string): string | null {
+  return flatLocaleSlugs[serviceSlug]?.[locale] ?? null;
+}
+
+/**
+ * True if a locale has either a city-spoke slug OR a flat-locale slug for this service.
+ * Used by nav to decide between locale-link and EN cross-locale fallback.
+ */
+export function hasLocalizedService(serviceSlug: string, locale: string): boolean {
+  if (getFlatLocaleSlug(serviceSlug, locale) !== null) return true;
+  return Boolean(allSlugs[locale]?.[serviceSlug]);
 }

@@ -1,5 +1,5 @@
 import { type Locale, defaultCity } from './locales';
-import { getSpokePath } from './service-slugs';
+import { getFlatLocaleSlug, getSpokePath, hasLocalizedService } from './service-slugs';
 
 export interface NavItem {
   label: string;
@@ -18,6 +18,8 @@ export const mainNav: NavItem[] = [
         children: [
           { label: 'AI Search Optimization', href: '/services/ai-search-optimization/' },
           { label: 'Technical SEO Audit', href: '/services/technical-seo-audit/' },
+          { label: 'E-commerce SEO Audit', href: '/services/ecommerce-seo-audit/' },
+          { label: 'Pre-Deploy SEO Check', href: '/services/pre-deploy-seo-check/' },
           { label: 'Local SEO Consulting', href: '/services/local-seo-consulting/' },
         ],
       },
@@ -38,6 +40,7 @@ export const mainNav: NavItem[] = [
           { label: 'Digital PR Strategy', href: '/services/digital-pr-strategy/' },
           { label: 'Reactive PR', href: '/services/reactive-pr/' },
           { label: 'Authority Link Building', href: '/services/authority-link-building/' },
+          { label: 'E-E-A-T Audit', href: '/services/eeat-audit/' },
         ],
       },
       {
@@ -45,6 +48,8 @@ export const mainNav: NavItem[] = [
         href: '/services/content-marketing/',
         children: [
           { label: 'Content Marketing', href: '/services/content-marketing/' },
+          { label: 'SME Expertise Library', href: '/services/sme-expertise-library/' },
+          { label: 'Expert Interview', href: '/services/expert-interview/' },
           { label: 'SEO Copywriting', href: '/services/seo-copywriting/' },
           { label: 'Copywriting Audit', href: '/services/copywriting-audit/' },
           { label: 'Audience Persona Mapping', href: '/services/audience-persona-mapping/' },
@@ -164,10 +169,18 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
   // Top-level /services/ link → locale homepage (shows pillar cards)
   if (href === '/services/') return `${localePrefix}/`;
 
-  // Individual service pages → spoke page in default city
+  // Individual service pages → flat locale page first (for non-city-scoped services),
+  // then the city spoke in the default city, else fall through to EN cross-locale.
   const serviceMatch = href.match(/^\/services\/([^/]+)\/$/);
   if (serviceMatch) {
     const serviceSlug = serviceMatch[1];
+    const flatSlug = getFlatLocaleSlug(serviceSlug, locale);
+    if (flatSlug !== null) {
+      return `${localePrefix}/${flatSlug}/`;
+    }
+    if (!hasLocalizedService(serviceSlug, locale)) {
+      return href;
+    }
     const city = defaultCity[locale];
     const spokePath = getSpokePath(serviceSlug, city, locale);
     return `${localePrefix}/${spokePath}/`;
