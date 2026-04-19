@@ -71,6 +71,7 @@ export const pe: Record<string, string> = {
   'spoke.otherServices': 'Otros Servicios en {city}',
   'spoke.pillarServices': 'Más Servicios de {pillar}',
   'spoke.allServices': 'Todos los Servicios en {city}',
+  'spoke.serviceInOtherCities': '{service} en Otras Ciudades',
   'spoke.contactIn': 'Contáctanos en {city}',
   'spoke.growBusiness': 'Haz Crecer tu Negocio en {city}',
   'spoke.bookConsultation': 'Agenda una consulta gratuita con nuestro equipo local.',

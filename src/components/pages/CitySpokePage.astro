@@ -11,7 +11,7 @@ import type { Locale } from '../../data/locales';
 import { t, tf } from '../../utils/i18n';
 import { getSpokePath } from '../../data/service-slugs';
 import { getLocalizedNavHref } from '../../data/navigation';
-import { render } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { getPillarById } from '../../data/pillars';
 
 interface Props {
@@ -42,6 +42,18 @@ const pillar = serviceData.pillar ? getPillarById(serviceData.pillar) : null;
 const pillarServices = pillar ? pillar.services.filter((s: string) => s !== serviceData.slug) : [];
 const otherServices = city.services.filter((s: string) => s !== serviceData.slug && !pillarServices.includes(s));
 const localPillarName = pillar ? t(`pillar.${pillar.id}`, locale) : '';
+
+// Sibling spokes: same service, same locale, different city — for cross-city linking
+const siblingSpokeEntries = await getCollection('spokes', (s) =>
+  s.data.serviceSlug === serviceData.slug &&
+  s.data.locale === locale &&
+  s.data.citySlug !== city.citySlug,
+);
+const siblingSpokes = siblingSpokeEntries.map((s) => ({
+  title: s.data.title,
+  description: s.data.description,
+  href: `${locale === 'en' ? '' : `/${locale}`}/${getSpokePath(s.data.serviceSlug, s.data.citySlug, locale)}/`,
+}));
 
 const site = Astro.site?.origin ?? 'https://starkrank.com';
 const localePath = locale === 'en' ? '' : `/${locale}`;
@@ -581,6 +593,28 @@ const allSchemas = [
           </div>
         </Section>
       )}
+
+      {/* Section 8: Same service in other cities — for indexability mesh */}
+      {siblingSpokes.length > 0 && (
+        <Section bg="white">
+          <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.serviceInOtherCities', vars, locale)}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {siblingSpokes.map((sibling) => (
+              <a
+                href={sibling.href}
+                class="group block bg-cream/40 border border-gray-light/40 rounded-lg p-5 transition-all hover:shadow-md hover:border-blue/30"
+              >
+                <h4 class="text-base font-headline font-black text-navy group-hover:text-blue transition-colors leading-snug">
+                  {sibling.title}
+                </h4>
+                <p class="mt-2 text-sm font-body text-gray leading-relaxed line-clamp-2">
+                  {sibling.description}
+                </p>
+              </a>
+            ))}
+          </div>
+        </Section>
+      )}
     </>
   ) : (
     <Section bg="cream">
@@ -633,6 +667,19 @@ const allSchemas = [
                 </Card>
               );
             })}
+          </div>
+        </div>
+      )}
+
+      {siblingSpokes.length > 0 && (
+        <div class="mt-12">
+          <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">{tf('spoke.serviceInOtherCities', vars, locale)}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {siblingSpokes.map((sibling) => (
+              <Card href={sibling.href}>
+                <h4 class="text-sm font-headline font-bold text-navy">{sibling.title}</h4>
+              </Card>
+            ))}
           </div>
         </div>
       )}
