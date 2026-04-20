@@ -59,6 +59,11 @@ export const pe: Record<string, string> = {
   'service.google-analytics-consultancy': 'Consultoría Google Analytics',
   'service.performance-web-development': 'Desarrollo Web de Alto Rendimiento',
   'service.roi-reporting-transparency': 'Reportes de ROI y Transparencia',
+  'service.ecommerce-seo-audit': 'Auditoría SEO E-commerce',
+  'service.pre-deploy-seo-check': 'Pre-Deploy SEO Check',
+  'service.eeat-audit': 'Auditoría E-E-A-T',
+  'service.sme-expertise-library': 'Biblioteca de Experto',
+  'service.expert-interview': 'Entrevista con Experto',
 
   // City Spoke Pages
   'spoke.in': 'en',

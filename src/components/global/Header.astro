@@ -53,6 +53,11 @@ function localizeLabel(label: string): string {
     'Google Analytics Consultancy': 'service.google-analytics-consultancy',
     'Performance Web Development': 'service.performance-web-development',
     'ROI Reporting & Transparency': 'service.roi-reporting-transparency',
+    'E-commerce SEO Audit': 'service.ecommerce-seo-audit',
+    'Pre-Deploy SEO Check': 'service.pre-deploy-seo-check',
+    'E-E-A-T Audit': 'service.eeat-audit',
+    'SME Expertise Library': 'service.sme-expertise-library',
+    'Expert Interview': 'service.expert-interview',
   }).find(([name]) => name === label);
   if (serviceKey) return t(serviceKey[1], locale);
   return label;

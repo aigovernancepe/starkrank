@@ -66,6 +66,11 @@ export const en: Record<string, string> = {
   'service.google-analytics-consultancy': 'Google Analytics Consultancy',
   'service.performance-web-development': 'Performance Web Development',
   'service.roi-reporting-transparency': 'ROI Reporting & Transparency',
+  'service.ecommerce-seo-audit': 'E-commerce SEO Audit',
+  'service.pre-deploy-seo-check': 'Pre-Deploy SEO Check',
+  'service.eeat-audit': 'E-E-A-T Audit',
+  'service.sme-expertise-library': 'SME Expertise Library',
+  'service.expert-interview': 'Expert Interview',
 
   // City Spoke Pages
   'spoke.in': 'in',

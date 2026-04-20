@@ -8,7 +8,7 @@ import Card from '../../components/ui/Card.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 
 const title = 'Experteninterview — First-Party-Content, den KI nicht fakt | StarkRank';
-const description = '2-4 gezielte Fragen an Ihren SME liefern Fallstudien, konträre Winkel und Fehlschlag-Stories, die generische KI-Texte nicht erfinden. 800-1\'500 CHF pro Thema.';
+const description = '2-4 gezielte Fragen an Ihren Experten liefern Fallstudien, konträre Winkel und Fehlschlag-Stories, die generische KI-Texte nicht erfinden. 800-1\'500 CHF pro Thema.';
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -29,19 +29,19 @@ const serviceSchema = {
     itemListElement: [
       { '@type': 'Offer', name: 'Standard', description: '45-minütiges Interview mit 2 Fragen-Archetypen.', price: '800', priceCurrency: 'CHF' },
       { '@type': 'Offer', name: 'Deep Dive', description: '90-minütiges Interview mit 4 Archetypen und Vor-Material-Auswertung.', price: '1500', priceCurrency: 'CHF' },
-      { '@type': 'Offer', name: 'Batch', description: 'Multi-Themen- oder Multi-SME-Auftrag mit 20% Rabatt auf den kombinierten Tarif.', price: '3600', priceCurrency: 'CHF' },
+      { '@type': 'Offer', name: 'Batch', description: 'Multi-Themen- oder Multi-Experten-Auftrag mit 20% Rabatt auf den kombinierten Tarif.', price: '3600', priceCurrency: 'CHF' },
     ],
   },
 };
 
 const faqItems = [
-  { question: 'Wie unterscheidet sich das von der SME Expertise Library?', answer: 'Die SME Library ist personen-spezifisch (das gesamte Wissen Ihres Gründers über seine Praxis, einmal gebaut). Das Experteninterview ist themen-spezifisch (1 Verfahren, 1 Servicebereich, pro Content-Initiative). Beides existiert nebeneinander: die Library ist der Rückhalt, Themen-Interviews sind der Deep-Dive, wenn ein Content-Stück Tiefe braucht.' },
+  { question: 'Wie unterscheidet sich das von der Expertenbibliothek?', answer: 'Die Expertenbibliothek ist personen-spezifisch (das gesamte Wissen Ihres Gründers über seine Praxis, einmal gebaut). Das Experteninterview ist themen-spezifisch (1 Verfahren, 1 Servicebereich, pro Content-Initiative). Beides existiert nebeneinander: die Bibliothek ist der Rückhalt, Themen-Interviews sind der Deep-Dive, wenn ein Content-Stück Tiefe braucht.' },
   { question: 'Wie viele Archetypen sollten wir pro Interview laufen?', answer: 'Zwei für ein Standard-Interview zu 800 CHF, vier für einen Deep Dive zu 1\'500 CHF. Mehr als vier verwässert die Zeit pro Archetyp. Wenn Ihre Content-Initiative mehr braucht, buchen Sie ein zweites Interview zum selben Thema mit anderen Archetypen.' },
-  { question: 'Kann der SME remote interviewt werden?', answer: 'Ja. Telefon, Video oder asynchrone Transkript-Prüfung funktionieren alle. Persönlich ist gelegentlich ergiebiger für Workflow-Archetypen, aber die meisten Themen funktionieren remote. Für reisende Gründer ist asynchrone Transkript-Prüfung (Loom-Antworten, wir synthetisieren) eine brauchbare Alternative.' },
-  { question: 'Was, wenn unser SME bei konträren Fragen blockiert?', answer: 'Wir formulieren um. "Wem würden Sie widersprechen, wenn ein Wettbewerber es auf einem Panel neben Ihnen sagte?" oder "Was machen die jüngeren Leute in Ihrem Feld, das Sie verrückt macht?" Die meisten SMEs kommen bis zum Ende des Interviews zu einer brauchbaren konträren Position.' },
+  { question: 'Kann der Experte remote interviewt werden?', answer: 'Ja. Telefon, Video oder asynchrone Transkript-Prüfung funktionieren alle. Persönlich ist gelegentlich ergiebiger für Workflow-Archetypen, aber die meisten Themen funktionieren remote. Für reisende Gründer ist asynchrone Transkript-Prüfung (Loom-Antworten, wir synthetisieren) eine brauchbare Alternative.' },
+  { question: 'Was, wenn unser Experte bei konträren Fragen blockiert?', answer: 'Wir formulieren um. "Wem würden Sie widersprechen, wenn ein Wettbewerber es auf einem Panel neben Ihnen sagte?" oder "Was machen die jüngeren Leute in Ihrem Feld, das Sie verrückt macht?" Die meisten Experten kommen bis zum Ende des Interviews zu einer brauchbaren konträren Position.' },
   { question: 'Können Interviews über mehrere Content-Stücke wiederverwendet werden?', answer: 'Ja. Ein einzelnes 90-minütiges Interview speist typischerweise 4-6 Content-Stücke: Service-Seite, 2 Blog-Posts, Fallstudie, Pull-Quote-Grafik, Podcast-Leitfaden. Das Nutzungs-Log dokumentiert, was bereits ausgeliefert ist, um versehentliche Doppelungen zu verhindern.' },
-  { question: 'Interviewen Sie mehrere SMEs in einem Auftrag?', answer: 'Für Batches mit 3+ Themen oder 2+ SMEs ja, mit 20% Rabatt auf den kombinierten Tarif. Wir planen Interviews separat, damit jeder SME volle Aufmerksamkeit erhält, teilen aber Vor-Material-Befunde quer durch den Batch.' },
-  { question: 'Wie schnell nach dem Interview wird die Datei geliefert?', answer: '5-7 Tage ab Interview-Datum. Der Synthese-Durchgang ist der längste Schritt, weil wir wörtliche Zitate mit Attribution kompilieren, sie nach Archetyp strukturieren und etwaige bestehende Themen-Interviews oder SME-Library-Material querverweisen. Eil-Lieferung (3 Tage) verfügbar mit 25% Aufschlag.' },
+  { question: 'Interviewen Sie mehrere Experten in einem Auftrag?', answer: 'Für Batches mit 3+ Themen oder 2+ Experten ja, mit 20% Rabatt auf den kombinierten Tarif. Wir planen Interviews separat, damit jeder Experte volle Aufmerksamkeit erhält, teilen aber Vor-Material-Befunde quer durch den Batch.' },
+  { question: 'Wie schnell nach dem Interview wird die Datei geliefert?', answer: '5-7 Tage ab Interview-Datum. Der Synthese-Durchgang ist der längste Schritt, weil wir wörtliche Zitate mit Attribution kompilieren, sie nach Archetyp strukturieren und etwaige bestehende Themen-Interviews oder Expertenbibliothek-Material querverweisen. Eil-Lieferung (3 Tage) verfügbar mit 25% Aufschlag.' },
 ];
 
 const faqSchema = {
@@ -62,29 +62,29 @@ const breadcrumbs = [
 ];
 
 const archetypes = [
-  { name: 'Konträr', extracts: 'Überzeugungen, die Ihren SME von Allgemeinmeinungen zum Thema unterscheiden', useFor: 'Information-Gain-Sektionen' },
+  { name: 'Konträr', extracts: 'Überzeugungen, die Ihren Experten von Allgemeinmeinungen zum Thema unterscheiden', useFor: 'Information-Gain-Sektionen' },
   { name: 'Konkrete Daten', extracts: 'Genannte Kunden, konkrete Zahlen, Ergebnisdaten, die LLMs wörtlich zitieren', useFor: 'Fallstudien-Content' },
   { name: 'Experience', extracts: 'Ich-Perspektiven-Beobachtungen: was das Lehrbuch nicht sagt', useFor: 'Hero-Sektionen von Service-Seiten' },
   { name: 'Scope-Grenzen', extracts: 'Einschränkungen und Ausschlüsse: für wen dieser Rat nicht gilt', useFor: 'Vertrauensbildende FAQ-Sektionen' },
   { name: 'Workflow-Detail', extracts: 'Ablauf-Details: die ersten 15 Minuten eines echten Termins oder Falls', useFor: 'How-to-Capsules, Ordered-List-Antworten' },
   { name: 'Fehlschlag-Story', extracts: 'Verletzlichkeit + gezogene Lehre aus einem Fall, der schieflief', useFor: 'Vertrauenssignal (selten im Wettbewerber-Content)' },
-  { name: 'Trend-Delta', extracts: '2-3-jährige Branchen-Verschiebung, die der SME sieht und Peers noch nicht', useFor: 'Freshness-Signal' },
-  { name: 'Benanntes Framework', extracts: 'Gebrandete oder informelle Methodik, die der SME mit jedem Kunden durchgeht', useFor: 'Service-Seiten-Rückgrat, Differenzierer' },
-  { name: 'Mantras', extracts: 'Wörtliche Einzeiler, die der SME in jedem Beratungsgespräch wiederholt', useFor: 'Pull-Quote-Callouts, Sektions-Opener' },
+  { name: 'Trend-Delta', extracts: '2-3-jährige Branchen-Verschiebung, die der Experte sieht und Peers noch nicht', useFor: 'Freshness-Signal' },
+  { name: 'Benanntes Framework', extracts: 'Gebrandete oder informelle Methodik, die der Experte mit jedem Kunden durchgeht', useFor: 'Service-Seiten-Rückgrat, Differenzierer' },
+  { name: 'Mantras', extracts: 'Wörtliche Einzeiler, die der Experte in jedem Beratungsgespräch wiederholt', useFor: 'Pull-Quote-Callouts, Sektions-Opener' },
   { name: 'Testimonial-Hook', extracts: 'Themenbezogene Kundenzitate mit Quelle und Attributions-Status', useFor: 'Fallstudien-Sidebars' },
 ];
 
 const processSteps = [
   { num: 1, title: 'Themen-Auswahl (Tag 1)', body: 'Das 1 Thema oder der 1 Servicebereich für das Interview wird festgelegt. Enger ist besser: "Wie wir gebrochene Backenzähne diagnostizieren" schlägt "Wie wir Zahnmedizin betreiben".' },
-  { num: 2, title: 'Vor-Material-Auswertung (Tag 2, Deep Dive)', body: 'Bestehendes öffentliches SME-Material lesen (LinkedIn-Posts, Podcasts, Gastartikel). Die 3-5 tragendsten Punkte notieren, um Wiederholung zu vermeiden.' },
-  { num: 3, title: 'Live-Interview (Tag 3)', body: '45 oder 90 Minuten mit dem SME. Eine Frage nach der anderen, maximal 1 Nachhaken pro Archetyp, wörtliche Erfassung für Zahlen und Fachbegriffe.' },
+  { num: 2, title: 'Vor-Material-Auswertung (Tag 2, Deep Dive)', body: 'Bestehendes öffentliches Experten-Material lesen (LinkedIn-Posts, Podcasts, Gastartikel). Die 3-5 tragendsten Punkte notieren, um Wiederholung zu vermeiden.' },
+  { num: 3, title: 'Live-Interview (Tag 3)', body: '45 oder 90 Minuten mit dem Experten. Eine Frage nach der anderen, maximal 1 Nachhaken pro Archetyp, wörtliche Erfassung für Zahlen und Fachbegriffe.' },
   { num: 4, title: 'YMYL-Compliance-Durchgang (Tag 4)', body: 'Für regulierte Branchen Behauptungen markieren, die Compliance-Regeln auslösen. Markierungen erscheinen für Content-Ersteller; sie sind keine Blockade.' },
   { num: 5, title: 'Strukturierte Datei-Synthese (Tag 5)', body: 'Interview in das kanonische Format kompiliert. Attributions-Entscheidungen pro Zitat und Fall dokumentiert.' },
   { num: 6, title: 'Lieferung (Tag 6-7)', body: 'Datei gespeichert. 15-minütiger Handover-Call, falls Ihr Content-Team einen Walkthrough wünscht.' },
 ];
 
 const relatedLinks = [
-  { title: 'SME Expertise Library', href: '/de/sme-expertise-library/' },
+  { title: 'Expertenbibliothek', href: '/de/sme-expertise-library/' },
   { title: 'Content-Marketing', href: '/de/content-marketing-basel/' },
   { title: 'E-E-A-T-Audit', href: '/de/eeat-audit/' },
   { title: 'KI-Suchoptimierung', href: '/de/ki-suchoptimierung-basel/' },
@@ -112,7 +112,7 @@ const relatedLinks = [
       Experteninterview — First-Party-Expertise, die KI-Texte nicht erfinden können
     </h1>
     <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-3xl">
-      Der Content, der 2026 KI-Zitationen gewinnt, enthält Informationen, die LLMs nicht aus Trainingsdaten erzeugen können: den Fall, in dem ein bestimmter Kunde 50'000 CHF zurückgeholt hat, die konträre Position, die Ihr Gründer in jedem Beratungsgespräch vertritt, den Fehlschlag, der die Diagnose-Methodik Ihres Teams geprägt hat. Ein Experteninterview erfasst die 3-8 First-Party-Bausteine, die Content unverwechselbar Ihr machen. 800 CHF bis 1'500 CHF pro Thema, pro SME.
+      Der Content, der 2026 KI-Zitationen gewinnt, enthält Informationen, die LLMs nicht aus Trainingsdaten erzeugen können: den Fall, in dem ein bestimmter Kunde 50'000 CHF zurückgeholt hat, die konträre Position, die Ihr Gründer in jedem Beratungsgespräch vertritt, den Fehlschlag, der die Diagnose-Methodik Ihres Teams geprägt hat. Ein Experteninterview erfasst die 3-8 First-Party-Bausteine, die Content unverwechselbar Ihr machen. 800 CHF bis 1'500 CHF pro Thema, pro Experten.
     </p>
 
     <div class="mt-8 flex flex-wrap gap-4">
@@ -147,7 +147,7 @@ const relatedLinks = [
               Welches Material extrahiert ein Experteninterview?
             </h2>
             <p class="text-base font-body text-gray leading-relaxed mb-8">
-              Jedes Interview produziert eine strukturierte Markdown-Datei, fokussiert auf 1 Thema oder Servicebereich, und deckt 2-4 von 10 Fragen-Archetypen ab, gewählt für die konkrete Content-Initiative. Tiefe schlägt Breite, und die Zeit des SME ist die Engstelle.
+              Jedes Interview produziert eine strukturierte Markdown-Datei, fokussiert auf 1 Thema oder Servicebereich, und deckt 2-4 von 10 Fragen-Archetypen ab, gewählt für die konkrete Content-Initiative. Tiefe schlägt Breite, und die Zeit des Experten ist die Engstelle.
             </p>
             <div class="overflow-x-auto">
               <table class="w-full text-sm font-body border-collapse">
@@ -176,16 +176,16 @@ const relatedLinks = [
               Wie sieht eine Live-Interview-Sitzung aus?
             </h2>
             <div class="space-y-4 text-base font-body text-gray leading-relaxed">
-              <p>Interviews laufen 45-90 Minuten (Telefon, Video oder persönlich) und decken 2-4 vorab gewählte Archetypen ab. Wir stellen eine Frage nach der anderen und warten die volle Antwort ab. Wir haken bei vagen Antworten nach, bis wir eine konkrete Zahl, einen spezifischen Fall oder einen Entscheidungsmoment erhalten. Wörtliche Formulierungen erfassen wir, wo der SME präzise formuliert.</p>
+              <p>Interviews laufen 45-90 Minuten (Telefon, Video oder persönlich) und decken 2-4 vorab gewählte Archetypen ab. Wir stellen eine Frage nach der anderen und warten die volle Antwort ab. Wir haken bei vagen Antworten nach, bis wir eine konkrete Zahl, einen spezifischen Fall oder einen Entscheidungsmoment erhalten. Wörtliche Formulierungen erfassen wir, wo der Experte präzise formuliert.</p>
             </div>
           </div>
 
           <div class="pt-14 pb-14 border-t border-gray-light/30">
             <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
-              Was passiert, wenn Ihr SME bereits öffentlich interviewt wurde?
+              Was passiert, wenn Ihr Experte bereits öffentlich interviewt wurde?
             </h2>
             <div class="space-y-4 text-base font-body text-gray leading-relaxed">
-              <p>Wir lesen das öffentliche Material zuerst (LinkedIn-Langform, Podcasts, Konferenz-Vorträge, Gastartikel) und vermeiden, den SME Dokumentiertes erneut sagen zu lassen. Wir sondieren, was fehlt: den konkreten Fall hinter einer öffentlichen Aussage, die konträre Sicht, die privat vertreten, öffentlich aber abgemildert wurde, die Fehlschlag-Story, die erwähnt, aber nie ausgeführt wurde. Live-Interview-Zeit wird für unveröffentlichte Tiefe eingesetzt.</p>
+              <p>Wir lesen das öffentliche Material zuerst (LinkedIn-Langform, Podcasts, Konferenz-Vorträge, Gastartikel) und vermeiden, den Experten Dokumentiertes erneut sagen zu lassen. Wir sondieren, was fehlt: den konkreten Fall hinter einer öffentlichen Aussage, die konträre Sicht, die privat vertreten, öffentlich aber abgemildert wurde, die Fehlschlag-Story, die erwähnt, aber nie ausgeführt wurde. Live-Interview-Zeit wird für unveröffentlichte Tiefe eingesetzt.</p>
             </div>
           </div>
 
@@ -194,7 +194,7 @@ const relatedLinks = [
               Was ist der YMYL-Compliance-Durchgang?
             </h2>
             <div class="space-y-4 text-base font-body text-gray leading-relaxed">
-              <p>Für Zahnmedizin, Recht, Medizin, Finanzberatung und Gesundheitswesen markieren wir während des Interviews Behauptungen wie "garantiert", "Spezialist" ohne Facharzt-Anerkennung, "wir haben X CHF zurückgeholt", "heilen" oder Ergebnis-Aussagen ohne Disclaimer. Wir filtern nicht die tatsächlichen Worte des SME: die Markierung erscheint, damit Content-Ersteller beim Entwurf umformulieren können. Patienten- oder klienten-identifizierende Details werden nur mit ausdrücklicher Einwilligung erfasst, pro Zitat und Fall dokumentiert.</p>
+              <p>Für Zahnmedizin, Recht, Medizin, Finanzberatung und Gesundheitswesen markieren wir während des Interviews Behauptungen wie "garantiert", "Spezialist" ohne Facharzt-Anerkennung, "wir haben X CHF zurückgeholt", "heilen" oder Ergebnis-Aussagen ohne Disclaimer. Wir filtern nicht die tatsächlichen Worte des Experten: die Markierung erscheint, damit Content-Ersteller beim Entwurf umformulieren können. Patienten- oder klienten-identifizierende Details werden nur mit ausdrücklicher Einwilligung erfasst, pro Zitat und Fall dokumentiert.</p>
             </div>
           </div>
 
@@ -209,9 +209,9 @@ const relatedLinks = [
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Strukturierte Interview-Datei</strong> — 2-4 Archetyp-Sektionen mit wörtlichen Zitaten und fallspezifischen Details</span></li>
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Tabelle konkreter Beispiele</strong> — jede numerische Behauptung mit Ergebnis und Attributions-Status erfasst</span></li>
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Rohzitat-Reservoir</strong> — prägnante meinungsstarke Zitate, geeignet für Bookends und Pull-Quote-Callouts</span></li>
-              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Zitierbare Zeilen / Mantras</strong> — Einzeiler, die der SME quer durch Kunden-Arbeit wiederholt</span></li>
+              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Zitierbare Zeilen / Mantras</strong> — Einzeiler, die der Experte quer durch Kunden-Arbeit wiederholt</span></li>
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Workflow-Detail (Ordered List)</strong> — Ablauf-Rückgrat für "Wie mache ich…"-Content-Capsules</span></li>
-              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Benannte Frameworks</strong> — falls vorhanden, die gebrandete Methodik des SME zum Thema</span></li>
+              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Benannte Frameworks</strong> — falls vorhanden, die gebrandete Methodik des Experten zum Thema</span></li>
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">YMYL-Compliance-Flags</strong> — Behauptungen nach Schweregrad markiert mit Umformulierungs-Vorschlag</span></li>
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Attributions-Protokoll</strong> — Einwilligungs-Status pro Zitat, dokumentiert für das Content-Team</span></li>
             </ul>
@@ -257,7 +257,7 @@ const relatedLinks = [
   <Section bg="cream">
     <SectionHeader label="Preise" title="Wie viel kostet ein Experteninterview?" />
     <p class="text-base font-body text-gray leading-relaxed max-w-3xl mb-10">
-      Preise skalieren mit Interview-Tiefe und nötiger Vorbereitung. Multi-SME- oder Multi-Themen-Batches erhalten 20% Rabatt bei gemeinsamer Buchung. Content-Retainer-Kunden erhalten Interviews während des Onboardings ohne Aufpreis.
+      Preise skalieren mit Interview-Tiefe und nötiger Vorbereitung. Multi-Experten- oder Multi-Themen-Batches erhalten 20% Rabatt bei gemeinsamer Buchung. Content-Retainer-Kunden erhalten Interviews während des Onboardings ohne Aufpreis.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -291,7 +291,7 @@ const relatedLinks = [
 
       <div class="bg-white border border-gray-light/40 rounded-lg p-6 flex flex-col">
         <h3 class="text-lg font-headline font-black text-navy mb-2">Batch</h3>
-        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">3+ Themen oder 2+ SMEs</p>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">3+ Themen oder 2+ Experten</p>
         <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
           <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> 45-90 Min pro Session</li>
           <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Archetypen variieren pro Thema</li>
@@ -344,6 +344,6 @@ const relatedLinks = [
   <!-- CTA -->
   <CTABanner bg="navy" title="Bereit, die Expertise zu erfassen, die KI nicht fälschen kann?" subtitle="Jede gründergeführte Marke sitzt auf Fallstudien, konträren Sichtweisen und Fehlschlag-Stories, die nie in den Content finden. Ein Experteninterview erfasst 3-8 Bausteine pro Session und liefert eine strukturierte Datei, aus der Ihr Content-Engine Monate lang schöpft.">
     <Button href="/ch-de/kontakt/" variant="primary" size="lg">Experteninterview buchen</Button>
-    <Button href="/ch-de/sme-expertise-library/" variant="secondary" size="lg">SME Library anfragen</Button>
+    <Button href="/ch-de/sme-expertise-library/" variant="secondary" size="lg">Expertenbibliothek anfragen</Button>
   </CTABanner>
 </BaseLayout>

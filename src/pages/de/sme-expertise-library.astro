@@ -7,13 +7,13 @@ import Button from '../../components/ui/Button.astro';
 import Card from '../../components/ui/Card.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 
-const title = 'SME Expertise Library — Gründerwissen wird Content | StarkRank';
+const title = 'Expertenbibliothek — Gründerwissen wird Content | StarkRank';
 const description = 'Fälle, konträre Thesen, Fehlschläge und Frameworks Ihres Gründers gehören in eine strukturierte Bibliothek, aus der Ihr Content-Engine täglich schöpft.';
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'SME Expertise Library',
+  name: 'Expertenbibliothek',
   description: 'Strukturierte Wissens-Bibliothek, die Fallstudien, konträre Positionen, Fehlschlag-Stories, Frameworks, Insider-Wissen und zitierbares Material eines Gründers über 10 Sektionen erfasst. Aufgebaut über ein Live-Interview und als kanonische Markdown-Datei geliefert.',
   url: 'https://starkrank.com/de/sme-expertise-library/',
   provider: { '@type': 'Organization', name: 'StarkRank', url: 'https://starkrank.com' },
@@ -25,7 +25,7 @@ const serviceSchema = {
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'SME Expertise Library Stufen',
+    name: 'Expertenbibliothek Stufen',
     itemListElement: [
       { '@type': 'Offer', name: 'Standalone', description: 'Einbranchen-Praxis, 1 Servicelinie. 2-stündiges Interview, 3 Fallstudien, kanonische Datei.', price: '2100', priceCurrency: 'EUR' },
       { '@type': 'Offer', name: 'Multi-Service', description: 'Multi-Service-Kanzlei mit 3+ Servicelinien. 3-stündiges Interview, 5 Fallstudien.', price: '3400', priceCurrency: 'EUR' },
@@ -35,13 +35,13 @@ const serviceSchema = {
 };
 
 const faqItems = [
-  { question: 'Wie unterscheidet sich das vom Expert-Interview-Service?', answer: 'Das Experteninterview ist themen-spezifisch — 1 Verfahren, 1 Servicebereich, 1 Datei pro Thema. Die SME Library ist personen-spezifisch — das gesamte Wissen Ihres Gründers über seine Praxis, einmal im Onboarding gebaut. Beides existiert nebeneinander: die Library ist der Rückhalt, Themen-Interviews sind der Deep-Dive.' },
-  { question: 'Für wen ist die SME Expertise Library NICHT geeignet?', answer: 'Kunden, bei denen kein einzelner SME die Marke trägt: Multi-Location-Franchises, Generalisten-Agenturen, E-Commerce-Shops, reine Kategorie- oder Produktmarken. Auch Kunden in frühen Phasen ohne bisherigen umsatzträchtigen Content.' },
+  { question: 'Wie unterscheidet sich das vom Expert-Interview-Service?', answer: 'Das Experteninterview ist themen-spezifisch — 1 Verfahren, 1 Servicebereich, 1 Datei pro Thema. Die Expertenbibliothek ist personen-spezifisch — das gesamte Wissen Ihres Gründers über seine Praxis, einmal im Onboarding gebaut. Beides existiert nebeneinander: die Expertenbibliothek ist der Rückhalt, Themen-Interviews sind der Deep-Dive.' },
+  { question: 'Für wen ist die Expertenbibliothek NICHT geeignet?', answer: 'Kunden, bei denen kein einzelner Experte die Marke trägt: Multi-Location-Franchises, Generalisten-Agenturen, E-Commerce-Shops, reine Kategorie- oder Produktmarken. Auch Kunden in frühen Phasen ohne bisherigen umsatzträchtigen Content.' },
   { question: 'Was, wenn mein Gründer wenig Zeit für ein Interview hat?', answer: 'Wir teilen das 2-3-stündige Interview auf 2 oder 3 Sessions à 45-60 Minuten auf. Wir akzeptieren auch Transkripte bestehenden Materials (Podcast-Auftritte, Konferenz-Vorträge, Schulungsvideos) als Input, was die Live-Interview-Zeit deutlich reduziert.' },
-  { question: 'Arbeiten Sie mit unserem bestehenden Content-Team oder ersetzen Sie es?', answer: 'Wir arbeiten ergänzend. Die Library ist so gebaut, dass sie jedes Content-Team speist, ob intern, Ghostwriter oder unser Content-Marketing-Retainer. Das Nutzungs-Log dokumentiert, welches Material bereits geschöpft wurde, sodass Ihr Team dieselbe Fallstudie nicht versehentlich dreimal wiederverwendet.' },
-  { question: 'Wie oft muss die Library aktualisiert werden?', answer: 'Monatlich zum Ergänzen neuer Fallstudien (10 Minuten). Quartalsweise zur Überprüfung der konträren Positionen (30 Minuten). Jährlich für ein vollständiges Rubrik-Re-Audit (2 Stunden, 700 € außerhalb des Retainers).' },
-  { question: 'Kann die Library von bereits lizenzierten KI-Schreibwerkzeugen verwendet werden?', answer: 'Ja. Die Library ist eine strukturierte Markdown-Datei, daher kann jedes Content-Werkzeug, das Markdown-Kontext akzeptiert (Claude, ChatGPT, Jasper, Writer, eigene Prompting-Pipelines), sie laden. Wir liefern eine kurze Prompt-Vorlage zum Einspeisen von Library-Sektionen in Generierungs-Workflows.' },
-  { question: 'Was passiert, wenn unser Gründer ausscheidet oder die Rolle wechselt?', answer: 'Die Library ist das Asset; das Ausscheiden Ihres Gründers löscht sie nicht. Bisherige Fallstudien, Frameworks und konträre Positionen bleiben nutzbar (mit gemäß den ursprünglichen Einwilligungen erhaltener Attribution), solange sie korrekt sind.' },
+  { question: 'Arbeiten Sie mit unserem bestehenden Content-Team oder ersetzen Sie es?', answer: 'Wir arbeiten ergänzend. Die Bibliothek ist so gebaut, dass sie jedes Content-Team speist, ob intern, Ghostwriter oder unser Content-Marketing-Retainer. Das Nutzungs-Log dokumentiert, welches Material bereits geschöpft wurde, sodass Ihr Team dieselbe Fallstudie nicht versehentlich dreimal wiederverwendet.' },
+  { question: 'Wie oft muss die Expertenbibliothek aktualisiert werden?', answer: 'Monatlich zum Ergänzen neuer Fallstudien (10 Minuten). Quartalsweise zur Überprüfung der konträren Positionen (30 Minuten). Jährlich für ein vollständiges Rubrik-Re-Audit (2 Stunden, 700 € außerhalb des Retainers).' },
+  { question: 'Kann die Expertenbibliothek von bereits lizenzierten KI-Schreibwerkzeugen verwendet werden?', answer: 'Ja. Die Bibliothek ist eine strukturierte Markdown-Datei, daher kann jedes Content-Werkzeug, das Markdown-Kontext akzeptiert (Claude, ChatGPT, Jasper, Writer, eigene Prompting-Pipelines), sie laden. Wir liefern eine kurze Prompt-Vorlage zum Einspeisen von Bibliothek-Sektionen in Generierungs-Workflows.' },
+  { question: 'Was passiert, wenn unser Gründer ausscheidet oder die Rolle wechselt?', answer: 'Die Bibliothek ist das Asset; das Ausscheiden Ihres Gründers löscht sie nicht. Bisherige Fallstudien, Frameworks und konträre Positionen bleiben nutzbar (mit gemäß den ursprünglichen Einwilligungen erhaltener Attribution), solange sie korrekt sind.' },
 ];
 
 const faqSchema = {
@@ -58,29 +58,29 @@ const schemas = [serviceSchema, faqSchema];
 
 const breadcrumbs = [
   { label: 'Start', href: '/de/' },
-  { label: 'SME Expertise Library', href: '/de/sme-expertise-library/' },
+  { label: 'Expertenbibliothek', href: '/de/sme-expertise-library/' },
 ];
 
 const sections = [
-  { num: 1, name: 'Kernexpertise & Qualifikationen', what: 'Jahre im Feld, Nischenkante, was der SME besser weiß als 95% der Peers' },
+  { num: 1, name: 'Kernexpertise & Qualifikationen', what: 'Jahre im Feld, Nischenkante, was der Experte besser weiß als 95% der Peers' },
   { num: 2, name: 'Konträre Überzeugungen', what: '2-4 Positionen, denen die meisten Peers widersprechen, plus Evidenz dahinter' },
   { num: 3, name: 'Fallstudien', what: '3-5 konkrete Projekte mit Vorher/Nachher, Wendepunkt-Entscheidungen, Ergebniszahlen, gezogenen Lehren' },
   { num: 4, name: 'Testimonials & direkte Zitate', what: 'Wörtliche Kundenzitate mit Quelle, bestes je erhaltenes Feedback, häufigstes Dankeschön' },
-  { num: 5, name: 'Fehlschläge & Lehren', what: 'Projekte, die der SME bereut, Ursachen, was er anders machen würde' },
-  { num: 6, name: 'Frameworks & benannte Methoden', what: 'Gebrandete oder informelle Methodiken, die der SME bei jedem Auftrag einsetzt' },
+  { num: 5, name: 'Fehlschläge & Lehren', what: 'Projekte, die der Experte bereut, Ursachen, was er anders machen würde' },
+  { num: 6, name: 'Frameworks & benannte Methoden', what: 'Gebrandete oder informelle Methodiken, die der Experte bei jedem Auftrag einsetzt' },
   { num: 7, name: 'Insider-Wissen', what: 'Branchenwahrheiten, die nicht in Lehrbüchern stehen, Muster, die Peers übersehen' },
-  { num: 8, name: 'Aktuelle Branchensicht', what: 'Überhypte vs. unterschätzte Trends, was der SME derzeit verfolgt' },
-  { num: 9, name: 'Zitierbare Zeilen / Mantras', what: 'Einzeiler, die der SME in jedem Beratungsgespräch wiederholt' },
+  { num: 8, name: 'Aktuelle Branchensicht', what: 'Überhypte vs. unterschätzte Trends, was der Experte derzeit verfolgt' },
+  { num: 9, name: 'Zitierbare Zeilen / Mantras', what: 'Einzeiler, die der Experte in jedem Beratungsgespräch wiederholt' },
   { num: 10, name: 'Beweise & Daten zum Zitieren', what: 'Interne Dashboards, konkrete Zahlen zur öffentlichen Nennung, Vorher/Nachher-Referenzen' },
 ];
 
 const processSteps = [
   { num: 1, title: 'Vorbereitung (Tag 1-2)', body: 'Wir lesen Ihr bestehendes öffentliches Material (LinkedIn-Langform, Podcast-Auftritte, Konferenz-Vorträge, Gastartikel) und bereiten das Interview so vor, dass bereits Dokumentiertes nicht abgefragt wird.' },
-  { num: 2, title: 'Live-Interview (Tag 3-5)', body: '2 bis 3 Stunden mit dem SME in 1 oder 2 Sessions. Wir stellen eine Frage nach der anderen, haken bei vagen Antworten nach und decken alle 10 Sektionen ab.' },
+  { num: 2, title: 'Live-Interview (Tag 3-5)', body: '2 bis 3 Stunden mit dem Experten in 1 oder 2 Sessions. Wir stellen eine Frage nach der anderen, haken bei vagen Antworten nach und decken alle 10 Sektionen ab.' },
   { num: 3, title: 'YMYL-Compliance-Durchgang (Tag 6)', body: 'Für regulierte Branchen markieren wir Behauptungen wie "garantiert", "Spezialist" ohne Facharzt-Anerkennung oder Ergebnis-Aussagen ohne Disclaimer.' },
-  { num: 4, title: 'Synthese + Library-Entwurf (Tag 7-8)', body: 'Die 10 Sektionen werden in die kanonische Datei kompiliert. Attributions-Entscheidungen pro Zitat dokumentiert.' },
-  { num: 5, title: 'SME-Review-Zyklus (Tag 9-10)', body: 'Wir fassen die 8-12 tragendsten Punkte zur Freigabe an den SME zurück. Korrekturen eingepflegt, Attribution bestätigt.' },
-  { num: 6, title: 'Lieferung (Tag 11-14)', body: 'Library-Datei gespeichert. 30-minütiger Walkthrough mit Ihrem Content-Team, wie aus Content-Briefs auf die Library verwiesen wird.' },
+  { num: 4, title: 'Synthese + Bibliothek-Entwurf (Tag 7-8)', body: 'Die 10 Sektionen werden in die kanonische Datei kompiliert. Attributions-Entscheidungen pro Zitat dokumentiert.' },
+  { num: 5, title: 'Experten-Review-Zyklus (Tag 9-10)', body: 'Wir fassen die 8-12 tragendsten Punkte zur Freigabe an den Expertenzurück. Korrekturen eingepflegt, Attribution bestätigt.' },
+  { num: 6, title: 'Lieferung (Tag 11-14)', body: 'Bibliothek-Datei gespeichert. 30-minütiger Walkthrough mit Ihrem Content-Team, wie aus Content-Briefs auf die Expertenbibliothek verwiesen wird.' },
 ];
 
 const relatedLinks = [
@@ -109,14 +109,14 @@ const relatedLinks = [
       Content &amp; Copywriting
     </span>
     <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
-      SME Expertise Library — Das Wissen Ihres Gründers als zitierbares Asset
+      Expertenbibliothek — Das Wissen Ihres Gründers als zitierbares Asset
     </h1>
     <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-3xl">
-      Der schwierigste Content in 2026 ist der, den KI nicht generieren kann: Fehlschlag-Stories, Fallergebnisse mit konkreten Zahlen, konträre Positionen aus 20 Jahren Feldarbeit, benannte Frameworks, die Ihr Team tatsächlich nutzt. All das lebt im Kopf Ihres Gründers und taucht in Kundenmeetings auf, niemals im Content. Die SME Expertise Library erfasst es einmal, strukturiert es über 10 Sektionen und wird zur Quelle, aus der Ihr Content-Team bei jedem Brief schöpft.
+      Der schwierigste Content in 2026 ist der, den KI nicht generieren kann: Fehlschlag-Stories, Fallergebnisse mit konkreten Zahlen, konträre Positionen aus 20 Jahren Feldarbeit, benannte Frameworks, die Ihr Team tatsächlich nutzt. All das lebt im Kopf Ihres Gründers und taucht in Kundenmeetings auf, niemals im Content. Die Expertenbibliothek erfasst es einmal, strukturiert es über 10 Sektionen und wird zur Quelle, aus der Ihr Content-Team bei jedem Brief schöpft.
     </p>
 
     <div class="mt-8 flex flex-wrap gap-4">
-      <Button href="/de/kontakt/" variant="primary" size="lg">SME Library buchen</Button>
+      <Button href="/de/kontakt/" variant="primary" size="lg">Expertenbibliothek buchen</Button>
       <Button href="#sections" variant="ghost" size="lg">Die 10 Sektionen</Button>
     </div>
 
@@ -138,16 +138,16 @@ const relatedLinks = [
             </h2>
             <div class="space-y-4 text-base font-body text-gray leading-relaxed">
               <p>Ihr Gründer weiß Dinge, die niemand sonst in Ihrem Team weiß, die niemand in Ihrer Branche dokumentiert und die kein KI-Modell aus Trainingsdaten ableiten kann: Fallzahlen aus 15 Jahren Praxis, die konträre Position, die Kundenmeetings entscheidet, der Fehlschlag, der jeden folgenden Auftrag geprägt hat.</p>
-              <p>Ohne Bibliothek bleibt dieses Wissen im Kopf. Die Library macht aus Ein-Personen-Expertise ein Team-Asset.</p>
+              <p>Ohne Bibliothek bleibt dieses Wissen im Kopf. Die Bibliothek macht aus Ein-Personen-Expertise ein Team-Asset.</p>
             </div>
           </div>
 
           <div id="sections" class="pt-14 pb-14 border-t border-gray-light/30">
             <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-4">
-              Was umfasst die SME Expertise Library?
+              Was umfasst die Expertenbibliothek?
             </h2>
             <p class="text-base font-body text-gray leading-relaxed mb-8">
-              Die Library strukturiert das Wissen Ihres Gründers über 10 Sektionen in einer einzigen kanonischen Datei, aufgebaut durch ein strukturiertes 2-3-stündiges Interview mit optionaler Transkript-Übernahme aus bestehenden Podcast-Auftritten, Konferenz-Vorträgen oder LinkedIn-Langbeiträgen.
+              Die Bibliothek strukturiert das Wissen Ihres Gründers über 10 Sektionen in einer einzigen kanonischen Datei, aufgebaut durch ein strukturiertes 2-3-stündiges Interview mit optionaler Transkript-Übernahme aus bestehenden Podcast-Auftritten, Konferenz-Vorträgen oder LinkedIn-Langbeiträgen.
             </p>
             <div class="overflow-x-auto">
               <table class="w-full text-sm font-body border-collapse">
@@ -173,31 +173,31 @@ const relatedLinks = [
 
           <div class="pt-14 pb-14 border-t border-gray-light/30">
             <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
-              Wie unterscheidet sich die Library von einem Blog oder einer Über-uns-Seite?
+              Wie unterscheidet sich die Expertenbibliothek von einem Blog oder einer Über-uns-Seite?
             </h2>
             <div class="space-y-4 text-base font-body text-gray leading-relaxed">
-              <p>Eine Über-uns-Seite behauptet Expertise; ein Blog veröffentlicht sie Artikel für Artikel. Die Library ist das Rohmaterial darunter. Sie ist nicht kundenseitig, nicht für SEO strukturiert und kein Fließtext: sie ist eine strukturierte Wissens-Datei mit 10 Sektionen, einem Nutzungs-Log, das dokumentiert, welcher Content bereits daraus geschöpft hat, und Querverweisen zu themenspezifischen Interviews.</p>
+              <p>Eine Über-uns-Seite behauptet Expertise; ein Blog veröffentlicht sie Artikel für Artikel. Die Bibliothek ist das Rohmaterial darunter. Sie ist nicht kundenseitig, nicht für SEO strukturiert und kein Fließtext: sie ist eine strukturierte Wissens-Datei mit 10 Sektionen, einem Nutzungs-Log, das dokumentiert, welcher Content bereits daraus geschöpft hat, und Querverweisen zu themenspezifischen Interviews.</p>
             </div>
           </div>
 
           <div class="pt-14 pb-14 border-t border-gray-light/30">
             <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
-              Warum eine Library bauen statt nur Themen-Interviews zu führen?
+              Warum eine Bibliothek bauen statt nur Themen-Interviews zu führen?
             </h2>
             <div class="space-y-4 text-base font-body text-gray leading-relaxed">
-              <p>Beides ist nützlich, und wir empfehlen oft beides. Themen-Interviews gehen tief auf 1 Servicebereich oder Verfahren; die Library ist das gesamte Wissen des Gründers über seine Praxis. Teams, die mit Themen-Interviews beginnen, enden damit, den SME für jedes neue Thema erneut zu interviewen. Teams, die mit der Library beginnen, haben Breite abgedeckt und führen Themen-Interviews für Tiefe.</p>
+              <p>Beides ist nützlich, und wir empfehlen oft beides. Themen-Interviews gehen tief auf 1 Servicebereich oder Verfahren; die Expertenbibliothek ist das gesamte Wissen des Gründers über seine Praxis. Teams, die mit Themen-Interviews beginnen, enden damit, den Expertenfür jedes neue Thema erneut zu interviewen. Teams, die mit der Expertenbibliothek beginnen, haben Breite abgedeckt und führen Themen-Interviews für Tiefe.</p>
             </div>
           </div>
 
           <div class="pt-14 pb-14 border-t border-gray-light/30">
             <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
-              Wo liegen die Grenzen des SME-Library-Service?
+              Wo liegen die Grenzen des Expertenbibliothek-Service?
             </h2>
             <div class="space-y-4 text-base font-body text-gray leading-relaxed">
               <p>Drei Grenzen sind vor dem Auftrag zu nennen:</p>
               <ul class="space-y-3 list-none pl-0">
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span>Die Library erfordert ein Live-Interview (2-3 Stunden, aufteilbar); wir können sie nicht allein aus öffentlichem Material bauen, weil der wertvollste Content unveröffentlicht ist.</span></li>
-                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span>1 Anker-SME pro Library; Mehr-SME-Teams buchen 1 Library pro benanntem Experten zum Standalone-Tarif.</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span>Die Bibliothek erfordert ein Live-Interview (2-3 Stunden, aufteilbar); wir können sie nicht allein aus öffentlichem Material bauen, weil der wertvollste Content unveröffentlicht ist.</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span>1 Anker-Experte pro Expertenbibliothek; Mehr-Experten-Teams buchen 1 Bibliothek pro benanntem Experten zum Standalone-Tarif.</span></li>
                 <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span>YMYL-Branchen benötigen menschliche Freigabe der Attribution.</span></li>
               </ul>
             </div>
@@ -205,14 +205,14 @@ const relatedLinks = [
 
           <div id="deliverables" class="pt-14 pb-14 border-t border-gray-light/30">
             <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
-              Was erhalten Sie bei der SME-Library?
+              Was erhalten Sie bei der Expertenbibliothek?
             </h2>
             <ul class="space-y-3 list-none pl-0 text-base font-body text-gray leading-relaxed">
-              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Kanonische Library-Datei</strong> — einheitliche Wahrheitsquelle, 10 Sektionen, über Kunden hinweg konsistente Struktur</span></li>
+              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Kanonische Bibliothek-Datei</strong> — einheitliche Wahrheitsquelle, 10 Sektionen, über Kunden hinweg konsistente Struktur</span></li>
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">YMYL-Compliance-Flag-Tabelle</strong> — anwendbare Regularien Claim-Mustern zugeordnet mit Vorschlägen für konforme Umformulierung</span></li>
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Querverweis-Index</strong> — Verweise auf bestehende themenspezifische Interview-Dateien für Deep-Dive-Material</span></li>
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Attributions-Entscheidungen</strong> — Einwilligung pro Zitat und pro Fallstudie (namentlich, anonymisiert oder nur intern)</span></li>
-              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Nutzungs-Log</strong> — leere Tabelle, die über die Zeit gefüllt wird, sobald Content-Briefs aus der Library schöpfen</span></li>
+              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Nutzungs-Log</strong> — leere Tabelle, die über die Zeit gefüllt wird, sobald Content-Briefs aus der Expertenbibliothek schöpfen</span></li>
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Jährlicher Refresh</strong> — optionale 700-€-Jahres-Session zum Ergänzen neuer Fälle, Aktualisieren der konträren Positionen und Auffrischen der aktuellen Sicht</span></li>
             </ul>
           </div>
@@ -255,9 +255,9 @@ const relatedLinks = [
 
   <!-- Pricing -->
   <Section bg="cream">
-    <SectionHeader label="Preise" title="Wie viel kostet die SME Expertise Library?" />
+    <SectionHeader label="Preise" title="Wie viel kostet die Expertenbibliothek?" />
     <p class="text-base font-body text-gray leading-relaxed max-w-3xl mb-10">
-      Preise gestaffelt nach Umfang. Content-Retainer-Kunden, deren Marke an einem Schlüssel-SME verankert ist, erhalten die Library im Onboarding ohne Aufpreis.
+      Preise gestaffelt nach Umfang. Content-Retainer-Kunden, deren Marke an einem Schlüssel-Experten verankert ist, erhalten die Expertenbibliothek im Onboarding ohne Aufpreis.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -342,8 +342,8 @@ const relatedLinks = [
   </Section>
 
   <!-- CTA -->
-  <CTABanner bg="navy" title="Bereit, Gründerwissen in ein Team-Asset zu verwandeln?" subtitle="Jede gründergeführte Praxis hat mehr Expertise als Content. Die SME Library erfasst sie einmal in einer strukturierten Datei, aus der Ihr Content-Team bei jedem Brief schöpft. 2.100 € Standalone, 3.400 € Multi-Service, im Content-Marketing-Retainer enthalten.">
-    <Button href="/de/kontakt/" variant="primary" size="lg">SME Library buchen</Button>
+  <CTABanner bg="navy" title="Bereit, Gründerwissen in ein Team-Asset zu verwandeln?" subtitle="Jede gründergeführte Praxis hat mehr Expertise als Content. Die Expertenbibliothek erfasst sie einmal in einer strukturierten Datei, aus der Ihr Content-Team bei jedem Brief schöpft. 2.100 € Standalone, 3.400 € Multi-Service, im Content-Marketing-Retainer enthalten.">
+    <Button href="/de/kontakt/" variant="primary" size="lg">Expertenbibliothek buchen</Button>
     <Button href="/de/content-marketing-hannover/" variant="secondary" size="lg">Content-Retainer anfragen</Button>
   </CTABanner>
 </BaseLayout>
