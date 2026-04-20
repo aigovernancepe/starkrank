@@ -37,7 +37,7 @@ const faqItems = [
   { question: 'Wie unterscheidet sich der Check von Screaming Frog oder einem gewöhnlichen SEO-Audit?', answer: 'Screaming Frog crawlt Ihre Website und erzeugt einen Snapshot — es kennt keinen Pre-Deploy- versus Post-Deploy-Zustand. Der Pre-Deploy-Check speichert eine Baseline und diffed dagegen, sodass die Ausgabe "diese 7 Dinge haben sich geändert" lautet statt "Ihre Website hat diese Probleme". Setzen Sie beides ein: Screaming Frog zur initialen Entdeckung, den Pre-Deploy-Check als Deploy-Gate.' },
   { question: 'Funktioniert das bei JavaScript-lastigen Websites?', answer: 'Nicht nativ — der Check parst statisches HTML über selectolax. Für SPAs, clientseitig gerenderte Next.js-Seiten oder jede Website, die Inhalte clientseitig hydratisiert, führen wir zuvor ein Screaming-Frog-JavaScript-Vorrendering durch, um statische HTML-Snapshots zu erzeugen.' },
   { question: 'Kann unser Dev-Team den Check nach dem initialen Auftrag selbst ausführen?', answer: 'Ja — der Auftrag beinhaltet das page_drift.py-Skript, Ihre URL-Liste und eine Dokumentation der Baseline/Diff-Befehle. Ihr Team kann den Check bei jedem folgenden Deploy ohne Zusatzkosten ausführen. Der Walkthrough deckt die CI/CD-Integration ab.' },
-  { question: 'Wie viele URLs sollten wir baselinen?', answer: '15 bis 30 URLs sind der ideale Umfang für das 500er-Paket. Wählen Sie Ihre wertvollsten Seiten: Startseite, umsatzstärkste Seiten, Top-10-organische-Landing-Pages nach Search-Console-Klicks und alle URLs, die sich im Deploy gezielt ändern. Für grössere Websites CHF 10 pro URL über 30.' },
+  { question: 'Wie viele URLs sollten wir baselinen?', answer: '15 bis 30 URLs sind der ideale Umfang für das 500er-Paket. Wählen Sie Ihre wertvollsten Seiten: Startseite, umsatzstärkste Seiten, Top-10-organische-Landing-Pages nach Search-Console-Klicks und alle URLs, die sich im Deploy gezielt ändern. Für grössere Websites 10 CHF pro URL über 30.' },
   { question: 'Was passiert, wenn ein CRITICAL-Befund mitten im Deploy auslöst?', answer: 'Das Skript endet mit Exit-Code 1 und stoppt Ihre CI/CD-Pipeline, falls es in die Deploy-Kette eingebunden ist. Sie rollen zurück, beheben und deployen erneut oder überstimmen den Block bei einem False Positive. Der Markdown-Bericht nennt URL, Regel und Alt-Neu-Werte, sodass die Entscheidung Minuten dauert.' },
   { question: 'Ist der Check idempotent — können wir den Diff mehrfach ausführen?', answer: 'Ja. Der Diff-Befehl ruft die URLs erneut ab und vergleicht jedes Mal gegen die gespeicherte Baseline. Sie können ihn direkt nach dem Deploy ausführen, eine Stunde später, einen Tag später, eine Woche später — die Baseline bleibt, bis Sie explizit re-baselinen.' },
   { question: 'Wie verhält sich der Check zum AISO-Check?', answer: 'Verschiedene Zwecke. Der AISO-Check prüft auf KI-Suche-Readiness (kann ChatGPT Sie zitieren?) — er ist diagnostisch. Der Pre-Deploy-Check erkennt Regressionen zwischen zwei Zuständen — er ist ein Deploy-Gate. Nutzen Sie den AISO-Check zur Diagnose von KI-Suche-Lücken, den Pre-Deploy-Check zum Schutz vor stillen SEO-Regressionen während Releases.' },
@@ -264,7 +264,7 @@ const relatedLinks = [
   <Section bg="cream">
     <SectionHeader label="Preise" title="Wie viel kostet der Pre-Deploy-SEO-Check?" />
     <p class="text-base font-body text-gray leading-relaxed max-w-3xl mb-10">
-      500 pauschal für bis zu 30 URLs, einzelnes Deploy-Fenster. Inklusive sind Baseline, Diff, Markdown-Bericht, JSON-Export und der 30-minütige Walkthrough-Call. Grössere URL-Mengen (30-100 URLs) kosten CHF 10 pro URL über der Basis. Beim Bündeln mit einer Plattform-Migration erhalten Sie 50% Rabatt.
+      500 pauschal für bis zu 30 URLs, einzelnes Deploy-Fenster. Inklusive sind Baseline, Diff, Markdown-Bericht, JSON-Export und der 30-minütige Walkthrough-Call. Grössere URL-Mengen (30-100 URLs) kosten 10 CHF pro URL über der Basis. Beim Bündeln mit einer Plattform-Migration erhalten Sie 50% Rabatt.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
@@ -300,7 +300,7 @@ const relatedLinks = [
 
     <div class="mt-8 bg-white border border-gray-light/40 rounded-lg p-6 max-w-4xl">
       <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-2">Laufendes Monitoring</p>
-      <p class="text-sm font-body text-gray">Für Teams, die kontinuierlich deployen (wöchentlich+), bieten wir einen Monitoring-Retainer zu CHF 300/Monat mit unbegrenzten Baseline/Diff-Läufen, Slack-Integration und wöchentlichen Drift-Berichten.</p>
+      <p class="text-sm font-body text-gray">Für Teams, die kontinuierlich deployen (wöchentlich+), bieten wir einen Monitoring-Retainer zu 300 CHF/Monat mit unbegrenzten Baseline/Diff-Läufen, Slack-Integration und wöchentlichen Drift-Berichten.</p>
     </div>
   </Section>
 
