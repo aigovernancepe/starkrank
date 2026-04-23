@@ -1,36 +1,46 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/ui/HeroSection.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import PillarCard from '../../components/ui/PillarCard.astro';
+import BuildingGraphic from '../../components/ui/BuildingGraphic.astro';
 import Button from '../../components/ui/Button.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import { getLocalizedPillars } from '../../data/pillars';
-import { getSpokePath } from '../../data/service-slugs';
 
 const pillars = getLocalizedPillars('ch-de');
 
-const pillarCityLinks: Record<string, string> = {
-  'search-ai-intelligence': `/ch-de/${getSpokePath('ai-search-optimization', 'basel', 'ch-de')}/`,
-  'performance-media': `/ch-de/${getSpokePath('google-ads-management', 'basel', 'ch-de')}/`,
-  'authority-pr': `/ch-de/${getSpokePath('authority-link-building', 'basel', 'ch-de')}/`,
-  'content-copywriting': `/ch-de/${getSpokePath('seo-copywriting', 'basel', 'ch-de')}/`,
-  'data-web': `/ch-de/${getSpokePath('google-analytics-consultancy', 'basel', 'ch-de')}/`,
+const pillarAnchorLinks: Record<string, string> = {
+  'search-ai-intelligence': '/ch-de/services/#search-ai-intelligence',
+  'performance-media': '/ch-de/services/#performance-media',
+  'authority-pr': '/ch-de/services/#authority-pr',
+  'content-copywriting': '/ch-de/services/#content-copywriting',
+  'data-web': '/ch-de/services/#data-web',
 };
 
-const allSpokes = await getCollection('spokes', (s) => s.data.locale === 'ch-de');
-const spokesByPillar = pillars.map((pillar) => ({
-  pillar,
-  spokes: pillar.services
-    .flatMap((serviceSlug) => allSpokes.filter((s) => s.data.serviceSlug === serviceSlug))
-    .map((s) => ({
-      title: s.data.title,
-      description: s.data.description,
-      href: `/ch-de/${getSpokePath(s.data.serviceSlug, s.data.citySlug, 'ch-de')}/`,
-    })),
-}));
+const processSteps = [
+  {
+    num: '01',
+    title: 'Analyse',
+    body: 'AISO-Check, Keyword-Mapping und Wettbewerbsvergleich. Wo steht Ihre Marke heute in klassischer Suche und in KI-Antworten — und was genau bremst sie?',
+  },
+  {
+    num: '02',
+    title: 'Strategie',
+    body: 'Priorisierte Roadmap mit messbaren Zielen, Budget- und Zeitrahmen. Welche Hebel bewegen in den nächsten 90 Tagen den grössten Teil des Umsatzes?',
+  },
+  {
+    num: '03',
+    title: 'Umsetzung',
+    body: 'SEO, Google Ads, Content, Authority-Linkaufbau, Analytics — laufend im Retainer oder projektbasiert. Keine Blackbox: jede Massnahme mit nachvollziehbarem Warum.',
+  },
+  {
+    num: '04',
+    title: 'Messung & Anpassung',
+    body: 'Monatliche Daten, Quartals-Review, Pivot wo nötig. Was nicht wirkt, fliegt. Was wirkt, skaliert. Zurück zu Schritt 01 mit neuer Datenlage.',
+  },
+];
 ---
 
 <BaseLayout
@@ -45,41 +55,68 @@ const spokesByPillar = pillars.map((pillar) => ({
     <Button href="/ch-de/aiso-check/" variant="primary" size="lg">Kostenloser AISO-Check &rarr;</Button>
   </HeroSection>
 
+  {/* Building-graphic: interactive five-pillar metaphor */}
   <Section bg="cream">
-    <SectionHeader label="Unsere Dienstleistungen" title="Fünf Säulen des digitalen Wachstums" align="center" />
+    <SectionHeader
+      label="Unsere Dienstleistungen"
+      title="Fünf Säulen des digitalen Wachstums"
+      subtitle="Vier Disziplinen tragen das Wachstum Ihres Unternehmens — auf einem Fundament aus Daten und Web-Architektur. Fahren Sie über eine Säule, um die passende Karte unten zu finden."
+      align="center"
+    />
+    <BuildingGraphic locale="ch-de" />
+  </Section>
+
+  {/* Detailed pillar cards — wrappers carry data-pillar-id for the building interaction */}
+  <Section bg="white">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {pillars.map((pillar) => <PillarCard pillar={pillar} locale="ch-de" href={pillarCityLinks[pillar.id]} />)}
+      {pillars.map((pillar) => (
+        <div id={`card-${pillar.id}`} data-pillar-id={pillar.id} class="pillar-card-wrapper">
+          <PillarCard pillar={pillar} locale="ch-de" href={pillarAnchorLinks[pillar.id]} />
+        </div>
+      ))}
     </div>
   </Section>
 
-  <Section bg="white">
+  {/* Iterative process section */}
+  <Section bg="cream">
     <SectionHeader
-      label="Leistungen in der Schweiz"
-      title="Alle Dienstleistungen im Überblick"
-      subtitle="Vollständige Palette an digitalen Marketingleistungen — lokal verankert in Basel, für Unternehmen in der gesamten Schweiz."
+      label="Wie wir arbeiten"
+      title="Ein Zyklus, kein Projekt"
+      subtitle="Digitales Marketing ist kein einmaliger Relaunch. Es ist ein iterativer Prozess aus Analyse, Strategie, Umsetzung und Messung — mit Anpassungen auf Basis echter Daten."
       align="center"
     />
-    <div class="space-y-12">
-      {spokesByPillar.map(({ pillar, spokes }) => spokes.length > 0 && (
-        <div>
-          <h3 class="text-sm font-label font-bold uppercase tracking-[0.2em] text-blue mb-4">{pillar.name}</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {spokes.map((spoke) => (
-              <a
-                href={spoke.href}
-                class="group block bg-cream/40 border border-gray-light/40 rounded-lg p-5 transition-all hover:shadow-md hover:border-blue/30"
-              >
-                <h4 class="text-base font-headline font-black text-navy group-hover:text-blue transition-colors leading-snug">
-                  {spoke.title}
-                </h4>
-                <p class="mt-2 text-sm font-body text-gray leading-relaxed line-clamp-2">
-                  {spoke.description}
-                </p>
-              </a>
-            ))}
-          </div>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+      {processSteps.map((step, idx) => (
+        <div class="bg-white border border-gray-light/40 rounded-lg p-6 relative">
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
+          <h3 class="mt-2 text-lg font-headline font-bold text-navy">{step.title}</h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+          {idx < processSteps.length - 1 && (
+            <svg class="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          )}
         </div>
       ))}
+    </div>
+    <div class="mt-8 flex items-center justify-center gap-3 text-sm font-label font-semibold uppercase tracking-wide text-blue">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v6h6M20 20v-6h-6M4 10a8 8 0 0114-4M20 14a8 8 0 01-14 4" />
+      </svg>
+      <span>Daten aus Schritt 04 fliessen zurück in Schritt 01 — jeder Zyklus wird schärfer.</span>
+    </div>
+  </Section>
+
+  {/* Schnellcheck callout */}
+  <Section bg="white">
+    <div class="max-w-3xl mx-auto text-center">
+      <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Nicht sicher, wo Sie starten sollen?</span>
+      <h2 class="mt-3 text-2xl md:text-3xl font-headline font-black text-navy">60 Sekunden zu Ihrem nächsten Hebel</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">Unser Schnellcheck matcht Ihre Situation mit den Services, die in den nächsten 90 Tagen den grössten Impact haben — ohne Termin, ohne E-Mail-Angabe.</p>
+      <div class="mt-8 flex flex-wrap gap-4 justify-center">
+        <Button href="/ch-de/schnellcheck/" variant="primary" size="lg">Zum Schnellcheck &rarr;</Button>
+        <Button href="/ch-de/services/" variant="outline" size="lg">Alle Services ansehen</Button>
+      </div>
     </div>
   </Section>
 
