@@ -22,7 +22,7 @@ export default defineConfig({
     '/deutschland/': '/',
     '/services/ai-search-optimisation/': '/en/services/ai-search-optimization/',
     '/services/ai-search-optimisation': '/en/services/ai-search-optimization/',
-    '/free-aiso-score/': '/aiso-check/',
+    '/free-aiso-score/': '/en/aiso-score/',
     '/audits/free-google-ads-check/': '/kostenloser-google-ads-check/',
     '/audits/copywriting-ux-analysis/': '/kostenloser-copywriting-check/',
     '/locations/': '/',
