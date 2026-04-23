@@ -8,6 +8,37 @@ import Button from '../../components/ui/Button.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import { pillars } from '../../data/pillars';
 
+const pillarAnchorLinks: Record<string, string> = {
+  'search-ai-intelligence': '/en/services/#search-ai-intelligence',
+  'performance-media': '/en/services/#performance-media',
+  'authority-pr': '/en/services/#authority-pr',
+  'content-copywriting': '/en/services/#content-copywriting',
+  'data-web': '/en/services/#data-web',
+};
+
+const processSteps = [
+  {
+    num: '01',
+    title: 'Assess',
+    body: 'AISO Score, keyword mapping, and competitor benchmark. Where does your brand stand in classic search and in AI answers today — and what exactly is holding it back?',
+  },
+  {
+    num: '02',
+    title: 'Strategise',
+    body: 'Prioritised roadmap with measurable goals, budget, and timeline. Which levers move the biggest share of revenue in the next 90 days?',
+  },
+  {
+    num: '03',
+    title: 'Execute',
+    body: 'SEO, Google Ads, content, authority link building, analytics — retainer or project-based. No black box: every action with a traceable why.',
+  },
+  {
+    num: '04',
+    title: 'Measure & Adapt',
+    body: "Monthly data, quarterly review, pivot where needed. What doesn't work, goes. What works, scales. Back to step 01 with fresh data.",
+  },
+];
+
 const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -62,43 +93,99 @@ const websiteSchema = {
     <Button href="/en/contact/" variant="secondary" size="lg">Get in Touch</Button>
   </HeroSection>
 
+  {/* Building-graphic: the five-pillar metaphor */}
   <Section bg="cream">
     <SectionHeader
       label="What We Do"
       title="Five Pillars of Digital Growth"
-      subtitle="From AI search intelligence to transparent ROI reporting, we cover every angle of your digital presence."
+      subtitle="Four disciplines carry your growth — on a foundation of data and web architecture."
       align="center"
     />
+    <svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="building-title building-desc" class="w-full h-auto max-w-3xl mx-auto mt-8">
+      <title id="building-title">The Digital Growth Building</title>
+      <desc id="building-desc">Four pillars of digital marketing — Search and AI Intelligence, Performance Media, Authority, and Content and Copywriting — supported by a Data and Web foundation. Together they build a company's growth.</desc>
+
+      <text x="400" y="28" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700" letter-spacing="6">GROWTH</text>
+      <path d="M 400 36 L 390 50 L 410 50 Z" fill="#0E1A2D" />
+
+      <rect x="40" y="58" width="720" height="14" fill="#0E1A2D" />
+      <rect x="60" y="72" width="680" height="4" fill="#3B7DD8" />
+
+      <a href="/en/services/#search-ai-intelligence" aria-label="Search and AI Intelligence">
+        <rect x="90" y="86" width="130" height="248" fill="#ffffff" stroke="#3B7DD8" stroke-width="2" />
+        <rect x="90" y="86" width="130" height="8" fill="#3B7DD8" />
+        <rect x="90" y="326" width="130" height="8" fill="#3B7DD8" />
+        <text x="155" y="202" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700">Search</text>
+        <text x="155" y="222" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700">&amp; AI</text>
+      </a>
+      <a href="/en/services/#performance-media" aria-label="Performance Media">
+        <rect x="250" y="86" width="130" height="248" fill="#ffffff" stroke="#3B7DD8" stroke-width="2" />
+        <rect x="250" y="86" width="130" height="8" fill="#3B7DD8" />
+        <rect x="250" y="326" width="130" height="8" fill="#3B7DD8" />
+        <text x="315" y="202" text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700">Performance</text>
+        <text x="315" y="222" text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700">Media</text>
+      </a>
+      <a href="/en/services/#authority-pr" aria-label="Authority">
+        <rect x="410" y="86" width="130" height="248" fill="#ffffff" stroke="#3B7DD8" stroke-width="2" />
+        <rect x="410" y="86" width="130" height="8" fill="#3B7DD8" />
+        <rect x="410" y="326" width="130" height="8" fill="#3B7DD8" />
+        <text x="475" y="212" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700">Authority</text>
+      </a>
+      <a href="/en/services/#content-copywriting" aria-label="Content and Copywriting">
+        <rect x="570" y="86" width="130" height="248" fill="#ffffff" stroke="#3B7DD8" stroke-width="2" />
+        <rect x="570" y="86" width="130" height="8" fill="#3B7DD8" />
+        <rect x="570" y="326" width="130" height="8" fill="#3B7DD8" />
+        <text x="635" y="212" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700">Content</text>
+      </a>
+
+      <a href="/en/services/#data-web" aria-label="Data and Web">
+        <rect x="40" y="348" width="720" height="26" fill="#3B7DD8" />
+        <rect x="20" y="374" width="760" height="14" fill="#0E1A2D" />
+        <text x="400" y="366" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700" letter-spacing="4">DATA &amp; WEB</text>
+      </a>
+
+      <text x="400" y="414" text-anchor="middle" fill="#888888" font-size="11" font-style="italic">Foundation of every strategic decision</text>
+    </svg>
+  </Section>
+
+  {/* Detailed pillar cards */}
+  <Section bg="white">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {pillars.map((pillar) => (
-        <PillarCard pillar={pillar} />
+      {pillars.map((pillar) => <PillarCard pillar={pillar} href={pillarAnchorLinks[pillar.id]} />)}
+    </div>
+  </Section>
+
+  {/* Iterative process section */}
+  <Section bg="cream">
+    <SectionHeader
+      label="How We Work"
+      title="A Cycle, Not a Project"
+      subtitle="Digital marketing isn't a one-off relaunch. It's an iterative process of assess, strategise, execute, and measure — with adjustments based on real data."
+      align="center"
+    />
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+      {processSteps.map((step, idx) => (
+        <div class="bg-white border border-gray-light/40 rounded-lg p-6 relative">
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Step {step.num}</span>
+          <h3 class="mt-2 text-lg font-headline font-bold text-navy">{step.title}</h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+          {idx < processSteps.length - 1 && (
+            <svg class="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          )}
+        </div>
       ))}
+    </div>
+    <div class="mt-8 flex items-center justify-center gap-3 text-sm font-label font-semibold uppercase tracking-wide text-blue">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v6h6M20 20v-6h-6M4 10a8 8 0 0114-4M20 14a8 8 0 01-14 4" />
+      </svg>
+      <span>Data from step 04 feeds back into step 01 — each cycle sharpens.</span>
     </div>
   </Section>
 
   <Section bg="white">
-    <SectionHeader
-      label="Why StarkRank"
-      title="Technical Precision. Creative Authority."
-      align="center"
-    />
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-      <div>
-        <p class="text-4xl font-headline font-black text-blue">100+</p>
-        <p class="mt-2 text-sm font-body text-gray">Clients Served Globally</p>
-      </div>
-      <div>
-        <p class="text-4xl font-headline font-black text-blue">2</p>
-        <p class="mt-2 text-sm font-body text-gray">Markets, One Strategy</p>
-      </div>
-      <div>
-        <p class="text-4xl font-headline font-black text-blue">14</p>
-        <p class="mt-2 text-sm font-body text-gray">Specialist Services</p>
-      </div>
-    </div>
-  </Section>
-
-  <Section bg="cream">
     <SectionHeader
       label="Where We Operate"
       title="Two Markets. One Strategy."
@@ -116,6 +203,19 @@ const websiteSchema = {
         <h3 class="mt-2 text-xl font-headline font-black tracking-tight text-navy group-hover:text-blue transition-colors">Hannover</h3>
         <p class="mt-3 text-sm font-body text-gray leading-relaxed">German Mittelstand, B2B manufacturers, and IT services.</p>
       </a>
+    </div>
+  </Section>
+
+  {/* Service-check callout */}
+  <Section bg="cream">
+    <div class="max-w-3xl mx-auto text-center">
+      <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Not sure where to start?</span>
+      <h2 class="mt-3 text-2xl md:text-3xl font-headline font-black text-navy">60 Seconds to Your Next Lever</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">Our service check matches your situation with the services that will have the biggest impact in the next 90 days — no meeting, no email required.</p>
+      <div class="mt-8 flex flex-wrap gap-4 justify-center">
+        <Button href="/en/find-your-service/" variant="primary" size="lg">Take the Service Check &rarr;</Button>
+        <Button href="/en/services/" variant="secondary" size="lg">See All Services</Button>
+      </div>
     </div>
   </Section>
 
