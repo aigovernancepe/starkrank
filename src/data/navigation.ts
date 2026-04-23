@@ -109,6 +109,12 @@ const impressumPaths: Record<string, string> = {
   'ch-de': '/ch-de/impressum/',
 };
 
+const aboutPaths: Record<Locale, string> = {
+  en: '/about/',
+  de: '/de/ueber-uns/',
+  'ch-de': '/ch-de/ueber-uns/',
+};
+
 /** Locale-specific lead magnet overrides for footer audits section. */
 const auditPaths: Record<Locale, NavItem[]> = {
   en: [
@@ -150,11 +156,14 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
   // Privacy page
   if (href === '/privacy/') return privacyPaths[locale];
 
+  // About page
+  if (href === '/about/') return aboutPaths[locale];
+
   // Blog index (locales with their own blog)
   if (href === '/blog/' && (locale === 'de' || locale === 'ch-de')) return `${localePrefix}/blog/`;
 
-  // Top-level /services/ link → locale homepage (shows pillar cards)
-  if (href === '/services/') return `${localePrefix}/`;
+  // Top-level /services/ link → locale services hub
+  if (href === '/services/') return `${localePrefix}/services/`;
 
   // Individual service pages → flat locale page first (for non-city-scoped services),
   // then the city spoke in the default city, else fall through to EN cross-locale.
