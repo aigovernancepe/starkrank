@@ -1,0 +1,302 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import ContactForm from '../../components/ui/ContactForm.astro';
+
+const title = 'Kostenloser Copywriting Check — Konvertiert Ihre Website? | StarkRank Schweiz';
+const description = 'Ihre Website erhält Traffic, aber keine Leads? Unser kostenloser 6-Dimensionen-Copywriting-Check zeigt genau, wo Ihre Texte Besucher:innen verlieren. Unverbindlich. Ergebnisse in 48 Stunden.';
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Kostenloser Copywriting Check — 6-Dimensionen-Diagnose',
+  description: 'Kostenloser 6-Dimensionen-Copywriting-Check für Schweizer Unternehmen. Bewertet Such-Ausrichtung, KI-Zitierbarkeit, Conversion-Wirksamkeit und Markenkonsistenz. 3 Kernseiten werden geprüft.',
+  url: 'https://starkrank.com/ch-de/kostenloser-copywriting-check/',
+  inLanguage: 'de-CH',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'StarkRank',
+    url: 'https://starkrank.com',
+  },
+  mainEntity: {
+    '@type': 'Service',
+    name: 'Kostenloser Copywriting Check',
+    description: '6-Dimensionen-Copywriting-Diagnose: Such-Ausrichtung, Entity-Abdeckung, KI-Zitierbarkeit, E-E-A-T-Signale, Conversion-Wirksamkeit und Markenkonsistenz.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Datanalytico Feye',
+      url: 'https://starkrank.com',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'CHF',
+      description: 'Kostenloser Copywriting Check — 3 Kernseiten, 6 Dimensionen bewertet',
+    },
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://starkrank.com/ch-de/' },
+    { '@type': 'ListItem', position: 2, name: 'Kostenloser Copywriting Check', item: 'https://starkrank.com/ch-de/kostenloser-copywriting-check/' },
+  ],
+};
+
+const schemas = [webPageSchema, breadcrumbSchema];
+
+const auditDimensions = [
+  { num: 1, dimension: 'Such-Ausrichtung', weight: '20%', check: 'Sind Überschriften, Meta-Descriptions und Seitenstruktur auf die Keywords optimiert, die Ihre Zielgruppe tatsächlich sucht?' },
+  { num: 2, dimension: 'Entity-Abdeckung', weight: '15%', check: 'Decken Ihre Inhalte die Themen, Leistungen und Konzepte ab, die Ihre Expertise belegen? Wo sind die Lücken im Vergleich zu Wettbewerbern?' },
+  { num: 3, dimension: 'KI-Zitierbarkeit', weight: '25%', check: 'Sind Ihre Inhalte so strukturiert, dass KI-Plattformen (ChatGPT, Google AI) sie extrahieren und zitieren können? Antwort-zuerst-Format, FAQ-Abschnitte, eigene Daten.' },
+  { num: 4, dimension: 'E-E-A-T-Signale', weight: '15%', check: 'Zeigt Ihre Seite Experience, Expertise, Authoritativeness und Trustworthiness? Autor:innen-Biografien, Qualifikationen, Quellenangaben, Kontaktmöglichkeiten.' },
+  { num: 5, dimension: 'Conversion-Wirksamkeit', weight: '15%', check: 'Sind Ihre Calls-to-Action sichtbar, Ihr Wertversprechen klar und Ihre Trust-Signale (Bewertungen, Referenzen, Zertifikate) wirksam?' },
+  { num: 6, dimension: 'Markenkonsistenz', weight: '10%', check: 'Bleiben Tonalität, Terminologie und Botschaft über alle Seiten hinweg konsistent? Klingt Ihr Text nach Ihnen — oder nach Template?' },
+];
+---
+
+<LandingLayout
+  title={title}
+  description={description}
+  ogImage="/images/copywriting-audit-preview.png"
+  schema={schemas}
+  locale="ch-de"
+  backLink={{ label: 'Zurück zu den Dienstleistungen', href: '/ch-de/services/#content-copywriting' }}
+>
+  <Fragment slot="head">
+    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/kostenloser-copywriting-check/" />
+    <link rel="alternate" hreflang="de-DE" href="https://starkrank.com/de/kostenloser-copywriting-check/" />
+    <link rel="alternate" hreflang="en" href="https://starkrank.com/free-copywriting-audit/" />
+    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/de/kostenloser-copywriting-check/" />
+  </Fragment>
+
+  <!-- Hero + Form -->
+  <Section bg="cream">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- Hero text -->
+      <div>
+        <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy leading-tight">
+          Verkauft Ihre Website — oder existiert sie nur?
+        </h1>
+        <p class="mt-6 text-lg font-body text-gray leading-relaxed">
+          Die meisten Websites sehen ordentlich aus, konvertieren aber nicht. Der Text liest sich wie eine Broschüre, die CTAs sind versteckt, und Besucher:innen verlassen die Seite ohne Handlung. Unser kostenloser 6-Dimensionen-Copywriting-Check zeigt genau, wo Ihre Seiten Leads verlieren — und was zuerst zu beheben ist. Datenverarbeitung in der Schweiz.
+        </p>
+
+        <!-- Value bullets -->
+        <div class="mt-8">
+          <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Was Sie erfahren</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+              <p class="text-base font-body text-gray"><strong class="text-dark">Passt Ihr Text zu dem, was Menschen tatsächlich suchen?</strong> — Wir prüfen, ob Überschriften, Seitenstruktur und Botschaft zu den Keywords Ihrer Zielgruppe passen</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+              <p class="text-base font-body text-gray"><strong class="text-dark">Können KI-Plattformen Ihre Inhalte zitieren?</strong> — Wir bewerten, ob Ihre Inhalte für KI-Zitation strukturiert sind (prägnante Antworten, FAQ-Abschnitte, eigene Daten)</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+              <p class="text-base font-body text-gray"><strong class="text-dark">Konvertieren Besucher:innen oder springen sie ab?</strong> — Wir prüfen CTAs, Wertversprechen, Vertrauenssignale und Conversion-Pfade Seite für Seite</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div id="kostenloser-copywriting-check-formular" class="bg-white border border-gray-light/40 rounded-lg p-8 shadow-lg">
+        <h2 class="text-2xl font-headline font-black text-navy mb-6">Kostenlosen Copywriting Check anfordern</h2>
+        <ContactForm formId="87ca0529-4d11-40cb-a147-470ae8d50cd1" locale="ch-de" />
+      </div>
+    </div>
+  </Section>
+
+  <!-- The 6 Dimensions -->
+  <Section bg="white">
+    <div class="max-w-4xl">
+      <p class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3">Was wir prüfen</p>
+      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-4">
+        6 Dimensionen der Copywriting-Performance
+      </h2>
+      <p class="text-base font-body text-gray leading-relaxed mb-8">
+        Wir bewerten Ihren Website-Text in 6 Dimensionen — jede mit 1 bis 10 Punkten und konkreten, umsetzbaren Empfehlungen. Ihr Gesamtscore ist ein gewichteter Durchschnitt, gebenchmarkt gegen Wettbewerber in Ihrer Branche.
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm font-body border-collapse">
+          <thead>
+            <tr class="border-b-2 border-navy/20">
+              <th class="text-left py-3 pr-4 font-headline font-bold text-navy w-8">#</th>
+              <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Dimension</th>
+              <th class="text-left py-3 pr-4 font-headline font-bold text-navy w-20">Gewichtung</th>
+              <th class="text-left py-3 font-headline font-bold text-navy">Was wir prüfen</th>
+            </tr>
+          </thead>
+          <tbody>
+            {auditDimensions.map((d) => (
+              <tr class="border-b border-gray-light/40">
+                <td class="py-3 pr-4 text-blue font-headline font-bold">{d.num}</td>
+                <td class="py-3 pr-4 whitespace-nowrap font-semibold text-dark">{d.dimension}</td>
+                <td class="py-3 pr-4 text-gray">{d.weight}</td>
+                <td class="py-3 text-gray leading-relaxed">{d.check}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Why Copy Quality Matters -->
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-4">
+        Warum Textqualität wichtiger ist denn je
+      </h2>
+      <p class="text-base font-body text-gray leading-relaxed mb-6">
+        Suchmaschinen und KI-Plattformen bewerten Inhaltsqualität anders als Menschen. Eine Seite kann professionell aussehen, aber schlecht abschneiden bei:
+      </p>
+      <div class="space-y-4">
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">KI-Extraktion</strong> — wenn Ihre Antworten in Absätzen vergraben sind statt als direkte Antwort strukturiert, überspringen KI-Plattformen Ihre Seite</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Such-Relevanz</strong> — wenn Ihre Überschriften nicht zu echten Suchanfragen passen, ranken Sie für nichts</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Vertrauen</strong> — ohne Autor:in, Qualifikationen und Quellenangaben stufen Google und KI-Modelle Ihre Autorität ab</p>
+        </div>
+      </div>
+      <p class="mt-6 text-base font-body text-dark font-semibold">
+        Der Unterschied zwischen „sieht ordentlich aus" und „konvertiert wirklich" ist messbar. Genau das deckt der Copywriting-Check auf.
+      </p>
+    </div>
+  </Section>
+
+  <!-- Upsell -->
+  <Section bg="white">
+    <div class="max-w-4xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-4">
+        Bereit für eine vollständige Überarbeitung?
+      </h2>
+      <p class="text-base font-body text-gray leading-relaxed mb-8">
+        Der kostenlose Check prüft Ihre drei wichtigsten Seiten. Für Unternehmen, die eine umfassende Überarbeitung wünschen:
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm font-body border-collapse">
+          <thead>
+            <tr class="border-b-2 border-navy/20">
+              <th class="text-left py-3 pr-4 font-headline font-bold text-navy"></th>
+              <th class="text-center py-3 px-4 font-headline font-bold text-navy">Kostenloser Check</th>
+              <th class="text-center py-3 px-4 font-headline font-bold text-navy">Vollständiges Audit</th>
+              <th class="text-center py-3 px-4 font-headline font-bold text-navy">Content-Retainer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark font-semibold">Geprüfte Seiten</td>
+              <td class="py-3 px-4 text-center text-gray">3 Kernseiten</td>
+              <td class="py-3 px-4 text-center text-gray">Alle Service- und Landingpages</td>
+              <td class="py-3 px-4 text-center text-gray">Laufend</td>
+            </tr>
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark font-semibold">6-Dimensionen-Scoring</td>
+              <td class="py-3 px-4 text-center text-blue">Ja</td>
+              <td class="py-3 px-4 text-center text-blue">Ja</td>
+              <td class="py-3 px-4 text-center text-blue">Ja</td>
+            </tr>
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark font-semibold">Wettbewerbs-Benchmark</td>
+              <td class="py-3 px-4 text-center text-gray">Top 3</td>
+              <td class="py-3 px-4 text-center text-gray">Top 5 + KI-Zitations-Check</td>
+              <td class="py-3 px-4 text-center text-gray">Monatlich</td>
+            </tr>
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark font-semibold">Überarbeitungs-Empfehlungen</td>
+              <td class="py-3 px-4 text-center text-gray">Zusammenfassung</td>
+              <td class="py-3 px-4 text-center text-gray">Seite-für-Seite-Plan</td>
+              <td class="py-3 px-4 text-center text-gray">Für Sie umgesetzt</td>
+            </tr>
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark font-semibold">KI-Zitierbarkeits-Optimierung</td>
+              <td class="py-3 px-4 text-center text-gray">Markiert</td>
+              <td class="py-3 px-4 text-center text-gray">Detaillierter Restrukturierungs-Plan</td>
+              <td class="py-3 px-4 text-center text-gray">Capsule-Rewrites</td>
+            </tr>
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 text-dark font-semibold">Semantisches Content-Scoring</td>
+              <td class="py-3 px-4 text-center text-gray">Nein</td>
+              <td class="py-3 px-4 text-center text-blue">Ja</td>
+              <td class="py-3 px-4 text-center text-blue">Ja</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-headline font-bold text-navy">Preis</td>
+              <td class="py-3 px-4 text-center font-headline font-bold text-navy">Kostenlos</td>
+              <td class="py-3 px-4 text-center font-headline font-bold text-navy">ab 2'000 CHF</td>
+              <td class="py-3 px-4 text-center font-headline font-bold text-navy">ab 3'000 CHF/Monat</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-6 space-y-2">
+        <p class="text-base font-body text-gray">
+          <a href="/ch-de/services/content-marketing/" class="text-blue font-semibold hover:text-blue-light">Mehr zu unserem Content Marketing &rarr;</a>
+        </p>
+        <p class="text-base font-body text-gray">
+          <a href="/ch-de/services/seo-copywriting/" class="text-blue font-semibold hover:text-blue-light">Mehr zu unserer SEO-Texterstellung &rarr;</a>
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Who This Is For -->
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-6">Für wen ist das?</p>
+      <div class="space-y-4">
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Ihre Website erhält Traffic, aber zu wenig Leads</strong> — Besucher:innen schauen, rufen aber nicht an, füllen keine Formulare aus und kaufen nicht</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Man sagt Ihnen „die Website sieht gut aus", aber die Ergebnisse widersprechen</strong> — das Problem ist nicht das Design, sondern der Text</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Ihre Vor-Agentur hat Content produziert, der nach generischer KI klingt</strong> — ohne Charakter, ohne Conversion-Absicht</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span>
+          <p class="text-base font-body text-gray"><strong class="text-dark">Sie investieren in SEO, aber die Seiten ranken nicht</strong> — möglicherweise ist Content-Qualität das Problem, nicht technisches SEO</p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Closing CTA -->
+  <section class="bg-navy text-cream py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-headline font-black tracking-tight text-cream">
+        Ihr Text konvertiert — oder er kostet Sie.
+      </h2>
+      <p class="mt-4 text-lg font-body text-gray-light">
+        Jede Seite auf Ihrer Website bewegt Besucher:innen entweder zur Handlung oder treibt sie zum Wettbewerber. Der Check ist in 2 Minuten angefordert und zeigt genau, welche Seiten Überarbeitung brauchen — und warum.
+      </p>
+      <div class="mt-8">
+        <a
+          href="#kostenloser-copywriting-check-formular"
+          class="inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-8 py-4 text-sm"
+        >
+          Kostenlosen Copywriting Check anfordern &uarr;
+        </a>
+      </div>
+    </div>
+  </section>
+</LandingLayout>
