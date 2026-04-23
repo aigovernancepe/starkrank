@@ -22,7 +22,7 @@ const allServices = await getCollection('services');
   {pillars.map((pillar) => {
     const pillarServices = allServices.filter((s) => s.data.pillar === pillar.id);
     return (
-      <Section bg={pillars.indexOf(pillar) % 2 === 0 ? 'cream' : 'white'}>
+      <Section bg={pillars.indexOf(pillar) % 2 === 0 ? 'cream' : 'white'} id={pillar.id} class="scroll-mt-20">
         <SectionHeader
           label={pillar.tagline}
           title={pillar.name}

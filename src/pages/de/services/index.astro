@@ -31,7 +31,7 @@ const servicesByPillar = pillars.map((pillar) => ({
   />
 
   {servicesByPillar.map(({ pillar, services }, idx) => (
-    <Section bg={idx % 2 === 0 ? 'cream' : 'white'}>
+    <Section bg={idx % 2 === 0 ? 'cream' : 'white'} id={pillar.id} class="scroll-mt-20">
       <SectionHeader
         label={pillar.tagline}
         title={pillar.name}
