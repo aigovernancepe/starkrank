@@ -1,13 +1,4 @@
-# Retired markets — 410 Gone
-/pe/*                                /                                           410
-/peru/                               /                                           410
-/peru/*                              /                                           410
-/miami/                              /                                           410
-/miami/*                             /                                           410
-/fort-lauderdale/                    /                                           410
-/fort-lauderdale/*                   /                                           410
-
-# Localized market hubs
+# Legacy market hub redirects
 /schweiz/                            /ch-de/                                     301
 /deutschland/                        /de/                                        301
 
@@ -18,3 +9,7 @@
 /services/ai-search-optimisation     /services/ai-search-optimization/           301
 /audits/free-google-ads-check/       /free-google-ads-audit/                     301
 /audits/copywriting-ux-analysis/     /free-copywriting-audit/                    301
+
+# Retired markets (/pe/*, /peru/*, /miami/*, /fort-lauderdale/*) return 404
+# via src/pages/404.astro — Cloudflare Pages does not support 410 in _redirects,
+# so we rely on the Astro-generated 404.html for "page gone" semantics.

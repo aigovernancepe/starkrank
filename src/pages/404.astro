@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/ui/Section.astro';
+---
+
+<BaseLayout
+  title="Page Not Found — StarkRank"
+  description="The page you are looking for does not exist or has been moved."
+>
+  <Section bg="cream">
+    <div class="max-w-2xl mx-auto text-center py-16 md:py-24">
+      <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-6">Error 404</p>
+      <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">Page Not Found</h1>
+      <p class="mt-6 text-lg font-body text-gray leading-relaxed">
+        The page you are looking for does not exist or has been moved. This may be because the content has been retired, the URL was mistyped, or the link you followed is out of date.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-4 justify-center">
+        <a href="/" class="inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white hover:bg-blue-light px-8 py-4 text-sm">
+          Back to Home
+        </a>
+        <a href="/services/" class="inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md border-2 border-navy text-navy hover:bg-navy hover:text-cream px-8 py-4 text-sm">
+          View Services
+        </a>
+      </div>
+      <p class="mt-10 text-sm font-body text-gray">
+        Looking for our German site? <a href="/de/" class="text-blue hover:text-blue-light font-semibold">Deutschland</a> · <a href="/ch-de/" class="text-blue hover:text-blue-light font-semibold">Schweiz</a>
+      </p>
+    </div>
+  </Section>
+</BaseLayout>
