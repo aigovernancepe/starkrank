@@ -15,7 +15,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Expertenbibliothek',
   description: 'Strukturierte Wissens-Bibliothek, die Fallstudien, konträre Positionen, Fehlschlag-Stories, Frameworks, Insider-Wissen und zitierbares Material eines Gründers über 10 Sektionen erfasst. Aufgebaut über ein Live-Interview und als kanonische Markdown-Datei geliefert.',
-  url: 'https://starkrank.com/sme-expertise-library/',
+  url: 'https://starkrank.com/expertenbibliothek/',
   provider: { '@type': 'Organization', name: 'StarkRank', url: 'https://starkrank.com' },
   areaServed: [
     { '@type': 'Country', name: 'Germany' },
@@ -57,7 +57,7 @@ const schemas = [serviceSchema, faqSchema];
 
 const breadcrumbs = [
   { label: 'Start', href: '/' },
-  { label: 'Expertenbibliothek', href: '/sme-expertise-library/' },
+  { label: 'Expertenbibliothek', href: '/expertenbibliothek/' },
 ];
 
 const sections = [
@@ -83,7 +83,7 @@ const processSteps = [
 ];
 
 const relatedLinks = [
-  { title: 'Experteninterview', href: '/expert-interview/' },
+  { title: 'Experteninterview', href: '/experteninterview/' },
   { title: 'Content-Marketing', href: '/content-marketing-hannover/' },
   { title: 'E-E-A-T-Audit', href: '/eeat-audit/' },
   { title: 'KI-Suchoptimierung', href: '/ki-suchoptimierung-hannover/' },
@@ -93,11 +93,11 @@ const relatedLinks = [
 
 <BaseLayout title={title} description={description} locale="de" schema={schemas}>
   <Fragment slot="head">
-    <link rel="alternate" hreflang="en" href="https://starkrank.com/services/sme-expertise-library/" />
-    <link rel="alternate" hreflang="de" href="https://starkrank.com/sme-expertise-library/" />
-    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/sme-expertise-library/" />
+    <link rel="alternate" hreflang="en" href="https://starkrank.com/expertenbibliothek/" />
+    <link rel="alternate" hreflang="de" href="https://starkrank.com/expertenbibliothek/" />
+    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/expertenbibliothek/" />
     <link rel="alternate" hreflang="es-PE" href="https://starkrank.com/pe/biblioteca-experto/" />
-    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/services/sme-expertise-library/" />
+    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/expertenbibliothek/" />
   </Fragment>
 
   <!-- Hero -->
