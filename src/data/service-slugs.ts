@@ -117,7 +117,7 @@ export function getLocalizedServiceSlug(serviceSlug: string, locale: string): st
 
 /**
  * Get the full spoke slug for a service + city combination.
- * e.g. getSpokePath('local-seo-consulting', 'lima', 'pe') => 'seo-local-lima'
+ * e.g. getSpokePath('local-seo-consulting', 'basel', 'ch-de') => 'local-seo-basel'
  */
 export function getSpokePath(serviceSlug: string, citySlug: string, locale: string): string {
   const shortSlug = getLocalizedServiceSlug(serviceSlug, locale);

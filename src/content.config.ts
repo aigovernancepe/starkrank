@@ -39,7 +39,7 @@ const blog = defineCollection({
     updatedDate: z.coerce.date().optional(),
     author: z.string().default('StarkRank'),
     tags: z.array(z.string()).optional(),
-    locale: z.enum(['en', 'pe', 'de', 'ch-de']).default('en'),
+    locale: z.enum(['en', 'de', 'ch-de']).default('en'),
     category: z.string().optional(),
     ogImage: z.string().optional(),
     faq: z.array(faqItem).optional(),
@@ -52,7 +52,7 @@ const cities = defineCollection({
     city: z.string(),
     citySlug: z.string(),
     country: z.string(),
-    locale: z.enum(['en', 'pe', 'de', 'ch-de']),
+    locale: z.enum(['en', 'de', 'ch-de']),
     services: z.array(z.string()),
     coordinates: z.object({
       lat: z.number(),
@@ -70,7 +70,7 @@ const spokes = defineCollection({
   schema: z.object({
     serviceSlug: z.string(),
     citySlug: z.string(),
-    locale: z.enum(['en', 'pe', 'de', 'ch-de']),
+    locale: z.enum(['en', 'de', 'ch-de']),
     title: z.string(),
     description: z.string(),
     localCTA: z.string().optional(),

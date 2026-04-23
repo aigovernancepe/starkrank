@@ -5,7 +5,7 @@ export const de: ServiceFinderLocale = {
   intro: {
     h1: 'Finden Sie den richtigen Service f\u00fcr Ihr Unternehmen',
     subheading: 'Nicht sicher, wo Sie anfangen sollen? Beantworten Sie 4 kurze Fragen und wir zeigen Ihnen genau, welche Services zu Ihrer Situation passen \u2014 in 60 Sekunden.',
-    trustLine: 'Bereits \u00fcber 500 Unternehmen in den USA, Peru, Deutschland und der Schweiz vertrauen auf StarkRank.',
+    trustLine: 'Unternehmen in Deutschland und der Schweiz vertrauen auf StarkRank.',
   },
   steps: {
     role: {

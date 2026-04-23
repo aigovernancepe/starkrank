@@ -7,7 +7,7 @@ export const chDe: ServiceFinderLocale = {
   market: 'ch-de',
   intro: {
     ...de.intro,
-    trustLine: 'Bereits \u00fcber 500 Unternehmen in den USA, Peru, Deutschland und der Schweiz vertrauen auf StarkRank. Datenverarbeitung in Z\u00fcrich.',
+    trustLine: 'Unternehmen in Deutschland und der Schweiz vertrauen auf StarkRank. Datenverarbeitung in Z\u00fcrich.',
   },
   steps: {
     ...de.steps,

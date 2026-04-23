@@ -2,7 +2,7 @@
 
 > Data-driven digital marketing agency specializing in AI search optimization, technical SEO, and performance media.
 
-StarkRank is a global digital marketing agency with offices in the United States (South Florida), Switzerland (Basel-Landschaft), Germany (Hannover), and Peru (Lima). We help businesses become visible, cited, and recommended by AI-powered search engines and traditional search platforms.
+StarkRank is a Swiss-founded digital marketing agency focused on the DACH region, with operations in Switzerland (Basel-Landschaft) and Germany (Hannover). We help businesses become visible, cited, and recommended by AI-powered search engines and traditional search platforms. Operated by Datanalytico Feye (UID: CHE-220.283.724), a Swiss sole proprietorship.
 
 ## Services
 
@@ -41,10 +41,8 @@ StarkRank offers 18 specialist services organised into five pillars:
 - [Free Copywriting & UX Analysis](https://starkrank.com/audits/copywriting-ux-analysis/)
 
 ## Locations
-- United States: South Florida — contact@starkrank.com
 - Switzerland: Basel-Landschaft — info@starkrank.com
 - Germany: Hannover — kontakt@starkrank.com
-- Peru: Lima — contacto@starkrank.com
 
 ## Founder
 - Wilko Feye, Founder & Lead Strategist

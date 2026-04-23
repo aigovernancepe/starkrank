@@ -47,25 +47,24 @@ const {
 } = Astro.props;
 
 const isDe = locale === 'de' || locale === 'ch-de';
-const isPe = locale === 'pe';
 const tocHeadings = headings.filter((h) => h.depth === 2);
 
-const dateLocaleMap: Record<string, string> = { en: 'en-US', pe: 'es-PE', de: 'de-DE', 'ch-de': 'de-CH' };
+const dateLocaleMap: Record<string, string> = { en: 'en-US', de: 'de-DE', 'ch-de': 'de-CH' };
 const dateLocale = dateLocaleMap[locale] ?? 'en-US';
 
 const faqLabel = 'FAQ';
-const faqTitleMap: Record<string, string> = { en: 'Frequently Asked Questions', pe: 'Preguntas Frecuentes', de: 'Häufig gestellte Fragen', 'ch-de': 'Häufig gestellte Fragen' };
+const faqTitleMap: Record<string, string> = { en: 'Frequently Asked Questions', de: 'Häufig gestellte Fragen', 'ch-de': 'Häufig gestellte Fragen' };
 const faqTitle = faqTitleMap[locale] ?? 'Frequently Asked Questions';
 
-const titleSuffixMap: Record<string, string> = { en: '', pe: ' Perú', de: '', 'ch-de': ' Schweiz' };
+const titleSuffixMap: Record<string, string> = { en: '', de: '', 'ch-de': ' Schweiz' };
 const titleSuffix = titleSuffixMap[locale] ?? '';
 
-const updatedLabelMap: Record<string, string> = { en: 'Last updated: ', pe: 'Última actualización: ', de: 'Letzte Aktualisierung: ', 'ch-de': 'Letzte Aktualisierung: ' };
-const byLabelMap: Record<string, string> = { en: 'By ', pe: 'Por ', de: 'Von ', 'ch-de': 'Von ' };
-const tocLabelMap: Record<string, string> = { en: 'In this article', pe: 'En este artículo', de: 'In diesem Artikel', 'ch-de': 'In diesem Artikel' };
-const assessmentLabelMap: Record<string, string> = { en: 'Free Assessment', pe: 'Evaluación gratuita', de: 'Kostenlose Bewertung', 'ch-de': 'Kostenlose Bewertung' };
-const assessmentDescMap: Record<string, string> = { en: 'See where you stand in traditional and AI search — in 60 seconds.', pe: '¿Tu negocio aparece en Google? Descúbrelo en 60 segundos.', de: 'Wie steht Ihre Website in der klassischen und KI-Suche? In 60 Sekunden.', 'ch-de': 'Wie steht Ihre Website in der klassischen und KI-Suche? In 60 Sekunden.' };
-const relatedLabelMap: Record<string, string> = { en: 'Related Articles', pe: 'Artículos relacionados', de: 'Verwandte Artikel', 'ch-de': 'Verwandte Artikel' };
+const updatedLabelMap: Record<string, string> = { en: 'Last updated: ', de: 'Letzte Aktualisierung: ', 'ch-de': 'Letzte Aktualisierung: ' };
+const byLabelMap: Record<string, string> = { en: 'By ', de: 'Von ', 'ch-de': 'Von ' };
+const tocLabelMap: Record<string, string> = { en: 'In this article', de: 'In diesem Artikel', 'ch-de': 'In diesem Artikel' };
+const assessmentLabelMap: Record<string, string> = { en: 'Free Assessment', de: 'Kostenlose Bewertung', 'ch-de': 'Kostenlose Bewertung' };
+const assessmentDescMap: Record<string, string> = { en: 'See where you stand in traditional and AI search — in 60 seconds.', de: 'Wie steht Ihre Website in der klassischen und KI-Suche? In 60 Sekunden.', 'ch-de': 'Wie steht Ihre Website in der klassischen und KI-Suche? In 60 Sekunden.' };
+const relatedLabelMap: Record<string, string> = { en: 'Related Articles', de: 'Verwandte Artikel', 'ch-de': 'Verwandte Artikel' };
 
 const defaultCtaTitleMap: Record<string, string> = { en: 'Ready to Grow Your Business?', pe: '¿Listo para crecer tu negocio?', de: 'Bereit für mehr Sichtbarkeit?', 'ch-de': 'Bereit für mehr Sichtbarkeit?' };
 const defaultCtaSubtitleMap: Record<string, string> = { en: 'Get a clear picture of where you stand in search — traditional and AI.', pe: 'Descubre cómo está tu presencia en Google y en búsquedas con inteligencia artificial.', de: 'Sehen Sie, wo Sie in der klassischen und KI-Suche stehen.', 'ch-de': 'Sehen Sie, wo Sie in der klassischen und KI-Suche stehen.' };

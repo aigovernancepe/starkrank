@@ -9,19 +9,17 @@ export default defineConfig({
   output: 'static',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'pe', 'de', { path: 'ch-de', codes: ['ch-de'] }],
+    locales: ['en', 'de', { path: 'ch-de', codes: ['ch-de'] }],
     routing: {
       prefixDefaultLocale: false,
     },
     fallback: {
-      pe: 'en',
       de: 'en',
       'ch-de': 'de',
     },
   },
   redirects: {
     '/schweiz/': '/ch-de/',
-    '/peru/': '/pe/',
     '/deutschland/': '/de/',
     '/services/ai-search-optimisation/': '/services/ai-search-optimization/',
     '/services/ai-search-optimisation': '/services/ai-search-optimization/',

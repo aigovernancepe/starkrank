@@ -29,7 +29,7 @@ faq:
   - question: "How is the AISO Score calculated?"
     answer: "Each of the 6 dimensions has a detailed scoring rubric with specific criteria. For example, Crawlability scores 20/20 if all 5 AI bots are explicitly allowed, llms.txt exists, and SSR is confirmed. The methodology is transparent — you see exactly why you scored what you scored and what to fix."
   - question: "What makes StarkRank different from other SEO agencies?"
-    answer: "We built the AISO Score framework specifically to measure AI search readiness — something most agencies don't track at all. Our content pipeline uses semantic NLP optimization and a 7-dimension automated review gate. And we operate across 4 markets (US, Peru, Germany, Switzerland), so we understand how AI search varies by region."
+    answer: "We built the AISO Score framework specifically to measure AI search readiness — something most agencies don't track at all. Our content pipeline uses semantic NLP optimization and a 7-dimension automated review gate. And we operate across the DACH region (Germany and Switzerland), so we understand how AI search varies between the two markets."
 ---
 
 AI-powered search engines — ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot — now answer questions directly, citing sources inline. Ranking on page one is no longer enough. If your content is not structured for retrieval-augmented generation (RAG), your brand is invisible to the fastest-growing search channel. Yet most businesses have no strategy for it.

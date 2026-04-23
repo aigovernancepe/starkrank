@@ -1,6 +1,17 @@
+# Retired markets — 410 Gone
+/pe/*                                /                                           410
+/peru/                               /                                           410
+/peru/*                              /                                           410
+/miami/                              /                                           410
+/miami/*                             /                                           410
+/fort-lauderdale/                    /                                           410
+/fort-lauderdale/*                   /                                           410
+
+# Localized market hubs
 /schweiz/                            /ch-de/                                     301
-/peru/                               /pe/                                        301
 /deutschland/                        /de/                                        301
+
+# Renames / legacy paths
 /locations/                          /                                           301
 /free-aiso-score/                    /aiso-score/                                301
 /services/ai-search-optimisation/    /services/ai-search-optimization/           301
