@@ -2,33 +2,55 @@
 import type { Pillar } from '../../data/pillars';
 import { getCurrentLocale, t } from '../../utils/i18n';
 import type { Locale } from '../../data/locales';
+import PillarIcon from './PillarIcon.astro';
 
 interface Props {
   pillar: Pillar;
   locale?: Locale;
   href?: string;
+  /** 'foundation' gives the card a dark treatment for the Data & Web base. */
+  variant?: 'default' | 'foundation';
 }
 
-const { pillar, locale, href } = Astro.props;
+const { pillar, locale, href, variant = 'default' } = Astro.props;
 const currentLocale = locale ?? getCurrentLocale(Astro.url);
 const hubSlug = pillar.services[0];
 const linkHref = href ?? `/services/${hubSlug}/`;
+
+const isFoundation = variant === 'foundation';
+const iconId = pillar.id as Parameters<typeof PillarIcon>[0]['id'];
+
+const wrapperClasses = isFoundation
+  ? 'group block bg-navy border border-navy rounded-lg p-8 transition-all hover:shadow-xl hover:-translate-y-1'
+  : 'group block bg-white border border-gray-light/40 rounded-lg p-8 transition-all hover:shadow-xl hover:border-blue/30 hover:-translate-y-1';
+
+const iconClass = isFoundation ? 'w-10 h-10 text-blue-light' : 'w-10 h-10 text-blue';
+const taglineClass = isFoundation
+  ? 'text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue-light'
+  : 'text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue';
+const nameClass = isFoundation
+  ? 'mt-2 text-xl font-headline font-black tracking-tight text-white'
+  : 'mt-2 text-xl font-headline font-black tracking-tight text-navy group-hover:text-blue transition-colors';
+const descClass = isFoundation
+  ? 'mt-3 text-sm text-gray-light font-body leading-relaxed'
+  : 'mt-3 text-sm text-gray font-body leading-relaxed';
+const linkClass = isFoundation
+  ? 'mt-4 inline-flex items-center text-sm font-label font-semibold text-blue-light uppercase tracking-wide'
+  : 'mt-4 inline-flex items-center text-sm font-label font-semibold text-blue uppercase tracking-wide';
 ---
 
-<a
-  href={linkHref}
-  class="group block bg-white border border-gray-light/40 rounded-lg p-8 transition-all hover:shadow-xl hover:border-blue/30 hover:-translate-y-1"
->
-  <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">
+<a href={linkHref} class={wrapperClasses}>
+  <PillarIcon id={iconId} class={iconClass} />
+  <span class={`${taglineClass} mt-4 block`}>
     {pillar.tagline}
   </span>
-  <h3 class="mt-3 text-xl font-headline font-black tracking-tight text-navy group-hover:text-blue transition-colors">
+  <h3 class={nameClass}>
     {pillar.name}
   </h3>
-  <p class="mt-3 text-sm text-gray font-body leading-relaxed">
+  <p class={descClass}>
     {pillar.description}
   </p>
-  <span class="mt-4 inline-flex items-center text-sm font-label font-semibold text-blue uppercase tracking-wide">
+  <span class={linkClass}>
     {t('cta.learnMore', currentLocale)}
     <svg class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
