@@ -4,6 +4,7 @@ import HeroSection from '../../components/ui/HeroSection.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import PillarCard from '../../components/ui/PillarCard.astro';
+import BuildingGraphic from '../../components/ui/BuildingGraphic.astro';
 import Button from '../../components/ui/Button.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import { getLocalizedPillars } from '../../data/pillars';
@@ -54,65 +55,25 @@ const processSteps = [
     <Button href="/ch-de/aiso-check/" variant="primary" size="lg">Kostenloser AISO-Check &rarr;</Button>
   </HeroSection>
 
-  {/* Building-graphic: the five-pillar metaphor */}
+  {/* Building-graphic: interactive five-pillar metaphor */}
   <Section bg="cream">
     <SectionHeader
       label="Unsere Dienstleistungen"
       title="Fünf Säulen des digitalen Wachstums"
-      subtitle="Vier Disziplinen tragen das Wachstum Ihres Unternehmens — auf einem Fundament aus Daten und Web-Architektur."
+      subtitle="Vier Disziplinen tragen das Wachstum Ihres Unternehmens — auf einem Fundament aus Daten und Web-Architektur. Fahren Sie über eine Säule, um die passende Karte unten zu finden."
       align="center"
     />
-    <svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="building-title building-desc" class="w-full h-auto max-w-3xl mx-auto mt-8">
-      <title id="building-title">Das Gebäude des digitalen Wachstums</title>
-      <desc id="building-desc">Vier Säulen des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — getragen vom Fundament Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens.</desc>
-
-      <text x="400" y="28" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700" letter-spacing="6">WACHSTUM</text>
-      <path d="M 400 36 L 390 50 L 410 50 Z" fill="#0E1A2D" />
-
-      <rect x="40" y="58" width="720" height="14" fill="#0E1A2D" />
-      <rect x="60" y="72" width="680" height="4" fill="#3B7DD8" />
-
-      <a href="/ch-de/services/#search-ai-intelligence" aria-label="Suche und KI-Intelligenz">
-        <rect x="90" y="86" width="130" height="248" fill="#ffffff" stroke="#3B7DD8" stroke-width="2" />
-        <rect x="90" y="86" width="130" height="8" fill="#3B7DD8" />
-        <rect x="90" y="326" width="130" height="8" fill="#3B7DD8" />
-        <text x="155" y="202" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700">Suche</text>
-        <text x="155" y="222" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700">&amp; KI</text>
-      </a>
-      <a href="/ch-de/services/#performance-media" aria-label="Performance Media">
-        <rect x="250" y="86" width="130" height="248" fill="#ffffff" stroke="#3B7DD8" stroke-width="2" />
-        <rect x="250" y="86" width="130" height="8" fill="#3B7DD8" />
-        <rect x="250" y="326" width="130" height="8" fill="#3B7DD8" />
-        <text x="315" y="202" text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700">Performance</text>
-        <text x="315" y="222" text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700">Media</text>
-      </a>
-      <a href="/ch-de/services/#authority-pr" aria-label="Autorität">
-        <rect x="410" y="86" width="130" height="248" fill="#ffffff" stroke="#3B7DD8" stroke-width="2" />
-        <rect x="410" y="86" width="130" height="8" fill="#3B7DD8" />
-        <rect x="410" y="326" width="130" height="8" fill="#3B7DD8" />
-        <text x="475" y="212" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700">Autorität</text>
-      </a>
-      <a href="/ch-de/services/#content-copywriting" aria-label="Content und Texterstellung">
-        <rect x="570" y="86" width="130" height="248" fill="#ffffff" stroke="#3B7DD8" stroke-width="2" />
-        <rect x="570" y="86" width="130" height="8" fill="#3B7DD8" />
-        <rect x="570" y="326" width="130" height="8" fill="#3B7DD8" />
-        <text x="635" y="212" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700">Content</text>
-      </a>
-
-      <a href="/ch-de/services/#data-web" aria-label="Daten und Web">
-        <rect x="40" y="348" width="720" height="26" fill="#3B7DD8" />
-        <rect x="20" y="374" width="760" height="14" fill="#0E1A2D" />
-        <text x="400" y="366" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700" letter-spacing="4">DATEN &amp; WEB</text>
-      </a>
-
-      <text x="400" y="414" text-anchor="middle" fill="#888888" font-size="11" font-style="italic">Fundament jeder strategischen Entscheidung</text>
-    </svg>
+    <BuildingGraphic locale="ch-de" />
   </Section>
 
-  {/* Detailed pillar cards */}
+  {/* Detailed pillar cards — wrappers carry data-pillar-id for the building interaction */}
   <Section bg="white">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {pillars.map((pillar) => <PillarCard pillar={pillar} locale="ch-de" href={pillarAnchorLinks[pillar.id]} />)}
+      {pillars.map((pillar) => (
+        <div id={`card-${pillar.id}`} data-pillar-id={pillar.id} class="pillar-card-wrapper">
+          <PillarCard pillar={pillar} locale="ch-de" href={pillarAnchorLinks[pillar.id]} />
+        </div>
+      ))}
     </div>
   </Section>
 
