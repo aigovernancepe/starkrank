@@ -37,6 +37,16 @@ const servicesByPillar = pillars.map((pillar) => ({
         title={pillar.name}
         subtitle={pillar.description}
       />
+      {pillar.id === 'performance-media' && (
+        <p class="mt-4 mb-8 text-sm font-body text-gray leading-relaxed max-w-3xl">
+          Auch bekannt als <strong>SEA-Agentur</strong> (Search Engine Advertising) — StarkRank bietet Google Ads Management, Google Ads Audit und Paid Social Strategy.
+        </p>
+      )}
+      {pillar.id === 'search-ai-intelligence' && (
+        <p class="mt-4 mb-8 text-sm font-body text-gray leading-relaxed max-w-3xl">
+          Auch bekannt als <strong>LLMO-Agentur</strong> (Large Language Model Optimization) — StarkRank bietet Optimierung dafür, dass Ihre Marke in ChatGPT, Perplexity, Claude und Google AI Overviews zitiert und empfohlen wird.
+        </p>
+      )}
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
           <Card href={getLocalizedNavHref(`/services/${service.data.slug}/`, 'ch-de')}>

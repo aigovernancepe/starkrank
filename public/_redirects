@@ -10,6 +10,17 @@
 /ch-de/sme-expertise-library/        /ch-de/expertenbibliothek/                  301
 /ch-de/expert-interview/             /ch-de/experteninterview/                   301
 
+# ─── Phase 3a (2026-04-23): positioning-alias redirects ────────────
+# Low-volume but high-intent terms that map to existing hub sections.
+# 302 (temporary) because these may be promoted to dedicated pages in
+# a later phase — keeps that option open without un-baking 301s from caches.
+#   - "SEA-Agentur" (CH 170/mo) = Search Engine Advertising = Google Ads
+#   - "LLMO-Agentur" (CH 30/mo, rising) = Large Language Model Optimization = KI-Suche
+/sea-agentur/                        /services/#performance-media                302
+/ch-de/sea-agentur/                  /ch-de/services/#performance-media          302
+/llmo-agentur/                       /services/#search-ai-intelligence           302
+/ch-de/llmo-agentur/                 /ch-de/services/#search-ai-intelligence     302
+
 # ─── Old /de/ paths → root (new DE home) ──────────────────────────
 # Blog tree stays at /de/blog/* (intentional — do not redirect).
 /de/ueber-uns/                       /ueber-uns/                                 301
