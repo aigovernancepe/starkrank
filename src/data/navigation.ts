@@ -124,9 +124,13 @@ const auditPaths: Record<Locale, NavItem[]> = {
   ],
   de: [
     { label: 'Kostenloser AISO-Check', href: '/de/aiso-check/' },
+    { label: 'Kostenloser Google Ads Check', href: '/de/kostenloser-google-ads-check/' },
+    { label: 'Kostenloser Copywriting Check', href: '/de/kostenloser-copywriting-check/' },
   ],
   'ch-de': [
     { label: 'Kostenloser AISO-Check', href: '/ch-de/aiso-check/' },
+    { label: 'Kostenloser Google Ads Check', href: '/ch-de/kostenloser-google-ads-check/' },
+    { label: 'Kostenloser Copywriting Check', href: '/ch-de/kostenloser-copywriting-check/' },
   ],
 };
 
