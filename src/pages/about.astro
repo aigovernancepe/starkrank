@@ -39,13 +39,13 @@ const personSchema = {
 ---
 
 <BaseLayout
-  title="About StarkRank — Swiss-Founded, Globally Driven"
-  description="StarkRank is a Swiss-founded digital marketing agency with offices in the US, Peru, Germany, and Switzerland. Founded by Wilko Feye, we combine technical precision with creative authority."
+  title="About StarkRank — Swiss-Founded, DACH-Focused"
+  description="StarkRank is a Swiss-founded digital marketing agency serving clients in Germany and Switzerland. Founded by Wilko Feye, we combine technical precision with creative authority."
   schema={[orgSchema, personSchema]}
 >
   <HeroSection
-    headline="Swiss-Founded. Globally Driven."
-    subheadline="We bridge the gap between high-end brand authority and deep technical execution across four continents."
+    headline="Swiss-Founded. DACH-Focused."
+    subheadline="We bridge the gap between high-end brand authority and deep technical execution across Germany and Switzerland."
   />
 
   <Section bg="cream">
@@ -55,7 +55,7 @@ const personSchema = {
         StarkRank was founded with a simple conviction: businesses deserve marketing partners who understand both the technical mechanics of search and the human psychology behind every click.
       </p>
       <p>
-        From our roots in Switzerland to our operations in the United States, Peru, and Germany, we bring a unique blend of Swiss precision and global perspective to every engagement.
+        Headquartered in Switzerland with a focus on the DACH region, we bring Swiss precision and deep technical rigour to every engagement across Germany and Switzerland.
       </p>
     </div>
   </Section>
@@ -88,10 +88,10 @@ const personSchema = {
               With over a decade of experience as a business analyst in regulated industries, Wilko brings a data-first mindset to digital marketing. His background in analytics and compliance-driven environments shaped an approach to SEO and AI search that prioritises measurable outcomes and technical rigour over guesswork.
             </p>
             <p>
-              Wilko specialises in entity-based local SEO, AI search optimisation, and Google Business Profile strategy — helping businesses across Switzerland, Germany, the US, and Peru become visible, cited, and recommended by both traditional search engines and AI platforms.
+              Wilko specialises in entity-based local SEO, AI search optimisation, and Google Business Profile strategy — helping businesses across Switzerland and Germany become visible, cited, and recommended by both traditional search engines and AI platforms.
             </p>
             <p>
-              Based between Switzerland and Peru, Wilko leads StarkRank's strategy across four markets, combining deep technical expertise with on-the-ground knowledge of each region's digital landscape.
+              Based in Switzerland, Wilko leads StarkRank's strategy across the DACH region, combining deep technical expertise with on-the-ground knowledge of the Swiss and German digital landscapes.
             </p>
           </div>
           <div class="mt-6">
@@ -113,13 +113,11 @@ const personSchema = {
   </Section>
 
   <Section bg="cream">
-    <SectionHeader label="Global Presence" title="Four Markets. One Vision." align="center" />
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <SectionHeader label="DACH Presence" title="Two Markets. One Vision." align="center" />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
       {[
-        { region: 'United States', cities: 'Miami, Fort Lauderdale', focus: 'Performance Media & AI Search' },
         { region: 'Switzerland', cities: 'Basel', focus: 'Technical SEO & Analytics' },
         { region: 'Germany', cities: 'Hannover', focus: 'DACH Market Strategy' },
-        { region: 'Peru', cities: 'Lima', focus: 'LATAM Digital Growth' },
       ].map((office) => (
         <div class="bg-white rounded-lg p-6 border border-gray-light/40">
           <h3 class="text-lg font-headline font-black text-navy">{office.region}</h3>

@@ -164,7 +164,7 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
   if (href === '/privacy/') return privacyPaths[locale];
 
   // Blog index (locales with their own blog)
-  if (href === '/blog/' && (locale === 'pe' || locale === 'de' || locale === 'ch-de')) return `${localePrefix}/blog/`;
+  if (href === '/blog/' && (locale === 'de' || locale === 'ch-de')) return `${localePrefix}/blog/`;
 
   // Top-level /services/ link → locale homepage (shows pillar cards)
   if (href === '/services/') return `${localePrefix}/`;

@@ -5,7 +5,7 @@ export const en: ServiceFinderLocale = {
   intro: {
     h1: 'Find the Right Service for Your Business',
     subheading: 'Not sure where to start? Answer 4 quick questions and we\u2019ll show you exactly which services match your situation \u2014 in 60 seconds.',
-    trustLine: 'Used by 500+ businesses across the US, Peru, Germany, and Switzerland.',
+    trustLine: 'Trusted by businesses across Germany and Switzerland.',
   },
   steps: {
     role: {
