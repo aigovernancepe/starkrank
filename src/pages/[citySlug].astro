@@ -7,18 +7,18 @@ export async function getStaticPaths() {
   const cities = await getCollection('cities');
   const services = await getCollection('services');
   const spokeEntries = await getCollection('spokes');
-  const enCities = cities.filter((c) => c.data.locale === 'en');
+  const deCities = cities.filter((c) => c.data.locale === 'de');
 
   const paths: Array<{ params: { citySlug: string }; props: Record<string, unknown> }> = [];
 
-  for (const city of enCities) {
+  for (const city of deCities) {
     for (const serviceSlug of city.data.services) {
       const service = services.find((s) => s.data.slug === serviceSlug);
       if (!service) continue;
 
-      const spokeSlug = getSpokePath(serviceSlug, city.data.citySlug, 'en');
+      const spokeSlug = getSpokePath(serviceSlug, city.data.citySlug, 'de');
       const spoke = spokeEntries.find(
-        (s) => s.data.serviceSlug === serviceSlug && s.data.citySlug === city.data.citySlug && s.data.locale === 'en'
+        (s) => s.data.serviceSlug === serviceSlug && s.data.citySlug === city.data.citySlug && s.data.locale === 'de'
       ) ?? null;
 
       paths.push({
@@ -34,4 +34,4 @@ export async function getStaticPaths() {
 const { city, service, spokeSlug, spoke } = Astro.props;
 ---
 
-<CitySpokePage city={city} service={service} locale="en" spokeSlug={spokeSlug} spoke={spoke} />
+<CitySpokePage city={city} service={service} locale="de" spokeSlug={spokeSlug} spoke={spoke} />

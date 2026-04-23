@@ -92,40 +92,40 @@ export const footerNav = {
 
 /** Locale-specific overrides for non-service navigation paths. */
 const contactPaths: Record<Locale, string> = {
-  en: '/contact/',
-  de: '/de/kontakt/',
+  en: '/en/contact/',
+  de: '/kontakt/',
   'ch-de': '/ch-de/kontakt/',
 };
 
 const privacyPaths: Record<Locale, string> = {
-  en: '/privacy/',
-  de: '/de/datenschutz/',
+  en: '/en/privacy/',
+  de: '/datenschutz/',
   'ch-de': '/ch-de/datenschutz/',
 };
 
 const impressumPaths: Record<string, string> = {
-  en: '/imprint/',
-  de: '/de/impressum/',
+  en: '/en/imprint/',
+  de: '/impressum/',
   'ch-de': '/ch-de/impressum/',
 };
 
 const aboutPaths: Record<Locale, string> = {
-  en: '/about/',
-  de: '/de/ueber-uns/',
+  en: '/en/about/',
+  de: '/ueber-uns/',
   'ch-de': '/ch-de/ueber-uns/',
 };
 
 /** Locale-specific lead magnet overrides for footer audits section. */
 const auditPaths: Record<Locale, NavItem[]> = {
   en: [
-    { label: 'Free AISO Score', href: '/aiso-score/' },
-    { label: 'Free Google Ads Audit', href: '/free-google-ads-audit/' },
-    { label: 'Free Copywriting Audit', href: '/free-copywriting-audit/' },
+    { label: 'Free AISO Score', href: '/en/aiso-score/' },
+    { label: 'Free Google Ads Audit', href: '/en/free-google-ads-audit/' },
+    { label: 'Free Copywriting Audit', href: '/en/free-copywriting-audit/' },
   ],
   de: [
-    { label: 'Kostenloser AISO-Check', href: '/de/aiso-check/' },
-    { label: 'Kostenloser Google Ads Check', href: '/de/kostenloser-google-ads-check/' },
-    { label: 'Kostenloser Copywriting Check', href: '/de/kostenloser-copywriting-check/' },
+    { label: 'Kostenloser AISO-Check', href: '/aiso-check/' },
+    { label: 'Kostenloser Google Ads Check', href: '/kostenloser-google-ads-check/' },
+    { label: 'Kostenloser Copywriting Check', href: '/kostenloser-copywriting-check/' },
   ],
   'ch-de': [
     { label: 'Kostenloser AISO-Check', href: '/ch-de/aiso-check/' },
@@ -140,38 +140,43 @@ export function getLocalizedAudits(locale: Locale): NavItem[] {
 }
 
 /**
- * Convert a navigation href to its locale-aware equivalent.
- * - EN locale: returns the original href (global master pages).
- * - Other locales: maps /services/[slug]/ to the local spoke page,
- *   /contact/ to the localized contact page, and /services/ to the locale home.
+ * Prefix a root-relative path with the locale's URL namespace.
+ * DE is served at root (no prefix); EN at /en/*; CH-DE at /ch-de/*.
+ */
+function localePrefixFor(locale: Locale): string {
+  if (locale === 'de') return '';
+  return `/${locale}`;
+}
+
+/**
+ * Convert a navigation href (written in canonical EN-slug form) to its
+ * locale-aware equivalent. Post-Phase-2b: DE sits at root, so DE returns
+ * paths unprefixed (with DE slug rewrites where applicable); EN gets a
+ * /en/ prefix; CH-DE gets /ch-de/ prefix.
  */
 export function getLocalizedNavHref(href: string, locale: Locale): string {
-  // Impressum/Imprint: path differs per locale (incl. EN → /imprint/), so
-  // resolve before the EN early-return shortcut below.
-  if (href === '/impressum/') return impressumPaths[locale] ?? href;
-
-  if (locale === 'en') return href;
-
-  const localePrefix = `/${locale}`;
-
-  // Contact page
+  // Legal + company pages — explicit per-locale slugs
+  if (href === '/impressum/' || href === '/imprint/') return impressumPaths[locale] ?? href;
   if (href === '/contact/') return contactPaths[locale];
-
-  // Privacy page
   if (href === '/privacy/') return privacyPaths[locale];
-
-  // About page
   if (href === '/about/') return aboutPaths[locale];
 
-  // Blog index (locales with their own blog)
-  if (href === '/blog/' && (locale === 'de' || locale === 'ch-de')) return `${localePrefix}/blog/`;
+  const prefix = localePrefixFor(locale);
 
-  // Top-level /services/ link → locale services hub
-  if (href === '/services/') return `${localePrefix}/services/`;
+  // Blog index — each locale has its own index page
+  if (href === '/blog/') return `${prefix}/blog/`;
+
+  // Case studies — EN-only tree; non-EN locales link cross-locale into /en/
+  if (href === '/case-studies/') {
+    return locale === 'en' ? '/en/case-studies/' : '/en/case-studies/';
+  }
+
+  // Services hub
+  if (href === '/services/') return `${prefix}/services/`;
 
   // Services hub anchor links (pillar headers in mega-menu)
   if (href.startsWith('/services/#')) {
-    return `${localePrefix}/services/${href.slice('/services/'.length)}`;
+    return `${prefix}${href}`;
   }
 
   // Individual service pages → flat locale page first (for non-city-scoped services),
@@ -179,18 +184,22 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
   const serviceMatch = href.match(/^\/services\/([^/]+)\/$/);
   if (serviceMatch) {
     const serviceSlug = serviceMatch[1];
+
+    // EN locale: services live at /en/services/{slug}/
+    if (locale === 'en') return `/en${href}`;
+
     const flatSlug = getFlatLocaleSlug(serviceSlug, locale);
     if (flatSlug !== null) {
-      return `${localePrefix}/${flatSlug}/`;
+      return `${prefix}/${flatSlug}/`;
     }
     if (!hasLocalizedService(serviceSlug, locale)) {
-      return href;
+      return `/en${href}`;
     }
     const city = defaultCity[locale];
     const spokePath = getSpokePath(serviceSlug, city, locale);
-    return `${localePrefix}/${spokePath}/`;
+    return `${prefix}/${spokePath}/`;
   }
 
-  // Everything else (about, blog, case-studies, audits) → keep as-is
-  return href;
+  // Fallthrough: generic localization by prefix
+  return `${prefix}${href}`;
 }

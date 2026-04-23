@@ -1,0 +1,74 @@
+---
+import BlogPost from '../../../components/pages/BlogPost.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts
+    .filter((post) => post.data.locale === 'en')
+    .map((post) => ({
+      params: { slug: post.id },
+      props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+
+const allPosts = await getCollection('blog');
+const relatedPosts = allPosts
+  .filter((p) => p.data.locale === 'en' && p.id !== post.id)
+  .filter((p) => p.data.tags?.some((t) => post.data.tags?.includes(t)))
+  .slice(0, 3);
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(),
+  ...(post.data.updatedDate && { dateModified: post.data.updatedDate.toISOString() }),
+  author: { '@type': 'Person', name: post.data.author, url: 'https://starkrank.com/en/about/' },
+  publisher: { '@id': 'https://starkrank.com/#organization' },
+  url: `https://starkrank.com/en/blog/${post.id}/`,
+};
+
+const schemas: Record<string, unknown>[] = [articleSchema];
+
+if (post.data.faq?.length) {
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.data.faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  });
+}
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: post.data.title, href: `/blog/${post.id}/` },
+];
+
+const blogHreflangPairs: Record<string, Record<string, string>> = {
+  'seo-vs-social-media': { 'es-PE': '/pe/blog/seo-vs-redes-sociales/' },
+  'seo-pricing-guide': { 'es-PE': '/pe/blog/precios-seo-peru/', 'de': '/de/blog/seo-kosten/', 'de-CH': '/ch-de/blog/seo-kosten-schweiz/' },
+  'seo-vs-google-ads': { 'de': '/de/blog/seo-vs-google-ads-de/', 'de-CH': '/ch-de/blog/seo-vs-google-ads-ch/' },
+  'how-to-choose-seo-agency': { 'de': '/de/blog/seo-agentur-auswaehlen/', 'de-CH': '/ch-de/blog/seo-agentur-auswaehlen-ch/' },
+};
+const pairs = blogHreflangPairs[post.id] ?? {};
+const hreflangAlternates = Object.entries(pairs).map(([hreflang, href]) => ({ hreflang, href }));
+---
+
+<BlogPost
+  post={post}
+  Content={Content}
+  headings={headings}
+  relatedPosts={relatedPosts}
+  schemas={schemas}
+  breadcrumbs={breadcrumbs}
+  hreflangAlternates={hreflangAlternates}
+/>

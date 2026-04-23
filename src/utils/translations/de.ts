@@ -89,7 +89,7 @@ export const de: Record<string, string> = {
   'consent.accept': 'Akzeptieren',
   'consent.decline': 'Ablehnen',
   'consent.policyText': 'Datenschutzerklärung',
-  'consent.policyLink': '/de/datenschutz/',
+  'consent.policyLink': '/datenschutz/',
   'spoke.deliverables': 'Unsere Leistung',
   'spoke.deliverablesTitle': 'Was wir liefern',
   'spoke.faqTitle': 'Häufig gestellte Fragen',

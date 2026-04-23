@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+---
+
+<BaseLayout
+  title="Imprint — StarkRank"
+  description="Legal disclosures for Datanalytico Feye, the Swiss entity operating starkrank.com."
+>
+  <Section bg="cream">
+    <SectionHeader label="Legal" title="Imprint" />
+    <h1 class="sr-only">Imprint</h1>
+    <div class="prose prose-lg max-w-3xl font-body text-dark [&>h2]:font-headline [&>h2]:font-black [&>h2]:text-navy [&>h2]:mt-10 [&>h2]:mb-3 [&>h3]:font-headline [&>h3]:font-bold [&>h3]:text-navy [&>h3]:mt-6 [&>h3]:mb-2 [&>p]:text-gray [&>p]:leading-relaxed">
+
+      <p>starkrank.com is operated by Datanalytico Feye, a sole proprietorship registered in Switzerland.</p>
+
+      <h2>Operator</h2>
+      <p>
+        Datanalytico Feye<br />
+        Langegasse 117<br />
+        4104 Oberwil<br />
+        Switzerland
+      </p>
+      <p>
+        UID: CHE-220.283.724<br />
+        Phone: +41 76 757 64 23<br />
+        Email: info@datanalytico.com<br />
+        Website: <a href="https://starkrank.com" class="text-blue hover:text-blue-light">starkrank.com</a>
+      </p>
+      <p>Authorized representative: Wilko Friedemann Feye, Owner (Inhaber).</p>
+
+      <h2>Swiss market</h2>
+      <p>For the full Swiss disclosure under Art. 3 UWG, see the <a href="/ch-de/impressum/" class="text-blue hover:text-blue-light">Impressum (Schweiz)</a>.</p>
+
+      <h2>German market</h2>
+      <p>For Germany-based visitors, please refer to our <a href="/impressum/" class="text-blue hover:text-blue-light">Impressum (Deutschland)</a> under § 5 TMG.</p>
+
+      <h2>Disclaimer</h2>
+      <p>Despite careful review, we assume no liability for the accuracy, completeness, or timeliness of the information on this website. Any liability claims relating to damages caused by the use or non-use of the information provided, or by the use of incorrect or incomplete information, are excluded.</p>
+      <p>Our website contains links to third-party external websites over whose content we have no control. We therefore accept no liability for such third-party content. The respective provider or operator of the linked pages is always responsible for their content.</p>
+
+      <h2>Copyright</h2>
+      <p>Content and works on this website are subject to copyright. Reproduction, editing, distribution, or any other use beyond the limits of copyright law requires the written consent of the respective rights holder.</p>
+    </div>
+  </Section>
+</BaseLayout>

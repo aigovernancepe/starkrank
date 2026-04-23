@@ -7,7 +7,12 @@ interface Props {
 }
 
 const { variant = 'standard', size = 'md', class: className = '', locale } = Astro.props;
-const homeHref = locale && locale !== 'en' ? `/${locale}/` : '/';
+const localeHome: Record<string, string> = {
+  de: '/',
+  en: '/en/',
+  'ch-de': '/ch-de/',
+};
+const homeHref = (locale && localeHome[locale]) ?? '/';
 
 const sizeClasses: Record<string, string> = {
   sm: 'h-6 w-auto',

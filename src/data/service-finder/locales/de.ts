@@ -143,13 +143,13 @@ export const de: ServiceFinderLocale = {
       secondaryCta: {
         text: 'Nicht sicher, wo Sie anfangen sollen? Testen Sie unseren kostenlosen AISO-Check \u2014 Ihre KI-Suchbereitschafts-Diagnose.',
         buttonText: 'Kostenloser AISO-Check',
-        link: '/de/aiso-check/',
+        link: '/aiso-check/',
       },
       emailCapture: {
         heading: 'M\u00f6chten Sie diese Empfehlungen per E-Mail erhalten?',
         subtext: 'Wir senden Ihnen eine kurze Erkl\u00e4rung jedes Services und empfohlene n\u00e4chste Schritte. Kein Spam, keine Verkaufsanrufe \u2014 es sei denn, Sie w\u00fcnschen es.',
         buttonText: 'Ergebnisse senden',
-        privacyNote: 'Ihre Daten werden gem\u00e4\u00df unserer <a href="/de/datenschutz/">Datenschutzerkl\u00e4rung</a> verarbeitet. Sie k\u00f6nnen Ihre Einwilligung jederzeit widerrufen. Datenverarbeitung in Frankfurt, Deutschland.',
+        privacyNote: 'Ihre Daten werden gem\u00e4\u00df unserer <a href="/datenschutz/">Datenschutzerkl\u00e4rung</a> verarbeitet. Sie k\u00f6nnen Ihre Einwilligung jederzeit widerrufen. Datenverarbeitung in Frankfurt, Deutschland.',
         fields: [
           { name: 'email', label: 'E-Mail', type: 'email', required: true },
           { name: 'firstname', label: 'Name', type: 'text', required: false },
@@ -191,6 +191,6 @@ export const de: ServiceFinderLocale = {
     { question: 'Was passiert nach den Ergebnissen?', answer: 'Jede Empfehlung verlinkt auf eine detaillierte Service-Seite. Wenn Sie aktiv werden m\u00f6chten, starten die meisten Services mit einer kostenlosen Analyse oder einem Beratungsgespr\u00e4ch.' },
     { question: 'Ich habe "Andere Branche" gew\u00e4hlt \u2014 sind die Ergebnisse trotzdem aussagekr\u00e4ftig?', answer: 'Sie sehen die h\u00e4ufigsten Empfehlungen basierend auf Ihrer Rolle und den allgemeinen Herausforderungen. F\u00fcr eine massgeschneiderte Bewertung vereinbaren Sie ein kostenloses Beratungsgespr\u00e4ch.' },
     { question: 'Was ist der Unterschied zwischen dem Schnellcheck und dem AISO-Check?', answer: 'Der AISO-Check misst speziell Ihre KI-Suchbereitschaft anhand von 6 Dimensionen. Dieser Schnellcheck ist breiter angelegt \u2014 er hilft Ihnen herauszufinden, welcher unserer Services (einschliesslich AISO) am besten zu Ihren Bed\u00fcrfnissen passt.' },
-    { question: 'Werden meine Daten gespeichert?', answer: 'Nur wenn Sie freiwillig Ihre E-Mail-Adresse eingeben. Die Antworten im Tool selbst werden nicht personenbezogen gespeichert. Details in unserer <a href="/de/datenschutz/">Datenschutzerkl\u00e4rung</a>.' },
+    { question: 'Werden meine Daten gespeichert?', answer: 'Nur wenn Sie freiwillig Ihre E-Mail-Adresse eingeben. Die Antworten im Tool selbst werden nicht personenbezogen gespeichert. Details in unserer <a href="/datenschutz/">Datenschutzerkl\u00e4rung</a>.' },
   ],
 };

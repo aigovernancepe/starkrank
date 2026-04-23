@@ -5,38 +5,46 @@ import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import Card from '../../components/ui/Card.astro';
 import { getCollection } from 'astro:content';
-import { pillars } from '../../data/pillars';
+import { getLocalizedPillars } from '../../data/pillars';
+import { getLocalizedNavHref } from '../../data/navigation';
+import { t } from '../../utils/i18n';
 
+const pillars = getLocalizedPillars('de');
 const allServices = await getCollection('services');
+
+const servicesByPillar = pillars.map((pillar) => ({
+  pillar,
+  services: pillar.services
+    .map((slug) => allServices.find((s) => s.data.slug === slug))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s)),
+}));
 ---
 
 <BaseLayout
-  title="Digital Marketing Services — StarkRank"
-  description="Explore StarkRank's full suite of digital marketing services: AI search optimisation, technical SEO, Google Ads, digital PR, content marketing, and analytics consultancy."
+  title="Dienstleistungen — StarkRank"
+  description="Das vollständige StarkRank-Leistungsspektrum: KI-Suchoptimierung, technisches SEO, Google Ads, Content-Marketing, E-E-A-T-Audits und Analytics-Beratung für Unternehmen in Deutschland und der Schweiz."
+  locale="de"
 >
   <HeroSection
-    headline="Our Services"
-    subheadline="Full-service digital growth, from AI search intelligence to transparent reporting."
+    headline="Unsere Dienstleistungen"
+    subheadline="Datenbasiertes Wachstum von KI-Suchintelligenz bis zu transparenter Messung — fokussiert auf Unternehmen im DACH-Raum."
   />
 
-  {pillars.map((pillar) => {
-    const pillarServices = allServices.filter((s) => s.data.pillar === pillar.id);
-    return (
-      <Section bg={pillars.indexOf(pillar) % 2 === 0 ? 'cream' : 'white'} id={pillar.id} class="scroll-mt-20">
-        <SectionHeader
-          label={pillar.tagline}
-          title={pillar.name}
-          subtitle={pillar.description}
-        />
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {pillarServices.map((service) => (
-            <Card href={`/services/${service.data.slug}/`}>
-              <h3 class="text-lg font-headline font-bold text-navy">{service.data.title}</h3>
-              <p class="mt-2 text-sm font-body text-gray leading-relaxed">{service.data.description}</p>
-            </Card>
-          ))}
-        </div>
-      </Section>
-    );
-  })}
+  {servicesByPillar.map(({ pillar, services }, idx) => (
+    <Section bg={idx % 2 === 0 ? 'cream' : 'white'} id={pillar.id} class="scroll-mt-20">
+      <SectionHeader
+        label={pillar.tagline}
+        title={pillar.name}
+        subtitle={pillar.description}
+      />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((service) => (
+          <Card href={getLocalizedNavHref(`/services/${service.data.slug}/`, 'de')}>
+            <h3 class="text-lg font-headline font-bold text-navy">{t('service.' + service.data.slug, 'de')}</h3>
+            <p class="mt-2 text-sm font-body text-gray leading-relaxed">{service.data.description}</p>
+          </Card>
+        ))}
+      </div>
+    </Section>
+  ))}
 </BaseLayout>

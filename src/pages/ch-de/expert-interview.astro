@@ -56,8 +56,8 @@ const faqSchema = {
 const schemas = [serviceSchema, faqSchema];
 
 const breadcrumbs = [
-  { label: 'Start', href: '/de/' },
-  { label: 'Experteninterview', href: '/de/expert-interview/' },
+  { label: 'Start', href: '/' },
+  { label: 'Experteninterview', href: '/expert-interview/' },
 ];
 
 const archetypes = [
@@ -83,18 +83,18 @@ const processSteps = [
 ];
 
 const relatedLinks = [
-  { title: 'Expertenbibliothek', href: '/de/sme-expertise-library/' },
-  { title: 'Content-Marketing', href: '/de/content-marketing-basel/' },
-  { title: 'E-E-A-T-Audit', href: '/de/eeat-audit/' },
-  { title: 'KI-Suchoptimierung', href: '/de/ki-suchoptimierung-basel/' },
-  { title: 'Kostenloser AISO-Check', href: '/de/aiso-check/' },
+  { title: 'Expertenbibliothek', href: '/sme-expertise-library/' },
+  { title: 'Content-Marketing', href: '/content-marketing-basel/' },
+  { title: 'E-E-A-T-Audit', href: '/eeat-audit/' },
+  { title: 'KI-Suchoptimierung', href: '/ki-suchoptimierung-basel/' },
+  { title: 'Kostenloser AISO-Check', href: '/aiso-check/' },
 ];
 ---
 
 <BaseLayout title={title} description={description} locale="de" schema={schemas}>
   <Fragment slot="head">
     <link rel="alternate" hreflang="en" href="https://starkrank.com/services/expert-interview/" />
-    <link rel="alternate" hreflang="de" href="https://starkrank.com/de/expert-interview/" />
+    <link rel="alternate" hreflang="de" href="https://starkrank.com/expert-interview/" />
     <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/expert-interview/" />
     <link rel="alternate" hreflang="es-PE" href="https://starkrank.com/pe/entrevista-experto/" />
     <link rel="alternate" hreflang="x-default" href="https://starkrank.com/services/expert-interview/" />

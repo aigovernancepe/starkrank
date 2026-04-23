@@ -1,21 +1,79 @@
-# Legacy market hub redirects
+# Phase 2b URL flip (2026-04-23): DE is now served at root,
+# EN moved to /en/*, CH-DE unchanged at /ch-de/*.
+# Order matters — CF Pages applies the first matching rule.
+
+# ─── Old /de/ paths → root (new DE home) ──────────────────────────
+# Blog tree stays at /de/blog/* (intentional — do not redirect).
+/de/ueber-uns/                       /ueber-uns/                                 301
+/de/kontakt/                         /kontakt/                                   301
+/de/impressum/                       /impressum/                                 301
+/de/datenschutz/                     /datenschutz/                               301
+/de/aiso-check/                      /aiso-check/                                301
+/de/schnellcheck/                    /schnellcheck/                              301
+/de/ecommerce-seo-audit/             /ecommerce-seo-audit/                       301
+/de/eeat-audit/                      /eeat-audit/                                301
+/de/pre-deploy-seo-check/            /pre-deploy-seo-check/                      301
+/de/expert-interview/                /expert-interview/                          301
+/de/sme-expertise-library/           /sme-expertise-library/                     301
+/de/kostenloser-google-ads-check/    /kostenloser-google-ads-check/              301
+/de/kostenloser-copywriting-check/   /kostenloser-copywriting-check/             301
+/de/services/                        /services/                                  301
+
+# DE city spokes (e.g. /de/ki-suchoptimierung-hannover/) → root
+/de/ki-suchoptimierung-hannover/     /ki-suchoptimierung-hannover/               301
+/de/seo-audit-hannover/              /seo-audit-hannover/                        301
+/de/lokale-seo-beratung-hannover/    /lokale-seo-beratung-hannover/              301
+/de/google-ads-hannover/             /google-ads-hannover/                       301
+/de/google-ads-audit-hannover/       /google-ads-audit-hannover/                 301
+/de/linkaufbau-hannover/             /linkaufbau-hannover/                       301
+/de/content-marketing-hannover/      /content-marketing-hannover/                301
+/de/seo-texterstellung-hannover/     /seo-texterstellung-hannover/               301
+/de/text-audit-hannover/             /text-audit-hannover/                       301
+/de/zielgruppenanalyse-hannover/     /zielgruppenanalyse-hannover/               301
+/de/webdesign-hannover/              /webdesign-hannover/                        301
+/de/analytics-beratung-hannover/     /analytics-beratung-hannover/               301
+
+# DE hub landing bare
+/de/                                 /                                           301
+
+# ─── Old EN root paths → /en/* ────────────────────────────────────
+/about/                              /en/about/                                  301
+/contact/                            /en/contact/                                301
+/imprint/                            /en/imprint/                                301
+/privacy/                            /en/privacy/                                301
+/aiso-score/                         /en/aiso-score/                             301
+/find-your-service/                  /en/find-your-service/                      301
+/free-google-ads-audit/              /en/free-google-ads-audit/                  301
+/free-copywriting-audit/             /en/free-copywriting-audit/                 301
+/case-studies/                       /en/case-studies/                           301
+/blog/                               /en/blog/                                   301
+/blog/*                              /en/blog/:splat                             301
+
+# Specific /services/* rewrites MUST sit above the /services/* wildcard
+# or CF Pages matches the wildcard first and 404s at a non-existent page.
+
+# Pruned services (Phase 2a catalog prune) — retarget to replacement services
+/services/digital-pr-strategy/       /en/services/authority-link-building/       301
+/services/reactive-pr/               /en/services/authority-link-building/       301
+/services/performance-ads-management/ /en/services/google-ads-management/        301
+/services/performance-web-development/ /en/services/technical-web-design/        301
+/services/roi-reporting-transparency/ /en/services/google-analytics-consultancy/ 301
+
+# Typo rescue: "optimisation" → "optimization"
+/services/ai-search-optimisation/    /en/services/ai-search-optimization/        301
+/services/ai-search-optimisation     /en/services/ai-search-optimization/        301
+
+# Catch-all for every other /services/<slug>/ → /en/services/<slug>/
+/services/*                          /en/services/:splat                         301
+/services/                           /en/services/                               301
+
+# ─── Pre-Phase-2b legacy redirects (kept + updated) ───────────────
 /schweiz/                            /ch-de/                                     301
-/deutschland/                        /de/                                        301
-
-# Pruned services (Phase 2a catalog prune, 2026-04-23)
-/services/digital-pr-strategy/       /services/authority-link-building/          301
-/services/reactive-pr/               /services/authority-link-building/          301
-/services/performance-ads-management/ /services/google-ads-management/           301
-/services/performance-web-development/ /services/technical-web-design/           301
-/services/roi-reporting-transparency/ /services/google-analytics-consultancy/    301
-
-# Renames / legacy paths
+/deutschland/                        /                                           301
 /locations/                          /                                           301
-/free-aiso-score/                    /aiso-score/                                301
-/services/ai-search-optimisation/    /services/ai-search-optimization/           301
-/services/ai-search-optimisation     /services/ai-search-optimization/           301
-/audits/free-google-ads-check/       /free-google-ads-audit/                     301
-/audits/copywriting-ux-analysis/     /free-copywriting-audit/                    301
+/free-aiso-score/                    /en/aiso-score/                             301
+/audits/free-google-ads-check/       /kostenloser-google-ads-check/              301
+/audits/copywriting-ux-analysis/     /kostenloser-copywriting-check/             301
 
 # Retired markets (/pe/*, /peru/*, /miami/*, /fort-lauderdale/*) return 404
 # via src/pages/404.astro — Cloudflare Pages does not support 410 in _redirects,

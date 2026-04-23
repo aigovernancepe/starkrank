@@ -26,7 +26,7 @@ export const localeConfig = {
 } as const;
 
 export type Locale = keyof typeof localeConfig;
-export const defaultLocale: Locale = 'en';
+export const defaultLocale: Locale = 'de';
 export const locales = Object.keys(localeConfig) as Locale[];
 
 /** The primary city slug used for spoke page links per locale. */

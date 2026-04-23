@@ -49,6 +49,13 @@ const {
 const isDe = locale === 'de' || locale === 'ch-de';
 const tocHeadings = headings.filter((h) => h.depth === 2);
 
+const aboutHrefMap: Record<string, string> = {
+  en: '/en/about/',
+  de: '/ueber-uns/',
+  'ch-de': '/ch-de/ueber-uns/',
+};
+const aboutHref = aboutHrefMap[locale] ?? aboutHrefMap.en;
+
 const dateLocaleMap: Record<string, string> = { en: 'en-US', de: 'de-DE', 'ch-de': 'de-CH' };
 const dateLocale = dateLocaleMap[locale] ?? 'en-US';
 
@@ -110,7 +117,7 @@ const defaultCtaSubtitleMap: Record<string, string> = { en: 'Get a clear picture
       </span>
       <span>
         {byLabelMap[locale]}
-        <a href="/about/" class="text-blue hover:text-blue-light font-semibold">{post.data.author}</a>, StarkRank
+        <a href={aboutHref} class="text-blue hover:text-blue-light font-semibold">{post.data.author}</a>, StarkRank
       </span>
     </div>
   </Section>
