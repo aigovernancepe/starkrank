@@ -16,6 +16,7 @@ export const pillars: Pillar[] = [
     services: [
       'ai-search-optimization',
       'technical-seo-audit',
+      'ecommerce-seo-audit',
       'local-seo-consulting',
     ],
   },
@@ -39,6 +40,7 @@ export const pillars: Pillar[] = [
       'Turn your brand into a source of truth through strategic link building and E-E-A-T signals.',
     services: [
       'authority-link-building',
+      'eeat-audit',
     ],
   },
   {
