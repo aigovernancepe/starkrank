@@ -72,8 +72,9 @@
 /services/ai-search-optimisation     /en/services/ai-search-optimization/        301
 
 # Catch-all for every other /services/<slug>/ → /en/services/<slug>/
+# NOTE: intentionally NO bare /services/ rule — that path now serves the
+# DE services hub at root. Only path-suffix patterns redirect to /en/.
 /services/*                          /en/services/:splat                         301
-/services/                           /en/services/                               301
 
 # ─── Pre-Phase-2b legacy redirects (kept + updated) ───────────────
 /schweiz/                            /ch-de/                                     301
