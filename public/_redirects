@@ -2,6 +2,14 @@
 # EN moved to /en/*, CH-DE unchanged at /ch-de/*.
 # Order matters — CF Pages applies the first matching rule.
 
+# ─── Phase 2c (2026-04-23): Content-Produkte slug migration ────────
+# Expertenbibliothek + Experteninterview promoted from English-flavoured
+# slugs to flat DE/CH-DE slugs with zero wrapper path.
+/sme-expertise-library/              /expertenbibliothek/                        301
+/expert-interview/                   /experteninterview/                         301
+/ch-de/sme-expertise-library/        /ch-de/expertenbibliothek/                  301
+/ch-de/expert-interview/             /ch-de/experteninterview/                   301
+
 # ─── Old /de/ paths → root (new DE home) ──────────────────────────
 # Blog tree stays at /de/blog/* (intentional — do not redirect).
 /de/ueber-uns/                       /ueber-uns/                                 301
