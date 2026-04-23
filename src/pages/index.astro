@@ -13,11 +13,11 @@ import { getSpokePath } from '../data/service-slugs';
 const pillars = getLocalizedPillars('de');
 
 const pillarCityLinks: Record<string, string> = {
-  'search-ai-intelligence': `/de/${getSpokePath('ai-search-optimization', 'hannover', 'de')}/`,
-  'performance-media': `/de/${getSpokePath('google-ads-management', 'hannover', 'de')}/`,
-  'authority-pr': `/de/${getSpokePath('authority-link-building', 'hannover', 'de')}/`,
-  'content-copywriting': `/de/${getSpokePath('seo-copywriting', 'hannover', 'de')}/`,
-  'data-web': `/de/${getSpokePath('google-analytics-consultancy', 'hannover', 'de')}/`,
+  'search-ai-intelligence': `/${getSpokePath('ai-search-optimization', 'hannover', 'de')}/`,
+  'performance-media': `/${getSpokePath('google-ads-management', 'hannover', 'de')}/`,
+  'authority-pr': `/${getSpokePath('authority-link-building', 'hannover', 'de')}/`,
+  'content-copywriting': `/${getSpokePath('seo-copywriting', 'hannover', 'de')}/`,
+  'data-web': `/${getSpokePath('google-analytics-consultancy', 'hannover', 'de')}/`,
 };
 
 const allSpokes = await getCollection('spokes', (s) => s.data.locale === 'de');
@@ -28,7 +28,7 @@ const spokesByPillar = pillars.map((pillar) => ({
     .map((s) => ({
       title: s.data.title,
       description: s.data.description,
-      href: `/de/${getSpokePath(s.data.serviceSlug, s.data.citySlug, 'de')}/`,
+      href: `/${getSpokePath(s.data.serviceSlug, s.data.citySlug, 'de')}/`,
     })),
 }));
 ---
@@ -42,7 +42,7 @@ const spokesByPillar = pillars.map((pillar) => ({
     headline="Datenbasiertes Wachstum für das **KI-Zeitalter**"
     subheadline="StarkRank positioniert B2B-Unternehmen, Mittelstand und IT-Dienstleister für Sichtbarkeit in Suchmaschinen und KI-Plattformen — mit Sitz in Hannover, aktiv in ganz Deutschland."
   >
-    <Button href="/de/aiso-check/" variant="primary" size="lg">Kostenloser AISO-Check &rarr;</Button>
+    <Button href="/aiso-check/" variant="primary" size="lg">Kostenloser AISO-Check &rarr;</Button>
   </HeroSection>
 
   <Section bg="cream">
@@ -84,6 +84,6 @@ const spokesByPillar = pillars.map((pillar) => ({
   </Section>
 
   <CTABanner bg="navy" title="Bereit zu wachsen?" subtitle="Buchen Sie eine kostenlose Erstberatung.">
-    <Button href="/de/kontakt/" variant="primary" size="lg">Kontaktieren Sie uns</Button>
+    <Button href="/kontakt/" variant="primary" size="lg">Kontaktieren Sie uns</Button>
   </CTABanner>
 </BaseLayout>

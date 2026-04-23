@@ -44,7 +44,7 @@ const serviceSchema = {
   name: service.data.title,
   description: service.data.description,
   provider: { '@id': 'https://starkrank.com/#organization' },
-  url: `https://starkrank.com/services/${service.data.slug}/`,
+  url: `https://starkrank.com/en/services/${service.data.slug}/`,
 };
 
 const faq = service.data.faq ?? [];
@@ -102,7 +102,7 @@ const breadcrumbs = [
             </span>
           )}
           <span>
-            By <a href="/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
+            By <a href="/en/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
           </span>
         </div>
 
@@ -136,7 +136,7 @@ const breadcrumbs = [
         )}
 
         <div class="mt-12">
-          <Button href="/contact/" variant="primary" size="lg">{isAISO ? 'Request Your Free AI Visibility Assessment' : 'Get Started'}</Button>
+          <Button href="/en/contact/" variant="primary" size="lg">{isAISO ? 'Request Your Free AI Visibility Assessment' : 'Get Started'}</Button>
         </div>
       </div>
 
@@ -196,11 +196,11 @@ const breadcrumbs = [
 
   {isAISO ? (
     <CTABanner bg="navy" title="How AI-Ready Is Your Website?" subtitle="Request a free initial assessment and find out where you stand — before your competitors do. For a comprehensive AISO Score audit, ask about our full diagnostic.">
-      <Button href="/contact/" variant="primary" size="lg">Request Your Free Assessment</Button>
+      <Button href="/en/contact/" variant="primary" size="lg">Request Your Free Assessment</Button>
     </CTABanner>
   ) : (
     <CTABanner bg="navy" title="Ready to Grow?" subtitle="Book a free consultation to discuss your digital strategy.">
-      <Button href="/contact/" variant="primary" size="lg">Contact Us</Button>
+      <Button href="/en/contact/" variant="primary" size="lg">Contact Us</Button>
     </CTABanner>
   )}
 </BaseLayout>

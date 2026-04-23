@@ -28,9 +28,9 @@ const articleSchema = {
   description: post.data.description,
   datePublished: post.data.pubDate.toISOString(),
   ...(post.data.updatedDate && { dateModified: post.data.updatedDate.toISOString() }),
-  author: { '@type': 'Person', name: post.data.author, url: 'https://starkrank.com/about/' },
+  author: { '@type': 'Person', name: post.data.author, url: 'https://starkrank.com/en/about/' },
   publisher: { '@id': 'https://starkrank.com/#organization' },
-  url: `https://starkrank.com/blog/${post.id}/`,
+  url: `https://starkrank.com/en/blog/${post.id}/`,
 };
 
 const schemas: Record<string, unknown>[] = [articleSchema];

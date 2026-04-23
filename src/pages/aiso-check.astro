@@ -11,7 +11,7 @@ const webPageSchema = {
   '@type': 'WebPage',
   name: 'Kostenloser AISO-Check — Wie KI-ready ist Ihre Website?',
   description,
-  url: 'https://starkrank.com/de/aiso-check/',
+  url: 'https://starkrank.com/aiso-check/',
   inLanguage: 'de-DE',
   isPartOf: { '@type': 'WebSite', name: 'StarkRank', url: 'https://starkrank.com' },
   mainEntity: {
@@ -28,8 +28,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://starkrank.com/de/' },
-    { '@type': 'ListItem', position: 2, name: 'AISO-Check', item: 'https://starkrank.com/de/aiso-check/' },
+    { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://starkrank.com/' },
+    { '@type': 'ListItem', position: 2, name: 'AISO-Check', item: 'https://starkrank.com/aiso-check/' },
   ],
 };
 
@@ -49,10 +49,10 @@ const upsellDimensions = [
   locale="de"
   ogImage="/images/aiso-score-preview-de.png"
   schema={schemas}
-  backLink={{ label: 'Zurück zur Startseite', href: '/de/' }}
+  backLink={{ label: 'Zurück zur Startseite', href: '/' }}
 >
   <Fragment slot="head">
-    <link rel="alternate" hreflang="de-DE" href="https://starkrank.com/de/aiso-check/" />
+    <link rel="alternate" hreflang="de-DE" href="https://starkrank.com/aiso-check/" />
     <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/aiso-check/" />
     <link rel="alternate" hreflang="en" href="https://starkrank.com/aiso-score/" />
     <link rel="alternate" hreflang="es-PE" href="https://starkrank.com/pe/apareces-en-google/" />
@@ -183,7 +183,7 @@ const upsellDimensions = [
       </div>
       <p class="mt-6 text-base font-body text-gray">
         Umfassendes AISO-Audit ab €3.000.
-        <a href="/de/ki-suchoptimierung-hannover/" class="text-blue font-semibold hover:text-blue-light">Mehr über KI-Suchoptimierung erfahren &rarr;</a>
+        <a href="/ki-suchoptimierung-hannover/" class="text-blue font-semibold hover:text-blue-light">Mehr über KI-Suchoptimierung erfahren &rarr;</a>
       </p>
     </div>
   </Section>

@@ -15,7 +15,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'E-Commerce-SEO-Audit',
   description: 'Spezialisiertes SEO-Audit für Produktkatalog-Websites, das 8 Schwachstellen abdeckt: Produktschema, Filternavigation, Variantenhandhabung, Kategorieseiten, Nichtverfügbarkeit, Sitemap-Abdeckung, Bewertungsschema und PDP-Bildoptimierung. Lieferung in 7 Werktagen.',
-  url: 'https://starkrank.com/de/ecommerce-seo-audit/',
+  url: 'https://starkrank.com/ecommerce-seo-audit/',
   provider: { '@type': 'Organization', name: 'StarkRank', url: 'https://starkrank.com' },
   areaServed: [
     { '@type': 'Country', name: 'Germany' },
@@ -57,8 +57,8 @@ const faqSchema = {
 const schemas = [serviceSchema, faqSchema];
 
 const breadcrumbs = [
-  { label: 'Start', href: '/de/' },
-  { label: 'E-Commerce-SEO-Audit', href: '/de/ecommerce-seo-audit/' },
+  { label: 'Start', href: '/' },
+  { label: 'E-Commerce-SEO-Audit', href: '/ecommerce-seo-audit/' },
 ];
 
 const auditAreas = [
@@ -81,17 +81,17 @@ const processSteps = [
 ];
 
 const relatedLinks = [
-  { title: 'Technisches SEO-Audit', href: '/de/seo-audit-hannover/' },
-  { title: 'KI-Suchoptimierung', href: '/de/ki-suchoptimierung-hannover/' },
-  { title: 'Content-Marketing', href: '/de/content-marketing-hannover/' },
-  { title: 'Kostenloser AISO-Check', href: '/de/aiso-check/' },
+  { title: 'Technisches SEO-Audit', href: '/seo-audit-hannover/' },
+  { title: 'KI-Suchoptimierung', href: '/ki-suchoptimierung-hannover/' },
+  { title: 'Content-Marketing', href: '/content-marketing-hannover/' },
+  { title: 'Kostenloser AISO-Check', href: '/aiso-check/' },
 ];
 ---
 
 <BaseLayout title={title} description={description} locale="de" schema={schemas}>
   <Fragment slot="head">
     <link rel="alternate" hreflang="en" href="https://starkrank.com/services/ecommerce-seo-audit/" />
-    <link rel="alternate" hreflang="de" href="https://starkrank.com/de/ecommerce-seo-audit/" />
+    <link rel="alternate" hreflang="de" href="https://starkrank.com/ecommerce-seo-audit/" />
     <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/ecommerce-seo-audit/" />
     <link rel="alternate" hreflang="x-default" href="https://starkrank.com/services/ecommerce-seo-audit/" />
   </Fragment>
@@ -111,7 +111,7 @@ const relatedLinks = [
     </p>
 
     <div class="mt-8 flex flex-wrap gap-4">
-      <Button href="/de/kontakt/" variant="primary" size="lg">Audit jetzt buchen</Button>
+      <Button href="/kontakt/" variant="primary" size="lg">Audit jetzt buchen</Button>
       <Button href="#whats-included" variant="ghost" size="lg">Leistungsumfang ansehen</Button>
     </div>
 
@@ -322,9 +322,9 @@ const relatedLinks = [
           </tr>
           <tr>
             <td></td>
-            <td class="py-4 px-4 text-center"><Button href="/de/kontakt/" variant="ghost" size="sm">Buchen</Button></td>
-            <td class="py-4 px-4 text-center"><Button href="/de/kontakt/" variant="ghost" size="sm">Buchen</Button></td>
-            <td class="py-4 px-4 text-center"><Button href="/de/kontakt/" variant="ghost" size="sm">Gespräch</Button></td>
+            <td class="py-4 px-4 text-center"><Button href="/kontakt/" variant="ghost" size="sm">Buchen</Button></td>
+            <td class="py-4 px-4 text-center"><Button href="/kontakt/" variant="ghost" size="sm">Buchen</Button></td>
+            <td class="py-4 px-4 text-center"><Button href="/kontakt/" variant="ghost" size="sm">Gespräch</Button></td>
           </tr>
         </tbody>
       </table>
@@ -381,7 +381,7 @@ const relatedLinks = [
 
   <!-- CTA -->
   <CTABanner bg="navy" title="Bereit, die Schwachstellen zu beheben, die Ihren Produkt-Traffic kosten?" subtitle="Produktkatalog-Websites versagen auf vorhersehbare Weise. Die acht Schwachstellen, die wir prüfen, sehen wir in jedem Auftrag — und genau die, die ein generisches SEO-Audit übersieht. In 7 Tagen liefern wir die Fix-Liste.">
-    <Button href="/de/kontakt/" variant="primary" size="lg">Audit jetzt buchen</Button>
-    <Button href="/de/aiso-check/" variant="secondary" size="lg">Kostenloser AISO-Check</Button>
+    <Button href="/kontakt/" variant="primary" size="lg">Audit jetzt buchen</Button>
+    <Button href="/aiso-check/" variant="secondary" size="lg">Kostenloser AISO-Check</Button>
   </CTABanner>
 </BaseLayout>

@@ -15,7 +15,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'E-E-A-T-Audit',
   description: 'Evidenzbasierte Bewertung von gezeigter Experience, Expertise, Authoritativeness und Trustworthiness anhand einer 4-Dimensions-40-Punkte-Rubrik. Inklusive Signal-Remediation, YMYL-Compliance-Abgleich und 90-Tage-Re-Audit.',
-  url: 'https://starkrank.com/de/eeat-audit/',
+  url: 'https://starkrank.com/eeat-audit/',
   provider: { '@type': 'Organization', name: 'StarkRank', url: 'https://starkrank.com' },
   areaServed: [
     { '@type': 'Country', name: 'Germany' },
@@ -55,8 +55,8 @@ const faqSchema = {
 const schemas = [serviceSchema, faqSchema];
 
 const breadcrumbs = [
-  { label: 'Start', href: '/de/' },
-  { label: 'E-E-A-T-Audit', href: '/de/eeat-audit/' },
+  { label: 'Start', href: '/' },
+  { label: 'E-E-A-T-Audit', href: '/eeat-audit/' },
 ];
 
 const dimensions = [
@@ -76,18 +76,18 @@ const processSteps = [
 ];
 
 const relatedLinks = [
-  { title: 'KI-Suchoptimierung', href: '/de/ki-suchoptimierung-hannover/' },
-  { title: 'Experteninterview', href: '/de/expert-interview/' },
-  { title: 'Expertenbibliothek', href: '/de/sme-expertise-library/' },
-  { title: 'Content-Marketing', href: '/de/content-marketing-hannover/' },
-  { title: 'Kostenloser AISO-Check', href: '/de/aiso-check/' },
+  { title: 'KI-Suchoptimierung', href: '/ki-suchoptimierung-hannover/' },
+  { title: 'Experteninterview', href: '/expert-interview/' },
+  { title: 'Expertenbibliothek', href: '/sme-expertise-library/' },
+  { title: 'Content-Marketing', href: '/content-marketing-hannover/' },
+  { title: 'Kostenloser AISO-Check', href: '/aiso-check/' },
 ];
 ---
 
 <BaseLayout title={title} description={description} locale="de" schema={schemas}>
   <Fragment slot="head">
     <link rel="alternate" hreflang="en" href="https://starkrank.com/services/eeat-audit/" />
-    <link rel="alternate" hreflang="de" href="https://starkrank.com/de/eeat-audit/" />
+    <link rel="alternate" hreflang="de" href="https://starkrank.com/eeat-audit/" />
     <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/eeat-audit/" />
     <link rel="alternate" hreflang="x-default" href="https://starkrank.com/services/eeat-audit/" />
   </Fragment>
@@ -107,7 +107,7 @@ const relatedLinks = [
     </p>
 
     <div class="mt-8 flex flex-wrap gap-4">
-      <Button href="/de/kontakt/" variant="primary" size="lg">E-E-A-T-Audit buchen</Button>
+      <Button href="/kontakt/" variant="primary" size="lg">E-E-A-T-Audit buchen</Button>
       <Button href="#dimensions" variant="ghost" size="lg">Die 4 Dimensionen</Button>
     </div>
 
@@ -261,7 +261,7 @@ const relatedLinks = [
           <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> 90-Tage-Re-Audit</li>
         </ul>
         <p class="text-2xl font-headline font-black text-navy mb-4">1.275 €</p>
-        <Button href="/de/kontakt/" variant="primary" size="md">E-E-A-T-Audit buchen</Button>
+        <Button href="/kontakt/" variant="primary" size="md">E-E-A-T-Audit buchen</Button>
       </div>
 
       <div class="bg-white border-2 border-blue rounded-lg p-6 flex flex-col">
@@ -274,7 +274,7 @@ const relatedLinks = [
           <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> E-E-A-T als Evidenz-Ebene unter Authority</li>
         </ul>
         <p class="text-2xl font-headline font-black text-navy mb-4">3.000 € <span class="text-sm font-body font-normal text-gray">(E-E-A-T enthalten)</span></p>
-        <Button href="/de/kontakt/" variant="primary" size="md">AISO-Bundle buchen</Button>
+        <Button href="/kontakt/" variant="primary" size="md">AISO-Bundle buchen</Button>
       </div>
     </div>
 
@@ -323,7 +323,7 @@ const relatedLinks = [
 
   <!-- CTA -->
   <CTABanner bg="navy" title="Bereit, zu bewerten, was Google und KI tatsächlich belohnen?" subtitle="Unsere 40-Punkte-Rubrik, evidenzbasierte Signalanalyse und das 90-Tage-Re-Audit liefern Ihnen einen Score, den Sie verteidigen können, einen Remediation-Plan, den Sie umsetzen können, und ein Re-Scoring, das Fortschritt belegt. 1.275 € pauschal, geliefert in 7 Tagen.">
-    <Button href="/de/kontakt/" variant="primary" size="lg">E-E-A-T-Audit buchen</Button>
-    <Button href="/de/ki-suchoptimierung-hannover/" variant="secondary" size="lg">AISO-Bundle anfragen</Button>
+    <Button href="/kontakt/" variant="primary" size="lg">E-E-A-T-Audit buchen</Button>
+    <Button href="/ki-suchoptimierung-hannover/" variant="secondary" size="lg">AISO-Bundle anfragen</Button>
   </CTABanner>
 </BaseLayout>

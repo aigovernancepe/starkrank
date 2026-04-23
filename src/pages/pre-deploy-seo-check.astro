@@ -15,7 +15,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Pre-Deploy-SEO-Check',
   description: 'Pro-URL-SEO-Regressions-Erkennung für Deployments, Migrationen und CMS-Upgrades. Baselined Money-Pages vor dem Deploy, diffed sie danach und flaggt 19 spezifische Regressionen über 4 Schweregrade.',
-  url: 'https://starkrank.com/de/pre-deploy-seo-check/',
+  url: 'https://starkrank.com/pre-deploy-seo-check/',
   provider: { '@type': 'Organization', name: 'StarkRank', url: 'https://starkrank.com' },
   areaServed: [
     { '@type': 'Country', name: 'Germany' },
@@ -56,8 +56,8 @@ const faqSchema = {
 const schemas = [serviceSchema, faqSchema];
 
 const breadcrumbs = [
-  { label: 'Start', href: '/de/' },
-  { label: 'Pre-Deploy-SEO-Check', href: '/de/pre-deploy-seo-check/' },
+  { label: 'Start', href: '/' },
+  { label: 'Pre-Deploy-SEO-Check', href: '/pre-deploy-seo-check/' },
 ];
 
 const severityRows = [
@@ -85,17 +85,17 @@ const processSteps = [
 ];
 
 const relatedLinks = [
-  { title: 'Technisches SEO-Audit', href: '/de/seo-audit-hannover/' },
-  { title: 'E-Commerce-SEO-Audit', href: '/de/ecommerce-seo-audit/' },
-  { title: 'KI-Suchoptimierung', href: '/de/ki-suchoptimierung-hannover/' },
-  { title: 'Kostenloser AISO-Check', href: '/de/aiso-check/' },
+  { title: 'Technisches SEO-Audit', href: '/seo-audit-hannover/' },
+  { title: 'E-Commerce-SEO-Audit', href: '/ecommerce-seo-audit/' },
+  { title: 'KI-Suchoptimierung', href: '/ki-suchoptimierung-hannover/' },
+  { title: 'Kostenloser AISO-Check', href: '/aiso-check/' },
 ];
 ---
 
 <BaseLayout title={title} description={description} locale="de" schema={schemas}>
   <Fragment slot="head">
     <link rel="alternate" hreflang="en" href="https://starkrank.com/services/pre-deploy-seo-check/" />
-    <link rel="alternate" hreflang="de" href="https://starkrank.com/de/pre-deploy-seo-check/" />
+    <link rel="alternate" hreflang="de" href="https://starkrank.com/pre-deploy-seo-check/" />
     <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/pre-deploy-seo-check/" />
     <link rel="alternate" hreflang="x-default" href="https://starkrank.com/services/pre-deploy-seo-check/" />
   </Fragment>
@@ -115,7 +115,7 @@ const relatedLinks = [
     </p>
 
     <div class="mt-8 flex flex-wrap gap-4">
-      <Button href="/de/kontakt/" variant="primary" size="lg">Check jetzt buchen</Button>
+      <Button href="/kontakt/" variant="primary" size="lg">Check jetzt buchen</Button>
       <Button href="#whats-checked" variant="ghost" size="lg">Prüfungsumfang ansehen</Button>
     </div>
 
@@ -281,7 +281,7 @@ const relatedLinks = [
           <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Skript-Handover</li>
         </ul>
         <p class="text-2xl font-headline font-black text-navy mb-4">500 €</p>
-        <Button href="/de/kontakt/" variant="primary" size="md">Check buchen</Button>
+        <Button href="/kontakt/" variant="primary" size="md">Check buchen</Button>
       </div>
 
       <div class="bg-white border-2 border-blue rounded-lg p-6 flex flex-col">
@@ -294,7 +294,7 @@ const relatedLinks = [
           <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Gebucht mit Replatforming-Auftrag</li>
         </ul>
         <p class="text-2xl font-headline font-black text-navy mb-4">250 €</p>
-        <Button href="/de/kontakt/" variant="primary" size="md">Bundle anfragen</Button>
+        <Button href="/kontakt/" variant="primary" size="md">Bundle anfragen</Button>
       </div>
     </div>
 
@@ -343,7 +343,7 @@ const relatedLinks = [
 
   <!-- CTA -->
   <CTABanner bg="navy" title="Bereit, Ihr nächstes Deploy abzusichern?" subtitle="Der günstigste Zeitpunkt, eine SEO-Regression zu erkennen, ist vor dem Release. Der teuerste ist 6 Wochen später. 500 € pauschal, geliefert im Deploy-Fenster, 19 spezifische Regressionen erkannt.">
-    <Button href="/de/kontakt/" variant="primary" size="lg">Check jetzt buchen</Button>
-    <Button href="/de/ecommerce-seo-audit/" variant="secondary" size="lg">Migrations-Bundle</Button>
+    <Button href="/kontakt/" variant="primary" size="lg">Check jetzt buchen</Button>
+    <Button href="/ecommerce-seo-audit/" variant="secondary" size="lg">Migrations-Bundle</Button>
   </CTABanner>
 </BaseLayout>
