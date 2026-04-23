@@ -1,6 +1,6 @@
 export const localeConfig = {
   en: {
-    label: 'United States',
+    label: 'English',
     lang: 'en-US',
     hreflang: 'en',
     currency: 'USD',
