@@ -14,7 +14,7 @@ export const mainNav: NavItem[] = [
     children: [
       {
         label: 'Search & AI Intelligence',
-        href: '/services/ai-search-optimization/',
+        href: '/services/#search-ai-intelligence',
         children: [
           { label: 'AI Search Optimization', href: '/services/ai-search-optimization/' },
           { label: 'Technical SEO Audit', href: '/services/technical-seo-audit/' },
@@ -24,7 +24,7 @@ export const mainNav: NavItem[] = [
       },
       {
         label: 'Performance Media',
-        href: '/services/google-ads-management/',
+        href: '/services/#performance-media',
         children: [
           { label: 'Google Ads Management', href: '/services/google-ads-management/' },
           { label: 'Google Ads Audit', href: '/services/google-ads-audit/' },
@@ -33,7 +33,7 @@ export const mainNav: NavItem[] = [
       },
       {
         label: 'Authority',
-        href: '/services/authority-link-building/',
+        href: '/services/#authority-pr',
         children: [
           { label: 'Authority Link Building', href: '/services/authority-link-building/' },
           { label: 'E-E-A-T Audit', href: '/services/eeat-audit/' },
@@ -41,7 +41,7 @@ export const mainNav: NavItem[] = [
       },
       {
         label: 'Content & Copywriting',
-        href: '/services/content-marketing/',
+        href: '/services/#content-copywriting',
         children: [
           { label: 'Content Marketing', href: '/services/content-marketing/' },
           { label: 'SEO Copywriting', href: '/services/seo-copywriting/' },
@@ -51,7 +51,7 @@ export const mainNav: NavItem[] = [
       },
       {
         label: 'Data & Web',
-        href: '/services/technical-web-design/',
+        href: '/services/#data-web',
         children: [
           { label: 'Technical Web Design', href: '/services/technical-web-design/' },
           { label: 'Google Analytics Consultancy', href: '/services/google-analytics-consultancy/' },
@@ -109,6 +109,12 @@ const impressumPaths: Record<string, string> = {
   'ch-de': '/ch-de/impressum/',
 };
 
+const aboutPaths: Record<Locale, string> = {
+  en: '/about/',
+  de: '/de/ueber-uns/',
+  'ch-de': '/ch-de/ueber-uns/',
+};
+
 /** Locale-specific lead magnet overrides for footer audits section. */
 const auditPaths: Record<Locale, NavItem[]> = {
   en: [
@@ -150,11 +156,19 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
   // Privacy page
   if (href === '/privacy/') return privacyPaths[locale];
 
+  // About page
+  if (href === '/about/') return aboutPaths[locale];
+
   // Blog index (locales with their own blog)
   if (href === '/blog/' && (locale === 'de' || locale === 'ch-de')) return `${localePrefix}/blog/`;
 
-  // Top-level /services/ link → locale homepage (shows pillar cards)
-  if (href === '/services/') return `${localePrefix}/`;
+  // Top-level /services/ link → locale services hub
+  if (href === '/services/') return `${localePrefix}/services/`;
+
+  // Services hub anchor links (pillar headers in mega-menu)
+  if (href.startsWith('/services/#')) {
+    return `${localePrefix}/services/${href.slice('/services/'.length)}`;
+  }
 
   // Individual service pages → flat locale page first (for non-city-scoped services),
   // then the city spoke in the default city, else fall through to EN cross-locale.

@@ -31,7 +31,7 @@ const servicesByPillar = pillars.map((pillar) => ({
   />
 
   {servicesByPillar.map(({ pillar, services }, idx) => (
-    <Section bg={idx % 2 === 0 ? 'cream' : 'white'}>
+    <Section bg={idx % 2 === 0 ? 'cream' : 'white'} id={pillar.id} class="scroll-mt-20">
       <SectionHeader
         label={pillar.tagline}
         title={pillar.name}
@@ -40,9 +40,6 @@ const servicesByPillar = pillars.map((pillar) => ({
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
           <Card href={getLocalizedNavHref(`/services/${service.data.slug}/`, 'de')}>
-            {service.data.isPillarHub && (
-              <span class="text-[10px] font-label font-bold uppercase tracking-widest text-blue mb-2 block">Hub</span>
-            )}
             <h3 class="text-lg font-headline font-bold text-navy">{t('service.' + service.data.slug, 'de')}</h3>
             <p class="mt-2 text-sm font-body text-gray leading-relaxed">{service.data.description}</p>
           </Card>
