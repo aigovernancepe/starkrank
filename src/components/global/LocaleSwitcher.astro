@@ -4,6 +4,12 @@ import { getCurrentLocale } from '../../utils/i18n';
 
 const currentLocale = getCurrentLocale(Astro.url);
 const currentConfig = localeConfig[currentLocale];
+
+const localeHome: Record<string, string> = {
+  de: '/',
+  en: '/en/',
+  'ch-de': '/ch-de/',
+};
 ---
 
 <div class="relative group">
@@ -19,7 +25,7 @@ const currentConfig = localeConfig[currentLocale];
   <div class="absolute right-0 top-full mt-2 bg-white border border-gray-light rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all min-w-[160px] z-50">
     {Object.entries(localeConfig).map(([locale, config]) => (
       <a
-        href={locale === 'en' ? '/' : `/${locale}/`}
+        href={localeHome[locale] ?? `/${locale}/`}
         class:list={[
           'block px-4 py-2.5 text-sm font-body hover:bg-cream transition-colors',
           locale === currentLocale ? 'text-blue font-medium' : 'text-dark',
