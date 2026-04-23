@@ -98,9 +98,9 @@ export const services: ServiceDef[] = [
     id: 'digital-pr',
     icon: 'megaphone',
     links: {
-      en: '/services/digital-pr-strategy/',
-      de: '/de/digitale-pr-hannover/',
-      'ch-de': '/ch-de/digitale-pr-basel/',
+      en: '/services/authority-link-building/',
+      de: '/de/linkaufbau-hannover/',
+      'ch-de': '/ch-de/linkaufbau-basel/',
     },
   },
   {
@@ -126,9 +126,9 @@ export const services: ServiceDef[] = [
     id: 'roi-analytics',
     icon: 'bar-chart-3',
     links: {
-      en: '/services/roi-reporting-transparency/',
-      de: '/de/roi-reporting-hannover/',
-      'ch-de': '/ch-de/roi-reporting-basel/',
+      en: '/services/google-analytics-consultancy/',
+      de: '/de/analytics-beratung-hannover/',
+      'ch-de': '/ch-de/analytics-beratung-basel/',
     },
   },
   {
@@ -220,9 +220,9 @@ export const services: ServiceDef[] = [
     id: 'monthly-reporting',
     icon: 'file-text',
     links: {
-      en: '/services/roi-reporting-transparency/',
-      de: '/de/roi-reporting-hannover/',
-      'ch-de': '/ch-de/roi-reporting-basel/',
+      en: '/services/google-analytics-consultancy/',
+      de: '/de/analytics-beratung-hannover/',
+      'ch-de': '/ch-de/analytics-beratung-basel/',
     },
   },
   {
