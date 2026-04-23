@@ -562,6 +562,26 @@ const allSchemas = [
         </Section>
       )}
 
+      {/* Section 6b: Content-Produkte callout on Content & Copywriting pillar spokes */}
+      {pillar?.id === 'content-copywriting' && (locale === 'de' || locale === 'ch-de') && (
+        <Section bg="cream">
+          <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-2">Ergänzende Content-Produkte</h2>
+          <p class="text-sm font-body text-gray leading-relaxed mb-6 max-w-2xl">First-Party-Input-Assets, die Ihre Content-Pipeline mit nicht-generischem Expertenwissen speisen — ergänzend zu laufenden Content-Services.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a href={locale === 'ch-de' ? '/ch-de/expertenbibliothek/' : '/expertenbibliothek/'} class="group block bg-white border border-gray-light/40 rounded-lg p-5 transition-all hover:shadow-md hover:border-blue/30">
+              <span class="text-xs font-label font-semibold uppercase tracking-wide text-blue">{locale === 'ch-de' ? "Ab 2'500 CHF" : 'Ab 2.100 €'}</span>
+              <h4 class="mt-2 text-base font-headline font-bold text-navy group-hover:text-blue transition-colors">Expertenbibliothek</h4>
+              <p class="mt-2 text-sm font-body text-gray leading-relaxed">Das gesamte Wissen Ihres Gründers in einer strukturierten Datei — einmal im Onboarding gebaut, aus der Ihr Content-Team bei jedem Brief schöpft.</p>
+            </a>
+            <a href={locale === 'ch-de' ? '/ch-de/experteninterview/' : '/experteninterview/'} class="group block bg-white border border-gray-light/40 rounded-lg p-5 transition-all hover:shadow-md hover:border-blue/30">
+              <span class="text-xs font-label font-semibold uppercase tracking-wide text-blue">{locale === 'ch-de' ? 'Ab 800 CHF' : 'Ab 700 €'}</span>
+              <h4 class="mt-2 text-base font-headline font-bold text-navy group-hover:text-blue transition-colors">Experteninterview</h4>
+              <p class="mt-2 text-sm font-body text-gray leading-relaxed">Themen-spezifische Fragen an Ihren Experten zu einer einzelnen Content-Initiative — Fallstudien, konträre Winkel und Workflow-Details, die KI nicht erfindet.</p>
+            </a>
+          </div>
+        </Section>
+      )}
+
       {/* Section 7: All other services in this city */}
       {otherServices.length > 0 && (
         <Section bg="cream">
