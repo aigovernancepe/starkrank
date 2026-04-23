@@ -1,12 +1,4 @@
 export const localeConfig = {
-  en: {
-    label: 'English',
-    lang: 'en-US',
-    hreflang: 'en',
-    currency: 'USD',
-    flag: 'US',
-    dir: 'ltr',
-  },
   de: {
     label: 'Deutschland',
     lang: 'de-DE',
@@ -21,6 +13,14 @@ export const localeConfig = {
     hreflang: 'de-CH',
     currency: 'CHF',
     flag: 'CH',
+    dir: 'ltr',
+  },
+  en: {
+    label: 'International',
+    lang: 'en-US',
+    hreflang: 'en',
+    currency: 'USD',
+    flag: 'US',
     dir: 'ltr',
   },
 } as const;
