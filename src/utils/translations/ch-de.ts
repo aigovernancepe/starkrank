@@ -1,5 +1,6 @@
 export const chde: Record<string, string> = {
   'nav.services': 'Dienstleistungen',
+  'nav.pricing': 'Preise',
   'nav.caseStudies': 'Referenzen',
   'nav.blog': 'Blog',
   'nav.about': 'Über uns',

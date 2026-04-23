@@ -15,6 +15,7 @@ const locale = (localeProp ?? getCurrentLocale(Astro.url) ?? 'en') as Locale;
 // Translation map for nav item labels
 const navLabelKeys: Record<string, string> = {
   'Services': 'nav.services',
+  'Pricing': 'nav.pricing',
   'Case Studies': 'nav.caseStudies',
   'Blog': 'nav.blog',
   'About': 'nav.about',
@@ -70,7 +71,7 @@ function localizeLabel(label: string): string {
 
     <!-- Desktop Nav -->
     <div class="hidden lg:flex items-center gap-8">
-      {mainNav.map((item) => (
+      {mainNav.filter((item) => !item.hiddenInLocales?.includes(locale)).map((item) => (
         <div class="relative group">
           <a
             href={getLocalizedNavHref(item.href, locale)}
@@ -134,7 +135,7 @@ function localizeLabel(label: string): string {
   <!-- Mobile Nav -->
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-light">
     <div class="px-6 py-4 space-y-4">
-      {mainNav.map((item) => (
+      {mainNav.filter((item) => !item.hiddenInLocales?.includes(locale)).map((item) => (
         <a href={getLocalizedNavHref(item.href, locale)} class="block text-sm font-label font-semibold uppercase tracking-wide text-dark">
           {localizeLabel(item.label)}
         </a>
