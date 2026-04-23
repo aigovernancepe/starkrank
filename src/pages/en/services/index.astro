@@ -1,11 +1,11 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import HeroSection from '../../components/ui/HeroSection.astro';
-import Section from '../../components/ui/Section.astro';
-import SectionHeader from '../../components/ui/SectionHeader.astro';
-import Card from '../../components/ui/Card.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroSection from '../../../components/ui/HeroSection.astro';
+import Section from '../../../components/ui/Section.astro';
+import SectionHeader from '../../../components/ui/SectionHeader.astro';
+import Card from '../../../components/ui/Card.astro';
 import { getCollection } from 'astro:content';
-import { pillars } from '../../data/pillars';
+import { pillars } from '../../../data/pillars';
 
 const allServices = await getCollection('services');
 ---

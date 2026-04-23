@@ -1,14 +1,14 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Section from '../../components/ui/Section.astro';
-import SectionHeader from '../../components/ui/SectionHeader.astro';
-import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
-import Button from '../../components/ui/Button.astro';
-import Card from '../../components/ui/Card.astro';
-import CTABanner from '../../components/ui/CTABanner.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Section from '../../../components/ui/Section.astro';
+import SectionHeader from '../../../components/ui/SectionHeader.astro';
+import Breadcrumbs from '../../../components/ui/Breadcrumbs.astro';
+import Button from '../../../components/ui/Button.astro';
+import Card from '../../../components/ui/Card.astro';
+import CTABanner from '../../../components/ui/CTABanner.astro';
 import { getCollection } from 'astro:content';
-import { getPillarById } from '../../data/pillars';
-import { getSpokePath } from '../../data/service-slugs';
+import { getPillarById } from '../../../data/pillars';
+import { getSpokePath } from '../../../data/service-slugs';
 
 const slug = 'seo-for-home-services';
 const allServices = await getCollection('services');

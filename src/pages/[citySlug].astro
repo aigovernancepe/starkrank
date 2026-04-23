@@ -1,7 +1,7 @@
 ---
-import CitySpokePage from '../../components/pages/CitySpokePage.astro';
+import CitySpokePage from '../components/pages/CitySpokePage.astro';
 import { getCollection } from 'astro:content';
-import { getSpokePath } from '../../data/service-slugs';
+import { getSpokePath } from '../data/service-slugs';
 
 export async function getStaticPaths() {
   const cities = await getCollection('cities');
