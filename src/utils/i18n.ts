@@ -12,12 +12,14 @@ const translations: Record<Locale, Record<string, string>> = {
 
 /**
  * Extract the current locale from a URL pathname.
+ * Post-Phase-2b: DE lives at root, EN at /en/*, CH-DE at /ch-de/*.
+ * /de/blog/ is intentionally retained as DE (localized blog index tree).
  */
 export function getCurrentLocale(url: URL): Locale {
   const path = url.pathname;
   if (path.startsWith('/ch-de/') || path === '/ch-de') return 'ch-de';
-  if (path.startsWith('/de/') || path === '/de') return 'de';
-  return defaultLocale;
+  if (path.startsWith('/en/') || path === '/en') return 'en';
+  return 'de';
 }
 
 /**
@@ -60,30 +62,17 @@ export function getHreflangAlternates(
   pathname: string,
   site: string
 ): Array<{ hreflang: string; href: string }> {
-  const alternates: Array<{ hreflang: string; href: string }> = [];
-
-  // For global service pages (no locale prefix), only en + x-default
-  if (pathname.startsWith('/services/') || pathname.startsWith('/blog/')) {
-    alternates.push(
-      { hreflang: 'en', href: `${site}${pathname}` },
-      { hreflang: 'x-default', href: `${site}${pathname}` }
-    );
-    return alternates;
-  }
-
-  // For locale-prefixed pages, add the current page + x-default
   const currentLocale = getCurrentLocaleFromPath(pathname);
   const config = localeConfig[currentLocale];
-  alternates.push(
+  const alternates: Array<{ hreflang: string; href: string }> = [
     { hreflang: config.hreflang, href: `${site}${pathname}` },
-    { hreflang: 'x-default', href: `${site}${pathname}` }
-  );
-
+    { hreflang: 'x-default', href: `${site}${pathname}` },
+  ];
   return alternates;
 }
 
 function getCurrentLocaleFromPath(path: string): Locale {
   if (path.startsWith('/ch-de/')) return 'ch-de';
-  if (path.startsWith('/de/')) return 'de';
-  return defaultLocale;
+  if (path.startsWith('/en/')) return 'en';
+  return 'de';
 }

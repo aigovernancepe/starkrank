@@ -8,24 +8,23 @@ export default defineConfig({
   trailingSlash: 'always',
   output: 'static',
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'de', { path: 'ch-de', codes: ['ch-de'] }],
+    defaultLocale: 'de',
+    locales: ['de', 'en', { path: 'ch-de', codes: ['ch-de'] }],
     routing: {
       prefixDefaultLocale: false,
     },
     fallback: {
-      de: 'en',
       'ch-de': 'de',
     },
   },
   redirects: {
     '/schweiz/': '/ch-de/',
-    '/deutschland/': '/de/',
-    '/services/ai-search-optimisation/': '/services/ai-search-optimization/',
-    '/services/ai-search-optimisation': '/services/ai-search-optimization/',
-    '/free-aiso-score/': '/aiso-score/',
-    '/audits/free-google-ads-check/': '/free-google-ads-audit/',
-    '/audits/copywriting-ux-analysis/': '/free-copywriting-audit/',
+    '/deutschland/': '/',
+    '/services/ai-search-optimisation/': '/en/services/ai-search-optimization/',
+    '/services/ai-search-optimisation': '/en/services/ai-search-optimization/',
+    '/free-aiso-score/': '/aiso-check/',
+    '/audits/free-google-ads-check/': '/kostenloser-google-ads-check/',
+    '/audits/copywriting-ux-analysis/': '/kostenloser-copywriting-check/',
     '/locations/': '/',
   },
   integrations: [
