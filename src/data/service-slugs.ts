@@ -97,13 +97,13 @@ const flatLocaleSlugs: Record<string, Partial<Record<string, string>>> = {
     'ch-de': 'eeat-audit',
   },
   'sme-expertise-library': {
-    de: 'sme-expertise-library',
-    'ch-de': 'sme-expertise-library',
+    de: 'expertenbibliothek',
+    'ch-de': 'expertenbibliothek',
     pe: 'biblioteca-experto',
   },
   'expert-interview': {
-    de: 'expert-interview',
-    'ch-de': 'expert-interview',
+    de: 'experteninterview',
+    'ch-de': 'experteninterview',
     pe: 'entrevista-experto',
   },
 };

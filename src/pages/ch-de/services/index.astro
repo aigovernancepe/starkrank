@@ -45,6 +45,25 @@ const servicesByPillar = pillars.map((pillar) => ({
           </Card>
         ))}
       </div>
+
+      {pillar.id === 'content-copywriting' && (
+        <div class="mt-12 pt-10 border-t border-gray-light/40">
+          <h3 class="text-xs font-label font-bold uppercase tracking-[0.2em] text-blue mb-2">Content-Produkte</h3>
+          <p class="text-sm font-body text-gray leading-relaxed mb-6 max-w-2xl">Strukturierte First-Party-Assets, die jede Content-Pipeline mit nicht-generischem Expertenwissen speisen — ergänzend zum Content-Marketing-Retainer oder standalone buchbar.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card href="/ch-de/expertenbibliothek/">
+              <span class="text-xs font-label font-semibold uppercase tracking-wide text-blue">Ab 2'500 CHF</span>
+              <h4 class="mt-2 text-lg font-headline font-bold text-navy">Expertenbibliothek</h4>
+              <p class="mt-2 text-sm font-body text-gray leading-relaxed">Personen-spezifisch. Das gesamte Wissen Ihres Gründers über seine Praxis — Fallstudien, konträre Positionen, Frameworks — einmal im Onboarding als kanonische Datei gebaut, aus der Ihr Content-Team täglich schöpft.</p>
+            </Card>
+            <Card href="/ch-de/experteninterview/">
+              <span class="text-xs font-label font-semibold uppercase tracking-wide text-blue">Ab 800 CHF</span>
+              <h4 class="mt-2 text-lg font-headline font-bold text-navy">Experteninterview</h4>
+              <p class="mt-2 text-sm font-body text-gray leading-relaxed">Themen-spezifisch. Gezielte Fragen an Ihren Experten zu einer einzelnen Content-Initiative — extrahiert Fallstudien, konträre Winkel und Workflow-Details, die generische KI-Texte nicht erfinden können.</p>
+            </Card>
+          </div>
+        </div>
+      )}
     </Section>
   ))}
 </BaseLayout>

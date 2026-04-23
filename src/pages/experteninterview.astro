@@ -15,7 +15,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Experteninterview',
   description: 'Themen-spezifisches Interview mit einem Fachexperten, das First-Party-Material extrahiert (Fallstudien, konträre Sichtweisen, Workflow-Details, Fehlschlag-Stories, benannte Frameworks), das generischer KI-Content nicht erzeugen kann.',
-  url: 'https://starkrank.com/expert-interview/',
+  url: 'https://starkrank.com/experteninterview/',
   provider: { '@type': 'Organization', name: 'StarkRank', url: 'https://starkrank.com' },
   areaServed: [
     { '@type': 'Country', name: 'Germany' },
@@ -57,7 +57,7 @@ const schemas = [serviceSchema, faqSchema];
 
 const breadcrumbs = [
   { label: 'Start', href: '/' },
-  { label: 'Experteninterview', href: '/expert-interview/' },
+  { label: 'Experteninterview', href: '/experteninterview/' },
 ];
 
 const archetypes = [
@@ -83,7 +83,7 @@ const processSteps = [
 ];
 
 const relatedLinks = [
-  { title: 'Expertenbibliothek', href: '/sme-expertise-library/' },
+  { title: 'Expertenbibliothek', href: '/expertenbibliothek/' },
   { title: 'Content-Marketing', href: '/content-marketing-hannover/' },
   { title: 'E-E-A-T-Audit', href: '/eeat-audit/' },
   { title: 'KI-Suchoptimierung', href: '/ki-suchoptimierung-hannover/' },
@@ -93,11 +93,11 @@ const relatedLinks = [
 
 <BaseLayout title={title} description={description} locale="de" schema={schemas}>
   <Fragment slot="head">
-    <link rel="alternate" hreflang="en" href="https://starkrank.com/services/expert-interview/" />
-    <link rel="alternate" hreflang="de" href="https://starkrank.com/expert-interview/" />
-    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/expert-interview/" />
+    <link rel="alternate" hreflang="en" href="https://starkrank.com/experteninterview/" />
+    <link rel="alternate" hreflang="de" href="https://starkrank.com/experteninterview/" />
+    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/experteninterview/" />
     <link rel="alternate" hreflang="es-PE" href="https://starkrank.com/pe/entrevista-experto/" />
-    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/services/expert-interview/" />
+    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/experteninterview/" />
   </Fragment>
 
   <!-- Hero -->
@@ -343,6 +343,6 @@ const relatedLinks = [
   <!-- CTA -->
   <CTABanner bg="navy" title="Bereit, die Expertise zu erfassen, die KI nicht fälschen kann?" subtitle="Jede gründergeführte Marke sitzt auf Fallstudien, konträren Sichtweisen und Fehlschlag-Stories, die nie in den Content finden. Ein Experteninterview erfasst 3-8 Bausteine pro Session und liefert eine strukturierte Datei, aus der Ihr Content-Engine Monate lang schöpft.">
     <Button href="/kontakt/" variant="primary" size="lg">Experteninterview buchen</Button>
-    <Button href="/sme-expertise-library/" variant="secondary" size="lg">Expertenbibliothek anfragen</Button>
+    <Button href="/expertenbibliothek/" variant="secondary" size="lg">Expertenbibliothek anfragen</Button>
   </CTABanner>
 </BaseLayout>
