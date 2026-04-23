@@ -16,6 +16,7 @@ export const pillars: Pillar[] = [
     services: [
       'ai-search-optimization',
       'technical-seo-audit',
+      'ecommerce-seo-audit',
       'local-seo-consulting',
     ],
   },
@@ -24,9 +25,8 @@ export const pillars: Pillar[] = [
     name: 'Performance Media',
     tagline: 'The Scale Engine',
     description:
-      'Buying growth with surgical precision through Google Ads, paid social, and local service ads.',
+      'Buy growth with surgical precision through Google Ads and paid social campaigns.',
     services: [
-      'performance-ads-management',
       'google-ads-management',
       'google-ads-audit',
       'paid-social-strategy',
@@ -34,14 +34,13 @@ export const pillars: Pillar[] = [
   },
   {
     id: 'authority-pr',
-    name: 'Authority & PR',
+    name: 'Authority',
     tagline: 'The Reputation Engine',
     description:
-      'Turn your brand into a source of truth through digital PR, reactive PR, and strategic link building.',
+      'Turn your brand into a source of truth through strategic link building and E-E-A-T signals.',
     services: [
-      'digital-pr-strategy',
-      'reactive-pr',
       'authority-link-building',
+      'eeat-audit',
     ],
   },
   {
@@ -62,44 +61,15 @@ export const pillars: Pillar[] = [
     name: 'Data & Web',
     tagline: 'The Brain',
     description:
-      'Build and measure the engine with performance web development, analytics consultancy, and transparent reporting.',
+      'Build and measure the engine with performant web design and analytics consultancy.',
     services: [
       'technical-web-design',
       'google-analytics-consultancy',
-      'performance-web-development',
-      'roi-reporting-transparency',
     ],
   },
 ];
 
 const pillarTranslations: Record<string, Record<string, { name: string; tagline: string; description: string }>> = {
-  pe: {
-    'search-ai-intelligence': {
-      name: 'Búsqueda e Inteligencia IA',
-      tagline: 'El Motor de Visibilidad',
-      description: 'Asegure su visibilidad con optimización de búsqueda IA, SEO técnico y estrategias de búsqueda local.',
-    },
-    'performance-media': {
-      name: 'Medios de Rendimiento',
-      tagline: 'El Motor de Escala',
-      description: 'Crecimiento con precisión quirúrgica a través de Google Ads, redes sociales pagadas y anuncios de servicios locales.',
-    },
-    'authority-pr': {
-      name: 'Autoridad y PR',
-      tagline: 'El Motor de Reputación',
-      description: 'Convierta su marca en fuente de verdad a través de PR digital, PR reactivo y link building estratégico.',
-    },
-    'content-copywriting': {
-      name: 'Contenido y Redacción',
-      tagline: 'El Motor de Engagement',
-      description: 'Cree contenido que conecte con las personas y posicione en buscadores mediante redacción estratégica y mapeo de personas.',
-    },
-    'data-web': {
-      name: 'Datos y Web',
-      tagline: 'El Cerebro',
-      description: 'Construya y mida el motor con desarrollo web de alto rendimiento, consultoría analítica y reportes transparentes.',
-    },
-  },
   de: {
     'search-ai-intelligence': {
       name: 'Suche & KI-Intelligenz',
@@ -109,12 +79,12 @@ const pillarTranslations: Record<string, Record<string, { name: string; tagline:
     'performance-media': {
       name: 'Performance Media',
       tagline: 'Die Skalierungs-Engine',
-      description: 'Wachstum mit chirurgischer Präzision durch Google Ads, Paid Social und lokale Serviceanzeigen.',
+      description: 'Wachstum mit chirurgischer Präzision durch Google Ads und Paid-Social-Kampagnen.',
     },
     'authority-pr': {
-      name: 'Autorität & PR',
+      name: 'Autorität',
       tagline: 'Die Reputations-Engine',
-      description: 'Machen Sie Ihre Marke zur vertrauenswürdigen Quelle durch Digital PR, Reactive PR und strategischen Linkaufbau.',
+      description: 'Machen Sie Ihre Marke zur vertrauenswürdigen Quelle durch strategischen Linkaufbau und E-E-A-T-Signale.',
     },
     'content-copywriting': {
       name: 'Content & Texterstellung',
@@ -124,7 +94,7 @@ const pillarTranslations: Record<string, Record<string, { name: string; tagline:
     'data-web': {
       name: 'Daten & Web',
       tagline: 'Das Gehirn',
-      description: 'Bauen und messen Sie die Engine mit performantem Webdesign, Analytics-Beratung und transparentem Reporting.',
+      description: 'Bauen und messen Sie die Engine mit performantem Webdesign und Analytics-Beratung.',
     },
   },
   'ch-de': {
@@ -136,12 +106,12 @@ const pillarTranslations: Record<string, Record<string, { name: string; tagline:
     'performance-media': {
       name: 'Performance Media',
       tagline: 'Die Skalierungs-Engine',
-      description: 'Wachstum mit chirurgischer Präzision durch Google Ads, Paid Social und lokale Serviceanzeigen.',
+      description: 'Wachstum mit chirurgischer Präzision durch Google Ads und Paid-Social-Kampagnen.',
     },
     'authority-pr': {
-      name: 'Autorität & PR',
+      name: 'Autorität',
       tagline: 'Die Reputations-Engine',
-      description: 'Machen Sie Ihre Marke zur vertrauenswürdigen Quelle durch Digital PR, Reactive PR und strategischen Linkaufbau.',
+      description: 'Machen Sie Ihre Marke zur vertrauenswürdigen Quelle durch strategischen Linkaufbau und E-E-A-T-Signale.',
     },
     'content-copywriting': {
       name: 'Content & Texterstellung',
@@ -151,7 +121,7 @@ const pillarTranslations: Record<string, Record<string, { name: string; tagline:
     'data-web': {
       name: 'Daten & Web',
       tagline: 'Das Gehirn',
-      description: 'Bauen und messen Sie die Engine mit performantem Webdesign, Analytics-Beratung und transparentem Reporting.',
+      description: 'Bauen und messen Sie die Engine mit performantem Webdesign und Analytics-Beratung.',
     },
   },
 };

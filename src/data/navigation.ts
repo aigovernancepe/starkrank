@@ -19,26 +19,22 @@ export const mainNav: NavItem[] = [
           { label: 'AI Search Optimization', href: '/services/ai-search-optimization/' },
           { label: 'Technical SEO Audit', href: '/services/technical-seo-audit/' },
           { label: 'E-commerce SEO Audit', href: '/services/ecommerce-seo-audit/' },
-          { label: 'Pre-Deploy SEO Check', href: '/services/pre-deploy-seo-check/' },
           { label: 'Local SEO Consulting', href: '/services/local-seo-consulting/' },
         ],
       },
       {
         label: 'Performance Media',
-        href: '/services/performance-ads-management/',
+        href: '/services/google-ads-management/',
         children: [
-          { label: 'Performance Ads Management', href: '/services/performance-ads-management/' },
           { label: 'Google Ads Management', href: '/services/google-ads-management/' },
           { label: 'Google Ads Audit', href: '/services/google-ads-audit/' },
           { label: 'Paid Social Strategy', href: '/services/paid-social-strategy/' },
         ],
       },
       {
-        label: 'Authority & PR',
-        href: '/services/digital-pr-strategy/',
+        label: 'Authority',
+        href: '/services/authority-link-building/',
         children: [
-          { label: 'Digital PR Strategy', href: '/services/digital-pr-strategy/' },
-          { label: 'Reactive PR', href: '/services/reactive-pr/' },
           { label: 'Authority Link Building', href: '/services/authority-link-building/' },
           { label: 'E-E-A-T Audit', href: '/services/eeat-audit/' },
         ],
@@ -48,8 +44,6 @@ export const mainNav: NavItem[] = [
         href: '/services/content-marketing/',
         children: [
           { label: 'Content Marketing', href: '/services/content-marketing/' },
-          { label: 'SME Expertise Library', href: '/services/sme-expertise-library/' },
-          { label: 'Expert Interview', href: '/services/expert-interview/' },
           { label: 'SEO Copywriting', href: '/services/seo-copywriting/' },
           { label: 'Copywriting Audit', href: '/services/copywriting-audit/' },
           { label: 'Audience Persona Mapping', href: '/services/audience-persona-mapping/' },
@@ -61,8 +55,6 @@ export const mainNav: NavItem[] = [
         children: [
           { label: 'Technical Web Design', href: '/services/technical-web-design/' },
           { label: 'Google Analytics Consultancy', href: '/services/google-analytics-consultancy/' },
-          { label: 'Performance Web Development', href: '/services/performance-web-development/' },
-          { label: 'ROI Reporting & Transparency', href: '/services/roi-reporting-transparency/' },
         ],
       },
     ],
@@ -76,8 +68,8 @@ export const mainNav: NavItem[] = [
 export const footerNav = {
   pillars: [
     { label: 'Search & AI', href: '/services/ai-search-optimization/' },
-    { label: 'Performance Media', href: '/services/performance-ads-management/' },
-    { label: 'Authority & PR', href: '/services/digital-pr-strategy/' },
+    { label: 'Performance Media', href: '/services/google-ads-management/' },
+    { label: 'Authority', href: '/services/authority-link-building/' },
     { label: 'Content & Copy', href: '/services/content-marketing/' },
     { label: 'Data & Web', href: '/services/technical-web-design/' },
   ],
@@ -101,14 +93,12 @@ export const footerNav = {
 /** Locale-specific overrides for non-service navigation paths. */
 const contactPaths: Record<Locale, string> = {
   en: '/contact/',
-  pe: '/pe/contacto/',
   de: '/de/kontakt/',
   'ch-de': '/ch-de/kontakt/',
 };
 
 const privacyPaths: Record<Locale, string> = {
   en: '/privacy/',
-  pe: '/pe/privacidad/',
   de: '/de/datenschutz/',
   'ch-de': '/ch-de/datenschutz/',
 };
@@ -125,9 +115,6 @@ const auditPaths: Record<Locale, NavItem[]> = {
     { label: 'Free AISO Score', href: '/aiso-score/' },
     { label: 'Free Google Ads Audit', href: '/free-google-ads-audit/' },
     { label: 'Free Copywriting Audit', href: '/free-copywriting-audit/' },
-  ],
-  pe: [
-    { label: '¿Apareces en Google?', href: '/pe/apareces-en-google/' },
   ],
   de: [
     { label: 'Kostenloser AISO-Check', href: '/de/aiso-check/' },

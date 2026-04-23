@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://starkrank.com/#organization',
+  name: 'StarkRank',
+  url: 'https://starkrank.com',
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://starkrank.com/#founder',
+  name: 'Wilko Feye',
+  jobTitle: 'Gründer & Leitender Stratege',
+  description: 'Digitaler Stratege mit über zehn Jahren Erfahrung als Business Analyst in regulierten Branchen. Spezialisiert auf entitätsbasiertes lokales SEO, KI-Suchoptimierung und Google-Business-Profile-Strategie.',
+  url: 'https://starkrank.com/ch-de/ueber-uns/',
+  image: 'https://starkrank.com/images/team/wilko-feye.webp',
+  worksFor: { '@id': 'https://starkrank.com/#organization' },
+  sameAs: [
+    'https://www.linkedin.com/in/wilko-feye/',
+    'https://www.wikidata.org/wiki/Q138764207',
+  ],
+  knowsAbout: [
+    'KI-Suchoptimierung',
+    'Technisches SEO',
+    'Lokales SEO',
+    'Google Business Profile',
+    'Datenanalyse',
+    'Business Analysis',
+    'Regulierte Branchen',
+  ],
+};
+---
+
+<BaseLayout
+  title="Über uns — StarkRank: Schweizer Fundament, DACH-Fokus"
+  description="StarkRank ist eine in der Schweiz verankerte Digitalmarketing-Agentur, betrieben von Datanalytico Feye (Oberwil BL). Wir betreuen Unternehmen in der Schweiz und Deutschland."
+  locale="ch-de"
+  schema={[orgSchema, personSchema]}
+>
+  <HeroSection
+    headline="In der Schweiz verwurzelt. Auf DACH fokussiert."
+    subheadline="Wir verbinden erstklassige Markenautorität mit tiefgehender technischer Umsetzung — für Unternehmen in der Schweiz und Deutschland."
+  />
+
+  <Section bg="cream">
+    <SectionHeader label="Unsere Geschichte" title="Für das KI-Zeitalter gebaut" />
+    <div class="prose prose-lg max-w-3xl font-body text-dark">
+      <p>
+        StarkRank wurde mit einer klaren Überzeugung gegründet: Unternehmen verdienen Marketing-Partner, die sowohl die technischen Mechanismen der Suche als auch die menschliche Psychologie hinter jedem Klick verstehen.
+      </p>
+      <p>
+        Mit Sitz in Oberwil (Basel-Landschaft) und Fokus auf den DACH-Raum bringen wir Schweizer Präzision und tiefgehende technische Expertise in jede Zusammenarbeit — für Kunden in der Schweiz und Deutschland. Betrieben wird starkrank.com von Datanalytico Feye (UID: CHE-220.283.724), einem Schweizer Einzelunternehmen.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-col md:flex-row gap-12 items-center md:items-start">
+        <!-- Photo -->
+        <div class="shrink-0">
+          <img
+            src="/images/team/wilko-feye.webp"
+            alt="Wilko Feye — Gründer & Leitender Stratege bei StarkRank"
+            width="240"
+            height="240"
+            class="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover border-4 border-cream shadow-lg"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Bio -->
+        <div>
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-2 block">
+            Gründer & Leitender Stratege
+          </span>
+          <h2 class="text-3xl md:text-4xl font-headline font-black tracking-tight text-navy">
+            Wilko Feye
+          </h2>
+          <div class="mt-4 space-y-4 text-base font-body text-gray leading-relaxed">
+            <p>
+              Mit über zehn Jahren Erfahrung als Business Analyst in regulierten Branchen bringt Wilko eine datenorientierte Denkweise ins Digitalmarketing mit. Sein Hintergrund in Analytik und compliance-geprägten Umfeldern hat einen Ansatz für SEO und KI-Suche geformt, der messbare Ergebnisse und technische Strenge über Bauchgefühl stellt.
+            </p>
+            <p>
+              Wilko ist spezialisiert auf entitätsbasiertes lokales SEO, KI-Suchoptimierung und Google-Business-Profile-Strategie — und hilft Unternehmen in der Schweiz und Deutschland dabei, von klassischen Suchmaschinen und KI-Plattformen sichtbar, zitiert und empfohlen zu werden.
+            </p>
+            <p>
+              Von Oberwil (Basel-Landschaft) aus leitet Wilko die StarkRank-Strategie für den DACH-Raum und verbindet tiefgehende technische Expertise mit genauer Kenntnis der schweizerischen und deutschen digitalen Landschaft.
+            </p>
+          </div>
+          <div class="mt-6">
+            <a
+              href="https://www.linkedin.com/in/wilko-feye/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-sm font-label font-semibold uppercase tracking-wide text-blue hover:text-blue-light transition-colors"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              Auf LinkedIn vernetzen
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <SectionHeader label="DACH-Präsenz" title="Zwei Märkte. Eine Vision." align="center" />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      {[
+        { region: 'Schweiz', cities: 'Basel', focus: 'Technisches SEO & Analytics' },
+        { region: 'Deutschland', cities: 'Hannover', focus: 'DACH-Marktstrategie' },
+      ].map((office) => (
+        <div class="bg-white rounded-lg p-6 border border-gray-light/40">
+          <h3 class="text-lg font-headline font-black text-navy">{office.region}</h3>
+          <p class="mt-2 text-sm font-body text-gray">{office.cities}</p>
+          <p class="mt-1 text-xs font-label font-semibold uppercase tracking-wide text-blue">{office.focus}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

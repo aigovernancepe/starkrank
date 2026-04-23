@@ -2,6 +2,13 @@
 /schweiz/                            /ch-de/                                     301
 /deutschland/                        /de/                                        301
 
+# Pruned services (Phase 2a catalog prune, 2026-04-23)
+/services/digital-pr-strategy/       /services/authority-link-building/          301
+/services/reactive-pr/               /services/authority-link-building/          301
+/services/performance-ads-management/ /services/google-ads-management/           301
+/services/performance-web-development/ /services/technical-web-design/           301
+/services/roi-reporting-transparency/ /services/google-analytics-consultancy/    301
+
 # Renames / legacy paths
 /locations/                          /                                           301
 /free-aiso-score/                    /aiso-score/                                301
