@@ -5,6 +5,7 @@ export interface NavItem {
   label: string;
   href: string;
   children?: NavItem[];
+  hiddenInLocales?: Locale[];
 }
 
 export const mainNav: NavItem[] = [
@@ -58,6 +59,11 @@ export const mainNav: NavItem[] = [
         ],
       },
     ],
+  },
+  {
+    label: 'Pricing',
+    href: '/preise/seo/',
+    hiddenInLocales: ['en'],
   },
   { label: 'Case Studies', href: '/case-studies/' },
   { label: 'Blog', href: '/blog/' },
@@ -169,6 +175,13 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
   // Case studies — EN-only tree; non-EN locales link cross-locale into /en/
   if (href === '/case-studies/') {
     return locale === 'en' ? '/en/case-studies/' : '/en/case-studies/';
+  }
+
+  // Pricing — DE + CH-DE only; hidden in EN nav via hiddenInLocales.
+  // Currently a single entry pointing at /preise/seo/; will restructure
+  // to a dropdown when /preise/google-ads/ unparks.
+  if (href === '/preise/seo/') {
+    return locale === 'ch-de' ? '/ch-de/preise/seo/' : '/preise/seo/';
   }
 
   // Services hub

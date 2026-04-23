@@ -1,0 +1,291 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroSection from '../../../components/ui/HeroSection.astro';
+import Section from '../../../components/ui/Section.astro';
+import SectionHeader from '../../../components/ui/SectionHeader.astro';
+import Card from '../../../components/ui/Card.astro';
+import CTABanner from '../../../components/ui/CTABanner.astro';
+import Button from '../../../components/ui/Button.astro';
+
+const title = 'SEO-Preise Schweiz — Transparente Retainer-Bänder und Projektpreise | StarkRank';
+const description = 'Was kostet eine SEO-Agentur in der Schweiz? StarkRank veröffentlicht Retainer-Bänder ab 1\'190 CHF/Monat und Audit-Preise transparent. Kleine Agentur, niedriger Overhead, faire Preise für den Mittelstand.';
+
+const retainerBands = [
+  {
+    label: 'Einzelunternehmen & KMU',
+    price: 'ab 1\'190 CHF/Monat',
+    description:
+      'Technisches SEO-Monitoring, quartalsweise Reviews und laufende On-Page-Optimierung für Unternehmen mit einem Standort und kleinem Content-Team.',
+  },
+  {
+    label: 'Mittelstand',
+    price: '3\'000 – 5\'000 CHF/Monat',
+    description:
+      'Vollumfänglicher Retainer mit technischer Optimierung, Content-Kollaboration und monatlichem Reporting. Für Unternehmen, die SEO als echten Wachstumskanal betreiben.',
+  },
+  {
+    label: 'Enterprise / Multi-Standort',
+    price: 'ab 6\'000 CHF/Monat',
+    description:
+      'Individueller Scope — Multi-Location SEO, mehrsprachige Sites, E-Commerce mit 10\'000+ SKUs. Preise nach Umfang auf Anfrage.',
+  },
+];
+
+const projectPrices = [
+  {
+    service: 'Technical SEO Audit',
+    price: '990 CHF',
+    scope: 'Einmalige vollumfängliche technische Analyse — Crawlability, Indexability, Core Web Vitals, Schema-Auszeichnung und interne Verlinkung.',
+  },
+  {
+    service: 'E-commerce SEO Audit',
+    price: '2\'500 CHF / 3\'600 CHF / 4\'000 CHF',
+    scope: 'Gestaffelt nach Katalog­grösse: bis 1\'000 SKUs / 1\'000–10\'000 SKUs / über 10\'000 SKUs.',
+  },
+  {
+    service: 'Pre-Deploy SEO Check',
+    price: '500 CHF pauschal',
+    scope: 'Bis zu 30 URLs vor dem Launch einer neuen Site oder Migration, 10 CHF pro zusätzliche URL.',
+  },
+  {
+    service: 'E-E-A-T Audit',
+    price: '1\'500 CHF',
+    scope: 'Experience-Expertise-Authoritativeness-Trustworthiness-Scoring nach 4×10-Rubrik, 10 Seiten; zusätzliche Seiten 150 CHF.',
+  },
+];
+
+const priceFactors = [
+  'Grösse und Komplexität der Website — Anzahl der URLs, Domain-Alter und bestehende technische Schuld.',
+  'Sprach- und Standort-Setup — Single-Market, DACH-weit oder international mit mehrsprachiger Auslieferung.',
+  'Wettbewerbsintensität in Ihrer Branche — SaaS-SEO und lokale Dienstleister unterscheiden sich deutlich im Aufwand.',
+  'Umfang der Content-Kollaboration — reiner Technik-Retainer oder inklusive Content-Pipeline.',
+];
+
+const faqs = [
+  {
+    q: 'Wie lange läuft ein typischer SEO-Retainer?',
+    a: 'Wir empfehlen mindestens sechs Monate. SEO-Effekte — insbesondere aus technischen Änderungen und neuem Content — brauchen Zeit, bis Google sie bewertet und in Rankings übersetzt. Monatsverträge sind möglich, aber ehrlich gesagt nicht sinnvoll.',
+  },
+  {
+    q: 'Gibt es Rabatte?',
+    a: 'Bei Jahresverträgen prüfen wir im Einzelfall. Bei Audit-Bundles (etwa drei Sites gleichzeitig für E-E-A-T) gewähren wir einen prozentualen Nachlass — der genaue Satz hängt vom Gesamtumfang ab.',
+  },
+  {
+    q: 'Was ist in einem «ab»-Preis nicht enthalten?',
+    a: 'Werbebudget für Google Ads, Content-Produktion ab einem bestimmten Volumen (etwa mehr als vier Longform-Artikel pro Monat), Übersetzungen in weitere Sprachen und Lizenzgebühren für Drittanbieter-Tools werden getrennt ausgewiesen.',
+  },
+  {
+    q: 'Kann ich mit einem Audit starten und später auf Retainer umsteigen?',
+    a: 'Nicht nur können Sie — Sie sollten. Ein Audit ist für uns die Baseline jedes Retainers: Ohne belastbare Ausgangsanalyse arbeiten wir nicht. Der Audit-Preis wird dabei nicht auf den Retainer angerechnet, weil der Retainer bereits wettbewerbsfähig kalkuliert ist.',
+  },
+];
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'SEO-Dienstleistungen Schweiz',
+  description:
+    'SEO-Retainer und Einmal-Audits für Schweizer Unternehmen — technisches SEO, KI-Suchoptimierung, E-Commerce-SEO und E-E-A-T-Analysen, mit Datenverarbeitung in der Schweiz.',
+  provider: {
+    '@type': 'Organization',
+    name: 'StarkRank',
+    url: 'https://starkrank.com',
+  },
+  areaServed: [
+    { '@type': 'Country', name: 'Switzerland' },
+    { '@type': 'Country', name: 'Germany' },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'SEO-Retainer und Audit-Preise (Schweiz)',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        name: 'SEO-Retainer — Einzelunternehmen & KMU',
+        priceCurrency: 'CHF',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          minPrice: '1190',
+          priceCurrency: 'CHF',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'MONTH' },
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'SEO-Retainer — Mittelstand',
+        priceCurrency: 'CHF',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          minPrice: '3000',
+          maxPrice: '5000',
+          priceCurrency: 'CHF',
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'SEO-Retainer — Enterprise / Multi-Standort',
+        priceCurrency: 'CHF',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          minPrice: '6000',
+          priceCurrency: 'CHF',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'MONTH' },
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Technical SEO Audit',
+        price: '990',
+        priceCurrency: 'CHF',
+      },
+      {
+        '@type': 'Offer',
+        name: 'E-commerce SEO Audit',
+        priceCurrency: 'CHF',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          minPrice: '2500',
+          maxPrice: '4000',
+          priceCurrency: 'CHF',
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Pre-Deploy SEO Check',
+        price: '500',
+        priceCurrency: 'CHF',
+      },
+      {
+        '@type': 'Offer',
+        name: 'E-E-A-T Audit',
+        price: '1500',
+        priceCurrency: 'CHF',
+      },
+    ],
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://starkrank.com/ch-de/' },
+    { '@type': 'ListItem', position: 2, name: 'Preise', item: 'https://starkrank.com/ch-de/preise/' },
+    { '@type': 'ListItem', position: 3, name: 'SEO', item: 'https://starkrank.com/ch-de/preise/seo/' },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const schemas = [serviceSchema, breadcrumbSchema, faqSchema];
+---
+
+<BaseLayout title={title} description={description} locale="ch-de" schema={schemas}>
+  <Fragment slot="head">
+    <link rel="alternate" hreflang="de-DE" href="https://starkrank.com/preise/seo/" />
+    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/preise/seo/" />
+    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/preise/seo/" />
+  </Fragment>
+
+  <HeroSection
+    headline="SEO-Preise Schweiz"
+    subheadline="Was kostet eine SEO-Agentur in der Schweiz? Bei StarkRank zahlen Sie das, was Ihr Unternehmensmassstab braucht — keine aufgeblähten Agenturstrukturen, keine undurchsichtigen Pauschalverträge."
+  >
+    <Button href="/ch-de/kontakt/" variant="primary">Kostenlose Erstberatung</Button>
+    <Button href="#retainer-baender" variant="secondary">Retainer-Bänder ansehen</Button>
+  </HeroSection>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Warum unsere Preise fair sind</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Wir sind eine kleine Agentur mit niedrigem Overhead. Das heisst: Sie zahlen für Arbeit an Ihrem Account, nicht für repräsentative Bahnhofstrasse-Büros in Zürich oder Adressen am Genfer Paradeplatz. Gleiche Qualität, andere Kostenstruktur.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Wir veröffentlichen Retainer-Bänder und Audit-Preise, weil Preistransparenz selbst in der Schweizer Agenturlandschaft selten ist. Unser Ziel: Sie erkennen vor dem ersten Gespräch, ob ein Projekt mit uns finanziell realistisch ist.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white" id="retainer-baender" class="scroll-mt-20">
+    <SectionHeader
+      label="Monatliche Betreuung"
+      title="Retainer-Bänder"
+      subtitle="Drei Grössen, keine aufgedrückten Zusatzpakete. Alle Preise exklusive Mehrwertsteuer."
+    />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {retainerBands.map((band) => (
+        <Card>
+          <span class="text-xs font-label font-bold uppercase tracking-[0.2em] text-blue">{band.label}</span>
+          <div class="mt-3 text-2xl font-headline font-black text-navy">{band.price}</div>
+          <p class="mt-4 text-sm font-body text-gray leading-relaxed">{band.description}</p>
+        </Card>
+      ))}
+    </div>
+  </Section>
+
+  <Section bg="cream" id="projekte">
+    <SectionHeader
+      label="Einmal-Projekte"
+      title="Projekte & Audits"
+      subtitle="Für Unternehmen, die mit einer belastbaren Analyse starten wollen — oder einen spezifischen Prüfpunkt brauchen, bevor ein laufender Retainer Sinn macht."
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {projectPrices.map((item) => (
+        <Card>
+          <h3 class="text-lg font-headline font-bold text-navy">{item.service}</h3>
+          <div class="mt-2 text-xl font-headline font-black text-blue">{item.price}</div>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">{item.scope}</p>
+        </Card>
+      ))}
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <SectionHeader
+        label="Transparenz"
+        title="Was den Preis beeinflusst"
+        subtitle="Innerhalb jedes Bands liegen die tatsächlichen Preise unterschiedlich. Diese vier Faktoren bestimmen, wo im Band Sie landen."
+      />
+      <ul class="mt-6 space-y-4">
+        {priceFactors.map((factor) => (
+          <li class="flex gap-3 text-base font-body text-gray leading-relaxed">
+            <span class="mt-2 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue" aria-hidden="true"></span>
+            <span>{factor}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <SectionHeader label="Fragen & Antworten" title="Häufig gestellte Fragen" />
+      <dl class="mt-8 space-y-8">
+        {faqs.map((f) => (
+          <div>
+            <dt class="text-lg font-headline font-bold text-navy">{f.q}</dt>
+            <dd class="mt-2 text-base font-body text-gray leading-relaxed">{f.a}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </Section>
+
+  <CTABanner
+    title="Welches Band passt zu Ihrem Unternehmen?"
+    subtitle="15-minütiger Erstcall, unverbindlich. Wir sagen Ihnen direkt, ob ein Retainer oder ein Audit der bessere Einstieg ist — auch wenn die Antwort lautet: gerade weder noch."
+  >
+    <Button href="/ch-de/kontakt/" variant="primary">Kostenlose Erstberatung</Button>
+    <Button href="/ch-de/kostenloser-google-ads-check/" variant="secondary">Kostenlose Audits ansehen</Button>
+  </CTABanner>
+</BaseLayout>
