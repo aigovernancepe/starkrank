@@ -1,0 +1,64 @@
+---
+/**
+ * Standalone SVG icon for a given pillar id. Uses currentColor so
+ * callers control colour via class. The same icon set appears inside
+ * the BuildingGraphic SVG (inlined there for positioning control) —
+ * when editing one, check the other stays visually consistent.
+ */
+interface Props {
+  id: 'search-ai-intelligence' | 'performance-media' | 'authority-pr' | 'content-copywriting' | 'data-web';
+  class?: string;
+}
+
+const { id, class: className = 'w-10 h-10' } = Astro.props;
+---
+
+<svg
+  viewBox="0 0 28 28"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.8"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  xmlns="http://www.w3.org/2000/svg"
+  class={className}
+  aria-hidden="true"
+>
+  {id === 'search-ai-intelligence' && (
+    <>
+      <circle cx="11" cy="11" r="7" />
+      <line x1="16" y1="16" x2="22" y2="22" />
+      <path d="M21 3 L22 5.5 L24.5 6.5 L22 7.5 L21 10 L20 7.5 L17.5 6.5 L20 5.5 Z" fill="currentColor" stroke="none" />
+    </>
+  )}
+  {id === 'performance-media' && (
+    <>
+      <line x1="2" y1="24" x2="26" y2="24" />
+      <rect x="4" y="15" width="5" height="9" />
+      <rect x="11.5" y="9" width="5" height="15" />
+      <rect x="19" y="4" width="5" height="20" />
+    </>
+  )}
+  {id === 'authority-pr' && (
+    <>
+      <path d="M14 2 L24 5 V13 C24 19.5 14 25 14 25 C14 25 4 19.5 4 13 V5 Z" />
+      <path d="M10 13 L13 16 L18 10" />
+    </>
+  )}
+  {id === 'content-copywriting' && (
+    <>
+      <path d="M7 3 H17 L22 8 V25 H7 Z" />
+      <path d="M17 3 V8 H22" />
+      <line x1="11" y1="13" x2="18" y2="13" />
+      <line x1="11" y1="17" x2="18" y2="17" />
+      <line x1="11" y1="21" x2="15" y2="21" />
+    </>
+  )}
+  {id === 'data-web' && (
+    <>
+      <ellipse cx="14" cy="6" rx="9" ry="2.5" />
+      <path d="M5 6 V13 C5 14.4 9 15.5 14 15.5 C19 15.5 23 14.4 23 13 V6" />
+      <path d="M5 13 V20 C5 21.4 9 22.5 14 22.5 C19 22.5 23 21.4 23 20 V13" />
+    </>
+  )}
+</svg>

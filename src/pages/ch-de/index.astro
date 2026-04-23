@@ -55,23 +55,29 @@ const processSteps = [
     <Button href="/ch-de/aiso-check/" variant="primary" size="lg">Kostenloser AISO-Check &rarr;</Button>
   </HeroSection>
 
-  {/* Building-graphic: interactive five-pillar metaphor */}
+  {/* Building-graphic: interactive on desktop, hidden on mobile */}
   <Section bg="cream">
     <SectionHeader
       label="Unsere Dienstleistungen"
       title="Fünf Säulen des digitalen Wachstums"
-      subtitle="Vier Disziplinen tragen das Wachstum Ihres Unternehmens — auf einem Fundament aus Daten und Web-Architektur. Fahren Sie über eine Säule, um die passende Karte unten zu finden."
+      subtitle="Vier Disziplinen tragen das Wachstum Ihres Unternehmens — auf einem Fundament aus Daten und Web-Architektur."
       align="center"
     />
-    <BuildingGraphic locale="ch-de" />
-  </Section>
+    <div class="hidden md:block">
+      <BuildingGraphic locale="ch-de" />
+    </div>
 
-  {/* Detailed pillar cards — wrappers carry data-pillar-id for the building interaction */}
-  <Section bg="white">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {pillars.map((pillar) => (
+    {/* Detailed pillar cards — on mobile these carry the whole metaphor (no SVG).
+        Pillars in 2-col grid on md+, foundation (Daten & Web) spans full width. */}
+    <div class="mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+      {pillars.filter((p) => p.id !== 'data-web').map((pillar) => (
         <div id={`card-${pillar.id}`} data-pillar-id={pillar.id} class="pillar-card-wrapper">
           <PillarCard pillar={pillar} locale="ch-de" href={pillarAnchorLinks[pillar.id]} />
+        </div>
+      ))}
+      {pillars.filter((p) => p.id === 'data-web').map((pillar) => (
+        <div id={`card-${pillar.id}`} data-pillar-id={pillar.id} class="pillar-card-wrapper md:col-span-2">
+          <PillarCard pillar={pillar} locale="ch-de" href={pillarAnchorLinks[pillar.id]} variant="foundation" />
         </div>
       ))}
     </div>

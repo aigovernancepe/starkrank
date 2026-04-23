@@ -94,23 +94,29 @@ const websiteSchema = {
     <Button href="/en/contact/" variant="secondary" size="lg">Get in Touch</Button>
   </HeroSection>
 
-  {/* Building-graphic: interactive five-pillar metaphor */}
+  {/* Building-graphic: interactive on desktop, hidden on mobile */}
   <Section bg="cream">
     <SectionHeader
       label="What We Do"
       title="Five Pillars of Digital Growth"
-      subtitle="Four disciplines carry your growth — on a foundation of data and web architecture. Hover a pillar to highlight the matching card below."
+      subtitle="Four disciplines carry your growth — on a foundation of data and web architecture."
       align="center"
     />
-    <BuildingGraphic locale="en" />
-  </Section>
+    <div class="hidden md:block">
+      <BuildingGraphic locale="en" />
+    </div>
 
-  {/* Detailed pillar cards — wrappers carry data-pillar-id for the building interaction */}
-  <Section bg="white">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {pillars.map((pillar) => (
+    {/* Detailed pillar cards — on mobile these carry the whole metaphor (no SVG).
+        Pillars in 2-col grid on md+, foundation (Data & Web) spans full width. */}
+    <div class="mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+      {pillars.filter((p) => p.id !== 'data-web').map((pillar) => (
         <div id={`card-${pillar.id}`} data-pillar-id={pillar.id} class="pillar-card-wrapper">
           <PillarCard pillar={pillar} href={pillarAnchorLinks[pillar.id]} />
+        </div>
+      ))}
+      {pillars.filter((p) => p.id === 'data-web').map((pillar) => (
+        <div id={`card-${pillar.id}`} data-pillar-id={pillar.id} class="pillar-card-wrapper md:col-span-2">
+          <PillarCard pillar={pillar} href={pillarAnchorLinks[pillar.id]} variant="foundation" />
         </div>
       ))}
     </div>
