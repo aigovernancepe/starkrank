@@ -114,17 +114,8 @@ const personSchema = {
 
   <Section bg="cream">
     <SectionHeader label="DACH Presence" title="Two Markets. One Vision." align="center" />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-      {[
-        { region: 'Switzerland', cities: 'Basel', focus: 'Technical SEO & Analytics' },
-        { region: 'Germany', cities: 'Hannover', focus: 'DACH Market Strategy' },
-      ].map((office) => (
-        <div class="bg-white rounded-lg p-6 border border-gray-light/40">
-          <h3 class="text-lg font-headline font-black text-navy">{office.region}</h3>
-          <p class="mt-2 text-sm font-body text-gray">{office.cities}</p>
-          <p class="mt-1 text-xs font-label font-semibold uppercase tracking-wide text-blue">{office.focus}</p>
-        </div>
-      ))}
-    </div>
+    <p class="text-base font-body text-gray leading-relaxed max-w-3xl mx-auto text-center">
+      We work with businesses across German-speaking Switzerland (Basel, Zürich, Bern, and surrounding cantons) and Northern Germany (Bremen, Hamburg, Hannover, and surrounding areas) — remotely and on-site, without physical offices.
+    </p>
   </Section>
 </BaseLayout>

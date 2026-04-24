@@ -115,17 +115,8 @@ const personSchema = {
 
   <Section bg="cream">
     <SectionHeader label="DACH-Präsenz" title="Zwei Märkte. Eine Vision." align="center" />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-      {[
-        { region: 'Schweiz', cities: 'Basel', focus: 'Technisches SEO & Analytics' },
-        { region: 'Deutschland', cities: 'Hannover', focus: 'DACH-Marktstrategie' },
-      ].map((office) => (
-        <div class="bg-white rounded-lg p-6 border border-gray-light/40">
-          <h3 class="text-lg font-headline font-black text-navy">{office.region}</h3>
-          <p class="mt-2 text-sm font-body text-gray">{office.cities}</p>
-          <p class="mt-1 text-xs font-label font-semibold uppercase tracking-wide text-blue">{office.focus}</p>
-        </div>
-      ))}
-    </div>
+    <p class="text-base font-body text-gray leading-relaxed max-w-3xl mx-auto text-center">
+      Wir arbeiten remote und vor Ort für Unternehmen in der deutschsprachigen Schweiz (Basel, Zürich, Bern und Umgebung) sowie in Norddeutschland (Bremen, Hamburg, Hannover und Umgebung) — ohne eigene Büros oder Repräsentanzen.
+    </p>
   </Section>
 </BaseLayout>
