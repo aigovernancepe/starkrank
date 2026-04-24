@@ -21,6 +21,11 @@
 /llmo-agentur/                       /services/#search-ai-intelligence           302
 /ch-de/llmo-agentur/                 /ch-de/services/#search-ai-intelligence     302
 
+# ─── Phase 3b (2026-04-24): CH country-hub consolidation ──────────
+# seo-schweiz (CH 260/mo) rolled into seo-agentur-schweiz (CH 720/mo) —
+# same intent cluster, one canonical page to concentrate authority.
+/ch-de/seo-schweiz/                  /ch-de/seo-agentur-schweiz/                 301
+
 # ─── Old /de/ paths → root (new DE home) ──────────────────────────
 # Blog tree stays at /de/blog/* (intentional — do not redirect).
 /de/ueber-uns/                       /ueber-uns/                                 301

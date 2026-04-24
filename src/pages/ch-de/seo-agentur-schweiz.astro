@@ -1,0 +1,286 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Card from '../../components/ui/Card.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import Button from '../../components/ui/Button.astro';
+
+const title = 'SEO-Agentur Schweiz — Suchmaschinenoptimierung für Schweizer Unternehmen | StarkRank';
+const description = 'StarkRank ist eine Schweizer SEO-Agentur für Unternehmen, die Wachstum über Google und KI-Suchsysteme messbar machen wollen. Transparente Retainer-Bänder ab 1\'190 CHF/Monat, Technical SEO, E-E-A-T und KI-Suchoptimierung.';
+
+const pillars = [
+  {
+    label: 'Technische SEO',
+    description:
+      'Crawlability, Indexability, Core Web Vitals, strukturierte Daten und saubere interne Verlinkung — die Grundlage, auf der jede Content- und Link-Strategie steht.',
+    href: '/ch-de/services/#search-ai-intelligence',
+  },
+  {
+    label: 'KI-Suchoptimierung',
+    description:
+      'Optimierung dafür, dass Ihre Marke in ChatGPT, Perplexity, Claude und Google AI Overviews zitiert und empfohlen wird — Entity-Stärkung und strukturierte Autoritätssignale.',
+    href: '/ch-de/services/#search-ai-intelligence',
+  },
+  {
+    label: 'E-E-A-T & Autorität',
+    description:
+      'Experience-Expertise-Authoritativeness-Trustworthiness-Scoring und Authority-Link-Building — die Signale, die Google und LLMs nutzen, um Quellen zu gewichten.',
+    href: '/ch-de/services/#authority-pr',
+  },
+  {
+    label: 'Content & Copy',
+    description:
+      'SEO-Copywriting, Content-Marketing-Retainer und Expertenbibliothek — First-Party-Wissen statt generischer KI-Texte, damit Ihre Inhalte ranken und zitiert werden.',
+    href: '/ch-de/services/#content-copywriting',
+  },
+  {
+    label: 'Local SEO & Google Business',
+    description:
+      'Für Schweizer Dienstleister mit physischem Standort: Google-Business-Pflege, lokale Entity-Arbeit und Verzeichnispräsenz, die tatsächlich Anrufe bringt.',
+    href: '/ch-de/services/#search-ai-intelligence',
+  },
+  {
+    label: 'Analytics & Messung',
+    description:
+      'Google-Analytics-Beratung, serverseitiges Tracking und Reporting, das Entscheidungen treibt — nicht nur Dashboards füllt.',
+    href: '/ch-de/services/#data-web',
+  },
+];
+
+const swissSpecifics = [
+  {
+    title: 'Swiss Data Residency',
+    body: 'Das neue Schweizer Datenschutzgesetz (revDSG) verlangt seit 2023 dokumentierte Datenflüsse. Wir arbeiten mit Tool-Setups, die Schweizer Unternehmen DSG- und DSGVO-konform auditieren können.',
+  },
+  {
+    title: 'Google.ch vs. Google.de',
+    body: 'Die Schweizer SERP (Search Engine Results Page) ist nicht die deutsche. Andere Wettbewerber, andere Backlink-Profile, andere lokale Signale. Eine reine Übernahme deutscher Content-Strategien funktioniert selten.',
+  },
+  {
+    title: 'MWST- und CHF-konforme Rechnungsstellung',
+    body: 'Als Schweizer Einzelunternehmen stellen wir in CHF mit ausgewiesener Mehrwertsteuer aus — kein Umweg über EU-Rechnungen, keine Fremdwährungsumrechnung im Buchhaltungsprozess.',
+  },
+  {
+    title: 'Mehrsprachige Märkte',
+    body: 'Die Schweiz ist viersprachig. Auch wenn der DE-Markt kommerziell dominiert, brauchen viele Unternehmen mindestens Französisch-Abdeckung — wir planen mehrsprachige SEO-Architekturen ohne Duplicate-Content-Risiko.',
+  },
+];
+
+const cityCoverage = [
+  {
+    city: 'Basel',
+    status: 'Aktiv',
+    href: '/ch-de/lokale-seo-beratung-basel/',
+    note: 'Dedizierte lokale Spokes für SEO-Beratung, Google Ads, Content und technische Audits.',
+  },
+  {
+    city: 'Zürich',
+    status: 'In Vorbereitung',
+    href: null,
+    note: 'Höchstes Suchvolumen im DACH-Raum für SEO-Dienstleistungen — dedizierte Zürich-Seiten sind in Vorbereitung.',
+  },
+  {
+    city: 'Bern',
+    status: 'Auf Anfrage',
+    href: null,
+    note: 'Remote-Retainer und Projekt-Audits sind bereits möglich; dedizierte Bern-Landingpage folgt.',
+  },
+  {
+    city: 'Genf / Lausanne',
+    status: 'Auf Anfrage',
+    href: null,
+    note: 'Für französischsprachige Mandate arbeiten wir mit Native-Copy-Partnern; technisches SEO und Strategie laufen über uns.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Was kostet eine SEO-Agentur in der Schweiz?',
+    a: 'Seriöse Schweizer SEO-Retainer beginnen erfahrungsgemäss bei rund 1\'000 CHF/Monat und reichen für mittelständische Unternehmen bis in den hohen vierstelligen Bereich. StarkRank veröffentlicht drei Retainer-Bänder ab 1\'190 CHF/Monat (Einzelunternehmen & KMU) bis ab 6\'000 CHF/Monat (Enterprise) — die Details stehen auf unserer Preisseite.',
+  },
+  {
+    q: 'Wie unterscheidet sich SEO in der Schweiz von SEO in Deutschland?',
+    a: 'Drei Unterschiede wirken in der Praxis: Erstens ranken auf Google.ch andere Wettbewerber und lokale Verzeichnisse als auf Google.de. Zweitens sind Backlinks von .ch-Domains für Schweizer Zielgruppen stärker gewichtet. Drittens spielt der viersprachige Markt eine Rolle — ein reiner DE-Fokus lässt in vielen Branchen kommerzielles Volumen in der Romandie und im Tessin liegen.',
+  },
+  {
+    q: 'Welche Städte deckt StarkRank in der Schweiz ab?',
+    a: 'Aktiv betreuen wir Mandate in Basel über dedizierte lokale Landingpages. Für Zürich, Bern, Genf und Lausanne arbeiten wir aktuell remote oder projektbasiert — dedizierte Stadt-Seiten werden 2026 ausgerollt. Die geografische Distanz innerhalb der Schweiz ist für einen laufenden Retainer in der Regel unkritisch.',
+  },
+  {
+    q: 'Müssen unsere Daten in der Schweiz verarbeitet werden?',
+    a: 'Das hängt von Ihrer Branche und Ihren Kundenverträgen ab. Für Finanzdienstleister, Gesundheitswesen und öffentliche Verwaltung ist Schweizer Datenhaltung häufig Pflicht. Für viele KMU reicht DSGVO- und revDSG-Konformität des Tool-Stacks. Wir prüfen das im Onboarding und wählen Analytics-, Crawler- und Reporting-Tools entsprechend aus.',
+  },
+  {
+    q: 'Was ist der Unterschied zwischen klassischem SEO und KI-Suchoptimierung?',
+    a: 'Klassisches SEO optimiert dafür, in den zehn blauen Links auf Google-Ergebnisseiten zu erscheinen. KI-Suchoptimierung (auch LLMO — Large Language Model Optimization — oder AISO — AI Search Optimization — genannt) optimiert dafür, in generativen Antworten von ChatGPT, Perplexity, Claude und Google AI Overviews zitiert zu werden. Die Grundlagen überschneiden sich (saubere Technik, starke Entitätssignale, Experten-Content), aber die Optimierungsziele und Erfolgsmessungen unterscheiden sich.',
+  },
+  {
+    q: 'Arbeiten Sie mit festen Verträgen oder monatlich kündbar?',
+    a: 'Retainer laufen typischerweise über sechs Monate — das ist der Mindesthorizont, in dem SEO-Massnahmen messbare Effekte zeigen. Monatlich kündbare Verträge sind möglich, aber wir sind bei der Beratung ehrlich: Unter sechs Monaten verbrennen beide Seiten Zeit. Audits und einmalige Projekte sind davon unberührt und laufen als Werkvertrag.',
+  },
+];
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'StarkRank — SEO-Agentur Schweiz',
+  description:
+    'SEO-Agentur für Schweizer Unternehmen: Technische SEO, KI-Suchoptimierung, E-E-A-T, Content-Marketing und Google-Analytics-Beratung. Transparente Retainer-Bänder ab 1\'190 CHF/Monat.',
+  url: 'https://starkrank.com/ch-de/seo-agentur-schweiz/',
+  areaServed: { '@type': 'Country', name: 'Switzerland' },
+  provider: {
+    '@type': 'Organization',
+    name: 'StarkRank',
+    url: 'https://starkrank.com',
+  },
+  serviceType: [
+    'Suchmaschinenoptimierung',
+    'KI-Suchoptimierung',
+    'Technical SEO',
+    'E-E-A-T Audit',
+    'Local SEO',
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://starkrank.com/ch-de/' },
+    { '@type': 'ListItem', position: 2, name: 'SEO-Agentur Schweiz', item: 'https://starkrank.com/ch-de/seo-agentur-schweiz/' },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const schemas = [serviceSchema, breadcrumbSchema, faqSchema];
+---
+
+<BaseLayout title={title} description={description} locale="ch-de" schema={schemas}>
+  <Fragment slot="head">
+    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/seo-agentur-schweiz/" />
+    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/ch-de/seo-agentur-schweiz/" />
+  </Fragment>
+
+  <HeroSection
+    headline="SEO-Agentur Schweiz"
+    subheadline="Suchmaschinenoptimierung für Schweizer Unternehmen, die Wachstum über Google und KI-Suchsysteme messbar machen wollen — mit transparenten Retainer-Bändern, Swiss Data Residency und ohne Overhead einer Zürcher Grossagentur."
+  >
+    <Button href="/ch-de/kontakt/" variant="primary">Kostenlose Erstberatung</Button>
+    <Button href="/ch-de/preise/seo/" variant="secondary">Preise ansehen</Button>
+  </HeroSection>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">SEO-Partner für Schweizer Unternehmen</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        StarkRank ist als Einzelunternehmen in der Schweiz registriert — wir fakturieren in CHF mit ausgewiesener Mehrwertsteuer und arbeiten nach Schweizer Datenschutzrecht (revDSG). Die Klientel reicht von KMU mit einem Standort bis zu Mittelständlern mit mehrsprachiger Webpräsenz.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Wir sind eine kleine, spezialisierte Agentur — nicht die Full-Service-Holding mit Büros an der Bahnhofstrasse. Das heisst: direkter Zugriff auf den Spezialisten, der an Ihrem Account arbeitet, statt einer Staffel aus Account-, Projekt- und Fachteam. Gleiche Qualität, andere Kostenstruktur, andere Beratungsgeschwindigkeit.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white" id="leistungen" class="scroll-mt-20">
+    <SectionHeader
+      label="Dienstleistungen"
+      title="Was wir für Schweizer Mandate leisten"
+      subtitle="Sechs Kompetenzbereiche, die zusammen die heutige Such- und KI-Suchlandschaft abdecken. Im Retainer in Kombination, als Einmal-Audit auch einzeln buchbar."
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {pillars.map((pillar) => (
+        <Card href={pillar.href}>
+          <h3 class="text-lg font-headline font-bold text-navy">{pillar.label}</h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">{pillar.description}</p>
+        </Card>
+      ))}
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <SectionHeader
+      label="Schweizer Kontext"
+      title="Was SEO in der Schweiz vom deutschen Markt unterscheidet"
+      subtitle="Der Schweizer Markt ist nicht einfach ein kleineres Deutschland. Diese vier Eigenheiten beeinflussen, wie wir Projekte aufsetzen."
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {swissSpecifics.map((item) => (
+        <Card>
+          <h3 class="text-lg font-headline font-bold text-navy">{item.title}</h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">{item.body}</p>
+        </Card>
+      ))}
+    </div>
+  </Section>
+
+  <Section bg="white" id="staedte" class="scroll-mt-20">
+    <SectionHeader
+      label="Regionale Abdeckung"
+      title="Verfügbar in"
+      subtitle="StarkRank arbeitet schweizweit remote und vor Ort. Dedizierte Stadt-Landingpages sind für die Ballungsräume in Vorbereitung — für bestehende Mandate ist der Standort selten ein limitierender Faktor."
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {cityCoverage.map((entry) => (
+        entry.href ? (
+          <Card href={entry.href}>
+            <span class="text-xs font-label font-bold uppercase tracking-[0.2em] text-blue">{entry.status}</span>
+            <h3 class="mt-2 text-lg font-headline font-bold text-navy">{entry.city}</h3>
+            <p class="mt-3 text-sm font-body text-gray leading-relaxed">{entry.note}</p>
+          </Card>
+        ) : (
+          <Card>
+            <span class="text-xs font-label font-bold uppercase tracking-[0.2em] text-gray">{entry.status}</span>
+            <h3 class="mt-2 text-lg font-headline font-bold text-navy">{entry.city}</h3>
+            <p class="mt-3 text-sm font-body text-gray leading-relaxed">{entry.note}</p>
+          </Card>
+        )
+      ))}
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <SectionHeader
+        label="Preistransparenz"
+        title="Retainer-Bänder und Audit-Preise öffentlich"
+        subtitle="Preistransparenz ist in der Schweizer Agenturlandschaft selten. Wir veröffentlichen Retainer-Bänder ab 1'190 CHF/Monat und Einmal-Audit-Preise — damit Sie vor dem ersten Gespräch einschätzen können, ob ein Projekt mit uns finanziell realistisch ist."
+      />
+      <div class="mt-4">
+        <Button href="/ch-de/preise/seo/" variant="primary">Alle SEO-Preise ansehen</Button>
+      </div>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <SectionHeader label="Fragen & Antworten" title="Häufig gestellte Fragen" />
+      <dl class="mt-8 space-y-8">
+        {faqs.map((f) => (
+          <div>
+            <dt class="text-lg font-headline font-bold text-navy">{f.q}</dt>
+            <dd class="mt-2 text-base font-body text-gray leading-relaxed">{f.a}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </Section>
+
+  <CTABanner
+    title="Ist SEO für Ihr Schweizer Unternehmen der richtige Kanal?"
+    subtitle="15-minütiger Erstcall, unverbindlich. Wir sagen Ihnen direkt, ob ein SEO-Retainer, ein Einmal-Audit oder ein anderer Kanal der bessere Einstieg ist — auch wenn die Antwort lautet: gerade weder noch."
+  >
+    <Button href="/ch-de/kontakt/" variant="primary">Kostenlose Erstberatung</Button>
+    <Button href="/ch-de/schnellcheck/" variant="secondary">Schnellcheck starten</Button>
+  </CTABanner>
+</BaseLayout>
