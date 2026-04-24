@@ -17,7 +17,7 @@ highlights:
   - title: "Suchverhalten und KI-Nutzung"
     description: "Wie recherchieren Ihre Zielgruppen? Wir analysieren Suchmuster, KI-Plattform-Nutzung und bevorzugte Informationsquellen pro Persona — die Grundlage für Content, der tatsächlich gefunden und konsumiert wird."
   - title: "Datenquellen-Triangulation"
-    description: "Wir kombinieren CRM-Daten, Google Analytics, LinkedIn Audience Insights und qualitative Experteninterviews zu einem Gesamtbild — nDSG-konform erhoben und dokumentiert."
+    description: "Wir kombinieren CRM-Daten, Google Analytics, LinkedIn Audience Insights und qualitative Experteninterviews zu einem Gesamtbild — revDSG-konform erhoben und dokumentiert."
 sectors:
   - name: "Pharma und Life Sciences"
     description: "Persona-Mapping für mehrstufige Beschaffungsprozesse: vom Laborleiter, der Produkte evaluiert, über den Einkauf, der Angebote vergleicht, bis zum C-Level, der Budgets freigibt — in drei Sprachen und über Landesgrenzen hinweg."
@@ -34,7 +34,7 @@ deliverables:
   - "Grenzüberschreitende Segmentierungsanalyse mit Potenzial-Scoring für CH/DE/FR-Zielgruppen"
   - "Suchverhalten-Report mit Keyword-Clustern und KI-Plattform-Nutzung pro Persona"
   - "Empfehlungen für Content-Themen, Formate und Kanäle pro Zielgruppensegment"
-  - "nDSG-konformer Datenerhebungsbericht mit dokumentierten Quellen und Methodik"
+  - "revDSG-konformer Datenerhebungsbericht mit dokumentierten Quellen und Methodik"
 ---
 
 ## Warum ist eine Zielgruppenanalyse für Basler Unternehmen unverzichtbar?

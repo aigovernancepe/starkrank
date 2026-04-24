@@ -14,7 +14,7 @@ highlights:
     description: "Regulatorisch sensible Branchen brauchen präzisen Content. Wir erstellen Fachbeiträge, Whitepaper und Wissenshubs, die den Anforderungen von HCP-Zielgruppen und Einkaufsentscheidern in der Life-Sciences-Industrie gerecht werden."
   - title: "GEO für den DACH-Raum"
     description: "Jedes Content-Stück wird für generative Suchoptimierung strukturiert: fragebasierte Überschriften, originäre Datenquellen und zitierfähige Formate, die ChatGPT, Perplexity und Google AI Overviews in allen drei Sprachen bedienen."
-  - title: "nDSG-konforme Personalisierung"
+  - title: "revDSG-konforme Personalisierung"
     description: "Content-Personalisierung innerhalb der Grenzen des neuen Datenschutzgesetzes. Wir setzen auf First-Party-Datenstrategien und kontextuelle Aussteuerung, die Relevanz ohne invasives Tracking erzeugen."
   - title: "Grenzüberschreitende Distribution"
     description: "Der Basler Markt endet nicht an der Landesgrenze. Wir planen Distribution über LinkedIn, Fachportale und Branchenplattformen — zugeschnitten auf Entscheider in der Schweiz, Süddeutschland und dem Elsass."
@@ -47,6 +47,6 @@ Für Basler Unternehmen reicht es nicht, guten Content auf Deutsch zu publiziere
 
 Unser Ansatz beginnt mit einer dreisprachigen Lückenanalyse: Wo fehlt Content, der in KI-Antworten zitiert werden kann? Welche Fachthemen sind in Ihrer Branche unterversorgt? Daraus entsteht eine Hub-Architektur, die systematisch Autorität aufbaut — in allen relevanten Sprachen.
 
-Für Pharma- und Life-Sciences-Unternehmen integrieren wir regulatorische Anforderungen direkt in den Content-Prozess. Für den Finanzsektor setzen wir auf nDSG-konforme Personalisierung. Und für den trinationalen Handel schaffen wir Content, der Entscheider in der Schweiz, Süddeutschland und Frankreich gleichermassen anspricht.
+Für Pharma- und Life-Sciences-Unternehmen integrieren wir regulatorische Anforderungen direkt in den Content-Prozess. Für den Finanzsektor setzen wir auf revDSG-konforme Personalisierung. Und für den trinationalen Handel schaffen wir Content, der Entscheider in der Schweiz, Süddeutschland und Frankreich gleichermassen anspricht.
 
 Wir koordinieren die Content-Strategie mit unserer [SEO-Texterstellung](/ch-de/seo-texterstellung-basel/) für suchoptimierte Umsetzung, mit dem [Text-Audit](/ch-de/text-audit-basel/) für die Bewertung bestehender Inhalte und mit der [Zielgruppenanalyse](/ch-de/zielgruppenanalyse-basel/) für datenbasierte Themenfindung.

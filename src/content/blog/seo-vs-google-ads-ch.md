@@ -12,7 +12,7 @@ faq:
     answer: "Sie können deutlich reduzieren. Bei Schweizer CPCs lohnt sich die Analyse besonders: Für Keywords auf Position 1–3 können Sie Ads pausieren und 500–3'000 CHF/Monat sparen."
   - question: "Sind die Klickpreise in der Schweiz wirklich höher?"
     answer: 'Ja. Ein Klick auf „Rechtsanwalt Zürich" kostet 40–80 CHF vs. EUR 15–30 für Frankfurt. Diese Premiumpreise machen organische Rankings proportional wertvoller.'
-  - question: "Wie beeinflusst das nDSG die Google-Ads-Performance?"
+  - question: "Wie beeinflusst das revDSG die Google-Ads-Performance?"
     answer: "Ohne korrekte Consent-Mode-v2-Implementierung verlieren Sie Conversion-Daten. SEO-Traffic hat dieses Problem nicht."
   - question: "Wie viel sollte ein Schweizer KMU für Google Ads ausgeben?"
     answer: "Minimum 2'000–4'000 CHF/Monat reines Werbebudget. Unter 1'500 CHF/Monat generieren Sie zu wenige Klicks für sinnvolle Optimierung."
@@ -32,9 +32,9 @@ SEO und Google Ads bringen Ihr Unternehmen vor Kunden, die aktiv nach Ihrer Leis
 | **Klickanteil** | 70 % aller Suchklicks | 30 % aller Suchklicks |
 | **KI-Sichtbarkeit** | Ja (ChatGPT, Perplexity, AI Overviews) | Nein |
 | **Kostenentwicklung** | Sinkend über Zeit | Steigend (~5–15 %/Jahr CPC-Inflation) |
-| **nDSG-Implikation** | Minimale Consent-Abhängigkeit | Conversion-Tracking braucht Consent Mode v2 |
+| **revDSG-Implikation** | Minimale Consent-Abhängigkeit | Conversion-Tracking braucht Consent Mode v2 |
 
-Der letzte Punkt ist Schweiz-spezifisch: Google Ads Conversion-Tracking ist seit dem nDSG stärker consent-abhängig. Ohne korrekte Consent-Mode-v2-Implementierung verlieren Sie Conversion-Daten — und damit die Grundlage für Ads-Optimierung. SEO hat dieses Problem nicht.
+Der letzte Punkt ist Schweiz-spezifisch: Google Ads Conversion-Tracking ist seit dem revDSG stärker consent-abhängig. Ohne korrekte Consent-Mode-v2-Implementierung verlieren Sie Conversion-Daten — und damit die Grundlage für Ads-Optimierung. SEO hat dieses Problem nicht.
 
 ---
 

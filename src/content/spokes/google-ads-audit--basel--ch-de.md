@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-23
 locale: "ch-de"
 title: "Google Ads Audit in Basel"
-description: "Umfassendes Google Ads Audit für Basler Unternehmen. StarkRank identifiziert verschwendetes Budget, prüft nDSG-konformes Tracking und deckt Optimierungspotenziale im Schweizer Premium-CPC-Markt auf."
+description: "Umfassendes Google Ads Audit für Basler Unternehmen. StarkRank identifiziert verschwendetes Budget, prüft revDSG-konformes Tracking und deckt Optimierungspotenziale im Schweizer Premium-CPC-Markt auf."
 localCTA: "Kostenloses Google Ads Audit für Basel anfordern"
 highlightsTitle: "Was unser Google Ads Audit prüft"
 highlights:
@@ -12,8 +12,8 @@ highlights:
     description: "Wir bewerten Kampagnen- und Anzeigengruppenstruktur, Keyword-Organisation und Match-Type-Verteilung — mit Fokus auf Effizienz im hochpreisigen Schweizer Markt."
   - title: "Budget- und Gebotsprüfung"
     description: "Analyse von Budgetallokation, Gebotsstrategien und Impression-Share-Verlusten — einschliesslich einer PMax-Governance-Prüfung, die sicherstellt, dass Performance-Max-Kampagnen korrekte Asset-Group-Strukturen, Audience-Signale und Markenausschlüsse nutzen. Im Basler Premium-CPC-Umfeld zählt jeder Franken."
-  - title: "Tracking und nDSG-Compliance"
-    description: "Verifizierung der Conversion-Tracking-Implementierung, Consent-Mode-Konfiguration und Server-Side-Tagging — nDSG-konform und mit korrekter Datenzuordnung."
+  - title: "Tracking und revDSG-Compliance"
+    description: "Verifizierung der Conversion-Tracking-Implementierung, Consent-Mode-Konfiguration und Server-Side-Tagging — revDSG-konform und mit korrekter Datenzuordnung."
   - title: "Mehrsprachige Abdeckung"
     description: "Prüfung, ob Ihre Kampagnen alle relevanten Sprachsegmente abdecken: Deutsche, französische und englische Suchanfragen am Dreiländereck Basel."
   - title: "Wettbewerbsanalyse"
@@ -31,7 +31,7 @@ sectors:
 deliverables:
   - "Vollständiger Audit-Report mit Bewertung pro Kampagne und priorisierter Massnahmenliste"
   - "Budget-Effizienz-Analyse mit Identifikation verschwendeter Ausgaben"
-  - "nDSG-Compliance-Check für Conversion-Tracking und Consent-Mode"
+  - "revDSG-Compliance-Check für Conversion-Tracking und Consent-Mode"
   - "Mehrsprachige Keyword-Gap-Analyse für DE/FR/EN-Suchvolumen"
   - "Wettbewerber-Benchmarking mit Auction-Insights-Auswertung und CTR-Vergleich (Click-Through-Rate — Klickrate)"
   - "Konkrete Handlungsempfehlungen mit geschätztem ROI-Potenzial"
@@ -41,7 +41,7 @@ deliverables:
 
 Die Schweiz gehört zu den teuersten Google-Ads-Märkten weltweit. Basler Unternehmen in Pharma, Finanzen und Chemie zahlen CPCs (Cost per Click — Kosten pro Klick), bei denen jede PPC-Ineffizienz (Pay-per-Click — Bezahlung pro Klick) direkt auf den ROI durchschlägt. Ein professionelles Audit identifiziert systematisch, wo Budget verschwendet wird — durch falsche Match Types, fehlende Negativ-Keywords, suboptimale Gebotsstrategien oder unvollständiges Conversion-Tracking.
 
-Besonders kritisch: Seit Inkrafttreten des revidierten nDSG müssen Tracking-Implementierungen in der Schweiz den Datenschutzanforderungen entsprechen. Falsch konfigurierter Consent Mode führt zu lückenhaften Conversion-Daten und damit zu fehlerhafter Kampagnenoptimierung. Starten Sie mit unserem [kostenlosen Google Ads Check](/free-google-ads-audit/) für eine erste Einschätzung.
+Besonders kritisch: Seit Inkrafttreten des revDSG müssen Tracking-Implementierungen in der Schweiz den Datenschutzanforderungen entsprechen. Falsch konfigurierter Consent Mode führt zu lückenhaften Conversion-Daten und damit zu fehlerhafter Kampagnenoptimierung. Starten Sie mit unserem [kostenlosen Google Ads Check](/free-google-ads-audit/) für eine erste Einschätzung.
 
 ## Wie identifizieren wir Einsparpotenziale für Basler Unternehmen?
 

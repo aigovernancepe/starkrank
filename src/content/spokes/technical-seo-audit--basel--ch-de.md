@@ -27,7 +27,7 @@ sectors:
   - name: "Legacy-CMS in regulierten Branchen"
     description: "Ältere Content-Management-Systeme, deren Aktualisierung aufwändig validiert werden muss. Häufig nicht für moderne Suchstandards optimiert."
   - name: "Consent-Management-Performance"
-    description: "Cookie-Banner und CMP-Lösungen für nDSG-Konformität können Core Web Vitals negativ beeinflussen, wenn sie nicht korrekt implementiert sind."
+    description: "Cookie-Banner und CMP-Lösungen für revDSG-Konformität können Core Web Vitals negativ beeinflussen, wenn sie nicht korrekt implementiert sind."
 deliverables:
   - "Crawl-Bericht mit Zugangsstatus für alle Such- und KI-Bots — einschliesslich WAF/CDN-Analyse"
   - "Renderierungsdiagnose pro Sprachversion (DE/FR/EN) mit Bot-vs-Nutzer-Vergleich"
@@ -39,10 +39,10 @@ deliverables:
 
 ## Warum ist ein technisches Audit die Grundlage für Sichtbarkeit?
 
-Ein technisch einwandfreier Webauftritt ist die Voraussetzung für jede Suchmaschinenoptimierung — klassisch und KI-gestützt. Für Unternehmen am Standort Basel kommt eine zusätzliche Komplexitätsebene hinzu: Die technische Umsetzung muss mit dem Schweizer Datenschutzgesetz (nDSG), häufig mit branchenspezifischen Compliance-Anforderungen, und mit einer mehrsprachigen Seitenarchitektur vereinbar sein.
+Ein technisch einwandfreier Webauftritt ist die Voraussetzung für jede Suchmaschinenoptimierung — klassisch und KI-gestützt. Für Unternehmen am Standort Basel kommt eine zusätzliche Komplexitätsebene hinzu: Die technische Umsetzung muss mit dem Schweizer Datenschutzgesetz (revDSG), häufig mit branchenspezifischen Compliance-Anforderungen, und mit einer mehrsprachigen Seitenarchitektur vereinbar sein.
 
-## nDSG-Konformität in der technischen Umsetzung
+## revDSG-Konformität in der technischen Umsetzung
 
-Alle Empfehlungen werden unter Berücksichtigung des nDSG umgesetzt. Tracking-Konfigurationen verarbeiten ohne Einwilligung keine personenbezogenen Daten. Consent-Management wird so integriert, dass Core Web Vitals nicht beeinträchtigt werden. Schema-Markup exponiert keine sensiblen Personen- oder Patientendaten — relevant für Pharma- und Gesundheitsunternehmen.
+Alle Empfehlungen werden unter Berücksichtigung des revDSG umgesetzt. Tracking-Konfigurationen verarbeiten ohne Einwilligung keine personenbezogenen Daten. Consent-Management wird so integriert, dass Core Web Vitals nicht beeinträchtigt werden. Schema-Markup exponiert keine sensiblen Personen- oder Patientendaten — relevant für Pharma- und Gesundheitsunternehmen.
 
 Das technische Audit bildet das Fundament für die [KI-Suchoptimierung](/ch-de/ki-suchoptimierung-basel/) und die [Lokale SEO-Beratung](/ch-de/lokale-seo-beratung-basel/).

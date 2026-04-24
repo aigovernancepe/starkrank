@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-23
 locale: "ch-de"
 title: "Authority Link Building in Basel"
-description: "Gezielter Aufbau hochwertiger Backlinks von Schweizer Branchenportalen, Pharma-Fachmedien und trinationalen Publikationen. StarkRank stärkt das Linkprofil Ihres Basler Unternehmens nachhaltig und nDSG-konform für klassische und KI-gestützte Suche."
+description: "Gezielter Aufbau hochwertiger Backlinks von Schweizer Branchenportalen, Pharma-Fachmedien und trinationalen Publikationen. StarkRank stärkt das Linkprofil Ihres Basler Unternehmens nachhaltig und revDSG-konform für klassische und KI-gestützte Suche."
 localCTA: "Kostenlose Linkprofil-Analyse für Basel anfordern"
 highlightsTitle: "Unser Ansatz für nachhaltigen Linkaufbau in Basel"
 highlights:

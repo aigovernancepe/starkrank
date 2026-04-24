@@ -14,7 +14,7 @@ highlights:
     description: "Wir verfassen Texte, die medizinische und regulatorische Fachsprache korrekt einsetzen — von Wirkstoffbeschreibungen bis zu Compliance-relevanten Formulierungen, die sowohl Suchmaschinen als auch Fachpublikum überzeugen."
   - title: "KI-zitierfähige Textarchitektur"
     description: "Jeder Text wird mit fragebasierten H2/H3-Überschriften, direkten Antwortabsätzen und Entity-optimiertem Markup versehen — damit ChatGPT, Perplexity und Google AI Overviews Ihre Inhalte als Quelle heranziehen."
-  - title: "nDSG-bewusste Textgestaltung"
+  - title: "revDSG-bewusste Textgestaltung"
     description: "Landingpages und Formulartexte, die Transparenz und Datenschutz kommunizieren, ohne Conversion-Potenzial zu verlieren. Wir formulieren Einwilligungstexte und Datenschutzhinweise, die rechtlich und sprachlich überzeugen."
   - title: "Cross-Border-Konsistenz"
     description: "Markensprache, die über drei Länder hinweg funktioniert. Wir achten auf kulturelle Nuancen zwischen Schweizerdeutsch, bundesdeutschem Deutsch und Französisch — kein Copy-Paste-Übersetzen, sondern echte Lokalisierung."

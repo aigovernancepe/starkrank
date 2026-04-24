@@ -19,7 +19,7 @@ highlights:
   - title: "Aktualität"
     description: "Wie aktuell ist Ihr Content? KI-Modelle bevorzugen frische Inhalte. Wir auditieren Publikationsdaten und thematische Relevanz über alle Inhalte."
   - title: "Messbarkeit"
-    description: "Tracken Sie KI-Suchperformance? Wir prüfen GA4-Segmentierung, Markenerwähnungsmonitoring und Baseline-Daten — nDSG-konform umgesetzt."
+    description: "Tracken Sie KI-Suchperformance? Wir prüfen GA4-Segmentierung, Markenerwähnungsmonitoring und Baseline-Daten — revDSG-konform umgesetzt."
 sectors:
   - name: "Pharma und Life Sciences"
     description: "Von Wirkstoffherstellern über Medizintechnik bis zu klinischen Dienstleistern: KI-gestützte Recherche ersetzt zunehmend traditionelle Suchprozesse bei der Lieferantenauswahl."
@@ -35,7 +35,7 @@ deliverables:
   - "Überprüfung des Zugangs für GPTBot, ClaudeBot und PerplexityBot auf Ihrer Infrastruktur"
   - "Content-Restrukturierungsplan mit frageorientierten Überschriften und direkten Antworten"
   - "Einrichtung von KI-Erwähnungsmonitoring und monatliches Performance-Dashboard"
-  - "nDSG-konforme Umsetzung aller Tracking- und Monitoring-Massnahmen"
+  - "revDSG-konforme Umsetzung aller Tracking- und Monitoring-Massnahmen"
 faq:
   - question: "Was kostet KI-Suchoptimierung in Basel?"
     answer: "Die kostenlose Erstbewertung (2 Dimensionen) ist unverbindlich. Das umfassende 6-Dimensionen-Audit beginnt ab 4'000 CHF. Laufende Optimierung ab 5'000 CHF/Monat."
@@ -55,6 +55,6 @@ Für Basler Unternehmen bedeutet das eine besondere Chance: Der Markt ist intern
 
 ## Wie funktioniert der AISO Score für den Schweizer Markt?
 
-Unser AISO-Score-Framework (AI Search Optimisation — KI-Suchoptimierung) bewertet Ihre KI-Suchbereitschaft anhand von sechs Dimensionen. Für den Standort Basel berücksichtigen wir zusätzlich nDSG-konforme Umsetzung und grenzüberschreitende Sichtbarkeit im DACH-Raum — der deutschsprachige Kern deckt die kommerziell relevanten Zielgruppen ab.
+Unser AISO-Score-Framework (AI Search Optimisation — KI-Suchoptimierung) bewertet Ihre KI-Suchbereitschaft anhand von sechs Dimensionen. Für den Standort Basel berücksichtigen wir zusätzlich revDSG-konforme Umsetzung und grenzüberschreitende Sichtbarkeit im DACH-Raum — der deutschsprachige Kern deckt die kommerziell relevanten Zielgruppen ab.
 
 Das Ergebnis ist eine priorisierte Roadmap für Ihre Wettbewerbsposition in Basel. Für die technische Umsetzung arbeiten wir mit unserem [Technischen SEO-Audit](/ch-de/seo-audit-basel/) zusammen, und für lokale Sichtbarkeit mit unserem [Lokalen SEO-Service](/ch-de/lokale-seo-beratung-basel/).

@@ -10,7 +10,7 @@ features:
   - "Core Web Vitals performance by design (LCP, INP, CLS)"
   - "WCAG 2.2 accessibility compliance"
   - "Structured data and schema implementation"
-  - "Consent-friendly architecture (Consent Mode v2, GDPR/nDSG)"
+  - "Consent-friendly architecture (Consent Mode v2, GDPR/revDSG)"
   - "CMS selection, configuration, and migration"
   - "Mobile-first responsive design"
   - "Conversion rate optimisation integration"
@@ -89,7 +89,7 @@ Every schema implementation is validated and tested to ensure it renders correct
 
 ## How do you handle consent and privacy in the design?
 
-Privacy regulations — GDPR in the EU, nDSG in Switzerland, and evolving frameworks globally — require websites to manage user consent before collecting data. A consent-friendly architecture is not just a cookie banner; it is a technical design pattern that affects how your entire analytics and marketing stack operates.
+Privacy regulations — GDPR in the EU, revDSG in Switzerland, and evolving frameworks globally — require websites to manage user consent before collecting data. A consent-friendly architecture is not just a cookie banner; it is a technical design pattern that affects how your entire analytics and marketing stack operates.
 
 We build consent into the site architecture:
 

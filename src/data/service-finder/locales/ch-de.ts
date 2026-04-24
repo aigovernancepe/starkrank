@@ -60,8 +60,8 @@ export const chDe: ServiceFinderLocale = {
       serviceCards: {
         ...de.steps.result.serviceCards,
         'consent-audit': {
-          headline: 'Ihre nDSG-Konformit\u00e4t braucht eine Pr\u00fcfung',
-          description: 'Consent Mode v2, Cookie-Banner und Datenschutz \u2014 wir stellen sicher, dass Sie gem\u00e4ss nDSG konform sind. Datenverarbeitung in Z\u00fcrich.',
+          headline: 'Ihre revDSG-Konformit\u00e4t braucht eine Pr\u00fcfung',
+          description: 'Consent Mode v2, Cookie-Banner und Datenschutz \u2014 wir stellen sicher, dass Sie gem\u00e4ss revDSG konform sind. Datenverarbeitung in Z\u00fcrich.',
           ctaText: 'Mehr erfahren',
         },
         'digital-pr': {
@@ -76,11 +76,11 @@ export const chDe: ServiceFinderLocale = {
     ...de.faq.filter(f => f.question !== 'Werden meine Daten gespeichert?'),
     {
       question: 'Werden meine Daten gespeichert?',
-      answer: 'Nur wenn Sie freiwillig Ihre E-Mail-Adresse eingeben. Die Antworten im Tool selbst werden nicht personenbezogen gespeichert. Datenverarbeitung erfolgt in Z\u00fcrich, Schweiz, gem\u00e4ss nDSG. Details in unserer <a href="/ch-de/datenschutz/">Datenschutzerkl\u00e4rung</a>.',
+      answer: 'Nur wenn Sie freiwillig Ihre E-Mail-Adresse eingeben. Die Antworten im Tool selbst werden nicht personenbezogen gespeichert. Datenverarbeitung erfolgt in Z\u00fcrich, Schweiz, gem\u00e4ss revDSG. Details in unserer <a href="/ch-de/datenschutz/">Datenschutzerkl\u00e4rung</a>.',
     },
     {
       question: 'Arbeitet StarkRank auch mit Schweizer Unternehmen?',
-      answer: 'Ja. Wir betreuen Unternehmen in der Deutschschweiz mit lokalem Marktverst\u00e4ndnis, Kenntnis der Schweizer Regulierungen (nDSG, FINMA, Swissmedic) und Datenverarbeitung in Z\u00fcrich. Pers\u00f6nliche Beratungsgespr\u00e4che in Z\u00fcrich oder Bern sind m\u00f6glich.',
+      answer: 'Ja. Wir betreuen Unternehmen in der Deutschschweiz mit lokalem Marktverst\u00e4ndnis, Kenntnis der Schweizer Regulierungen (revDSG, FINMA, Swissmedic) und Datenverarbeitung in Z\u00fcrich. Pers\u00f6nliche Beratungsgespr\u00e4che in Z\u00fcrich oder Bern sind m\u00f6glich.',
     },
   ],
 };

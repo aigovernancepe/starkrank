@@ -37,7 +37,7 @@ A GA4 setup that actually works requires far more than adding a tracking snippet
 
 ## How do you handle consent and privacy compliance?
 
-Privacy regulations (GDPR, nDSG, ePrivacy) are not optional, and they directly affect your data quality. We implement consent-aware analytics that maintain compliance while preserving measurement accuracy:
+Privacy regulations (GDPR, revDSG, ePrivacy) are not optional, and they directly affect your data quality. We implement consent-aware analytics that maintain compliance while preserving measurement accuracy:
 
 - **Google Consent Mode v2** — Integrated with your Consent Management Platform so GA4 tags fire appropriately based on user consent. Consented users are tracked fully. Unconsented users still contribute to aggregated, cookieless modelled data — so you do not lose all visibility when users decline cookies.
 - **Cookieless measurement** — GA4's behavioural and conversion modelling fills gaps where consent is not granted. We configure modelling thresholds and validate that modelled data aligns with observed patterns.
@@ -97,7 +97,7 @@ Training is delivered live, recorded for reference, and tailored to your team's 
 ## When should you invest in analytics consultancy?
 
 - You have GA4 installed but are not confident the data is accurate or complete
-- Your consent implementation may not comply with GDPR or nDSG requirements
+- Your consent implementation may not comply with GDPR or revDSG requirements
 - You cannot see how much traffic comes from AI platforms versus traditional search
 - Your marketing team makes decisions based on gut instinct because they do not trust the analytics
 - You need to connect analytics data with CRM or advertising data for unified reporting

@@ -13,14 +13,14 @@ faq:
   - question: "Wann amortisiert sich SEO in der Schweiz?"
     answer: "Bei 5'000–8'000 CHF/Monat liegt der Break-even bei Monat 6–9. Die höheren Auftragswerte in der Schweiz verkürzen die Amortisationszeit."
   - question: "Sollte ich eine Schweizer oder internationale SEO-Agentur beauftragen?"
-    answer: "Entscheidend ist: Versteht die Agentur den Schweizer Markt, nDSG, Mehrsprachigkeit und bietet sie persönlichen Kontakt? Beides kann funktionieren."
-  - question: "Muss SEO in der Schweiz nDSG-konform sein?"
+    answer: "Entscheidend ist: Versteht die Agentur den Schweizer Markt, revDSG, Mehrsprachigkeit und bietet sie persönlichen Kontakt? Beides kann funktionieren."
+  - question: "Muss SEO in der Schweiz revDSG-konform sein?"
     answer: "Ja. Korrekte Cookie-Einwilligungen, Datenschutzerklärung nach Schweizer Recht, und konforme Analyse-Tools. Google Consent Mode v2 ist der technische Standard."
   - question: "Wie finde ich eine seriöse SEO-Agentur in der Schweiz?"
-    answer: "Achten Sie auf: Schweizer Referenzen, namentlichen Ansprechpartner, persönliche Treffen, nDSG-Verständnis und transparente Preise ohne 12-Monats-Bindung."
+    answer: "Achten Sie auf: Schweizer Referenzen, namentlichen Ansprechpartner, persönliche Treffen, revDSG-Verständnis und transparente Preise ohne 12-Monats-Bindung."
 ---
 
-Schweizer Unternehmen investieren typischerweise zwischen 3'000 und 8'000 CHF pro Monat in professionelle Suchmaschinenoptimierung. Die Spanne ist breiter als in Deutschland — der Schweizer Markt hat höhere Qualitätserwartungen, strengere Datenschutzanforderungen (nDSG) und oft mehrsprachige Anforderungen (DE/FR/IT). Was Sie konkret benötigen, hängt von Ihrer Branche, der Wettbewerbsintensität in Ihrem Kanton und Ihrer digitalen Ausgangslage ab.
+Schweizer Unternehmen investieren typischerweise zwischen 3'000 und 8'000 CHF pro Monat in professionelle Suchmaschinenoptimierung. Die Spanne ist breiter als in Deutschland — der Schweizer Markt hat höhere Qualitätserwartungen, strengere Datenschutzanforderungen (revDSG) und oft mehrsprachige Anforderungen (DE/FR/IT). Was Sie konkret benötigen, hängt von Ihrer Branche, der Wettbewerbsintensität in Ihrem Kanton und Ihrer digitalen Ausgangslage ab.
 
 Dieser Leitfaden zeigt Ihnen ehrlich, was jede Preisstufe beinhaltet und wo Schweizer Unternehmen regelmässig Geld verbrennen oder zu wenig investieren.
 
@@ -37,15 +37,15 @@ Dieser Leitfaden zeigt Ihnen ehrlich, was jede Preisstufe beinhaltet und wo Schw
 | **8'000–12'000 CHF** | Full-Service: Technik, Content, PR, mehrsprachig (DE/FR/IT), KI-Optimierung, fortgeschrittene Analytik | Unternehmen mit nationaler Präsenz oder mehreren Standorten | Marktführerschaft in 6–12 Monaten |
 | **12'000 CHF+** | Enterprise: Nationale/internationale Kampagnen, dediziertes Team | Banken, Versicherungen, Pharma, Luxusmarken | Vollständige Marktabdeckung |
 
-**Die Schweizer Preisrealität**: Der Schweizer Markt liegt 30–50 % über dem deutschen Preisniveau. Das liegt nicht nur an den höheren Lohnkosten, sondern auch an den spezifischen Anforderungen: nDSG-Compliance, Mehrsprachigkeit, Schweizer Hosting-Anforderungen und die Erwartung an persönliche Betreuung durch namentlich bekannte Ansprechpartner.
+**Die Schweizer Preisrealität**: Der Schweizer Markt liegt 30–50 % über dem deutschen Preisniveau. Das liegt nicht nur an den höheren Lohnkosten, sondern auch an den spezifischen Anforderungen: revDSG-Compliance, Mehrsprachigkeit, Schweizer Hosting-Anforderungen und die Erwartung an persönliche Betreuung durch namentlich bekannte Ansprechpartner.
 
 ---
 
 ## Was unterscheidet SEO in der Schweiz vom deutschen Markt?
 
-### nDSG statt DSGVO
+### revDSG statt DSGVO
 
-Seit dem 1. September 2023 gilt in der Schweiz das neue Datenschutzgesetz (nDSG). Es unterscheidet sich in wesentlichen Punkten von der EU-DSGVO: andere Rechtsgrundlagen für die Datenverarbeitung, eigene Anforderungen an Cookie-Banner und Einwilligungen, und der EDÖB als zuständige Aufsichtsbehörde. Ihre SEO-Agentur muss die Unterschiede kennen — nicht einfach DSGVO-Vorlagen kopieren.
+Seit dem 1. September 2023 gilt in der Schweiz das revidierte Datenschutzgesetz (revDSG, früher auch als nDSG geführt). Es unterscheidet sich in wesentlichen Punkten von der EU-DSGVO: andere Rechtsgrundlagen für die Datenverarbeitung, eigene Anforderungen an Cookie-Banner und Einwilligungen, und der EDÖB als zuständige Aufsichtsbehörde. Ihre SEO-Agentur muss die Unterschiede kennen — nicht einfach DSGVO-Vorlagen kopieren.
 
 ### Mehrsprachigkeit als Standard
 
@@ -80,7 +80,7 @@ Die Schweiz hat 8,8 Millionen Einwohner in 26 Kantonen. Der Suchmarkt ist kleine
 
 - **„Eintrag in 500 Verzeichnisse"** — Im Schweizer Markt sind die relevanten Verzeichnisse überschaubar: local.ch, search.ch, Yellow Pages, branchenspezifische Portale. Masseneinträge in internationale Spamverzeichnisse schaden mehr als sie nützen.
 - **„Garantierte Platzierung auf Seite 1"** — In der Schweiz wie überall: Niemand kann das garantieren.
-- **DSGVO-Vorlagen statt nDSG-Compliance** — Wenn Ihre Agentur nur von „DSGVO" spricht und das nDSG nicht erwähnt, versteht sie den Schweizer Markt nicht.
+- **DSGVO-Vorlagen statt revDSG-Compliance** — Wenn Ihre Agentur nur von „DSGVO" spricht und das revDSG nicht erwähnt, versteht sie den Schweizer Markt nicht.
 - **Einsprachige Optimierung als „Schweizer SEO"** — Wenn Sie in Zürich und Genf präsent sein wollen, brauchen Sie DE und FR als eigenständige Strategien.
 - **„Monatliche Optimierung" ohne sichtbare Leistung** — Fordern Sie einen monatlichen Rapport mit konkreten Massnahmen, nicht nur Rankings und Traffic.
 

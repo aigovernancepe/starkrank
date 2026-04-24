@@ -36,7 +36,7 @@ deliverables:
   - "Vollständige Konto-Restrukturierung mit keyword-geclusterten Kampagnen und Anzeigengruppen"
   - "Negativ-Keyword-Bibliothek basierend auf Basel-spezifischer Suchanfragenanalyse"
   - "Mehrsprachige Anzeigentexte für deutsche, französische und englische Suchanfragen"
-  - "Conversion-Tracking-Audit und nDSG-konforme Implementierung"
+  - "Conversion-Tracking-Audit und revDSG-konforme Implementierung"
   - "Monatliche Performance-Reports mit CPA, ROAS und Quality-Score-Trends"
   - "Quartalsweise Keyword-Landschaftsanalyse mit Identifikation neuer Chancen"
 ---
