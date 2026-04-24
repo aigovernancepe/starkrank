@@ -5,9 +5,6 @@ import Section from '../components/ui/Section.astro';
 import SectionHeader from '../components/ui/SectionHeader.astro';
 import PillarCard from '../components/ui/PillarCard.astro';
 import BuildingGraphic from '../components/ui/BuildingGraphic.astro';
-import BuildingGraphicHero from '../components/ui/BuildingGraphicHero.astro';
-import BuildingGraphicSplit from '../components/ui/BuildingGraphicSplit.astro';
-import BuildingGraphicField from '../components/ui/BuildingGraphicField.astro';
 import Button from '../components/ui/Button.astro';
 import CTABanner from '../components/ui/CTABanner.astro';
 import { getLocalizedPillars } from '../data/pillars';
@@ -67,23 +64,7 @@ const processSteps = [
       align="center"
     />
     <div class="hidden md:block">
-      {/* TEMPORARY A/B/C/D COMPARISON — pick one + delete the rest after preview review */}
-      <div class="mb-10 pb-10 border-b border-gray-light/40">
-        <p class="text-xs font-label font-bold uppercase tracking-[0.2em] text-blue mb-2 text-center">VARIANT D · current (iter 5: stacked chevrons)</p>
-        <BuildingGraphic locale="de" />
-      </div>
-      <div class="mb-10 pb-10 border-b border-gray-light/40">
-        <p class="text-xs font-label font-bold uppercase tracking-[0.2em] text-blue mb-2 text-center">VARIANT A · hero single chevron, orbiting labels</p>
-        <BuildingGraphicHero locale="de" />
-      </div>
-      <div class="mb-10 pb-10 border-b border-gray-light/40">
-        <p class="text-xs font-label font-bold uppercase tracking-[0.2em] text-blue mb-2 text-center">VARIANT B · split-screen mark + discipline list</p>
-        <BuildingGraphicSplit locale="de" />
-      </div>
-      <div class="mb-10 pb-10 border-b border-gray-light/40">
-        <p class="text-xs font-label font-bold uppercase tracking-[0.2em] text-blue mb-2 text-center">VARIANT C · chevron field + discipline discs</p>
-        <BuildingGraphicField locale="de" />
-      </div>
+      <BuildingGraphic locale="de" />
     </div>
 
     {/* Detailed pillar cards — on mobile these carry the whole metaphor (no SVG).
