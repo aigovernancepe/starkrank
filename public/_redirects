@@ -40,6 +40,15 @@
 /en/services/seo-for-home-services/  /en/services/                               301
 /en/services/seo-for-auto-services/  /en/services/                               301
 
+# Bare-prefix variants — prevent 2-hop chains via the /services/:slug/ catch-all.
+# Without these, /services/seo-for-dentists/ would hit the catch-all → /en/services/seo-for-dentists/ (hop 1) → /en/services/ (hop 2).
+# Explicit single-hop rules here win before the catch-all fires.
+/services/seo-for-dentists/          /en/services/                               301
+/services/seo-for-law-firms/         /en/services/                               301
+/services/seo-for-med-spas/          /en/services/                               301
+/services/seo-for-home-services/     /en/services/                               301
+/services/seo-for-auto-services/     /en/services/                               301
+
 # ─── Old /de/ paths → root (new DE home) ──────────────────────────
 # Blog tree stays at /de/blog/* (intentional — do not redirect).
 /de/ueber-uns/                       /ueber-uns/                                 301

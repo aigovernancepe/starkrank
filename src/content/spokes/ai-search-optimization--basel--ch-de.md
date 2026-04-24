@@ -11,13 +11,13 @@ highlights:
   - title: "Crawlbarkeit"
     description: "Können GPTBot, ClaudeBot und PerplexityBot auf Ihre Inhalte zugreifen? Wir prüfen robots.txt, llms.txt, WAF-Konfigurationen und Server-Logs auf KI-Crawler-Aktivität."
   - title: "Struktur"
-    description: "Ist Ihr Markup KI-lesbar? Wir bewerten strukturierte Daten, semantisches HTML und chunking-optimierte Formate — in allen Sprachversionen (DE/FR/EN)."
+    description: "Ist Ihr Markup KI-lesbar? Wir bewerten strukturierte Daten, semantisches HTML und chunking-optimierte Formate für den DACH-Raum."
   - title: "Autorität"
-    description: "Existiert Ihre Marke als erkannte Entität? Wir prüfen Organization-Schema, sameAs-Links zu Handelsregister, Wikipedia und LinkedIn — in allen drei Märkten."
+    description: "Existiert Ihre Marke als erkannte Entität? Wir prüfen Organization-Schema, sameAs-Links zu Handelsregister, Wikipedia und LinkedIn für den DACH-Raum."
   - title: "Zitierfähigkeit"
     description: "Ist Ihr Content antwortformatiert und originär? Wir evaluieren direkte Antworten, Frage-Überschriften und einzigartige Datenquellen für den DACH-Raum."
   - title: "Aktualität"
-    description: "Wie aktuell ist Ihr Content? KI-Modelle bevorzugen frische Inhalte. Wir auditieren Publikationsdaten und thematische Relevanz über alle Sprachversionen."
+    description: "Wie aktuell ist Ihr Content? KI-Modelle bevorzugen frische Inhalte. Wir auditieren Publikationsdaten und thematische Relevanz über alle Inhalte."
   - title: "Messbarkeit"
     description: "Tracken Sie KI-Suchperformance? Wir prüfen GA4-Segmentierung, Markenerwähnungsmonitoring und Baseline-Daten — nDSG-konform umgesetzt."
 sectors:
@@ -31,7 +31,7 @@ sectors:
     description: "Die trinationale Lage macht Basel zum Logistik-Knotenpunkt. Unternehmen werden über KI-Suche in drei Sprachen verglichen."
 deliverables:
   - "Vollständige AISO-Score-Analyse mit Bewertung pro Dimension und Branchenvergleich für den Schweizer Markt"
-  - "Mehrsprachige Entitätsstrategie (DE/FR/EN) für maximale Abdeckung am Dreiländereck"
+  - "Entitätsstrategie in Deutsch und Englisch für Sichtbarkeit im DACH-Raum"
   - "Überprüfung des Zugangs für GPTBot, ClaudeBot und PerplexityBot auf Ihrer Infrastruktur"
   - "Content-Restrukturierungsplan mit frageorientierten Überschriften und direkten Antworten"
   - "Einrichtung von KI-Erwähnungsmonitoring und monatliches Performance-Dashboard"
@@ -51,10 +51,10 @@ faq:
 
 Basel liegt am Dreiländereck Schweiz–Deutschland–Frankreich und ist Heimat einer der weltweit bedeutendsten Pharma- und Life-Sciences-Cluster. Wenn internationale Fachkräfte, Einkäufer oder potenzielle Partner ChatGPT oder Perplexity nach einem Zulieferer, Berater oder Dienstleister in der Region Basel fragen, generieren diese Plattformen eine Antwort mit zitierten Quellen.
 
-Für Basler Unternehmen bedeutet das eine besondere Herausforderung und Chance zugleich: Der Markt ist mehrsprachig (Deutsch, Französisch, Englisch), international ausgerichtet und hochkompetitiv. Wer in KI-Antworten nicht vorkommt — in allen relevanten Sprachen — verliert Sichtbarkeit gegenüber Wettbewerbern, die diesen Kanal bereits bedienen.
+Für Basler Unternehmen bedeutet das eine besondere Chance: Der Markt ist international ausgerichtet und hochkompetitiv. StarkRank fokussiert sich auf deutsch- und englischsprachige KI-Sichtbarkeit — für französischsprachige Präsenz in der Romandie oder am Elsass-Rand ist eine Agentur mit Native-Copy-Kapazität die richtige Wahl. Wer in den deutschsprachigen KI-Antworten nicht vorkommt, verliert Sichtbarkeit gegenüber Wettbewerbern, die diesen Kanal bereits bedienen.
 
 ## Wie funktioniert der AISO Score für den Schweizer Markt?
 
-Unser AISO-Score-Framework (AI Search Optimisation — KI-Suchoptimierung) bewertet Ihre KI-Suchbereitschaft anhand von sechs Dimensionen. Für den Standort Basel berücksichtigen wir zusätzlich mehrsprachige Entitäten, nDSG-konforme Umsetzung und die grenzüberschreitende Sichtbarkeit im trinationalen Raum.
+Unser AISO-Score-Framework (AI Search Optimisation — KI-Suchoptimierung) bewertet Ihre KI-Suchbereitschaft anhand von sechs Dimensionen. Für den Standort Basel berücksichtigen wir zusätzlich nDSG-konforme Umsetzung und grenzüberschreitende Sichtbarkeit im DACH-Raum — der deutschsprachige Kern deckt die kommerziell relevanten Zielgruppen ab.
 
 Das Ergebnis ist eine priorisierte Roadmap für Ihre Wettbewerbsposition in Basel. Für die technische Umsetzung arbeiten wir mit unserem [Technischen SEO-Audit](/ch-de/seo-audit-basel/) zusammen, und für lokale Sichtbarkeit mit unserem [Lokalen SEO-Service](/ch-de/lokale-seo-beratung-basel/).
