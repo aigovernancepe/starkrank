@@ -65,6 +65,25 @@ const cities = defineCollection({
   }),
 });
 
+const serviceHubs = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/service-hubs' }),
+  schema: z.object({
+    serviceSlug: z.string(),
+    locale: z.enum(['de', 'ch-de']),
+    title: z.string().optional(),
+    description: z.string(),
+    heroLede: z.string().optional(),
+    faq: z.array(faqItem).optional(),
+    updatedDate: z.coerce.date().optional(),
+    processTotalTime: z.string().optional(),
+    processSteps: z.array(z.object({
+      name: z.string(),
+      description: z.string(),
+      tools: z.array(z.string()).optional(),
+    })).optional(),
+  }),
+});
+
 const spokes = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/spokes' }),
   schema: z.object({
@@ -90,4 +109,4 @@ const spokes = defineCollection({
   }),
 });
 
-export const collections = { services, blog, cities, spokes };
+export const collections = { services, blog, cities, spokes, serviceHubs };

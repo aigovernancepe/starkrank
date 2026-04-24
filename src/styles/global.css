@@ -129,6 +129,18 @@
   justify-content: center;
   font-size: 0.75rem;
   font-weight: 700;
+  z-index: 2;
+}
+
+/* Sequential rail connecting numbered steps — visible in the gap between cards */
+.prose-numbered-cards > ol > li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: calc(1rem + 0.875rem - 1px);
+  top: calc(1.25rem + 1.75rem);
+  bottom: -1rem;
+  width: 2px;
+  background-color: color-mix(in srgb, var(--color-blue) 35%, transparent);
 }
 
 /* Branded bullet lists for prose content */
