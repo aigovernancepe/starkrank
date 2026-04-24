@@ -55,22 +55,22 @@ const strings = {
     top: 'WACHSTUM',
     foundation: 'DATEN & WEB',
     caption: 'Fundament jeder strategischen Entscheidung',
-    title: 'StarkRank — vier Disziplinen zum Wachstumsgipfel',
-    desc: 'Vier Chevron-Bänder im StarkRank-Stil steigen vom Fundament Daten und Web zum StarkRank-Mark am Gipfel auf. Jedes Band steht für eine Disziplin — Suche und KI-Intelligenz, Performance Media, Autorität, Content und Texterstellung. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
+    title: 'StarkRank — vier Disziplinen steigen zum Wachstum',
+    desc: 'Vier StarkRank-Chevrons steigen vom Fundament Daten und Web zum Wachstum auf. Jeder Chevron — Suche und KI-Intelligenz, Performance Media, Autorität, Content und Texterstellung — trägt zur Ascension bei. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
   },
   'ch-de': {
     top: 'WACHSTUM',
     foundation: 'DATEN & WEB',
     caption: 'Fundament jeder strategischen Entscheidung',
-    title: 'StarkRank — vier Disziplinen zum Wachstumsgipfel',
-    desc: 'Vier Chevron-Bänder im StarkRank-Stil steigen vom Fundament Daten und Web zum StarkRank-Mark am Gipfel auf. Jedes Band steht für eine Disziplin — Suche und KI-Intelligenz, Performance Media, Autorität, Content und Texterstellung. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
+    title: 'StarkRank — vier Disziplinen steigen zum Wachstum',
+    desc: 'Vier StarkRank-Chevrons steigen vom Fundament Daten und Web zum Wachstum auf. Jeder Chevron — Suche und KI-Intelligenz, Performance Media, Autorität, Content und Texterstellung — trägt zur Ascension bei. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
   },
   en: {
     top: 'GROWTH',
     foundation: 'DATA & WEB',
     caption: 'Foundation of every strategic decision',
-    title: 'StarkRank — four disciplines toward the growth summit',
-    desc: 'Four chevron bands in the StarkRank mark style ascend from the Data and Web foundation toward the StarkRank mark at the summit. Each band represents a discipline — Search and AI Intelligence, Performance Media, Authority, Content and Copywriting. Hovering highlights the matching card below; clicking scrolls to it.',
+    title: 'StarkRank — four disciplines ascending to growth',
+    desc: 'Four StarkRank chevrons rise from the Data and Web foundation toward growth. Each chevron — Search and AI Intelligence, Performance Media, Authority, Content and Copywriting — contributes to the ascent. Hovering highlights the matching card below; clicking scrolls to it.',
   },
 }[locale];
 
@@ -78,73 +78,70 @@ const aria = pillarAria[locale];
 const labels = pillarLabels[locale];
 
 // ─── Geometry ───
-// Canvas 840 × 700. Stack centred at x≈330 (wider left side), label column
-// at x=610 on the right. SR mark crowns the stack. Foundation at bottom.
-const baseY = 520;        // chevron foot baseline
-const foundationY = 548;
-const foundationH = 68;
-
+// Each chevron has its OWN baseline so per-chevron aspect ratio stays
+// logo-like (~1.3:1 width to height). Chevron feet rest above the peak
+// of the chevron below, producing an ascending nested stack.
 type Chev = {
   id: string;
   num: string;
-  fl: number;    // foot left
-  fr: number;    // foot right
-  px: number;    // peak x
-  py: number;    // peak y
-  band: number;  // band thickness
+  cx: number;       // horizontal centre (all centred at same column)
+  baseY: number;    // feet baseline y
+  width: number;    // full width at feet
+  height: number;   // height from peak to feet
 };
 
 const chevrons: Chev[] = [
-  { id: 'search-ai-intelligence', num: '01', fl: 50,  fr: 600, px: 320, py: 380, band: 46 },
-  { id: 'performance-media',      num: '02', fl: 120, fr: 540, px: 330, py: 310, band: 42 },
-  { id: 'authority-pr',           num: '03', fl: 200, fr: 480, px: 340, py: 242, band: 38 },
-  { id: 'content-copywriting',    num: '04', fl: 280, fr: 420, px: 350, py: 178, band: 34 },
+  { id: 'search-ai-intelligence', num: '01', cx: 320, baseY: 540, width: 420, height: 150 },
+  { id: 'performance-media',      num: '02', cx: 320, baseY: 460, width: 320, height: 150 },
+  { id: 'authority-pr',           num: '03', cx: 320, baseY: 380, width: 230, height: 150 },
+  { id: 'content-copywriting',    num: '04', cx: 320, baseY: 300, width: 150, height: 150 },
 ];
 
-// Proper chevron band path — matches the SR logo mark silhouette.
-// Winding: outer-bottom-left → outer-peak → outer-bottom-right → inner-bottom-right
-// (inset by t) → inner-peak (lowered by t·1.8) → inner-bottom-left → close.
+// Compute band path — proper chevron silhouette matching SR logo mark.
+// Uses uniform perpendicular band thickness along each leg, producing
+// an inner peak that sits at the geometrically correct offset below the
+// outer peak. V-cut depth ≈ 55% of chevron height for logo-like silhouette.
 function chevronBand(c: Chev): string {
+  const halfW = c.width / 2;
+  const peakY = c.baseY - c.height;
+  const legLen = Math.sqrt(halfW * halfW + c.height * c.height);
+
+  // V-cut depth = 55% of height (keeps feet visible + prominent band)
+  const vCutDepth = c.height * 0.55;
+  const innerPeakY = c.baseY - vCutDepth;
+  // Derive band thickness from uniform-perpendicular-leg-width constraint:
+  // innerPeakOffsetFromOuterPeak = bandThickness * legLen / halfW
+  // (c.baseY - innerPeakY) - 0 → innerOffset = height - vCutDepth
+  const innerOffset = c.height - vCutDepth;
+  const bandThickness = innerOffset * halfW / legLen;
+
+  // Horizontal inset at baseline = bandThickness * (legLen / height)
+  // (proportional to leg angle so legs have uniform perpendicular width)
+  const footInset = bandThickness * legLen / c.height;
+
   return [
-    `M ${c.fl} ${baseY}`,
-    `L ${c.px} ${c.py}`,
-    `L ${c.fr} ${baseY}`,
-    `L ${c.fr - c.band} ${baseY}`,
-    `L ${c.px} ${c.py + c.band * 1.8}`,
-    `L ${c.fl + c.band} ${baseY}`,
+    `M ${c.cx - halfW} ${c.baseY}`,          // outer bottom-left
+    `L ${c.cx} ${peakY}`,                    // outer peak
+    `L ${c.cx + halfW} ${c.baseY}`,          // outer bottom-right
+    `L ${c.cx + halfW - footInset} ${c.baseY}`,  // inner bottom-right
+    `L ${c.cx} ${innerPeakY}`,               // inner peak
+    `L ${c.cx - halfW + footInset} ${c.baseY}`,  // inner bottom-left
     'Z',
   ].join(' ');
 }
-
-// Crown SR mark — the logo at the summit.
-// Two band chevrons, offset upper-left pair.
-function chevronAt(cx: number, cy: number, w: number, h: number, t: number): string {
-  const hw = w / 2;
-  const hh = h / 2;
-  return [
-    `M ${cx - hw} ${cy + hh}`,
-    `L ${cx} ${cy - hh}`,
-    `L ${cx + hw} ${cy + hh}`,
-    `L ${cx + hw - t} ${cy + hh}`,
-    `L ${cx} ${cy - hh + t * 1.8}`,
-    `L ${cx - hw + t} ${cy + hh}`,
-    'Z',
-  ].join(' ');
-}
-
-const crownCx = 340;
-const crownCy = 108;
-const crownOuter = chevronAt(crownCx, crownCy, 170, 108, 42);
-const crownInner = chevronAt(crownCx - 34, crownCy - 22, 108, 68, 28);
 
 // Per-layer colour (palette gradient from navy at base to light blue at crown)
 const layerColor = ['#1A3B6E', '#2E5FA8', '#3B7DD8', '#5A9AE6'];
 const layerColorActive = ['#2E5FA8', '#3B7DD8', '#5A9AE6', '#8AB6EC'];
+
+const baseY = 540;  // chevron 01 baseline (bottom-most)
+const foundationY = 568;
+const foundationH = 66;
 ---
 
 <div class="building-graphic relative">
   <svg
-    viewBox="0 0 840 680"
+    viewBox="0 0 840 700"
     xmlns="http://www.w3.org/2000/svg"
     role="img"
     aria-labelledby="bg-title bg-desc"
@@ -169,64 +166,53 @@ const layerColorActive = ['#2E5FA8', '#3B7DD8', '#5A9AE6', '#8AB6EC'];
       </pattern>
       <filter id="bg-glow" x="-30%" y="-30%" width="160%" height="160%">
         <feGaussianBlur stdDeviation="8" result="blur" />
-        <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.231  0 0 0 0 0.490  0 0 0 0 0.847  0 0 0 0.5 0" />
+        <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.231  0 0 0 0 0.490  0 0 0 0 0.847  0 0 0 0.45 0" />
       </filter>
       <filter id="bg-glow-active" x="-30%" y="-30%" width="160%" height="160%">
         <feGaussianBlur stdDeviation="14" result="blur" />
-        <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.352  0 0 0 0 0.603  0 0 0 0 0.901  0 0 0 0.9 0" />
+        <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.352  0 0 0 0 0.603  0 0 0 0 0.901  0 0 0 0.85 0" />
       </filter>
     </defs>
 
-    <rect width="840" height="680" fill="url(#bg-backdrop)" />
+    <rect width="840" height="700" fill="url(#bg-backdrop)" />
 
-    {/* ─── Crown: WACHSTUM label + full SR mark at the summit ─── */}
-    <g>
-      <text x="340" y="44" text-anchor="middle" fill="#0E1A2D" font-size="16" font-weight="900" letter-spacing="8">{strings.top}</text>
-      {/* SR double-chevron mark — the summit the disciplines ascend toward */}
-      <g class="crown-mark">
-        <path d={crownOuter} fill="#3B7DD8" fill-rule="evenodd" class="crown-outer" filter="url(#bg-glow)" opacity="0.35" />
-        <path d={crownOuter} fill="#3B7DD8" fill-rule="evenodd" class="crown-outer-solid" />
-        <path d={crownInner} fill="#0E1A2D" fill-rule="evenodd" class="crown-inner" />
-        {/* Gold apex accent */}
-        <circle cx={crownCx - 34} cy={crownCy - 22 - 54 - 3} r="5" fill="#B8893B" />
-      </g>
-    </g>
+    {/* Top WACHSTUM label — simple text, no decorative mark */}
+    <text x="320" y="88" text-anchor="middle" fill="#0E1A2D" font-size="22" font-weight="900" letter-spacing="10">{strings.top}</text>
+    <line x1="240" y1="104" x2="400" y2="104" stroke="#B8893B" stroke-width="2.5" />
 
-    {/* ─── Four ascending chevron bands ─── */}
+    {/* Four ascending chevrons */}
     {chevrons.map((c, i) => {
       const d = chevronBand(c);
-      const labelY = c.py + 6;
+      const peakY = c.baseY - c.height;
+      // Badge + label inline on the right, aligned with the chevron's peak
+      const labelY = peakY + 6;
       return (
         <a href={`#card-${c.id}`} data-pillar-id={c.id} aria-label={aria[c.id]}>
           <g class="chev-group" style={`--c-base:${layerColor[i]};--c-active:${layerColorActive[i]};`}>
-            {/* Glow layer behind */}
+            {/* Glow behind */}
             <path d={d} fill={layerColor[i]} filter="url(#bg-glow)" opacity="0.5" class="chev-glow" fill-rule="evenodd" />
             {/* Band body */}
             <path d={d} fill={layerColor[i]} class="chev-body" fill-rule="evenodd" />
-            {/* Gold apex dot */}
-            <circle cx={c.px} cy={c.py - 2} r="4" fill="#B8893B" class="chev-apex" />
 
-            {/* Badge + label together on the right — inline horizontal */}
+            {/* Badge + label inline on right (same side, readable) */}
             <g class="chev-tag">
-              {/* Gold pill badge wrapping the number */}
-              <rect x="610" y={labelY - 18} width="34" height="26" rx="4" fill="#B8893B" class="chev-badge-bg" />
-              <text x="627" y={labelY + 1} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="900" letter-spacing="0.5">{c.num}</text>
-              {/* Discipline label in Inter Tight Black 900 */}
-              <text x="654" y={labelY} text-anchor="start" fill="#0E1A2D" font-size="20" font-weight="900" letter-spacing="-0.2" class="chev-label">{labels[c.id]}</text>
+              <rect x="570" y={labelY - 18} width="34" height="26" rx="4" fill="#B8893B" class="chev-badge-bg" />
+              <text x="587" y={labelY + 1} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="900" letter-spacing="0.5">{c.num}</text>
+              <text x="614" y={labelY} text-anchor="start" fill="#0E1A2D" font-size="20" font-weight="900" letter-spacing="-0.2" class="chev-label">{labels[c.id]}</text>
             </g>
           </g>
         </a>
       );
     })}
 
-    {/* ─── Foundation ─── */}
+    {/* Foundation */}
     <a href="#card-data-web" data-pillar-id="data-web" aria-label={aria['data-web']}>
       <g class="foundation-group">
         <rect x="50" y={foundationY - 4} width="740" height="2.5" fill="#B8893B" class="foundation-gold" />
         <rect x="50" y={foundationY} width="740" height={foundationH} fill="url(#bg-found)" class="foundation-fill" rx="4" />
         <rect x="50" y={foundationY} width="740" height={foundationH} fill="url(#bg-hatch)" pointer-events="none" rx="4" />
 
-        <g transform={`translate(86, ${foundationY + 19})`} fill="none" stroke="#B8893B" stroke-width="2" pointer-events="none">
+        <g transform={`translate(86, ${foundationY + 18})`} fill="none" stroke="#B8893B" stroke-width="2" pointer-events="none">
           <ellipse cx="11" cy="3" rx="10" ry="3" />
           <path d="M1 3 V13 C1 14.5 5 16 11 16 C17 16 21 14.5 21 13 V3" />
           <path d="M1 13 V23 C1 24.5 5 26 11 26 C17 26 21 24.5 21 23 V13" />
@@ -234,7 +220,7 @@ const layerColorActive = ['#2E5FA8', '#3B7DD8', '#5A9AE6', '#8AB6EC'];
 
         <text x="420" y={foundationY + foundationH / 2 + 7} text-anchor="middle" fill="#F8F7F4" font-size="22" font-weight="900" letter-spacing="10" pointer-events="none">{strings.foundation}</text>
 
-        <g transform={`translate(720, ${foundationY + 20})`} pointer-events="none">
+        <g transform={`translate(720, ${foundationY + 19})`} pointer-events="none">
           <circle cx="0" cy="0" r="1.5" fill="#B8893B" />
           <circle cx="8" cy="0" r="1.5" fill="#F8F7F4" opacity="0.4" />
           <circle cx="16" cy="0" r="1.5" fill="#F8F7F4" opacity="0.2" />
@@ -254,21 +240,17 @@ const layerColorActive = ['#2E5FA8', '#3B7DD8', '#5A9AE6', '#8AB6EC'];
 
 <style>
   .building-graphic :global(.chev-group),
-  .building-graphic :global(.foundation-group),
-  .building-graphic :global(.crown-mark) {
+  .building-graphic :global(.foundation-group) {
     transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
     transform-box: fill-box;
   }
   .building-graphic :global(.chev-body),
   .building-graphic :global(.chev-glow),
-  .building-graphic :global(.chev-apex),
   .building-graphic :global(.chev-badge-bg),
   .building-graphic :global(.chev-label),
   .building-graphic :global(.foundation-gold),
-  .building-graphic :global(.foundation-fill),
-  .building-graphic :global(.crown-outer-solid),
-  .building-graphic :global(.crown-inner) {
+  .building-graphic :global(.foundation-fill) {
     transition: fill 260ms ease, filter 260ms ease, stroke 260ms ease, opacity 260ms ease;
   }
   .building-graphic a { cursor: pointer; }
@@ -276,7 +258,7 @@ const layerColorActive = ['#2E5FA8', '#3B7DD8', '#5A9AE6', '#8AB6EC'];
   .building-graphic a[data-pillar-id]:hover .chev-group,
   .building-graphic a[data-pillar-id]:focus-visible .chev-group,
   .building-graphic a[data-pillar-id].is-active .chev-group {
-    transform: translateY(-6px) scale(1.015);
+    transform: translateY(-5px) scale(1.015);
   }
   .building-graphic a[data-pillar-id]:hover .chev-body,
   .building-graphic a[data-pillar-id]:focus-visible .chev-body,
@@ -288,12 +270,7 @@ const layerColorActive = ['#2E5FA8', '#3B7DD8', '#5A9AE6', '#8AB6EC'];
   .building-graphic a[data-pillar-id].is-active .chev-glow {
     fill: var(--c-active);
     filter: url(#bg-glow-active);
-    opacity: 0.85;
-  }
-  .building-graphic a[data-pillar-id]:hover .chev-apex,
-  .building-graphic a[data-pillar-id]:focus-visible .chev-apex,
-  .building-graphic a[data-pillar-id].is-active .chev-apex {
-    fill: #D4A44A;
+    opacity: 0.8;
   }
   .building-graphic a[data-pillar-id]:hover .chev-badge-bg,
   .building-graphic a[data-pillar-id]:focus-visible .chev-badge-bg,
@@ -343,7 +320,6 @@ const layerColorActive = ['#2E5FA8', '#3B7DD8', '#5A9AE6', '#8AB6EC'];
   @media (prefers-reduced-motion: reduce) {
     .building-graphic :global(.chev-group),
     .building-graphic :global(.foundation-group),
-    .building-graphic :global(.crown-mark),
     :global(.pillar-card-wrapper) {
       transition: none !important;
     }
