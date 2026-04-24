@@ -17,7 +17,7 @@ highlights:
   - title: "Retargeting und Funnel-Aufbau"
     description: "Mehrstufige Retargeting-Sequenzen über LinkedIn, Meta und TikTok — vom ersten Kontakt bis zur Conversion. Custom Audiences basierend auf Website-Verhalten, CRM-Daten und Lookalike-Modellen."
   - title: "revDSG-konformes Tracking"
-    description: "Server-Side-Tagging, Consent-Mode-Integration und datenschutzkonforme Pixel-Implementierung — vollständig konform mit dem revidierten revDSG für alle Social-Media-Plattformen."
+    description: "Server-Side-Tagging, Consent-Mode-Integration und datenschutzkonforme Pixel-Implementierung — vollständig revDSG-konform für alle Social-Media-Plattformen."
 sectorsTitle: "Welche Basler Branchen profitieren am meisten von Paid Social?"
 sectors:
   - name: "Pharma und Life Sciences"
