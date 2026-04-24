@@ -1,0 +1,203 @@
+---
+interface Props {
+  locale: 'de' | 'ch-de' | 'en';
+}
+
+const { locale } = Astro.props;
+
+const labels: Record<string, Record<string, string>> = {
+  de: {
+    'search-ai-intelligence': 'Suche & KI',
+    'performance-media': 'Performance Media',
+    'authority-pr': 'Autorität',
+    'content-copywriting': 'Content',
+  },
+  'ch-de': {
+    'search-ai-intelligence': 'Suche & KI',
+    'performance-media': 'Performance Media',
+    'authority-pr': 'Autorität',
+    'content-copywriting': 'Content',
+  },
+  en: {
+    'search-ai-intelligence': 'Search & AI',
+    'performance-media': 'Performance Media',
+    'authority-pr': 'Authority',
+    'content-copywriting': 'Content',
+  },
+};
+
+const aria: Record<string, Record<string, string>> = {
+  de: {
+    'search-ai-intelligence': 'Zur Säule Suche und KI-Intelligenz scrollen',
+    'performance-media': 'Zur Säule Performance Media scrollen',
+    'authority-pr': 'Zur Säule Autorität scrollen',
+    'content-copywriting': 'Zur Säule Content scrollen',
+    'data-web': 'Zum Fundament Daten und Web scrollen',
+  },
+  'ch-de': {
+    'search-ai-intelligence': 'Zur Säule Suche und KI-Intelligenz scrollen',
+    'performance-media': 'Zur Säule Performance Media scrollen',
+    'authority-pr': 'Zur Säule Autorität scrollen',
+    'content-copywriting': 'Zur Säule Content scrollen',
+    'data-web': 'Zum Fundament Daten und Web scrollen',
+  },
+  en: {
+    'search-ai-intelligence': 'Jump to Search and AI Intelligence card',
+    'performance-media': 'Jump to Performance Media card',
+    'authority-pr': 'Jump to Authority card',
+    'content-copywriting': 'Jump to Content card',
+    'data-web': 'Jump to Data and Web card',
+  },
+};
+
+const s = {
+  de: { top: 'WACHSTUM', foundation: 'DATEN & WEB', caption: 'Fundament jeder strategischen Entscheidung', title: 'StarkRank — ein Wachstumspunkt, vier Disziplinen' },
+  'ch-de': { top: 'WACHSTUM', foundation: 'DATEN & WEB', caption: 'Fundament jeder strategischen Entscheidung', title: 'StarkRank — ein Wachstumspunkt, vier Disziplinen' },
+  en: { top: 'GROWTH', foundation: 'DATA & WEB', caption: 'Foundation of every strategic decision', title: 'StarkRank — one growth point, four disciplines' },
+}[locale];
+
+// Hero chevron geometry — centered, dominant
+const cx = 420;
+const cy = 290;
+const outerW = 280;
+const outerH = 200;
+
+// Label anchors — 4 corners with leader lines reaching chevron edges
+const corners = [
+  { id: 'search-ai-intelligence', num: '01', lx: 90, ly: 180, align: 'start', leaderX: cx - outerW / 2 + 30, leaderY: cy - outerH / 2 + 30 },
+  { id: 'performance-media', num: '02', lx: 750, ly: 180, align: 'end', leaderX: cx + outerW / 2 - 30, leaderY: cy - outerH / 2 + 30 },
+  { id: 'authority-pr', num: '03', lx: 90, ly: 410, align: 'start', leaderX: cx - outerW / 2 + 30, leaderY: cy + outerH / 2 - 30 },
+  { id: 'content-copywriting', num: '04', lx: 750, ly: 410, align: 'end', leaderX: cx + outerW / 2 - 30, leaderY: cy + outerH / 2 - 30 },
+];
+---
+
+<div class="variant-hero relative">
+  <svg viewBox="0 0 840 560" xmlns="http://www.w3.org/2000/svg" role="img" class="w-full h-auto max-w-3xl mx-auto mt-8" style="font-family: 'Inter Tight', ui-sans-serif, system-ui;">
+    <title>{s.title}</title>
+
+    <defs>
+      <radialGradient id="h-backdrop" cx="50%" cy="50%" r="75%">
+        <stop offset="0%" stop-color="#FDFCFA" />
+        <stop offset="100%" stop-color="#F2F0EB" />
+      </radialGradient>
+      <linearGradient id="h-found" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1A3B6E" />
+        <stop offset="100%" stop-color="#0E1A2D" />
+      </linearGradient>
+      <filter id="h-glow" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="12" result="blur" />
+        <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.231  0 0 0 0 0.490  0 0 0 0 0.847  0 0 0 0.6 0" />
+      </filter>
+    </defs>
+
+    <rect width="840" height="560" fill="url(#h-backdrop)" />
+
+    {/* WACHSTUM top */}
+    <text x="420" y="60" text-anchor="middle" fill="#0E1A2D" font-size="26" font-weight="900" letter-spacing="10">{s.top}</text>
+
+    {/* Leader lines from corner labels to chevron edges */}
+    {corners.map((c) => (
+      <line x1={c.align === 'start' ? c.lx + 18 : c.lx - 18} y1={c.ly - 4} x2={c.leaderX} y2={c.leaderY} stroke="#3B7DD8" stroke-width="1" opacity="0.35" class="leader-line" data-pillar-id={c.id} pointer-events="none" />
+    ))}
+
+    {/* HERO double-chevron — logo mark at giant scale */}
+    <g class="hero-mark">
+      {/* Glow */}
+      <path d={`M ${cx - outerW / 2} ${cy + outerH / 2} L ${cx} ${cy - outerH / 2} L ${cx + outerW / 2} ${cy + outerH / 2} Z`} fill="#3B7DD8" filter="url(#h-glow)" opacity="0.6" class="hero-glow" />
+      {/* Outer primary-blue */}
+      <path d={`M ${cx - outerW / 2} ${cy + outerH / 2} L ${cx} ${cy - outerH / 2} L ${cx + outerW / 2} ${cy + outerH / 2} Z`} fill="#3B7DD8" class="hero-outer" />
+      {/* Inner navy — offset upper-left, 60% size */}
+      <path d={`M ${cx - outerW / 2 * 0.62 - outerW * 0.2} ${cy + outerH / 2 * 0.62 - outerH * 0.18} L ${cx - outerW * 0.2} ${cy - outerH / 2 * 0.62 - outerH * 0.18} L ${cx + outerW / 2 * 0.62 - outerW * 0.2} ${cy + outerH / 2 * 0.62 - outerH * 0.18} Z`} fill="#0E1A2D" class="hero-inner" />
+      {/* Gold apex accent */}
+      <circle cx={cx - outerW * 0.2} cy={cy - outerH / 2 * 0.62 - outerH * 0.18 - 3} r="5" fill="#B8893B" />
+    </g>
+
+    {/* Corner labels — each clickable to its pillar card */}
+    {corners.map((c) => (
+      <a href={`#card-${c.id}`} data-pillar-id={c.id} aria-label={aria[locale][c.id]}>
+        <g class="corner-label">
+          <text x={c.lx} y={c.ly} text-anchor={c.align as any} fill="#B8893B" font-size="13" font-weight="800" letter-spacing="1">{c.num}</text>
+          <text x={c.lx} y={c.ly + 22} text-anchor={c.align as any} fill="#0E1A2D" font-size="22" font-weight="900" letter-spacing="-0.2">{labels[locale][c.id]}</text>
+        </g>
+      </a>
+    ))}
+
+    {/* Foundation */}
+    <a href="#card-data-web" data-pillar-id="data-web" aria-label={aria[locale]['data-web']}>
+      <g class="hero-foundation">
+        <rect x="50" y="466" width="740" height="2.5" fill="#B8893B" class="hero-found-gold" />
+        <rect x="50" y="470" width="740" height="62" fill="url(#h-found)" class="hero-found-fill" rx="4" />
+        <text x="420" y="506" text-anchor="middle" fill="#F8F7F4" font-size="22" font-weight="900" letter-spacing="10" pointer-events="none">{s.foundation}</text>
+      </g>
+    </a>
+
+    <text x="420" y="550" text-anchor="middle" fill="#0E1A2D" opacity="0.55" font-size="12" font-style="italic">{s.caption}</text>
+  </svg>
+</div>
+
+<style>
+  .variant-hero :global(.corner-label) {
+    transition: transform 280ms ease;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  .variant-hero :global(text),
+  .variant-hero :global(.leader-line),
+  .variant-hero :global(.hero-outer),
+  .variant-hero :global(.hero-inner),
+  .variant-hero :global(.hero-glow),
+  .variant-hero :global(.hero-found-gold) {
+    transition: fill 200ms ease, stroke 200ms ease, opacity 200ms ease, filter 200ms ease;
+  }
+  .variant-hero a { cursor: pointer; }
+  .variant-hero a[data-pillar-id]:hover .corner-label,
+  .variant-hero a[data-pillar-id]:focus-visible .corner-label,
+  .variant-hero a[data-pillar-id].is-active .corner-label {
+    transform: translateY(-2px);
+  }
+  .variant-hero a[data-pillar-id]:hover text,
+  .variant-hero a[data-pillar-id]:focus-visible text,
+  .variant-hero a[data-pillar-id].is-active text {
+    fill: #3B7DD8;
+  }
+  .variant-hero a[data-pillar-id="data-web"]:hover .hero-found-gold,
+  .variant-hero a[data-pillar-id="data-web"]:focus-visible .hero-found-gold,
+  .variant-hero a[data-pillar-id="data-web"].is-active .hero-found-gold {
+    fill: #D4A44A;
+  }
+</style>
+
+<script>
+  const elements = Array.from(document.querySelectorAll<HTMLElement>('.variant-hero [data-pillar-id]'));
+  const groups = new Map<string, HTMLElement[]>();
+  elements.forEach((el) => {
+    const id = el.getAttribute('data-pillar-id');
+    if (!id) return;
+    if (!groups.has(id)) groups.set(id, []);
+    groups.get(id)!.push(el);
+  });
+  groups.forEach((group) => {
+    const on = () => group.forEach((el) => el.classList.add('is-active'));
+    const off = () => group.forEach((el) => el.classList.remove('is-active'));
+    group.forEach((el) => {
+      el.addEventListener('mouseenter', on);
+      el.addEventListener('mouseleave', off);
+      el.addEventListener('focusin', on);
+      el.addEventListener('focusout', off);
+    });
+  });
+  document.querySelectorAll<HTMLAnchorElement>('.variant-hero a[data-pillar-id]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const id = link.getAttribute('data-pillar-id');
+      if (!id) return;
+      const card = document.querySelector<HTMLElement>(`.pillar-card-wrapper[data-pillar-id="${id}"]`);
+      if (!card) return;
+      event.preventDefault();
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      card.classList.remove('is-flash');
+      void card.offsetWidth;
+      card.classList.add('is-flash');
+      window.setTimeout(() => card.classList.remove('is-flash'), 1500);
+    });
+  });
+</script>

@@ -1,0 +1,216 @@
+---
+interface Props {
+  locale: 'de' | 'ch-de' | 'en';
+}
+
+const { locale } = Astro.props;
+
+const labels: Record<string, Record<string, string>> = {
+  de: {
+    'search-ai-intelligence': 'Suche & KI',
+    'performance-media': 'Performance Media',
+    'authority-pr': 'Autorität',
+    'content-copywriting': 'Content',
+  },
+  'ch-de': {
+    'search-ai-intelligence': 'Suche & KI',
+    'performance-media': 'Performance Media',
+    'authority-pr': 'Autorität',
+    'content-copywriting': 'Content',
+  },
+  en: {
+    'search-ai-intelligence': 'Search & AI',
+    'performance-media': 'Performance Media',
+    'authority-pr': 'Authority',
+    'content-copywriting': 'Content',
+  },
+};
+
+const aria: Record<string, Record<string, string>> = {
+  de: {
+    'search-ai-intelligence': 'Zur Säule Suche und KI-Intelligenz scrollen',
+    'performance-media': 'Zur Säule Performance Media scrollen',
+    'authority-pr': 'Zur Säule Autorität scrollen',
+    'content-copywriting': 'Zur Säule Content scrollen',
+    'data-web': 'Zum Fundament Daten und Web scrollen',
+  },
+  'ch-de': {
+    'search-ai-intelligence': 'Zur Säule Suche und KI-Intelligenz scrollen',
+    'performance-media': 'Zur Säule Performance Media scrollen',
+    'authority-pr': 'Zur Säule Autorität scrollen',
+    'content-copywriting': 'Zur Säule Content scrollen',
+    'data-web': 'Zum Fundament Daten und Web scrollen',
+  },
+  en: {
+    'search-ai-intelligence': 'Jump to Search and AI Intelligence card',
+    'performance-media': 'Jump to Performance Media card',
+    'authority-pr': 'Jump to Authority card',
+    'content-copywriting': 'Jump to Content card',
+    'data-web': 'Jump to Data and Web card',
+  },
+};
+
+const s = {
+  de: { top: 'WACHSTUM', foundation: 'DATEN & WEB', caption: 'Fundament jeder strategischen Entscheidung' },
+  'ch-de': { top: 'WACHSTUM', foundation: 'DATEN & WEB', caption: 'Fundament jeder strategischen Entscheidung' },
+  en: { top: 'GROWTH', foundation: 'DATA & WEB', caption: 'Foundation of every strategic decision' },
+}[locale];
+
+const rows = [
+  { id: 'search-ai-intelligence', num: '01' },
+  { id: 'performance-media', num: '02' },
+  { id: 'authority-pr', num: '03' },
+  { id: 'content-copywriting', num: '04' },
+];
+
+// Left-side hero mark
+const cx = 210;
+const cy = 290;
+const outerW = 240;
+const outerH = 180;
+---
+
+<div class="variant-split relative">
+  <svg viewBox="0 0 840 560" xmlns="http://www.w3.org/2000/svg" role="img" class="w-full h-auto max-w-3xl mx-auto mt-8" style="font-family: 'Inter Tight', ui-sans-serif, system-ui;">
+
+    <defs>
+      <radialGradient id="sp-backdrop" cx="50%" cy="50%" r="75%">
+        <stop offset="0%" stop-color="#FDFCFA" />
+        <stop offset="100%" stop-color="#F2F0EB" />
+      </radialGradient>
+      <linearGradient id="sp-found" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1A3B6E" />
+        <stop offset="100%" stop-color="#0E1A2D" />
+      </linearGradient>
+      <filter id="sp-glow" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="14" result="blur" />
+        <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.231  0 0 0 0 0.490  0 0 0 0 0.847  0 0 0 0.6 0" />
+      </filter>
+    </defs>
+
+    <rect width="840" height="560" fill="url(#sp-backdrop)" />
+
+    {/* Left side — HERO chevron mark */}
+    <g class="split-mark">
+      <path d={`M ${cx - outerW / 2} ${cy + outerH / 2} L ${cx} ${cy - outerH / 2} L ${cx + outerW / 2} ${cy + outerH / 2} Z`} fill="#3B7DD8" filter="url(#sp-glow)" opacity="0.55" class="split-glow" />
+      <path d={`M ${cx - outerW / 2} ${cy + outerH / 2} L ${cx} ${cy - outerH / 2} L ${cx + outerW / 2} ${cy + outerH / 2} Z`} fill="#3B7DD8" class="split-outer" />
+      <path d={`M ${cx - outerW / 2 * 0.62 - outerW * 0.2} ${cy + outerH / 2 * 0.62 - outerH * 0.18} L ${cx - outerW * 0.2} ${cy - outerH / 2 * 0.62 - outerH * 0.18} L ${cx + outerW / 2 * 0.62 - outerW * 0.2} ${cy + outerH / 2 * 0.62 - outerH * 0.18} Z`} fill="#0E1A2D" class="split-inner" />
+
+      {/* WACHSTUM small label above the left mark */}
+      <text x={cx} y="130" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="900" letter-spacing="8">{s.top}</text>
+      <line x1={cx - 32} y1="140" x2={cx + 32} y2="140" stroke="#B8893B" stroke-width="2" />
+    </g>
+
+    {/* Vertical separator */}
+    <line x1="420" y1="120" x2="420" y2="440" stroke="#0E1A2D" stroke-width="1" opacity="0.12" />
+
+    {/* Right side — vertical discipline list */}
+    {rows.map((r, i) => {
+      const rowY = 170 + i * 72;
+      return (
+        <a href={`#card-${r.id}`} data-pillar-id={r.id} aria-label={aria[locale][r.id]}>
+          <g class="split-row">
+            {/* Hover background strip */}
+            <rect x="460" y={rowY - 32} width="340" height="64" fill="#3B7DD8" opacity="0" class="split-row-bg" rx="4" />
+            {/* Number in gold */}
+            <text x="480" y={rowY + 6} text-anchor="start" fill="#B8893B" font-size="16" font-weight="900" letter-spacing="0.5">{r.num}</text>
+            {/* Divider dot */}
+            <circle cx="520" cy={rowY - 2} r="2.5" fill="#B8893B" />
+            {/* Discipline label */}
+            <text x="540" y={rowY + 8} text-anchor="start" fill="#0E1A2D" font-size="26" font-weight="900" letter-spacing="-0.2" class="split-row-label">{labels[locale][r.id]}</text>
+            {/* Chevron arrow tip right */}
+            <path d={`M 772 ${rowY - 6} L 784 ${rowY + 2} L 772 ${rowY + 10}`} fill="none" stroke="#3B7DD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="split-row-arrow" opacity="0.4" />
+          </g>
+        </a>
+      );
+    })}
+
+    {/* Foundation — full width */}
+    <a href="#card-data-web" data-pillar-id="data-web" aria-label={aria[locale]['data-web']}>
+      <g class="split-foundation">
+        <rect x="50" y="466" width="740" height="2.5" fill="#B8893B" class="split-found-gold" />
+        <rect x="50" y="470" width="740" height="62" fill="url(#sp-found)" class="split-found-fill" rx="4" />
+        <text x="420" y="506" text-anchor="middle" fill="#F8F7F4" font-size="22" font-weight="900" letter-spacing="10" pointer-events="none">{s.foundation}</text>
+      </g>
+    </a>
+
+    <text x="420" y="550" text-anchor="middle" fill="#0E1A2D" opacity="0.55" font-size="12" font-style="italic">{s.caption}</text>
+  </svg>
+</div>
+
+<style>
+  .variant-split :global(.split-row) {
+    transition: transform 260ms ease;
+    transform-origin: left center;
+    transform-box: fill-box;
+  }
+  .variant-split :global(.split-row-bg),
+  .variant-split :global(.split-row-arrow),
+  .variant-split :global(.split-row-label),
+  .variant-split :global(.split-glow),
+  .variant-split :global(.split-found-gold) {
+    transition: fill 240ms ease, opacity 240ms ease, filter 240ms ease, stroke 240ms ease;
+  }
+  .variant-split a { cursor: pointer; }
+  .variant-split a[data-pillar-id]:hover .split-row,
+  .variant-split a[data-pillar-id]:focus-visible .split-row,
+  .variant-split a[data-pillar-id].is-active .split-row {
+    transform: translateX(4px);
+  }
+  .variant-split a[data-pillar-id]:hover .split-row-bg,
+  .variant-split a[data-pillar-id]:focus-visible .split-row-bg,
+  .variant-split a[data-pillar-id].is-active .split-row-bg {
+    opacity: 0.08;
+  }
+  .variant-split a[data-pillar-id]:hover .split-row-arrow,
+  .variant-split a[data-pillar-id]:focus-visible .split-row-arrow,
+  .variant-split a[data-pillar-id].is-active .split-row-arrow {
+    opacity: 1;
+    stroke: #3B7DD8;
+  }
+  .variant-split a[data-pillar-id]:hover .split-row-label,
+  .variant-split a[data-pillar-id]:focus-visible .split-row-label,
+  .variant-split a[data-pillar-id].is-active .split-row-label {
+    fill: #3B7DD8;
+  }
+  .variant-split a[data-pillar-id="data-web"]:hover .split-found-gold,
+  .variant-split a[data-pillar-id="data-web"]:focus-visible .split-found-gold,
+  .variant-split a[data-pillar-id="data-web"].is-active .split-found-gold {
+    fill: #D4A44A;
+  }
+</style>
+
+<script>
+  const elements = Array.from(document.querySelectorAll<HTMLElement>('.variant-split [data-pillar-id]'));
+  const groups = new Map<string, HTMLElement[]>();
+  elements.forEach((el) => {
+    const id = el.getAttribute('data-pillar-id');
+    if (!id) return;
+    if (!groups.has(id)) groups.set(id, []);
+    groups.get(id)!.push(el);
+  });
+  groups.forEach((group) => {
+    const on = () => group.forEach((el) => el.classList.add('is-active'));
+    const off = () => group.forEach((el) => el.classList.remove('is-active'));
+    group.forEach((el) => {
+      el.addEventListener('mouseenter', on);
+      el.addEventListener('mouseleave', off);
+      el.addEventListener('focusin', on);
+      el.addEventListener('focusout', off);
+    });
+  });
+  document.querySelectorAll<HTMLAnchorElement>('.variant-split a[data-pillar-id]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const id = link.getAttribute('data-pillar-id');
+      if (!id) return;
+      const card = document.querySelector<HTMLElement>(`.pillar-card-wrapper[data-pillar-id="${id}"]`);
+      if (!card) return;
+      event.preventDefault();
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      card.classList.remove('is-flash');
+      void card.offsetWidth;
+      card.classList.add('is-flash');
+      window.setTimeout(() => card.classList.remove('is-flash'), 1500);
+    });
+  });
+</script>
