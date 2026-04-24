@@ -56,155 +56,318 @@ const strings = {
     foundation: 'DATEN & WEB',
     caption: 'Fundament jeder strategischen Entscheidung',
     title: 'Das Gebäude des digitalen Wachstums',
-    desc: 'Vier Säulen des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — getragen vom Fundament Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
+    desc: 'Technische Zeichnung: Vier Säulen des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — getragen vom Fundament Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
+    dimPillars: '4× SÄULE',
+    dimHeight: 'H',
+    titleBlockNo: 'FIG.01',
+    titleBlockText: 'GEBÄUDE DIGITALES WACHSTUM',
+    titleBlockScale: 'M 1:1',
+    calloutFoundation: 'Fundament',
   },
   'ch-de': {
     top: 'WACHSTUM',
     foundation: 'DATEN & WEB',
     caption: 'Fundament jeder strategischen Entscheidung',
     title: 'Das Gebäude des digitalen Wachstums',
-    desc: 'Vier Säulen des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — getragen vom Fundament Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
+    desc: 'Technische Zeichnung: Vier Säulen des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — getragen vom Fundament Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
+    dimPillars: '4× SÄULE',
+    dimHeight: 'H',
+    titleBlockNo: 'FIG.01',
+    titleBlockText: 'GEBÄUDE DIGITALES WACHSTUM',
+    titleBlockScale: 'M 1:1',
+    calloutFoundation: 'Fundament',
   },
   en: {
     top: 'GROWTH',
     foundation: 'DATA & WEB',
     caption: 'Foundation of every strategic decision',
     title: 'The Digital Growth Building',
-    desc: 'Four pillars of digital marketing — Search and AI Intelligence, Performance Media, Authority, and Content and Copywriting — supported by a Data and Web foundation. Hovering highlights the matching card below; clicking scrolls to it.',
+    desc: 'Technical drawing: four pillars of digital marketing — Search and AI Intelligence, Performance Media, Authority, and Content and Copywriting — supported by a Data and Web foundation. Hovering highlights the matching card below; clicking scrolls to it.',
+    dimPillars: '4× PILLAR',
+    dimHeight: 'H',
+    titleBlockNo: 'FIG.01',
+    titleBlockText: 'DIGITAL GROWTH STRUCTURE',
+    titleBlockScale: 'SCALE 1:1',
+    calloutFoundation: 'Foundation',
   },
 }[locale];
 
 const aria = pillarAria[locale];
 const labels = pillarLabels[locale];
 
-// Pillar geometry (kept stable across locales so icons + labels align)
+// Pillar geometry — stable across locales so annotations align.
+// viewBox 0 0 840 540. Drawing area with 60px margin for dimension lines.
+const pillarWidth = 110;
+const pillarHeight = 260;
+const pillarTopY = 130;
+const pillarBottomY = pillarTopY + pillarHeight;
+const foundationY = pillarBottomY + 18;
+const foundationHeight = 42;
+
 const pillars = [
-  { id: 'search-ai-intelligence', x: 90, cx: 155 },
-  { id: 'performance-media', x: 250, cx: 315 },
-  { id: 'authority-pr', x: 410, cx: 475 },
-  { id: 'content-copywriting', x: 570, cx: 635 },
+  { id: 'search-ai-intelligence', num: '01' },
+  { id: 'performance-media', num: '02' },
+  { id: 'authority-pr', num: '03' },
+  { id: 'content-copywriting', num: '04' },
 ];
+
+// Distribute pillars across the drawing area (120 .. 720 = 600px wide)
+const pillarGap = (600 - pillars.length * pillarWidth) / (pillars.length - 1);
+const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
 ---
 
 <div class="building-graphic relative">
-  <svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="building-title building-desc" class="w-full h-auto max-w-3xl mx-auto mt-8">
+  <svg
+    viewBox="0 0 840 540"
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-labelledby="building-title building-desc"
+    class="w-full h-auto max-w-3xl mx-auto mt-8"
+    style="font-family: 'Outfit', ui-sans-serif, system-ui;"
+  >
     <title id="building-title">{strings.title}</title>
     <desc id="building-desc">{strings.desc}</desc>
 
     <defs>
-      <filter id="pillar-shadow" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#0E1A2D" flood-opacity="0.12" />
-      </filter>
+      {/* Minor grid — 20px squares */}
+      <pattern id="blueprint-grid-minor" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0E1A2D" stroke-width="0.5" opacity="0.06" />
+      </pattern>
+      {/* Major grid — 100px squares */}
+      <pattern id="blueprint-grid-major" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#0E1A2D" stroke-width="0.8" opacity="0.12" />
+      </pattern>
+      {/* Diagonal hatch for foundation (concrete/ground) */}
+      <pattern id="foundation-hatch" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <line x1="0" y1="0" x2="0" y2="10" stroke="#0E1A2D" stroke-width="1.2" opacity="0.22" />
+      </pattern>
+      {/* Dimension-line arrowhead */}
+      <marker id="dim-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+        <path d="M 0 1 L 9 5 L 0 9 z" fill="#0E1A2D" opacity="0.6" />
+      </marker>
+      <marker id="dim-arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+        <path d="M 10 1 L 1 5 L 10 9 z" fill="#0E1A2D" opacity="0.6" />
+      </marker>
+      {/* Leader-line arrowhead (smaller, for callouts) */}
+      <marker id="leader-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 2 L 8 5 L 0 8 z" fill="#0E1A2D" />
+      </marker>
     </defs>
 
-    {/* Top label + accent */}
-    <text x="400" y="28" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700" letter-spacing="6">{strings.top}</text>
-    <path d="M 400 36 L 390 50 L 410 50 Z" fill="#0E1A2D" />
+    {/* Background grid */}
+    <rect width="840" height="540" fill="#F8F7F4" />
+    <rect width="840" height="540" fill="url(#blueprint-grid-minor)" />
+    <rect width="840" height="540" fill="url(#blueprint-grid-major)" />
 
-    {/* Entablature */}
-    <rect x="40" y="58" width="720" height="14" fill="#0E1A2D" rx="2" />
-    <rect x="60" y="72" width="680" height="4" fill="#3B7DD8" />
+    {/* Drawing border */}
+    <rect x="20" y="20" width="800" height="500" fill="none" stroke="#0E1A2D" stroke-width="1" opacity="0.35" />
+    <rect x="30" y="30" width="780" height="480" fill="none" stroke="#0E1A2D" stroke-width="0.5" opacity="0.25" />
 
-    {/* Pillars — each is a clickable group that scrolls to its card below */}
-    {pillars.map(({ id, x, cx }) => (
+    {/* ─── Top callout: WACHSTUM with leader line ─── */}
+    <g opacity="0.9">
+      <text x="420" y="62" text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700" letter-spacing="8">{strings.top}</text>
+      <line x1="420" y1="72" x2="420" y2="98" stroke="#0E1A2D" stroke-width="1" marker-end="url(#leader-arrow)" />
+    </g>
+
+    {/* ─── Horizontal dimension line above entablature ─── */}
+    <g stroke="#0E1A2D" stroke-width="0.7" opacity="0.55" fill="none">
+      <line x1={pillarXs[0]} y1="105" x2={pillarXs[0]} y2="118" />
+      <line x1={pillarXs[pillars.length - 1] + pillarWidth} y1="105" x2={pillarXs[pillars.length - 1] + pillarWidth} y2="118" />
+      <line x1={pillarXs[0]} y1="111" x2={pillarXs[pillars.length - 1] + pillarWidth} y2="111" marker-start="url(#dim-arrow-start)" marker-end="url(#dim-arrow)" />
+    </g>
+    <text x="420" y="108" text-anchor="middle" fill="#0E1A2D" font-size="10" font-weight="600" letter-spacing="2" opacity="0.7" style="background: #F8F7F4;">
+      <tspan dx="0" dy="0" fill="#F8F7F4" stroke="#F8F7F4" stroke-width="5" paint-order="stroke">{strings.dimPillars}</tspan>
+    </text>
+    <text x="420" y="108" text-anchor="middle" fill="#0E1A2D" font-size="10" font-weight="600" letter-spacing="2" opacity="0.7">{strings.dimPillars}</text>
+
+    {/* ─── Entablature (top beam) ─── */}
+    <rect x="90" y="118" width="660" height="8" fill="#0E1A2D" />
+    <rect x="80" y="126" width="680" height="2" fill="#0E1A2D" opacity="0.5" />
+
+    {/* ─── Left vertical dimension line for pillar height ─── */}
+    <g stroke="#0E1A2D" stroke-width="0.7" opacity="0.55" fill="none">
+      <line x1="72" y1={pillarTopY} x2="85" y2={pillarTopY} />
+      <line x1="72" y1={pillarBottomY} x2="85" y2={pillarBottomY} />
+      <line x1="78" y1={pillarTopY} x2="78" y2={pillarBottomY} marker-start="url(#dim-arrow-start)" marker-end="url(#dim-arrow)" />
+    </g>
+    <text x="62" y={pillarTopY + pillarHeight / 2} text-anchor="middle" fill="#0E1A2D" font-size="10" font-weight="600" opacity="0.7" transform={`rotate(-90 62 ${pillarTopY + pillarHeight / 2})`}>SÄULE · {strings.dimHeight}</text>
+
+    {/* ─── Pillars — outlined, with architectural capital/base ─── */}
+    {pillars.map(({ id, num }, i) => (
       <a href={`#card-${id}`} data-pillar-id={id} aria-label={aria[id]}>
         <g class="pillar-group">
-          <rect x={x} y="86" width="130" height="248" rx="4" fill="#ffffff" stroke="#3B7DD8" stroke-width="2" filter="url(#pillar-shadow)" />
-          <rect x={x} y="86" width="130" height="8" fill="#3B7DD8" rx="4" />
-          <rect x={x} y="326" width="130" height="8" fill="#3B7DD8" rx="4" />
+          {/* Capital (top detail) */}
+          <rect x={pillarXs[i] - 4} y={pillarTopY} width={pillarWidth + 8} height="6" fill="#0E1A2D" class="pillar-accent" />
+          {/* Shaft */}
+          <rect x={pillarXs[i]} y={pillarTopY + 6} width={pillarWidth} height={pillarHeight - 12} fill="#F8F7F4" stroke="#0E1A2D" stroke-width="1.2" class="pillar-shaft" />
+          {/* Inner fluting — 3 subtle vertical lines */}
+          <line x1={pillarXs[i] + pillarWidth * 0.3} y1={pillarTopY + 12} x2={pillarXs[i] + pillarWidth * 0.3} y2={pillarBottomY - 12} stroke="#0E1A2D" stroke-width="0.4" opacity="0.3" class="pillar-flute" />
+          <line x1={pillarXs[i] + pillarWidth * 0.5} y1={pillarTopY + 12} x2={pillarXs[i] + pillarWidth * 0.5} y2={pillarBottomY - 12} stroke="#0E1A2D" stroke-width="0.4" opacity="0.3" class="pillar-flute" />
+          <line x1={pillarXs[i] + pillarWidth * 0.7} y1={pillarTopY + 12} x2={pillarXs[i] + pillarWidth * 0.7} y2={pillarBottomY - 12} stroke="#0E1A2D" stroke-width="0.4" opacity="0.3" class="pillar-flute" />
+          {/* Base (bottom detail) */}
+          <rect x={pillarXs[i] - 4} y={pillarBottomY - 6} width={pillarWidth + 8} height="6" fill="#0E1A2D" class="pillar-accent" />
 
-          {/* Icon */}
-          <g transform={`translate(${cx - 14}, 118)`} fill="none" stroke="#3B7DD8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          {/* Pillar number (blueprint numbering) — circled */}
+          <circle cx={pillarXs[i] + pillarWidth / 2} cy={pillarTopY + 30} r="11" fill="#F8F7F4" stroke="#0E1A2D" stroke-width="1" class="pillar-number-ring" />
+          <text x={pillarXs[i] + pillarWidth / 2} y={pillarTopY + 34} text-anchor="middle" fill="#0E1A2D" font-size="10" font-weight="700" letter-spacing="1">{num}</text>
+
+          {/* Icon — outlined, centered */}
+          <g transform={`translate(${pillarXs[i] + pillarWidth / 2 - 16}, ${pillarTopY + 56})`} fill="none" stroke="#0E1A2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="pillar-icon">
             {id === 'search-ai-intelligence' && (
               <g>
-                <circle cx="10" cy="10" r="6.5" />
-                <line x1="14.6" y1="14.6" x2="19" y2="19" />
-                <path d="M20 4 L20.8 6 L23 6.8 L20.8 7.6 L20 10 L19.2 7.6 L17 6.8 L19.2 6 Z" fill="#3B7DD8" stroke="none" />
+                <circle cx="13" cy="13" r="8" />
+                <line x1="19" y1="19" x2="24" y2="24" />
+                <path d="M25 5 L26 8 L29 9 L26 10 L25 13 L24 10 L21 9 L24 8 Z" fill="#0E1A2D" stroke="none" />
               </g>
             )}
             {id === 'performance-media' && (
               <g>
-                <line x1="2" y1="22" x2="26" y2="22" />
-                <rect x="4" y="14" width="5" height="8" fill="none" />
-                <rect x="11.5" y="9" width="5" height="13" fill="none" />
-                <rect x="19" y="4" width="5" height="18" fill="none" />
+                <line x1="2" y1="28" x2="30" y2="28" />
+                <rect x="5" y="18" width="6" height="10" />
+                <rect x="13" y="12" width="6" height="16" />
+                <rect x="21" y="4" width="6" height="24" />
               </g>
             )}
             {id === 'authority-pr' && (
               <g>
-                <path d="M14 2 L24 5 V13 C24 19 14 24 14 24 C14 24 4 19 4 13 V5 Z" />
-                <path d="M10 13 L13 16 L18 10" />
+                <path d="M16 3 L28 7 V15 C28 22 16 28 16 28 C16 28 4 22 4 15 V7 Z" />
+                <path d="M11 15 L14 18 L20 12" />
               </g>
             )}
             {id === 'content-copywriting' && (
               <g>
-                <path d="M7 3 H17 L22 8 V24 H7 Z" />
-                <path d="M17 3 V8 H22" />
-                <line x1="11" y1="13" x2="18" y2="13" />
-                <line x1="11" y1="17" x2="18" y2="17" />
-                <line x1="11" y1="21" x2="15" y2="21" />
+                <path d="M7 3 H20 L27 10 V29 H7 Z" />
+                <path d="M20 3 V10 H27" />
+                <line x1="12" y1="16" x2="22" y2="16" />
+                <line x1="12" y1="20" x2="22" y2="20" />
+                <line x1="12" y1="24" x2="17" y2="24" />
               </g>
             )}
           </g>
 
-          {/* Label */}
+          {/* Label below icon */}
           {labels[id].length === 1 ? (
-            <text x={cx} y="230" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700">{labels[id][0]}</text>
+            <text x={pillarXs[i] + pillarWidth / 2} y={pillarTopY + 170} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700" letter-spacing="0.5" class="pillar-label">{labels[id][0]}</text>
           ) : (
             <>
-              <text x={cx} y="220" text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700">{labels[id][0]}</text>
-              <text x={cx} y="240" text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700">{labels[id][1]}</text>
+              <text x={pillarXs[i] + pillarWidth / 2} y={pillarTopY + 160} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700" letter-spacing="0.5" class="pillar-label">{labels[id][0]}</text>
+              <text x={pillarXs[i] + pillarWidth / 2} y={pillarTopY + 178} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700" letter-spacing="0.5" class="pillar-label">{labels[id][1]}</text>
             </>
           )}
+
+          {/* Leader tick at pillar base — dimension anchor */}
+          <line x1={pillarXs[i] + pillarWidth / 2} y1={pillarBottomY + 2} x2={pillarXs[i] + pillarWidth / 2} y2={pillarBottomY + 10} stroke="#0E1A2D" stroke-width="0.5" opacity="0.4" />
         </g>
       </a>
     ))}
 
-    {/* Foundation */}
+    {/* ─── Foundation — hatched, with callout ─── */}
     <a href="#card-data-web" data-pillar-id="data-web" aria-label={aria['data-web']}>
-      <g class="pillar-group">
-        <rect x="40" y="348" width="720" height="26" fill="#3B7DD8" rx="2" filter="url(#pillar-shadow)" />
-        <rect x="20" y="374" width="760" height="14" fill="#0E1A2D" rx="2" />
+      <g class="foundation-group">
+        {/* Top hatched band */}
+        <rect x="60" y={foundationY} width="720" height={foundationHeight} fill="url(#foundation-hatch)" stroke="#0E1A2D" stroke-width="1.2" class="foundation-fill" />
+        {/* Solid navy cap at bottom — bedrock */}
+        <rect x="50" y={foundationY + foundationHeight} width="740" height="10" fill="#0E1A2D" class="foundation-cap" />
 
-        {/* Foundation icon — stacked disks (database motif) */}
-        <g transform="translate(60, 351)" fill="none" stroke="#ffffff" stroke-width="1.6">
-          <ellipse cx="10" cy="3" rx="8" ry="2" />
-          <path d="M2 3 V9 C2 10 6 11 10 11 C14 11 18 10 18 9 V3" />
-          <path d="M2 9 V15 C2 16 6 17 10 17 C14 17 18 16 18 15 V9" />
+        {/* Foundation icon — outlined database stack, left of label */}
+        <g transform={`translate(102, ${foundationY + 8})`} fill="none" stroke="#F8F7F4" stroke-width="1.4">
+          <rect x="-6" y="-2" width="28" height="32" fill="#0E1A2D" opacity="0.95" />
+          <ellipse cx="8" cy="5" rx="7" ry="2" />
+          <path d="M1 5 V13 C1 14 4 15 8 15 C12 15 15 14 15 13 V5" />
+          <path d="M1 13 V21 C1 22 4 23 8 23 C12 23 15 22 15 21 V13" />
         </g>
 
-        <text x="400" y="366" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700" letter-spacing="4">{strings.foundation}</text>
+        {/* DATEN & WEB label on dark cap */}
+        <text x="420" y={foundationY + foundationHeight + 7} text-anchor="middle" fill="#F8F7F4" font-size="11" font-weight="700" letter-spacing="4">{strings.foundation}</text>
       </g>
     </a>
 
+    {/* Foundation callout (right-side annotation) */}
+    <g opacity="0.7">
+      <line x1="720" y1={foundationY + foundationHeight / 2} x2="770" y2={foundationY + foundationHeight / 2} stroke="#0E1A2D" stroke-width="0.8" marker-end="url(#leader-arrow)" />
+      <text x="768" y={foundationY + foundationHeight / 2 - 4} text-anchor="end" fill="#0E1A2D" font-size="10" font-weight="600" letter-spacing="1">{strings.calloutFoundation.toUpperCase()}</text>
+    </g>
+
     {/* Caption */}
-    <text x="400" y="414" text-anchor="middle" fill="#888888" font-size="11" font-style="italic">{strings.caption}</text>
+    <text x="420" y="488" text-anchor="middle" fill="#0E1A2D" opacity="0.55" font-size="11" font-style="italic">{strings.caption}</text>
+
+    {/* ─── Title block (bottom-right, blueprint convention) ─── */}
+    <g transform="translate(620, 498)">
+      <rect x="0" y="0" width="190" height="18" fill="none" stroke="#0E1A2D" stroke-width="0.8" opacity="0.55" />
+      <line x1="44" y1="0" x2="44" y2="18" stroke="#0E1A2D" stroke-width="0.6" opacity="0.5" />
+      <line x1="150" y1="0" x2="150" y2="18" stroke="#0E1A2D" stroke-width="0.6" opacity="0.5" />
+      <text x="22" y="12" text-anchor="middle" fill="#0E1A2D" font-size="8" font-weight="700" letter-spacing="1" opacity="0.75">{strings.titleBlockNo}</text>
+      <text x="97" y="12" text-anchor="middle" fill="#0E1A2D" font-size="8" font-weight="600" letter-spacing="1" opacity="0.65">{strings.titleBlockText}</text>
+      <text x="170" y="12" text-anchor="middle" fill="#0E1A2D" font-size="8" font-weight="600" letter-spacing="1" opacity="0.65">{strings.titleBlockScale}</text>
+    </g>
   </svg>
 </div>
 
 <style>
-  .building-graphic :global(.pillar-group) {
+  .building-graphic :global(.pillar-group),
+  .building-graphic :global(.foundation-group) {
     transition: transform 220ms ease, filter 220ms ease;
     transform-origin: center;
     transform-box: fill-box;
   }
+  .building-graphic :global(.pillar-shaft),
+  .building-graphic :global(.pillar-accent),
+  .building-graphic :global(.pillar-number-ring),
+  .building-graphic :global(.pillar-icon),
+  .building-graphic :global(.pillar-label),
+  .building-graphic :global(.pillar-flute),
+  .building-graphic :global(.foundation-fill),
+  .building-graphic :global(.foundation-cap) {
+    transition: stroke 180ms ease, fill 180ms ease, opacity 180ms ease;
+  }
   .building-graphic a {
     cursor: pointer;
   }
+
+  /* Hover: shift stroke to accent blue, lift subtly */
   .building-graphic a[data-pillar-id]:hover .pillar-group,
   .building-graphic a[data-pillar-id]:focus-visible .pillar-group,
   .building-graphic a[data-pillar-id].is-active .pillar-group {
-    transform: translateY(-6px);
-    filter: drop-shadow(0 6px 12px rgba(59, 125, 216, 0.35));
+    transform: translateY(-4px);
   }
-  .building-graphic a[data-pillar-id="data-web"]:hover .pillar-group,
-  .building-graphic a[data-pillar-id="data-web"]:focus-visible .pillar-group,
-  .building-graphic a[data-pillar-id="data-web"].is-active .pillar-group {
-    transform: translateY(-3px);
+  .building-graphic a[data-pillar-id]:hover .pillar-shaft,
+  .building-graphic a[data-pillar-id]:focus-visible .pillar-shaft,
+  .building-graphic a[data-pillar-id].is-active .pillar-shaft {
+    stroke: #3B7DD8;
+    stroke-width: 2;
   }
+  .building-graphic a[data-pillar-id]:hover .pillar-accent,
+  .building-graphic a[data-pillar-id]:focus-visible .pillar-accent,
+  .building-graphic a[data-pillar-id].is-active .pillar-accent {
+    fill: #3B7DD8;
+  }
+  .building-graphic a[data-pillar-id]:hover .pillar-icon,
+  .building-graphic a[data-pillar-id]:focus-visible .pillar-icon,
+  .building-graphic a[data-pillar-id].is-active .pillar-icon {
+    stroke: #3B7DD8;
+  }
+  .building-graphic a[data-pillar-id]:hover .pillar-number-ring,
+  .building-graphic a[data-pillar-id]:focus-visible .pillar-number-ring,
+  .building-graphic a[data-pillar-id].is-active .pillar-number-ring {
+    stroke: #3B7DD8;
+    stroke-width: 1.5;
+  }
+
+  /* Foundation hover */
+  .building-graphic a[data-pillar-id="data-web"]:hover .foundation-group,
+  .building-graphic a[data-pillar-id="data-web"]:focus-visible .foundation-group,
+  .building-graphic a[data-pillar-id="data-web"].is-active .foundation-group {
+    transform: translateY(-2px);
+  }
+  .building-graphic a[data-pillar-id="data-web"]:hover .foundation-cap,
+  .building-graphic a[data-pillar-id="data-web"]:focus-visible .foundation-cap,
+  .building-graphic a[data-pillar-id="data-web"].is-active .foundation-cap {
+    fill: #3B7DD8;
+  }
+
   .building-graphic a[data-pillar-id]:focus-visible {
     outline: 2px solid #3B7DD8;
-    outline-offset: 2px;
+    outline-offset: 3px;
     border-radius: 4px;
   }
 
@@ -228,11 +391,14 @@ const pillars = [
 
   @media (prefers-reduced-motion: reduce) {
     .building-graphic :global(.pillar-group),
+    .building-graphic :global(.foundation-group),
     :global(.pillar-card-wrapper) {
       transition: none !important;
     }
-    .building-graphic a[data-pillar-id]:hover .pillar-group,
-    .building-graphic a[data-pillar-id].is-active .pillar-group,
+    .building-graphic a:hover .pillar-group,
+    .building-graphic a:hover .foundation-group,
+    .building-graphic a.is-active .pillar-group,
+    .building-graphic a.is-active .foundation-group,
     :global(.pillar-card-wrapper.is-active),
     :global(.pillar-card-wrapper.is-flash) {
       transform: none !important;
