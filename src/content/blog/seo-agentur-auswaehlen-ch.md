@@ -11,7 +11,7 @@ faq:
   - question: "Brauche ich eine Schweizer oder deutsche SEO-Agentur?"
     answer: "Eine deutsche Agentur kann funktionieren, wenn sie Schweizer Kunden betreut, nDSG kennt, Mehrsprachigkeit versteht und für Treffen kommt. Wenn einer dieser Punkte fehlt, ist eine Schweizer Agentur sicherer."
   - question: "Was kostet eine gute SEO-Agentur in der Schweiz?"
-    answer: "Lokales KMU: CHF 3.000–5.000/Monat. Regulierte Branchen: CHF 5.000–10.000/Monat. Nationale, mehrsprachige Strategien: CHF 8.000–15.000/Monat."
+    answer: "Lokales KMU: 3'000–5'000 CHF/Monat. Regulierte Branchen: 5'000–10'000 CHF/Monat. Nationale, mehrsprachige Strategien: 8'000–15'000 CHF/Monat."
   - question: "Wie lange sollte ich mich binden?"
     answer: "90-Tage-Erstlaufzeit, danach monatliche Kündbarkeit. Bei Schweizer Preisen sollte die Agentur nach 90 Tagen messbare Fortschritte zeigen."
   - question: "Kann ich SEO intern machen?"
@@ -31,7 +31,7 @@ Der Schweizer SEO-Markt ist klein und spezialisiert. Es gibt weniger Anbieter al
 Die häufigsten Probleme, die wir bei Schweizer Unternehmen sehen:
 
 1. **Deutsche Agentur ohne Schweizer Kompetenz** — Implementiert DSGVO statt nDSG, versteht die Mehrsprachigkeit nicht, kennt die lokalen Verzeichnisse (local.ch, search.ch) nicht.
-2. **Set-and-Forget nach dem Erstaudit** — Liefert ein umfassendes Audit ab, dann passiert monatelang nichts. Die CHF 5.000/Monat fliessen, aber die Sichtbarkeit stagniert.
+2. **Set-and-Forget nach dem Erstaudit** — Liefert ein umfassendes Audit ab, dann passiert monatelang nichts. Die 5'000 CHF/Monat fliessen, aber die Sichtbarkeit stagniert.
 3. **Fehlende persönliche Betreuung** — Rein digitale Kommunikation, kein namentlicher Ansprechpartner, keine Bereitschaft für ein Treffen in Zürich, Bern oder Basel.
 
 ---
@@ -95,7 +95,7 @@ Wo werden Ihre Daten verarbeitet? Für regulierte Branchen (Banking, Versicherun
 - **„Wir garantieren Platz 1"** — In der Schweiz wie überall: unseriös
 - **Kein persönlicher Ansprechpartner** — Für den Schweizer Markt inakzeptabel
 - **Nur einsprachig** — Wenn Ihr Geschäft mehrere Sprachregionen bedient und die Agentur nur DE kann
-- **Preise deutlich unter Markt** — Unter CHF 2.500/Monat wird in der Schweiz kein professionelles SEO geliefert
+- **Preise deutlich unter Markt** — Unter 2'500 CHF/Monat wird in der Schweiz kein professionelles SEO geliefert
 
 ---
 

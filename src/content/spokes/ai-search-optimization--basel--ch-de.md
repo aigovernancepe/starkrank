@@ -38,7 +38,7 @@ deliverables:
   - "nDSG-konforme Umsetzung aller Tracking- und Monitoring-Massnahmen"
 faq:
   - question: "Was kostet KI-Suchoptimierung in Basel?"
-    answer: "Die kostenlose Erstbewertung (2 Dimensionen) ist unverbindlich. Das umfassende 6-Dimensionen-Audit beginnt ab CHF 4.000. Laufende Optimierung ab CHF 5.000/Monat."
+    answer: "Die kostenlose Erstbewertung (2 Dimensionen) ist unverbindlich. Das umfassende 6-Dimensionen-Audit beginnt ab 4'000 CHF. Laufende Optimierung ab 5'000 CHF/Monat."
   - question: "Wie lange dauert es, bis mein Unternehmen in KI-Suchergebnissen erscheint?"
     answer: "Technische Grundlagen werden in 4-8 Wochen implementiert. Markenentität und Zitationsaufbau benötigen 3-6 Monate. Die meisten Kunden sehen eine Verbesserung von 15-25 Punkten in den ersten 90 Tagen."
   - question: "Können Sie mit unserer bestehenden SEO-Agentur zusammenarbeiten?"

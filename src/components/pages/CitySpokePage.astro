@@ -170,7 +170,7 @@ const pricingSignals: Record<string, string> = {
   en: 'Free 2-dimension assessment available. Comprehensive audit from $3,000.',
   pe: 'Evaluación gratuita de 2 dimensiones disponible. Auditoría completa desde S/ 3,500.',
   de: 'Kostenlose Erstbewertung (2 Dimensionen) verfügbar. Umfassendes Audit ab €3.000.',
-  'ch-de': 'Kostenlose Erstbewertung (2 Dimensionen) verfügbar. Umfassendes Audit ab CHF 4.000.',
+  'ch-de': 'Kostenlose Erstbewertung (2 Dimensionen) verfügbar. Umfassendes Audit ab 4\'000 CHF.',
 };
 const pricingSignal = pricingSignals[locale] ?? pricingSignals.en;
 
@@ -283,7 +283,7 @@ const tierData: Record<string, { freeLabel: string; auditLabel: string; rows: Ti
       { feature: 'Wettbewerbsvergleich', free: false, audit: true },
       { feature: '90-Tage-Roadmap', free: false, audit: true },
     ],
-    freePrice: 'Kostenlos', auditPrice: 'Ab CHF 4.000',
+    freePrice: 'Kostenlos', auditPrice: 'Ab 4\'000 CHF',
     freeHref: '/ch-de/aiso-check/', auditHref: '/ch-de/kontakt/',
     freeCta: 'Jetzt prüfen →', auditCta: 'Audit anfordern →',
   },
