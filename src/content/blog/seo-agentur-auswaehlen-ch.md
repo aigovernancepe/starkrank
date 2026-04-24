@@ -56,7 +56,7 @@ Für viele Schweizer Entscheider ist ein persönliches Treffen vor der Beauftrag
 
 ### 5. „Wie gehen Sie mit revDSG und Consent Mode um?"
 
-Das ist der Schweiz-spezifische Lackmustest. Die Agentur muss den Unterschied zwischen revDSG und DSGVO erklären können: andere Rechtsgrundlagen, EDÖB als Aufsichtsbehörde, eigene Anforderungen an Cookie-Einwilligungen. Wenn sie nur „Wir machen DSGVO" sagt, versteht sie den Schweizer Markt nicht.
+Das ist der Schweiz-spezifische Lackmustest. Die Agentur muss den Unterschied zwischen revDSG und DSGVO erklären können: andere Rechtsgrundlagen, EDÖB als Aufsichtsbehörde, eigene Anforderungen an Cookie-Einwilligungen. Wenn sie nur „Wir machen DSGVO" sagt, versteht sie den Schweizer Markt nicht. Mehr zur Datenverarbeitung bei uns finden Sie in unserer [Datenschutzerklärung](/ch-de/datenschutz/).
 
 ### 6. „Wie handhaben Sie Mehrsprachigkeit?"
 
@@ -68,7 +68,7 @@ In der Schweiz sind 90-Tage-Erstlaufzeiten angemessen. Monatliche Kündbarkeit d
 
 ### 8. „Wie gehen Sie mit KI-Suche um?"
 
-ChatGPT und Google AI Overviews gewinnen auch in der Deutschschweiz an Bedeutung. Schweizer Unternehmen, insbesondere in beratungsintensiven Branchen (Private Banking, Recht, Treuhand), müssen sicherstellen, dass ihre Agentur einen Ansatz für KI-Suchoptimierung hat — nicht nur klassisches Google-SEO.
+ChatGPT und Google AI Overviews gewinnen auch in der Deutschschweiz an Bedeutung. Schweizer Unternehmen, insbesondere in beratungsintensiven Branchen (Private Banking, Recht, Treuhand), müssen sicherstellen, dass ihre Agentur einen Ansatz für KI-Suchoptimierung hat — nicht nur klassisches Google-SEO. Mit unserem [kostenlosen AISO-Check](/ch-de/aiso-check/) bewerten wir Ihre KI-Suchbereitschaft in zwei Dimensionen.
 
 ---
 
