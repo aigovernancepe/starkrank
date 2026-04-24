@@ -26,6 +26,20 @@
 # same intent cluster, one canonical page to concentrate authority.
 /ch-de/seo-schweiz/                  /ch-de/seo-agentur-schweiz/                 301
 
+# ─── Content-review Batch 1 (2026-04-24): retire US YMYL vertical pages ──────
+# Five Florida-statute-citing US-vertical pages (dentists, law firms, med spas,
+# home services, auto services) survived the Phase 1 DACH pivot as stranded
+# content. Retired 2026-04-24 per retroactive-content-review G1 finding.
+# Redirect to /en/services/ hub to consolidate any residual inbound traffic —
+# these pages have thin search presence so loss is negligible, but avoid 404.
+# Must sit ABOVE the generic /services/:slug/ rule further down or that rule
+# would win and land on a now-nonexistent page.
+/en/services/seo-for-dentists/       /en/services/                               301
+/en/services/seo-for-law-firms/      /en/services/                               301
+/en/services/seo-for-med-spas/       /en/services/                               301
+/en/services/seo-for-home-services/  /en/services/                               301
+/en/services/seo-for-auto-services/  /en/services/                               301
+
 # ─── Old /de/ paths → root (new DE home) ──────────────────────────
 # Blog tree stays at /de/blog/* (intentional — do not redirect).
 /de/ueber-uns/                       /ueber-uns/                                 301

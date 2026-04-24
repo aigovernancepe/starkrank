@@ -17,8 +17,6 @@ features:
 relatedServices:
   - "ai-search-optimization"
   - "local-seo-consulting"
-  - "seo-for-dentists"
-  - "seo-for-law-firms"
   - "content-marketing"
 faq:
   - question: "How many locations do I need to qualify for multi-location SEO?"
