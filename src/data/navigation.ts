@@ -146,6 +146,27 @@ export function getLocalizedAudits(locale: Locale): NavItem[] {
 }
 
 /**
+ * Services with a DE service-hub page at /services/<slug>/.
+ * Kept in sync with src/content/service-hubs/*--de.md. When a new DE hub ships,
+ * add its slug here so the mega-menu routes to the hub instead of the default
+ * Hannover spoke. AISO is intentionally absent — it routes to /aiso-check/.
+ */
+const deServiceHubs = new Set<string>([
+  'technical-seo-audit',
+  'local-seo-consulting',
+  'google-ads-management',
+  'google-ads-audit',
+  'paid-social-strategy',
+  'authority-link-building',
+  'content-marketing',
+  'seo-copywriting',
+  'copywriting-audit',
+  'audience-persona-mapping',
+  'technical-web-design',
+  'google-analytics-consultancy',
+]);
+
+/**
  * Prefix a root-relative path with the locale's URL namespace.
  * DE is served at root (no prefix); EN at /en/*; CH-DE at /ch-de/*.
  */
@@ -193,13 +214,20 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
   }
 
   // Individual service pages → flat locale page first (for non-city-scoped services),
-  // then the city spoke in the default city, else fall through to EN cross-locale.
+  // DE service hub, else the city spoke in the default city, else fall through to EN cross-locale.
   const serviceMatch = href.match(/^\/services\/([^/]+)\/$/);
   if (serviceMatch) {
     const serviceSlug = serviceMatch[1];
 
     // EN locale: services live at /en/services/{slug}/
     if (locale === 'en') return `/en${href}`;
+
+    // DE locale: route AISO to the lead-magnet page (no dedicated DE hub by design),
+    // and services with a DE hub to their /services/<slug>/ page.
+    if (locale === 'de') {
+      if (serviceSlug === 'ai-search-optimization') return '/aiso-check/';
+      if (deServiceHubs.has(serviceSlug)) return `/services/${serviceSlug}/`;
+    }
 
     const flatSlug = getFlatLocaleSlug(serviceSlug, locale);
     if (flatSlug !== null) {

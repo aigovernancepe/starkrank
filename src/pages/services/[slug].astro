@@ -1,0 +1,271 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Card from '../../components/ui/Card.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import { getCollection, render } from 'astro:content';
+import { getPillarById, getLocalizedPillars } from '../../data/pillars';
+import { getSpokePath } from '../../data/service-slugs';
+import { getEffectiveUpdatedDate } from '../../utils/getLastModified';
+import { t } from '../../utils/i18n';
+
+export async function getStaticPaths() {
+  const hubs = await getCollection('serviceHubs', (h) => h.data.locale === 'de');
+  const services = await getCollection('services');
+
+  return hubs
+    .map((hub) => {
+      const service = services.find((s) => s.data.slug === hub.data.serviceSlug);
+      if (!service) return null;
+      return {
+        params: { slug: hub.data.serviceSlug },
+        props: { hub, service },
+      };
+    })
+    .filter((p): p is NonNullable<typeof p> => p !== null);
+}
+
+const { hub, service } = Astro.props;
+const { Content } = await render(hub);
+
+const localizedTitle = hub.data.title ?? t(`service.${service.data.slug}`, 'de');
+const pillar = getPillarById(service.data.pillar);
+const localizedPillars = getLocalizedPillars('de');
+const localizedPillar = pillar ? localizedPillars.find((p) => p.id === pillar.id) : null;
+
+const allServices = await getCollection('services');
+const relatedServices = service.data.relatedServices
+  ? allServices
+      .filter((s) => service.data.relatedServices!.includes(s.data.slug))
+      .map((s) => ({
+        slug: s.data.slug,
+        title: t(`service.${s.data.slug}`, 'de'),
+      }))
+  : [];
+
+// DE cities that offer this service — for "Verfügbar in" block.
+// Locale purity: DE hubs link only to DE spokes. Each locale gets its own hub family.
+const allCities = await getCollection('cities');
+const deCities = allCities
+  .filter((c) => c.data.locale === 'de' && c.data.services.includes(service.data.slug))
+  .map((c) => ({
+    city: c.data.city,
+    href: `/${getSpokePath(service.data.slug, c.data.citySlug, 'de')}/`,
+  }));
+
+const effectiveDate = getEffectiveUpdatedDate(hub.filePath, hub.data.updatedDate);
+
+const site = Astro.site?.origin ?? 'https://starkrank.com';
+const pageUrl = `${site}/services/${service.data.slug}/`;
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: localizedTitle,
+  description: hub.data.description,
+  provider: { '@id': 'https://starkrank.com/#organization' },
+  areaServed: [
+    { '@type': 'Country', name: 'Deutschland' },
+    { '@type': 'Country', name: 'Schweiz' },
+  ],
+  url: pageUrl,
+};
+
+const faq = hub.data.faq ?? [];
+const faqSchema = faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+} : null;
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Startseite', item: `${site}/` },
+    { '@type': 'ListItem', position: 2, name: 'Dienstleistungen', item: `${site}/services/` },
+    { '@type': 'ListItem', position: 3, name: localizedTitle, item: pageUrl },
+  ],
+};
+
+const howToSchema = hub.data.processSteps && hub.data.processSteps.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: `Ablauf: ${localizedTitle} bei StarkRank`,
+  description: hub.data.description,
+  ...(hub.data.processTotalTime ? { totalTime: hub.data.processTotalTime } : {}),
+  step: hub.data.processSteps.map((s, i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: s.name,
+    text: s.description,
+    ...(s.tools && s.tools.length > 0 ? {
+      tool: s.tools.map((name) => ({ '@type': 'HowToTool', name })),
+    } : {}),
+  })),
+} : null;
+
+const schemas = [
+  serviceSchema,
+  breadcrumbSchema,
+  ...(faqSchema ? [faqSchema] : []),
+  ...(howToSchema ? [howToSchema] : []),
+];
+
+const breadcrumbs = [
+  { label: 'Startseite', href: '/' },
+  { label: 'Dienstleistungen', href: '/services/' },
+  { label: localizedTitle, href: `/services/${service.data.slug}/` },
+];
+
+// Hreflang: self + EN cross-locale (the /en/services/[slug] catch-all covers all of these)
+const hreflangAlternates = [
+  { hreflang: 'de-DE', href: pageUrl },
+  { hreflang: 'en', href: `${site}/en/services/${service.data.slug}/` },
+  { hreflang: 'x-default', href: pageUrl },
+];
+---
+
+<BaseLayout
+  title={`${localizedTitle} — StarkRank`}
+  description={hub.data.description}
+  locale="de"
+  schema={schemas}
+  hreflangAlternates={hreflangAlternates}
+>
+  <Section bg="cream">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2">
+        {localizedPillar && (
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+            {localizedPillar.tagline}
+          </span>
+        )}
+        <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+          {localizedTitle}
+        </h1>
+        {hub.data.heroLede && (
+          <p class="mt-4 text-lg text-gray font-body leading-relaxed">
+            {hub.data.heroLede}
+          </p>
+        )}
+
+        <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+          <span>
+            Zuletzt aktualisiert: <time datetime={effectiveDate.toISOString().split('T')[0]}>
+              {effectiveDate.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })}
+            </time>
+          </span>
+          <span>
+            Von <a href="/ueber-uns/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
+          </span>
+        </div>
+
+        <div class="mt-8 prose prose-lg max-w-none font-body text-dark prose-numbered-cards prose-branded-bullets
+          [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:font-headline [&>h2]:font-black [&>h2]:text-navy [&>h2]:tracking-tight [&>h2]:mt-14 [&>h2]:mb-4 [&>h2]:pt-6 [&>h2]:border-t [&>h2]:border-gray-light/30
+          [&>p]:leading-relaxed [&>p]:text-gray [&>p]:mb-6
+          [&_strong]:text-dark
+          [&_a]:text-blue [&_a]:font-semibold [&_a:hover]:text-blue-light
+          first:[&>h2]:mt-0 first:[&>h2]:pt-0 first:[&>h2]:border-t-0
+          [&>ol]:space-y-4
+          [&>ol>li]:bg-white [&>ol>li]:border [&>ol>li]:border-gray-light/40 [&>ol>li]:rounded-lg [&>ol>li]:p-5 [&>ol>li]:text-gray [&>ol>li]:text-base [&>ol>li]:leading-relaxed
+          [&>ul]:space-y-3
+          [&>ul>li]:text-gray [&>ul>li]:text-base [&>ul>li]:leading-relaxed
+          [&_table]:my-8 [&_table]:w-full [&_table]:border-collapse [&_table]:text-sm [&_table]:bg-white [&_table]:border [&_table]:border-gray-light/40 [&_table]:rounded-lg [&_table]:overflow-hidden
+          [&_thead]:bg-cream [&_thead]:border-b-2 [&_thead]:border-navy/20
+          [&_th]:text-left [&_th]:font-headline [&_th]:font-bold [&_th]:text-navy [&_th]:px-4 [&_th]:py-3 [&_th]:align-top
+          [&_tbody_tr]:border-b [&_tbody_tr]:border-gray-light/30 [&_tbody_tr:last-child]:border-b-0
+          [&_td]:px-4 [&_td]:py-3 [&_td]:text-gray [&_td]:leading-relaxed [&_td]:align-top
+          [&_td:first-child]:font-semibold [&_td:first-child]:text-dark">
+          <Content />
+        </div>
+
+        <div class="mt-12">
+          <Button href="/kontakt/" variant="primary" size="lg">Kostenlose Erstberatung anfordern</Button>
+        </div>
+      </div>
+
+      <aside class="lg:col-span-1">
+        <div class="lg:sticky lg:top-8 space-y-8">
+          {deCities.length > 0 && (
+            <div>
+              <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Verfügbar in</h3>
+              <div class="space-y-3">
+                {deCities.slice(0, 3).map((c) => (
+                  <Card href={c.href}>
+                    <h4 class="text-sm font-headline font-bold text-navy">{localizedTitle} in {c.city}</h4>
+                  </Card>
+                ))}
+              </div>
+              {deCities.length > 3 && (
+                <details class="group mt-3">
+                  <summary class="cursor-pointer list-none text-xs font-label font-semibold uppercase tracking-wide text-blue hover:text-blue-light flex items-center gap-1">
+                    <span class="group-open:hidden">Weitere Standorte ({deCities.length - 3})</span>
+                    <span class="hidden group-open:inline">Weniger anzeigen</span>
+                    <svg class="w-3 h-3 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </summary>
+                  <div class="mt-3 space-y-3">
+                    {deCities.slice(3).map((c) => (
+                      <Card href={c.href}>
+                        <h4 class="text-sm font-headline font-bold text-navy">{localizedTitle} in {c.city}</h4>
+                      </Card>
+                    ))}
+                  </div>
+                </details>
+              )}
+            </div>
+          )}
+
+          {relatedServices.length > 0 && (
+            <div>
+              <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Verwandte Dienstleistungen</h3>
+              <div class="space-y-3">
+                {relatedServices.map((r) => (
+                  <Card href={`/services/${r.slug}/`}>
+                    <h4 class="text-sm font-headline font-bold text-navy">{r.title}</h4>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </aside>
+    </div>
+  </Section>
+
+  {faq.length > 0 && (
+    <Section bg="white">
+      <SectionHeader label="FAQ" title="Häufig gestellte Fragen" />
+      <div class="max-w-3xl space-y-6">
+        {faq.map((item) => (
+          <details class="group bg-cream border border-gray-light/40 rounded-lg">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer p-6 font-headline font-bold text-navy text-base md:text-lg select-none">
+              {item.question}
+              <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-sm font-body text-gray leading-relaxed">
+              {item.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </Section>
+  )}
+
+  <CTABanner bg="navy" title="Bereit für datenbasiertes Wachstum?" subtitle="Kostenlose Erstberatung — wir prüfen Ihre aktuelle Situation und skizzieren die nächsten Schritte.">
+    <Button href="/kontakt/" variant="primary" size="lg">Jetzt Termin anfragen</Button>
+  </CTABanner>
+</BaseLayout>

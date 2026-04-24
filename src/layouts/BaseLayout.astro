@@ -15,6 +15,7 @@ interface Props {
   canonical?: string;
   schema?: Record<string, unknown> | Record<string, unknown>[];
   noViewTransitions?: boolean;
+  hreflangAlternates?: Array<{ hreflang: string; href: string }>;
 }
 
 const {
@@ -25,12 +26,13 @@ const {
   canonical,
   schema,
   noViewTransitions = false,
+  hreflangAlternates,
 } = Astro.props;
 
 const lang = getLangAttribute(locale);
 const site = Astro.site?.origin ?? 'https://starkrank.com';
 const canonicalUrl = canonical ?? `${site}${Astro.url.pathname}`;
-const alternates = getHreflangAlternates(Astro.url.pathname, site);
+const alternates = hreflangAlternates ?? getHreflangAlternates(Astro.url.pathname, site);
 const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
 ---
 
