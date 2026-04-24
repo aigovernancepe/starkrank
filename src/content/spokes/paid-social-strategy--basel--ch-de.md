@@ -16,8 +16,8 @@ highlights:
     description: "Geo-Targeting über Landesgrenzen hinweg: Wir erreichen Zielgruppen in der Schweiz, Süddeutschland und dem Elsass mit länderspezifischen Kampagnenstrukturen und Gebotsanpassungen."
   - title: "Retargeting und Funnel-Aufbau"
     description: "Mehrstufige Retargeting-Sequenzen über LinkedIn, Meta und TikTok — vom ersten Kontakt bis zur Conversion. Custom Audiences basierend auf Website-Verhalten, CRM-Daten und Lookalike-Modellen."
-  - title: "nDSG-konformes Tracking"
-    description: "Server-Side-Tagging, Consent-Mode-Integration und datenschutzkonforme Pixel-Implementierung — vollständig konform mit dem revidierten nDSG für alle Social-Media-Plattformen."
+  - title: "revDSG-konformes Tracking"
+    description: "Server-Side-Tagging, Consent-Mode-Integration und datenschutzkonforme Pixel-Implementierung — vollständig konform mit dem revidierten revDSG für alle Social-Media-Plattformen."
 sectorsTitle: "Welche Basler Branchen profitieren am meisten von Paid Social?"
 sectors:
   - name: "Pharma und Life Sciences"
@@ -34,7 +34,7 @@ deliverables:
   - "Mehrsprachige Kreativbriefings (DE/FR/EN) für alle Plattformen"
   - "LinkedIn-Kampagnenarchitektur mit B2B-Targeting-Strategie"
   - "Monatliche Performance-Reports mit CPL, Engagement-Raten und Conversion-Metriken"
-  - "nDSG-konforme Tracking-Implementierung für alle Social-Plattformen"
+  - "revDSG-konforme Tracking-Implementierung für alle Social-Plattformen"
 ---
 
 ## Warum ist LinkedIn für Basler B2B-Unternehmen unverzichtbar?

@@ -1,6 +1,6 @@
 ---
 title: "SEO-Agentur auswählen: Tipps für Schweizer KMU"
-description: "Woran Sie eine gute SEO-Agentur in der Schweiz erkennen — 8 Prüfkriterien inkl. nDSG-Kompetenz, Mehrsprachigkeit und persönlicher Betreuung."
+description: "Woran Sie eine gute SEO-Agentur in der Schweiz erkennen — 8 Prüfkriterien inkl. revDSG-Kompetenz, Mehrsprachigkeit und persönlicher Betreuung."
 pubDate: 2026-03-05
 updatedDate: 2026-03-05
 author: "Wilko Feye"
@@ -9,7 +9,7 @@ locale: "ch-de"
 category: "SEO-Strategie"
 faq:
   - question: "Brauche ich eine Schweizer oder deutsche SEO-Agentur?"
-    answer: "Eine deutsche Agentur kann funktionieren, wenn sie Schweizer Kunden betreut, nDSG kennt, Mehrsprachigkeit versteht und für Treffen kommt. Wenn einer dieser Punkte fehlt, ist eine Schweizer Agentur sicherer."
+    answer: "Eine deutsche Agentur kann funktionieren, wenn sie Schweizer Kunden betreut, revDSG kennt, Mehrsprachigkeit versteht und für Treffen kommt. Wenn einer dieser Punkte fehlt, ist eine Schweizer Agentur sicherer."
   - question: "Was kostet eine gute SEO-Agentur in der Schweiz?"
     answer: "Lokales KMU: 3'000–5'000 CHF/Monat. Regulierte Branchen: 5'000–10'000 CHF/Monat. Nationale, mehrsprachige Strategien: 8'000–15'000 CHF/Monat."
   - question: "Wie lange sollte ich mich binden?"
@@ -20,7 +20,7 @@ faq:
     answer: "Sichern Sie alle Account-Zugänge, lassen Sie ein unabhängiges Audit durchführen, und vergleichen Sie die Pflichtenheft beider Agenturen."
 ---
 
-Die Wahl einer SEO-Agentur erfordert in der Schweiz zusätzliche Sorgfalt. Neben den üblichen Qualitätskriterien kommen Schweiz-spezifische Anforderungen hinzu: nDSG-Compliance, Mehrsprachigkeit (DE/FR/IT), die Erwartung persönlicher Betreuung und ein Qualitätsverständnis, das über das hinausgeht, was im DACH-Raum anderswo Standard ist. Dieser Leitfaden gibt Ihnen 8 konkrete Prüfkriterien — plus 3 Schweizer Zusatzprüfungen, die den Unterschied zwischen einer guten und einer für Ihr Unternehmen geeigneten Agentur ausmachen.
+Die Wahl einer SEO-Agentur erfordert in der Schweiz zusätzliche Sorgfalt. Neben den üblichen Qualitätskriterien kommen Schweiz-spezifische Anforderungen hinzu: revDSG-Compliance, Mehrsprachigkeit (DE/FR/IT), die Erwartung persönlicher Betreuung und ein Qualitätsverständnis, das über das hinausgeht, was im DACH-Raum anderswo Standard ist. Dieser Leitfaden gibt Ihnen 8 konkrete Prüfkriterien — plus 3 Schweizer Zusatzprüfungen, die den Unterschied zwischen einer guten und einer für Ihr Unternehmen geeigneten Agentur ausmachen.
 
 ---
 
@@ -30,7 +30,7 @@ Der Schweizer SEO-Markt ist klein und spezialisiert. Es gibt weniger Anbieter al
 
 Die häufigsten Probleme, die wir bei Schweizer Unternehmen sehen:
 
-1. **Deutsche Agentur ohne Schweizer Kompetenz** — Implementiert DSGVO statt nDSG, versteht die Mehrsprachigkeit nicht, kennt die lokalen Verzeichnisse (local.ch, search.ch) nicht.
+1. **Deutsche Agentur ohne Schweizer Kompetenz** — Implementiert DSGVO statt revDSG, versteht die Mehrsprachigkeit nicht, kennt die lokalen Verzeichnisse (local.ch, search.ch) nicht.
 2. **Set-and-Forget nach dem Erstaudit** — Liefert ein umfassendes Audit ab, dann passiert monatelang nichts. Die 5'000 CHF/Monat fliessen, aber die Sichtbarkeit stagniert.
 3. **Fehlende persönliche Betreuung** — Rein digitale Kommunikation, kein namentlicher Ansprechpartner, keine Bereitschaft für ein Treffen in Zürich, Bern oder Basel.
 
@@ -44,7 +44,7 @@ Nicht eine deutsche Fallstudie — ein Schweizer Unternehmen. Sie möchten sehen
 
 ### 2. „Was genau tun Sie in Monat 1?"
 
-Die Antwort muss spezifisch sein: Technisches Audit → nDSG-Compliance-Check → Keyword-Recherche pro Sprache → Content-Plan → Google-Profil-Optimierung. „Wir beginnen mit der Optimierung" reicht nicht. Fordern Sie eine detaillierte Leistungsbeschreibung (Pflichtenheft) mit Meilensteinen.
+Die Antwort muss spezifisch sein: Technisches Audit → revDSG-Compliance-Check → Keyword-Recherche pro Sprache → Content-Plan → Google-Profil-Optimierung. „Wir beginnen mit der Optimierung" reicht nicht. Fordern Sie eine detaillierte Leistungsbeschreibung (Pflichtenheft) mit Meilensteinen.
 
 ### 3. „Wer ist mein persönlicher Ansprechpartner?"
 
@@ -54,9 +54,9 @@ In der Schweiz ist ein namentlicher Ansprechpartner keine Zusatzleistung — er 
 
 Für viele Schweizer Entscheider ist ein persönliches Treffen vor der Beauftragung obligatorisch — in Zürich, Bern, Basel oder Luzern. Eine Agentur, die nicht bereit ist, für ein Erstgespräch in die Schweiz zu kommen (oder keinen Schweizer Standort hat), signalisiert, dass persönliche Betreuung nicht zu ihrem Modell gehört.
 
-### 5. „Wie gehen Sie mit nDSG und Consent Mode um?"
+### 5. „Wie gehen Sie mit revDSG und Consent Mode um?"
 
-Das ist der Schweiz-spezifische Lackmustest. Die Agentur muss den Unterschied zwischen nDSG und DSGVO erklären können: andere Rechtsgrundlagen, EDÖB als Aufsichtsbehörde, eigene Anforderungen an Cookie-Einwilligungen. Wenn sie nur „Wir machen DSGVO" sagt, versteht sie den Schweizer Markt nicht.
+Das ist der Schweiz-spezifische Lackmustest. Die Agentur muss den Unterschied zwischen revDSG und DSGVO erklären können: andere Rechtsgrundlagen, EDÖB als Aufsichtsbehörde, eigene Anforderungen an Cookie-Einwilligungen. Wenn sie nur „Wir machen DSGVO" sagt, versteht sie den Schweizer Markt nicht.
 
 ### 6. „Wie handhaben Sie Mehrsprachigkeit?"
 
@@ -90,7 +90,7 @@ Wo werden Ihre Daten verarbeitet? Für regulierte Branchen (Banking, Versicherun
 
 ## Welche Warnsignale sind Ausschlusskriterien?
 
-- **Nur DSGVO-Kompetenz, kein nDSG** — Die Agentur kennt den Schweizer Markt nicht
+- **Nur DSGVO-Kompetenz, kein revDSG** — Die Agentur kennt den Schweizer Markt nicht
 - **Keine Schweizer Referenzen** — Ungeprüfte Behauptung von Marktkenntnis
 - **„Wir garantieren Platz 1"** — In der Schweiz wie überall: unseriös
 - **Kein persönlicher Ansprechpartner** — Für den Schweizer Markt inakzeptabel
@@ -101,7 +101,7 @@ Wo werden Ihre Daten verarbeitet? Für regulierte Branchen (Banking, Versicherun
 
 ## Wie beurteilen Sie die Ergebnisse nach Beauftragung?
 
-**Monat 1–2**: Technisches Audit, nDSG-Compliance-Check, Keyword-Recherche pro Sprache, Google Unternehmensprofil optimiert. Sie verstehen den Plan.
+**Monat 1–2**: Technisches Audit, revDSG-Compliance-Check, Keyword-Recherche pro Sprache, Google Unternehmensprofil optimiert. Sie verstehen den Plan.
 
 **Monat 3–4**: Rankingbewegungen für Ziel-Keywords, neue Inhalte veröffentlicht, erste Verbesserungen in der Search Console sichtbar.
 
