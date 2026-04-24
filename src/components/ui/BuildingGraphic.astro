@@ -5,24 +5,24 @@ interface Props {
 
 const { locale } = Astro.props;
 
-const pillarLabels: Record<string, Record<string, string[]>> = {
+const pillarLabels: Record<string, Record<string, string>> = {
   de: {
-    'search-ai-intelligence': ['Suche', '& KI'],
-    'performance-media': ['Performance', 'Media'],
-    'authority-pr': ['Autorität'],
-    'content-copywriting': ['Content'],
+    'search-ai-intelligence': 'Suche & KI',
+    'performance-media': 'Performance Media',
+    'authority-pr': 'Autorität',
+    'content-copywriting': 'Content',
   },
   'ch-de': {
-    'search-ai-intelligence': ['Suche', '& KI'],
-    'performance-media': ['Performance', 'Media'],
-    'authority-pr': ['Autorität'],
-    'content-copywriting': ['Content'],
+    'search-ai-intelligence': 'Suche & KI',
+    'performance-media': 'Performance Media',
+    'authority-pr': 'Autorität',
+    'content-copywriting': 'Content',
   },
   en: {
-    'search-ai-intelligence': ['Search', '& AI'],
-    'performance-media': ['Performance', 'Media'],
-    'authority-pr': ['Authority'],
-    'content-copywriting': ['Content'],
+    'search-ai-intelligence': 'Search & AI',
+    'performance-media': 'Performance Media',
+    'authority-pr': 'Authority',
+    'content-copywriting': 'Content',
   },
 };
 
@@ -55,68 +55,76 @@ const strings = {
     top: 'WACHSTUM',
     foundation: 'DATEN & WEB',
     caption: 'Fundament jeder strategischen Entscheidung',
-    title: 'Das Gebäude des digitalen Wachstums',
-    desc: 'Technische Zeichnung: Vier Säulen des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — getragen vom Fundament Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
-    dimPillars: '4× SÄULE',
-    dimHeight: 'SÄULE',
-    titleBlockNo: 'FIG.01',
-    titleBlockText: 'GEBÄUDE DIGITALES WACHSTUM',
-    titleBlockScale: 'M 1:1',
-    calloutFoundation: 'Fundament',
+    title: 'Wachstumsströme aus Daten und Web',
+    desc: 'Abstrakte Grafik: Vier aufsteigende Ströme — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — konvergieren in einem Wachstumspunkt. Sie entspringen einem Fundament aus Daten und Web. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
   },
   'ch-de': {
     top: 'WACHSTUM',
     foundation: 'DATEN & WEB',
     caption: 'Fundament jeder strategischen Entscheidung',
-    title: 'Das Gebäude des digitalen Wachstums',
-    desc: 'Technische Zeichnung: Vier Säulen des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — getragen vom Fundament Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
-    dimPillars: '4× SÄULE',
-    dimHeight: 'SÄULE',
-    titleBlockNo: 'FIG.01',
-    titleBlockText: 'GEBÄUDE DIGITALES WACHSTUM',
-    titleBlockScale: 'M 1:1',
-    calloutFoundation: 'Fundament',
+    title: 'Wachstumsströme aus Daten und Web',
+    desc: 'Abstrakte Grafik: Vier aufsteigende Ströme — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — konvergieren in einem Wachstumspunkt. Sie entspringen einem Fundament aus Daten und Web. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
   },
   en: {
     top: 'GROWTH',
     foundation: 'DATA & WEB',
     caption: 'Foundation of every strategic decision',
-    title: 'The Digital Growth Building',
-    desc: 'Technical drawing: four pillars of digital marketing — Search and AI Intelligence, Performance Media, Authority, and Content and Copywriting — supported by a Data and Web foundation. Hovering highlights the matching card below; clicking scrolls to it.',
-    dimPillars: '4× PILLAR',
-    dimHeight: 'PILLAR',
-    titleBlockNo: 'FIG.01',
-    titleBlockText: 'DIGITAL GROWTH STRUCTURE',
-    titleBlockScale: 'SCALE 1:1',
-    calloutFoundation: 'Foundation',
+    title: 'Growth Streams from Data and Web',
+    desc: 'Abstract graphic: four rising streams — Search and AI Intelligence, Performance Media, Authority, and Content and Copywriting — converging on a growth point. They rise from a Data and Web foundation. Hovering highlights the matching card below; clicking scrolls to it.',
   },
 }[locale];
 
 const aria = pillarAria[locale];
 const labels = pillarLabels[locale];
 
-// Pillar geometry
-const pillarWidth = 110;
-const pillarHeight = 260;
-const pillarTopY = 130;
-const pillarBottomY = pillarTopY + pillarHeight;
-const foundationY = pillarBottomY + 18;
-const foundationHeight = 46;
+// Geometry — four streams rising from foundation, subtly converging.
+const canvasW = 840;
+const streamBottomY = 458;
+const streamTopY = 146;
+const foundationY = 470;
+const foundationH = 62;
+const streamBottomWidth = 92;
+const streamTopWidth = 70;
 
-const pillars = [
-  { id: 'search-ai-intelligence', num: '01' },
-  { id: 'performance-media', num: '02' },
-  { id: 'authority-pr', num: '03' },
-  { id: 'content-copywriting', num: '04' },
+// Bottom centers spread across the foundation; top centers converge slightly inward.
+const streams = [
+  { id: 'search-ai-intelligence', num: '01', bx: 175, tx: 260 },
+  { id: 'performance-media', num: '02', bx: 340, tx: 378 },
+  { id: 'authority-pr', num: '03', bx: 500, tx: 462 },
+  { id: 'content-copywriting', num: '04', bx: 665, tx: 580 },
 ];
 
-const pillarGap = (600 - pillars.length * pillarWidth) / (pillars.length - 1);
-const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
+// Build stream path — soft trapezoid with rounded top and bottom corners
+function streamPath(bx: number, tx: number): string {
+  const halfB = streamBottomWidth / 2;
+  const halfT = streamTopWidth / 2;
+  const r = 14; // corner radius
+  const bl = { x: bx - halfB, y: streamBottomY };
+  const br = { x: bx + halfB, y: streamBottomY };
+  const tl = { x: tx - halfT, y: streamTopY };
+  const tr = { x: tx + halfT, y: streamTopY };
+  // Use cubic bezier on the side edges for organic flow
+  // cleaner: quadratic bezier approach for the side curves
+  return [
+    `M ${bl.x + r} ${bl.y}`,
+    `L ${br.x - r} ${br.y}`,
+    `Q ${br.x} ${br.y} ${br.x} ${br.y - r}`,
+    // right edge curves toward top
+    `C ${br.x - 6} ${(br.y + tr.y) / 2 - 20} ${tr.x + 6} ${(br.y + tr.y) / 2 + 20} ${tr.x} ${tr.y + r}`,
+    `Q ${tr.x} ${tr.y} ${tr.x - r} ${tr.y}`,
+    `L ${tl.x + r} ${tl.y}`,
+    `Q ${tl.x} ${tl.y} ${tl.x} ${tl.y + r}`,
+    // left edge curves toward bottom
+    `C ${tl.x - 6} ${(tl.y + bl.y) / 2 + 20} ${bl.x + 6} ${(tl.y + bl.y) / 2 - 20} ${bl.x} ${bl.y - r}`,
+    `Q ${bl.x} ${bl.y} ${bl.x + r} ${bl.y}`,
+    'Z',
+  ].join(' ');
+}
 ---
 
 <div class="building-graphic relative">
   <svg
-    viewBox="0 0 840 560"
+    viewBox="0 0 840 600"
     xmlns="http://www.w3.org/2000/svg"
     role="img"
     aria-labelledby="building-title building-desc"
@@ -127,179 +135,129 @@ const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
     <desc id="building-desc">{strings.desc}</desc>
 
     <defs>
-      {/* Blueprint grid (subtle) */}
-      <pattern id="bp-grid-minor" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#3B7DD8" stroke-width="0.4" opacity="0.08" />
-      </pattern>
-      <pattern id="bp-grid-major" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#3B7DD8" stroke-width="0.7" opacity="0.14" />
-      </pattern>
+      {/* Backdrop — subtle radial warm spot */}
+      <radialGradient id="backdrop" cx="50%" cy="45%" r="75%">
+        <stop offset="0%" stop-color="#FDFCFA" />
+        <stop offset="100%" stop-color="#F2F0EB" />
+      </radialGradient>
 
-      {/* Foundation hatching — blue-on-navy, visible */}
-      <pattern id="found-hatch" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-        <line x1="0" y1="0" x2="0" y2="8" stroke="#3B7DD8" stroke-width="1" opacity="0.55" />
-      </pattern>
-
-      {/* Pillar vertical gradient — Blue Light → Primary Blue → Navy */}
-      <linearGradient id="pillar-fill" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#5A9AE6" />
-        <stop offset="55%" stop-color="#3B7DD8" />
-        <stop offset="100%" stop-color="#1A3B6E" />
+      {/* Stream fill — rich vertical gradient from navy at base to light blue at crown */}
+      <linearGradient id="stream-fill" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#1A3B6E" />
+        <stop offset="35%" stop-color="#3B7DD8" />
+        <stop offset="100%" stop-color="#8AB6EC" />
       </linearGradient>
 
-      {/* Pillar active-state gradient — brighter */}
-      <linearGradient id="pillar-fill-active" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#8AB6EC" />
-        <stop offset="55%" stop-color="#5A9AE6" />
-        <stop offset="100%" stop-color="#2E5FA8" />
+      {/* Active state — brighter, more saturated */}
+      <linearGradient id="stream-fill-active" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#2E5FA8" />
+        <stop offset="35%" stop-color="#5A9AE6" />
+        <stop offset="100%" stop-color="#B4D4F3" />
       </linearGradient>
 
-      {/* Right-edge highlight strip */}
-      <linearGradient id="pillar-highlight" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25" />
+      {/* Inner highlight — thin bright edge on stream's right side */}
+      <linearGradient id="stream-highlight" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+        <stop offset="50%" stop-color="#ffffff" stop-opacity="0.18" />
         <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
       </linearGradient>
 
-      {/* Left-edge shadow strip */}
-      <linearGradient id="pillar-shadow-edge" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#0E1A2D" stop-opacity="0.35" />
-        <stop offset="100%" stop-color="#0E1A2D" stop-opacity="0" />
-      </linearGradient>
-
-      {/* Foundation gradient — navy with a hint of depth */}
+      {/* Foundation fill — deep navy */}
       <linearGradient id="foundation-fill" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#1A3B6E" />
         <stop offset="100%" stop-color="#0E1A2D" />
       </linearGradient>
 
-      {/* Drop shadow for pillars */}
-      <filter id="pillar-drop" x="-30%" y="-30%" width="160%" height="160%">
-        <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0E1A2D" flood-opacity="0.18" />
-      </filter>
-      <filter id="pillar-drop-active" x="-30%" y="-30%" width="160%" height="160%">
-        <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#3B7DD8" flood-opacity="0.45" />
+      {/* Foundation hatch — subtle blue overlay */}
+      <pattern id="found-hatch" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+        <line x1="0" y1="0" x2="0" y2="14" stroke="#3B7DD8" stroke-width="0.8" opacity="0.4" />
+        <circle cx="7" cy="7" r="1" fill="#5A9AE6" opacity="0.35" />
+      </pattern>
+
+      {/* Soft glow filter — bloom effect behind streams */}
+      <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+        <feGaussianBlur stdDeviation="12" result="blur" />
+        <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.231  0 0 0 0 0.490  0 0 0 0 0.847  0 0 0 0.6 0" />
       </filter>
 
-      {/* Arrowheads */}
-      <marker id="dim-end" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="7" markerHeight="7" orient="auto">
-        <path d="M 0 1 L 9 5 L 0 9 z" fill="#0E1A2D" opacity="0.55" />
-      </marker>
-      <marker id="dim-start" viewBox="0 0 10 10" refX="1" refY="5" markerUnits="userSpaceOnUse" markerWidth="7" markerHeight="7" orient="auto">
-        <path d="M 10 1 L 1 5 L 10 9 z" fill="#0E1A2D" opacity="0.55" />
-      </marker>
-      <marker id="leader-end" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="6" markerHeight="6" orient="auto">
-        <path d="M 0 2 L 8 5 L 0 8 z" fill="#3B7DD8" />
+      <filter id="glow-active" x="-40%" y="-40%" width="180%" height="180%">
+        <feGaussianBlur stdDeviation="18" result="blur" />
+        <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.352  0 0 0 0 0.603  0 0 0 0 0.901  0 0 0 0.85 0" />
+      </filter>
+
+      {/* Gold accent arrow for WACHSTUM target */}
+      <marker id="gold-arrow" viewBox="0 0 12 12" refX="6" refY="11" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto">
+        <path d="M 6 0 L 12 10 L 0 10 Z" fill="#B8893B" />
       </marker>
     </defs>
 
-    {/* ─── Backdrop + blueprint frame ─── */}
-    <rect width="840" height="560" fill="#F8F7F4" />
-    <rect width="840" height="560" fill="url(#bp-grid-minor)" />
-    <rect width="840" height="560" fill="url(#bp-grid-major)" />
-    <rect x="20" y="20" width="800" height="520" fill="none" stroke="#0E1A2D" stroke-width="1" opacity="0.3" />
-    <rect x="30" y="30" width="780" height="500" fill="none" stroke="#0E1A2D" stroke-width="0.5" opacity="0.2" />
+    {/* Backdrop */}
+    <rect width="840" height="600" fill="url(#backdrop)" />
 
-    {/* ─── Top WACHSTUM callout — branded stamp ─── */}
+    {/* ─── WACHSTUM — the convergence label ─── */}
     <g>
-      <rect x="360" y="44" width="120" height="30" fill="#0E1A2D" rx="2" />
-      <rect x="360" y="44" width="120" height="3" fill="#B8893B" />
-      <text x="420" y="64" text-anchor="middle" fill="#F8F7F4" font-size="13" font-weight="700" letter-spacing="6">{strings.top}</text>
-      <line x1="420" y1="74" x2="420" y2="100" stroke="#3B7DD8" stroke-width="1.2" marker-end="url(#leader-end)" />
+      <text x="420" y="76" text-anchor="middle" fill="#0E1A2D" font-size="22" font-weight="900" letter-spacing="10">{strings.top}</text>
+      <line x1="340" y1="92" x2="500" y2="92" stroke="#B8893B" stroke-width="2.5" />
+      <line x1="340" y1="92" x2="356" y2="92" stroke="#0E1A2D" stroke-width="2.5" />
+      <line x1="484" y1="92" x2="500" y2="92" stroke="#0E1A2D" stroke-width="2.5" />
     </g>
 
-    {/* ─── Horizontal dimension line ─── */}
-    <g stroke="#0E1A2D" stroke-width="0.7" opacity="0.45" fill="none">
-      <line x1={pillarXs[0]} y1="108" x2={pillarXs[0]} y2="122" />
-      <line x1={pillarXs[pillars.length - 1] + pillarWidth} y1="108" x2={pillarXs[pillars.length - 1] + pillarWidth} y2="122" />
-      <line x1={pillarXs[0]} y1="115" x2={pillarXs[pillars.length - 1] + pillarWidth} y2="115" marker-start="url(#dim-start)" marker-end="url(#dim-end)" />
-    </g>
-    <text x="420" y="111" text-anchor="middle" font-size="10" font-weight="600" letter-spacing="2" fill="#F8F7F4" stroke="#F8F7F4" stroke-width="6" paint-order="stroke">{strings.dimPillars}</text>
-    <text x="420" y="111" text-anchor="middle" fill="#0E1A2D" font-size="10" font-weight="600" letter-spacing="2" opacity="0.7">{strings.dimPillars}</text>
-
-    {/* ─── Entablature ─── */}
-    <rect x="90" y="122" width="660" height="10" fill="#0E1A2D" />
-    <rect x="90" y="122" width="660" height="2.5" fill="#B8893B" />
-    <rect x="80" y="132" width="680" height="3" fill="#0E1A2D" opacity="0.6" />
-
-    {/* ─── Left vertical dim line ─── */}
-    <g stroke="#0E1A2D" stroke-width="0.7" opacity="0.45" fill="none">
-      <line x1="72" y1={pillarTopY} x2="85" y2={pillarTopY} />
-      <line x1="72" y1={pillarBottomY} x2="85" y2={pillarBottomY} />
-      <line x1="78" y1={pillarTopY} x2="78" y2={pillarBottomY} marker-start="url(#dim-start)" marker-end="url(#dim-end)" />
-    </g>
-    <text x="62" y={pillarTopY + pillarHeight / 2} text-anchor="middle" fill="#0E1A2D" font-size="9" font-weight="600" letter-spacing="2" opacity="0.65" transform={`rotate(-90 62 ${pillarTopY + pillarHeight / 2})`}>{strings.dimHeight}</text>
-
-    {/* ─── Pillars — rendered, not flat ─── */}
-    {pillars.map(({ id, num }, i) => (
+    {/* ─── Four streams ─── */}
+    {streams.map(({ id, num, bx, tx }) => (
       <a href={`#card-${id}`} data-pillar-id={id} aria-label={aria[id]}>
-        <g class="pillar-group">
-          {/* Shadow layer */}
-          <rect x={pillarXs[i]} y={pillarTopY + 6} width={pillarWidth} height={pillarHeight - 12} fill="url(#pillar-fill)" class="pillar-shaft" filter="url(#pillar-drop)" rx="1" />
+        <g class="stream-group">
+          {/* Glow layer (behind solid) */}
+          <path d={streamPath(bx, tx)} fill="url(#stream-fill)" filter="url(#glow)" class="stream-glow" opacity="0.55" />
 
-          {/* Shadow edge (left) */}
-          <rect x={pillarXs[i]} y={pillarTopY + 6} width="12" height={pillarHeight - 12} fill="url(#pillar-shadow-edge)" pointer-events="none" rx="1" />
-          {/* Highlight edge (right) */}
-          <rect x={pillarXs[i] + pillarWidth - 12} y={pillarTopY + 6} width="12" height={pillarHeight - 12} fill="url(#pillar-highlight)" pointer-events="none" rx="1" transform={`scale(-1 1) translate(${-(2 * pillarXs[i] + pillarWidth - 12) - 12} 0)`} style="mix-blend-mode: screen;" />
+          {/* Solid stream */}
+          <path d={streamPath(bx, tx)} fill="url(#stream-fill)" class="stream-body" />
 
-          {/* Subtle vertical fluting (white, low opacity) */}
-          <line x1={pillarXs[i] + pillarWidth * 0.25} y1={pillarTopY + 14} x2={pillarXs[i] + pillarWidth * 0.25} y2={pillarBottomY - 14} stroke="#F8F7F4" stroke-width="0.5" opacity="0.15" pointer-events="none" />
-          <line x1={pillarXs[i] + pillarWidth * 0.5} y1={pillarTopY + 14} x2={pillarXs[i] + pillarWidth * 0.5} y2={pillarBottomY - 14} stroke="#F8F7F4" stroke-width="0.5" opacity="0.18" pointer-events="none" />
-          <line x1={pillarXs[i] + pillarWidth * 0.75} y1={pillarTopY + 14} x2={pillarXs[i] + pillarWidth * 0.75} y2={pillarBottomY - 14} stroke="#F8F7F4" stroke-width="0.5" opacity="0.15" pointer-events="none" />
+          {/* Subtle highlight wash */}
+          <path d={streamPath(bx, tx)} fill="url(#stream-highlight)" pointer-events="none" />
 
-          {/* Capital — navy with gold accent line on top */}
-          <rect x={pillarXs[i] - 6} y={pillarTopY} width={pillarWidth + 12} height="10" fill="#0E1A2D" class="pillar-capital" rx="1" />
-          <rect x={pillarXs[i] - 6} y={pillarTopY} width={pillarWidth + 12} height="2.5" fill="#B8893B" class="pillar-capital-gold" rx="1" />
+          {/* Vertical inner accent — single bright thread up the centre */}
+          <line x1={bx} y1={streamBottomY - 18} x2={tx} y2={streamTopY + 22} stroke="#ffffff" stroke-width="1.2" opacity="0.28" stroke-linecap="round" pointer-events="none" />
 
-          {/* Base — navy band */}
-          <rect x={pillarXs[i] - 6} y={pillarBottomY - 10} width={pillarWidth + 12} height="10" fill="#0E1A2D" class="pillar-base" rx="1" />
-
-          {/* Number circle — gold fill, cream ring, dark number */}
-          <circle cx={pillarXs[i] + pillarWidth / 2} cy={pillarTopY + 30} r="13" fill="#B8893B" stroke="#F8F7F4" stroke-width="1.5" class="pillar-number-ring" />
-          <text x={pillarXs[i] + pillarWidth / 2} y={pillarTopY + 34} text-anchor="middle" fill="#0E1A2D" font-size="11" font-weight="800" letter-spacing="0.5">{num}</text>
-
-          {/* Icon — cream stroke, clear on blue */}
-          <g transform={`translate(${pillarXs[i] + pillarWidth / 2 - 16}, ${pillarTopY + 80})`} fill="none" stroke="#F8F7F4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="pillar-icon" pointer-events="none">
+          {/* Icon — cream on blue, midway up the stream */}
+          <g transform={`translate(${bx + (tx - bx) * 0.55 - 18}, ${streamBottomY - (streamBottomY - streamTopY) * 0.58 - 18})`} fill="none" stroke="#F8F7F4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="stream-icon" pointer-events="none">
             {id === 'search-ai-intelligence' && (
               <g>
-                <circle cx="13" cy="13" r="8" />
-                <line x1="19" y1="19" x2="24" y2="24" />
-                <path d="M25 4 L26 7 L29 8 L26 9 L25 12 L24 9 L21 8 L24 7 Z" fill="#B8893B" stroke="none" />
+                <circle cx="15" cy="15" r="9" />
+                <line x1="22" y1="22" x2="28" y2="28" />
+                <path d="M28 4 L29.5 7.5 L33 9 L29.5 10.5 L28 14 L26.5 10.5 L23 9 L26.5 7.5 Z" fill="#B8893B" stroke="none" />
               </g>
             )}
             {id === 'performance-media' && (
               <g>
-                <line x1="2" y1="28" x2="30" y2="28" />
-                <rect x="5" y="18" width="6" height="10" />
-                <rect x="13" y="12" width="6" height="16" />
-                <rect x="21" y="4" width="6" height="24" fill="#B8893B" fill-opacity="0.45" />
+                <line x1="2" y1="32" x2="34" y2="32" />
+                <rect x="5" y="22" width="7" height="10" />
+                <rect x="15" y="14" width="7" height="18" />
+                <rect x="25" y="4" width="7" height="28" fill="#B8893B" fill-opacity="0.55" />
               </g>
             )}
             {id === 'authority-pr' && (
               <g>
-                <path d="M16 3 L28 7 V15 C28 22 16 28 16 28 C16 28 4 22 4 15 V7 Z" />
-                <path d="M11 15 L14 18 L20 12" stroke="#B8893B" />
+                <path d="M18 3 L32 8 V17 C32 25 18 32 18 32 C18 32 4 25 4 17 V8 Z" />
+                <path d="M12 17 L16 21 L24 13" stroke="#B8893B" stroke-width="2.4" />
               </g>
             )}
             {id === 'content-copywriting' && (
               <g>
-                <path d="M7 3 H20 L27 10 V29 H7 Z" />
-                <path d="M20 3 V10 H27" />
-                <line x1="12" y1="16" x2="22" y2="16" />
-                <line x1="12" y1="20" x2="22" y2="20" />
-                <line x1="12" y1="24" x2="17" y2="24" stroke="#B8893B" />
+                <path d="M6 3 H22 L30 11 V33 H6 Z" />
+                <path d="M22 3 V11 H30" />
+                <line x1="12" y1="18" x2="24" y2="18" />
+                <line x1="12" y1="23" x2="24" y2="23" />
+                <line x1="12" y1="28" x2="18" y2="28" stroke="#B8893B" stroke-width="2.4" />
               </g>
             )}
           </g>
 
-          {/* Label below pillar — on cream background, navy text */}
-          {labels[id].length === 1 ? (
-            <text x={pillarXs[i] + pillarWidth / 2} y={pillarBottomY + 6} text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700" class="pillar-label" dominant-baseline="hanging">{labels[id][0]}</text>
-          ) : (
-            <g class="pillar-label" dominant-baseline="hanging">
-              <text x={pillarXs[i] + pillarWidth / 2} y={pillarBottomY + 6} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700">{labels[id][0]}</text>
-              <text x={pillarXs[i] + pillarWidth / 2} y={pillarBottomY + 22} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700">{labels[id][1]}</text>
-            </g>
-          )}
+          {/* Label above the stream's top */}
+          <text x={tx} y={streamTopY - 18} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700" letter-spacing="0.5" class="stream-label">{labels[id]}</text>
+
+          {/* Number badge — gold disc at stream base */}
+          <circle cx={bx} cy={streamBottomY + 2} r="14" fill="#B8893B" stroke="#F8F7F4" stroke-width="2" class="stream-number-ring" />
+          <text x={bx} y={streamBottomY + 6} text-anchor="middle" fill="#0E1A2D" font-size="12" font-weight="800">{num}</text>
         </g>
       </a>
     ))}
@@ -307,97 +265,89 @@ const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
     {/* ─── Foundation ─── */}
     <a href="#card-data-web" data-pillar-id="data-web" aria-label={aria['data-web']}>
       <g class="foundation-group">
-        {/* Main slab with hatching */}
-        <rect x="60" y={foundationY} width="720" height={foundationHeight} fill="url(#foundation-fill)" class="foundation-fill" />
-        <rect x="60" y={foundationY} width="720" height={foundationHeight} fill="url(#found-hatch)" pointer-events="none" />
-        {/* Top gold accent line */}
-        <rect x="60" y={foundationY} width="720" height="2" fill="#B8893B" class="foundation-gold" pointer-events="none" />
-        {/* Bottom bedrock */}
-        <rect x="50" y={foundationY + foundationHeight} width="740" height="12" fill="#0E1A2D" class="foundation-cap" />
+        {/* Gold accent line above foundation */}
+        <rect x="50" y={foundationY - 4} width="740" height="2.5" fill="#B8893B" class="foundation-gold" />
 
-        {/* Database icon — gold, left side */}
-        <g transform={`translate(90, ${foundationY + 11})`} fill="none" stroke="#B8893B" stroke-width="1.8" pointer-events="none">
-          <ellipse cx="10" cy="3" rx="9" ry="2.5" />
-          <path d="M1 3 V11 C1 12.5 5 13.5 10 13.5 C15 13.5 19 12.5 19 11 V3" />
-          <path d="M1 11 V19 C1 20.5 5 21.5 10 21.5 C15 21.5 19 20.5 19 19 V11" />
+        {/* Main slab */}
+        <rect x="50" y={foundationY} width="740" height={foundationH} fill="url(#foundation-fill)" class="foundation-fill" rx="4" />
+        <rect x="50" y={foundationY} width="740" height={foundationH} fill="url(#found-hatch)" pointer-events="none" rx="4" />
+
+        {/* Database icon left */}
+        <g transform={`translate(82, ${foundationY + 18})`} fill="none" stroke="#B8893B" stroke-width="1.9" pointer-events="none">
+          <ellipse cx="11" cy="3" rx="10" ry="3" />
+          <path d="M1 3 V13 C1 14.5 5.5 16 11 16 C16.5 16 21 14.5 21 13 V3" />
+          <path d="M1 13 V23 C1 24.5 5.5 26 11 26 C16.5 26 21 24.5 21 23 V13" />
         </g>
 
-        {/* DATEN & WEB label centered */}
-        <text x="420" y={foundationY + foundationHeight / 2 + 5} text-anchor="middle" fill="#F8F7F4" font-size="14" font-weight="700" letter-spacing="5" pointer-events="none">{strings.foundation}</text>
+        {/* DATEN & WEB label */}
+        <text x="420" y={foundationY + foundationH / 2 + 5} text-anchor="middle" fill="#F8F7F4" font-size="16" font-weight="800" letter-spacing="8" pointer-events="none">{strings.foundation}</text>
+
+        {/* Right micro-dots — data motif */}
+        <g transform={`translate(718, ${foundationY + 20})`} pointer-events="none">
+          <circle cx="0" cy="0" r="1.5" fill="#B8893B" />
+          <circle cx="8" cy="0" r="1.5" fill="#F8F7F4" opacity="0.4" />
+          <circle cx="16" cy="0" r="1.5" fill="#F8F7F4" opacity="0.2" />
+          <circle cx="0" cy="8" r="1.5" fill="#F8F7F4" opacity="0.4" />
+          <circle cx="8" cy="8" r="1.5" fill="#F8F7F4" opacity="0.7" />
+          <circle cx="16" cy="8" r="1.5" fill="#B8893B" />
+          <circle cx="0" cy="16" r="1.5" fill="#F8F7F4" opacity="0.2" />
+          <circle cx="8" cy="16" r="1.5" fill="#B8893B" opacity="0.6" />
+          <circle cx="16" cy="16" r="1.5" fill="#F8F7F4" opacity="0.5" />
+        </g>
       </g>
     </a>
 
-    {/* Foundation callout — right side annotation */}
-    <g opacity="0.7">
-      <line x1="790" y1={foundationY + foundationHeight / 2} x2="770" y2={foundationY + foundationHeight / 2} stroke="#3B7DD8" stroke-width="0.8" />
-      <text x="796" y={foundationY + foundationHeight / 2 - 4} text-anchor="start" fill="#0E1A2D" font-size="9" font-weight="600" letter-spacing="1">{strings.calloutFoundation.toUpperCase()}</text>
-    </g>
-
-    {/* Caption */}
-    <text x="420" y={foundationY + foundationHeight + 40} text-anchor="middle" fill="#0E1A2D" opacity="0.6" font-size="11" font-style="italic">{strings.caption}</text>
-
-    {/* Title block bottom-right */}
-    <g transform="translate(620, 528)">
-      <rect x="0" y="0" width="190" height="18" fill="#0E1A2D" opacity="0.92" rx="1" />
-      <rect x="0" y="0" width="190" height="2" fill="#B8893B" rx="1" />
-      <line x1="44" y1="2" x2="44" y2="18" stroke="#F8F7F4" stroke-width="0.5" opacity="0.35" />
-      <line x1="150" y1="2" x2="150" y2="18" stroke="#F8F7F4" stroke-width="0.5" opacity="0.35" />
-      <text x="22" y="13" text-anchor="middle" fill="#B8893B" font-size="8" font-weight="800" letter-spacing="1.5">{strings.titleBlockNo}</text>
-      <text x="97" y="13" text-anchor="middle" fill="#F8F7F4" font-size="8" font-weight="600" letter-spacing="1.5">{strings.titleBlockText}</text>
-      <text x="170" y="13" text-anchor="middle" fill="#F8F7F4" font-size="8" font-weight="600" letter-spacing="1.5">{strings.titleBlockScale}</text>
-    </g>
+    {/* Caption below foundation */}
+    <text x="420" y={foundationY + foundationH + 30} text-anchor="middle" fill="#0E1A2D" opacity="0.55" font-size="11" font-style="italic">{strings.caption}</text>
   </svg>
 </div>
 
 <style>
-  .building-graphic :global(.pillar-group),
+  .building-graphic :global(.stream-group),
   .building-graphic :global(.foundation-group) {
-    transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: center;
+    transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center bottom;
     transform-box: fill-box;
   }
-  .building-graphic :global(.pillar-shaft),
-  .building-graphic :global(.pillar-capital),
-  .building-graphic :global(.pillar-capital-gold),
-  .building-graphic :global(.pillar-base),
-  .building-graphic :global(.pillar-number-ring),
+  .building-graphic :global(.stream-body),
+  .building-graphic :global(.stream-glow),
+  .building-graphic :global(.stream-number-ring),
   .building-graphic :global(.foundation-fill),
-  .building-graphic :global(.foundation-cap),
   .building-graphic :global(.foundation-gold) {
-    transition: fill 220ms ease, filter 220ms ease, stroke 220ms ease;
+    transition: fill 260ms ease, filter 260ms ease, stroke 260ms ease, opacity 260ms ease;
   }
   .building-graphic a {
     cursor: pointer;
   }
 
-  /* Pillar hover/focus/active — brighter gradient, stronger glow, lift */
-  .building-graphic a[data-pillar-id]:hover .pillar-group,
-  .building-graphic a[data-pillar-id]:focus-visible .pillar-group,
-  .building-graphic a[data-pillar-id].is-active .pillar-group {
-    transform: translateY(-6px);
+  /* Stream hover / focus / paired-active */
+  .building-graphic a[data-pillar-id]:hover .stream-group,
+  .building-graphic a[data-pillar-id]:focus-visible .stream-group,
+  .building-graphic a[data-pillar-id].is-active .stream-group {
+    transform: translateY(-6px) scale(1.015);
   }
-  .building-graphic a[data-pillar-id]:hover .pillar-shaft,
-  .building-graphic a[data-pillar-id]:focus-visible .pillar-shaft,
-  .building-graphic a[data-pillar-id].is-active .pillar-shaft {
-    fill: url(#pillar-fill-active);
-    filter: url(#pillar-drop-active);
+  .building-graphic a[data-pillar-id]:hover .stream-body,
+  .building-graphic a[data-pillar-id]:focus-visible .stream-body,
+  .building-graphic a[data-pillar-id].is-active .stream-body {
+    fill: url(#stream-fill-active);
   }
-  .building-graphic a[data-pillar-id]:hover .pillar-capital-gold,
-  .building-graphic a[data-pillar-id]:focus-visible .pillar-capital-gold,
-  .building-graphic a[data-pillar-id].is-active .pillar-capital-gold {
+  .building-graphic a[data-pillar-id]:hover .stream-glow,
+  .building-graphic a[data-pillar-id]:focus-visible .stream-glow,
+  .building-graphic a[data-pillar-id].is-active .stream-glow {
+    filter: url(#glow-active);
+    opacity: 0.85;
+  }
+  .building-graphic a[data-pillar-id]:hover .stream-number-ring,
+  .building-graphic a[data-pillar-id]:focus-visible .stream-number-ring,
+  .building-graphic a[data-pillar-id].is-active .stream-number-ring {
     fill: #D4A44A;
   }
 
-  /* Foundation hover — gold bar highlights, cap shifts to blue */
+  /* Foundation hover */
   .building-graphic a[data-pillar-id="data-web"]:hover .foundation-group,
   .building-graphic a[data-pillar-id="data-web"]:focus-visible .foundation-group,
   .building-graphic a[data-pillar-id="data-web"].is-active .foundation-group {
-    transform: translateY(-3px);
-  }
-  .building-graphic a[data-pillar-id="data-web"]:hover .foundation-cap,
-  .building-graphic a[data-pillar-id="data-web"]:focus-visible .foundation-cap,
-  .building-graphic a[data-pillar-id="data-web"].is-active .foundation-cap {
-    fill: #3B7DD8;
+    transform: translateY(-2px);
   }
   .building-graphic a[data-pillar-id="data-web"]:hover .foundation-gold,
   .building-graphic a[data-pillar-id="data-web"]:focus-visible .foundation-gold,
@@ -411,7 +361,7 @@ const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
     border-radius: 4px;
   }
 
-  /* Paired card highlight below — unchanged */
+  /* Paired highlight on card wrappers below */
   :global(.pillar-card-wrapper) {
     transition: transform 220ms ease, box-shadow 220ms ease;
     border-radius: 0.5rem;
@@ -430,14 +380,14 @@ const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .building-graphic :global(.pillar-group),
+    .building-graphic :global(.stream-group),
     .building-graphic :global(.foundation-group),
     :global(.pillar-card-wrapper) {
       transition: none !important;
     }
-    .building-graphic a:hover .pillar-group,
+    .building-graphic a:hover .stream-group,
     .building-graphic a:hover .foundation-group,
-    .building-graphic a.is-active .pillar-group,
+    .building-graphic a.is-active .stream-group,
     .building-graphic a.is-active .foundation-group,
     :global(.pillar-card-wrapper.is-active),
     :global(.pillar-card-wrapper.is-flash) {
