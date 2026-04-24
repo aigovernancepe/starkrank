@@ -9,6 +9,11 @@ import CTABanner from '../../../components/ui/CTABanner.astro';
 import { getCollection } from 'astro:content';
 import { getPillarById } from '../../../data/pillars';
 import { getSpokePath } from '../../../data/service-slugs';
+import { getSelfLastModified } from '../../../utils/getLastModified';
+
+const lastModified = getSelfLastModified(import.meta.url);
+const lastModifiedIso = lastModified.toISOString().split('T')[0];
+const lastModifiedLabel = lastModified.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
 
 const slug = 'multi-location-seo';
 const allServices = await getCollection('services');
@@ -168,7 +173,7 @@ const comparisonRows = [
 
     <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
       <span>
-        Last updated: <time datetime="2026-03-26">March 2026</time>
+        Last updated: <time datetime={lastModifiedIso}>{lastModifiedLabel}</time>
       </span>
       <span>
         By <a href="/en/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
