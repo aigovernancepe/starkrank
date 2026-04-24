@@ -19,7 +19,7 @@ faq:
   - question: "Is AI search optimization different from SEO?"
     answer: "Yes. SEO focuses on ranking in search engine results pages. AI search optimization focuses on being cited in AI-generated answers. The technical foundations overlap — crawlability, structured data, quality content — but AI search requires additional strategies: entity optimization, answer-first content structure, AI crawler access, and citation-specific monitoring. We layer AISO on top of your existing SEO, not instead of it."
   - question: "Which AI search platforms matter most?"
-    answer: "The primary platforms are Google AI Overviews, ChatGPT (with browsing), Perplexity, and Bing Copilot. Their combined query volume is growing rapidly, and each uses slightly different retrieval methods. A comprehensive strategy covers all four. We track citations across all platforms through our AI Share of Voice analysis."
+    answer: "The primary platforms are Google AI Overviews, ChatGPT (with browsing), Perplexity, and Bing Copilot. Their combined query volume is growing rapidly, and each uses slightly different retrieval methods. A strategy that covers all four is the right framing — we track citations across all platforms through our AI Share of Voice analysis."
   - question: "How long before we see results?"
     answer: "Technical foundations (crawler access, structured data, content restructuring) can be implemented in 4-8 weeks. Brand entity and citation building take 3-6 months to mature. AI search monitoring shows measurable changes within the first month of tracking. Most clients see their AISO Score improve by 15-25 points in the first 90 days."
   - question: "Do we need to change our existing website?"

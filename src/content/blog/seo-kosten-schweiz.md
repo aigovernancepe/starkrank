@@ -22,7 +22,7 @@ faq:
 
 Schweizer Unternehmen investieren typischerweise zwischen 3'000 und 8'000 CHF pro Monat in professionelle Suchmaschinenoptimierung. Die Spanne ist breiter als in Deutschland — der Schweizer Markt hat höhere Qualitätserwartungen, strengere Datenschutzanforderungen (revDSG) und oft mehrsprachige Anforderungen (DE/FR/IT). Was Sie konkret benötigen, hängt von Ihrer Branche, der Wettbewerbsintensität in Ihrem Kanton und Ihrer digitalen Ausgangslage ab.
 
-Dieser Leitfaden zeigt Ihnen ehrlich, was jede Preisstufe beinhaltet und wo Schweizer Unternehmen regelmässig Geld verbrennen oder zu wenig investieren.
+Dieser Leitfaden zeigt Ihnen ehrlich, was jede Preisstufe beinhaltet und wo Schweizer Unternehmen regelmässig Geld verbrennen oder zu wenig investieren. Unsere eigenen Retainer-Bänder sind auf der [Preisseite](/ch-de/preise/seo/) transparent aufgelistet.
 
 ---
 
@@ -88,7 +88,7 @@ Die Schweiz hat 8,8 Millionen Einwohner in 26 Kantonen. Der Suchmarkt ist kleine
 
 ## Wie verändert KI-Suche die SEO-Investition?
 
-KI-Suchoptimierung ist auch in der Schweiz relevant — möglicherweise sogar mehr als im deutschen Markt, da Schweizer Early Adopter bei Technologietrends sind:
+KI-Suchoptimierung ist auch in der Schweiz relevant — möglicherweise sogar mehr als im deutschen Markt, da Schweizer Early Adopter bei Technologietrends sind. Mit unserem [kostenlosen AISO-Check](/ch-de/aiso-check/) können Sie Ihre aktuelle KI-Suchbereitschaft einschätzen, bevor Sie in eine Optimierung investieren:
 
 - **AISO-Score-Bewertung** — Messung der KI-Suchbereitschaft über 6 Dimensionen. Im Erstaudit enthalten oder als eigenständige Bewertung.
 - **Entity-Aufbau** — Strukturierte Daten, Knowledge-Graph-Signale. Zusätzlich 800–2'000 CHF/Monat.

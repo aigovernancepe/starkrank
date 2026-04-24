@@ -11,7 +11,7 @@ faq:
   - question: "Kann ich Google Ads abschalten, sobald SEO funktioniert?"
     answer: "Sie können deutlich reduzieren. Bei Schweizer CPCs lohnt sich die Analyse besonders: Für Keywords auf Position 1–3 können Sie Ads pausieren und 500–3'000 CHF/Monat sparen."
   - question: "Sind die Klickpreise in der Schweiz wirklich höher?"
-    answer: 'Ja. Ein Klick auf „Rechtsanwalt Zürich" kostet 40–80 CHF vs. EUR 15–30 für Frankfurt. Diese Premiumpreise machen organische Rankings proportional wertvoller.'
+    answer: 'Ja. Ein Klick auf „Rechtsanwalt Zürich" kostet 40–80 CHF vs. 15–30 € für Frankfurt. Diese Premiumpreise machen organische Rankings proportional wertvoller.'
   - question: "Wie beeinflusst das revDSG die Google-Ads-Performance?"
     answer: "Ohne korrekte Consent-Mode-v2-Implementierung verlieren Sie Conversion-Daten. SEO-Traffic hat dieses Problem nicht."
   - question: "Wie viel sollte ein Schweizer KMU für Google Ads ausgeben?"
