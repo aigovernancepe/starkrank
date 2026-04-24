@@ -1,0 +1,281 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Card from '../../components/ui/Card.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import Button from '../../components/ui/Button.astro';
+
+const title = 'Online-Marketing Schweiz — Integrierte Digitalmarketing-Agentur | StarkRank';
+const description = 'StarkRank orchestriert Online-Marketing für Schweizer Unternehmen: SEO, Google Ads, Paid Social, Content und Analytics als ein System statt als fünf Silos. Transparente Retainer-Bänder ab 1\'190 CHF/Monat.';
+
+const channels = [
+  {
+    label: 'SEO & KI-Suchoptimierung',
+    description:
+      'Technische SEO, Entity-Arbeit und Optimierung für ChatGPT, Perplexity, Claude und Google AI Overviews — die organische Basis, auf der alle anderen Kanäle günstiger werden.',
+    href: '/ch-de/seo-agentur-schweiz/',
+  },
+  {
+    label: 'Google & Microsoft Ads',
+    description:
+      'Suchkampagnen, Shopping, Performance Max und Microsoft Ads (Bing) — kalibriert für die höchsten CPCs Europas, mit Quality-Score-Disziplin und Offline-Conversion-Integration.',
+    href: '/ch-de/services/#performance-media',
+  },
+  {
+    label: 'Paid Social',
+    description:
+      'LinkedIn-first für B2B, Meta und YouTube für Awareness. Account-Based-Ads für institutionelle Zielkunden, Funnel-Sequenzen statt Einzelformate — der B2B-Kanal Nummer eins in der Deutschschweiz.',
+    href: '/ch-de/services/#performance-media',
+  },
+  {
+    label: 'Content & Copy',
+    description:
+      'Research-Briefs, Thought-Leadership und SEO-Copywriting — Content, der in allen Kanälen wirkt: in organischer Suche, in KI-Antworten, in Ads-Landingpages und in LinkedIn-Sequenzen.',
+    href: '/ch-de/services/#content-copywriting',
+  },
+  {
+    label: 'Analytics & Attribution',
+    description:
+      'Server-Side-Tagging, CRM-Integration für Offline-Conversions und Cross-Channel-Attribution. Messen Sie Mandatswert statt nur Klicks — revDSG-konform aufgesetzt.',
+    href: '/ch-de/services/#data-web',
+  },
+  {
+    label: 'Technisches Fundament',
+    description:
+      'Performance, Accessibility und technische Stabilität Ihrer Webpräsenz. Ohne dieses Fundament verpufft jedes Marketing-Budget — Core Web Vitals, Consent-Management und Indexierung sind Hygiene, nicht optional.',
+    href: '/ch-de/services/#data-web',
+  },
+];
+
+const principles = [
+  {
+    title: 'Orchestrierung statt Einzelkanäle',
+    body: 'Die Schweizer Agenturlandschaft ist spezialistengetrieben — SEO hier, Ads dort, Social woanders. Wir orchestrieren den Mix: welcher Kanal welches Budget, welche Rolle im Funnel, welche Abhängigkeiten. Ohne Orchestrierung zahlen Sie doppelt für Klicks, die organisch kostenlos zu haben wären.',
+  },
+  {
+    title: 'Budget-Disziplin im Hochpreis-Markt',
+    body: 'Schweizer Cost-per-Click-Preise gehören zu den höchsten in Europa. In Finanz-, Versicherungs- und Consulting-Keywords zählt jeder Franken. Die wichtigste Frage ist selten „mehr Ads?", sondern „wohin geht das nächste CHF — Ads, SEO oder Content, und warum?".'
+  },
+  {
+    title: 'Measurement über Kanäle hinweg',
+    body: 'Google Analytics allein reicht nicht. Wir koppeln CRM (HubSpot, Salesforce, Pipedrive) an Ads-Konten über Enhanced Conversions und Offline-Conversion-Imports — damit Algorithmen auf Mandats- oder Umsatzwert optimieren, nicht auf Form-Submissions.',
+  },
+  {
+    title: 'Deutschschweiz-Fokus',
+    body: 'Wir arbeiten für Unternehmen in der deutschsprachigen Schweiz — Basel, Zürich, Bern und umliegende Kantone. Die Romandie und das Tessin liegen ausserhalb unseres Sprach-Scopes; für diese Märkte ist eine Agentur mit Native-Copy-Kapazität in Französisch oder Italienisch die richtige Wahl.',
+  },
+];
+
+const cityCoverage = [
+  {
+    city: 'Basel',
+    status: 'Aktiv',
+    href: '/ch-de/lokale-seo-beratung-basel/',
+    note: 'Dedizierte lokale Spokes für SEO-Beratung, Google Ads, Content und technische Audits.',
+  },
+  {
+    city: 'Zürich',
+    status: 'Aktiv',
+    href: '/ch-de/lokale-seo-beratung-zuerich/',
+    note: 'Dedizierte lokale Spokes für SEO-Beratung, technisches Audit, Google Ads, KI-Suchoptimierung, Content-Marketing und Paid Social — mit Fokus auf Finanzdienstleister, Versicherer und Tech-Scale-ups.',
+  },
+  {
+    city: 'Bern',
+    status: 'Auf Anfrage',
+    href: null,
+    note: 'Remote-Retainer und Projekt-Audits sind bereits möglich; dedizierte Bern-Landingpage folgt.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Was ist der Unterschied zwischen einer SEO-Agentur und einer Online-Marketing-Agentur?',
+    a: 'Eine SEO-Agentur optimiert einen Kanal: organische Sichtbarkeit auf Google und in KI-Antworten. Eine Online-Marketing-Agentur orchestriert mehrere Kanäle — SEO, Paid Search, Paid Social, Content und Analytics — als ein zusammenhängendes System. Für kleinere Unternehmen mit klarem Engpass (nur zu wenig organischer Traffic, nur ineffiziente Ads) kann ein Spezialist reichen. Sobald zwei oder mehr Kanäle parallel laufen, rechnet sich Orchestrierung schnell.',
+  },
+  {
+    q: 'Welche Kanäle sind für Schweizer B2B-Unternehmen am wichtigsten?',
+    a: 'In der Deutschschweizer B2B-Landschaft führt LinkedIn die Liste an — nirgendwo sonst sind Finanz-, Versicherungs- und Beratungsentscheider so dicht erreichbar. Google Ads ist wichtig, aber teuer; daher in der Regel nur mit sauberer Conversion-Attribution wirtschaftlich. SEO wirkt langsamer, dafür ist jeder organische Klick ab dem Break-even-Punkt kostenlos. Die richtige Gewichtung hängt von Branche, Sales-Cycle und Bestandsdaten ab.',
+  },
+  {
+    q: 'Wie gross muss mein Budget sein, um mehrere Kanäle sinnvoll zu betreiben?',
+    a: 'Unterhalb von etwa 3\'000 CHF Monatsbudget (Retainer plus Media-Spend kombiniert) empfehlen wir einen einzelnen Kanal mit voller Tiefe statt zwei oder drei halbherzig betriebener Kanäle. Ab 5\'000 CHF monatlich lohnt sich ein integrierter Mix — typischerweise organische Basis plus zwei bezahlte Kanäle. Genauere Einschätzung erfolgt nach Sichtung Ihrer Ausgangslage.',
+  },
+  {
+    q: 'Welche Städte deckt StarkRank in der Schweiz ab?',
+    a: 'Aktiv betreuen wir Mandate in Basel und Zürich über dedizierte lokale Spokes. Für Bern laufen Mandate remote oder projektbasiert; eine dedizierte Bern-Landingpage folgt. StarkRank fokussiert sich bewusst auf die deutschsprachige Schweiz — für die Romandie und das Tessin ist eine Agentur mit Native-Copy-Kapazität in Französisch oder Italienisch die passendere Wahl.',
+  },
+  {
+    q: 'Übernehmen Sie auch klassische Werbung wie Print, Out-of-Home oder TV?',
+    a: 'Nein. StarkRank arbeitet ausschliesslich in digitalen Kanälen: organische Suche, bezahlte Suche, bezahlte Social Media, Content-Marketing und Analytics. Für klassische Werbung empfehlen wir Mediaagenturen mit entsprechender Kapazität — gerne koordinieren wir die digitale Seite mit solchen Partnern.',
+  },
+  {
+    q: 'Wie messen Sie den Erfolg kanalübergreifend?',
+    a: 'Mit drei Schichten: Erstens Kanal-KPIs (Rankings, CTR, CPA, Engagement-Raten) für den operativen Betrieb. Zweitens Funnel-Metriken (qualifizierte Leads, Sales-Qualified Opportunities) via CRM-Integration. Drittens Pipeline- und Umsatzattribution — welcher Kanal trägt wieviel zum Mandats- oder Umsatzergebnis bei. Monatsreport und Quartalsstrategie sind auf diese drei Schichten aufgesetzt.',
+  },
+];
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'StarkRank — Online-Marketing-Agentur Schweiz',
+  description:
+    'Integrierte Online-Marketing-Agentur für Schweizer Unternehmen: SEO, Google Ads, Paid Social, Content-Marketing und Analytics als ein orchestrierter Mix. Transparente Retainer-Bänder ab 1\'190 CHF/Monat.',
+  url: 'https://starkrank.com/ch-de/online-marketing-schweiz/',
+  areaServed: { '@type': 'Country', name: 'Switzerland' },
+  provider: {
+    '@type': 'Organization',
+    name: 'StarkRank',
+    url: 'https://starkrank.com',
+  },
+  serviceType: [
+    'Online-Marketing',
+    'Suchmaschinenoptimierung',
+    'Google Ads Management',
+    'Paid Social Strategie',
+    'Content-Marketing',
+    'Digital Analytics',
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://starkrank.com/ch-de/' },
+    { '@type': 'ListItem', position: 2, name: 'Online-Marketing Schweiz', item: 'https://starkrank.com/ch-de/online-marketing-schweiz/' },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const schemas = [serviceSchema, breadcrumbSchema, faqSchema];
+---
+
+<BaseLayout title={title} description={description} locale="ch-de" schema={schemas}>
+  <Fragment slot="head">
+    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/online-marketing-schweiz/" />
+    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/ch-de/online-marketing-schweiz/" />
+  </Fragment>
+
+  <HeroSection
+    headline="Online-Marketing Schweiz"
+    subheadline="Integrierte Digitalmarketing-Agentur für Schweizer Unternehmen — SEO, Google Ads, Paid Social, Content und Analytics als ein orchestrierter Mix statt als fünf Silos."
+  >
+    <Button href="/ch-de/kontakt/" variant="primary">Kostenlose Erstberatung</Button>
+    <Button href="/ch-de/preise/seo/" variant="secondary">Preise ansehen</Button>
+  </HeroSection>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Ein Marketing-Partner, nicht fünf Dienstleister</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Die meisten Schweizer Unternehmen, die wachsen wollen, arbeiten parallel mit einer SEO-Agentur, einer Google-Ads-Agentur, einem Social-Media-Freelancer und einem Analytics-Tool. Jeder optimiert seinen Ausschnitt — niemand orchestriert den Mix. Budget fliesst doppelt, Daten laufen auseinander, strategische Priorisierung bleibt auf dem Tisch.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        StarkRank bündelt die digitalen Kanäle unter einem Dach. Wir planen die Allokation — wohin geht das nächste CHF, welcher Kanal bedient welche Phase der Käuferreise, welche Kanäle machen sich gegenseitig günstiger. Kleine, spezialisierte Agentur mit niedrigem Overhead, Schweizer Mehrwertsteuer-Rechnung und transparenten Retainer-Bändern.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white" id="kanaele" class="scroll-mt-20">
+    <SectionHeader
+      label="Kanal-Mix"
+      title="Sechs Kanäle, ein orchestrierter Plan"
+      subtitle="Im Retainer in Kombination, als Einmal-Projekt auch einzeln buchbar. Die Gewichtung hängt von Branche, Sales-Cycle und Ausgangslage ab — nicht von einer fixen Service-Matrix."
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {channels.map((channel) => (
+        <Card href={channel.href}>
+          <h3 class="text-lg font-headline font-bold text-navy">{channel.label}</h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">{channel.description}</p>
+        </Card>
+      ))}
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <SectionHeader
+      label="Arbeitsweise"
+      title="Vier Prinzipien, an denen wir Arbeit messen"
+      subtitle="Die folgenden vier Punkte differenzieren uns von Agenturen, die Einzelkanäle verkaufen — und erklären, warum integriertes Marketing für den Schweizer Markt oft die bessere Option ist."
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {principles.map((item) => (
+        <Card>
+          <h3 class="text-lg font-headline font-bold text-navy">{item.title}</h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">{item.body}</p>
+        </Card>
+      ))}
+    </div>
+  </Section>
+
+  <Section bg="white" id="staedte" class="scroll-mt-20">
+    <SectionHeader
+      label="Regionale Abdeckung"
+      title="Verfügbar in"
+      subtitle="StarkRank arbeitet in der gesamten deutschsprachigen Schweiz remote und vor Ort. Aktive Stadt-Landingpages in Basel und Zürich, weitere Bern-Mandate auf Anfrage."
+    />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {cityCoverage.map((entry) => (
+        entry.href ? (
+          <Card href={entry.href}>
+            <span class="text-xs font-label font-bold uppercase tracking-[0.2em] text-blue">{entry.status}</span>
+            <h3 class="mt-2 text-lg font-headline font-bold text-navy">{entry.city}</h3>
+            <p class="mt-3 text-sm font-body text-gray leading-relaxed">{entry.note}</p>
+          </Card>
+        ) : (
+          <Card>
+            <span class="text-xs font-label font-bold uppercase tracking-[0.2em] text-gray">{entry.status}</span>
+            <h3 class="mt-2 text-lg font-headline font-bold text-navy">{entry.city}</h3>
+            <p class="mt-3 text-sm font-body text-gray leading-relaxed">{entry.note}</p>
+          </Card>
+        )
+      ))}
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <SectionHeader
+        label="Preistransparenz"
+        title="Retainer-Bänder und Projektpreise öffentlich"
+        subtitle="Preistransparenz ist in der Schweizer Agenturlandschaft selten. Wir veröffentlichen Retainer-Bänder ab 1'190 CHF/Monat und Einmal-Audit-Preise — damit Sie vor dem ersten Gespräch einschätzen können, ob ein integriertes Marketing-Programm mit uns finanziell realistisch ist."
+      />
+      <div class="mt-4">
+        <Button href="/ch-de/preise/seo/" variant="primary">Alle Preise ansehen</Button>
+      </div>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <SectionHeader label="Fragen & Antworten" title="Häufig gestellte Fragen" />
+      <dl class="mt-8 space-y-8">
+        {faqs.map((f) => (
+          <div>
+            <dt class="text-lg font-headline font-bold text-navy">{f.q}</dt>
+            <dd class="mt-2 text-base font-body text-gray leading-relaxed">{f.a}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </Section>
+
+  <CTABanner
+    title="Welcher Kanal-Mix passt zu Ihrer Ausgangslage?"
+    subtitle="15-minütiger Erstcall, unverbindlich. Wir sagen Ihnen direkt, welche Kanalgewichtung zur Branche und zum Budget passt — auch wenn die Antwort lautet: vorerst nur ein Kanal, der Rest kommt später."
+  >
+    <Button href="/ch-de/kontakt/" variant="primary">Kostenlose Erstberatung</Button>
+    <Button href="/ch-de/schnellcheck/" variant="secondary">Schnellcheck starten</Button>
+  </CTABanner>
+</BaseLayout>
