@@ -58,7 +58,7 @@ const strings = {
     title: 'Das Gebäude des digitalen Wachstums',
     desc: 'Technische Zeichnung: Vier Säulen des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — getragen vom Fundament Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
     dimPillars: '4× SÄULE',
-    dimHeight: 'H',
+    dimHeight: 'SÄULE',
     titleBlockNo: 'FIG.01',
     titleBlockText: 'GEBÄUDE DIGITALES WACHSTUM',
     titleBlockScale: 'M 1:1',
@@ -71,7 +71,7 @@ const strings = {
     title: 'Das Gebäude des digitalen Wachstums',
     desc: 'Technische Zeichnung: Vier Säulen des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — getragen vom Fundament Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
     dimPillars: '4× SÄULE',
-    dimHeight: 'H',
+    dimHeight: 'SÄULE',
     titleBlockNo: 'FIG.01',
     titleBlockText: 'GEBÄUDE DIGITALES WACHSTUM',
     titleBlockScale: 'M 1:1',
@@ -84,7 +84,7 @@ const strings = {
     title: 'The Digital Growth Building',
     desc: 'Technical drawing: four pillars of digital marketing — Search and AI Intelligence, Performance Media, Authority, and Content and Copywriting — supported by a Data and Web foundation. Hovering highlights the matching card below; clicking scrolls to it.',
     dimPillars: '4× PILLAR',
-    dimHeight: 'H',
+    dimHeight: 'PILLAR',
     titleBlockNo: 'FIG.01',
     titleBlockText: 'DIGITAL GROWTH STRUCTURE',
     titleBlockScale: 'SCALE 1:1',
@@ -95,14 +95,13 @@ const strings = {
 const aria = pillarAria[locale];
 const labels = pillarLabels[locale];
 
-// Pillar geometry — stable across locales so annotations align.
-// viewBox 0 0 840 540. Drawing area with 60px margin for dimension lines.
+// Pillar geometry
 const pillarWidth = 110;
 const pillarHeight = 260;
 const pillarTopY = 130;
 const pillarBottomY = pillarTopY + pillarHeight;
 const foundationY = pillarBottomY + 18;
-const foundationHeight = 42;
+const foundationHeight = 46;
 
 const pillars = [
   { id: 'search-ai-intelligence', num: '01' },
@@ -111,14 +110,13 @@ const pillars = [
   { id: 'content-copywriting', num: '04' },
 ];
 
-// Distribute pillars across the drawing area (120 .. 720 = 600px wide)
 const pillarGap = (600 - pillars.length * pillarWidth) / (pillars.length - 1);
 const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
 ---
 
 <div class="building-graphic relative">
   <svg
-    viewBox="0 0 840 540"
+    viewBox="0 0 840 560"
     xmlns="http://www.w3.org/2000/svg"
     role="img"
     aria-labelledby="building-title building-desc"
@@ -129,95 +127,143 @@ const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
     <desc id="building-desc">{strings.desc}</desc>
 
     <defs>
-      {/* Minor grid — 20px squares */}
-      <pattern id="blueprint-grid-minor" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0E1A2D" stroke-width="0.5" opacity="0.06" />
+      {/* Blueprint grid (subtle) */}
+      <pattern id="bp-grid-minor" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#3B7DD8" stroke-width="0.4" opacity="0.08" />
       </pattern>
-      {/* Major grid — 100px squares */}
-      <pattern id="blueprint-grid-major" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#0E1A2D" stroke-width="0.8" opacity="0.12" />
+      <pattern id="bp-grid-major" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#3B7DD8" stroke-width="0.7" opacity="0.14" />
       </pattern>
-      {/* Diagonal hatch for foundation (concrete/ground) */}
-      <pattern id="foundation-hatch" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-        <line x1="0" y1="0" x2="0" y2="10" stroke="#0E1A2D" stroke-width="1.2" opacity="0.22" />
+
+      {/* Foundation hatching — blue-on-navy, visible */}
+      <pattern id="found-hatch" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <line x1="0" y1="0" x2="0" y2="8" stroke="#3B7DD8" stroke-width="1" opacity="0.55" />
       </pattern>
-      {/* Dimension-line arrowhead */}
-      <marker id="dim-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
-        <path d="M 0 1 L 9 5 L 0 9 z" fill="#0E1A2D" opacity="0.6" />
+
+      {/* Pillar vertical gradient — Blue Light → Primary Blue → Navy */}
+      <linearGradient id="pillar-fill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#5A9AE6" />
+        <stop offset="55%" stop-color="#3B7DD8" />
+        <stop offset="100%" stop-color="#1A3B6E" />
+      </linearGradient>
+
+      {/* Pillar active-state gradient — brighter */}
+      <linearGradient id="pillar-fill-active" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#8AB6EC" />
+        <stop offset="55%" stop-color="#5A9AE6" />
+        <stop offset="100%" stop-color="#2E5FA8" />
+      </linearGradient>
+
+      {/* Right-edge highlight strip */}
+      <linearGradient id="pillar-highlight" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25" />
+        <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+      </linearGradient>
+
+      {/* Left-edge shadow strip */}
+      <linearGradient id="pillar-shadow-edge" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#0E1A2D" stop-opacity="0.35" />
+        <stop offset="100%" stop-color="#0E1A2D" stop-opacity="0" />
+      </linearGradient>
+
+      {/* Foundation gradient — navy with a hint of depth */}
+      <linearGradient id="foundation-fill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1A3B6E" />
+        <stop offset="100%" stop-color="#0E1A2D" />
+      </linearGradient>
+
+      {/* Drop shadow for pillars */}
+      <filter id="pillar-drop" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0E1A2D" flood-opacity="0.18" />
+      </filter>
+      <filter id="pillar-drop-active" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#3B7DD8" flood-opacity="0.45" />
+      </filter>
+
+      {/* Arrowheads */}
+      <marker id="dim-end" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="7" markerHeight="7" orient="auto">
+        <path d="M 0 1 L 9 5 L 0 9 z" fill="#0E1A2D" opacity="0.55" />
       </marker>
-      <marker id="dim-arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
-        <path d="M 10 1 L 1 5 L 10 9 z" fill="#0E1A2D" opacity="0.6" />
+      <marker id="dim-start" viewBox="0 0 10 10" refX="1" refY="5" markerUnits="userSpaceOnUse" markerWidth="7" markerHeight="7" orient="auto">
+        <path d="M 10 1 L 1 5 L 10 9 z" fill="#0E1A2D" opacity="0.55" />
       </marker>
-      {/* Leader-line arrowhead (smaller, for callouts) */}
-      <marker id="leader-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="6" markerHeight="6" orient="auto">
-        <path d="M 0 2 L 8 5 L 0 8 z" fill="#0E1A2D" />
+      <marker id="leader-end" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 2 L 8 5 L 0 8 z" fill="#3B7DD8" />
       </marker>
     </defs>
 
-    {/* Background grid */}
-    <rect width="840" height="540" fill="#F8F7F4" />
-    <rect width="840" height="540" fill="url(#blueprint-grid-minor)" />
-    <rect width="840" height="540" fill="url(#blueprint-grid-major)" />
+    {/* ─── Backdrop + blueprint frame ─── */}
+    <rect width="840" height="560" fill="#F8F7F4" />
+    <rect width="840" height="560" fill="url(#bp-grid-minor)" />
+    <rect width="840" height="560" fill="url(#bp-grid-major)" />
+    <rect x="20" y="20" width="800" height="520" fill="none" stroke="#0E1A2D" stroke-width="1" opacity="0.3" />
+    <rect x="30" y="30" width="780" height="500" fill="none" stroke="#0E1A2D" stroke-width="0.5" opacity="0.2" />
 
-    {/* Drawing border */}
-    <rect x="20" y="20" width="800" height="500" fill="none" stroke="#0E1A2D" stroke-width="1" opacity="0.35" />
-    <rect x="30" y="30" width="780" height="480" fill="none" stroke="#0E1A2D" stroke-width="0.5" opacity="0.25" />
-
-    {/* ─── Top callout: WACHSTUM with leader line ─── */}
-    <g opacity="0.9">
-      <text x="420" y="62" text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700" letter-spacing="8">{strings.top}</text>
-      <line x1="420" y1="72" x2="420" y2="98" stroke="#0E1A2D" stroke-width="1" marker-end="url(#leader-arrow)" />
+    {/* ─── Top WACHSTUM callout — branded stamp ─── */}
+    <g>
+      <rect x="360" y="44" width="120" height="30" fill="#0E1A2D" rx="2" />
+      <rect x="360" y="44" width="120" height="3" fill="#B8893B" />
+      <text x="420" y="64" text-anchor="middle" fill="#F8F7F4" font-size="13" font-weight="700" letter-spacing="6">{strings.top}</text>
+      <line x1="420" y1="74" x2="420" y2="100" stroke="#3B7DD8" stroke-width="1.2" marker-end="url(#leader-end)" />
     </g>
 
-    {/* ─── Horizontal dimension line above entablature ─── */}
-    <g stroke="#0E1A2D" stroke-width="0.7" opacity="0.55" fill="none">
-      <line x1={pillarXs[0]} y1="105" x2={pillarXs[0]} y2="118" />
-      <line x1={pillarXs[pillars.length - 1] + pillarWidth} y1="105" x2={pillarXs[pillars.length - 1] + pillarWidth} y2="118" />
-      <line x1={pillarXs[0]} y1="111" x2={pillarXs[pillars.length - 1] + pillarWidth} y2="111" marker-start="url(#dim-arrow-start)" marker-end="url(#dim-arrow)" />
+    {/* ─── Horizontal dimension line ─── */}
+    <g stroke="#0E1A2D" stroke-width="0.7" opacity="0.45" fill="none">
+      <line x1={pillarXs[0]} y1="108" x2={pillarXs[0]} y2="122" />
+      <line x1={pillarXs[pillars.length - 1] + pillarWidth} y1="108" x2={pillarXs[pillars.length - 1] + pillarWidth} y2="122" />
+      <line x1={pillarXs[0]} y1="115" x2={pillarXs[pillars.length - 1] + pillarWidth} y2="115" marker-start="url(#dim-start)" marker-end="url(#dim-end)" />
     </g>
-    <text x="420" y="108" text-anchor="middle" fill="#0E1A2D" font-size="10" font-weight="600" letter-spacing="2" opacity="0.7" style="background: #F8F7F4;">
-      <tspan dx="0" dy="0" fill="#F8F7F4" stroke="#F8F7F4" stroke-width="5" paint-order="stroke">{strings.dimPillars}</tspan>
-    </text>
-    <text x="420" y="108" text-anchor="middle" fill="#0E1A2D" font-size="10" font-weight="600" letter-spacing="2" opacity="0.7">{strings.dimPillars}</text>
+    <text x="420" y="111" text-anchor="middle" font-size="10" font-weight="600" letter-spacing="2" fill="#F8F7F4" stroke="#F8F7F4" stroke-width="6" paint-order="stroke">{strings.dimPillars}</text>
+    <text x="420" y="111" text-anchor="middle" fill="#0E1A2D" font-size="10" font-weight="600" letter-spacing="2" opacity="0.7">{strings.dimPillars}</text>
 
-    {/* ─── Entablature (top beam) ─── */}
-    <rect x="90" y="118" width="660" height="8" fill="#0E1A2D" />
-    <rect x="80" y="126" width="680" height="2" fill="#0E1A2D" opacity="0.5" />
+    {/* ─── Entablature ─── */}
+    <rect x="90" y="122" width="660" height="10" fill="#0E1A2D" />
+    <rect x="90" y="122" width="660" height="2.5" fill="#B8893B" />
+    <rect x="80" y="132" width="680" height="3" fill="#0E1A2D" opacity="0.6" />
 
-    {/* ─── Left vertical dimension line for pillar height ─── */}
-    <g stroke="#0E1A2D" stroke-width="0.7" opacity="0.55" fill="none">
+    {/* ─── Left vertical dim line ─── */}
+    <g stroke="#0E1A2D" stroke-width="0.7" opacity="0.45" fill="none">
       <line x1="72" y1={pillarTopY} x2="85" y2={pillarTopY} />
       <line x1="72" y1={pillarBottomY} x2="85" y2={pillarBottomY} />
-      <line x1="78" y1={pillarTopY} x2="78" y2={pillarBottomY} marker-start="url(#dim-arrow-start)" marker-end="url(#dim-arrow)" />
+      <line x1="78" y1={pillarTopY} x2="78" y2={pillarBottomY} marker-start="url(#dim-start)" marker-end="url(#dim-end)" />
     </g>
-    <text x="62" y={pillarTopY + pillarHeight / 2} text-anchor="middle" fill="#0E1A2D" font-size="10" font-weight="600" opacity="0.7" transform={`rotate(-90 62 ${pillarTopY + pillarHeight / 2})`}>SÄULE · {strings.dimHeight}</text>
+    <text x="62" y={pillarTopY + pillarHeight / 2} text-anchor="middle" fill="#0E1A2D" font-size="9" font-weight="600" letter-spacing="2" opacity="0.65" transform={`rotate(-90 62 ${pillarTopY + pillarHeight / 2})`}>{strings.dimHeight}</text>
 
-    {/* ─── Pillars — outlined, with architectural capital/base ─── */}
+    {/* ─── Pillars — rendered, not flat ─── */}
     {pillars.map(({ id, num }, i) => (
       <a href={`#card-${id}`} data-pillar-id={id} aria-label={aria[id]}>
         <g class="pillar-group">
-          {/* Capital (top detail) */}
-          <rect x={pillarXs[i] - 4} y={pillarTopY} width={pillarWidth + 8} height="6" fill="#0E1A2D" class="pillar-accent" />
-          {/* Shaft */}
-          <rect x={pillarXs[i]} y={pillarTopY + 6} width={pillarWidth} height={pillarHeight - 12} fill="#F8F7F4" stroke="#0E1A2D" stroke-width="1.2" class="pillar-shaft" />
-          {/* Inner fluting — 3 subtle vertical lines */}
-          <line x1={pillarXs[i] + pillarWidth * 0.3} y1={pillarTopY + 12} x2={pillarXs[i] + pillarWidth * 0.3} y2={pillarBottomY - 12} stroke="#0E1A2D" stroke-width="0.4" opacity="0.3" class="pillar-flute" />
-          <line x1={pillarXs[i] + pillarWidth * 0.5} y1={pillarTopY + 12} x2={pillarXs[i] + pillarWidth * 0.5} y2={pillarBottomY - 12} stroke="#0E1A2D" stroke-width="0.4" opacity="0.3" class="pillar-flute" />
-          <line x1={pillarXs[i] + pillarWidth * 0.7} y1={pillarTopY + 12} x2={pillarXs[i] + pillarWidth * 0.7} y2={pillarBottomY - 12} stroke="#0E1A2D" stroke-width="0.4" opacity="0.3" class="pillar-flute" />
-          {/* Base (bottom detail) */}
-          <rect x={pillarXs[i] - 4} y={pillarBottomY - 6} width={pillarWidth + 8} height="6" fill="#0E1A2D" class="pillar-accent" />
+          {/* Shadow layer */}
+          <rect x={pillarXs[i]} y={pillarTopY + 6} width={pillarWidth} height={pillarHeight - 12} fill="url(#pillar-fill)" class="pillar-shaft" filter="url(#pillar-drop)" rx="1" />
 
-          {/* Pillar number (blueprint numbering) — circled */}
-          <circle cx={pillarXs[i] + pillarWidth / 2} cy={pillarTopY + 30} r="11" fill="#F8F7F4" stroke="#0E1A2D" stroke-width="1" class="pillar-number-ring" />
-          <text x={pillarXs[i] + pillarWidth / 2} y={pillarTopY + 34} text-anchor="middle" fill="#0E1A2D" font-size="10" font-weight="700" letter-spacing="1">{num}</text>
+          {/* Shadow edge (left) */}
+          <rect x={pillarXs[i]} y={pillarTopY + 6} width="12" height={pillarHeight - 12} fill="url(#pillar-shadow-edge)" pointer-events="none" rx="1" />
+          {/* Highlight edge (right) */}
+          <rect x={pillarXs[i] + pillarWidth - 12} y={pillarTopY + 6} width="12" height={pillarHeight - 12} fill="url(#pillar-highlight)" pointer-events="none" rx="1" transform={`scale(-1 1) translate(${-(2 * pillarXs[i] + pillarWidth - 12) - 12} 0)`} style="mix-blend-mode: screen;" />
 
-          {/* Icon — outlined, centered */}
-          <g transform={`translate(${pillarXs[i] + pillarWidth / 2 - 16}, ${pillarTopY + 56})`} fill="none" stroke="#0E1A2D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="pillar-icon">
+          {/* Subtle vertical fluting (white, low opacity) */}
+          <line x1={pillarXs[i] + pillarWidth * 0.25} y1={pillarTopY + 14} x2={pillarXs[i] + pillarWidth * 0.25} y2={pillarBottomY - 14} stroke="#F8F7F4" stroke-width="0.5" opacity="0.15" pointer-events="none" />
+          <line x1={pillarXs[i] + pillarWidth * 0.5} y1={pillarTopY + 14} x2={pillarXs[i] + pillarWidth * 0.5} y2={pillarBottomY - 14} stroke="#F8F7F4" stroke-width="0.5" opacity="0.18" pointer-events="none" />
+          <line x1={pillarXs[i] + pillarWidth * 0.75} y1={pillarTopY + 14} x2={pillarXs[i] + pillarWidth * 0.75} y2={pillarBottomY - 14} stroke="#F8F7F4" stroke-width="0.5" opacity="0.15" pointer-events="none" />
+
+          {/* Capital — navy with gold accent line on top */}
+          <rect x={pillarXs[i] - 6} y={pillarTopY} width={pillarWidth + 12} height="10" fill="#0E1A2D" class="pillar-capital" rx="1" />
+          <rect x={pillarXs[i] - 6} y={pillarTopY} width={pillarWidth + 12} height="2.5" fill="#B8893B" class="pillar-capital-gold" rx="1" />
+
+          {/* Base — navy band */}
+          <rect x={pillarXs[i] - 6} y={pillarBottomY - 10} width={pillarWidth + 12} height="10" fill="#0E1A2D" class="pillar-base" rx="1" />
+
+          {/* Number circle — gold fill, cream ring, dark number */}
+          <circle cx={pillarXs[i] + pillarWidth / 2} cy={pillarTopY + 30} r="13" fill="#B8893B" stroke="#F8F7F4" stroke-width="1.5" class="pillar-number-ring" />
+          <text x={pillarXs[i] + pillarWidth / 2} y={pillarTopY + 34} text-anchor="middle" fill="#0E1A2D" font-size="11" font-weight="800" letter-spacing="0.5">{num}</text>
+
+          {/* Icon — cream stroke, clear on blue */}
+          <g transform={`translate(${pillarXs[i] + pillarWidth / 2 - 16}, ${pillarTopY + 80})`} fill="none" stroke="#F8F7F4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="pillar-icon" pointer-events="none">
             {id === 'search-ai-intelligence' && (
               <g>
                 <circle cx="13" cy="13" r="8" />
                 <line x1="19" y1="19" x2="24" y2="24" />
-                <path d="M25 5 L26 8 L29 9 L26 10 L25 13 L24 10 L21 9 L24 8 Z" fill="#0E1A2D" stroke="none" />
+                <path d="M25 4 L26 7 L29 8 L26 9 L25 12 L24 9 L21 8 L24 7 Z" fill="#B8893B" stroke="none" />
               </g>
             )}
             {id === 'performance-media' && (
@@ -225,13 +271,13 @@ const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
                 <line x1="2" y1="28" x2="30" y2="28" />
                 <rect x="5" y="18" width="6" height="10" />
                 <rect x="13" y="12" width="6" height="16" />
-                <rect x="21" y="4" width="6" height="24" />
+                <rect x="21" y="4" width="6" height="24" fill="#B8893B" fill-opacity="0.45" />
               </g>
             )}
             {id === 'authority-pr' && (
               <g>
                 <path d="M16 3 L28 7 V15 C28 22 16 28 16 28 C16 28 4 22 4 15 V7 Z" />
-                <path d="M11 15 L14 18 L20 12" />
+                <path d="M11 15 L14 18 L20 12" stroke="#B8893B" />
               </g>
             )}
             {id === 'content-copywriting' && (
@@ -240,65 +286,65 @@ const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
                 <path d="M20 3 V10 H27" />
                 <line x1="12" y1="16" x2="22" y2="16" />
                 <line x1="12" y1="20" x2="22" y2="20" />
-                <line x1="12" y1="24" x2="17" y2="24" />
+                <line x1="12" y1="24" x2="17" y2="24" stroke="#B8893B" />
               </g>
             )}
           </g>
 
-          {/* Label below icon */}
+          {/* Label below pillar — on cream background, navy text */}
           {labels[id].length === 1 ? (
-            <text x={pillarXs[i] + pillarWidth / 2} y={pillarTopY + 170} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700" letter-spacing="0.5" class="pillar-label">{labels[id][0]}</text>
+            <text x={pillarXs[i] + pillarWidth / 2} y={pillarBottomY + 6} text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700" class="pillar-label" dominant-baseline="hanging">{labels[id][0]}</text>
           ) : (
-            <>
-              <text x={pillarXs[i] + pillarWidth / 2} y={pillarTopY + 160} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700" letter-spacing="0.5" class="pillar-label">{labels[id][0]}</text>
-              <text x={pillarXs[i] + pillarWidth / 2} y={pillarTopY + 178} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700" letter-spacing="0.5" class="pillar-label">{labels[id][1]}</text>
-            </>
+            <g class="pillar-label" dominant-baseline="hanging">
+              <text x={pillarXs[i] + pillarWidth / 2} y={pillarBottomY + 6} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700">{labels[id][0]}</text>
+              <text x={pillarXs[i] + pillarWidth / 2} y={pillarBottomY + 22} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700">{labels[id][1]}</text>
+            </g>
           )}
-
-          {/* Leader tick at pillar base — dimension anchor */}
-          <line x1={pillarXs[i] + pillarWidth / 2} y1={pillarBottomY + 2} x2={pillarXs[i] + pillarWidth / 2} y2={pillarBottomY + 10} stroke="#0E1A2D" stroke-width="0.5" opacity="0.4" />
         </g>
       </a>
     ))}
 
-    {/* ─── Foundation — hatched, with callout ─── */}
+    {/* ─── Foundation ─── */}
     <a href="#card-data-web" data-pillar-id="data-web" aria-label={aria['data-web']}>
       <g class="foundation-group">
-        {/* Top hatched band */}
-        <rect x="60" y={foundationY} width="720" height={foundationHeight} fill="url(#foundation-hatch)" stroke="#0E1A2D" stroke-width="1.2" class="foundation-fill" />
-        {/* Solid navy cap at bottom — bedrock */}
-        <rect x="50" y={foundationY + foundationHeight} width="740" height="10" fill="#0E1A2D" class="foundation-cap" />
+        {/* Main slab with hatching */}
+        <rect x="60" y={foundationY} width="720" height={foundationHeight} fill="url(#foundation-fill)" class="foundation-fill" />
+        <rect x="60" y={foundationY} width="720" height={foundationHeight} fill="url(#found-hatch)" pointer-events="none" />
+        {/* Top gold accent line */}
+        <rect x="60" y={foundationY} width="720" height="2" fill="#B8893B" class="foundation-gold" pointer-events="none" />
+        {/* Bottom bedrock */}
+        <rect x="50" y={foundationY + foundationHeight} width="740" height="12" fill="#0E1A2D" class="foundation-cap" />
 
-        {/* Foundation icon — outlined database stack, left of label */}
-        <g transform={`translate(102, ${foundationY + 8})`} fill="none" stroke="#F8F7F4" stroke-width="1.4">
-          <rect x="-6" y="-2" width="28" height="32" fill="#0E1A2D" opacity="0.95" />
-          <ellipse cx="8" cy="5" rx="7" ry="2" />
-          <path d="M1 5 V13 C1 14 4 15 8 15 C12 15 15 14 15 13 V5" />
-          <path d="M1 13 V21 C1 22 4 23 8 23 C12 23 15 22 15 21 V13" />
+        {/* Database icon — gold, left side */}
+        <g transform={`translate(90, ${foundationY + 11})`} fill="none" stroke="#B8893B" stroke-width="1.8" pointer-events="none">
+          <ellipse cx="10" cy="3" rx="9" ry="2.5" />
+          <path d="M1 3 V11 C1 12.5 5 13.5 10 13.5 C15 13.5 19 12.5 19 11 V3" />
+          <path d="M1 11 V19 C1 20.5 5 21.5 10 21.5 C15 21.5 19 20.5 19 19 V11" />
         </g>
 
-        {/* DATEN & WEB label on dark cap */}
-        <text x="420" y={foundationY + foundationHeight + 7} text-anchor="middle" fill="#F8F7F4" font-size="11" font-weight="700" letter-spacing="4">{strings.foundation}</text>
+        {/* DATEN & WEB label centered */}
+        <text x="420" y={foundationY + foundationHeight / 2 + 5} text-anchor="middle" fill="#F8F7F4" font-size="14" font-weight="700" letter-spacing="5" pointer-events="none">{strings.foundation}</text>
       </g>
     </a>
 
-    {/* Foundation callout (right-side annotation) */}
+    {/* Foundation callout — right side annotation */}
     <g opacity="0.7">
-      <line x1="720" y1={foundationY + foundationHeight / 2} x2="770" y2={foundationY + foundationHeight / 2} stroke="#0E1A2D" stroke-width="0.8" marker-end="url(#leader-arrow)" />
-      <text x="768" y={foundationY + foundationHeight / 2 - 4} text-anchor="end" fill="#0E1A2D" font-size="10" font-weight="600" letter-spacing="1">{strings.calloutFoundation.toUpperCase()}</text>
+      <line x1="790" y1={foundationY + foundationHeight / 2} x2="770" y2={foundationY + foundationHeight / 2} stroke="#3B7DD8" stroke-width="0.8" />
+      <text x="796" y={foundationY + foundationHeight / 2 - 4} text-anchor="start" fill="#0E1A2D" font-size="9" font-weight="600" letter-spacing="1">{strings.calloutFoundation.toUpperCase()}</text>
     </g>
 
     {/* Caption */}
-    <text x="420" y="488" text-anchor="middle" fill="#0E1A2D" opacity="0.55" font-size="11" font-style="italic">{strings.caption}</text>
+    <text x="420" y={foundationY + foundationHeight + 40} text-anchor="middle" fill="#0E1A2D" opacity="0.6" font-size="11" font-style="italic">{strings.caption}</text>
 
-    {/* ─── Title block (bottom-right, blueprint convention) ─── */}
-    <g transform="translate(620, 498)">
-      <rect x="0" y="0" width="190" height="18" fill="none" stroke="#0E1A2D" stroke-width="0.8" opacity="0.55" />
-      <line x1="44" y1="0" x2="44" y2="18" stroke="#0E1A2D" stroke-width="0.6" opacity="0.5" />
-      <line x1="150" y1="0" x2="150" y2="18" stroke="#0E1A2D" stroke-width="0.6" opacity="0.5" />
-      <text x="22" y="12" text-anchor="middle" fill="#0E1A2D" font-size="8" font-weight="700" letter-spacing="1" opacity="0.75">{strings.titleBlockNo}</text>
-      <text x="97" y="12" text-anchor="middle" fill="#0E1A2D" font-size="8" font-weight="600" letter-spacing="1" opacity="0.65">{strings.titleBlockText}</text>
-      <text x="170" y="12" text-anchor="middle" fill="#0E1A2D" font-size="8" font-weight="600" letter-spacing="1" opacity="0.65">{strings.titleBlockScale}</text>
+    {/* Title block bottom-right */}
+    <g transform="translate(620, 528)">
+      <rect x="0" y="0" width="190" height="18" fill="#0E1A2D" opacity="0.92" rx="1" />
+      <rect x="0" y="0" width="190" height="2" fill="#B8893B" rx="1" />
+      <line x1="44" y1="2" x2="44" y2="18" stroke="#F8F7F4" stroke-width="0.5" opacity="0.35" />
+      <line x1="150" y1="2" x2="150" y2="18" stroke="#F8F7F4" stroke-width="0.5" opacity="0.35" />
+      <text x="22" y="13" text-anchor="middle" fill="#B8893B" font-size="8" font-weight="800" letter-spacing="1.5">{strings.titleBlockNo}</text>
+      <text x="97" y="13" text-anchor="middle" fill="#F8F7F4" font-size="8" font-weight="600" letter-spacing="1.5">{strings.titleBlockText}</text>
+      <text x="170" y="13" text-anchor="middle" fill="#F8F7F4" font-size="8" font-weight="600" letter-spacing="1.5">{strings.titleBlockScale}</text>
     </g>
   </svg>
 </div>
@@ -306,63 +352,57 @@ const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
 <style>
   .building-graphic :global(.pillar-group),
   .building-graphic :global(.foundation-group) {
-    transition: transform 220ms ease, filter 220ms ease;
+    transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
     transform-box: fill-box;
   }
   .building-graphic :global(.pillar-shaft),
-  .building-graphic :global(.pillar-accent),
+  .building-graphic :global(.pillar-capital),
+  .building-graphic :global(.pillar-capital-gold),
+  .building-graphic :global(.pillar-base),
   .building-graphic :global(.pillar-number-ring),
-  .building-graphic :global(.pillar-icon),
-  .building-graphic :global(.pillar-label),
-  .building-graphic :global(.pillar-flute),
   .building-graphic :global(.foundation-fill),
-  .building-graphic :global(.foundation-cap) {
-    transition: stroke 180ms ease, fill 180ms ease, opacity 180ms ease;
+  .building-graphic :global(.foundation-cap),
+  .building-graphic :global(.foundation-gold) {
+    transition: fill 220ms ease, filter 220ms ease, stroke 220ms ease;
   }
   .building-graphic a {
     cursor: pointer;
   }
 
-  /* Hover: shift stroke to accent blue, lift subtly */
+  /* Pillar hover/focus/active — brighter gradient, stronger glow, lift */
   .building-graphic a[data-pillar-id]:hover .pillar-group,
   .building-graphic a[data-pillar-id]:focus-visible .pillar-group,
   .building-graphic a[data-pillar-id].is-active .pillar-group {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
   }
   .building-graphic a[data-pillar-id]:hover .pillar-shaft,
   .building-graphic a[data-pillar-id]:focus-visible .pillar-shaft,
   .building-graphic a[data-pillar-id].is-active .pillar-shaft {
-    stroke: #3B7DD8;
-    stroke-width: 2;
+    fill: url(#pillar-fill-active);
+    filter: url(#pillar-drop-active);
   }
-  .building-graphic a[data-pillar-id]:hover .pillar-accent,
-  .building-graphic a[data-pillar-id]:focus-visible .pillar-accent,
-  .building-graphic a[data-pillar-id].is-active .pillar-accent {
-    fill: #3B7DD8;
-  }
-  .building-graphic a[data-pillar-id]:hover .pillar-icon,
-  .building-graphic a[data-pillar-id]:focus-visible .pillar-icon,
-  .building-graphic a[data-pillar-id].is-active .pillar-icon {
-    stroke: #3B7DD8;
-  }
-  .building-graphic a[data-pillar-id]:hover .pillar-number-ring,
-  .building-graphic a[data-pillar-id]:focus-visible .pillar-number-ring,
-  .building-graphic a[data-pillar-id].is-active .pillar-number-ring {
-    stroke: #3B7DD8;
-    stroke-width: 1.5;
+  .building-graphic a[data-pillar-id]:hover .pillar-capital-gold,
+  .building-graphic a[data-pillar-id]:focus-visible .pillar-capital-gold,
+  .building-graphic a[data-pillar-id].is-active .pillar-capital-gold {
+    fill: #D4A44A;
   }
 
-  /* Foundation hover */
+  /* Foundation hover — gold bar highlights, cap shifts to blue */
   .building-graphic a[data-pillar-id="data-web"]:hover .foundation-group,
   .building-graphic a[data-pillar-id="data-web"]:focus-visible .foundation-group,
   .building-graphic a[data-pillar-id="data-web"].is-active .foundation-group {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
   .building-graphic a[data-pillar-id="data-web"]:hover .foundation-cap,
   .building-graphic a[data-pillar-id="data-web"]:focus-visible .foundation-cap,
   .building-graphic a[data-pillar-id="data-web"].is-active .foundation-cap {
     fill: #3B7DD8;
+  }
+  .building-graphic a[data-pillar-id="data-web"]:hover .foundation-gold,
+  .building-graphic a[data-pillar-id="data-web"]:focus-visible .foundation-gold,
+  .building-graphic a[data-pillar-id="data-web"].is-active .foundation-gold {
+    fill: #D4A44A;
   }
 
   .building-graphic a[data-pillar-id]:focus-visible {
@@ -371,7 +411,7 @@ const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
     border-radius: 4px;
   }
 
-  /* Paired highlight on the card wrappers below */
+  /* Paired card highlight below — unchanged */
   :global(.pillar-card-wrapper) {
     transition: transform 220ms ease, box-shadow 220ms ease;
     border-radius: 0.5rem;
@@ -440,7 +480,6 @@ const pillarXs = pillars.map((_, i) => 120 + i * (pillarWidth + pillarGap));
       event.preventDefault();
       card.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
       card.classList.remove('is-flash');
-      // Force reflow so re-adding the class restarts the animation
       void card.offsetWidth;
       card.classList.add('is-flash');
       window.setTimeout(() => card.classList.remove('is-flash'), 1500);
