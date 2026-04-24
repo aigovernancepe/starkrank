@@ -123,10 +123,23 @@ const pillars = [
       </filter>
     </defs>
 
-    {/* Top label — WACHSTUM in Inter Tight */}
+    {/* Top label — WACHSTUM as the roof of the building */}
     <text x="400" y="26" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="900" letter-spacing="8">{strings.top}</text>
-    {/* Gold accent underline replaces the old black triangle arrow */}
-    <line x1="360" y1="38" x2="440" y2="38" stroke="#B8893B" stroke-width="2.5" stroke-linecap="round" />
+
+    {/* Building outline — thin brand-blue line framing the pillars.
+        Roof on top carrying WACHSTUM, two walls on the sides, meeting
+        the foundation strip at the bottom (which acts as the floor). */}
+    <g fill="none" stroke="#3B7DD8" stroke-width="1" stroke-linecap="round" opacity="0.45">
+      {/* Roof line (with a small gap centred under WACHSTUM so the label sits on it) */}
+      <line x1="40" y1="42" x2="358" y2="42" />
+      <line x1="442" y1="42" x2="760" y2="42" />
+      {/* Left wall */}
+      <line x1="40" y1="42" x2="40" y2="352" />
+      {/* Right wall */}
+      <line x1="760" y1="42" x2="760" y2="352" />
+    </g>
+    {/* Gold accent — small marker above the roof line at the peak */}
+    <line x1="378" y1="38" x2="422" y2="38" stroke="#B8893B" stroke-width="2.5" stroke-linecap="round" />
 
     {/* Pillars — each is a clickable group that scrolls to its card below */}
     {pillars.map(({ id, x, cx }) => (
