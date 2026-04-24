@@ -95,20 +95,27 @@ const breadcrumbSchema = {
   ],
 };
 
+// HowTo.tool applies at the HowTo level, not on individual HowToStep
+// (per schema.org: HowToStep has only itemListElement, text, name — no tool).
+// Aggregate unique tools across all steps and place on the parent HowTo.
+const howToToolList = hub.data.processSteps
+  ? Array.from(new Set(hub.data.processSteps.flatMap((s) => s.tools ?? [])))
+  : [];
+
 const howToSchema = hub.data.processSteps && hub.data.processSteps.length > 0 ? {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   name: `Ablauf: ${localizedTitle} bei StarkRank`,
   description: hub.data.description,
   ...(hub.data.processTotalTime ? { totalTime: hub.data.processTotalTime } : {}),
+  ...(howToToolList.length > 0 ? {
+    tool: howToToolList.map((name) => ({ '@type': 'HowToTool', name })),
+  } : {}),
   step: hub.data.processSteps.map((s, i) => ({
     '@type': 'HowToStep',
     position: i + 1,
     name: s.name,
     text: s.description,
-    ...(s.tools && s.tools.length > 0 ? {
-      tool: s.tools.map((name) => ({ '@type': 'HowToTool', name })),
-    } : {}),
   })),
 } : null;
 
