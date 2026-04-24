@@ -107,37 +107,39 @@ function chevronCenter(row: number) {
 const baselineY = firstChevronY + chevronH * 4 + chevronGapY * 3 + 18; // top of foundation
 const foundationH = 72;
 
-// Generate the double-chevron path for a given center + size.
-// Returns two path strings: outer (larger) + inner (smaller, offset up-left).
-function chevronPaths(cx: number, cy: number) {
-  const hw = chevronW / 2;
-  const hh = chevronH / 2;
-  // Larger (primary) chevron — solid triangle
-  const outer = [
+// Proper chevron band path — inverted-V with hollow interior, matches SR logo mark
+function chevronBandPath(cx: number, cy: number, w: number, h: number, t: number): string {
+  const hw = w / 2;
+  const hh = h / 2;
+  const innerPeakY = cy - hh + t * 1.8;
+  return [
     `M ${cx - hw} ${cy + hh}`,
     `L ${cx} ${cy - hh}`,
     `L ${cx + hw} ${cy + hh}`,
+    `L ${cx + hw - t} ${cy + hh}`,
+    `L ${cx} ${innerPeakY}`,
+    `L ${cx - hw + t} ${cy + hh}`,
     'Z',
   ].join(' ');
-  // Smaller (navy) chevron — offset up-left, 60% size
+}
+
+// Generate the double-chevron paths: larger primary-blue + smaller navy offset upper-left.
+function chevronPaths(cx: number, cy: number) {
+  const outerT = chevronW * 0.26;
   const innerW = chevronW * 0.62;
   const innerH = chevronH * 0.62;
-  const offsetX = -chevronW * 0.26;
-  const offsetY = -chevronH * 0.22;
-  const ihw = innerW / 2;
-  const ihh = innerH / 2;
-  const inner = [
-    `M ${cx - ihw + offsetX} ${cy + ihh + offsetY}`,
-    `L ${cx + offsetX} ${cy - ihh + offsetY}`,
-    `L ${cx + ihw + offsetX} ${cy + ihh + offsetY}`,
-    'Z',
-  ].join(' ');
-  return { outer, inner };
+  const innerT = innerW * 0.3;
+  const offsetX = -chevronW * 0.22;
+  const offsetY = -chevronH * 0.2;
+  return {
+    outer: chevronBandPath(cx, cy, chevronW, chevronH, outerT),
+    inner: chevronBandPath(cx + offsetX, cy + offsetY, innerW, innerH, innerT),
+  };
 }
 
 // Small mini brand-mark for top accent (matches the logo style in miniature)
-const miniMarkOuter = 'M -13 7 L 0 -7 L 13 7 Z';
-const miniMarkInner = 'M -10 4 L -2 -4 L 6 4 Z';
+const miniMarkOuter = chevronBandPath(0, 0, 28, 16, 7);
+const miniMarkInner = chevronBandPath(-4, -3, 18, 11, 4);
 ---
 
 <div class="building-graphic relative">
@@ -186,8 +188,8 @@ const miniMarkInner = 'M -10 4 L -2 -4 L 6 4 Z';
     <g>
       <text x="420" y="68" text-anchor="middle" fill="#0E1A2D" font-size="26" font-weight="900" letter-spacing="10">{strings.top}</text>
       <g transform="translate(420, 88)">
-        <path d={miniMarkOuter} fill="#3B7DD8" />
-        <path d={miniMarkInner} fill="#0E1A2D" />
+        <path d={miniMarkOuter} fill="#3B7DD8" fill-rule="evenodd" />
+        <path d={miniMarkInner} fill="#0E1A2D" fill-rule="evenodd" />
       </g>
     </g>
 
@@ -200,13 +202,13 @@ const miniMarkInner = 'M -10 4 L -2 -4 L 6 4 Z';
         <a href={`#card-${id}`} data-pillar-id={id} aria-label={aria[id]}>
           <g class="chev-group">
             {/* Glow layer */}
-            <path d={paths.outer} fill="#3B7DD8" class="chev-glow" filter="url(#mark-glow)" opacity="0.6" />
+            <path d={paths.outer} fill="#3B7DD8" class="chev-glow" filter="url(#mark-glow)" opacity="0.6" fill-rule="evenodd" />
 
             {/* Larger chevron (primary blue — matches logo main) */}
-            <path d={paths.outer} fill="#3B7DD8" class="chev-outer" />
+            <path d={paths.outer} fill="#3B7DD8" class="chev-outer" fill-rule="evenodd" />
 
             {/* Smaller chevron (navy, offset upper-left — matches logo accent) */}
-            <path d={paths.inner} fill="#0E1A2D" class="chev-inner" />
+            <path d={paths.inner} fill="#0E1A2D" class="chev-inner" fill-rule="evenodd" />
 
             {/* Label — aligned with chevron's vertical center, Inter Tight Black */}
             <text

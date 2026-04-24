@@ -62,6 +62,25 @@ const cy = 290;
 const outerW = 280;
 const outerH = 200;
 
+// Proper chevron path — a banded inverted-V with hollow interior (matches the
+// SR logo mark). Points: outer bottom-left → outer peak → outer bottom-right →
+// inner bottom-right (inset by t) → inner peak (lower than outer) → inner
+// bottom-left → close. Yields the iconic chevron/caret silhouette.
+function chevronPath(cxp: number, cyp: number, w: number, h: number, t: number): string {
+  const hw = w / 2;
+  const hh = h / 2;
+  const innerPeakY = cyp - hh + t * 1.8;
+  return [
+    `M ${cxp - hw} ${cyp + hh}`,          // outer bottom-left
+    `L ${cxp} ${cyp - hh}`,               // outer peak
+    `L ${cxp + hw} ${cyp + hh}`,          // outer bottom-right
+    `L ${cxp + hw - t} ${cyp + hh}`,      // inner bottom-right
+    `L ${cxp} ${innerPeakY}`,             // inner peak (lower)
+    `L ${cxp - hw + t} ${cyp + hh}`,      // inner bottom-left
+    'Z',
+  ].join(' ');
+}
+
 // Label anchors — 4 corners with leader lines reaching chevron edges
 const corners = [
   { id: 'search-ai-intelligence', num: '01', lx: 90, ly: 180, align: 'start', leaderX: cx - outerW / 2 + 30, leaderY: cy - outerH / 2 + 30 },
@@ -69,6 +88,16 @@ const corners = [
   { id: 'authority-pr', num: '03', lx: 90, ly: 410, align: 'start', leaderX: cx - outerW / 2 + 30, leaderY: cy + outerH / 2 - 30 },
   { id: 'content-copywriting', num: '04', lx: 750, ly: 410, align: 'end', leaderX: cx + outerW / 2 - 30, leaderY: cy + outerH / 2 - 30 },
 ];
+
+// Outer and inner chevron paths (mirrors logo: larger chevron + smaller one offset upper-left)
+const outerThickness = outerW * 0.26;
+const innerW = outerW * 0.62;
+const innerH = outerH * 0.62;
+const innerOffsetX = -outerW * 0.2;
+const innerOffsetY = -outerH * 0.18;
+const innerThickness = innerW * 0.3;
+const heroOuterPath = chevronPath(cx, cy, outerW, outerH, outerThickness);
+const heroInnerPath = chevronPath(cx + innerOffsetX, cy + innerOffsetY, innerW, innerH, innerThickness);
 ---
 
 <div class="variant-hero relative">
@@ -103,13 +132,13 @@ const corners = [
     {/* HERO double-chevron — logo mark at giant scale */}
     <g class="hero-mark">
       {/* Glow */}
-      <path d={`M ${cx - outerW / 2} ${cy + outerH / 2} L ${cx} ${cy - outerH / 2} L ${cx + outerW / 2} ${cy + outerH / 2} Z`} fill="#3B7DD8" filter="url(#h-glow)" opacity="0.6" class="hero-glow" />
-      {/* Outer primary-blue */}
-      <path d={`M ${cx - outerW / 2} ${cy + outerH / 2} L ${cx} ${cy - outerH / 2} L ${cx + outerW / 2} ${cy + outerH / 2} Z`} fill="#3B7DD8" class="hero-outer" />
-      {/* Inner navy — offset upper-left, 60% size */}
-      <path d={`M ${cx - outerW / 2 * 0.62 - outerW * 0.2} ${cy + outerH / 2 * 0.62 - outerH * 0.18} L ${cx - outerW * 0.2} ${cy - outerH / 2 * 0.62 - outerH * 0.18} L ${cx + outerW / 2 * 0.62 - outerW * 0.2} ${cy + outerH / 2 * 0.62 - outerH * 0.18} Z`} fill="#0E1A2D" class="hero-inner" />
-      {/* Gold apex accent */}
-      <circle cx={cx - outerW * 0.2} cy={cy - outerH / 2 * 0.62 - outerH * 0.18 - 3} r="5" fill="#B8893B" />
+      <path d={heroOuterPath} fill="#3B7DD8" filter="url(#h-glow)" opacity="0.6" class="hero-glow" />
+      {/* Outer chevron band (primary blue) */}
+      <path d={heroOuterPath} fill="#3B7DD8" class="hero-outer" fill-rule="evenodd" />
+      {/* Inner chevron band (navy, offset upper-left) */}
+      <path d={heroInnerPath} fill="#0E1A2D" class="hero-inner" fill-rule="evenodd" />
+      {/* Gold apex accent at inner peak */}
+      <circle cx={cx + innerOffsetX} cy={cy + innerOffsetY - innerH / 2 - 3} r="5" fill="#B8893B" />
     </g>
 
     {/* Corner labels — each clickable to its pillar card */}

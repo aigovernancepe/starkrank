@@ -64,17 +64,39 @@ const discs = [
 ];
 const discCY = 270;
 const discR = 60;
+
+// Chevron band path — inverted-V with hollow interior, matches SR logo mark
+function chevronPath(cxp: number, cyp: number, w: number, h: number, t: number): string {
+  const hw = w / 2;
+  const hh = h / 2;
+  const innerPeakY = cyp - hh + t * 1.8;
+  return [
+    `M ${cxp - hw} ${cyp + hh}`,
+    `L ${cxp} ${cyp - hh}`,
+    `L ${cxp + hw} ${cyp + hh}`,
+    `L ${cxp + hw - t} ${cyp + hh}`,
+    `L ${cxp} ${innerPeakY}`,
+    `L ${cxp - hw + t} ${cyp + hh}`,
+    'Z',
+  ].join(' ');
+}
+
+// In-disc chevron: centered at 0,0 (translated into place), 56 wide × 38 tall, thickness 15
+const discChevOuter = chevronPath(0, 0, 56, 38, 15);
+const discChevInner = chevronPath(-6, -5, 34, 23, 9);
 ---
 
 <div class="variant-field relative">
   <svg viewBox="0 0 840 560" xmlns="http://www.w3.org/2000/svg" role="img" class="w-full h-auto max-w-3xl mx-auto mt-8" style="font-family: 'Inter Tight', ui-sans-serif, system-ui;">
 
     <defs>
-      {/* Chevron-field tile pattern — faint SR marks repeated */}
+      {/* Chevron-field tile pattern — faint SR marks repeated as proper chevron bands */}
       <pattern id="chev-field" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
         <g opacity="0.09">
-          <path d="M 20 52 L 40 28 L 60 52 Z" fill="#3B7DD8" />
-          <path d="M 24 44 L 36 30 L 48 44 Z" fill="#0E1A2D" />
+          {/* Outer chevron band, 44w × 30h, thickness 10 */}
+          <path d="M 18 54 L 40 24 L 62 54 L 52 54 L 40 36 L 28 54 Z" fill="#3B7DD8" fill-rule="evenodd" />
+          {/* Inner chevron band (offset upper-left), 26w × 18h, thickness 6 */}
+          <path d="M 22 44 L 34 28 L 46 44 L 40 44 L 34 36 L 28 44 Z" fill="#0E1A2D" fill-rule="evenodd" />
         </g>
       </pattern>
       <radialGradient id="f-backdrop" cx="50%" cy="50%" r="75%">
@@ -114,8 +136,8 @@ const discR = 60;
 
           {/* SR double-chevron mark inside disc */}
           <g transform={`translate(${cx}, ${discCY})`} pointer-events="none">
-            <path d="M -28 14 L 0 -18 L 28 14 Z" fill="#3B7DD8" class="disc-chev-outer" />
-            <path d="M -20 6 L -5 -12 L 12 6 Z" fill="#F8F7F4" class="disc-chev-inner" opacity="0.95" />
+            <path d={discChevOuter} fill="#3B7DD8" class="disc-chev-outer" fill-rule="evenodd" />
+            <path d={discChevInner} fill="#F8F7F4" class="disc-chev-inner" opacity="0.95" fill-rule="evenodd" />
           </g>
 
           {/* Number + label below the disc */}

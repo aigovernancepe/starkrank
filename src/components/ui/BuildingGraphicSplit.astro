@@ -68,6 +68,31 @@ const cx = 210;
 const cy = 290;
 const outerW = 240;
 const outerH = 180;
+
+// Proper chevron band path (matches SR logo mark silhouette)
+function chevronPath(cxp: number, cyp: number, w: number, h: number, t: number): string {
+  const hw = w / 2;
+  const hh = h / 2;
+  const innerPeakY = cyp - hh + t * 1.8;
+  return [
+    `M ${cxp - hw} ${cyp + hh}`,
+    `L ${cxp} ${cyp - hh}`,
+    `L ${cxp + hw} ${cyp + hh}`,
+    `L ${cxp + hw - t} ${cyp + hh}`,
+    `L ${cxp} ${innerPeakY}`,
+    `L ${cxp - hw + t} ${cyp + hh}`,
+    'Z',
+  ].join(' ');
+}
+
+const splitOuterThickness = outerW * 0.26;
+const splitInnerW = outerW * 0.62;
+const splitInnerH = outerH * 0.62;
+const splitInnerOffsetX = -outerW * 0.2;
+const splitInnerOffsetY = -outerH * 0.18;
+const splitInnerThickness = splitInnerW * 0.3;
+const splitOuterPath = chevronPath(cx, cy, outerW, outerH, splitOuterThickness);
+const splitInnerPath = chevronPath(cx + splitInnerOffsetX, cy + splitInnerOffsetY, splitInnerW, splitInnerH, splitInnerThickness);
 ---
 
 <div class="variant-split relative">
@@ -92,9 +117,9 @@ const outerH = 180;
 
     {/* Left side — HERO chevron mark */}
     <g class="split-mark">
-      <path d={`M ${cx - outerW / 2} ${cy + outerH / 2} L ${cx} ${cy - outerH / 2} L ${cx + outerW / 2} ${cy + outerH / 2} Z`} fill="#3B7DD8" filter="url(#sp-glow)" opacity="0.55" class="split-glow" />
-      <path d={`M ${cx - outerW / 2} ${cy + outerH / 2} L ${cx} ${cy - outerH / 2} L ${cx + outerW / 2} ${cy + outerH / 2} Z`} fill="#3B7DD8" class="split-outer" />
-      <path d={`M ${cx - outerW / 2 * 0.62 - outerW * 0.2} ${cy + outerH / 2 * 0.62 - outerH * 0.18} L ${cx - outerW * 0.2} ${cy - outerH / 2 * 0.62 - outerH * 0.18} L ${cx + outerW / 2 * 0.62 - outerW * 0.2} ${cy + outerH / 2 * 0.62 - outerH * 0.18} Z`} fill="#0E1A2D" class="split-inner" />
+      <path d={splitOuterPath} fill="#3B7DD8" filter="url(#sp-glow)" opacity="0.55" class="split-glow" />
+      <path d={splitOuterPath} fill="#3B7DD8" class="split-outer" fill-rule="evenodd" />
+      <path d={splitInnerPath} fill="#0E1A2D" class="split-inner" fill-rule="evenodd" />
 
       {/* WACHSTUM small label above the left mark */}
       <text x={cx} y="130" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="900" letter-spacing="8">{s.top}</text>
