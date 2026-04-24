@@ -50,256 +50,253 @@ const pillarAria: Record<string, Record<string, string>> = {
   },
 };
 
-const strings = {
-  de: {
-    top: 'WACHSTUM',
-    foundation: 'DATEN & WEB',
-    caption: 'Fundament jeder strategischen Entscheidung',
-    title: 'StarkRank — vier Disziplinen steigen zum Wachstum',
-    desc: 'Vier StarkRank-Chevrons steigen vom Fundament Daten und Web zum Wachstum auf. Jeder Chevron — Suche und KI-Intelligenz, Performance Media, Autorität, Content und Texterstellung — trägt zur Ascension bei. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
-  },
-  'ch-de': {
-    top: 'WACHSTUM',
-    foundation: 'DATEN & WEB',
-    caption: 'Fundament jeder strategischen Entscheidung',
-    title: 'StarkRank — vier Disziplinen steigen zum Wachstum',
-    desc: 'Vier StarkRank-Chevrons steigen vom Fundament Daten und Web zum Wachstum auf. Jeder Chevron — Suche und KI-Intelligenz, Performance Media, Autorität, Content und Texterstellung — trägt zur Ascension bei. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
-  },
-  en: {
-    top: 'GROWTH',
-    foundation: 'DATA & WEB',
-    caption: 'Foundation of every strategic decision',
-    title: 'StarkRank — four disciplines ascending to growth',
-    desc: 'Four StarkRank chevrons rise from the Data and Web foundation toward growth. Each chevron — Search and AI Intelligence, Performance Media, Authority, Content and Copywriting — contributes to the ascent. Hovering highlights the matching card below; clicking scrolls to it.',
-  },
+const s = {
+  de: { foundation: 'DATEN & WEB', caption: 'Fundament jeder strategischen Entscheidung', wachstum: 'WACHSTUM' },
+  'ch-de': { foundation: 'DATEN & WEB', caption: 'Fundament jeder strategischen Entscheidung', wachstum: 'WACHSTUM' },
+  en: { foundation: 'DATA & WEB', caption: 'Foundation of every strategic decision', wachstum: 'GROWTH' },
 }[locale];
 
-const aria = pillarAria[locale];
-const labels = pillarLabels[locale];
-
-// ─── Geometry ───
-// Each chevron has its OWN baseline so per-chevron aspect ratio stays
-// logo-like (~1.3:1 width to height). Chevron feet rest above the peak
-// of the chevron below, producing an ascending nested stack.
-type Chev = {
-  id: string;
-  num: string;
-  cx: number;       // horizontal centre (all centred at same column)
-  baseY: number;    // feet baseline y
-  width: number;    // full width at feet
-  height: number;   // height from peak to feet
-};
-
-const chevrons: Chev[] = [
-  { id: 'search-ai-intelligence', num: '01', cx: 320, baseY: 540, width: 420, height: 150 },
-  { id: 'performance-media',      num: '02', cx: 320, baseY: 460, width: 320, height: 150 },
-  { id: 'authority-pr',           num: '03', cx: 320, baseY: 380, width: 230, height: 150 },
-  { id: 'content-copywriting',    num: '04', cx: 320, baseY: 300, width: 150, height: 150 },
+const disciplines = [
+  { id: 'search-ai-intelligence', num: '01' },
+  { id: 'performance-media',      num: '02' },
+  { id: 'authority-pr',           num: '03' },
+  { id: 'content-copywriting',    num: '04' },
 ];
 
-// Compute band path — proper chevron silhouette matching SR logo mark.
-// Uses uniform perpendicular band thickness along each leg, producing
-// an inner peak that sits at the geometrically correct offset below the
-// outer peak. V-cut depth ≈ 55% of chevron height for logo-like silhouette.
-function chevronBand(c: Chev): string {
-  const halfW = c.width / 2;
-  const peakY = c.baseY - c.height;
-  const legLen = Math.sqrt(halfW * halfW + c.height * c.height);
-
-  // V-cut depth = 55% of height (keeps feet visible + prominent band)
-  const vCutDepth = c.height * 0.55;
-  const innerPeakY = c.baseY - vCutDepth;
-  // Derive band thickness from uniform-perpendicular-leg-width constraint:
-  // innerPeakOffsetFromOuterPeak = bandThickness * legLen / halfW
-  // (c.baseY - innerPeakY) - 0 → innerOffset = height - vCutDepth
-  const innerOffset = c.height - vCutDepth;
-  const bandThickness = innerOffset * halfW / legLen;
-
-  // Horizontal inset at baseline = bandThickness * (legLen / height)
-  // (proportional to leg angle so legs have uniform perpendicular width)
-  const footInset = bandThickness * legLen / c.height;
-
-  return [
-    `M ${c.cx - halfW} ${c.baseY}`,          // outer bottom-left
-    `L ${c.cx} ${peakY}`,                    // outer peak
-    `L ${c.cx + halfW} ${c.baseY}`,          // outer bottom-right
-    `L ${c.cx + halfW - footInset} ${c.baseY}`,  // inner bottom-right
-    `L ${c.cx} ${innerPeakY}`,               // inner peak
-    `L ${c.cx - halfW + footInset} ${c.baseY}`,  // inner bottom-left
-    'Z',
-  ].join(' ');
-}
-
-// Per-layer colour (palette gradient from navy at base to light blue at crown)
-const layerColor = ['#1A3B6E', '#2E5FA8', '#3B7DD8', '#5A9AE6'];
-const layerColorActive = ['#2E5FA8', '#3B7DD8', '#5A9AE6', '#8AB6EC'];
-
-const baseY = 540;  // chevron 01 baseline (bottom-most)
-const foundationY = 568;
-const foundationH = 66;
+const labels = pillarLabels[locale];
+const aria = pillarAria[locale];
 ---
 
-<div class="building-graphic relative">
-  <svg
-    viewBox="0 0 840 700"
-    xmlns="http://www.w3.org/2000/svg"
-    role="img"
-    aria-labelledby="bg-title bg-desc"
-    class="w-full h-auto max-w-3xl mx-auto mt-8"
-    style="font-family: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;"
-  >
-    <title id="bg-title">{strings.title}</title>
-    <desc id="bg-desc">{strings.desc}</desc>
+<div class="building-graphic">
+  {/* Top: WACHSTUM label + real StarkRank logo as the brand anchor */}
+  <div class="brand-anchor">
+    <span class="wachstum-label">{s.wachstum}</span>
+    <img src="/SR-Logo-standard_high-res.png" alt="StarkRank" width="320" height="118" class="brand-logo" />
+  </div>
 
-    <defs>
-      <radialGradient id="bg-backdrop" cx="50%" cy="50%" r="75%">
-        <stop offset="0%" stop-color="#FDFCFA" />
-        <stop offset="100%" stop-color="#F2F0EB" />
-      </radialGradient>
-      <linearGradient id="bg-found" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#1A3B6E" />
-        <stop offset="100%" stop-color="#0E1A2D" />
-      </linearGradient>
-      <pattern id="bg-hatch" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
-        <line x1="0" y1="0" x2="0" y2="14" stroke="#3B7DD8" stroke-width="0.8" opacity="0.4" />
-        <circle cx="7" cy="7" r="1" fill="#5A9AE6" opacity="0.35" />
-      </pattern>
-      <filter id="bg-glow" x="-30%" y="-30%" width="160%" height="160%">
-        <feGaussianBlur stdDeviation="8" result="blur" />
-        <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.231  0 0 0 0 0.490  0 0 0 0 0.847  0 0 0 0.45 0" />
-      </filter>
-      <filter id="bg-glow-active" x="-30%" y="-30%" width="160%" height="160%">
-        <feGaussianBlur stdDeviation="14" result="blur" />
-        <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.352  0 0 0 0 0.603  0 0 0 0 0.901  0 0 0 0.85 0" />
-      </filter>
-    </defs>
+  {/* Horizontal row of four discipline items */}
+  <div class="disciplines">
+    {disciplines.map((d) => (
+      <a href={`#card-${d.id}`} data-pillar-id={d.id} aria-label={aria[d.id]} class="discipline">
+        <span class="discipline-badge">{d.num}</span>
+        <span class="discipline-label">{labels[d.id]}</span>
+        <svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" class="discipline-chev" aria-hidden="true">
+          <path d="M 4 14 L 12 2 L 20 14 L 16 14 L 12 8 L 8 14 Z" fill="currentColor" fill-rule="evenodd" />
+        </svg>
+      </a>
+    ))}
+  </div>
 
-    <rect width="840" height="700" fill="url(#bg-backdrop)" />
+  {/* Foundation strip */}
+  <a href="#card-data-web" data-pillar-id="data-web" aria-label={aria['data-web']} class="foundation">
+    <svg viewBox="0 0 24 30" xmlns="http://www.w3.org/2000/svg" class="foundation-icon" aria-hidden="true">
+      <ellipse cx="12" cy="4" rx="10" ry="3" fill="none" stroke="#B8893B" stroke-width="1.8" />
+      <path d="M2 4 V15 C2 16.5 6.5 18 12 18 C17.5 18 22 16.5 22 15 V4" fill="none" stroke="#B8893B" stroke-width="1.8" />
+      <path d="M2 15 V26 C2 27.5 6.5 29 12 29 C17.5 29 22 27.5 22 26 V15" fill="none" stroke="#B8893B" stroke-width="1.8" />
+    </svg>
+    <span class="foundation-label">{s.foundation}</span>
+    <div class="foundation-dots" aria-hidden="true">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+  </a>
 
-    {/* Top WACHSTUM label — simple text, no decorative mark */}
-    <text x="320" y="88" text-anchor="middle" fill="#0E1A2D" font-size="22" font-weight="900" letter-spacing="10">{strings.top}</text>
-    <line x1="240" y1="104" x2="400" y2="104" stroke="#B8893B" stroke-width="2.5" />
-
-    {/* Four ascending chevrons */}
-    {chevrons.map((c, i) => {
-      const d = chevronBand(c);
-      const peakY = c.baseY - c.height;
-      // Badge + label inline on the right, aligned with the chevron's peak
-      const labelY = peakY + 6;
-      return (
-        <a href={`#card-${c.id}`} data-pillar-id={c.id} aria-label={aria[c.id]}>
-          <g class="chev-group" style={`--c-base:${layerColor[i]};--c-active:${layerColorActive[i]};`}>
-            {/* Glow behind */}
-            <path d={d} fill={layerColor[i]} filter="url(#bg-glow)" opacity="0.5" class="chev-glow" fill-rule="evenodd" />
-            {/* Band body */}
-            <path d={d} fill={layerColor[i]} class="chev-body" fill-rule="evenodd" />
-
-            {/* Badge + label inline on right (same side, readable) */}
-            <g class="chev-tag">
-              <rect x="570" y={labelY - 18} width="34" height="26" rx="4" fill="#B8893B" class="chev-badge-bg" />
-              <text x="587" y={labelY + 1} text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="900" letter-spacing="0.5">{c.num}</text>
-              <text x="614" y={labelY} text-anchor="start" fill="#0E1A2D" font-size="20" font-weight="900" letter-spacing="-0.2" class="chev-label">{labels[c.id]}</text>
-            </g>
-          </g>
-        </a>
-      );
-    })}
-
-    {/* Foundation */}
-    <a href="#card-data-web" data-pillar-id="data-web" aria-label={aria['data-web']}>
-      <g class="foundation-group">
-        <rect x="50" y={foundationY - 4} width="740" height="2.5" fill="#B8893B" class="foundation-gold" />
-        <rect x="50" y={foundationY} width="740" height={foundationH} fill="url(#bg-found)" class="foundation-fill" rx="4" />
-        <rect x="50" y={foundationY} width="740" height={foundationH} fill="url(#bg-hatch)" pointer-events="none" rx="4" />
-
-        <g transform={`translate(86, ${foundationY + 18})`} fill="none" stroke="#B8893B" stroke-width="2" pointer-events="none">
-          <ellipse cx="11" cy="3" rx="10" ry="3" />
-          <path d="M1 3 V13 C1 14.5 5 16 11 16 C17 16 21 14.5 21 13 V3" />
-          <path d="M1 13 V23 C1 24.5 5 26 11 26 C17 26 21 24.5 21 23 V13" />
-        </g>
-
-        <text x="420" y={foundationY + foundationH / 2 + 7} text-anchor="middle" fill="#F8F7F4" font-size="22" font-weight="900" letter-spacing="10" pointer-events="none">{strings.foundation}</text>
-
-        <g transform={`translate(720, ${foundationY + 19})`} pointer-events="none">
-          <circle cx="0" cy="0" r="1.5" fill="#B8893B" />
-          <circle cx="8" cy="0" r="1.5" fill="#F8F7F4" opacity="0.4" />
-          <circle cx="16" cy="0" r="1.5" fill="#F8F7F4" opacity="0.2" />
-          <circle cx="0" cy="8" r="1.5" fill="#F8F7F4" opacity="0.4" />
-          <circle cx="8" cy="8" r="1.5" fill="#F8F7F4" opacity="0.7" />
-          <circle cx="16" cy="8" r="1.5" fill="#B8893B" />
-          <circle cx="0" cy="16" r="1.5" fill="#F8F7F4" opacity="0.2" />
-          <circle cx="8" cy="16" r="1.5" fill="#B8893B" opacity="0.6" />
-          <circle cx="16" cy="16" r="1.5" fill="#F8F7F4" opacity="0.5" />
-        </g>
-      </g>
-    </a>
-
-    <text x="420" y={foundationY + foundationH + 30} text-anchor="middle" fill="#0E1A2D" opacity="0.55" font-size="13" font-style="italic">{strings.caption}</text>
-  </svg>
+  <p class="caption">{s.caption}</p>
 </div>
 
 <style>
-  .building-graphic :global(.chev-group),
-  .building-graphic :global(.foundation-group) {
-    transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: center;
-    transform-box: fill-box;
-  }
-  .building-graphic :global(.chev-body),
-  .building-graphic :global(.chev-glow),
-  .building-graphic :global(.chev-badge-bg),
-  .building-graphic :global(.chev-label),
-  .building-graphic :global(.foundation-gold),
-  .building-graphic :global(.foundation-fill) {
-    transition: fill 260ms ease, filter 260ms ease, stroke 260ms ease, opacity 260ms ease;
-  }
-  .building-graphic a { cursor: pointer; }
-
-  .building-graphic a[data-pillar-id]:hover .chev-group,
-  .building-graphic a[data-pillar-id]:focus-visible .chev-group,
-  .building-graphic a[data-pillar-id].is-active .chev-group {
-    transform: translateY(-5px) scale(1.015);
-  }
-  .building-graphic a[data-pillar-id]:hover .chev-body,
-  .building-graphic a[data-pillar-id]:focus-visible .chev-body,
-  .building-graphic a[data-pillar-id].is-active .chev-body {
-    fill: var(--c-active);
-  }
-  .building-graphic a[data-pillar-id]:hover .chev-glow,
-  .building-graphic a[data-pillar-id]:focus-visible .chev-glow,
-  .building-graphic a[data-pillar-id].is-active .chev-glow {
-    fill: var(--c-active);
-    filter: url(#bg-glow-active);
-    opacity: 0.8;
-  }
-  .building-graphic a[data-pillar-id]:hover .chev-badge-bg,
-  .building-graphic a[data-pillar-id]:focus-visible .chev-badge-bg,
-  .building-graphic a[data-pillar-id].is-active .chev-badge-bg {
-    fill: #D4A44A;
-  }
-  .building-graphic a[data-pillar-id]:hover .chev-label,
-  .building-graphic a[data-pillar-id]:focus-visible .chev-label,
-  .building-graphic a[data-pillar-id].is-active .chev-label {
-    fill: #3B7DD8;
+  .building-graphic {
+    max-width: 48rem;
+    margin: 2rem auto 0;
+    font-family: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
+    padding: 0 1rem;
   }
 
-  .building-graphic a[data-pillar-id="data-web"]:hover .foundation-group,
-  .building-graphic a[data-pillar-id="data-web"]:focus-visible .foundation-group,
-  .building-graphic a[data-pillar-id="data-web"].is-active .foundation-group {
-    transform: translateY(-3px);
+  /* Brand anchor */
+  .brand-anchor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
-  .building-graphic a[data-pillar-id="data-web"]:hover .foundation-gold,
-  .building-graphic a[data-pillar-id="data-web"]:focus-visible .foundation-gold,
-  .building-graphic a[data-pillar-id="data-web"].is-active .foundation-gold {
-    fill: #D4A44A;
+  .wachstum-label {
+    font-size: 0.875rem;
+    font-weight: 900;
+    letter-spacing: 0.6em;
+    color: #0E1A2D;
+    padding-right: 0.6em; /* visual centering for letter-spacing */
+    position: relative;
+  }
+  .wachstum-label::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 3rem;
+    height: 2px;
+    background: #B8893B;
+  }
+  .brand-logo {
+    display: block;
+    max-width: 18rem;
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
   }
 
-  .building-graphic a[data-pillar-id]:focus-visible {
+  /* Disciplines row */
+  .disciplines {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  .discipline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 0.75rem 1rem;
+    background: transparent;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: transform 260ms cubic-bezier(0.4, 0, 0.2, 1), background-color 260ms ease;
+    color: #3B7DD8;
+  }
+  .discipline-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #B8893B;
+    color: #0E1A2D;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    box-shadow: 0 4px 12px -3px rgba(184, 137, 59, 0.35);
+    transition: background-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+  }
+  .discipline-label {
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    color: #0E1A2D;
+    text-align: center;
+    line-height: 1.2;
+    transition: color 220ms ease;
+  }
+  .discipline-chev {
+    width: 1rem;
+    height: 0.75rem;
+    color: #3B7DD8;
+    opacity: 0;
+    transform: translateY(-2px);
+    transition: opacity 220ms ease, transform 220ms ease;
+  }
+  .discipline:hover,
+  .discipline:focus-visible,
+  .discipline.is-active {
+    transform: translateY(-4px);
+    background-color: rgba(59, 125, 216, 0.06);
+    outline: none;
+  }
+  .discipline:hover .discipline-badge,
+  .discipline:focus-visible .discipline-badge,
+  .discipline.is-active .discipline-badge {
+    background: #D4A44A;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px -3px rgba(184, 137, 59, 0.55);
+  }
+  .discipline:hover .discipline-label,
+  .discipline:focus-visible .discipline-label,
+  .discipline.is-active .discipline-label {
+    color: #3B7DD8;
+  }
+  .discipline:hover .discipline-chev,
+  .discipline:focus-visible .discipline-chev,
+  .discipline.is-active .discipline-chev {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .discipline:focus-visible {
     outline: 2px solid #3B7DD8;
     outline-offset: 3px;
-    border-radius: 4px;
   }
 
+  /* Foundation strip */
+  .foundation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    background: linear-gradient(to bottom, #1A3B6E, #0E1A2D);
+    padding: 1.5rem 2rem;
+    margin-top: 2.5rem;
+    border-radius: 0.5rem;
+    border-top: 2px solid #B8893B;
+    text-decoration: none;
+    color: #F8F7F4;
+    position: relative;
+    overflow: hidden;
+    transition: transform 260ms ease, border-color 260ms ease;
+  }
+  .foundation-icon {
+    width: 1.5rem;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .foundation-label {
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+    padding-right: 0.5em;
+  }
+  .foundation-dots {
+    display: grid;
+    grid-template-columns: repeat(3, 6px);
+    gap: 4px;
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .foundation-dots span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(248, 247, 244, 0.35);
+  }
+  .foundation-dots span:nth-child(1),
+  .foundation-dots span:nth-child(6),
+  .foundation-dots span:nth-child(8) {
+    background: #B8893B;
+  }
+  .foundation:hover,
+  .foundation:focus-visible,
+  .foundation.is-active {
+    transform: translateY(-2px);
+    border-color: #D4A44A;
+    outline: none;
+  }
+  .foundation:focus-visible {
+    outline: 2px solid #3B7DD8;
+    outline-offset: 3px;
+  }
+
+  /* Caption */
+  .caption {
+    margin-top: 1rem;
+    text-align: center;
+    font-style: italic;
+    color: rgba(14, 26, 45, 0.55);
+    font-size: 0.875rem;
+  }
+
+  /* Paired card highlight — unchanged from previous */
   :global(.pillar-card-wrapper) {
     transition: transform 220ms ease, box-shadow 220ms ease;
     border-radius: 0.5rem;
@@ -318,19 +315,18 @@ const foundationH = 66;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .building-graphic :global(.chev-group),
-    .building-graphic :global(.foundation-group),
+    .discipline,
+    .discipline-badge,
+    .discipline-chev,
+    .foundation,
     :global(.pillar-card-wrapper) {
       transition: none !important;
     }
-    .building-graphic a:hover .chev-group,
-    .building-graphic a:hover .foundation-group,
-    .building-graphic a.is-active .chev-group,
-    .building-graphic a.is-active .foundation-group,
+    .discipline:hover,
+    .foundation:hover,
     :global(.pillar-card-wrapper.is-active),
     :global(.pillar-card-wrapper.is-flash) {
       transform: none !important;
-      filter: none !important;
       animation: none !important;
     }
   }
@@ -339,7 +335,7 @@ const foundationH = 66;
 <script>
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const elements = Array.from(document.querySelectorAll<HTMLElement>('[data-pillar-id]'));
+  const elements = Array.from(document.querySelectorAll<HTMLElement>('.building-graphic [data-pillar-id]'));
   const groups = new Map<string, HTMLElement[]>();
   elements.forEach((el) => {
     const id = el.getAttribute('data-pillar-id');
@@ -349,13 +345,13 @@ const foundationH = 66;
   });
 
   groups.forEach((group) => {
-    const activate = () => group.forEach((el) => el.classList.add('is-active'));
-    const deactivate = () => group.forEach((el) => el.classList.remove('is-active'));
+    const on = () => group.forEach((el) => el.classList.add('is-active'));
+    const off = () => group.forEach((el) => el.classList.remove('is-active'));
     group.forEach((el) => {
-      el.addEventListener('mouseenter', activate);
-      el.addEventListener('mouseleave', deactivate);
-      el.addEventListener('focusin', activate);
-      el.addEventListener('focusout', deactivate);
+      el.addEventListener('mouseenter', on);
+      el.addEventListener('mouseleave', off);
+      el.addEventListener('focusin', on);
+      el.addEventListener('focusout', off);
     });
   });
 
