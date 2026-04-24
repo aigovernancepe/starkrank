@@ -9,6 +9,7 @@ import Card from '../../components/ui/Card.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import type { Locale } from '../../data/locales';
 import { t, tf } from '../../utils/i18n';
+import { getEffectiveUpdatedDate } from '../../utils/getLastModified';
 import { getSpokePath } from '../../data/service-slugs';
 import { getLocalizedNavHref } from '../../data/navigation';
 import { getCollection, render } from 'astro:content';
@@ -369,18 +370,21 @@ const allSchemas = [
       <Section bg="cream">
         <Breadcrumbs items={breadcrumbs} />
 
-        {spoke?.data?.updatedDate && (
-          <div class="mb-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
-            <span>
-              {t('spoke.lastUpdated', locale)}: <time datetime={spoke.data.updatedDate.toISOString().split('T')[0]}>
-                {spoke.data.updatedDate.toLocaleDateString(locale === 'de' || locale === 'ch-de' ? 'de-CH' : 'en-US', { month: 'long', year: 'numeric' })}
-              </time>
-            </span>
-            <span>
-              {t('spoke.by', locale)} <a href={locale === 'en' ? '/about/' : `/${locale}/`} class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
-            </span>
-          </div>
-        )}
+        {spoke && (() => {
+          const effectiveDate = getEffectiveUpdatedDate(spoke.filePath, spoke.data.updatedDate);
+          return (
+            <div class="mb-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+              <span>
+                {t('spoke.lastUpdated', locale)}: <time datetime={effectiveDate.toISOString().split('T')[0]}>
+                  {effectiveDate.toLocaleDateString(locale === 'de' || locale === 'ch-de' ? 'de-CH' : 'en-US', { month: 'long', year: 'numeric' })}
+                </time>
+              </span>
+              <span>
+                {t('spoke.by', locale)} <a href={locale === 'en' ? '/about/' : `/${locale}/`} class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
+              </span>
+            </div>
+          );
+        })()}
 
         <div class="prose prose-lg max-w-none font-body text-dark prose-numbered-cards prose-branded-bullets
           [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:font-headline [&>h2]:font-black [&>h2]:text-navy [&>h2]:tracking-tight [&>h2]:mt-12 [&>h2]:mb-4

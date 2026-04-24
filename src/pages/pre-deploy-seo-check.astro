@@ -90,6 +90,10 @@ const relatedLinks = [
   { title: 'KI-Suchoptimierung', href: '/ki-suchoptimierung-hannover/' },
   { title: 'Kostenloser AISO-Check', href: '/aiso-check/' },
 ];
+import { getSelfLastModified } from '../utils/getLastModified';
+const lastModified = getSelfLastModified(import.meta.url);
+const lastModifiedIso = lastModified.toISOString().split('T')[0];
+const lastModifiedLabel = lastModified.toLocaleDateString('de-DE', { year: 'numeric', month: 'long' });
 ---
 
 <BaseLayout title={title} description={description} locale="de" schema={schemas}>
@@ -120,7 +124,7 @@ const relatedLinks = [
     </div>
 
     <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
-      <span>Zuletzt aktualisiert: <time datetime="2026-04-19">April 2026</time></span>
+      <span>Zuletzt aktualisiert: <time datetime={lastModifiedIso}>{lastModifiedLabel}</time></span>
       <span>Von <a href="/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank</span>
     </div>
   </Section>
