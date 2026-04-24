@@ -10,6 +10,12 @@ import Button from '../../components/ui/Button.astro';
 const title = 'SEO-Preise — Transparente Retainer-Bänder und Projektpreise | StarkRank';
 const description = 'Was kostet eine SEO-Agentur? StarkRank veröffentlicht Retainer-Bänder ab 990 €/Monat und Audit-Preise transparent. Kleine Agentur, niedriger Overhead, faire Preise für den Mittelstand.';
 
+// Pricing commitment marker. Update manually when published bands actually change.
+// Distinct from the freshness/last-edit date (that tracks any file edit via git).
+const priceValidFrom = new Date('2026-04-01');
+const priceValidFromIso = priceValidFrom.toISOString().split('T')[0];
+const priceValidFromLabel = priceValidFrom.toLocaleDateString('de-DE', { year: 'numeric', month: 'long' });
+
 const retainerBands = [
   {
     label: 'Einzelunternehmen & Kleinunternehmen',
@@ -107,6 +113,7 @@ const serviceSchema = {
           '@type': 'UnitPriceSpecification',
           minPrice: '990',
           priceCurrency: 'EUR',
+          validFrom: priceValidFromIso,
           referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'MONTH' },
         },
       },
@@ -119,6 +126,7 @@ const serviceSchema = {
           minPrice: '2000',
           maxPrice: '4000',
           priceCurrency: 'EUR',
+          validFrom: priceValidFromIso,
         },
       },
       {
@@ -129,6 +137,7 @@ const serviceSchema = {
           '@type': 'UnitPriceSpecification',
           minPrice: '5000',
           priceCurrency: 'EUR',
+          validFrom: priceValidFromIso,
           referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'MONTH' },
         },
       },
@@ -147,6 +156,7 @@ const serviceSchema = {
           minPrice: '2100',
           maxPrice: '3400',
           priceCurrency: 'EUR',
+          validFrom: priceValidFromIso,
         },
       },
       {
@@ -205,6 +215,10 @@ const schemas = [serviceSchema, breadcrumbSchema, faqSchema];
 
   <Section bg="cream">
     <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-light/60 bg-white text-xs font-label text-gray mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue" aria-hidden="true"></span>
+        Preise gültig ab <time datetime={priceValidFromIso}>{priceValidFromLabel}</time> · Änderungen vorbehalten
+      </div>
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Warum unsere Preise fair sind</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
         Wir sind eine kleine Agentur mit niedrigem Overhead. Das heißt: Sie zahlen für Arbeit an Ihrem Account, nicht für Großraumbüros in München-Maxvorstadt oder repräsentative Frankfurter Altbau-Adressen. Gleiche Qualität, andere Kostenstruktur.
