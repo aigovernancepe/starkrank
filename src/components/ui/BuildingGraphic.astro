@@ -55,22 +55,22 @@ const strings = {
     top: 'WACHSTUM',
     foundation: 'DATEN & WEB',
     caption: 'Fundament jeder strategischen Entscheidung',
-    title: 'Das Gebäude des digitalen Wachstums',
-    desc: 'Vier Säulen des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — getragen vom Fundament Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
+    title: 'Fünf Bausteine des digitalen Wachstums',
+    desc: 'Vier Bausteine des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — stehen auf dem fünften Baustein: Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
   },
   'ch-de': {
     top: 'WACHSTUM',
     foundation: 'DATEN & WEB',
     caption: 'Fundament jeder strategischen Entscheidung',
-    title: 'Das Gebäude des digitalen Wachstums',
-    desc: 'Vier Säulen des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — getragen vom Fundament Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
+    title: 'Fünf Bausteine des digitalen Wachstums',
+    desc: 'Vier Bausteine des digitalen Marketings — Suche und KI-Intelligenz, Performance Media, Autorität und Content und Texterstellung — stehen auf dem fünften Baustein: Daten und Web. Zusammen bauen sie das Wachstum eines Unternehmens. Beim Hover wird die zugehörige Karte unten hervorgehoben, beim Klick wird dorthin gescrollt.',
   },
   en: {
     top: 'GROWTH',
     foundation: 'DATA & WEB',
     caption: 'Foundation of every strategic decision',
-    title: 'The Digital Growth Building',
-    desc: 'Four pillars of digital marketing — Search and AI Intelligence, Performance Media, Authority, and Content and Copywriting — supported by a Data and Web foundation. Hovering highlights the matching card below; clicking scrolls to it.',
+    title: 'Five Building Blocks of Digital Growth',
+    desc: 'Four building blocks of digital marketing — Search and AI Intelligence, Performance Media, Authority, and Content and Copywriting — rest on the fifth block: Data and Web. Together they build a company\'s growth. Hovering highlights the matching card below; clicking scrolls to it.',
   },
 }[locale];
 
@@ -87,128 +87,193 @@ const pillars = [
 ---
 
 <div class="building-graphic relative">
-  <svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="building-title building-desc" class="w-full h-auto max-w-3xl mx-auto mt-8">
+  <svg
+    viewBox="0 0 800 430"
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-labelledby="building-title building-desc"
+    class="w-full h-auto max-w-3xl mx-auto mt-8"
+    style="font-family: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;"
+  >
     <title id="building-title">{strings.title}</title>
     <desc id="building-desc">{strings.desc}</desc>
 
     <defs>
+      {/* Soft pillar fill — white → warm cream (modern, not flat) */}
+      <linearGradient id="pillar-fill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FFFFFF" />
+        <stop offset="100%" stop-color="#F6F3ED" />
+      </linearGradient>
+      {/* Active-state fill — subtle cool tint */}
+      <linearGradient id="pillar-fill-active" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FFFFFF" />
+        <stop offset="100%" stop-color="#EAF1FB" />
+      </linearGradient>
+      {/* Foundation — primary blue gradient */}
+      <linearGradient id="foundation-fill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#5A9AE6" />
+        <stop offset="100%" stop-color="#3B7DD8" />
+      </linearGradient>
+      {/* Soft shadow — warmer, more diffuse than original hard drop */}
       <filter id="pillar-shadow" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#0E1A2D" flood-opacity="0.12" />
+        <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0E1A2D" flood-opacity="0.10" />
+      </filter>
+      <filter id="pillar-shadow-active" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#3B7DD8" flood-opacity="0.30" />
       </filter>
     </defs>
 
-    {/* Top label + accent */}
-    <text x="400" y="28" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700" letter-spacing="6">{strings.top}</text>
-    <path d="M 400 36 L 390 50 L 410 50 Z" fill="#0E1A2D" />
+    {/* Top label — WACHSTUM as the roof of the building */}
+    <text x="400" y="26" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="900" letter-spacing="8">{strings.top}</text>
 
-    {/* Entablature */}
-    <rect x="40" y="58" width="720" height="14" fill="#0E1A2D" rx="2" />
-    <rect x="60" y="72" width="680" height="4" fill="#3B7DD8" />
+    {/* Building outline — thin brand-blue line framing the pillars.
+        Roof on top carrying WACHSTUM, two walls on the sides, meeting
+        the foundation strip at the bottom (which acts as the floor). */}
+    <g fill="none" stroke="#3B7DD8" stroke-width="1" stroke-linecap="round" opacity="0.45">
+      {/* Roof line (with a small gap centred under WACHSTUM so the label sits on it) */}
+      <line x1="40" y1="42" x2="358" y2="42" />
+      <line x1="442" y1="42" x2="760" y2="42" />
+      {/* Left wall */}
+      <line x1="40" y1="42" x2="40" y2="352" />
+      {/* Right wall */}
+      <line x1="760" y1="42" x2="760" y2="352" />
+    </g>
+    {/* Gold accent — small marker above the roof line at the peak */}
+    <line x1="378" y1="38" x2="422" y2="38" stroke="#B8893B" stroke-width="2.5" stroke-linecap="round" />
 
     {/* Pillars — each is a clickable group that scrolls to its card below */}
     {pillars.map(({ id, x, cx }) => (
       <a href={`#card-${id}`} data-pillar-id={id} aria-label={aria[id]}>
         <g class="pillar-group">
-          <rect x={x} y="86" width="130" height="248" rx="4" fill="#ffffff" stroke="#3B7DD8" stroke-width="2" filter="url(#pillar-shadow)" />
-          <rect x={x} y="86" width="130" height="8" fill="#3B7DD8" rx="4" />
-          <rect x={x} y="326" width="130" height="8" fill="#3B7DD8" rx="4" />
+          {/* Pillar card — gradient fill, generous rounded corners, soft shadow */}
+          <rect x={x} y="72" width="130" height="268" rx="14" fill="url(#pillar-fill)" stroke="#3B7DD8" stroke-width="1.5" filter="url(#pillar-shadow)" class="pillar-rect" />
 
-          {/* Icon */}
-          <g transform={`translate(${cx - 14}, 118)`} fill="none" stroke="#3B7DD8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          {/* Icon — larger, centred near the top */}
+          <g transform={`translate(${cx - 26}, 104)`} fill="none" stroke="#3B7DD8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="pillar-icon">
             {id === 'search-ai-intelligence' && (
               <g>
-                <circle cx="10" cy="10" r="6.5" />
-                <line x1="14.6" y1="14.6" x2="19" y2="19" />
-                <path d="M20 4 L20.8 6 L23 6.8 L20.8 7.6 L20 10 L19.2 7.6 L17 6.8 L19.2 6 Z" fill="#3B7DD8" stroke="none" />
+                {/* Magnifying glass */}
+                <circle cx="20" cy="20" r="13" />
+                <line x1="30" y1="30" x2="40" y2="40" />
+                {/* AI sparkle */}
+                <path d="M41 6 L42.5 10 L46.5 11.5 L42.5 13 L41 17 L39.5 13 L35.5 11.5 L39.5 10 Z" fill="#B8893B" stroke="none" />
               </g>
             )}
             {id === 'performance-media' && (
               <g>
-                <line x1="2" y1="22" x2="26" y2="22" />
-                <rect x="4" y="14" width="5" height="8" fill="none" />
-                <rect x="11.5" y="9" width="5" height="13" fill="none" />
-                <rect x="19" y="4" width="5" height="18" fill="none" />
+                {/* Bar chart */}
+                <line x1="4" y1="44" x2="48" y2="44" />
+                <rect x="8" y="28" width="9" height="16" rx="1.5" />
+                <rect x="21.5" y="18" width="9" height="26" rx="1.5" />
+                <rect x="35" y="6" width="9" height="38" rx="1.5" fill="#B8893B" fill-opacity="0.35" />
               </g>
             )}
             {id === 'authority-pr' && (
               <g>
-                <path d="M14 2 L24 5 V13 C24 19 14 24 14 24 C14 24 4 19 4 13 V5 Z" />
-                <path d="M10 13 L13 16 L18 10" />
+                {/* Shield with check */}
+                <path d="M26 4 L44 10 V22 C44 33 26 44 26 44 C26 44 8 33 8 22 V10 Z" />
+                <path d="M18 22 L24 28 L34 16" stroke="#B8893B" stroke-width="3" />
               </g>
             )}
             {id === 'content-copywriting' && (
               <g>
-                <path d="M7 3 H17 L22 8 V24 H7 Z" />
-                <path d="M17 3 V8 H22" />
-                <line x1="11" y1="13" x2="18" y2="13" />
-                <line x1="11" y1="17" x2="18" y2="17" />
-                <line x1="11" y1="21" x2="15" y2="21" />
+                {/* Document with lines */}
+                <path d="M10 4 H34 L44 14 V46 H10 Z" />
+                <path d="M34 4 V14 H44" />
+                <line x1="18" y1="24" x2="36" y2="24" />
+                <line x1="18" y1="30" x2="36" y2="30" />
+                <line x1="18" y1="36" x2="28" y2="36" stroke="#B8893B" stroke-width="3" />
               </g>
             )}
           </g>
 
-          {/* Label */}
+          {/* Label — Inter Tight Black */}
           {labels[id].length === 1 ? (
-            <text x={cx} y="230" text-anchor="middle" fill="#0E1A2D" font-size="14" font-weight="700">{labels[id][0]}</text>
+            <text x={cx} y="226" text-anchor="middle" fill="#0E1A2D" font-size="16" font-weight="900" letter-spacing="-0.2">{labels[id][0]}</text>
           ) : (
             <>
-              <text x={cx} y="220" text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700">{labels[id][0]}</text>
-              <text x={cx} y="240" text-anchor="middle" fill="#0E1A2D" font-size="13" font-weight="700">{labels[id][1]}</text>
+              <text x={cx} y="216" text-anchor="middle" fill="#0E1A2D" font-size="15" font-weight="900" letter-spacing="-0.2">{labels[id][0]}</text>
+              <text x={cx} y="236" text-anchor="middle" fill="#0E1A2D" font-size="15" font-weight="900" letter-spacing="-0.2">{labels[id][1]}</text>
             </>
           )}
         </g>
       </a>
     ))}
 
-    {/* Foundation */}
+    {/* Foundation — blue bar only (no navy base bar below) */}
     <a href="#card-data-web" data-pillar-id="data-web" aria-label={aria['data-web']}>
-      <g class="pillar-group">
-        <rect x="40" y="348" width="720" height="26" fill="#3B7DD8" rx="2" filter="url(#pillar-shadow)" />
-        <rect x="20" y="374" width="760" height="14" fill="#0E1A2D" rx="2" />
+      <g class="foundation-group">
+        {/* Gold accent line above */}
+        <rect x="40" y="352" width="720" height="2" fill="#B8893B" class="foundation-gold" />
+        {/* Main foundation bar with gradient */}
+        <rect x="40" y="356" width="720" height="30" fill="url(#foundation-fill)" rx="4" filter="url(#pillar-shadow)" class="foundation-rect" />
 
-        {/* Foundation icon — stacked disks (database motif) */}
-        <g transform="translate(60, 351)" fill="none" stroke="#ffffff" stroke-width="1.6">
-          <ellipse cx="10" cy="3" rx="8" ry="2" />
-          <path d="M2 3 V9 C2 10 6 11 10 11 C14 11 18 10 18 9 V3" />
-          <path d="M2 9 V15 C2 16 6 17 10 17 C14 17 18 16 18 15 V9" />
+        {/* Database icon — bigger, cream-stroked */}
+        <g transform="translate(58, 358)" fill="none" stroke="#F8F7F4" stroke-width="1.8" pointer-events="none">
+          <ellipse cx="11" cy="4" rx="10" ry="3" />
+          <path d="M1 4 V12 C1 13.5 5.5 15 11 15 C16.5 15 21 13.5 21 12 V4" />
+          <path d="M1 12 V20 C1 21.5 5.5 23 11 23 C16.5 23 21 21.5 21 20 V12" />
         </g>
 
-        <text x="400" y="366" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700" letter-spacing="4">{strings.foundation}</text>
+        {/* DATEN & WEB label — Inter Tight Black */}
+        <text x="400" y="375" text-anchor="middle" fill="#F8F7F4" font-size="15" font-weight="900" letter-spacing="6" pointer-events="none">{strings.foundation}</text>
       </g>
     </a>
 
     {/* Caption */}
-    <text x="400" y="414" text-anchor="middle" fill="#888888" font-size="11" font-style="italic">{strings.caption}</text>
+    <text x="400" y="410" text-anchor="middle" fill="#0E1A2D" opacity="0.55" font-size="11" font-style="italic">{strings.caption}</text>
   </svg>
 </div>
 
 <style>
-  .building-graphic :global(.pillar-group) {
-    transition: transform 220ms ease, filter 220ms ease;
+  .building-graphic :global(.pillar-group),
+  .building-graphic :global(.foundation-group) {
+    transition: transform 260ms cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
     transform-box: fill-box;
   }
-  .building-graphic a {
-    cursor: pointer;
+  .building-graphic :global(.pillar-rect),
+  .building-graphic :global(.pillar-icon),
+  .building-graphic :global(.foundation-rect),
+  .building-graphic :global(.foundation-gold) {
+    transition: fill 220ms ease, stroke 220ms ease, filter 220ms ease;
   }
+  .building-graphic a { cursor: pointer; }
+
+  /* Pillar hover: lift + activate fill tint + stronger glow shadow */
   .building-graphic a[data-pillar-id]:hover .pillar-group,
   .building-graphic a[data-pillar-id]:focus-visible .pillar-group,
   .building-graphic a[data-pillar-id].is-active .pillar-group {
     transform: translateY(-6px);
-    filter: drop-shadow(0 6px 12px rgba(59, 125, 216, 0.35));
   }
-  .building-graphic a[data-pillar-id="data-web"]:hover .pillar-group,
-  .building-graphic a[data-pillar-id="data-web"]:focus-visible .pillar-group,
-  .building-graphic a[data-pillar-id="data-web"].is-active .pillar-group {
+  .building-graphic a[data-pillar-id]:hover .pillar-rect,
+  .building-graphic a[data-pillar-id]:focus-visible .pillar-rect,
+  .building-graphic a[data-pillar-id].is-active .pillar-rect {
+    fill: url(#pillar-fill-active);
+    stroke: #3B7DD8;
+    stroke-width: 2;
+    filter: url(#pillar-shadow-active);
+  }
+
+  /* Foundation hover */
+  .building-graphic a[data-pillar-id="data-web"]:hover .foundation-group,
+  .building-graphic a[data-pillar-id="data-web"]:focus-visible .foundation-group,
+  .building-graphic a[data-pillar-id="data-web"].is-active .foundation-group {
     transform: translateY(-3px);
   }
+  .building-graphic a[data-pillar-id="data-web"]:hover .foundation-gold,
+  .building-graphic a[data-pillar-id="data-web"]:focus-visible .foundation-gold,
+  .building-graphic a[data-pillar-id="data-web"].is-active .foundation-gold {
+    fill: #D4A44A;
+  }
+
   .building-graphic a[data-pillar-id]:focus-visible {
     outline: 2px solid #3B7DD8;
-    outline-offset: 2px;
+    outline-offset: 3px;
     border-radius: 4px;
   }
 
-  /* Paired highlight on the card wrappers below */
+  /* Paired card highlight below */
   :global(.pillar-card-wrapper) {
     transition: transform 220ms ease, box-shadow 220ms ease;
     border-radius: 0.5rem;
@@ -228,11 +293,14 @@ const pillars = [
 
   @media (prefers-reduced-motion: reduce) {
     .building-graphic :global(.pillar-group),
+    .building-graphic :global(.foundation-group),
     :global(.pillar-card-wrapper) {
       transition: none !important;
     }
-    .building-graphic a[data-pillar-id]:hover .pillar-group,
-    .building-graphic a[data-pillar-id].is-active .pillar-group,
+    .building-graphic a:hover .pillar-group,
+    .building-graphic a:hover .foundation-group,
+    .building-graphic a.is-active .pillar-group,
+    .building-graphic a.is-active .foundation-group,
     :global(.pillar-card-wrapper.is-active),
     :global(.pillar-card-wrapper.is-flash) {
       transform: none !important;
@@ -274,7 +342,6 @@ const pillars = [
       event.preventDefault();
       card.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
       card.classList.remove('is-flash');
-      // Force reflow so re-adding the class restarts the animation
       void card.offsetWidth;
       card.classList.add('is-flash');
       window.setTimeout(() => card.classList.remove('is-flash'), 1500);
