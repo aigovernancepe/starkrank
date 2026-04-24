@@ -9,13 +9,13 @@ locale: "ch-de"
 category: "SEO-Strategie"
 faq:
   - question: "Kann ich Google Ads abschalten, sobald SEO funktioniert?"
-    answer: "Sie können deutlich reduzieren. Bei Schweizer CPCs lohnt sich die Analyse besonders: Für Keywords auf Position 1–3 können Sie Ads pausieren und CHF 500–3.000/Monat sparen."
+    answer: "Sie können deutlich reduzieren. Bei Schweizer CPCs lohnt sich die Analyse besonders: Für Keywords auf Position 1–3 können Sie Ads pausieren und 500–3'000 CHF/Monat sparen."
   - question: "Sind die Klickpreise in der Schweiz wirklich höher?"
-    answer: 'Ja. Ein Klick auf „Rechtsanwalt Zürich" kostet CHF 40–80 vs. EUR 15–30 für Frankfurt. Diese Premiumpreise machen organische Rankings proportional wertvoller.'
+    answer: 'Ja. Ein Klick auf „Rechtsanwalt Zürich" kostet 40–80 CHF vs. EUR 15–30 für Frankfurt. Diese Premiumpreise machen organische Rankings proportional wertvoller.'
   - question: "Wie beeinflusst das nDSG die Google-Ads-Performance?"
     answer: "Ohne korrekte Consent-Mode-v2-Implementierung verlieren Sie Conversion-Daten. SEO-Traffic hat dieses Problem nicht."
   - question: "Wie viel sollte ein Schweizer KMU für Google Ads ausgeben?"
-    answer: "Minimum CHF 2.000–4.000/Monat reines Werbebudget. Unter CHF 1.500/Monat generieren Sie zu wenige Klicks für sinnvolle Optimierung."
+    answer: "Minimum 2'000–4'000 CHF/Monat reines Werbebudget. Unter 1'500 CHF/Monat generieren Sie zu wenige Klicks für sinnvolle Optimierung."
 ---
 
 SEO und Google Ads bringen Ihr Unternehmen vor Kunden, die aktiv nach Ihrer Leistung suchen — aber sie funktionieren grundlegend verschieden. Google Ads liefert Leads ab dem ersten Tag. SEO braucht 3–6 Monate, aber sobald die Sichtbarkeit steht, wird jeder Lead günstiger. In der Schweiz, wo Klickpreise oft 2–3x über dem deutschen Niveau liegen, ist diese Entscheidung noch relevanter als anderswo.
@@ -26,7 +26,7 @@ SEO und Google Ads bringen Ihr Unternehmen vor Kunden, die aktiv nach Ihrer Leis
 
 | Faktor | SEO (organisch) | Google Ads (SEA) |
 |--------|-----------------|-----------------|
-| **Kosten pro Klick** | CHF 0 (nach Investition) | CHF 3–120+ je nach Keyword und Branche |
+| **Kosten pro Klick** | 0 CHF (nach Investition) | 3–120 CHF+ je nach Keyword und Branche |
 | **Zeit bis Ergebnisse** | 3–6 Monate | Sofort |
 | **Traffic nach Budgetstopp** | Bleibt bestehen | Stoppt sofort |
 | **Klickanteil** | 70 % aller Suchklicks | 30 % aller Suchklicks |
@@ -43,32 +43,32 @@ Der letzte Punkt ist Schweiz-spezifisch: Google Ads Conversion-Tracking ist seit
 Ein realistisches Szenario für ein Schweizer Dienstleistungsunternehmen mit 10 Ziel-Keywords:
 
 **Nur Google Ads (12 Monate)**:
-- Durchschnittlicher CPC: CHF 15
+- Durchschnittlicher CPC: 15 CHF
 - Monatliche Klicks: 250
-- Monatliches Budget: CHF 3.750
-- 12-Monats-Gesamtkosten: CHF 45.000
+- Monatliches Budget: 3'750 CHF
+- 12-Monats-Gesamtkosten: 45'000 CHF
 - Generierte Leads: ~340 (15 % Conversion)
-- Kosten pro Lead: CHF 132
+- Kosten pro Lead: 132 CHF
 
 **Nur SEO (12 Monate)**:
-- Monatliche Investition: CHF 5.000
+- Monatliche Investition: 5'000 CHF
 - Monate 1–3: ~30 organische Klicks/Monat (Aufbauphase)
 - Monate 4–6: ~150 organische Klicks/Monat
 - Monate 7–12: ~400 organische Klicks/Monat
-- 12-Monats-Gesamtkosten: CHF 60.000
+- 12-Monats-Gesamtkosten: 60'000 CHF
 - Generierte Leads: ~250 (10 % Conversion)
-- Kosten pro Lead: CHF 240
-- **Jahr-2-Projektion**: ~4.800 Klicks, ~480 Leads bei CHF 0 Zusatzkosten
+- Kosten pro Lead: 240 CHF
+- **Jahr-2-Projektion**: ~4'800 Klicks, ~480 Leads bei 0 CHF Zusatzkosten
 
 **Kombinierte Strategie (12 Monate)**:
-- SEO: CHF 5.000/Monat (CHF 60.000)
-- Ads Monate 1–6: CHF 3.000/Monat (CHF 18.000)
-- Ads Monate 7–12: CHF 1.500/Monat (CHF 9.000) — reduziert
-- 12-Monats-Gesamtkosten: CHF 87.000
+- SEO: 5'000 CHF/Monat (60'000 CHF)
+- Ads Monate 1–6: 3'000 CHF/Monat (18'000 CHF)
+- Ads Monate 7–12: 1'500 CHF/Monat (9'000 CHF) — reduziert
+- 12-Monats-Gesamtkosten: 87'000 CHF
 - Generierte Leads: ~520
-- Kosten pro Lead: CHF 167
+- Kosten pro Lead: 167 CHF
 
-**Das ehrliche Fazit**: Im ersten Jahr liefert Google Ads den günstigeren Cost-per-Lead (CHF 132 vs. CHF 240). Aber die hohen Schweizer CPCs machen den SEO-Crossover-Punkt besonders attraktiv: Ab Monat 14–16 überholt SEO kumuliert — und jeder organische Lead danach ist im Wesentlichen kostenlos. Bei Schweizer CPCs spart eine einzelne Top-3-Platzierung schnell CHF 2.000–5.000 pro Monat an Werbekosten.
+**Das ehrliche Fazit**: Im ersten Jahr liefert Google Ads den günstigeren Cost-per-Lead (132 CHF vs. 240 CHF). Aber die hohen Schweizer CPCs machen den SEO-Crossover-Punkt besonders attraktiv: Ab Monat 14–16 überholt SEO kumuliert — und jeder organische Lead danach ist im Wesentlichen kostenlos. Bei Schweizer CPCs spart eine einzelne Top-3-Platzierung schnell 2'000–5'000 CHF pro Monat an Werbekosten.
 
 ---
 
@@ -86,7 +86,7 @@ Ein realistisches Szenario für ein Schweizer Dienstleistungsunternehmen mit 10 
 - 70–80 % SEO, 20–30 % Google Ads
 - Ads nur noch für neue Leistungen, saisonale Kampagnen und hochkompetitive Keywords.
 
-**Schweizer Besonderheit**: Prüfen Sie regelmässig, ob Sie Google Ads für Keywords schalten, bei denen Sie bereits organisch auf Position 1–3 ranken. Bei Schweizer CPCs von CHF 15–120 ist die Kannibalisierung besonders teuer.
+**Schweizer Besonderheit**: Prüfen Sie regelmässig, ob Sie Google Ads für Keywords schalten, bei denen Sie bereits organisch auf Position 1–3 ranken. Bei Schweizer CPCs von 15–120 CHF ist die Kannibalisierung besonders teuer.
 
 ---
 
