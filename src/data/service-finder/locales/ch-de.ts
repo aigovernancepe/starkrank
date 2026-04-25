@@ -64,7 +64,7 @@ export const chDe: ServiceFinderLocale = {
           description: 'Consent Mode v2, Cookie-Banner und Datenschutz \u2014 wir stellen sicher, dass Sie gem\u00e4ss revDSG konform sind. Datenverarbeitung in Z\u00fcrich.',
           ctaText: 'Mehr erfahren',
         },
-        'digital-pr': {
+        'authority-building': {
           headline: 'Sichtbarkeit mit Diskretion',
           description: 'Wir positionieren Ihr Unternehmen in der Suche und bei KI-Assistenten \u2014 ohne den exklusiven Charakter Ihrer Marke zu beeintr\u00e4chtigen.',
           ctaText: 'Mehr erfahren',

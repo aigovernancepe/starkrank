@@ -193,9 +193,9 @@ export const es: ServiceFinderLocale = {
           description: 'Reportes claros que conectan tu inversi\u00f3n en marketing con ingresos reales.',
           ctaText: 'Saber m\u00e1s',
         },
-        'digital-pr': {
+        'authority-building': {
           headline: 'Necesitas construir autoridad online',
-          description: 'Backlinks, menciones en medios y se\u00f1ales de entidad que hacen que Google y las plataformas de IA conf\u00eden en tu marca.',
+          description: 'Backlinks y se\u00f1ales de entidad que hacen que Google y las plataformas de IA conf\u00eden en tu marca.',
           ctaText: 'Saber m\u00e1s',
         },
         'entity-building': {

@@ -130,7 +130,7 @@ export const routingRules: RoutingRule[] = [
   ]},
   { questionId: 'Q-I2b', services: [
     { serviceId: 'schema-eeat', weight: 1 },
-    { serviceId: 'digital-pr', weight: 0.5 },
+    { serviceId: 'authority-building', weight: 0.5 },
   ]},
   { questionId: 'Q-I2c', services: [
     { serviceId: 'compliance-content', weight: 1 },
@@ -216,7 +216,7 @@ export const routingRules: RoutingRule[] = [
   ]},
   { questionId: 'Q-I9c', services: [
     { serviceId: 'entity-building', weight: 1 },
-    { serviceId: 'digital-pr', weight: 0.5 },
+    { serviceId: 'authority-building', weight: 0.5 },
   ]},
 
   // Industry: Real Estate
@@ -257,7 +257,7 @@ export const routingRules: RoutingRule[] = [
 
   // Industry: Luxury / Premium (CH-DE only)
   { questionId: 'Q-I14a', services: [
-    { serviceId: 'digital-pr', weight: 1 },
+    { serviceId: 'authority-building', weight: 1 },
     { serviceId: 'content-marketing', weight: 0.5 },
   ]},
   { questionId: 'Q-I14b', services: [

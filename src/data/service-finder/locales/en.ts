@@ -193,9 +193,9 @@ export const en: ServiceFinderLocale = {
           description: 'Review velocity and ratings directly impact your rankings. We help you build and maintain momentum.',
           ctaText: 'Learn more',
         },
-        'digital-pr': {
+        'authority-building': {
           headline: 'You need to build online authority',
-          description: 'Backlinks, media mentions, and entity signals that make Google and AI platforms trust your brand.',
+          description: 'Backlinks and entity signals that make Google and AI platforms trust your brand.',
           ctaText: 'Learn more',
         },
         'multilingual-seo': {

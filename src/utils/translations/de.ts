@@ -49,8 +49,6 @@ export const de: Record<string, string> = {
   'service.google-ads-management': 'Google Ads Management',
   'service.google-ads-audit': 'Google Ads Audit',
   'service.paid-social-strategy': 'Paid-Social-Strategie',
-  'service.digital-pr-strategy': 'Digitale PR-Strategie',
-  'service.reactive-pr': 'Reaktive Pressearbeit',
   'service.authority-link-building': 'Strategischer Linkaufbau',
   'service.content-marketing': 'Content Marketing',
   'service.seo-copywriting': 'SEO-Texterstellung',

@@ -95,8 +95,8 @@ export const services: ServiceDef[] = [
     },
   },
   {
-    id: 'digital-pr',
-    icon: 'megaphone',
+    id: 'authority-building',
+    icon: 'link-2',
     links: {
       en: '/services/authority-link-building/',
       de: '/linkaufbau-hannover/',
