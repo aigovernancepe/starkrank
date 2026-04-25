@@ -109,4 +109,29 @@ const spokes = defineCollection({
   }),
 });
 
-export const collections = { services, blog, cities, spokes, serviceHubs };
+const cityHubs = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/city-hubs' }),
+  schema: z.object({
+    citySlug: z.string(),
+    locale: z.enum(['de', 'ch-de']),
+    title: z.string(),
+    description: z.string(),
+    heroHeadline: z.string(),
+    heroLede: z.string(),
+    sectorsTitle: z.string().optional(),
+    sectors: z.array(z.object({
+      name: z.string(),
+      description: z.string(),
+    })).optional(),
+    whyTitle: z.string().optional(),
+    whyParagraphs: z.array(z.string()).optional(),
+    servicesTitle: z.string().optional(),
+    servicesIntro: z.string().optional(),
+    featuredServices: z.array(z.string()).optional(),
+    faq: z.array(faqItem).optional(),
+    cta: z.string().optional(),
+    updatedDate: z.coerce.date().optional(),
+  }),
+});
+
+export const collections = { services, blog, cities, spokes, serviceHubs, cityHubs };
