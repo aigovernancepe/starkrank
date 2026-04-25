@@ -13,51 +13,11 @@ export const mainNav: NavItem[] = [
     label: 'Services',
     href: '/services/',
     children: [
-      {
-        label: 'Search & AI Intelligence',
-        href: '/services/#search-ai-intelligence',
-        children: [
-          { label: 'AI Search Optimization', href: '/services/ai-search-optimization/' },
-          { label: 'Technical SEO Audit', href: '/services/technical-seo-audit/' },
-          { label: 'E-commerce SEO Audit', href: '/services/ecommerce-seo-audit/' },
-          { label: 'Local SEO Consulting', href: '/services/local-seo-consulting/' },
-        ],
-      },
-      {
-        label: 'Performance Media',
-        href: '/services/#performance-media',
-        children: [
-          { label: 'Google Ads Management', href: '/services/google-ads-management/' },
-          { label: 'Google Ads Audit', href: '/services/google-ads-audit/' },
-          { label: 'Paid Social Strategy', href: '/services/paid-social-strategy/' },
-        ],
-      },
-      {
-        label: 'Authority',
-        href: '/services/#authority-pr',
-        children: [
-          { label: 'Authority Link Building', href: '/services/authority-link-building/' },
-          { label: 'E-E-A-T Audit', href: '/services/eeat-audit/' },
-        ],
-      },
-      {
-        label: 'Content & Copywriting',
-        href: '/services/#content-copywriting',
-        children: [
-          { label: 'Content Marketing', href: '/services/content-marketing/' },
-          { label: 'SEO Copywriting', href: '/services/seo-copywriting/' },
-          { label: 'Copywriting Audit', href: '/services/copywriting-audit/' },
-          { label: 'Audience Persona Mapping', href: '/services/audience-persona-mapping/' },
-        ],
-      },
-      {
-        label: 'Data & Web',
-        href: '/services/#data-web',
-        children: [
-          { label: 'Technical Web Design', href: '/services/technical-web-design/' },
-          { label: 'Google Analytics Consultancy', href: '/services/google-analytics-consultancy/' },
-        ],
-      },
+      { label: 'Search & AI Intelligence', href: '/services/#search-ai-intelligence' },
+      { label: 'Performance Media', href: '/services/#performance-media' },
+      { label: 'Authority', href: '/services/#authority-pr' },
+      { label: 'Content & Copywriting', href: '/services/#content-copywriting' },
+      { label: 'Data & Web', href: '/services/#data-web' },
     ],
   },
   {
