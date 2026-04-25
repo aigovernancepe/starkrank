@@ -11,6 +11,23 @@ import { t } from '../../../utils/i18n';
 
 const pillars = getLocalizedPillars('ch-de');
 const allServices = await getCollection('services');
+const deServiceHubs = await getCollection('serviceHubs', (h) => h.data.locale === 'de');
+
+// Service-hub frontmatter holds the German description; the canonical service
+// file's description is EN-only. CH-DE shares the German service-hub copy with
+// DE (no separate ch-de hubs). Fallback map for the 3 flat-locale services
+// uses CH-DE meta-descriptions (CHF pricing where applicable).
+const flatLocaleDescriptionsChDe: Record<string, string> = {
+  'ai-search-optimization': 'ChatGPT und Google AI zitieren Ihre Konkurrenz — aber nicht Sie. Kostenloser AISO-Check in 24 Stunden. 2 Dimensionen geprüft. Unverbindlich.',
+  'ecommerce-seo-audit': 'Produktkatalog-SEO ist eine eigene Disziplin. Wir prüfen die 8 Schwachstellen Ihrer PDPs, PLPs und Filternavigation — Lieferung in 7 Tagen.',
+  'eeat-audit': 'Echtes E-E-A-T wird gezeigt, nicht behauptet. Wir bewerten Ihre Seite nach einer 40-Punkte-Rubrik mit signal-basierter Remediation. 1\'500 CHF pauschal.',
+};
+
+function getChDeDescription(slug: string, fallbackEn: string): string {
+  const hub = deServiceHubs.find((h) => h.data.serviceSlug === slug);
+  if (hub) return hub.data.description;
+  return flatLocaleDescriptionsChDe[slug] ?? fallbackEn;
+}
 
 const servicesByPillar = pillars.map((pillar) => ({
   pillar,
@@ -27,7 +44,7 @@ const servicesByPillar = pillars.map((pillar) => ({
 >
   <HeroSection
     headline="Unsere Dienstleistungen"
-    subheadline="Datenbasiertes Wachstum von KI-Suchintelligenz bis zu transparenter Messung — fokussiert auf Unternehmen in der Schweiz und Deutschland."
+    subheadline="Datenbasiertes Wachstum von KI-Suchintelligenz bis zu transparenter Messung — fokussiert auf Unternehmen in der Deutschschweiz."
   />
 
   {servicesByPillar.map(({ pillar, services }, idx) => (
@@ -51,7 +68,7 @@ const servicesByPillar = pillars.map((pillar) => ({
         {services.map((service) => (
           <Card href={getLocalizedNavHref(`/services/${service.data.slug}/`, 'ch-de')}>
             <h3 class="text-lg font-headline font-bold text-navy">{t('service.' + service.data.slug, 'ch-de')}</h3>
-            <p class="mt-2 text-sm font-body text-gray leading-relaxed">{service.data.description}</p>
+            <p class="mt-2 text-sm font-body text-gray leading-relaxed">{getChDeDescription(service.data.slug, service.data.description)}</p>
           </Card>
         ))}
       </div>
