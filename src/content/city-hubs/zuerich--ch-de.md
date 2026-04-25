@@ -12,7 +12,6 @@ featuredServices:
   - "technical-web-design"
   - "google-ads-management"
   - "local-seo-consulting"
-  - "authority-link-building"
 sectorsTitle: "Welche Branchen profitieren in Zürich am stärksten von SEO und Online-Marketing?"
 sectors:
   - name: "Finanzdienstleistungen und Vermögensverwaltung"
@@ -36,7 +35,7 @@ faq:
   - question: "Hat StarkRank ein Büro in Zürich?"
     answer: "Wir betreuen Zürcher Kunden remote-first aus dem deutschsprachigen Raum, mit regelmässigen Vor-Ort-Terminen für Workshops und Strategie-Reviews. Die geografische Distanz hat in unserer Erfahrung keinen messbaren Einfluss auf Projektqualität — die fachliche Tiefe und Verfügbarkeit unseres Teams hat ihn deutlich."
   - question: "Welche Dienstleistungen sind speziell für Zürich relevant?"
-    answer: "Datenbasiert: Webagentur und Webdesign zeigen die mit Abstand höchste Suchnachfrage in Zürich, gefolgt von Google Ads Management, Lokaler SEO-Beratung und strategischem Linkaufbau. Für KI-Suchoptimierung, Content Marketing und weitere Spezial-Services arbeiten wir auch für Zürcher Kunden — allerdings ohne dedizierte Zürcher Landing Page, Anfragen gerne direkt."
+    answer: "Datenbasiert: Webagentur und Webdesign zeigen die mit Abstand höchste Suchnachfrage in Zürich, gefolgt von Google Ads Management und Lokaler SEO-Beratung. Für KI-Suchoptimierung, strategischen Linkaufbau, Content Marketing und weitere Spezial-Services arbeiten wir auch für Zürcher Kunden — allerdings ohne dedizierte Zürcher Landing Page, Anfragen gerne direkt."
   - question: "Wie geht ihr mit dem Tempo des Zürcher Tech-Markts um?"
     answer: "SaaS- und Tech-Anbieter im Zürcher Markt brauchen schnellere Iterations-Zyklen als klassische Mittelständler. Wir arbeiten in zweiwöchigen Sprints mit klar messbaren Hypothesen, statt monatlichen Pauschal-Reports — und integrieren Tracking-Setups, die Produkt- und Marketing-Daten in einem Dashboard zusammenführen."
 cta: "Kostenlose Erstberatung für Zürich anfordern"
