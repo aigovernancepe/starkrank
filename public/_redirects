@@ -132,6 +132,20 @@
 /services/performance-web-development/ /en/services/technical-web-design/        301
 /services/roi-reporting-transparency/ /en/services/google-analytics-consultancy/ 301
 
+# PR retirement (2026-04-25) — DE/CH-DE PR city URLs that the link-building spokes
+# previously linked to. Pages were never built; redirect to the city link-building
+# spoke (closest topical match — both PR and link building drove backlinks).
+/digitale-pr-hamburg/                /linkaufbau-hamburg/                        301
+/reaktive-pressearbeit-hamburg/      /linkaufbau-hamburg/                        301
+/de/digitale-pr-hamburg/             /linkaufbau-hamburg/                        301
+/de/reaktive-pressearbeit-hamburg/   /linkaufbau-hamburg/                        301
+/digitale-pr-hannover/               /linkaufbau-hannover/                       301
+/reaktive-pressearbeit-hannover/     /linkaufbau-hannover/                       301
+/de/digitale-pr-hannover/            /linkaufbau-hannover/                       301
+/de/reaktive-pressearbeit-hannover/  /linkaufbau-hannover/                       301
+/ch-de/digitale-pr-basel/            /ch-de/linkaufbau-basel/                    301
+/ch-de/reaktive-pressearbeit-basel/  /ch-de/linkaufbau-basel/                    301
+
 # Typo rescue: "optimisation" → "optimization"
 /services/ai-search-optimisation/    /en/services/ai-search-optimization/        301
 /services/ai-search-optimisation     /en/services/ai-search-optimization/        301

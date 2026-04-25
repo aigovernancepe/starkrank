@@ -6,7 +6,7 @@ StarkRank is a Swiss-founded digital marketing agency focused on the DACH region
 
 ## Services
 
-StarkRank offers 18 specialist services organised into five pillars:
+StarkRank offers 16 specialist services organised into five pillars:
 
 ### Search & AI Intelligence
 - [AI Search Optimization](https://starkrank.com/services/ai-search-optimization/): Visibility audits and citation strategy for ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot. Includes the proprietary AISO Score framework.
@@ -19,9 +19,7 @@ StarkRank offers 18 specialist services organised into five pillars:
 - [Google Ads Audit](https://starkrank.com/services/google-ads-audit/): Account review identifying wasted spend, missed opportunities, and quick wins.
 - [Paid Social Strategy](https://starkrank.com/services/paid-social-strategy/): Paid campaigns on Meta, LinkedIn, and TikTok aligned with business goals.
 
-### Authority & PR
-- [Digital PR Strategy](https://starkrank.com/services/digital-pr-strategy/): Earned media placements that build brand authority and generate high-quality backlinks.
-- [Reactive PR](https://starkrank.com/services/reactive-pr/): Real-time media opportunities and journalist outreach for timely brand coverage.
+### Authority
 - [Authority Link Building](https://starkrank.com/services/authority-link-building/): Strategic link acquisition from relevant, authoritative publications.
 
 ### Content & Copywriting

@@ -11,8 +11,6 @@ services:
   - "google-ads-management"
   - "google-ads-audit"
   - "paid-social-strategy"
-  - "digital-pr-strategy"
-  - "reactive-pr"
   - "authority-link-building"
   - "content-marketing"
   - "seo-copywriting"
