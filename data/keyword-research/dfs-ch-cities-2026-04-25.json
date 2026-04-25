@@ -1,0 +1,5525 @@
+{
+  "cache_hit": false,
+  "ttl_seconds": 604800,
+  "version": "0.1.20260420",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.1566 sec.",
+  "cost": 0.075,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "04252112-1379-0367-0000-6ae46863330d",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.0607 sec.",
+      "cost": 0.075,
+      "result_count": 138,
+      "path": [
+        "v3",
+        "keywords_data",
+        "google_ads",
+        "search_volume",
+        "live"
+      ],
+      "data": {
+        "api": "keywords_data",
+        "function": "search_volume",
+        "se": "google_ads",
+        "keywords": [
+          "AdWords Basel",
+          "AdWords Bern",
+          "AdWords Zürich",
+          "AI SEO Basel",
+          "AI SEO Bern",
+          "AI SEO Zürich",
+          "Backlinks Basel",
+          "Backlinks Bern",
+          "Backlinks Zürich",
+          "ChatGPT SEO Basel",
+          "ChatGPT SEO Bern",
+          "ChatGPT SEO Zürich",
+          "Content Agentur Basel",
+          "Content Agentur Bern",
+          "Content Agentur Zürich",
+          "Content Audit Basel",
+          "Content Audit Bern",
+          "Content Audit Zürich",
+          "Content Marketing Basel",
+          "Content Marketing Bern",
+          "Content Marketing Zürich",
+          "Digital PR Basel",
+          "Digital PR Bern",
+          "Digital PR Zürich",
+          "Digitalagentur Basel",
+          "Digitalagentur Bern",
+          "Digitalagentur Zürich",
+          "GA4 Beratung Basel",
+          "GA4 Beratung Bern",
+          "GA4 Beratung Zürich",
+          "Google Ads Agentur Basel",
+          "Google Ads Agentur Bern",
+          "Google Ads Agentur Zürich",
+          "Google Ads Audit Basel",
+          "Google Ads Audit Bern",
+          "Google Ads Audit Zürich",
+          "Google Ads Basel",
+          "Google Ads Bern",
+          "Google Ads Check Basel",
+          "Google Ads Check Bern",
+          "Google Ads Check Zürich",
+          "Google Ads Zürich",
+          "Google Analytics Basel",
+          "Google Analytics Bern",
+          "Google Analytics Zürich",
+          "KI Suchoptimierung Basel",
+          "KI Suchoptimierung Bern",
+          "KI Suchoptimierung Zürich",
+          "Link Building Basel",
+          "Link Building Bern",
+          "Link Building Zürich",
+          "Linkaufbau Basel",
+          "Linkaufbau Bern",
+          "Linkaufbau Zürich",
+          "LinkedIn Ads Basel",
+          "LinkedIn Ads Bern",
+          "LinkedIn Ads Zürich",
+          "Local SEO Basel",
+          "Local SEO Bern",
+          "Local SEO Zürich",
+          "Lokale SEO Basel",
+          "Lokale SEO Bern",
+          "Lokale SEO Zürich",
+          "Marketing Agentur Basel",
+          "Marketing Agentur Bern",
+          "Marketing Agentur Zürich",
+          "Marketing Reporting Basel",
+          "Marketing Reporting Bern",
+          "Marketing Reporting Zürich",
+          "Meta Ads Basel",
+          "Meta Ads Bern",
+          "Meta Ads Zürich",
+          "Online Marketing Agentur Basel",
+          "Online Marketing Agentur Bern",
+          "Online Marketing Agentur Zürich",
+          "Online Marketing Basel",
+          "Online Marketing Bern",
+          "Online Marketing Zürich",
+          "Paid Social Basel",
+          "Paid Social Bern",
+          "Paid Social Zürich",
+          "Performance Ads Basel",
+          "Performance Ads Bern",
+          "Performance Ads Zürich",
+          "Performance Marketing Basel",
+          "Performance Marketing Bern",
+          "Performance Marketing Zürich",
+          "Persona Analyse Basel",
+          "Persona Analyse Bern",
+          "Persona Analyse Zürich",
+          "PR Agentur Basel",
+          "PR Agentur Bern",
+          "PR Agentur Zürich",
+          "Reaktive PR Basel",
+          "Reaktive PR Bern",
+          "Reaktive PR Zürich",
+          "SEO Agentur Basel",
+          "SEO Agentur Bern",
+          "SEO Agentur Zürich",
+          "SEO Audit Basel",
+          "SEO Audit Bern",
+          "SEO Audit Zürich",
+          "SEO Berater Basel",
+          "SEO Berater Bern",
+          "SEO Berater Zürich",
+          "SEO Beratung Basel",
+          "SEO Beratung Bern",
+          "SEO Beratung Zürich",
+          "SEO Check Basel",
+          "SEO Check Bern",
+          "SEO Check Zürich",
+          "SEO Texte Basel",
+          "SEO Texte Bern",
+          "SEO Texte Zürich",
+          "SEO Texter Basel",
+          "SEO Texter Bern",
+          "SEO Texter Zürich",
+          "Technisches SEO Audit Basel",
+          "Technisches SEO Audit Bern",
+          "Technisches SEO Audit Zürich",
+          "Text Audit Basel",
+          "Text Audit Bern",
+          "Text Audit Zürich",
+          "Webagentur Basel",
+          "Webagentur Bern",
+          "Webagentur Zürich",
+          "Webdesign Agentur Basel",
+          "Webdesign Agentur Bern",
+          "Webdesign Agentur Zürich",
+          "Webdesign Basel",
+          "Webdesign Bern",
+          "Webdesign Zürich",
+          "Webentwicklung Basel",
+          "Webentwicklung Bern",
+          "Webentwicklung Zürich",
+          "Zielgruppenanalyse Basel",
+          "Zielgruppenanalyse Bern",
+          "Zielgruppenanalyse Zürich"
+        ],
+        "location_code": 2756,
+        "language_code": "de"
+      },
+      "result": [
+        {
+          "keyword": "AdWords Basel",
+          "spell": "adwords basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 0,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 0
+            }
+          ]
+        },
+        {
+          "keyword": "AdWords Bern",
+          "spell": "adwords bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 0
+            }
+          ]
+        },
+        {
+          "keyword": "AdWords Zürich",
+          "spell": "adwords zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "HIGH",
+          "competition_index": 100,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 0
+            }
+          ]
+        },
+        {
+          "keyword": "AI SEO Basel",
+          "spell": "ai seo basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "AI SEO Bern",
+          "spell": "ai seo bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "AI SEO Zürich",
+          "spell": "ai seo zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Backlinks Basel",
+          "spell": "backlinks basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Backlinks Bern",
+          "spell": "backlinks bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Backlinks Zürich",
+          "spell": "backlinks zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 0,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 0
+            }
+          ]
+        },
+        {
+          "keyword": "ChatGPT SEO Basel",
+          "spell": "chatgpt seo basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "ChatGPT SEO Bern",
+          "spell": "chatgpt seo bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "ChatGPT SEO Zürich",
+          "spell": "chatgpt seo zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Content Agentur Basel",
+          "spell": "content agentur basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 40,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 6.86,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 30
+            }
+          ]
+        },
+        {
+          "keyword": "Content Agentur Bern",
+          "spell": "content agentur bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Content Agentur Zürich",
+          "spell": "content agentur zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 51,
+          "search_volume": 10,
+          "low_top_of_page_bid": 2.32,
+          "high_top_of_page_bid": 5.57,
+          "cpc": 4.71,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 30
+            }
+          ]
+        },
+        {
+          "keyword": "Content Audit Basel",
+          "spell": "content audit basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Content Audit Bern",
+          "spell": "content audit bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Content Audit Zürich",
+          "spell": "content audit zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Content Marketing Basel",
+          "spell": "content marketing basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 0,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 10
+            }
+          ]
+        },
+        {
+          "keyword": "Content Marketing Bern",
+          "spell": "content marketing bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 0,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 10
+            }
+          ]
+        },
+        {
+          "keyword": "Content Marketing Zürich",
+          "spell": "content marketing zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 12,
+          "search_volume": 20,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 70
+            }
+          ]
+        },
+        {
+          "keyword": "Digital PR Basel",
+          "spell": "digital pr basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Digital PR Bern",
+          "spell": "digital pr bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Digital PR Zürich",
+          "spell": "digital pr zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Digitalagentur Basel",
+          "spell": "digitalagentur basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 30,
+          "search_volume": 70,
+          "low_top_of_page_bid": 1.65,
+          "high_top_of_page_bid": 5.73,
+          "cpc": 2.95,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 20
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 170
+            }
+          ]
+        },
+        {
+          "keyword": "Digitalagentur Bern",
+          "spell": "digitalagentur bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 13,
+          "search_volume": 50,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 20
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 70
+            }
+          ]
+        },
+        {
+          "keyword": "Digitalagentur Zürich",
+          "spell": "digitalagentur zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 46,
+          "search_volume": 90,
+          "low_top_of_page_bid": 3.81,
+          "high_top_of_page_bid": 10.2,
+          "cpc": 11.11,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 210
+            }
+          ]
+        },
+        {
+          "keyword": "GA4 Beratung Basel",
+          "spell": "ga4 beratung basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "GA4 Beratung Bern",
+          "spell": "ga4 beratung bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "GA4 Beratung Zürich",
+          "spell": "ga4 beratung zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Google Ads Agentur Basel",
+          "spell": "google ads agentur basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 2,
+          "search_volume": 50,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 90
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 140
+            }
+          ]
+        },
+        {
+          "keyword": "Google Ads Agentur Bern",
+          "spell": "google ads agentur bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 45,
+          "search_volume": 10,
+          "low_top_of_page_bid": 9.13,
+          "high_top_of_page_bid": 20.33,
+          "cpc": 28.9,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 20
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 20
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 40
+            }
+          ]
+        },
+        {
+          "keyword": "Google Ads Agentur Zürich",
+          "spell": "google ads agentur zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 12,
+          "search_volume": 140,
+          "low_top_of_page_bid": 19.67,
+          "high_top_of_page_bid": 30.78,
+          "cpc": 81.7,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 90
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 260
+            }
+          ]
+        },
+        {
+          "keyword": "Google Ads Audit Basel",
+          "spell": "google ads audit basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Google Ads Audit Bern",
+          "spell": "google ads audit bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Google Ads Audit Zürich",
+          "spell": "google ads audit zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Google Ads Basel",
+          "spell": "google ads basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 26,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 10
+            }
+          ]
+        },
+        {
+          "keyword": "Google Ads Bern",
+          "spell": "google ads bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 57,
+          "search_volume": 10,
+          "low_top_of_page_bid": 8.98,
+          "high_top_of_page_bid": 20.61,
+          "cpc": 22.49,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 20
+            }
+          ]
+        },
+        {
+          "keyword": "Google Ads Check Basel",
+          "spell": "google ads check basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Google Ads Check Bern",
+          "spell": "google ads check bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Google Ads Check Zürich",
+          "spell": "google ads check zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Google Ads Zürich",
+          "spell": "google ads zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 4,
+          "search_volume": 50,
+          "low_top_of_page_bid": 12.03,
+          "high_top_of_page_bid": 19.01,
+          "cpc": 41.43,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 90
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 90
+            }
+          ]
+        },
+        {
+          "keyword": "Google Analytics Basel",
+          "spell": "google analytics basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Google Analytics Bern",
+          "spell": "google analytics bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Google Analytics Zürich",
+          "spell": "google analytics zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "KI Suchoptimierung Basel",
+          "spell": "ki suchoptimierung basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "KI Suchoptimierung Bern",
+          "spell": "ki suchoptimierung bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "KI Suchoptimierung Zürich",
+          "spell": "ki suchoptimierung zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Link Building Basel",
+          "spell": "link building basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Link Building Bern",
+          "spell": "link building bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Link Building Zürich",
+          "spell": "link building zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Linkaufbau Basel",
+          "spell": "linkaufbau basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Linkaufbau Bern",
+          "spell": "linkaufbau bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Linkaufbau Zürich",
+          "spell": "linkaufbau zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "LinkedIn Ads Basel",
+          "spell": "linkedin ads basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 25,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 0
+            }
+          ]
+        },
+        {
+          "keyword": "LinkedIn Ads Bern",
+          "spell": "linkedin ads bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "LinkedIn Ads Zürich",
+          "spell": "linkedin ads zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Local SEO Basel",
+          "spell": "local seo basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Local SEO Bern",
+          "spell": "local seo bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Local SEO Zürich",
+          "spell": "local seo zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "HIGH",
+          "competition_index": 100,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 10
+            }
+          ]
+        },
+        {
+          "keyword": "Lokale SEO Basel",
+          "spell": "lokale seo basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Lokale SEO Bern",
+          "spell": "lokale seo bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Lokale SEO Zürich",
+          "spell": "lokale seo zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Marketing Agentur Basel",
+          "spell": "marketing agentur basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 54,
+          "search_volume": 110,
+          "low_top_of_page_bid": 2.25,
+          "high_top_of_page_bid": 6.56,
+          "cpc": 6.35,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 140
+            }
+          ]
+        },
+        {
+          "keyword": "Marketing Agentur Bern",
+          "spell": "marketing agentur bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 38,
+          "search_volume": 210,
+          "low_top_of_page_bid": 2.33,
+          "high_top_of_page_bid": 9.2,
+          "cpc": 7.27,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 320
+            }
+          ]
+        },
+        {
+          "keyword": "Marketing Agentur Zürich",
+          "spell": "marketing agentur zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 53,
+          "search_volume": 590,
+          "low_top_of_page_bid": 3.07,
+          "high_top_of_page_bid": 10.55,
+          "cpc": 9.4,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 590
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 480
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 720
+            }
+          ]
+        },
+        {
+          "keyword": "Marketing Reporting Basel",
+          "spell": "marketing reporting basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Marketing Reporting Bern",
+          "spell": "marketing reporting bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Marketing Reporting Zürich",
+          "spell": "marketing reporting zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Meta Ads Basel",
+          "spell": "meta ads basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Meta Ads Bern",
+          "spell": "meta ads bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Meta Ads Zürich",
+          "spell": "meta ads zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Online Marketing Agentur Basel",
+          "spell": "online marketing agentur basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 22,
+          "search_volume": 40,
+          "low_top_of_page_bid": 4.2,
+          "high_top_of_page_bid": 10.74,
+          "cpc": 9.81,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 40
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 70
+            }
+          ]
+        },
+        {
+          "keyword": "Online Marketing Agentur Bern",
+          "spell": "online marketing agentur bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 24,
+          "search_volume": 70,
+          "low_top_of_page_bid": 2.83,
+          "high_top_of_page_bid": 12.63,
+          "cpc": 5.03,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 140
+            }
+          ]
+        },
+        {
+          "keyword": "Online Marketing Agentur Zürich",
+          "spell": "online marketing agentur zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 11,
+          "search_volume": 320,
+          "low_top_of_page_bid": 3.54,
+          "high_top_of_page_bid": 40,
+          "cpc": 23.87,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 260
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 880
+            }
+          ]
+        },
+        {
+          "keyword": "Online Marketing Basel",
+          "spell": "online marketing basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 22,
+          "search_volume": 70,
+          "low_top_of_page_bid": 2.05,
+          "high_top_of_page_bid": 8.5,
+          "cpc": 16.12,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 40
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 140
+            }
+          ]
+        },
+        {
+          "keyword": "Online Marketing Bern",
+          "spell": "online marketing bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 46,
+          "search_volume": 50,
+          "low_top_of_page_bid": 3.7,
+          "high_top_of_page_bid": 14.57,
+          "cpc": 18.36,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 90
+            }
+          ]
+        },
+        {
+          "keyword": "Online Marketing Zürich",
+          "spell": "online marketing zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 6,
+          "search_volume": 210,
+          "low_top_of_page_bid": 7.01,
+          "high_top_of_page_bid": 19.69,
+          "cpc": 20.1,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 90
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 480
+            }
+          ]
+        },
+        {
+          "keyword": "Paid Social Basel",
+          "spell": "paid social basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Paid Social Bern",
+          "spell": "paid social bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Paid Social Zürich",
+          "spell": "paid social zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Performance Ads Basel",
+          "spell": "performance ads basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Performance Ads Bern",
+          "spell": "performance ads bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Performance Ads Zürich",
+          "spell": "performance ads zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Performance Marketing Basel",
+          "spell": "performance marketing basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Performance Marketing Bern",
+          "spell": "performance marketing bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "HIGH",
+          "competition_index": 86,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 0
+            }
+          ]
+        },
+        {
+          "keyword": "Performance Marketing Zürich",
+          "spell": "performance marketing zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "HIGH",
+          "competition_index": 96,
+          "search_volume": 10,
+          "low_top_of_page_bid": 5.56,
+          "high_top_of_page_bid": 27.9,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 10
+            }
+          ]
+        },
+        {
+          "keyword": "Persona Analyse Basel",
+          "spell": "persona analyse basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Persona Analyse Bern",
+          "spell": "persona analyse bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Persona Analyse Zürich",
+          "spell": "persona analyse zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "PR Agentur Basel",
+          "spell": "pr agentur basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "HIGH",
+          "competition_index": 73,
+          "search_volume": 30,
+          "low_top_of_page_bid": 1.41,
+          "high_top_of_page_bid": 4.56,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 90
+            }
+          ]
+        },
+        {
+          "keyword": "PR Agentur Bern",
+          "spell": "pr agentur bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 44,
+          "search_volume": 30,
+          "low_top_of_page_bid": 1.55,
+          "high_top_of_page_bid": 3.85,
+          "cpc": 3.08,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 50
+            }
+          ]
+        },
+        {
+          "keyword": "PR Agentur Zürich",
+          "spell": "pr agentur zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 52,
+          "search_volume": 110,
+          "low_top_of_page_bid": 2.69,
+          "high_top_of_page_bid": 7.06,
+          "cpc": 6.41,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 90
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 210
+            }
+          ]
+        },
+        {
+          "keyword": "Reaktive PR Basel",
+          "spell": "reaktive pr basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Reaktive PR Bern",
+          "spell": "reaktive pr bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Reaktive PR Zürich",
+          "spell": "reaktive pr zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "SEO Agentur Basel",
+          "spell": "seo agentur basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 6,
+          "search_volume": 210,
+          "low_top_of_page_bid": 4.64,
+          "high_top_of_page_bid": 12.56,
+          "cpc": 9.72,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 480
+            }
+          ]
+        },
+        {
+          "keyword": "SEO Agentur Bern",
+          "spell": "seo agentur bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 5,
+          "search_volume": 170,
+          "low_top_of_page_bid": 3.73,
+          "high_top_of_page_bid": 11.61,
+          "cpc": 7.45,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 390
+            }
+          ]
+        },
+        {
+          "keyword": "SEO Agentur Zürich",
+          "spell": "seo agentur zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 24,
+          "search_volume": 720,
+          "low_top_of_page_bid": 7.95,
+          "high_top_of_page_bid": 45.76,
+          "cpc": 27.59,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 720
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 720
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 1000
+            }
+          ]
+        },
+        {
+          "keyword": "SEO Audit Basel",
+          "spell": "seo audit basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 30
+            }
+          ]
+        },
+        {
+          "keyword": "SEO Audit Bern",
+          "spell": "seo audit bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "SEO Audit Zürich",
+          "spell": "seo audit zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "SEO Berater Basel",
+          "spell": "seo berater basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 0,
+          "search_volume": 40,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 140
+            }
+          ]
+        },
+        {
+          "keyword": "SEO Berater Bern",
+          "spell": "seo berater bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "SEO Berater Zürich",
+          "spell": "seo berater zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 27,
+          "search_volume": 70,
+          "low_top_of_page_bid": 4.76,
+          "high_top_of_page_bid": 12.13,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 170
+            }
+          ]
+        },
+        {
+          "keyword": "SEO Beratung Basel",
+          "spell": "seo beratung basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 15,
+          "search_volume": 20,
+          "low_top_of_page_bid": 4.91,
+          "high_top_of_page_bid": 10,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 10
+            }
+          ]
+        },
+        {
+          "keyword": "SEO Beratung Bern",
+          "spell": "seo beratung bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 10
+            }
+          ]
+        },
+        {
+          "keyword": "SEO Beratung Zürich",
+          "spell": "seo beratung zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 27,
+          "search_volume": 70,
+          "low_top_of_page_bid": 4.76,
+          "high_top_of_page_bid": 12.13,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 170
+            }
+          ]
+        },
+        {
+          "keyword": "SEO Check Basel",
+          "spell": "seo check basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "SEO Check Bern",
+          "spell": "seo check bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "SEO Check Zürich",
+          "spell": "seo check zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "SEO Texte Basel",
+          "spell": "seo texte basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "SEO Texte Bern",
+          "spell": "seo texte bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "SEO Texte Zürich",
+          "spell": "seo texte zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "SEO Texter Basel",
+          "spell": "seo texter basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "SEO Texter Bern",
+          "spell": "seo texter bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "SEO Texter Zürich",
+          "spell": "seo texter zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 0
+            }
+          ]
+        },
+        {
+          "keyword": "Technisches SEO Audit Basel",
+          "spell": "technisches seo audit basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Technisches SEO Audit Bern",
+          "spell": "technisches seo audit bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Technisches SEO Audit Zürich",
+          "spell": "technisches seo audit zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Text Audit Basel",
+          "spell": "text audit basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Text Audit Bern",
+          "spell": "text audit bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Text Audit Zürich",
+          "spell": "text audit zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Webagentur Basel",
+          "spell": "webagentur basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 53,
+          "search_volume": 390,
+          "low_top_of_page_bid": 1.88,
+          "high_top_of_page_bid": 5.32,
+          "cpc": 5.35,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 260
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 590
+            }
+          ]
+        },
+        {
+          "keyword": "Webagentur Bern",
+          "spell": "webagentur bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 45,
+          "search_volume": 590,
+          "low_top_of_page_bid": 2.1,
+          "high_top_of_page_bid": 6.73,
+          "cpc": 5.66,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 480
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 390
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 880
+            }
+          ]
+        },
+        {
+          "keyword": "Webagentur Zürich",
+          "spell": "webagentur zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 35,
+          "search_volume": 1300,
+          "low_top_of_page_bid": 3.65,
+          "high_top_of_page_bid": 22.51,
+          "cpc": 12.9,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 1300
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 1900
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 2400
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 1900
+            }
+          ]
+        },
+        {
+          "keyword": "Webdesign Agentur Basel",
+          "spell": "webdesign agentur basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 6,
+          "search_volume": 210,
+          "low_top_of_page_bid": 3.15,
+          "high_top_of_page_bid": 7.29,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 480
+            }
+          ]
+        },
+        {
+          "keyword": "Webdesign Agentur Bern",
+          "spell": "webdesign agentur bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 9,
+          "search_volume": 140,
+          "low_top_of_page_bid": 3.46,
+          "high_top_of_page_bid": 7.68,
+          "cpc": 11.66,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 320
+            }
+          ]
+        },
+        {
+          "keyword": "Webdesign Agentur Zürich",
+          "spell": "webdesign agentur zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 17,
+          "search_volume": 260,
+          "low_top_of_page_bid": 5.66,
+          "high_top_of_page_bid": 11.03,
+          "cpc": 13.83,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 590
+            }
+          ]
+        },
+        {
+          "keyword": "Webdesign Basel",
+          "spell": "webdesign basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 33,
+          "search_volume": 480,
+          "low_top_of_page_bid": 2.98,
+          "high_top_of_page_bid": 6.64,
+          "cpc": 6.73,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 390
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 390
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 880
+            }
+          ]
+        },
+        {
+          "keyword": "Webdesign Bern",
+          "spell": "webdesign bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 58,
+          "search_volume": 590,
+          "low_top_of_page_bid": 3.22,
+          "high_top_of_page_bid": 10.31,
+          "cpc": 9.67,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 390
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1900
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 1000
+            }
+          ]
+        },
+        {
+          "keyword": "Webdesign Zürich",
+          "spell": "webdesign zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 29,
+          "search_volume": 1000,
+          "low_top_of_page_bid": 5.51,
+          "high_top_of_page_bid": 10.75,
+          "cpc": 15.24,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 880
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 720
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 2900
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 1600
+            }
+          ]
+        },
+        {
+          "keyword": "Webentwicklung Basel",
+          "spell": "webentwicklung basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 9,
+          "search_volume": 20,
+          "low_top_of_page_bid": 5,
+          "high_top_of_page_bid": 9.18,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 20
+            }
+          ]
+        },
+        {
+          "keyword": "Webentwicklung Bern",
+          "spell": "webentwicklung bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 22,
+          "search_volume": 20,
+          "low_top_of_page_bid": 7.71,
+          "high_top_of_page_bid": 11.47,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 50
+            }
+          ]
+        },
+        {
+          "keyword": "Webentwicklung Zürich",
+          "spell": "webentwicklung zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 23,
+          "search_volume": 110,
+          "low_top_of_page_bid": 2.9,
+          "high_top_of_page_bid": 11.27,
+          "cpc": 11.38,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 4,
+              "search_volume": 210
+            }
+          ]
+        },
+        {
+          "keyword": "Zielgruppenanalyse Basel",
+          "spell": "zielgruppenanalyse basel",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Zielgruppenanalyse Bern",
+          "spell": "zielgruppenanalyse bern",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "Zielgruppenanalyse Zürich",
+          "spell": "zielgruppenanalyse zürich",
+          "location_code": 2756,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        }
+      ]
+    }
+  ]
+}
