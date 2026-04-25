@@ -11,6 +11,22 @@ import { t } from '../../utils/i18n';
 
 const pillars = getLocalizedPillars('de');
 const allServices = await getCollection('services');
+const deServiceHubs = await getCollection('serviceHubs', (h) => h.data.locale === 'de');
+
+// Service-hub frontmatter holds the German description; the canonical service
+// file's description is EN-only. Fall back to a curated map for the 3 flat-
+// locale services that have no service-hub entry (AISO, ecommerce, E-E-A-T).
+const flatLocaleDescriptionsDe: Record<string, string> = {
+  'ai-search-optimization': 'ChatGPT und Google AI zitieren Ihre Konkurrenz — aber nicht Sie. Kostenloser AISO-Check in 24 Stunden. 2 Dimensionen geprüft. Unverbindlich.',
+  'ecommerce-seo-audit': 'Produktkatalog-SEO ist eine eigene Disziplin. Wir prüfen die 8 Schwachstellen Ihrer PDPs, PLPs und Filternavigation — Lieferung in 7 Tagen.',
+  'eeat-audit': 'Echtes E-E-A-T wird gezeigt, nicht behauptet. Wir bewerten Ihre Seite nach einer 40-Punkte-Rubrik mit signal-basierter Remediation. 1.200 € pauschal.',
+};
+
+function getDeDescription(slug: string, fallbackEn: string): string {
+  const hub = deServiceHubs.find((h) => h.data.serviceSlug === slug);
+  if (hub) return hub.data.description;
+  return flatLocaleDescriptionsDe[slug] ?? fallbackEn;
+}
 
 const servicesByPillar = pillars.map((pillar) => ({
   pillar,
@@ -51,7 +67,7 @@ const servicesByPillar = pillars.map((pillar) => ({
         {services.map((service) => (
           <Card href={getLocalizedNavHref(`/services/${service.data.slug}/`, 'de')}>
             <h3 class="text-lg font-headline font-bold text-navy">{t('service.' + service.data.slug, 'de')}</h3>
-            <p class="mt-2 text-sm font-body text-gray leading-relaxed">{service.data.description}</p>
+            <p class="mt-2 text-sm font-body text-gray leading-relaxed">{getDeDescription(service.data.slug, service.data.description)}</p>
           </Card>
         ))}
       </div>
