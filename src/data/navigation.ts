@@ -182,11 +182,10 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
     // EN locale: services live at /en/services/{slug}/
     if (locale === 'en') return `/en${href}`;
 
-    // DE locale: route AISO to the lead-magnet page (no dedicated DE hub by design),
-    // and services with a DE hub to their /services/<slug>/ page.
-    if (locale === 'de') {
-      if (serviceSlug === 'ai-search-optimization') return '/aiso-check/';
-      if (deServiceHubs.has(serviceSlug)) return `/services/${serviceSlug}/`;
+    // DE locale: services with a DE hub go to their /services/<slug>/ page.
+    // (AISO routes to /aiso-check/ via flatLocaleSlugs — same path for DE + CH-DE.)
+    if (locale === 'de' && deServiceHubs.has(serviceSlug)) {
+      return `/services/${serviceSlug}/`;
     }
 
     const flatSlug = getFlatLocaleSlug(serviceSlug, locale);

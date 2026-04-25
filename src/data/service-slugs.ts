@@ -78,6 +78,10 @@ const allSlugs: Record<string, SlugMap> = {
  * should fall back to the EN hub (/services/{enSlug}/).
  */
 const flatLocaleSlugs: Record<string, Partial<Record<string, string>>> = {
+  'ai-search-optimization': {
+    de: 'aiso-check',
+    'ch-de': 'aiso-check',
+  },
   'ecommerce-seo-audit': {
     de: 'ecommerce-seo-audit',
     'ch-de': 'ecommerce-seo-audit',
