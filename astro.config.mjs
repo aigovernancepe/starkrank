@@ -31,6 +31,13 @@ export default defineConfig({
     react(),
     sitemap(),
   ],
+  markdown: {
+    // Keep apostrophes and quotes straight across all locales. Swiss number
+    // formatting requires the straight apostrophe (1'500 CHF, not 1’500 CHF).
+    // Content uses direct Unicode em-dashes (—) and ellipses (…) so disabling
+    // autotypography is safe — no ---/... shortcuts in the corpus.
+    smartypants: false,
+  },
   vite: {
     plugins: [tailwindcss()],
   },

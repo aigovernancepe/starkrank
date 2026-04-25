@@ -13,20 +13,25 @@ const pillars = getLocalizedPillars('ch-de');
 const allServices = await getCollection('services');
 const deServiceHubs = await getCollection('serviceHubs', (h) => h.data.locale === 'de');
 
-// Service-hub frontmatter holds the German description; the canonical service
-// file's description is EN-only. CH-DE shares the German service-hub copy with
-// DE (no separate ch-de hubs). Fallback map for the 3 flat-locale services
-// uses CH-DE meta-descriptions (CHF pricing where applicable).
-const flatLocaleDescriptionsChDe: Record<string, string> = {
+// CH-DE description lookup order:
+//   1. chDeOverrides (services where DE hub leaks EUR prices, or flat-locale
+//      services without a DE hub at all) — CHF prices, Swiss tone where needed
+//   2. DE service hub (currency-neutral copy shared between DE + CH-DE)
+//   3. EN canonical (final fallback, shouldn't fire in practice)
+const chDeOverrides: Record<string, string> = {
+  // Flat-locale services (no DE service hub exists) — CH-DE meta descriptions
   'ai-search-optimization': 'ChatGPT und Google AI zitieren Ihre Konkurrenz — aber nicht Sie. Kostenloser AISO-Check in 24 Stunden. 2 Dimensionen geprüft. Unverbindlich.',
   'ecommerce-seo-audit': 'Produktkatalog-SEO ist eine eigene Disziplin. Wir prüfen die 8 Schwachstellen Ihrer PDPs, PLPs und Filternavigation — Lieferung in 7 Tagen.',
   'eeat-audit': 'Echtes E-E-A-T wird gezeigt, nicht behauptet. Wir bewerten Ihre Seite nach einer 40-Punkte-Rubrik mit signal-basierter Remediation. 1\'500 CHF pauschal.',
+  // DE service hubs whose description contains EUR prices — overridden to CHF
+  'technical-seo-audit': 'Technisches SEO-Audit für klassische und KI-Suche. Priorisierte Roadmap für Ihr Team. Ab 990 CHF. Kostenlose Erstberatung anfordern.',
 };
 
 function getChDeDescription(slug: string, fallbackEn: string): string {
+  if (chDeOverrides[slug]) return chDeOverrides[slug];
   const hub = deServiceHubs.find((h) => h.data.serviceSlug === slug);
   if (hub) return hub.data.description;
-  return flatLocaleDescriptionsChDe[slug] ?? fallbackEn;
+  return fallbackEn;
 }
 
 const servicesByPillar = pillars.map((pillar) => ({
