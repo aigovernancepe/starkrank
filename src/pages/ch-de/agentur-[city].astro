@@ -1,0 +1,25 @@
+---
+import CityHubPage from '../../components/pages/CityHubPage.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const cityHubs = await getCollection('cityHubs');
+  const cities = await getCollection('cities');
+
+  return cityHubs
+    .filter((hub) => hub.data.locale === 'ch-de')
+    .map((hub) => {
+      const city = cities.find((c) => c.data.citySlug === hub.data.citySlug && c.data.locale === 'ch-de');
+      if (!city) return null;
+      return {
+        params: { city: hub.data.citySlug },
+        props: { cityHub: hub, city, locale: 'ch-de' as const },
+      };
+    })
+    .filter(Boolean);
+}
+
+const { cityHub, city, locale } = Astro.props;
+---
+
+<CityHubPage {cityHub} {city} {locale} />
