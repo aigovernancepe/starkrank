@@ -64,7 +64,7 @@ const deSlugs: SlugMap = {
   'audience-persona-mapping': 'zielgruppenanalyse',
   'technical-web-design': 'webdesign',
   'google-analytics-consultancy': 'analytics-beratung',
-  'performance-web-development': 'webentwicklung',
+  'performance-web-development': 'webagentur',
   'roi-reporting-transparency': 'roi-reporting',
 };
 

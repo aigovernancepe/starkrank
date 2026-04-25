@@ -96,6 +96,16 @@
 /de/webdesign-hamburg/               /webdesign-hamburg/                         301
 /de/analytics-beratung-hamburg/      /analytics-beratung-hamburg/                301
 
+# DE city spokes — Bremen
+/de/webagentur-bremen/               /webagentur-bremen/                         301
+/de/webdesign-bremen/                /webdesign-bremen/                          301
+/de/lokale-seo-beratung-bremen/      /lokale-seo-beratung-bremen/                301
+/de/google-ads-bremen/               /google-ads-bremen/                         301
+
+# DE Webagentur backfill (slug change webentwicklung → webagentur, see project_status_2026-04-25_phase_3c_part_2b)
+/de/webagentur-hannover/             /webagentur-hannover/                       301
+/de/webagentur-hamburg/              /webagentur-hamburg/                        301
+
 # DE hub landing bare
 /de/                                 /                                           301
 
