@@ -11,7 +11,7 @@ export const en: Record<string, string> = {
   // Pillar Names
   'pillar.search-ai-intelligence': 'Search & AI Intelligence',
   'pillar.performance-media': 'Performance Media',
-  'pillar.authority-pr': 'Authority & PR',
+  'pillar.authority-pr': 'Authority',
   'pillar.content-copywriting': 'Content & Copywriting',
   'pillar.data-web': 'Data & Web',
 
