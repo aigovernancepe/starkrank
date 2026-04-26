@@ -36,7 +36,7 @@ faq:
   - question: "Liefern Sie auch das Design oder nur die Umsetzung?"
     answer: "Beides verfügbar: Komponenten-Design und Umsetzung aus einer Hand (typisch bei Neu-Launches) oder reine Umsetzung basierend auf vorhandenen Designs Ihres Designers oder Ihrer Design-Agentur (typisch bei Re-Implementations). Wir arbeiten eng mit Designern zusammen und liefern gegebenenfalls technische Beratung während der Design-Phase."
   - question: "Wie lange dauert ein typisches Projekt?"
-    answer: "Für eine fokussierte Service-Site mit 15 bis 30 Seiten, mehrsprachig (DE und CH-DE oder EN), inklusive Schema und IndexNow: acht bis zwölf Wochen von Scope-Workshop bis Launch. Größere Projekte (E-Commerce, Multi-Location-Setups mit 100+ Seiten) entsprechend länger. Den Zeitplan fixieren wir nach dem Scope-Workshop."
+    answer: "Für eine fokussierte Service-Site mit 15 bis 30 Seiten, mehrsprachig (DE oder DE plus EN), inklusive Schema und IndexNow: acht bis zwölf Wochen von Scope-Workshop bis Launch. Größere Projekte (E-Commerce, Multi-Location-Setups mit 100+ Seiten) entsprechend länger. Den Zeitplan fixieren wir nach dem Scope-Workshop."
 ---
 
 ## Was ist technisches Webdesign?
@@ -54,7 +54,7 @@ Das technische Webdesign deckt sechs Kernbereiche ab:
 - **Schema.org-Ausspielung** — JSON-LD pro Template nach Seitentyp (Organization, LocalBusiness, Service, Article, Product, FAQPage, BreadcrumbList, HowTo), sameAs-Pflege für Entity-Signale
 - **Core-Web-Vitals-Performance** — LCP unter 2,5 Sekunden, CLS unter 0,1, INP unter 200 Millisekunden auf echten Nutzergeräten (nicht nur Lighthouse-Idealwerten), Performance-Budget pro Template
 - **KI-Crawler-Kompatibilität** — robots.txt mit expliziten Richtlinien für GPTBot, ClaudeBot, PerplexityBot und OAI-SearchBot, llms.txt mit kuratierten Inhalten, WAF-Regeln auf Crawler-Freundlichkeit geprüft
-- **Accessibility und Consent-Mode** — WCAG-AA-Basis, DSGVO- und revDSG-konformer Consent-Mode mit Google-Analytics-Integration, Cookie-Banner der Rendering nicht blockiert
+- **Accessibility und Consent-Mode** — WCAG-AA-Basis, DSGVO-konformer Consent-Mode mit Google-Analytics-Integration, Cookie-Banner der Rendering nicht blockiert
 
 Das Ergebnis ist eine Site, die Core Web Vitals aus dem Stand hält, in klassischer Suche und KI-Antworten gleichermaßen gut abschneidet und Content-Updates ohne Entwickler-Abhängigkeit erlaubt.
 
@@ -88,7 +88,7 @@ Klassisches Webdesign kann funktionieren, wenn der Umfang klein ist und SEO kein
 
 ## Was kostet technisches Webdesign bei StarkRank?
 
-Technisches Webdesign wird nach Projekt-Scope kalkuliert. Die Haupt-Scope-Variablen sind: Seitenanzahl und Template-Vielfalt, Mehrsprachigkeit (eine Sprache vs. DE-plus-CH-DE-plus-EN), Integrationen (reine Marketing-Site vs. E-Commerce-Integration), Content-Migrations-Aufwand (keine bestehende Site vs. WordPress-Migration mit 200+ Seiten) und Design-Umfang (reine Umsetzung vorhandener Designs vs. Komplett-Design plus Umsetzung).
+Technisches Webdesign wird nach Projekt-Scope kalkuliert. Die Haupt-Scope-Variablen sind: Seitenanzahl und Template-Vielfalt, Mehrsprachigkeit (eine Sprache vs. DE plus EN), Integrationen (reine Marketing-Site vs. E-Commerce-Integration), Content-Migrations-Aufwand (keine bestehende Site vs. WordPress-Migration mit 200+ Seiten) und Design-Umfang (reine Umsetzung vorhandener Designs vs. Komplett-Design plus Umsetzung).
 
 Als Orientierung: eine fokussierte Service-Site mit 15 bis 30 Seiten, mehrsprachig, mit Schema-Markup, IndexNow-Integration und Content-Migration liegt im mittleren fünfstelligen Bereich. Größere Projekte (E-Commerce, Multi-Location-Setups) entsprechend höher. Den genauen Scope und Preis klären wir in der [kostenlosen Erstberatung](/kontakt/) nach dem ersten Scope-Workshop — wir geben einen Festpreis, keine T&M-Schätzung.
 

@@ -95,16 +95,16 @@ Preistreiber sind in der Regel vier Faktoren: URL-Volumen (eine Site mit 500 URL
 
 ## Welche typischen Fehler finden wir in DACH-Websites?
 
-Ein technisches SEO-Audit bei Websites aus Deutschland und der Deutschschweiz fördert erfahrungsgemäß wiederkehrende Fehlerklassen zu Tage:
+Ein technisches SEO-Audit bei deutschen B2B-Websites fördert erfahrungsgemäß wiederkehrende Fehlerklassen zu Tage:
 
 - **KI-Crawler durch WAF oder CDN blockiert** — Cloudflare-, Akamai- und Fastly-Standardkonfigurationen blockieren häufig GPTBot, ClaudeBot oder PerplexityBot unter dem Label „Bot-Protection", ohne dass es im CMS sichtbar wäre
-- **Cookie-Banner blockieren Rendering** — aggressive Consent-Management-Tools (CMPs) hinter vollflächigen Overlays verhindern manchmal, dass Googlebot den Hauptinhalt überhaupt erreicht — besonders bei revDSG- oder DSGVO-strikter Konfiguration
-- **Mehrsprachigkeit mit hreflang-Chaos** — DE- und CH-DE-Varianten der gleichen Seite ohne korrekte x-default-Fallbacks, sich widersprechende Canonicals oder asymmetrische Selbst-Referenzen zwischen Sprachversionen
+- **Cookie-Banner blockieren Rendering** — aggressive Consent-Management-Tools (CMPs) hinter vollflächigen Overlays verhindern manchmal, dass Googlebot den Hauptinhalt überhaupt erreicht — besonders bei DSGVO-strikter Konfiguration
+- **Mehrsprachigkeit mit hreflang-Chaos** — Sprachversionen der gleichen Seite ohne korrekte x-default-Fallbacks, sich widersprechende Canonicals oder asymmetrische Selbst-Referenzen zwischen Locales
 - **Shop-Kategorieseiten mit dünnem Content** — Kategorieseiten, die nur aus Produktgitter bestehen, ohne einführenden Text oder strukturierte Beschreibung — rangieren weder klassisch noch werden sie in KI-Antworten zitiert
-- **Strukturierte Daten ohne Entitätsanker** — Organization-Schema ohne sameAs zu Wikidata, LinkedIn oder Handelsregister (für DE) bzw. Zefix (für CH) — KI-Systeme finden die Marke nicht als zitierbare Entität wieder
+- **Strukturierte Daten ohne Entitätsanker** — Organization-Schema ohne sameAs zu Wikidata, LinkedIn oder Handelsregister — KI-Systeme finden die Marke nicht als zitierbare Entität wieder
 - **Kein llms.txt und keine KI-Bot-Policy** — viele Sites wissen schlicht nicht, dass GPTBot und ClaudeBot eigene Richtlinien lesen
 
-Diese Muster sind nicht zufällig — sie spiegeln die spezifische Kombination aus DACH-Regulierung (revDSG, DSGVO), Bot-Protection-Defaults und fehlendem Bewusstsein für die KI-Crawler-Welle wider.
+Diese Muster sind nicht zufällig — sie spiegeln die spezifische Kombination aus deutscher Datenschutz-Regulierung (DSGVO), Bot-Protection-Defaults und fehlendem Bewusstsein für die KI-Crawler-Welle wider.
 
 ## Für wen lohnt sich ein technisches SEO-Audit?
 

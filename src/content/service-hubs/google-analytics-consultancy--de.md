@@ -2,8 +2,8 @@
 serviceSlug: "google-analytics-consultancy"
 locale: "de"
 title: "Google Analytics Beratung"
-description: "Google Analytics 4 Beratung: Setup, Consent Mode, Conversion-Tracking, BigQuery-Export. DSGVO- und revDSG-konform. Kostenlose Erstberatung."
-heroLede: "Google Analytics 4 (GA4) richtig aufzusetzen ist eine technische Übung, die über den Wert jedes Marketing-Reports entscheidet. Schlechtes Tracking produziert schönes Reporting mit unzuverlässigen Zahlen; gutes Tracking verwandelt GA4 in das zentrale Messwerkzeug für klassisches SEO, Paid Ads, KI-Traffic und Conversion-Attribution. StarkRank baut oder revidiert Ihren Setup — DSGVO- und revDSG-konform."
+description: "Google Analytics 4 Beratung: Setup, Consent Mode, Conversion-Tracking, BigQuery-Export. DSGVO-konform. Kostenlose Erstberatung."
+heroLede: "Google Analytics 4 (GA4) richtig aufzusetzen ist eine technische Übung, die über den Wert jedes Marketing-Reports entscheidet. Schlechtes Tracking produziert schönes Reporting mit unzuverlässigen Zahlen; gutes Tracking verwandelt GA4 in das zentrale Messwerkzeug für klassisches SEO, Paid Ads, KI-Traffic und Conversion-Attribution. StarkRank baut oder revidiert Ihren Setup — DSGVO-konform."
 processTotalTime: "PT14D"
 processSteps:
   - name: "Setup-Audit"
@@ -12,7 +12,7 @@ processSteps:
       - "Google Analytics 4"
       - "Google Tag Manager"
       - "Chrome DevTools"
-  - name: "Consent Mode und DSGVO/revDSG"
+  - name: "Consent Mode und DSGVO"
     description: "Konfiguration des Consent Mode v2 mit default=denied, Integration Ihres Consent-Management-Tools (CMP), Server-Side-Tagging-Option für Datenresidenz, Dokumentation der Datenschutz-Konformität für Impressum und Datenschutz-Erklärung."
     tools:
       - "Cookiebot, Usercentrics, oder OneTrust"
@@ -27,10 +27,10 @@ processSteps:
   - name: "Reporting-Dashboards und Training"
     description: "Aufbau zielgruppenspezifischer Dashboards (Marketing-Team, Management, SEO-Detail-Ansicht) in Looker Studio, Schulung Ihres Teams im Umgang mit GA4 und Consent-Mode-Artefakten (Modelled Data), laufende Support-Option im Retainer."
 faq:
-  - question: "Ist der Setup DSGVO- und revDSG-konform?"
+  - question: "Ist der Setup DSGVO-konform?"
     answer: "Ja, wenn er korrekt aufgesetzt ist. Das bedeutet: Consent Mode v2 mit default=denied, Integration eines validen CMP (Cookiebot, Usercentrics, OneTrust oder vergleichbar), IP-Anonymisierung, datensparsame Event-Parameter, Dokumentation in der Datenschutz-Erklärung. Wir übernehmen die technische Konfiguration; die rechtliche Freigabe (Datenschutz-Erklärung, CMP-Text) liegt bei Ihrer Datenschutz-Beratung."
   - question: "Brauchen wir Server-Side-Tagging?"
-    answer: "Nicht zwingend. Server-Side-Tagging hat Vorteile für Datenresidenz (Google-Tag-Manager-Server in EU oder Schweiz statt US), für First-Party-Cookie-Lebensdauer und für Performance (weniger Client-Side-Skripte). Für Unternehmen mit hoher Datenschutz-Sensibilität oder E-Commerce mit iOS-14-Attribution-Drop empfehlen wir es; für kleinere Setups ist Client-Side ausreichend."
+    answer: "Nicht zwingend. Server-Side-Tagging hat Vorteile für Datenresidenz (Google-Tag-Manager-Server in der EU statt US), für First-Party-Cookie-Lebensdauer und für Performance (weniger Client-Side-Skripte). Für Unternehmen mit hoher Datenschutz-Sensibilität oder E-Commerce mit iOS-14-Attribution-Drop empfehlen wir es; für kleinere Setups ist Client-Side ausreichend."
   - question: "Was kostet BigQuery?"
     answer: "GA4-zu-BigQuery-Export ist im GA4-Standard kostenlos. BigQuery selbst wird nach Speicher und Abfragevolumen abgerechnet — für mittelgroße Sites liegen die Monatskosten typisch im ein- bis niedrigen zweistelligen Euro-Bereich. Für Enterprise-Sites mit 100+ Millionen Events pro Monat werden drei- bis vierstellige Beträge realistisch. Wir helfen bei der Cost-Estimation vor Aktivierung."
   - question: "Kombinieren Sie GA4 mit anderen Tools?"
@@ -48,7 +48,7 @@ Die Beratung setzt die drei kritischen Ebenen: technisch (was wird erfasst und w
 Die Beratung deckt sechs Kernbereiche ab:
 
 - **Setup und Tag-Manager-Integration** — GA4-Property-Aufsetzung oder -Revision, Google Tag Manager als Orchestrations-Layer, Migration aus Universal Analytics (falls noch nicht erfolgt), Measurement-ID- und Stream-Konfiguration
-- **Consent Mode v2 und DSGVO/revDSG** — default=denied-Konfiguration, Integration Ihres Consent-Management-Tools, Server-Side-Tagging-Option für Datenresidenz, modelled-data-Verständnis und -Interpretation, Dokumentation für Datenschutz-Erklärung
+- **Consent Mode v2 und DSGVO** — default=denied-Konfiguration, Integration Ihres Consent-Management-Tools, Server-Side-Tagging-Option für Datenresidenz, modelled-data-Verständnis und -Interpretation, Dokumentation für Datenschutz-Erklärung
 - **Event- und Conversion-Schema** — Definition der relevanten Events pro Seitentyp, Conversion-Markierung, Enhanced Measurement-Einstellung, E-Commerce-Events bei Shops, Custom Dimensions und Metrics für Ihr spezifisches Geschäftsmodell
 - **Google Ads- und Search-Console-Verknüpfung** — Enhanced Conversions für Ads, Search Console-Daten-Integration, Attribution-Modell-Abgleich, Offline-Conversion-Import für B2B-Lead-Gen
 - **BigQuery-Export und Rohdaten-Zugriff** — BigQuery-Verknüpfung für Analysen jenseits der UI-Limits, strukturierte Attribution-Modellierung, Cross-Device- und Cross-Channel-Reporting, Rohdaten-Zugriff für Ihr BI-Tool
@@ -61,7 +61,7 @@ Die Beratung kann als Einmal-Setup (für Greenfield oder Migration), als punktue
 Die Beratung läuft in fünf klar getrennten Schritten ab:
 
 1. **Setup-Audit** — Audit des bestehenden GA4-Setups (oder Aufsetzen bei Greenfield), Prüfung der Tag-Manager-Integration, Event-Parameter-Qualität, Consent-Mode-Status, Conversion-Definitions, Verknüpfungen mit Google Ads, Search Console und BigQuery
-2. **Consent Mode und DSGVO/revDSG** — Konfiguration des Consent Mode v2 mit default=denied, Integration Ihres Consent-Management-Tools (CMP), Server-Side-Tagging-Option für Datenresidenz, Dokumentation der Datenschutz-Konformität für Impressum und Datenschutz-Erklärung
+2. **Consent Mode und DSGVO** — Konfiguration des Consent Mode v2 mit default=denied, Integration Ihres Consent-Management-Tools (CMP), Server-Side-Tagging-Option für Datenresidenz, Dokumentation der Datenschutz-Konformität für Impressum und Datenschutz-Erklärung
 3. **Event- und Conversion-Schema** — Definition der relevanten Events pro Seitentyp, Conversion-Markierung, Enhanced Measurement-Einstellung, E-Commerce-Ereignisse bei Shops, Custom Dimensions und Metrics für Ihr Geschäftsmodell
 4. **BigQuery-Export und Attribution** — BigQuery-Verknüpfung für rohdatenbasierte Analysen jenseits der GA4-UI-Limits, strukturierte Attribution-Modellierung, Cross-Device- und Cross-Channel-Reporting, Rohdaten-Zugriff für Ihr BI-Tool (Looker Studio, Metabase, Power BI)
 5. **Reporting-Dashboards und Training** — Aufbau zielgruppenspezifischer Dashboards in Looker Studio, Schulung Ihres Teams im Umgang mit GA4 und Consent-Mode-Artefakten (Modelled Data), laufende Support-Option im Retainer
@@ -96,7 +96,7 @@ Die GA4-Beratung lohnt sich typischerweise für:
 - **Firmen nach iOS-14 oder Consent-Mode-Rollout** — wo die Attribution plötzlich brüchig geworden ist und die Ursache nicht klar ist
 - **E-Commerce-Shops mit komplexen Conversion-Pfaden** — Shipping-Kosten, Rabatte, Variants, Subscription-Renewals, die im Standard-GA4-Setup falsch oder gar nicht erfasst werden
 - **B2B-Unternehmen mit langen Sales-Cycles** — wo Offline-Conversion-Import, Lead-Scoring und CRM-GA4-Brücken die Kampagnen-Attribution überhaupt erst ermöglichen
-- **Unternehmen mit Datenresidenz-Anforderungen** — besonders Schweizer Firmen mit revDSG-Compliance oder DE-Firmen mit sensiblen Branchen, die Server-Side-Tagging oder EU-Data-Residency brauchen
+- **Unternehmen mit Datenresidenz-Anforderungen** — besonders Firmen aus regulierten Branchen (Finanz, Gesundheit, Versicherung), die Server-Side-Tagging oder EU-Data-Residency brauchen
 - **Firmen mit mehreren Marketing-Kanälen** — die Google Ads, Meta, LinkedIn, E-Mail und Direktverkehr sauber attribuieren wollen, statt jedem Kanal seine eigene Attribution-Story zu lassen
 - **Unternehmen vor BigQuery-Aktivierung** — die aus der GA4-UI herauswollen und rohdaten-basierte Analysen fahren möchten
 

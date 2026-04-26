@@ -78,7 +78,7 @@ Was Sie nicht erwarten sollten: Top-Rankings in den ersten 30 Tagen (SEO braucht
 
 Content-Marketing-Retainer folgen unseren Retainer-Bändern, die auf der [Preisseite](/preise/seo/) transparent publiziert sind — von Einzelunternehmen (ab 990 €/Monat) über Mittelstand (2.000 bis 4.000 €/Monat) bis Enterprise (ab 5.000 €/Monat, individueller Scope).
 
-Der Band-Einstieg hängt weniger an Artikel-Stückzahlen als an der Komplexität: Recherche-Tiefe (generisches B2B vs. regulierte Finanzbranche), Zielmarkt-Breite (ein Markt vs. DE+CH-DE+EN), Reviewschleifen (Single-Freigeber vs. Multi-Stakeholder-Prozess) und Experten-Input (generisch vs. Expertenbibliothek-basiert). Wir kalkulieren den passenden Band-Einstieg in der [kostenlosen Erstberatung](/kontakt/) — mit klarer Schätzung der Artikel-Pipeline für die ersten 90 Tage.
+Der Band-Einstieg hängt weniger an Artikel-Stückzahlen als an der Komplexität: Recherche-Tiefe (generisches B2B vs. regulierte Finanzbranche), Zielmarkt-Breite (ein Markt vs. DE plus EN), Reviewschleifen (Single-Freigeber vs. Multi-Stakeholder-Prozess) und Experten-Input (generisch vs. Expertenbibliothek-basiert). Wir kalkulieren den passenden Band-Einstieg in der [kostenlosen Erstberatung](/kontakt/) — mit klarer Schätzung der Artikel-Pipeline für die ersten 90 Tage.
 
 ## Für wen lohnt sich Content Marketing im Retainer?
 
