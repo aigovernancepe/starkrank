@@ -46,6 +46,17 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     <link rel="preconnect" href="https://track-eu1.hubspot.com" crossorigin />
     <link rel="preconnect" href="https://forms-eu1.hsforms.net" crossorigin />
 
+    <!-- Set lead_source_page URL param for HubSpot hidden-field pre-population. MUST run before GA4 init below — otherwise gtag reads window.location AFTER this script mutates it and every GA4 pageview is reported decorated with ?lead_source_page=... -->
+    <script is:inline>
+      (function() {
+        var url = new URL(window.location);
+        if (!url.searchParams.has('lead_source_page')) {
+          url.searchParams.set('lead_source_page', window.location.pathname);
+          history.replaceState(null, '', url);
+        }
+      })();
+    </script>
+
     <!-- Google Consent Mode v2 -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
@@ -67,13 +78,16 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
       }
     </script>
 
-    <!-- GA4 -->
+    <!-- GA4 — page_location/page_path passed explicitly so gtag.js doesn't auto-read window.location after the lead_source_page rewrite has decorated it with ?lead_source_page=... -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-FCS0HH5VC0"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-FCS0HH5VC0');
+      gtag('config', 'G-FCS0HH5VC0', {
+        page_location: window.location.origin + window.location.pathname,
+        page_path: window.location.pathname
+      });
     </script>
 
     <!-- SEO -->
@@ -103,16 +117,6 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- Set lead_source_page URL param for HubSpot hidden field pre-population -->
-    <script is:inline>
-      (function() {
-        var url = new URL(window.location);
-        if (!url.searchParams.has('lead_source_page')) {
-          url.searchParams.set('lead_source_page', window.location.pathname);
-          history.replaceState(null, '', url);
-        }
-      })();
-    </script>
     <!-- Font preloads -->
     <link rel="preload" href="/fonts/InterTight-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/DMSans-latin.woff2" as="font" type="font/woff2" crossorigin />
