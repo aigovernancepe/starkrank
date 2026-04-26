@@ -1,5 +1,6 @@
 ---
 serviceSlug: "technical-web-design"
+urlSlug: "webdesign-schweiz"
 locale: "ch-de"
 title: "Webdesign Schweiz"
 description: "Webdesign für Deutschschweizer KMU: Schweizer Hosting, revDSG-konform, Core Web Vitals als Standard. Astro SSG, Cloudflare Edge Zürich. Erstberatung gratis."

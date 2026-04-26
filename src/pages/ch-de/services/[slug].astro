@@ -20,8 +20,10 @@ export async function getStaticPaths() {
     .map((hub) => {
       const service = services.find((s) => s.data.slug === hub.data.serviceSlug);
       if (!service) return null;
+      // Use keyword-friendly urlSlug if set, otherwise fall back to serviceSlug.
+      const slug = hub.data.urlSlug ?? hub.data.serviceSlug;
       return {
-        params: { slug: hub.data.serviceSlug },
+        params: { slug },
         props: { hub, service },
       };
     })
@@ -59,7 +61,8 @@ const chCities = allCities
 const effectiveDate = getEffectiveUpdatedDate(hub.filePath, hub.data.updatedDate);
 
 const site = Astro.site?.origin ?? 'https://starkrank.com';
-const pageUrl = `${site}/ch-de/services/${service.data.slug}/`;
+const urlSlug = hub.data.urlSlug ?? hub.data.serviceSlug;
+const pageUrl = `${site}/ch-de/services/${urlSlug}/`;
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -125,15 +128,23 @@ const schemas = [
 const breadcrumbs = [
   { label: 'Startseite', href: '/ch-de/' },
   { label: 'Dienstleistungen', href: '/ch-de/services/' },
-  { label: localizedTitle, href: `/ch-de/services/${service.data.slug}/` },
+  { label: localizedTitle, href: `/ch-de/services/${urlSlug}/` },
 ];
 
-// Hreflang: self + DE counterpart (de root) + EN
+// Hreflang: self + DE counterpart (de root) + EN.
+// Counterpart URL uses the DE hub's own urlSlug (may differ from this CH-DE hub's slug).
+const allHubs = await getCollection('serviceHubs');
+const deCounterpart = allHubs.find(
+  (h) => h.data.serviceSlug === service.data.slug && h.data.locale === 'de'
+);
+const deUrlSlug = deCounterpart
+  ? (deCounterpart.data.urlSlug ?? deCounterpart.data.serviceSlug)
+  : service.data.slug;
 const hreflangAlternates = [
   { hreflang: 'de-CH', href: pageUrl },
-  { hreflang: 'de-DE', href: `${site}/services/${service.data.slug}/` },
+  { hreflang: 'de-DE', href: `${site}/services/${deUrlSlug}/` },
   { hreflang: 'en', href: `${site}/en/services/${service.data.slug}/` },
-  { hreflang: 'x-default', href: `${site}/services/${service.data.slug}/` },
+  { hreflang: 'x-default', href: `${site}/services/${deUrlSlug}/` },
 ];
 ---
 

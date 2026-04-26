@@ -20,8 +20,10 @@ export async function getStaticPaths() {
     .map((hub) => {
       const service = services.find((s) => s.data.slug === hub.data.serviceSlug);
       if (!service) return null;
+      // Use keyword-friendly urlSlug if set, otherwise fall back to serviceSlug.
+      const slug = hub.data.urlSlug ?? hub.data.serviceSlug;
       return {
-        params: { slug: hub.data.serviceSlug },
+        params: { slug },
         props: { hub, service },
       };
     })
@@ -59,7 +61,8 @@ const deCities = allCities
 const effectiveDate = getEffectiveUpdatedDate(hub.filePath, hub.data.updatedDate);
 
 const site = Astro.site?.origin ?? 'https://starkrank.com';
-const pageUrl = `${site}/services/${service.data.slug}/`;
+const urlSlug = hub.data.urlSlug ?? hub.data.serviceSlug;
+const pageUrl = `${site}/services/${urlSlug}/`;
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -129,19 +132,23 @@ const schemas = [
 const breadcrumbs = [
   { label: 'Startseite', href: '/' },
   { label: 'Dienstleistungen', href: '/services/' },
-  { label: localizedTitle, href: `/services/${service.data.slug}/` },
+  { label: localizedTitle, href: `/services/${urlSlug}/` },
 ];
 
 // Hreflang: self + EN cross-locale + CH-DE counterpart if a ch-de hub exists for this service.
 // The /en/services/[slug] catch-all covers EN; the ch-de hub presence is the gate for de-CH alternate.
+// Counterpart URL uses the CH-DE hub's own urlSlug (may differ from this DE hub's slug).
 const allHubs = await getCollection('serviceHubs');
-const hasChDeCounterpart = allHubs.some(
+const chDeCounterpart = allHubs.find(
   (h) => h.data.serviceSlug === service.data.slug && h.data.locale === 'ch-de'
 );
+const chDeUrlSlug = chDeCounterpart
+  ? (chDeCounterpart.data.urlSlug ?? chDeCounterpart.data.serviceSlug)
+  : null;
 const hreflangAlternates = [
   { hreflang: 'de-DE', href: pageUrl },
-  ...(hasChDeCounterpart
-    ? [{ hreflang: 'de-CH', href: `${site}/ch-de/services/${service.data.slug}/` }]
+  ...(chDeUrlSlug
+    ? [{ hreflang: 'de-CH', href: `${site}/ch-de/services/${chDeUrlSlug}/` }]
     : []),
   { hreflang: 'en', href: `${site}/en/services/${service.data.slug}/` },
   { hreflang: 'x-default', href: pageUrl },

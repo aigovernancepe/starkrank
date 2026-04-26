@@ -1,5 +1,6 @@
 ---
 serviceSlug: "technical-web-design"
+urlSlug: "webdesign-agentur"
 locale: "de"
 title: "Technisches Webdesign"
 description: "Technisches Webdesign für deutschen B2B-Mittelstand: DSGVO-konform, IHK-tauglich, Cloudflare Frankfurt-Edge. Astro SSG, Schema-Tiefe, AI-Crawler-Zugang. Erstberatung gratis."

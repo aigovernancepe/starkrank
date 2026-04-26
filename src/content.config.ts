@@ -69,6 +69,12 @@ const serviceHubs = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/service-hubs' }),
   schema: z.object({
     serviceSlug: z.string(),
+    // Optional keyword-friendly URL slug per locale (Phase 3d). Falls back to
+    // serviceSlug if not set. Matches /services/<urlSlug>/ on DE and
+    // /ch-de/services/<urlSlug>/ on CH-DE. See feedback_serp_intent_locale_verification
+    // for the rationale (DE bare-keyword SERPs are guide/tool gravity wells;
+    // agency hubs need buyer-qualified suffixes).
+    urlSlug: z.string().optional(),
     locale: z.enum(['de', 'ch-de']),
     title: z.string().optional(),
     description: z.string(),
