@@ -78,13 +78,16 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
       }
     </script>
 
-    <!-- GA4 -->
+    <!-- GA4 — page_location/page_path passed explicitly so gtag.js doesn't auto-read window.location after the lead_source_page rewrite has decorated it with ?lead_source_page=... -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-FCS0HH5VC0"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-FCS0HH5VC0');
+      gtag('config', 'G-FCS0HH5VC0', {
+        page_location: window.location.origin + window.location.pathname,
+        page_path: window.location.pathname
+      });
     </script>
 
     <!-- SEO -->
