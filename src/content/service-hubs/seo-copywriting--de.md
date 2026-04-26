@@ -28,8 +28,6 @@ faq:
     answer: "Beides. Einzeltexte sind sinnvoll für spezifische Bedarfe (eine wichtige Landingpage, ein Pillar-Artikel, eine Relaunch-Pagine). Für laufende Produktion von 4 oder mehr Texten pro Monat ist ein Retainer in der Regel wirtschaftlicher — inklusive Editorial-Kalender und Themenrecherche ([Content Marketing](/services/content-marketing/))."
   - question: "Arbeiten Sie mit NeuronWriter oder anderen Content-Tools?"
     answer: "Wir nutzen NeuronWriter als Semantik-Check, aber nicht als Schreib-Automat. Ein NeuronWriter-Score von 70+ ist Qualitäts-Signal, kein Qualitäts-Ersatz — Texte mit hohen Scores, die keine Capsule-Struktur oder Information-Gain haben, ranken trotzdem schlecht. Die Tools informieren die Texterstellung, ersetzen sie aber nicht."
-  - question: "Schreiben Sie auch in Schweizer Hochdeutsch?"
-    answer: "Ja. Für CH-DE-Content achten wir auf die spezifischen Spelling-Unterschiede (ss statt ß, Trottoir statt Bürgersteig, Velo statt Fahrrad wo passend), regulatorische Terminologie (revDSG statt nDSG), Schweizer Währungsformat (1'500 CHF mit Apostroph und Suffix) und die nüchternere, weniger bundesdeutsch-förmliche Tonalität."
   - question: "Nutzen Sie KI-Tools zur Textproduktion?"
     answer: "Für strukturelle Hilfsfunktionen (Keyword-Research, Semantik-Check, Lesbarkeits-Analyse) ja. Für die eigentliche Textproduktion nein. KI-generierte Texte landen erkennbar in den typischen Anti-AI-Schreibmustern, die wir explizit vermeiden — und KI-Systeme selbst deprioritisieren zunehmend KI-generierten Content in Antworten. Unsere Texte werden von Menschen mit Fachkenntnissen geschrieben."
 ---
