@@ -22,11 +22,13 @@ faq:
   - question: "How do you handle migration from a legacy stack without losing SEO?"
     answer: "We deliver a documented URL migration with a redirect map (old URL → new URL per page), schema continuity (structured data stays consistent), a content audit (what carries over, what merges, what gets dropped), and a roll-forward plan with clear fallback points. Migrations are scoped during discovery so the SEO impact is predictable, not discovered post-launch."
   - question: "What's the difference between web development and web design?"
-    answer: "Web design (Technical Web Design) covers information architecture, UX, designsystem, and accessibility patterns. Web development (this service) covers the actual implementation — frontend code, CMS configuration, performance engineering, integrations, and deployment infrastructure. We typically pair the two on a single project, but you can engage either independently."
+    answer: "Web design ([Technical Web Design](/services/technical-web-design/)) decides what gets built — information architecture, URL structure, designsystem, wireframes, accessibility patterns, and the schema strategy. Web development (this service) builds it — frontend code, CMS configuration, performance budgets in CI, DSGVO and consent architecture, structured data implementation, migrations, hosting, and deployment. The two phases are typically scoped together, but each can be engaged independently if you already have one half handled."
   - question: "Do you build e-commerce stores?"
     answer: "Yes. We work primarily with Spryker (for catalogs in the five-figure SKU range, B2B functionality, international rollouts) and Shopware (for mid-size catalogs with DACH focus, faster time-to-market). For headless commerce setups, we integrate Spryker, commercetools, or Shopify Plus with custom Astro or Next.js frontends. Pair with our [E-Commerce SEO Audit](/ecommerce-seo-audit/) to validate catalog hygiene before launch."
   - question: "How do you keep performance high after launch?"
     answer: "Performance budgets enforced in the CI pipeline catch regressions before they ship. Lighthouse CI tests run on every pull request. Real User Monitoring (RUM) tracks actual visitor performance in production, not just lab data. Monthly performance reviews report against baseline so you see when third-party scripts or new features are degrading core metrics. Performance is treated as a SLA, not a launch milestone."
+  - question: "Do you handle website hosting and maintenance after launch?"
+    answer: "We configure hosting for optimal performance — CDN setup, caching rules, server-side rendering where appropriate — and provide documentation for your team. For ongoing maintenance, we offer retainer packages covering security updates, performance monitoring, content updates, and iterative improvements based on analytics data. We also integrate analytics from day one through our Google Analytics Consultancy service."
 ---
 
 A great website is not the visual design; it is the code beneath. Performance Web Development is the engineering discipline that turns a designer's vision into a fast, accessible, AI-readable, DSGVO-compliant experience. We build sites that score well on Core Web Vitals from day one, integrate cleanly with your analytics and marketing stack, and remain maintainable for years without becoming a technical debt burden.
@@ -51,11 +53,21 @@ Migration is the right answer when the existing platform creates more cost than 
 
 Incremental optimization is the right answer when architecture is sound but execution is lacking — slow images, blocking third-party scripts, missing schema markup, accessibility gaps. We recommend a [Technical SEO Audit](/services/technical-seo-audit/) to make this call honestly: not every slow site needs a rebuild, and not every rebuild fixes the underlying issues.
 
-## How do you handle DSGVO compliance in development?
+## How do you handle DSGVO compliance and consent architecture?
 
-DSGVO-compliant architecture goes beyond a cookie banner. We integrate Google Consent Mode v2 with your CMP, build server-side tracking via Google Tag Manager Server, configure GA4 to respect consent state, and document the data flow for your data protection officer. Self-hosted fonts (no Google Fonts CDN) eliminate one common compliance gap. Image and asset hosting on European infrastructure keeps personal data within EU jurisdiction.
+DSGVO-compliant architecture goes beyond a cookie banner. Privacy regulations — GDPR in the EU, revDSG in Switzerland, and evolving frameworks globally — require websites to manage user consent before collecting data. A consent-friendly architecture is a technical pattern that affects how your entire analytics and marketing stack operates, and it lives in implementation, not in design specs.
+
+We build consent and privacy into the site's technical foundation:
+
+- **Google Consent Mode v2** — Integrated with your CMP so analytics and advertising tags respect user consent choices while still providing aggregated, cookieless measurement data for unconsented users. GA4, Google Ads, and Floodlight tags are configured to read consent state correctly.
+- **Consent Management Platform (CMP) integration** — Properly configured, fast-loading, and compliant with regional requirements (TCF v2.2 for the EU, separate logic for Swiss revDSG). CMP load order is engineered so consent UI doesn't block LCP.
+- **Server-side tagging** — Architecture that supports moving tracking from client-side to server-side via Google Tag Manager Server, giving you more control over data collection and reducing reliance on third-party cookies.
+- **First-party data strategy** — Site features (accounts, newsletters, gated content) designed to collect consented first-party data that fuels your analytics and remarketing without third-party cookie dependency.
+- **Self-hosted assets** — Self-hosted fonts (no Google Fonts CDN) and EU-hosted images eliminate two common compliance gaps where personal data otherwise leaves EU jurisdiction.
 
 For mid-market companies in regulated industries — financial services, healthcare, food, logistics — we deliver a documented compliance package alongside the site, including data-flow diagrams, processor agreements review, and recommendations for the records of processing activities (Verarbeitungsverzeichnis). The site is the technical layer; compliance is a documented, reviewable artifact.
+
+For full analytics implementation, see our [Google Analytics Consultancy](/services/google-analytics-consultancy/) service. For connecting measurement to business outcomes, see [ROI Reporting & Transparency](/services/roi-reporting-transparency/).
 
 ## What's the typical project timeline?
 
