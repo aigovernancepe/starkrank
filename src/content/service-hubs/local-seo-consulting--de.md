@@ -1,9 +1,10 @@
 ---
 serviceSlug: "local-seo-consulting"
+urlSlug: "local-seo-agentur"
 locale: "de"
-title: "Lokale SEO-Beratung"
-description: "Lokale SEO-Beratung: Google Business Profile, Citations, lokale Rankings und Review-Velocity. Für Unternehmen mit echter Standort-Präsenz. Erstberatung."
-heroLede: "Lokale SEO-Beratung bei StarkRank richtet sich an Unternehmen mit echter Standort-Präsenz — Ladengeschäfte, Praxen, Beratungsbüros, B2B-Dienstleister mit Einzugsgebiet. Das Ziel ist nicht generische Mehr-Sichtbarkeit, sondern belastbare Top-3-Positionen in den lokalen Pack-Ergebnissen und konsistente NAP-Signale über alle Kanäle."
+title: "Local-SEO-Agentur"
+description: "Local-SEO-Agentur für deutschen Mittelstand: Google Business Profile, Citations über deutsche Verzeichnisse (gelbeseiten.de, Das Örtliche, IHK), DSGVO-konform. Erstberatung."
+heroLede: "Local-SEO-Agentur StarkRank optimiert deutsche Mittelständler mit echter Standort-Präsenz für regionale Suchanfragen — Google Business Profile, NAP-Konsistenz über deutsche Verzeichnisse (gelbeseiten.de, Das Örtliche, IHK-Verzeichnisse, branchenspezifische Listings) und standort-spezifische Landingpages mit LocalBusiness-Schema. Lieferung Hannover, Bremen und Hamburg — keine 'deutschlandweite Coverage'-Behauptung."
 processTotalTime: "PT21D"
 processSteps:
   - name: "Lokale Baseline-Analyse"

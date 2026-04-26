@@ -1,9 +1,10 @@
 ---
 serviceSlug: "authority-link-building"
+urlSlug: "linkaufbau-agentur"
 locale: "de"
-title: "Strategischer Linkaufbau"
-description: "Strategischer Linkaufbau: relevante Backlinks durch Studien-Assets, Experten-Zitate und Ressourcen-Content. Qualität statt Link-Tausch. Erstberatung anfordern."
-heroLede: "Strategischer Linkaufbau bei StarkRank baut Backlinks über Inhalte, Expertise und Studien-Assets — nicht über Link-Austausch, Private-Blog-Networks oder gekaufte Platzierungen. Das Ergebnis sind Links, die Ihre Domain-Autorität stärken, ohne bei einem Google-Kernupdate zur Belastung zu werden."
+title: "Linkaufbau-Agentur"
+description: "Linkaufbau-Agentur für deutschen B2B-Mittelstand: Authority Links aus deutschen Fach-Publikationen (Heise, t3n, OMR, Horizont). DSGVO-konform. Keine PBN-Pakete."
+heroLede: "Linkaufbau-Agentur StarkRank baut Backlinks für deutschen B2B-Mittelstand über Inhalte, Expertise und Studien-Assets aus deutschen Fach-Publikationen (Heise, t3n, OMR, Horizont, Wirtschaftswoche, branchenspezifische Fachportale) — nicht über Link-Austausch, Private-Blog-Networks oder gekaufte Platzierungen. Das Ergebnis sind Links, die Ihre Domain-Autorität nachhaltig stärken, ohne bei einem Google-Kernupdate zur Belastung zu werden."
 processTotalTime: "PT90D"
 processSteps:
   - name: "Backlink-Audit und Ziel-Definition"

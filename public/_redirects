@@ -166,6 +166,10 @@
 # Each redirect lands on the same hub content at its new URL. CH-DE side
 # is greenfield (no /ch-de/services/<old-slug>/ URLs ever shipped to prod).
 /services/technical-web-design/      /services/webdesign-agentur/                301
+/services/technical-seo-audit/       /services/seo-audit-agentur/                301
+/services/google-ads-management/     /services/google-ads-betreuung/             301
+/services/local-seo-consulting/      /services/local-seo-agentur/                301
+/services/authority-link-building/   /services/linkaufbau-agentur/               301
 
 # ─── Pre-Phase-2b legacy redirects (kept + updated) ───────────────
 /schweiz/                            /ch-de/                                     301

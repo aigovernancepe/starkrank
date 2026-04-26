@@ -1,9 +1,10 @@
 ---
 serviceSlug: "technical-seo-audit"
+urlSlug: "seo-audit-agentur"
 locale: "de"
-title: "Technisches SEO-Audit"
-description: "Technisches SEO-Audit für klassische und KI-Suche. Priorisierte Roadmap für Ihr Team. Ab 790 €. Kostenlose Erstberatung anfordern."
-heroLede: "Ein technisches SEO-Audit (Search Engine Optimisation — Suchmaschinenoptimierung) findet die Probleme, an denen Ihre Sichtbarkeit hängt: blockierte Crawler, verwaiste Seiten, fehlerhafte Canonical-Tags, langsames Rendering, unvollständige strukturierte Daten. StarkRank liefert die Befunde nach Impact geordnet — als priorisierte Roadmap, die Ihr Entwicklungsteam Stück für Stück abarbeiten kann, nicht als 300-Zeilen-Report zum Ausdrucken."
+title: "SEO-Audit-Agentur"
+description: "SEO-Audit-Agentur für deutschen B2B-Mittelstand: 150+ Kriterien, DSGVO-Check, AVV-Vorlagen, AI-Crawler-Zugang, priorisierte Roadmap. Ab 790 €."
+heroLede: "Als SEO-Audit-Agentur für deutschen B2B-Mittelstand findet StarkRank die Probleme, an denen Ihre Sichtbarkeit hängt: blockierte Crawler, verwaiste Seiten, fehlerhafte Canonical-Tags, DSGVO-konformes Tracking ohne Datenverlust, KI-Crawler-Zugang. Wir liefern die Befunde nach Impact geordnet — als priorisierte Roadmap, die Ihr Entwicklungsteam Stück für Stück abarbeiten kann, kein 300-Zeilen-Dashboard-Dump zum Ausdrucken."
 processTotalTime: "PT10D"
 processSteps:
   - name: "Kick-off und Scope-Definition"

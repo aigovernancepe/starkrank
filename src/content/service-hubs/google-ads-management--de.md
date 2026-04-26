@@ -1,9 +1,10 @@
 ---
 serviceSlug: "google-ads-management"
+urlSlug: "google-ads-betreuung"
 locale: "de"
-title: "Google Ads Management"
-description: "Google Ads Management: Kampagnen strukturieren, Budget steuern, ROAS messbar halten. Transparente Retainer-Bänder. Kostenlose Erstberatung anfordern."
-heroLede: "Google Ads Management bei StarkRank ist die laufende Steuerung Ihrer bezahlten Suchkanäle (Search, Performance Max, Shopping, Display) mit dem Anspruch, dass jeder Euro Budget einem messbaren Ergebnis zuordenbar bleibt. Kein Set-and-forget, kein Ranking-Report als Hauptlieferung — strukturelle Optimierung plus Conversion-Fokus plus transparente Reportings, die eine ROAS-Frage in zwei Minuten beantworten."
+title: "Google Ads Betreuung"
+description: "Google Ads Betreuung für deutschen B2B-Mittelstand: Kampagnen-Struktur, ROAS-messbar, DSGVO-konformes Tracking. Transparente Retainer-Bänder ab 990 €/Monat."
+heroLede: "Google Ads Betreuung bei StarkRank ist die laufende Steuerung Ihrer bezahlten Suchkanäle (Search, Performance Max, Shopping, Display) für deutschen B2B-Mittelstand — mit dem Anspruch, dass jeder Euro Budget einem messbaren Geschäftsergebnis zuordenbar bleibt. DSGVO-konformes Tracking, Cloudflare-europe-west3-Datenresidenz, keine Prozent-vom-Spend-Vergütung, keine Ranking-Report-Theaterstücke — strukturelle Optimierung plus monatliche Entscheidungsvorlage."
 processTotalTime: "PT30D"
 processSteps:
   - name: "Onboarding-Audit"
