@@ -108,22 +108,41 @@ export function getLocalizedAudits(locale: Locale): NavItem[] {
 /**
  * Services with a DE service-hub page at /services/<slug>/.
  * Kept in sync with src/content/service-hubs/*--de.md. When a new DE hub ships,
- * add its slug here so the mega-menu routes to the hub instead of the default
- * Hannover spoke. AISO is intentionally absent — it routes to /aiso-check/.
+ * add its serviceSlug → urlSlug mapping here so the mega-menu routes to the hub
+ * at the correct URL. urlSlug differs from serviceSlug for Phase 3d hubs that
+ * migrated to buyer-qualified keyword URLs (per feedback_serp_intent_locale_verification).
+ * AISO is intentionally absent — it routes to /aiso-check/.
  */
-const deServiceHubs = new Set<string>([
-  'technical-seo-audit',
-  'local-seo-consulting',
-  'google-ads-management',
-  'google-ads-audit',
-  'paid-social-strategy',
-  'authority-link-building',
-  'content-marketing',
-  'seo-copywriting',
-  'copywriting-audit',
-  'audience-persona-mapping',
-  'technical-web-design',
-  'google-analytics-consultancy',
+const deServiceHubSlugMap = new Map<string, string>([
+  // Phase 3d keyword URLs (buyer-qualified; SERP-intent-verified)
+  ['technical-web-design', 'webdesign-agentur'],
+  ['performance-web-development', 'webagentur-deutschland'],
+  ['technical-seo-audit', 'seo-audit-agentur'],
+  ['google-ads-management', 'google-ads-betreuung'],
+  ['local-seo-consulting', 'local-seo-agentur'],
+  ['authority-link-building', 'linkaufbau-agentur'],
+  // Other DE hubs: urlSlug equals serviceSlug (no keyword migration warranted)
+  ['google-ads-audit', 'google-ads-audit'],
+  ['paid-social-strategy', 'paid-social-strategy'],
+  ['content-marketing', 'content-marketing'],
+  ['seo-copywriting', 'seo-copywriting'],
+  ['copywriting-audit', 'copywriting-audit'],
+  ['audience-persona-mapping', 'audience-persona-mapping'],
+  ['google-analytics-consultancy', 'google-analytics-consultancy'],
+]);
+
+/**
+ * CH-DE service hubs — Phase 3d (2026-04-26).
+ * Six greenfield hubs at /ch-de/services/<urlSlug>/, all using <service>-schweiz
+ * keyword pattern (validated against CH SERP buyer-intent in starkrank-v2 briefs).
+ */
+const chDeServiceHubSlugMap = new Map<string, string>([
+  ['technical-web-design', 'webdesign-schweiz'],
+  ['performance-web-development', 'webagentur-schweiz'],
+  ['technical-seo-audit', 'seo-audit-schweiz'],
+  ['google-ads-management', 'google-ads-schweiz'],
+  ['local-seo-consulting', 'lokale-seo-schweiz'],
+  ['authority-link-building', 'linkaufbau-schweiz'],
 ]);
 
 /**
@@ -182,10 +201,18 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
     // EN locale: services live at /en/services/{slug}/
     if (locale === 'en') return `/en${href}`;
 
-    // DE locale: services with a DE hub go to their /services/<slug>/ page.
+    // DE locale: services with a DE hub go to their /services/<urlSlug>/ page.
+    // urlSlug may differ from serviceSlug for Phase 3d keyword-URL migrations.
     // (AISO routes to /aiso-check/ via flatLocaleSlugs — same path for DE + CH-DE.)
-    if (locale === 'de' && deServiceHubs.has(serviceSlug)) {
-      return `/services/${serviceSlug}/`;
+    if (locale === 'de' && deServiceHubSlugMap.has(serviceSlug)) {
+      return `/services/${deServiceHubSlugMap.get(serviceSlug)}/`;
+    }
+
+    // CH-DE locale: services with a CH-DE hub (Phase 3d, 6 services) go to their
+    // /ch-de/services/<urlSlug>/ page. Other CH-DE services fall through to the
+    // city-spoke fallback.
+    if (locale === 'ch-de' && chDeServiceHubSlugMap.has(serviceSlug)) {
+      return `/ch-de/services/${chDeServiceHubSlugMap.get(serviceSlug)}/`;
     }
 
     const flatSlug = getFlatLocaleSlug(serviceSlug, locale);

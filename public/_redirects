@@ -159,6 +159,18 @@
 /services/multi-location-seo/        /en/services/multi-location-seo/            301
 /services/multi-location-seo         /en/services/multi-location-seo/            301
 
+# ─── Phase 3d (2026-04-26): DE service hub keyword-URL migration ──
+# Bare/internal slugs replaced with buyer-qualified keyword slugs based on
+# DataForSEO + per-locale SERP intent verification. See feedback_serp_intent_locale_verification
+# memory + clients/starkrank/research/2026-04-26-de-* files.
+# Each redirect lands on the same hub content at its new URL. CH-DE side
+# is greenfield (no /ch-de/services/<old-slug>/ URLs ever shipped to prod).
+/services/technical-web-design/      /services/webdesign-agentur/                301
+/services/technical-seo-audit/       /services/seo-audit-agentur/                301
+/services/google-ads-management/     /services/google-ads-betreuung/             301
+/services/local-seo-consulting/      /services/local-seo-agentur/                301
+/services/authority-link-building/   /services/linkaufbau-agentur/               301
+
 # ─── Pre-Phase-2b legacy redirects (kept + updated) ───────────────
 /schweiz/                            /ch-de/                                     301
 /deutschland/                        /                                           301
