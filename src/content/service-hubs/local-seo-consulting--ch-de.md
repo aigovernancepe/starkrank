@@ -29,7 +29,7 @@ faq:
   - question: "Welche Schweizer Verzeichnisse sind essenziell?"
     answer: "Tier 0: Google Business Profile. Tier 1: local.ch und search.ch (CH-spezifisch). Tier 2: moneyhouse, Schweizer Wirtschaftsregister, Bing Places. Tier 3: Branchen-Verzeichnisse je Vertikale (Anwaltsregister, Treuhänderkammer, Handelskammer beider Basel). Apple Business Connect nur bei Storefront — NIE für reine SAB."
   - question: "Was kostet lokale SEO in der Schweiz pro Monat?"
-    answer: "Drei Tarif-Bänder: Einzelstandort-KMU 990-1'500 CHF/Monat; Mittelstand mit Mehrstandort 2'500-4'000 CHF/Monat; Multi-Location-Enterprise individuell. Bei reinem Setup plus Citation-Build 2'500-4'500 CHF Einmalkosten. Vollständige Bänder unter [/ch-de/preise/seo/](/ch-de/preise/seo/)."
+    answer: "Lokale SEO läuft im Rahmen der publizierten Retainer-Bänder unter [/ch-de/preise/seo/](/ch-de/preise/seo/) — Einzelunternehmen und KMU ab 1'190 CHF/Monat, Mittelstand mit Mehrstandort 3'000-5'000 CHF/Monat, Multi-Location-Enterprise ab 6'000 CHF/Monat. Einmal-Setup plus Citation-Build separat ab 2'500 CHF, je nach Standort-Anzahl."
   - question: "Wie unterscheidet sich Local SEO für Service-Area-Businesses?"
     answer: "SAB (mobile Dienstleister, Coaches, B2B-Berater) verbergen die Adresse im GBP-Profil und definieren Service-Areas. Apple Business Connect ist NICHT geeignet (Storefront-only); Citations laufen über Tier-1-Aggregatoren statt Walk-In-Verzeichnisse; Reviews entscheiden stärker als bei Storefronts."
   - question: "Was ist NAP-Konsistenz und warum ist sie in der Schweiz besonders kritisch?"
@@ -55,14 +55,14 @@ Plus: **Bing Places** (zweitstärkste Suchmaschine in der Schweiz, oft untersch�
 
 ## Was kostet lokale SEO in der Schweiz pro Monat?
 
-Drei Tarif-Bänder publiziert unter [/ch-de/preise/seo/](/ch-de/preise/seo/), differenziert nach Anzahl Standorte:
+Lokale SEO läuft im Rahmen der publizierten Retainer-Bänder unter [/ch-de/preise/seo/](/ch-de/preise/seo/), gestaffelt nach Mandats-Grösse:
 
 | Mandat | Umfang | Preis |
 |--------|--------|-------|
-| Einzelstandort-Setup + 90 Tage Begleitung | 1 Standort, GBP-Aufsetzen, Tier-0-bis-Tier-2-Citations | 2'500-3'500 CHF einmalig |
-| Einzelstandort-Retainer | laufende GBP-Pflege, Q&A, Review-Response, Citation-Refresh | 990-1'500 CHF/Monat |
-| Multi-Standort-Retainer | 2-10 Standorte, koordiniertes Citation-Management | 2'500-4'000 CHF/Monat |
-| Multi-Location-Enterprise | 10+ Standorte oder Franchise | individuell |
+| Einzelstandort-Setup + 90 Tage Begleitung | 1 Standort, GBP-Aufsetzen, Tier-0-bis-Tier-2-Citations | ab 2'500 CHF einmalig |
+| KMU-Retainer | Einzelunternehmen und KMU mit 1-2 Standorten | ab 1'190 CHF/Monat |
+| Mittelstand-Retainer | 2-10 Standorte, koordiniertes Citation-Management | 3'000-5'000 CHF/Monat |
+| Enterprise / Multi-Location | 10+ Standorte oder Franchise | ab 6'000 CHF/Monat |
 
 Festpreis nach Discovery, keine T&M-Schätzung. Kostenlose Erstberatung klärt den passenden Scope.
 

@@ -3,7 +3,7 @@ serviceSlug: "technical-web-design"
 urlSlug: "webdesign-schweiz"
 locale: "ch-de"
 title: "Webdesign Schweiz"
-description: "Webdesign für Deutschschweizer KMU: Schweizer Hosting, revDSG-konform, Core Web Vitals als Standard. Astro SSG, Cloudflare Edge Zürich. Erstberatung gratis."
+description: "Webdesign für Deutschschweizer KMU: Schweizer Hosting, revDSG-konform, Core Web Vitals. Astro SSG, Cloudflare Edge Zürich. Kostenlose Erstberatung."
 heroLede: "Webdesign Schweiz bei StarkRank ist Webdesign mit Schweizer Datenresidenz, revDSG-konformer Datenverarbeitung und CHF-Verträgen ohne Wechselkursrisiko. Wir bauen für Deutschschweizer KMU in Basel, Zürich und Bern Webseiten auf modernem Astro-Jamstack — Core Web Vitals, Schema-Tiefe und KI-Crawler-Zugang als Standard, nicht als Premium-Add-on."
 processTotalTime: "PT56D"
 processSteps:

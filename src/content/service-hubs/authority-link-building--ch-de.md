@@ -3,7 +3,7 @@ serviceSlug: "authority-link-building"
 urlSlug: "linkaufbau-schweiz"
 locale: "ch-de"
 title: "Linkaufbau Schweiz"
-description: "Strategischer Linkaufbau für Schweizer Mittelstand: thematische Relevanz, E-E-A-T, Schweizer Kontext-Domains. Keine Link-Pakete. Erstberatung gratis."
+description: "Strategischer Linkaufbau für Schweizer Mittelstand: thematische Relevanz, E-E-A-T, Schweizer Kontext-Domains. Keine Link-Pakete. Kostenlose Erstberatung."
 heroLede: "Linkaufbau Schweiz bei StarkRank ist die strategische Akquise externer Verlinkungen aus thematisch relevanten Schweizer und DACH-Quell-Domains — Backlinks, die Suchmaschinen und LLMs als Vertrauenssignale interpretieren. Keine PBN-Pakete, keine Link-Marktplätze, keine 'garantierte DR-Steigerung in 30 Tagen'. Pure Link-Qualität plus E-E-A-T-Verzahnung."
 processTotalTime: "PT90D"
 processSteps:

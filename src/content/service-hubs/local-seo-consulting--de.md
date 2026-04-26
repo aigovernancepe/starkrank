@@ -3,7 +3,7 @@ serviceSlug: "local-seo-consulting"
 urlSlug: "local-seo-agentur"
 locale: "de"
 title: "Local-SEO-Agentur"
-description: "Local-SEO-Agentur für deutschen Mittelstand: Google Business Profile, Citations über deutsche Verzeichnisse (gelbeseiten.de, Das Örtliche, IHK), DSGVO-konform. Erstberatung."
+description: "Local-SEO-Agentur für deutschen Mittelstand: Google Business Profile, NAP-Konsistenz, deutsche Verzeichnisse, DSGVO-Tracking. Lieferung Norddeutschland."
 heroLede: "Local-SEO-Agentur StarkRank optimiert deutsche Mittelständler mit echter Standort-Präsenz für regionale Suchanfragen — Google Business Profile, NAP-Konsistenz über deutsche Verzeichnisse (gelbeseiten.de, Das Örtliche, IHK-Verzeichnisse, branchenspezifische Listings) und standort-spezifische Landingpages mit LocalBusiness-Schema. Lieferung Hannover, Bremen und Hamburg — keine 'deutschlandweite Coverage'-Behauptung."
 processTotalTime: "PT21D"
 processSteps:
@@ -20,7 +20,7 @@ processSteps:
     tools:
       - "Apple Business Connect"
       - "Bing Places"
-      - "DACH-Directories (local.ch, search.ch, Gelbe Seiten, Das Örtliche)"
+      - "Deutsche Directories (gelbeseiten.de, Das Örtliche, 11880.com, Cylex, IHK-Verzeichnisse)"
   - name: "Review-Velocity-Programm"
     description: "Aufsetzen einer strukturierten Review-Collection (nicht generische Kundenbitten), Response-SLA für positive und negative Reviews, Monitoring auf GBP und branchenrelevanten Plattformen, Frequency-Rhythmus gegen den Top-Wettbewerber im Einzugsgebiet."
   - name: "Lokale Landingpages und Schema"
@@ -38,7 +38,7 @@ faq:
 
 ## Was ist lokale SEO-Beratung?
 
-Lokale SEO-Beratung ist die Optimierung Ihrer digitalen Präsenz für Suchanfragen mit lokaler Intention — also Suchanfragen, die eine Stadt, einen Stadtteil oder ein in-der-Nähe enthalten, oder solche, bei denen Google aus Nutzersignalen lokale Intention schließt. Typische Beispiele: Steuerberater Hamburg, Physiotherapie Zürich, Marketing-Agentur in der Nähe. Für diese Anfragen kuratiert Google einen separaten Ergebnis-Block (den Local Pack mit Maps-Integration) plus die klassischen organischen Treffer darunter.
+Lokale SEO-Beratung ist die Optimierung Ihrer digitalen Präsenz für Suchanfragen mit lokaler Intention — also Suchanfragen, die eine Stadt, einen Stadtteil oder ein in-der-Nähe enthalten, oder solche, bei denen Google aus Nutzersignalen lokale Intention schließt. Typische Beispiele: Steuerberater Hannover, Physiotherapie Bremen, Marketing-Agentur in der Nähe. Für diese Anfragen kuratiert Google einen separaten Ergebnis-Block (den Local Pack mit Maps-Integration) plus die klassischen organischen Treffer darunter.
 
 Die Hebel sind andere als bei generischem SEO. Entscheidend sind Google Business Profile-Completeness, Proximity zum Sucher, NAP-Konsistenz (Name / Address / Phone) über die wichtigsten Verzeichnisse, Review-Velocity (nicht nur Gesamtanzahl, sondern wie viele Bewertungen in den letzten 90 Tagen kamen), lokale Citations und standort-spezifische Landingpages mit sauberem LocalBusiness-Schema. On-Site-SEO im klassischen Sinn trägt bei — aber wer den GBP-Teil vernachlässigt, verliert den Local Pack, und der Local Pack trägt in vielen Branchen den Großteil der lokalen Klicks.
 
@@ -47,7 +47,7 @@ Die Hebel sind andere als bei generischem SEO. Entscheidend sind Google Business
 Die Beratung deckt sechs operative Bereiche ab:
 
 - **Google Business Profile** — Completeness-Check, Kategorien-Strategie (Primary plus Additional), Services-/Products-Listen, Q&A-Pflege, Attributes, GBP-Posts-Rhythmus, Photo-Upload-Strategie, Messaging-Aktivierung, Review-Response-SLA
-- **Citation- und NAP-Konsistenz** — Identifikation der Tier-0 bis Tier-3 Citations für DACH (Google, Apple, Bing, Aggregators, DACH-Directories wie local.ch, search.ch, Gelbe Seiten, Das Örtliche), Bereinigung und Aufbau
+- **Citation- und NAP-Konsistenz** — Identifikation der Tier-0 bis Tier-3 Citations (Google, Apple, Bing, Aggregators, deutsche Verzeichnisse wie gelbeseiten.de, Das Örtliche, 11880.com, Cylex, IHK-Verzeichnisse je Region), Bereinigung und Aufbau
 - **Lokale Landingpages** — pro Standort eine saubere Seite mit LocalBusiness-Schema, standort-spezifischem Content (50% unique pro Standort, keine Stadt-Find-Replace-Kopien), hreflang bei Mehrsprachigkeit
 - **Review-Management** — strukturiertes Review-Collection-Programm, Response-SLA-Rahmen, Monitoring auf GBP und branchenrelevanten Plattformen, Benchmark gegen Top-Wettbewerber im Einzugsgebiet
 - **Lokale Content-Strategie** — Themen mit lokalem Bezug (Stadtteil-spezifische Beiträge, lokale Events, regionale Fallstudien), die Autoritäts-Signale für das Einzugsgebiet bauen
@@ -91,7 +91,7 @@ Den passenden Scope klären wir in der [kostenlosen Erstberatung](/kontakt/). Al
 Lokale SEO-Beratung lohnt sich typischerweise für:
 
 - **Dienstleister mit Standort und Einzugsgebiet** — Praxen, Beratungsbüros, Werkstätten, Kanzleien, Maklerbüros, Restaurants, Hotels
-- **B2B-Dienstleister mit Regional-Fokus** — wo Steuerberatung Zürich oder IT-Dienstleister Bremen das relevante Suchverhalten abbildet
+- **B2B-Dienstleister mit Regional-Fokus** — wo Steuerberatung Hannover oder IT-Dienstleister Bremen das relevante Suchverhalten abbildet
 - **Unternehmen nach Standort-Eröffnung oder Umzug** — wo GBP-Aktualisierung, NAP-Konsistenz und Citation-Migration koordiniert werden müssen
 - **Ketten mit zwei bis zehn Standorten** — wo Multi-Location-Koordination und Standort-spezifische Landingpages zusammen entwickelt werden
 - **Unternehmen nach einem GBP-Suspension oder -Problem** — wo das Profil wiederhergestellt und strukturell gegen zukünftige Probleme abgesichert werden muss

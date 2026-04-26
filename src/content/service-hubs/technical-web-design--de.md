@@ -3,7 +3,7 @@ serviceSlug: "technical-web-design"
 urlSlug: "webdesign-agentur"
 locale: "de"
 title: "Technisches Webdesign"
-description: "Technisches Webdesign für deutschen B2B-Mittelstand: DSGVO-konform, IHK-tauglich, Cloudflare Frankfurt-Edge. Astro SSG, Schema-Tiefe, AI-Crawler-Zugang. Erstberatung gratis."
+description: "Technisches Webdesign für deutschen B2B-Mittelstand: DSGVO-konform, IHK-tauglich, Cloudflare Frankfurt-Edge. Astro SSG, Schema-Tiefe, AI-Crawler-Zugang."
 heroLede: "Technisches Webdesign bei StarkRank ist Webdesign für deutschen B2B-Mittelstand mit DSGVO-konformer Datenverarbeitung, AVV-Pflicht-Disziplin und Cloudflare-Frankfurt-Edge (europe-west3) für EU-Datenresidenz. Wir bauen für IHK-Mittelständler in Hannover, Bremen und Hamburg Webseiten auf modernem Astro-Jamstack — Core Web Vitals, Schema-Tiefe und KI-Crawler-Zugang als Standard, nicht als Premium-Add-on."
 processTotalTime: "PT60D"
 processSteps:

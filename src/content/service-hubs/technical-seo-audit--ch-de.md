@@ -3,7 +3,7 @@ serviceSlug: "technical-seo-audit"
 urlSlug: "seo-audit-schweiz"
 locale: "ch-de"
 title: "SEO Audit Schweiz"
-description: "Technischer SEO-Audit für Schweizer KMU: 150+ Kriterien, revDSG-Check, AI-Crawler-Zugang, priorisierte Roadmap. Ab 990 CHF. Erstberatung gratis."
+description: "Technischer SEO-Audit für Schweizer KMU: 150+ Kriterien, revDSG-Check, AI-Crawler-Zugang, priorisierte Roadmap. Ab 990 CHF. Kostenlose Erstberatung."
 heroLede: "SEO Audit Schweiz bei StarkRank ist die systematische Diagnose der Crawl-, Indexierungs- und Rendering-Probleme einer Website — mit revDSG-Konformitäts-Check und Schweizer-Hosting-Empfehlung als CH-spezifische Schicht. Sie erhalten eine priorisierte Roadmap nach Schweregrad sortiert, kein 300-Zeilen-Report zum Ausdrucken."
 processTotalTime: "PT10D"
 processSteps:

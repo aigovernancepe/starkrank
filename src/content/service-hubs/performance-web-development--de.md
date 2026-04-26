@@ -3,7 +3,7 @@ serviceSlug: "performance-web-development"
 urlSlug: "webagentur-deutschland"
 locale: "de"
 title: "Webagentur Deutschland"
-description: "Webagentur für deutschen B2B-Mittelstand: Performance-First-Webentwicklung, DSGVO-konform, IHK-tauglich. Lieferung Hannover/Bremen/Hamburg. Ab 1.500 €."
+description: "Webagentur für deutschen B2B-Mittelstand: Performance-First-Webentwicklung, DSGVO-konform, IHK-tauglich. Lieferung Hannover/Bremen/Hamburg. Ab 990 €/Monat."
 heroLede: "Webagentur Deutschland bei StarkRank ist Performance-First-Webentwicklung für deutschen B2B-Mittelstand mit DSGVO-konformer Datenverarbeitung, IHK-tauglicher Compliance-Tiefe und Cloudflare-Frankfurt-Edge (europe-west3) für EU-Datenresidenz. Wir bauen für IHK-Mittelständler in Hannover, Bremen und Hamburg Webseiten und B2B-Portale auf modernem Astro-Jamstack — keine 'deutschlandweite Coverage'-Behauptung ohne Lieferung dahinter."
 processTotalTime: "PT60D"
 processSteps:

@@ -67,7 +67,7 @@ Der [kostenlose Google-Ads-Check](/ch-de/kostenloser-google-ads-check/) identifi
 Vier harte Differenzierungs-Achsen:
 
 - **Tracking in europe-west6** — Google Tag Manager Server-Side mit Schweizer Edge erfüllt die revDSG-Datenresidenz-Erwartung für Berufsgeheimnis-relevante Branchen
-- **revDSG-Consent-Mode-Setup** — eine Schweizer Agentur kennt den Unterschied zwischen DSGVO- und revDSG-Anforderungen an die Cookie-Banner-Logik (TTDSG vs nDSG vs revDSG)
+- **revDSG-Consent-Mode-Setup** — eine Schweizer Agentur kennt den Unterschied zwischen DSGVO- und revDSG-Anforderungen an die Cookie-Banner-Logik (TTDSG für DE vs revDSG für CH)
 - **Schweizer Branchen-CPC-Wissen** — wir kennen die typischen CHF-CPCs in Schweizer Treuhand, Anwalt, Handwerk, Coaching; ein DE-Anbieter verallgemeinert oft EUR-Daten 1:1
 - **CHF-Verträge ohne Wechselkursrisiko** — über 12-Monats-Mandate produzieren EUR-Verträge regelmässig 5-15 Prozent versteckte Kosten durch CHF/EUR-Schwankung
 
