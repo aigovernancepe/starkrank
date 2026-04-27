@@ -2,7 +2,7 @@
 citySlug: "basel"
 locale: "ch-de"
 title: "SEO & Online Marketing Agentur in Basel"
-description: "Datengetriebene SEO- und Online-Marketing-Agentur für Basler Unternehmen — Webdesign, Webagentur, Lokale SEO, Google Ads. Trinational, revDSG-konform, kostenlose Erstberatung."
+description: "SEO- und Marketing-Agentur für Basler Unternehmen — Webdesign, Webagentur, Lokale SEO, Google Ads. Trinational, revDSG-konform. Kostenlose Erstberatung."
 heroHeadline: "SEO & Online Marketing **Agentur in Basel**"
 heroLede: "Datengetriebene digitale Sichtbarkeit für Basler Pharma- und Life-Sciences-Unternehmen, Logistik- und Speditions-Anbieter sowie den trinationalen Mittelstand — von Webdesign über Webagentur bis Google Ads."
 servicesTitle: "Dienstleistungen"

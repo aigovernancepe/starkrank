@@ -128,7 +128,7 @@ const cityHubs = defineCollection({
     citySlug: z.string(),
     locale: z.enum(['de', 'ch-de']),
     title: z.string(),
-    description: z.string(),
+    description: metaDescription,
     heroHeadline: z.string(),
     heroLede: z.string(),
     sectorsTitle: z.string().optional(),

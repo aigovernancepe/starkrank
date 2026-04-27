@@ -2,7 +2,7 @@
 citySlug: "zuerich"
 locale: "ch-de"
 title: "SEO & Online Marketing Agentur in Zürich"
-description: "Datengetriebene SEO- und Online-Marketing-Agentur für Zürcher Unternehmen — Webagentur, Webdesign, Lokale SEO, Google Ads. Für Finanz, Versicherung, Tech und Beratung. revDSG-konform."
+description: "SEO- und Marketing-Agentur für Zürcher Unternehmen — Webagentur, Webdesign, Lokale SEO, Google Ads. Finanz, Versicherung, Tech, Beratung. revDSG-konform."
 heroHeadline: "SEO & Online Marketing **Agentur in Zürich**"
 heroLede: "Datengetriebene digitale Sichtbarkeit für den Zürcher Finanzplatz, den Tech- und Versicherungs-Cluster sowie spezialisierte Beratungsdienstleister — von Webagentur über Webdesign bis Google Ads."
 servicesTitle: "Dienstleistungen"
