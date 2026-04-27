@@ -7,6 +7,13 @@ const faqItem = z.object({
   answer: z.string(),
 });
 
+// SERP meta-description budget. Google truncates DE/CH-DE descriptions around
+// 155 chars on most viewports. Caught 5 over-length hubs in the Phase 3d audit
+// post-write — this lint surfaces them at build-time instead.
+const metaDescription = z
+  .string()
+  .max(155, { message: 'description must be ≤155 chars (SERP meta budget)' });
+
 const services = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/services' }),
   schema: z.object({
@@ -77,7 +84,7 @@ const serviceHubs = defineCollection({
     urlSlug: z.string().optional(),
     locale: z.enum(['de', 'ch-de']),
     title: z.string().optional(),
-    description: z.string(),
+    description: metaDescription,
     heroLede: z.string().optional(),
     faq: z.array(faqItem).optional(),
     updatedDate: z.coerce.date().optional(),
