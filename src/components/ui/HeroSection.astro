@@ -3,6 +3,8 @@ interface Props {
   headline: string;
   /** Words wrapped in ** will render in Blue Light as accent. e.g. "Growth for the **AI Era**" */
   subheadline?: string;
+  /** Optional eyebrow rendered above the H1 (small caps, blue accent). */
+  eyebrow?: string;
   align?: 'left' | 'center';
   /** Optional background image URL for city spoke pages. Navy overlay is applied automatically. */
   backgroundImage?: string;
@@ -10,7 +12,7 @@ interface Props {
   backgroundImageAlt?: string;
 }
 
-const { headline, subheadline, align = 'center', backgroundImage, backgroundImageAlt } = Astro.props;
+const { headline, subheadline, eyebrow, align = 'center', backgroundImage, backgroundImageAlt } = Astro.props;
 const alignClass = align === 'center' ? 'text-center items-center' : 'text-left items-start';
 
 // Parse **accent** markers into spans
@@ -35,6 +37,11 @@ function renderHeadline(text: string): string {
   )}
 
   <div class:list={['relative max-w-7xl mx-auto px-6 flex flex-col', alignClass]}>
+    {eyebrow && (
+      <span class="text-xs md:text-sm font-label font-semibold uppercase tracking-[0.2em] text-blue-light mb-4 block">
+        {eyebrow}
+      </span>
+    )}
     <h1
       class="text-4xl md:text-5xl lg:text-6xl font-headline font-black tracking-tight text-white max-w-4xl"
       set:html={renderHeadline(headline)}
