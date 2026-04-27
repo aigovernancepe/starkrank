@@ -2,7 +2,7 @@
 serviceSlug: "audience-persona-mapping"
 locale: "de"
 title: "Zielgruppen- und Persona-Analyse"
-description: "Zielgruppen- und Persona-Analyse: First-Party-Daten, Sales-Input, Search-Intent in funktionalen Personas zusammenführen — umsetzbar, nicht dekorativ. Erstberatung."
+description: "Zielgruppen- und Persona-Analyse: First-Party-Daten, Sales-Input, Search-Intent in funktionalen Personas zusammenführen. Umsetzbar, nicht dekorativ."
 heroLede: "Personas, die in einer Marketing-Präsentation überleben, aber im Campaign-Setup verschwinden, sind keine Arbeitsgrundlage — sie sind Dekoration. StarkRank baut Personas aus First-Party-Daten, Sales-Gesprächen und Search-Intent-Signalen zusammen, sodass sie Ad-Targeting, Landingpage-Varianten, Content-Briefs und CRM-Segmentierung direkt füttern."
 processTotalTime: "PT21D"
 processSteps:

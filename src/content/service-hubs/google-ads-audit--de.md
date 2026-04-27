@@ -2,7 +2,7 @@
 serviceSlug: "google-ads-audit"
 locale: "de"
 title: "Google Ads Audit"
-description: "Google Ads Audit: versteckte Verschwendung finden, Struktur entschlacken, Conversion-Pfad schärfen. Priorisierte Fix-Liste für Ihr Team. Erstberatung anfordern."
+description: "Google Ads Audit: versteckte Verschwendung finden, Struktur entschlacken, Conversion-Pfad schärfen. Priorisierte Fix-Liste. Erstberatung anfordern."
 heroLede: "Ein Google Ads Audit prüft Ihre bezahlte Suchstruktur auf die drei klassischen Probleme, die fast jedes Konto hat: vergeudetes Budget auf nicht-konvertierenden Suchanfragen, strukturelle Ineffizienz durch zu breite Kampagnen und ein schwacher Conversion-Pfad zwischen Klick und Abschluss. StarkRank liefert Befunde mit Umsatz- und Budget-Auswirkung pro Finding, nicht nur eine Checkliste."
 processTotalTime: "PT7D"
 processSteps:
