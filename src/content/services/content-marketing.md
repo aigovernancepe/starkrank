@@ -1,7 +1,7 @@
 ---
-title: "Content Marketing"
+title: "Content Marketing Services"
 slug: "content-marketing"
-description: "Strategic content for the AI era. Data-informed content programmes that build topical authority, earn AI citations, and drive organic growth across search."
+description: "Content marketing services for the AI era. Data-informed programmes that build topical authority, earn AI citations, drive organic growth across search."
 pillar: "content-copywriting"
 isPillarHub: true
 updatedDate: 2026-04-07

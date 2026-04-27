@@ -1,7 +1,7 @@
 ---
-title: "Technical Web Design"
+title: "Web Design Agency"
 slug: "technical-web-design"
-description: "SEO-first website design engineered for Core Web Vitals, structured data, and AI readiness. Fast, accessible sites built to rank and convert from day one."
+description: "Web design agency: SEO-first sites engineered for Core Web Vitals, structured data, and AI readiness. Built to rank and convert from day one."
 pillar: "data-web"
 isPillarHub: true
 updatedDate: 2026-04-07
