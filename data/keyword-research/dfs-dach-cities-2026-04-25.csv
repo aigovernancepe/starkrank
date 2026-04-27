@@ -1,0 +1,139 @@
+city,service_slug,keyword,search_volume,competition,competition_index,cpc_eur,low_top_of_page_bid,high_top_of_page_bid,monthly_searches_avg_12m
+bremen,ai-search-optimization,KI Suchoptimierung Bremen,,,,,,,
+bremen,ai-search-optimization,AI SEO Bremen,,,,,,,
+bremen,ai-search-optimization,ChatGPT SEO Bremen,,,,,,,
+bremen,technical-seo-audit,Technisches SEO Audit Bremen,,,,,,,
+bremen,technical-seo-audit,SEO Audit Bremen,,,,,,,
+bremen,technical-seo-audit,SEO Check Bremen,,,,,,,
+bremen,local-seo-consulting,Lokale SEO Bremen,,,,,,,
+bremen,local-seo-consulting,Local SEO Bremen,70,LOW,17,6.02,3.08,4.25,61.67
+bremen,local-seo-consulting,SEO Berater Bremen,,,,,,,
+bremen,performance-ads-management,Performance Marketing Bremen,10,,,,,,8.33
+bremen,performance-ads-management,Performance Ads Bremen,,,,,,,
+bremen,google-ads-management,Google Ads Bremen,30,LOW,11,,10.65,33.95,29.17
+bremen,google-ads-management,Google Ads Agentur Bremen,50,LOW,26,40.37,10.87,37.19,50
+bremen,google-ads-management,AdWords Bremen,10,LOW,0,,,,10
+bremen,google-ads-audit,Google Ads Audit Bremen,,,,,,,
+bremen,google-ads-audit,Google Ads Check Bremen,,,,,,,
+bremen,paid-social-strategy,Paid Social Bremen,,,,,,,
+bremen,paid-social-strategy,LinkedIn Ads Bremen,,,,,,,
+bremen,paid-social-strategy,Meta Ads Bremen,,,,,,,
+bremen,digital-pr-strategy,Digital PR Bremen,,,,,,,
+bremen,digital-pr-strategy,PR Agentur Bremen,40,MEDIUM,49,2.64,1.52,4.51,40
+bremen,reactive-pr,Reaktive PR Bremen,,,,,,,
+bremen,authority-link-building,Linkaufbau Bremen,,,,,,,
+bremen,authority-link-building,Backlinks Bremen,,,,,,,
+bremen,authority-link-building,Link Building Bremen,,,,,,,
+bremen,content-marketing,Content Marketing Bremen,10,LOW,0,,,,7.5
+bremen,content-marketing,Content Agentur Bremen,10,HIGH,68,9.26,,,6.67
+bremen,seo-copywriting,SEO Texte Bremen,10,LOW,0,,,,1.67
+bremen,seo-copywriting,SEO Texter Bremen,,,,,,,
+bremen,copywriting-audit,Text Audit Bremen,,,,,,,
+bremen,copywriting-audit,Content Audit Bremen,,,,,,,
+bremen,audience-persona-mapping,Zielgruppenanalyse Bremen,,,,,,,
+bremen,audience-persona-mapping,Persona Analyse Bremen,,,,,,,
+bremen,technical-web-design,Webdesign Bremen,480,LOW,29,12.04,3.57,9.79,439.17
+bremen,technical-web-design,Webdesign Agentur Bremen,70,MEDIUM,37,17.13,5.21,91.17,61.67
+bremen,google-analytics-consultancy,Google Analytics Bremen,,,,,,,
+bremen,google-analytics-consultancy,GA4 Beratung Bremen,,,,,,,
+bremen,performance-web-development,Webentwicklung Bremen,50,LOW,11,9.43,1.51,10.35,50.83
+bremen,performance-web-development,Webagentur Bremen,880,MEDIUM,41,15.4,2.3,80.6,955.83
+bremen,roi-reporting-transparency,Marketing Reporting Bremen,,,,,,,
+bremen,__generic__,SEO Agentur Bremen,320,LOW,15,10.16,3.82,11.63,360
+bremen,__generic__,SEO Beratung Bremen,20,LOW,1,,,,17.5
+bremen,__generic__,Online Marketing Bremen,170,LOW,10,18.41,1.39,8,158.33
+bremen,__generic__,Online Marketing Agentur Bremen,50,LOW,20,,3.07,66.77,57.5
+bremen,__generic__,Digitalagentur Bremen,20,LOW,11,,,,19.17
+bremen,__generic__,Marketing Agentur Bremen,320,LOW,33,7.53,2.49,82.89,286.67
+hannover,ai-search-optimization,KI Suchoptimierung Hannover,,,,,,,
+hannover,ai-search-optimization,AI SEO Hannover,,,,,,,
+hannover,ai-search-optimization,ChatGPT SEO Hannover,,,,,,,
+hannover,technical-seo-audit,Technisches SEO Audit Hannover,,,,,,,
+hannover,technical-seo-audit,SEO Audit Hannover,,,,,,,
+hannover,technical-seo-audit,SEO Check Hannover,,,,,,,
+hannover,local-seo-consulting,Lokale SEO Hannover,,,,,,,
+hannover,local-seo-consulting,Local SEO Hannover,30,LOW,4,,,,29.17
+hannover,local-seo-consulting,SEO Berater Hannover,,,,,,,
+hannover,performance-ads-management,Performance Marketing Hannover,10,HIGH,73,3.06,1.42,15.68,9.17
+hannover,performance-ads-management,Performance Ads Hannover,,,,,,,
+hannover,google-ads-management,Google Ads Hannover,50,LOW,8,,8.36,27.69,53.33
+hannover,google-ads-management,Google Ads Agentur Hannover,40,LOW,15,,7.25,34.53,42.5
+hannover,google-ads-management,AdWords Hannover,10,LOW,0,,,,10.83
+hannover,google-ads-audit,Google Ads Audit Hannover,,,,,,,
+hannover,google-ads-audit,Google Ads Check Hannover,,,,,,,
+hannover,paid-social-strategy,Paid Social Hannover,,,,,,,
+hannover,paid-social-strategy,LinkedIn Ads Hannover,,,,,,,
+hannover,paid-social-strategy,Meta Ads Hannover,,,,,,,
+hannover,digital-pr-strategy,Digital PR Hannover,,,,,,,
+hannover,digital-pr-strategy,PR Agentur Hannover,70,MEDIUM,65,2.43,1.19,2.19,67.5
+hannover,reactive-pr,Reaktive PR Hannover,,,,,,,
+hannover,authority-link-building,Linkaufbau Hannover,,,,,,,
+hannover,authority-link-building,Backlinks Hannover,,,,,,,
+hannover,authority-link-building,Link Building Hannover,,,,,,,
+hannover,content-marketing,Content Marketing Hannover,30,LOW,3,22.46,,,34.17
+hannover,content-marketing,Content Agentur Hannover,10,LOW,0,,,,7.5
+hannover,seo-copywriting,SEO Texte Hannover,,,,,,,
+hannover,seo-copywriting,SEO Texter Hannover,,,,,,,
+hannover,copywriting-audit,Text Audit Hannover,,,,,,,
+hannover,copywriting-audit,Content Audit Hannover,,,,,,,
+hannover,audience-persona-mapping,Zielgruppenanalyse Hannover,,,,,,,
+hannover,audience-persona-mapping,Persona Analyse Hannover,,,,,,,
+hannover,technical-web-design,Webdesign Hannover,1000,LOW,26,8.97,2.82,11.56,1003.33
+hannover,technical-web-design,Webdesign Agentur Hannover,140,LOW,26,9.07,2.89,11.52,138.33
+hannover,google-analytics-consultancy,Google Analytics Hannover,,,,,,,
+hannover,google-analytics-consultancy,GA4 Beratung Hannover,,,,,,,
+hannover,performance-web-development,Webentwicklung Hannover,140,LOW,12,15.72,2.68,11.61,129.17
+hannover,performance-web-development,Webagentur Hannover,1000,MEDIUM,42,3.68,1.19,3.65,1036.67
+hannover,roi-reporting-transparency,Marketing Reporting Hannover,,,,,,,
+hannover,__generic__,SEO Agentur Hannover,480,LOW,7,9.01,2.96,12.01,483.33
+hannover,__generic__,SEO Beratung Hannover,,,,,,,
+hannover,__generic__,Online Marketing Hannover,140,LOW,19,9.03,2.77,7,149.17
+hannover,__generic__,Online Marketing Agentur Hannover,110,LOW,6,4.3,2.53,4.22,112.5
+hannover,__generic__,Digitalagentur Hannover,70,LOW,17,4.48,1.3,2.68,72.5
+hannover,__generic__,Marketing Agentur Hannover,260,MEDIUM,39,3.11,1.41,3.83,253.33
+hamburg,ai-search-optimization,KI Suchoptimierung Hamburg,,,,,,,
+hamburg,ai-search-optimization,AI SEO Hamburg,,,,,,,
+hamburg,ai-search-optimization,ChatGPT SEO Hamburg,,,,,,,
+hamburg,technical-seo-audit,Technisches SEO Audit Hamburg,,,,,,,
+hamburg,technical-seo-audit,SEO Audit Hamburg,10,,,,,,5
+hamburg,technical-seo-audit,SEO Check Hamburg,,,,,,,
+hamburg,local-seo-consulting,Lokale SEO Hamburg,,,,,,,
+hamburg,local-seo-consulting,Local SEO Hamburg,110,LOW,30,6.71,5,38.87,121.67
+hamburg,local-seo-consulting,SEO Berater Hamburg,320,LOW,8,28.96,9.03,33.99,323.33
+hamburg,performance-ads-management,Performance Marketing Hamburg,40,MEDIUM,37,12.34,2.59,9.23,39.17
+hamburg,performance-ads-management,Performance Ads Hamburg,,,,,,,
+hamburg,google-ads-management,Google Ads Hamburg,70,LOW,16,79.88,10.81,32.98,70.83
+hamburg,google-ads-management,Google Ads Agentur Hamburg,140,LOW,16,29,11.64,34.53,141.67
+hamburg,google-ads-management,AdWords Hamburg,10,LOW,12,,,,15.83
+hamburg,google-ads-audit,Google Ads Audit Hamburg,,,,,,,
+hamburg,google-ads-audit,Google Ads Check Hamburg,,,,,,,
+hamburg,paid-social-strategy,Paid Social Hamburg,,,,,,,
+hamburg,paid-social-strategy,LinkedIn Ads Hamburg,10,,,,,,3.33
+hamburg,paid-social-strategy,Meta Ads Hamburg,,,,,,,
+hamburg,digital-pr-strategy,Digital PR Hamburg,,,,,,,
+hamburg,digital-pr-strategy,PR Agentur Hamburg,480,MEDIUM,44,9.06,1.93,11.54,449.17
+hamburg,reactive-pr,Reaktive PR Hamburg,,,,,,,
+hamburg,authority-link-building,Linkaufbau Hamburg,10,,,,,,4.17
+hamburg,authority-link-building,Backlinks Hamburg,,,,,,,
+hamburg,authority-link-building,Link Building Hamburg,,,,,,,
+hamburg,content-marketing,Content Marketing Hamburg,40,LOW,20,,1.4,6.78,37.5
+hamburg,content-marketing,Content Agentur Hamburg,30,LOW,20,4.31,2.16,22.81,27.5
+hamburg,seo-copywriting,SEO Texte Hamburg,30,LOW,18,,,,26.67
+hamburg,seo-copywriting,SEO Texter Hamburg,30,LOW,18,,,,26.67
+hamburg,copywriting-audit,Text Audit Hamburg,,,,,,,
+hamburg,copywriting-audit,Content Audit Hamburg,,,,,,,
+hamburg,audience-persona-mapping,Zielgruppenanalyse Hamburg,,,,,,,
+hamburg,audience-persona-mapping,Persona Analyse Hamburg,,,,,,,
+hamburg,technical-web-design,Webdesign Hamburg,1600,MEDIUM,36,8.3,2.33,7.12,1496.67
+hamburg,technical-web-design,Webdesign Agentur Hamburg,480,LOW,30,19.8,3.04,13.55,465.83
+hamburg,google-analytics-consultancy,Google Analytics Hamburg,10,LOW,0,,,,8.33
+hamburg,google-analytics-consultancy,GA4 Beratung Hamburg,,,,,,,
+hamburg,performance-web-development,Webentwicklung Hamburg,170,LOW,14,12.88,1.59,5.86,156.67
+hamburg,performance-web-development,Webagentur Hamburg,1900,MEDIUM,39,7.32,1.7,8.28,1916.67
+hamburg,roi-reporting-transparency,Marketing Reporting Hamburg,,,,,,,
+hamburg,__generic__,SEO Agentur Hamburg,880,LOW,19,35.69,10.49,29.09,905.83
+hamburg,__generic__,SEO Beratung Hamburg,320,LOW,8,28.96,9.03,33.99,323.33
+hamburg,__generic__,Online Marketing Hamburg,260,LOW,24,8.46,2.61,12.68,255.83
+hamburg,__generic__,Online Marketing Agentur Hamburg,390,LOW,24,22.76,3.26,18.2,376.67
+hamburg,__generic__,Digitalagentur Hamburg,390,MEDIUM,34,9.97,1.86,26.54,365
+hamburg,__generic__,Marketing Agentur Hamburg,880,MEDIUM,35,6.09,1.95,6.45,799.17
