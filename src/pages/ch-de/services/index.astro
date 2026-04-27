@@ -24,25 +24,25 @@ const orphanServices = chDeServiceHubs
   .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
 // CH-DE description lookup order:
-//   1. chDeOverrides (services where DE hub leaks EUR prices, or flat-locale
-//      services without a DE hub at all) — CHF prices, Swiss tone where needed
-//   2. DE service hub (currency-neutral copy shared between DE + CH-DE)
-//   3. EN canonical (final fallback, shouldn't fire in practice)
+//   1. chDeOverrides (escape hatch — flat-locale services without any hub, plus
+//      any case where the hub description still isn't catalog-card appropriate)
+//   2. CH-DE service hub (currency-correct, locale-pure: revDSG, local.ch, CHF)
+//   3. DE service hub (fallback for services that don't have a CH-DE hub yet —
+//      will leak EUR prices and DE regulation framing, so add a CH-DE hub instead)
+//   4. EN canonical (final fallback, shouldn't fire in practice)
 const chDeOverrides: Record<string, string> = {
-  // Flat-locale services (no DE service hub exists) — CH-DE meta descriptions
+  // Flat-locale services (no DE or CH-DE service hub exists) — CH-DE meta descriptions
   'ai-search-optimization': 'ChatGPT und Google AI zitieren Ihre Konkurrenz — aber nicht Sie. Kostenloser AISO-Check in 24 Stunden. 2 Dimensionen geprüft. Unverbindlich.',
   'ecommerce-seo-audit': 'Produktkatalog-SEO ist eine eigene Disziplin. Wir prüfen die 8 Schwachstellen Ihrer PDPs, PLPs und Filternavigation — Lieferung in 7 Tagen.',
   'eeat-audit': 'Echtes E-E-A-T wird gezeigt, nicht behauptet. Wir bewerten Ihre Seite nach einer 40-Punkte-Rubrik mit signal-basierter Remediation. 1\'500 CHF pauschal.',
-  // DE service hubs whose description contains EUR prices — overridden to CHF
-  'technical-seo-audit': 'Technisches SEO-Audit für klassische und KI-Suche. Priorisierte Roadmap für Ihr Team. Ab 990 CHF. Kostenlose Erstberatung anfordern.',
-  // Orphan hubs (not in pillars.ts but Phase 3d shipped CH-DE hubs) — Swiss copy
-  'performance-web-development': 'Schweizer Webagentur für Deutschschweizer KMU: Performance-First-Webentwicklung, Astro SSG, Schweizer Hosting, transparente Retainer ab 1\'190 CHF/Monat.',
 };
 
 function getChDeDescription(slug: string, fallbackEn: string): string {
   if (chDeOverrides[slug]) return chDeOverrides[slug];
-  const hub = deServiceHubs.find((h) => h.data.serviceSlug === slug);
-  if (hub) return hub.data.description;
+  const chDeHub = chDeServiceHubs.find((h) => h.data.serviceSlug === slug);
+  if (chDeHub) return chDeHub.data.description;
+  const deHub = deServiceHubs.find((h) => h.data.serviceSlug === slug);
+  if (deHub) return deHub.data.description;
   return fallbackEn;
 }
 
