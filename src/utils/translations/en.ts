@@ -35,6 +35,9 @@ export const en: Record<string, string> = {
   'footer.privacy': 'Privacy Policy',
   'footer.freeAdsAudit': 'Free Google Ads Audit',
   'footer.copywritingAudit': 'Copywriting Assessment',
+  'footer.locations': 'Locations',
+  'footer.locations.de': 'Germany',
+  'footer.locations.ch': 'Switzerland',
 
   // Services
   'services.title': 'Our Services',

@@ -31,6 +31,9 @@ export const chde: Record<string, string> = {
   'footer.privacy': 'Datenschutzerklärung',
   'footer.freeAdsAudit': 'Kostenloses Google Ads Audit',
   'footer.copywritingAudit': 'Text-Ersteinschätzung',
+  'footer.locations': 'Standorte',
+  'footer.locations.de': 'Deutschland',
+  'footer.locations.ch': 'Schweiz',
 
   'services.title': 'Unsere Dienstleistungen',
   'services.subtitle': 'Ganzheitliches digitales Wachstum, von KI-Suche bis transparentes Reporting.',

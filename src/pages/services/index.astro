@@ -13,6 +13,16 @@ const pillars = getLocalizedPillars('de');
 const allServices = await getCollection('services');
 const deServiceHubs = await getCollection('serviceHubs', (h) => h.data.locale === 'de');
 
+// Orphan hubs: DE service hubs whose serviceSlug isn't in any pillar's services list.
+// Phase 2a retired some EN canonical services from pillars (e.g. performance-web-development),
+// but Phase 3d shipped DE keyword hubs for them (webagentur-deutschland). Surface them
+// under their underlying service's pillar so the catalog mirrors the actual hub footprint.
+const pillarServiceSlugs = new Set(pillars.flatMap((p) => p.services));
+const orphanServices = deServiceHubs
+  .filter((h) => !pillarServiceSlugs.has(h.data.serviceSlug))
+  .map((h) => allServices.find((s) => s.data.slug === h.data.serviceSlug))
+  .filter((s): s is NonNullable<typeof s> => Boolean(s));
+
 // Service-hub frontmatter holds the German description; the canonical service
 // file's description is EN-only. Fall back to a curated map for the 3 flat-
 // locale services that have no service-hub entry (AISO, ecommerce, E-E-A-T).
@@ -28,12 +38,13 @@ function getDeDescription(slug: string, fallbackEn: string): string {
   return flatLocaleDescriptionsDe[slug] ?? fallbackEn;
 }
 
-const servicesByPillar = pillars.map((pillar) => ({
-  pillar,
-  services: pillar.services
+const servicesByPillar = pillars.map((pillar) => {
+  const baseServices = pillar.services
     .map((slug) => allServices.find((s) => s.data.slug === slug))
-    .filter((s): s is NonNullable<typeof s> => Boolean(s)),
-}));
+    .filter((s): s is NonNullable<typeof s> => Boolean(s));
+  const extraServices = orphanServices.filter((s) => s.data.pillar === pillar.id);
+  return { pillar, services: [...baseServices, ...extraServices] };
+});
 ---
 
 <BaseLayout
