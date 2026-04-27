@@ -1,5 +1,5 @@
 ---
-title: "SEO vs. Google Ads: Wo sollten Sie Ihr Budget investieren?"
+title: "SEO vs. Google Ads: Wo Ihr Budget hin sollte"
 description: "SEO wächst über Zeit. Google Ads liefert sofort Leads. Datenbasierter Vergleich mit EUR-Kostenrechnung für den Mittelstand."
 pubDate: 2026-02-24
 updatedDate: 2026-02-24

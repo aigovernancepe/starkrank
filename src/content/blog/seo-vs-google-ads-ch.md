@@ -1,5 +1,5 @@
 ---
-title: "SEO vs. Google Ads: Wo investieren Schweizer KMU?"
+title: "SEO vs. Google Ads für Schweizer KMU?"
 description: "SEO wächst über Zeit. Google Ads liefert sofort. CHF-Kostenvergleich über 12 Monate für Schweizer Unternehmen."
 pubDate: 2026-02-11
 updatedDate: 2026-02-11
