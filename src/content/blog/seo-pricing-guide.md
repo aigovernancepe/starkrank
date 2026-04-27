@@ -1,5 +1,5 @@
 ---
-title: "What Does SEO Cost? The Honest Pricing Guide for 2026"
+title: "What Does SEO Cost? Honest 2026 Pricing Guide"
 description: "SEO costs $1,500-10,000/month for most businesses. Here's what drives the price, what each tier includes, and how to avoid overpaying or underspending."
 pubDate: 2026-02-18
 updatedDate: 2026-02-18
