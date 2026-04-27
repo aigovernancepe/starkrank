@@ -2,7 +2,7 @@
 citySlug: "hamburg"
 locale: "de"
 title: "SEO & Online Marketing Agentur in Hamburg"
-description: "Datengetriebene SEO- und Online-Marketing-Agentur für Hamburger Unternehmen — Webagentur, Webdesign, Lokale SEO, Google Ads, KI-Suchoptimierung. Kostenlose Erstberatung."
+description: "SEO- und Marketing-Agentur für Hamburger Unternehmen — Webagentur, Webdesign, Lokale SEO, Google Ads, KI-Suchoptimierung. Kostenlose Erstberatung."
 heroHeadline: "SEO & Online Marketing **Agentur in Hamburg**"
 heroLede: "Datengetriebene digitale Sichtbarkeit für Hamburger Versandhandel, Verlage, Maritime und Luftfahrt-Cluster — von Webagentur über lokale SEO bis KI-Suchoptimierung."
 servicesTitle: "Dienstleistungen"

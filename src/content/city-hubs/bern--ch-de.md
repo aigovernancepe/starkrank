@@ -2,7 +2,7 @@
 citySlug: "bern"
 locale: "ch-de"
 title: "SEO & Online Marketing Agentur in Bern"
-description: "Datengetriebene SEO- und Online-Marketing-Agentur für Berner Unternehmen — Webdesign, Webagentur, Google Ads. Für Bundesverwaltungs-Umfeld, Versicherung und Mittelstand. revDSG-konform."
+description: "SEO- und Marketing-Agentur für Berner Unternehmen — Webdesign, Webagentur, Google Ads. Bundesverwaltung, Versicherung, Mittelstand. revDSG-konform."
 heroHeadline: "SEO & Online Marketing **Agentur in Bern**"
 heroLede: "Datengetriebene digitale Sichtbarkeit für Berner Unternehmen aus dem Bundesverwaltungs-Umfeld, der Versicherungswirtschaft und dem mittelständischen Industriegürtel — von Webdesign über Webagentur bis Google Ads."
 servicesTitle: "Dienstleistungen"

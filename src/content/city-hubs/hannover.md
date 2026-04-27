@@ -2,7 +2,7 @@
 citySlug: "hannover"
 locale: "de"
 title: "SEO & Online Marketing Agentur in Hannover"
-description: "Datengetriebene SEO- und Online-Marketing-Agentur für Hannoveraner Unternehmen — Webagentur, Webdesign, Lokale SEO, Google Ads, KI-Suchoptimierung. Kostenlose Erstberatung."
+description: "SEO- und Marketing-Agentur für Hannoveraner Unternehmen — Webagentur, Webdesign, Lokale SEO, Google Ads, KI-Suchoptimierung. Kostenlose Erstberatung."
 heroHeadline: "SEO & Online Marketing **Agentur in Hannover**"
 heroLede: "Datengetriebene digitale Sichtbarkeit für Hannoveraner Mittelstand, Maschinenbau, IT-Dienstleister und Messe-affines B2B — von Webagentur über lokale SEO bis KI-Suchoptimierung."
 servicesTitle: "Dienstleistungen"
