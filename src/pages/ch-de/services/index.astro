@@ -12,6 +12,16 @@ import { t } from '../../../utils/i18n';
 const pillars = getLocalizedPillars('ch-de');
 const allServices = await getCollection('services');
 const deServiceHubs = await getCollection('serviceHubs', (h) => h.data.locale === 'de');
+const chDeServiceHubs = await getCollection('serviceHubs', (h) => h.data.locale === 'ch-de');
+
+// Orphan hubs: CH-DE service hubs whose serviceSlug isn't in any pillar's services list.
+// Surface them under their underlying service's pillar so the catalog mirrors the actual
+// hub footprint (e.g. webagentur-schweiz under data-web).
+const pillarServiceSlugs = new Set(pillars.flatMap((p) => p.services));
+const orphanServices = chDeServiceHubs
+  .filter((h) => !pillarServiceSlugs.has(h.data.serviceSlug))
+  .map((h) => allServices.find((s) => s.data.slug === h.data.serviceSlug))
+  .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
 // CH-DE description lookup order:
 //   1. chDeOverrides (services where DE hub leaks EUR prices, or flat-locale
@@ -25,6 +35,8 @@ const chDeOverrides: Record<string, string> = {
   'eeat-audit': 'Echtes E-E-A-T wird gezeigt, nicht behauptet. Wir bewerten Ihre Seite nach einer 40-Punkte-Rubrik mit signal-basierter Remediation. 1\'500 CHF pauschal.',
   // DE service hubs whose description contains EUR prices — overridden to CHF
   'technical-seo-audit': 'Technisches SEO-Audit für klassische und KI-Suche. Priorisierte Roadmap für Ihr Team. Ab 990 CHF. Kostenlose Erstberatung anfordern.',
+  // Orphan hubs (not in pillars.ts but Phase 3d shipped CH-DE hubs) — Swiss copy
+  'performance-web-development': 'Schweizer Webagentur für Deutschschweizer KMU: Performance-First-Webentwicklung, Astro SSG, Schweizer Hosting, transparente Retainer ab 1\'190 CHF/Monat.',
 };
 
 function getChDeDescription(slug: string, fallbackEn: string): string {
@@ -34,12 +46,13 @@ function getChDeDescription(slug: string, fallbackEn: string): string {
   return fallbackEn;
 }
 
-const servicesByPillar = pillars.map((pillar) => ({
-  pillar,
-  services: pillar.services
+const servicesByPillar = pillars.map((pillar) => {
+  const baseServices = pillar.services
     .map((slug) => allServices.find((s) => s.data.slug === slug))
-    .filter((s): s is NonNullable<typeof s> => Boolean(s)),
-}));
+    .filter((s): s is NonNullable<typeof s> => Boolean(s));
+  const extraServices = orphanServices.filter((s) => s.data.pillar === pillar.id);
+  return { pillar, services: [...baseServices, ...extraServices] };
+});
 ---
 
 <BaseLayout

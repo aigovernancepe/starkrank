@@ -38,6 +38,19 @@ const auditKeys: Record<string, string> = {
   'Free Google Ads Audit': 'footer.freeAdsAudit',
   'Copywriting Audit': 'footer.copywritingAudit',
 };
+
+const cityHubs = {
+  de: [
+    { label: 'Bremen', href: '/agentur-bremen/' },
+    { label: 'Hamburg', href: '/agentur-hamburg/' },
+    { label: 'Hannover', href: '/agentur-hannover/' },
+  ],
+  ch: [
+    { label: 'Basel', href: '/ch-de/agentur-basel/' },
+    { label: 'Bern', href: '/ch-de/agentur-bern/' },
+    { label: 'Zürich', href: '/ch-de/agentur-zuerich/' },
+  ],
+};
 ---
 
 <footer class="bg-navy text-cream">
@@ -110,7 +123,33 @@ const auditKeys: Record<string, string> = {
       </div>
     </div>
 
-    <div class="mt-16 pt-8 border-t border-gray/20 flex flex-col sm:flex-row items-center justify-between gap-2">
+    <div class="mt-12 pt-8 border-t border-gray/20">
+      <h4 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">
+        {t('footer.locations', locale)}
+      </h4>
+      <div class="space-y-2">
+        <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-body text-gray-light">
+          <span class="font-semibold text-cream/80 mr-2">{t('footer.locations.de', locale)}:</span>
+          {cityHubs.de.map((city, idx) => (
+            <>
+              {idx > 0 && <span aria-hidden="true" class="text-gray/50">·</span>}
+              <a href={city.href} class="hover:text-cream transition-colors">{city.label}</a>
+            </>
+          ))}
+        </div>
+        <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-body text-gray-light">
+          <span class="font-semibold text-cream/80 mr-2">{t('footer.locations.ch', locale)}:</span>
+          {cityHubs.ch.map((city, idx) => (
+            <>
+              {idx > 0 && <span aria-hidden="true" class="text-gray/50">·</span>}
+              <a href={city.href} class="hover:text-cream transition-colors">{city.label}</a>
+            </>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-gray/20 flex flex-col sm:flex-row items-center justify-between gap-2">
       <p class="text-xs text-gray font-body">
         &copy; {year} StarkRank. {t('footer.rights', locale)}
       </p>
