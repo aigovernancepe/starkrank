@@ -3,7 +3,7 @@ serviceSlug: "content-marketing"
 urlSlug: "content-marketing-agentur"
 locale: "de"
 title: "Content Marketing Agentur"
-description: "Content-Marketing-Agentur: Themen-Recherche, Briefs, Produktion, Distribution. AI-Zitationsfähigkeit, messbare Conversion. Erstberatung anfordern."
+description: "Content-Marketing-Retainer: Recherche, Briefs, Produktion, Distribution. Inhalte für Rankings und KI-Antworten. Kostenlose Erstberatung."
 heroLede: "Content Marketing bei StarkRank ist die laufende Produktion von Inhalten, die sowohl in klassischer Suche ranken als auch in KI-Antworten zitiert werden. Jedes Stück hat ein Thema mit messbarer Suchnachfrage, eine dokumentierte Information-Gain-Hypothese und eine klare Position im Conversion-Pfad."
 processTotalTime: "PT30D"
 processSteps:
