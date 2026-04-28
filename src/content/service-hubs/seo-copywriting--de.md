@@ -25,7 +25,7 @@ processSteps:
     description: "On-Page-SEO-Check beim Import in Ihr CMS (Schema-Markup, hreflang, interne Linkarchitektur-Abgleich), gegebenenfalls Unterstützung bei Bildauswahl und Alt-Text, IndexNow-Trigger."
 faq:
   - question: "Produzieren Sie Einzeltexte oder nur im Retainer?"
-    answer: "Beides. Einzeltexte sind sinnvoll für spezifische Bedarfe (eine wichtige Landingpage, ein Pillar-Artikel, eine Relaunch-Pagine). Für laufende Produktion von 4 oder mehr Texten pro Monat ist ein Retainer in der Regel wirtschaftlicher — inklusive Editorial-Kalender und Themenrecherche ([Content Marketing](/services/content-marketing/))."
+    answer: "Beides. Einzeltexte sind sinnvoll für spezifische Bedarfe (eine wichtige Landingpage, ein Pillar-Artikel, eine Relaunch-Pagine). Für laufende Produktion von 4 oder mehr Texten pro Monat ist ein Retainer in der Regel wirtschaftlicher — inklusive Editorial-Kalender und Themenrecherche ([Content Marketing](/services/content-marketing-agentur/))."
   - question: "Arbeiten Sie mit NeuronWriter oder anderen Content-Tools?"
     answer: "Wir nutzen NeuronWriter als Semantik-Check, aber nicht als Schreib-Automat. Ein NeuronWriter-Score von 70+ ist Qualitäts-Signal, kein Qualitäts-Ersatz — Texte mit hohen Scores, die keine Capsule-Struktur oder Information-Gain haben, ranken trotzdem schlecht. Die Tools informieren die Texterstellung, ersetzen sie aber nicht."
   - question: "Nutzen Sie KI-Tools zur Textproduktion?"
@@ -81,7 +81,7 @@ Für spezifische Bedarfe wie Whitepapers, E-Books oder Sales-Enablement-Material
 
 SEO-Texterstellung wird in zwei Modellen angeboten: als Einzeltexte oder im laufenden Retainer. Einzeltexte werden nach Umfang (1.500 bis 2.500 Wörter typisch) und Komplexität (fachlich-generisch vs. regulierte Branche) kalkuliert; der Preis wird vor Brief-Abnahme als Festpreis vereinbart.
 
-Für laufende Produktion von vier oder mehr Texten pro Monat ist ein [Content-Marketing-Retainer](/services/content-marketing/) in der Regel wirtschaftlicher — die Retainer-Bänder sind auf der [Preisseite](/preise/seo/) publiziert. Im Retainer ist SEO-Texterstellung Teil des Pakets; zusätzlich sind Editorial-Kalender, Themenrecherche, Distribution und Performance-Tracking enthalten.
+Für laufende Produktion von vier oder mehr Texten pro Monat ist ein [Content-Marketing-Retainer](/services/content-marketing-agentur/) in der Regel wirtschaftlicher — die Retainer-Bänder sind auf der [Preisseite](/preise/seo/) publiziert. Im Retainer ist SEO-Texterstellung Teil des Pakets; zusätzlich sind Editorial-Kalender, Themenrecherche, Distribution und Performance-Tracking enthalten.
 
 Für eine schnelle Standortbestimmung Ihrer bestehenden Texte bietet StarkRank den [kostenlosen Copywriting-Check](/kostenloser-copywriting-check/) an — er bewertet eine einzelne Seite an drei Oberflächen-Dimensionen und positioniert, ob ein [Copywriting-Audit](/services/copywriting-audit/) oder direkte Neu-Texterstellung der richtige nächste Schritt ist.
 
@@ -102,4 +102,4 @@ Für sehr frühe Startups ohne definiertes Angebot oder für rein transaktionale
 
 Am Ende erhalten Sie den finalen Text im gewünschten Format (Markdown, Google Docs, direkter CMS-Import), die zugehörigen Meta-Daten (Title, Description, Slug-Empfehlung), eine Empfehlung für Schema-Markup spezifisch zum Text-Typ, eine Liste mit internen Verlinkungs-Kandidaten und — optional — Bild-Briefs für Illustrationen oder Infografiken.
 
-Für Texte, die Teil einer laufenden Content-Strategie sind, wird das Performance-Tracking über [Content Marketing](/services/content-marketing/) oder direkt über Google Search Console und GA4 geführt. Für Einzeltexte liefern wir zusätzlich einen 30-tägigen Indexierungs- und Ranking-Check, der die initiale Performance des Texts dokumentiert — damit Sie sehen, ob der Text in die erwartete Ranking-Bandbreite fällt.
+Für Texte, die Teil einer laufenden Content-Strategie sind, wird das Performance-Tracking über [Content Marketing](/services/content-marketing-agentur/) oder direkt über Google Search Console und GA4 geführt. Für Einzeltexte liefern wir zusätzlich einen 30-tägigen Indexierungs- und Ranking-Check, der die initiale Performance des Texts dokumentiert — damit Sie sehen, ob der Text in die erwartete Ranking-Bandbreite fällt.

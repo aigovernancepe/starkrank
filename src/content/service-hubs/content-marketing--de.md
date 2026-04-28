@@ -1,5 +1,6 @@
 ---
 serviceSlug: "content-marketing"
+urlSlug: "content-marketing-agentur"
 locale: "de"
 title: "Content Marketing Agentur"
 description: "Content-Marketing-Agentur: Themen-Recherche, Briefs, Produktion, Distribution. AI-Zitationsfähigkeit, messbare Conversion. Erstberatung anfordern."

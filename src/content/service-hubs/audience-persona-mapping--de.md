@@ -64,7 +64,7 @@ Die Analyse läuft in fünf klar getrennten Schritten ab:
 4. **Umsetzbarkeits-Mapping** — pro Persona konkrete Aktivierung: Ad-Targeting-Parameter, Landingpage-Varianten-Empfehlungen, Content-Themen-Priorisierung, CRM-Segmentierungs-Kriterien, E-Mail-Sequenz-Hooks
 5. **Validierungs-Plan** — Definition messbarer Hypothesen pro Persona, 90-Tage-Check-in-Kalender zur Überprüfung der Persona-Modelle gegen tatsächliche Daten, Revisions-Rhythmus
 
-Nach Schritt 5 haben Sie entweder die Grundlage für internes Operating oder für die Übergabe an eine produzierende Agentur oder unsere [Paid-Social-Strategie](/services/paid-social-strategy/) und [Content-Marketing](/services/content-marketing/)-Retainer.
+Nach Schritt 5 haben Sie entweder die Grundlage für internes Operating oder für die Übergabe an eine produzierende Agentur oder unsere [Paid-Social-Strategie](/services/paid-social-strategy/) und [Content-Marketing](/services/content-marketing-agentur/)-Retainer.
 
 ## Welche Daten und Signale nutzen wir für die Analyse?
 
@@ -101,6 +101,6 @@ Für sehr frühe Startups ohne genug Sales-Gespräche und GA4-Historie ist eine 
 
 ## Was passiert nach der Persona-Analyse?
 
-Nach der Persona-Analyse haben Sie drei Wege, die Ergebnisse operativ zu nutzen. Erstens internes Operating: Ihre bestehenden Marketing- und Sales-Teams übernehmen mit den Persona-Artefakten als Betriebs-Handbuch — gut geeignet, wenn interne Kapazität vorhanden ist. Zweitens externe Agentur-Übergabe: Ihre bestehende Content-, Ads- oder Web-Agentur bekommt die Persona-Dokumente und integriert sie in Briefings und Kampagnen-Setups. Drittens StarkRank-Retainer: wir setzen die Personas in unserer laufenden Arbeit um — in [Content Marketing](/services/content-marketing/), [Google Ads Management](/services/google-ads-management/) oder [Paid-Social-Strategie](/services/paid-social-strategy/).
+Nach der Persona-Analyse haben Sie drei Wege, die Ergebnisse operativ zu nutzen. Erstens internes Operating: Ihre bestehenden Marketing- und Sales-Teams übernehmen mit den Persona-Artefakten als Betriebs-Handbuch — gut geeignet, wenn interne Kapazität vorhanden ist. Zweitens externe Agentur-Übergabe: Ihre bestehende Content-, Ads- oder Web-Agentur bekommt die Persona-Dokumente und integriert sie in Briefings und Kampagnen-Setups. Drittens StarkRank-Retainer: wir setzen die Personas in unserer laufenden Arbeit um — in [Content Marketing](/services/content-marketing-agentur/), [Google Ads Management](/services/google-ads-management/) oder [Paid-Social-Strategie](/services/paid-social-strategy/).
 
 Die Wahl hängt von Ihrer Team-Struktur und Ihrer Präferenz für Single- oder Multi-Agentur-Setups ab. Wir beraten neutral — auch zur Variante, bei der StarkRank nach der Analyse-Lieferung die Hände vom Operativen lässt, wenn das zu Ihrem Setup passt.

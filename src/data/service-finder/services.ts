@@ -51,7 +51,7 @@ export const services: ServiceDef[] = [
     id: 'content-marketing',
     icon: 'pen-line',
     links: {
-      en: '/services/content-marketing/',
+      en: '/services/content-marketing-agentur/',
       es: '/pe/marketing-contenidos-lima/',
       de: '/content-marketing-hannover/',
       'ch-de': '/ch-de/content-marketing-basel/',
@@ -107,7 +107,7 @@ export const services: ServiceDef[] = [
     id: 'multilingual-seo',
     icon: 'globe',
     links: {
-      en: '/services/content-marketing/',
+      en: '/services/content-marketing-agentur/',
       de: '/content-marketing-hannover/',
       'ch-de': '/ch-de/content-marketing-basel/',
     },
@@ -144,7 +144,7 @@ export const services: ServiceDef[] = [
     id: 'compliance-content',
     icon: 'shield-check',
     links: {
-      en: '/services/content-marketing/',
+      en: '/services/content-marketing-agentur/',
       de: '/content-marketing-hannover/',
       'ch-de': '/ch-de/content-marketing-basel/',
     },

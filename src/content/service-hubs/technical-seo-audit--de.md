@@ -68,7 +68,7 @@ Ein technisches SEO-Audit läuft bei uns in fünf klar getrennten Schritten ab:
 2. **Automatisierter Crawl und Log-Analyse** — paralleler Lauf von Screaming Frog, Sitebulb und Ahrefs-Site-Audit, Abgleich mit Google-Search-Console-Coverage und Bing Webmaster Tools, Auswertung eines Server-Log-Samples der letzten 30 Tage für echte Bot-Aktivität statt vermuteter
 3. **Manuelle Expertenprüfung** — Sichtung der auffälligen Templates durch einen Menschen, Prüfung strukturierter Daten im Rich-Results-Test und Schema.org-Validator, Bewertung des KI-Crawler-Zugriffs (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot), Review der Canonical-Logik über Template-Grenzen hinweg
 4. **Priorisierte Roadmap und Übergabe** — Report mit Befunden sortiert nach Schweregrad, pro Befund eine umsetzbare Fix-Empfehlung mit Aufwandsschätzung, 60-minütiger Walkthrough mit Ihrem Entwicklungsteam zur gemeinsamen Einordnung und Rückfragen-Klärung
-5. **Optional: Begleitung im Retainer** — monatliches Review der Umsetzung, Re-Crawl nach priorisierten Fixes, enger Anschluss an die [Content-Marketing-](/services/content-marketing/) oder [KI-Suchoptimierungs-](/aiso-check/)Arbeit
+5. **Optional: Begleitung im Retainer** — monatliches Review der Umsetzung, Re-Crawl nach priorisierten Fixes, enger Anschluss an die [Content-Marketing-](/services/content-marketing-agentur/) oder [KI-Suchoptimierungs-](/aiso-check/)Arbeit
 
 Nach Schritt 4 sind Sie handlungsfähig — unabhängig davon, ob Sie die Umsetzung intern, mit Ihrem bestehenden Partner oder mit uns im Retainer fortführen.
 
