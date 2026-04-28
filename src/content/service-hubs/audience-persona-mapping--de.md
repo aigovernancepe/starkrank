@@ -1,5 +1,6 @@
 ---
 serviceSlug: "audience-persona-mapping"
+urlSlug: "zielgruppenanalyse"
 locale: "de"
 title: "Zielgruppenanalyse"
 description: "Zielgruppenanalyse: First-Party-Daten, Sales-Input und Search-Intent in funktionale Personas verdichtet. Kostenlose Erstberatung."

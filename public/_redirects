@@ -195,6 +195,10 @@
 # (per feedback_serp_intent_locale_verification + Phase 3d pattern).
 /services/content-marketing/         /services/content-marketing-agentur/        301
 
+# Stream B P1 slug rename B.2 (2026-04-28): DE audience-persona-mapping service
+# hub moved from EN-canonical slug (0/mo) to Zielgruppenanalyse (1'600/mo DE).
+/services/audience-persona-mapping/  /services/zielgruppenanalyse/               301
+
 # Retired markets (/pe/*, /peru/*, /miami/*, /fort-lauderdale/*) return 404
 # via src/pages/404.astro — Cloudflare Pages does not support 410 in _redirects,
 # so we rely on the Astro-generated 404.html for "page gone" semantics.

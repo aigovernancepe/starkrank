@@ -51,7 +51,7 @@ For clients with in-house writers, we provide the research and briefs (steps 1 a
 
 For StarkRank's clients operating across markets, we produce SEO copy in English, German, and Spanish — not machine-translated, but written natively for each market. Keyword research, entity mapping, and search intent analysis are performed separately per language, because direct translation of keywords rarely captures local search behaviour.
 
-We coordinate multilingual content through our [Content Marketing](/services/content-marketing-agentur/) strategy to ensure consistency across markets while respecting local nuances. For audience-specific targeting, see our [Audience Persona Mapping](/services/audience-persona-mapping/) service.
+We coordinate multilingual content through our [Content Marketing](/services/content-marketing-agentur/) strategy to ensure consistency across markets while respecting local nuances. For audience-specific targeting, see our [Audience Persona Mapping](/services/zielgruppenanalyse/) service.
 
 ## When should you invest in SEO copywriting?
 
