@@ -3,7 +3,7 @@ serviceSlug: "content-marketing"
 locale: "de"
 title: "Content Marketing Agentur"
 description: "Content-Marketing-Agentur: Themen-Recherche, Briefs, Produktion, Distribution. AI-Zitationsfähigkeit, messbare Conversion. Erstberatung anfordern."
-heroLede: "Content Marketing bei StarkRank ist die laufende Produktion von Inhalten, die sowohl in klassischer Suche ranken als auch in KI-Antworten zitiert werden. Kein beliebiger Blog-Kalender — jedes Stück hat ein Thema mit messbarer Suchnachfrage, einen spezifischen Angriffspunkt gegen bestehende Top-10-Ergebnisse und eine klare Position im Conversion-Pfad."
+heroLede: "Content Marketing bei StarkRank ist die laufende Produktion von Inhalten, die sowohl in klassischer Suche ranken als auch in KI-Antworten zitiert werden. Jedes Stück hat ein Thema mit messbarer Suchnachfrage, eine dokumentierte Information-Gain-Hypothese und eine klare Position im Conversion-Pfad."
 processTotalTime: "PT30D"
 processSteps:
   - name: "Editorial-Kalender und Themenrecherche"
@@ -14,13 +14,13 @@ processSteps:
       - "NeuronWriter"
       - "GPTBot, ClaudeBot, PerplexityBot Scans"
   - name: "Content-Briefs"
-    description: "Pro Artikel ein detaillierter Brief: Zielkeyword, Suchintention, Frage-Struktur, Information-Gain-Hypothesen, NeuronWriter-Semantikterme, Capsule-Format-Vorgabe, interne Verlinkungen, Meta-Spezifikationen."
+    description: "Pro Artikel ein detailliertes Briefing: Zielkeyword, Suchabsicht, Fragen-Struktur, Information-Gain-Hypothesen, abzudeckende verwandte Fachbegriffe, vorgegebenes Capsule-Format, interne Verlinkungen, Vorgaben für Meta-Title und Meta-Description."
   - name: "Content-Produktion und Review"
     description: "Text-Erstellung durch StarkRank oder Briefing Ihres internen Teams, interne Qualitätsprüfung auf Anti-AI-Schreibmuster, Capsule-Struktur und Information-Gain, Abnahme durch Sie mit maximal zwei Revisionsschleifen."
   - name: "Publishing und On-Page-Optimierung"
     description: "Schema.org-Markup (Article mit Author-Entity), strukturierte Daten für Capsule-Extraktion, hreflang bei Mehrsprachigkeit, interne Linkarchitektur-Pflege, IndexNow-Trigger für Bing/Yandex/Seznam/Naver."
   - name: "Distribution und Performance-Tracking"
-    description: "E-Mail-Newsletter-Versand, LinkedIn-Company-Page-Post, optional Paid-Boost für Hero-Inhalte, monatliches Tracking von organischen Rankings, KI-Zitations-Erwähnungen und Conversion-Attributionsdaten."
+    description: "E-Mail-Newsletter-Versand, LinkedIn-Company-Page-Post, optional bezahlte Reichweiten-Verstärkung für Hero-Inhalte, monatliches Tracking von organischen Rankings, KI-Zitations-Erwähnungen und Conversion-Daten aus Google Analytics 4."
 faq:
   - question: "Schreiben Sie die Texte selbst oder briefen Sie unser internes Team?"
     answer: "Beides möglich. Wir schreiben selbst (mit fachlich dichter Inhaltsebene), oder wir liefern die Briefs und Ihr internes Team oder Freelancer produzieren — wir übernehmen in dem Fall die Qualitätssicherung gegen unsere Anti-AI-Schreibregeln. Manche Unternehmen bevorzugen hybrid: Hero-Content durch uns, Support-Content intern."
@@ -32,73 +32,86 @@ faq:
     answer: "Ja — dafür haben wir zwei spezialisierte Produkte: [Expertenbibliothek](/expertenbibliothek/) baut einmal im Onboarding das gesamte Wissen Ihres Experten als strukturierte Datei auf, aus der der Retainer kontinuierlich schöpft; [Experteninterview](/experteninterview/) extrahiert themenspezifische Fragmente für einzelne Content-Initiativen. Beides kann eigenständig oder im Content-Marketing-Retainer gebucht werden."
 ---
 
-## Was ist Content Marketing?
+## Was macht eine Content Marketing Agentur?
 
-Content Marketing ist die laufende Produktion von Inhalten, die Ihre Zielgruppe findet, nützlich findet und eine Kaufentscheidung darauf aufbauen kann. Das ist der Satz, den jede Agentur sagt — die Frage ist, was Finden heute bedeutet. Vor fünf Jahren hieß es organisches Google-Ranking. Heute heißt es parallel: organisches Ranking, Zitation in Google AI Overviews, Extraktion in ChatGPT-mit-Browsing, Empfehlung in Perplexity, Aufnahme in Claude-Antworten. Die Content-Erwartungen haben sich dadurch verschoben: Artikel müssen für menschliche Leser überzeugen und gleichzeitig für KI-Systeme sauber extrahierbar sein.
+Eine Content Marketing Agentur plant, schreibt und veröffentlicht Inhalte mit messbarer Suchnachfrage und einer klaren Rolle im Kaufprozess Ihrer Kunden — auf Basis einer dokumentierten Methode statt nach Gefühl. StarkRank arbeitet als spezialisierte Content Marketing Agentur für Mittelstand und B2B in Deutschland und der Deutschschweiz: transparente Retainer-Preise, fachlich tiefe Inhalte, optimiert für klassische Suche und KI-Antworten gleichermassen.
 
-Praktisch bedeutet das: jeder Artikel hat eine klar benannte Zielsuchanfrage (oder -frage), eine Capsule-Struktur mit Frage-Überschriften und direkten Antwortblöcken, verifizierbare Fakten statt pauschaler Formulierungen, eine definierte Position im Conversion-Pfad und ein Schema-Markup, das Entitäten sauber benennt. Diese Disziplin macht den Unterschied zwischen Content, der ein Jahr nach Veröffentlichung noch Traffic und Zitationen bringt, und Content, der nach drei Monaten in der Tiefe versinkt.
+## Unsere Content-Marketing-Leistungen
 
-## Was umfasst Content Marketing bei StarkRank im Retainer?
+Im Retainer decken wir fünf operative Bereiche ab:
 
-Das Content Marketing im Retainer deckt sechs operative Bereiche ab:
+### Editorial-Kalender + Themenrecherche
 
-- **Editorial-Kalender und Themenrecherche** — quartalsweise Recherche-Runden mit DataForSEO, Ahrefs und NeuronWriter plus KI-Query-Scans (welche Fragen stellen Nutzer heute ChatGPT und Perplexity zu Ihrem Thema), 90-Tage-Kalender mit Priorisierung
-- **Content-Briefs** — pro Artikel ein detaillierter Brief mit Zielkeyword, Suchintention, Frage-Struktur, Information-Gain-Hypothesen, Capsule-Format-Vorgabe, internen Verlinkungen und Meta-Spezifikationen
-- **Produktion** — Texterstellung entweder durch StarkRank (mit fachlicher Tiefe) oder Briefing Ihres Teams / Freelancers mit anschließender Qualitätsprüfung durch uns; maximal zwei Revisionsschleifen pro Artikel
-- **On-Page-Optimierung** — Schema.org Article-Markup mit Author-Entity, strukturierte Daten für Capsule-Extraktion, interne Linkarchitektur-Pflege, hreflang bei Mehrsprachigkeit
-- **Distribution** — E-Mail-Newsletter-Versand, LinkedIn-Company-Page-Post, optional Paid-Boost für Hero-Inhalte, IndexNow-Trigger für Bing/Yandex/Seznam/Naver
-- **Performance-Tracking** — monatliches Tracking von organischen Rankings, KI-Zitations-Erwähnungen (über Markenerwähnungsmonitoring in LLM-Antworten) und Conversion-Attribution über GA4
+Quartalsweise Recherche-Runden mit DataForSEO und Ahrefs, ergänzt um KI-Sichtbarkeitsprüfungen — also: welche Fragen stellen Nutzer ChatGPT, Perplexity und Claude tatsächlich zu Ihrem Thema? Daraus identifizieren wir die Lücken, in denen aktuelle Top-Ergebnisse oberflächlich, veraltet oder schlicht falsch sind, und priorisieren Themen nach erwartbarer Wirkung auf Ihr Geschäft und Aufwand. Ergebnis: ein 90-Tage-Redaktionsplan mit Themen, Formaten und konkreten Zielsuchanfragen.
 
-Der Retainer ist auf 12-Monats-Partnerschaft ausgerichtet — Content-Strategien brauchen drei bis sechs Monate, bis erste Artikel indexiert und gemessen sind, und neun bis zwölf, bis eine belastbare Serie von Ergebnissen vorliegt.
+### Content-Briefings
 
-## Wie arbeiten wir im Content-Marketing-Retainer?
+Pro Artikel ein detailliertes Briefing: Zielkeyword, Suchabsicht, Fragen-Struktur, drei Information-Gain-Hypothesen, abzudeckende verwandte Fachbegriffe, vorgegebenes Capsule-Format, interne Verlinkungen, Vorgaben für Meta-Title und Meta-Description. Briefings sind die Schnittstelle zwischen Strategie und Produktion. Sie lösen das "wir wussten nicht genau, was wir schreiben sollen"-Problem, das viele Content-Programme schon vor der ersten Zeile ausbremst.
 
-Der Retainer-Rhythmus läuft in fünf klar getrennten Zyklen ab:
+### Texterstellung
 
-1. **Editorial-Kalender und Themenrecherche** — Keyword- und KI-Query-Recherche, Wettbewerbsanalyse der aktuellen Top-10, Identifikation der Information-Gain-Lücken, Priorisierung nach Geschäfts-Impact und Aufwand, 90-Tage-Editorial-Kalender am Quartalsbeginn
-2. **Content-Briefs** — pro Artikel ein detaillierter Brief: Zielkeyword, Suchintention, Frage-Struktur, Information-Gain-Hypothesen, NeuronWriter-Semantikterme, Capsule-Format-Vorgabe, interne Verlinkungen, Meta-Spezifikationen — jeweils 2 Wochen vor geplanter Veröffentlichung
-3. **Content-Produktion und Review** — Text-Erstellung durch StarkRank oder Briefing Ihres internen Teams, interne Qualitätsprüfung auf Anti-AI-Schreibmuster, Capsule-Struktur und Information-Gain, Abnahme durch Sie mit maximal zwei Revisionsschleifen
-4. **Publishing und On-Page-Optimierung** — Schema.org-Markup, strukturierte Daten für Capsule-Extraktion, hreflang bei Mehrsprachigkeit, interne Linkarchitektur-Pflege, IndexNow-Trigger zum Veröffentlichungszeitpunkt
-5. **Distribution und Performance-Tracking** — E-Mail-Newsletter-Versand, LinkedIn-Company-Page-Post, optional Paid-Boost für Hero-Inhalte, monatliches Tracking von organischen Rankings, KI-Zitations-Erwähnungen und Conversion-Attributionsdaten
+Wir schreiben selbst — mit fachlicher Tiefe und nachweisbarer Recherche — oder wir liefern Briefings an Ihr internes Team beziehungsweise an Ihre Freelancer und übernehmen die Qualitätsprüfung. Die Texterstellung folgt unserer dokumentierten [SEO-Copywriting-Methode](/services/seo-copywriting/) mit Capsule-Struktur, fest verankerten Information-Gain-Hypothesen und einer Anti-AI-Schreibprüfung vor jeder Abnahme.
 
-Zwischen den Zyklen gilt: Ad-hoc-Themen (Produkt-Launches, Medien-Reaktionen, Branchen-News) können in den Kalender eingebracht werden, solange das Monats-Artikel-Volumen stabil bleibt.
+### E-E-A-T-konforme Redaktion + Schema-Markup
 
-## Welche Ergebnisse sollten Sie von Content Marketing erwarten?
+Jeder Artikel erhält das passende strukturierte Daten-Markup (Schema.org Article), in dem auch der Autor als verknüpfte Person hinterlegt ist — wichtig für E-E-A-T-Signale, also nachweisbare Hinweise auf Erfahrung, Expertise, Autorität und Vertrauen. Strukturierte Frage-Blöcke bekommen FAQ-Markup, mehrsprachige Inhalte hreflang-Auszeichnungen, und neue Veröffentlichungen werden über IndexNow direkt an Bing, Yandex und weitere Suchmaschinen gemeldet — innerhalb von Sekunden statt Tagen. Bei Bedarf prüfen wir die E-E-A-T-Signale Ihres bestehenden Inhalts vorher mit unserem [E-E-A-T-Audit](/eeat-audit/).
+
+### Distribution + Performance-Tracking
+
+Versand über Newsletter und LinkedIn-Company-Page-Posts, optional bezahlte Reichweiten-Verstärkung für Hero-Inhalte, monatliches Tracking von organischen Rankings, KI-Zitationen Ihrer Inhalte (welche Aussagen werden tatsächlich aufgegriffen?) und Conversion-Auswertung über Google Analytics 4. Reports trennen klar zwischen Reichweiten-Kennzahlen und tatsächlichem Beitrag zu Leads und Pipeline. Nicht jeder Klick zählt gleich viel.
+
+## Wie wir Content optimieren — die StarkRank-Methode
+
+Unsere Content-Optimierung folgt einer dokumentierten Methode mit fünf Elementen, die unabhängig vom eingesetzten Tooling funktionieren:
+
+**Capsule-Content-Technik.** Jede H2 ist eine echte Frage — formuliert so, wie Nutzer in Suchmaschinen suchen oder KI-Systemen Anfragen stellen. Direkt darunter steht ein Antwortblock in einem festgelegten Format: ein 40- bis 60-Wörter-Absatz, drei bis acht Listenpunkte, oder eine kurze Tabelle. Die ersten 20 Wörter enthalten das Zielkeyword. Wichtig: Der Antwortblock funktioniert ohne den umliegenden Text — wer nur diesen Absatz liest, bekommt eine vollständige Antwort. So können KI-Systeme Inhalte sauber zitieren, und Leser erfassen die Kernantwort, ohne lange suchen zu müssen.
+
+**Information-Gain-Hypothesen.** Pro Artikel formulieren wir drei spezifische Aussagen, die in den aktuellen Top-10-Suchergebnissen nicht zu finden sind — weil Wettbewerber das Thema oberflächlich behandeln, weil eine Branchen-Annahme nie hinterfragt wurde, oder weil ein Datenpunkt aus eigener Recherche oder Kunden-Erfahrung fehlt. Diese Information-Gain-Hypothesen sind der eigentliche Grund, warum eine Quelle bei KI-Systemen Vorrang bekommt: sie liefert etwas, das die anderen nicht haben.
+
+**Anti-AI-Schreibdisziplin.** Wir führen eine dokumentierte Liste typischer KI-Schreibmuster — bestimmte Eröffnungssätze, generische Übergangsphrasen, übermässig viele Gedankenstriche, austauschbare Marketing-Floskeln — und prüfen jeden Artikel vor der Veröffentlichung dagegen. Klingt nach Detail, ist aber zentral: KI-Systeme erkennen ihre eigenen Schreibmuster und stufen Inhalte herab, die danach klingen. Saubere, fachlich präzise Sprache ist Grundvoraussetzung dafür, dass eine Seite überhaupt zitiert wird.
+
+**Entity-Anchor-Coverage.** KI-Systeme verstehen Inhalte nicht nur als Wörter, sondern als Verknüpfungen zwischen wiedererkennbaren Entitäten — Personen, Unternehmen, Methoden, Produkten. Wir benennen diese Entitäten auf einer Seite konsistent und hinterlegen sie zusätzlich maschinenlesbar im strukturierten Daten-Markup (Schema.org). So erkennt ChatGPT, dass "StarkRank" auf dieser Seite, "StarkRank" in einem Branchenverzeichnis und "StarkRank" in einer LinkedIn-Erwähnung alle dasselbe Unternehmen meinen — und kann Sie in einer Antwort korrekt zuordnen, statt Sie mit einer ähnlich klingenden Marke zu verwechseln.
+
+**Query-Fan-Out-Antizipation.** Wenn ein Nutzer ChatGPT eine Frage stellt, sucht das System im Hintergrund oft nicht nur einmal, sondern erzeugt selbst zusätzliche Suchanfragen — aus einer Frage werden mehrere parallele Recherche-Schritte, bevor die Antwort formuliert wird. Dieser Vorgang heisst Query-Fan-Out. Eine DataForSEO-Studie an 100.000 ChatGPT-Prompts (2026) zeigt: bei 47% aller Anfragen passiert das, und in 93% dieser Fälle erzeugt das System genau zwei zusätzliche Suchen. Diese Folge-Suchen sind meistens Vergleichsfragen ("welche Lösung passt für meinen Fall"), Bewertungsfragen ("beste Anbieter für X") oder kontextspezifisch ("X für Mittelstand", "X in [Region]"). Wir bauen Inhalte so, dass sie nicht nur die Hauptfrage beantworten, sondern zusätzlich zwei bis drei dieser typischen Folge-Suchen — sonst taucht die Seite in genau dem Schritt nicht auf, in dem ChatGPT seine späteren Quellen auswählt.
+
+Welche Tools dabei helfen: NeuronWriter (verwandte Fachbegriffe und Heading-Strukturen aus Wettbewerber-Analysen), DataForSEO (Suchvolumen sowie welche Antwort-Formate Suchmaschinen pro Thema bevorzugen), Ahrefs (Inhaltslücken im Vergleich zum Wettbewerb), Sichtbarkeitsprüfungen für die Crawler von ChatGPT, Claude und Perplexity (GPTBot, ClaudeBot, PerplexityBot). Tools liefern die Daten — die Methode ist davon unabhängig: wechselt das Tool, bleibt der Ansatz.
+
+## Welche Ergebnisse können Sie realistisch erwarten?
 
 Realistische Erwartungen an einen gut geführten Content-Marketing-Retainer:
 
-- **Monate 1 bis 3** — erste Artikel indexiert, initiale Ranking-Bewegungen, erste KI-Zitations-Erwähnungen für Lang-Tail-Themen, Baseline für Conversion-Attribution etabliert
-- **Monate 3 bis 6** — stabilisiertes Publishing-Volumen, erste Top-10-Rankings für priorisierte Keywords, messbare KI-Zitations-Muster über ChatGPT-with-Browsing und Perplexity
-- **Monate 6 bis 12** — Traffic-Kurve konsolidiert sich, erste Top-3-Rankings für kompetitive Keywords, Newsletter-Subscriber aus organischem Content wachsen messbar, Attribution zeigt klare Content-zu-Conversion-Pfade
-- **Nach 12 Monaten** — belastbare Content-Library, die kontinuierlich Traffic trägt (auch ohne laufende Distribution), systematisierte Zitations-Muster in mehreren KI-Systemen, Grundlage für Skalierung oder Themen-Expansion
+- **Monate 1 bis 3:** Erste Artikel sind indexiert, erste Ranking-Bewegungen sichtbar, erste KI-Erwähnungen für spezifische Long-Tail-Themen, Conversion-Tracking als Baseline aufgesetzt.
+- **Monate 3 bis 6:** Stabiler Publishing-Rhythmus etabliert, erste Top-10-Rankings für priorisierte Keywords, messbare Zitations-Muster in ChatGPT und Perplexity.
+- **Monate 6 bis 12:** Traffic-Kurve konsolidiert sich, erste Top-3-Rankings auch in wettbewerbsstarken Themen, wachsende Newsletter-Empfänger aus organischen Quellen, Auswertung zeigt klare Wege vom Content zur Conversion.
+- **Nach 12 Monaten:** Belastbarer Content-Bestand, der auch ohne laufende Distribution Traffic trägt, etablierte Zitations-Muster in mehreren KI-Systemen, solide Grundlage für Skalierung oder Themen-Erweiterung.
 
-Was Sie nicht erwarten sollten: Top-Rankings in den ersten 30 Tagen (SEO braucht Indexierungs-Zeit), viraler Traffic (Content Marketing ist lineares Wachstum, nicht exponentielles), Lead-Avalanche (Content-Leads sind höher qualifiziert, aber in Stückzahl niedriger als Paid-Leads).
+**Wichtige Einordnung:** Diese Zeiträume gelten für mittlere Wettbewerbsintensität. In wenig umkämpften Nischen können Top-Rankings deutlich früher kommen; in stark umkämpften Themen — etwa generische Finanz-, Versicherungs- oder Reise-Keywords — kann sich der Zeitrahmen verdoppeln, oder Top-3-Rankings sind mit Content Marketing allein nicht realistisch erreichbar. Dann wären zusätzliche Hebel notwendig: Authority-Link-Building, technisches SEO, Paid Media — oder höhere Budgets über deutlich längere Zeiträume. Die Wettbewerbsintensität liegt ausserhalb unserer Kontrolle; wir bewerten sie pro Thema in der [kostenlosen Erstberatung](/kontakt/) und kalibrieren Erwartungen entsprechend, statt unrealistische Versprechen zu machen.
 
-## Was kostet Content Marketing im Retainer?
+Was Sie nicht erwarten sollten: Top-Rankings in den ersten 30 Tagen — neue Inhalte brauchen Zeit, um indexiert und bewertet zu werden. Viralen Traffic — Content Marketing wächst linear, nicht explosionsartig. Eine Lead-Flut — Content-Leads sind durchschnittlich besser qualifiziert als Paid-Leads, kommen aber in geringerer Stückzahl.
 
-Content-Marketing-Retainer folgen unseren Retainer-Bändern, die auf der [Preisseite](/preise/seo/) transparent publiziert sind — von Einzelunternehmen (ab 990 €/Monat) über Mittelstand (2.000 bis 4.000 €/Monat) bis Enterprise (ab 5.000 €/Monat, individueller Scope).
+## Für welche Unternehmen wir arbeiten
 
-Der Band-Einstieg hängt weniger an Artikel-Stückzahlen als an der Komplexität: Recherche-Tiefe (generisches B2B vs. regulierte Finanzbranche), Zielmarkt-Breite (ein Markt vs. DE plus EN), Reviewschleifen (Single-Freigeber vs. Multi-Stakeholder-Prozess) und Experten-Input (generisch vs. Expertenbibliothek-basiert). Wir kalkulieren den passenden Band-Einstieg in der [kostenlosen Erstberatung](/kontakt/) — mit klarer Schätzung der Artikel-Pipeline für die ersten 90 Tage.
+Ein Content-Marketing-Retainer lohnt sich typischerweise für:
 
-## Für wen lohnt sich Content Marketing im Retainer?
+- **B2B-Unternehmen mit langen Verkaufszyklen und erklärungsbedürftigen Produkten.** Content begleitet den Kaufentscheider über Wochen oder Monate — von der ersten Recherche bis zum Vertriebsgespräch.
+- **Dienstleister in wettbewerbsintensiven Märkten.** Organische Sichtbarkeit entscheidet, ob Sie als austauschbarer Anbieter oder als erste zitierte Quelle in einer KI-Antwort auftauchen.
+- **Unternehmen, die mit Paid-Kanälen an die Wachstumsgrenze stossen.** Wenn Google Ads und LinkedIn Ads nicht mehr skalieren, soll organische Sichtbarkeit plus KI-Suche die nächste Wachstumsphase tragen.
+- **Unternehmen mit echten Experten im Haus, deren Wissen bisher nicht systematisch verschriftlicht wurde.** Die Kombination aus [Expertenbibliothek](/expertenbibliothek/) und Content-Marketing-Retainer ist hier der grösste Hebel.
+- **Marken in Nischen mit Potenzial für KI-Suche.** In vielen Branchen sind Zitationen in ChatGPT, Perplexity oder Google AI Overviews noch nicht etabliert — wer früh dran ist, besetzt die Position als Standardquelle.
+- **Firmen vor einem Relaunch oder einer Repositionierung.** Die neue Positionierung wird über 12 Monate kontinuierlich in Inhalten verankert, nicht einmalig auf einer Über-uns-Seite verkündet.
 
-Content Marketing im Retainer lohnt sich typischerweise für:
+Für sehr frühe Startups ohne etabliertes Angebot oder für B2C-Produkte mit impulsiver Kaufentscheidung ist Paid Social oder klassisches Performance-SEO meist der direktere Weg als Content Marketing — wir sagen Ihnen das im Erstgespräch ehrlich, statt Ihnen einen Retainer zu verkaufen, der nicht passt.
 
-- **B2B-Unternehmen mit langen Sales-Cycles und erklärungsbedürftigen Produkten** — wo Content den Käufer durch mehrere Informations-Stadien trägt, bevor er überhaupt spricht
-- **Dienstleister in wettbewerbsintensiven Märkten** — wo organische Sichtbarkeit der Unterschied zwischen Austauschbarkeit und erster zitierter Quelle in KI-Antworten ist
-- **Unternehmen nach einem Paid-Plateau** — wo Paid-Kanäle an Skalierungsgrenzen stoßen und organisch-plus-KI-Suche die nächste Wachstumsphase tragen soll
-- **Unternehmen mit echten Experten im Haus** — die bisher nicht verschriftlicht wurden; die [Expertenbibliothek](/expertenbibliothek/) plus Content-Marketing-Retainer ist hier der Hebel
-- **Marken in Nischen mit KI-Such-Potenzial** — wo ChatGPT und Perplexity Zitationen noch nicht konsolidiert sind und frühe Mover die Entity-Position besetzen
-- **Firmen vor einem Relaunch oder einer Reposition** — um die neue Positionierung über 12 Monate kontinuierlich in Content umzusetzen, statt einmalig auf der Website
+## Was kostet Content Marketing bei StarkRank?
 
-Für sehr frühe Startups ohne etabliertes Angebot oder B2C-Produkte mit impulsiver Kaufentscheidung ist Paid Social oder Performance SEO meist der direktere Weg als Content Marketing.
+Content-Marketing-Retainer folgen unseren öffentlichen [SEO-Preisen](/preise/seo/):
 
-## Wie unterscheidet sich StarkRank von anderen Content-Marketing-Agenturen?
+- **Einzelunternehmen / kleine KMU: ab 990 €/Monat.** Typisch zwei substanzielle Artikel pro Monat (jeweils 1.500 bis 2.500 Wörter, mit Capsule-Struktur und strukturiertem Daten-Markup).
+- **Mittelstand: 2.000 bis 4.000 €/Monat.** Vier bis acht Artikel pro Monat, mehrere Abstimmungsschleifen, fachliche Tiefe für regulierte oder erklärungsbedürftige Branchen.
+- **Enterprise: ab 5.000 €/Monat, individueller Umfang.** Mehrere interne Stakeholder, Mehrsprachigkeit, integrierte Performance-Reports über mehrere Märkte.
 
-Drei konkrete Unterschiede:
+Der passende Einstieg hängt weniger an der Artikel-Stückzahl als an der Komplexität: Wie tief muss recherchiert werden (generisches B2B vs. regulierte Finanzbranche)? Wie viele Märkte und Sprachen (ein Markt oder DE plus EN)? Wie viele Freigaben pro Artikel (eine Person oder mehrere Stakeholder)? Wieviel Experten-Input liefern Sie selbst (generisch oder über die Expertenbibliothek strukturiert)? Wir berechnen den passenden Einstieg in der [kostenlosen Erstberatung](/kontakt/) — inklusive einer konkreten Schätzung, was in den ersten 90 Tagen produziert würde.
 
-Erstens die AISO-Integration: während klassische Content-Agenturen für SEO-Rankings optimieren, denken wir Content parallel für klassische Suche und KI-Zitation mit. Das bedeutet Capsule-Struktur pro Artikel, saubere Entity-Benennung, chunkbare Antwortblöcke und Schema-Markup, das für generative Extraktion optimiert ist — nicht als Add-on, sondern als Standard. Unser [AISO-Score](/aiso-check/) ist dabei das Mess-Framework, nicht nur die Werbeversprechung.
+## Erstberatung anfragen
 
-Zweitens das Experten-Input-System: über die [Expertenbibliothek](/expertenbibliothek/) extrahieren wir das spezifische Wissen Ihres Gründers, Ihrer Senior-Fachleute oder Ihrer Kunden einmal im Onboarding und speisen es kontinuierlich in die Content-Produktion ein. Das Ergebnis: Artikel, die nicht austauschbar mit Wettbewerbs-Content sind, weil sie auf verifizierbarem Fach-Input basieren statt auf Recherche-Aggregation.
-
-Drittens die Anti-AI-Schreibdisziplin: wir haben ein dokumentiertes Banned-Patterns-Set (gestartete Sätze, Transitions, Phrasen), das wir in jedem Review prüfen. Das klingt klein, macht aber den Unterschied zwischen KI-Stil und Fachstil — ein immer wichtigerer Faktor, da KI-Systeme selbst KI-generierten Content in Antworten deprioritisieren.
+Wenn Content Marketing für Ihr Unternehmen passen könnte, ist der nächste Schritt eine [kostenlose Erstberatung](/kontakt/). 30 Minuten am Telefon — wir schauen uns gemeinsam an: aktuelle Sichtbarkeit, Wettbewerbsumfeld, Themenpotenzial, Empfehlung für den passenden Retainer-Einstieg. Falls eine andere Leistung der bessere Hebel für Ihr Unternehmen ist als ein Content-Marketing-Retainer, sagen wir Ihnen das ebenfalls — Sie bekommen eine fundierte Empfehlung, kein Verkaufsgespräch.
