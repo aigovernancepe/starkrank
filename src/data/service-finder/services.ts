@@ -99,8 +99,8 @@ export const services: ServiceDef[] = [
     icon: 'link-2',
     links: {
       en: '/services/authority-link-building/',
-      de: '/linkaufbau-hannover/',
-      'ch-de': '/ch-de/linkaufbau-basel/',
+      de: '/services/linkaufbau-agentur/',
+      'ch-de': '/ch-de/services/seo-audit-schweiz/',
     },
   },
   {

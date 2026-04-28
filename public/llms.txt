@@ -2,41 +2,39 @@
 
 > Data-driven digital marketing agency specializing in AI search optimization, technical SEO, and performance media.
 
-StarkRank is a Swiss-founded digital marketing agency focused on the DACH region, with operations in Switzerland (Basel-Landschaft) and Germany (Hannover). We help businesses become visible, cited, and recommended by AI-powered search engines and traditional search platforms. Operated by Datanalytico Feye (UID: CHE-220.283.724), a Swiss sole proprietorship.
+StarkRank is a Swiss-founded digital marketing agency focused on Germany and the Deutschschweiz, with operations in Switzerland (Basel-Landschaft) and Germany (Hannover). We help businesses become visible, cited, and recommended by AI-powered search engines and traditional search platforms. Operated by Datanalytico Feye (UID: CHE-220.283.724), a Swiss sole proprietorship.
 
 ## Services
 
-StarkRank offers 16 specialist services organised into five pillars:
+StarkRank offers specialist services organised into five pillars:
 
 ### Search & AI Intelligence
-- [AI Search Optimization](https://starkrank.com/services/ai-search-optimization/): Visibility audits and citation strategy for ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot. Includes the proprietary AISO Score framework.
-- [Technical SEO Audit](https://starkrank.com/services/technical-seo-audit/): Crawl analysis, Core Web Vitals assessment, structured data validation, and AI crawler access verification.
-- [Local SEO Consulting](https://starkrank.com/services/local-seo-consulting/): Google Business Profile optimisation, NAP+W consistency, LocalBusiness schema, and review management.
+- [AI Search Optimization](https://starkrank.com/en/services/ai-search-optimization/): Visibility audits and citation strategy for ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot. Includes the proprietary AISO Score framework.
+- [Technical SEO Audit](https://starkrank.com/en/services/technical-seo-audit/): Crawl analysis, Core Web Vitals assessment, structured data validation, and AI crawler access verification.
+- [Local SEO Consulting](https://starkrank.com/en/services/local-seo-consulting/): Google Business Profile optimisation, NAP+W consistency, LocalBusiness schema, and review management.
 
 ### Performance Media
-- [Performance Ads Management](https://starkrank.com/services/performance-ads-management/): Full-funnel paid media strategy across Google, Meta, and programmatic channels.
-- [Google Ads Management](https://starkrank.com/services/google-ads-management/): Campaign setup, optimisation, and scaling for Search, Shopping, Display, and YouTube.
-- [Google Ads Audit](https://starkrank.com/services/google-ads-audit/): Account review identifying wasted spend, missed opportunities, and quick wins.
-- [Paid Social Strategy](https://starkrank.com/services/paid-social-strategy/): Paid campaigns on Meta, LinkedIn, and TikTok aligned with business goals.
+- [Google Ads Management](https://starkrank.com/en/services/google-ads-management/): Campaign setup, optimisation, and scaling for Search, Shopping, Display, and YouTube.
+- [Google Ads Audit](https://starkrank.com/en/services/google-ads-audit/): Account review identifying wasted spend, missed opportunities, and quick wins.
+- [Paid Social Strategy](https://starkrank.com/en/services/paid-social-strategy/): Paid campaigns on Meta, LinkedIn, and TikTok aligned with business goals.
 
 ### Authority
-- [Authority Link Building](https://starkrank.com/services/authority-link-building/): Strategic link acquisition from relevant, authoritative publications.
+- [Authority Link Building](https://starkrank.com/en/services/authority-link-building/): Strategic link acquisition from relevant, authoritative publications.
 
 ### Content & Copywriting
-- [Content Marketing](https://starkrank.com/services/content-marketing/): Data-informed content programmes that build topical authority and drive organic growth.
-- [SEO Copywriting](https://starkrank.com/services/seo-copywriting/): Search-optimised copy that ranks and converts.
-- [Copywriting Audit](https://starkrank.com/services/copywriting-audit/): Review of existing copy for clarity, conversion, and search performance.
-- [Audience Persona Mapping](https://starkrank.com/services/audience-persona-mapping/): Research-driven personas that inform content, messaging, and targeting.
+- [Content Marketing](https://starkrank.com/en/services/content-marketing/): Data-informed content programmes that build topical authority and drive organic growth.
+- [SEO Copywriting](https://starkrank.com/en/services/seo-copywriting/): Search-optimised copy that ranks and converts.
+- [Copywriting Audit](https://starkrank.com/en/services/copywriting-audit/): Review of existing copy for clarity, conversion, and search performance.
 
 ### Data & Web
-- [Technical Web Design](https://starkrank.com/services/technical-web-design/): Performance-first website design built for speed, accessibility, and search.
-- [Google Analytics Consultancy](https://starkrank.com/services/google-analytics-consultancy/): GA4 setup, custom reporting, and data analysis.
-- [Performance Web Development](https://starkrank.com/services/performance-web-development/): Fast, accessible, and SEO-friendly web development.
-- [ROI Reporting & Transparency](https://starkrank.com/services/roi-reporting-transparency/): Clear dashboards connecting marketing spend to business outcomes.
+- [Technical Web Design](https://starkrank.com/en/services/technical-web-design/): Performance-first website design built for speed, accessibility, and search.
+- [Performance Web Development](https://starkrank.com/en/services/performance-web-development/): Fast, accessible, and SEO-friendly web development.
+- [Google Analytics Consultancy](https://starkrank.com/en/services/google-analytics-consultancy/): GA4 setup, custom reporting, and data analysis.
 
 ## Free Audits
-- [Free Google Ads Audit](https://starkrank.com/audits/free-google-ads-check/)
-- [Free Copywriting & UX Analysis](https://starkrank.com/audits/copywriting-ux-analysis/)
+- [Free AISO Score](https://starkrank.com/en/aiso-score/)
+- [Free Google Ads Audit](https://starkrank.com/en/free-google-ads-audit/)
+- [Free Copywriting Audit](https://starkrank.com/en/free-copywriting-audit/)
 
 ## Locations
 - Switzerland: Basel-Landschaft — info@starkrank.com

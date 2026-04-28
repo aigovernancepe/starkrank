@@ -14,7 +14,10 @@ import { getEffectiveUpdatedDate } from '../../../utils/getLastModified';
 export async function getStaticPaths() {
   const services = await getCollection('services');
   return services
-    .filter((service) => !['ai-search-optimization', 'multi-location-seo'].includes(service.data.slug))
+    // ai-search-optimization + multi-location-seo: hand-crafted EN pages.
+    // audience-persona-mapping: folded into /en/services/content-marketing/ (Stream B
+    // 2026-04-28 Decision 2); file kept as metadata for the DE hub renderer.
+    .filter((service) => !['ai-search-optimization', 'multi-location-seo', 'audience-persona-mapping'].includes(service.data.slug))
     .map((service) => ({
       params: { slug: service.data.slug },
       props: { service },

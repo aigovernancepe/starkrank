@@ -130,11 +130,29 @@ export function getPillarById(id: string): Pillar | undefined {
   return pillars.find((p) => p.id === id);
 }
 
+/**
+ * Per-locale service exclusions from the catalog. A service listed here is dropped
+ * from the pillar's services list when getLocalizedPillars is called for that locale —
+ * use when a hub no longer exists for the locale and we don't want a card pointing
+ * to a redirect-target.
+ *   ch-de: authority-link-building — Stream B 2026-04-28 retired the CH-DE Authority
+ *          hub; methodology integrates into seo-audit-schweiz + aiso-check + preise/seo
+ *          rather than maintaining a standalone CH-DE catalog entry.
+ */
+const localeServiceExclusions: Record<string, Set<string>> = {
+  'ch-de': new Set(['authority-link-building']),
+};
+
 export function getLocalizedPillars(locale: string): Pillar[] {
-  if (locale === 'en' || !pillarTranslations[locale]) return pillars;
+  const exclusions = localeServiceExclusions[locale];
+  const filteredPillars = exclusions
+    ? pillars.map((p) => ({ ...p, services: p.services.filter((s) => !exclusions.has(s)) }))
+    : pillars;
+
+  if (locale === 'en' || !pillarTranslations[locale]) return filteredPillars;
 
   const translations = pillarTranslations[locale];
-  return pillars.map((pillar) => {
+  return filteredPillars.map((pillar) => {
     const t = translations[pillar.id];
     if (!t) return pillar;
     return { ...pillar, name: t.name, tagline: t.tagline, description: t.description };

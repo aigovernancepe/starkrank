@@ -12,7 +12,6 @@ featuredServices:
   - "performance-web-development"
   - "google-ads-management"
   - "local-seo-consulting"
-  - "authority-link-building"
 sectorsTitle: "Welche Branchen profitieren in Basel am stärksten von SEO und Online-Marketing?"
 sectors:
   - name: "Pharma und Life Sciences"

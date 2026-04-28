@@ -15,7 +15,6 @@ features:
 relatedServices:
   - "seo-copywriting"
   - "content-marketing"
-  - "audience-persona-mapping"
 ---
 
 Most websites have content problems they cannot see. Pages that rank but do not convert. Copy that reads well but is invisible to AI search engines. Service descriptions that sound professional but say nothing specific. A copywriting audit makes these problems visible — and gives you a prioritised plan to fix them.
