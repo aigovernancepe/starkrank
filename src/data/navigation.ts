@@ -124,7 +124,7 @@ const deServiceHubSlugMap = new Map<string, string>([
   // Other DE hubs: urlSlug equals serviceSlug (no keyword migration warranted)
   ['google-ads-audit', 'google-ads-audit'],
   ['paid-social-strategy', 'paid-social-strategy'],
-  ['content-marketing', 'content-marketing'],
+  ['content-marketing', 'content-marketing-agentur'],
   ['seo-copywriting', 'seo-copywriting'],
   ['copywriting-audit', 'copywriting-audit'],
   ['audience-persona-mapping', 'audience-persona-mapping'],

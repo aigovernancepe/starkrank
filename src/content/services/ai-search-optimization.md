@@ -75,7 +75,7 @@ RAG systems extract information in chunks — typically the opening sentences of
 - **Comparison tables** and numbered lists that AI models extract verbatim
 - **FAQ sections** with schema markup for direct question-answer mapping
 
-This is not just formatting — it determines whether your content gets cited or ignored. For content creation and copywriting support, our [Content Marketing](/services/content-marketing/) team works alongside AISO strategy.
+This is not just formatting — it determines whether your content gets cited or ignored. For content creation and copywriting support, our [Content Marketing](/services/content-marketing-agentur/) team works alongside AISO strategy.
 
 ## How do brand entity and trust signals affect AI citations?
 

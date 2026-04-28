@@ -190,6 +190,11 @@
 /ch-de/linkaufbau-basel/             /ch-de/services/seo-audit-schweiz/          301
 /ch-de/zielgruppenanalyse-basel/     /ch-de/services/                            301
 
+# Stream B P1 slug rename B.1 (2026-04-28): DE content-marketing service hub
+# moved from canonical English slug to buyer-qualified keyword URL
+# (per feedback_serp_intent_locale_verification + Phase 3d pattern).
+/services/content-marketing/         /services/content-marketing-agentur/        301
+
 # Retired markets (/pe/*, /peru/*, /miami/*, /fort-lauderdale/*) return 404
 # via src/pages/404.astro — Cloudflare Pages does not support 410 in _redirects,
 # so we rely on the Astro-generated 404.html for "page gone" semantics.
