@@ -142,7 +142,6 @@ const chDeServiceHubSlugMap = new Map<string, string>([
   ['technical-seo-audit', 'seo-audit-schweiz'],
   ['google-ads-management', 'google-ads-schweiz'],
   ['local-seo-consulting', 'lokale-seo-schweiz'],
-  ['authority-link-building', 'linkaufbau-schweiz'],
 ]);
 
 /**

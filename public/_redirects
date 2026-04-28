@@ -56,7 +56,7 @@
 /de/impressum/                       /impressum/                                 301
 /de/datenschutz/                     /datenschutz/                               301
 /de/aiso-check/                      /aiso-check/                                301
-/de/schnellcheck/                    /schnellcheck/                              301
+/de/schnellcheck/                    /preise/seo/                                301
 /de/ecommerce-seo-audit/             /ecommerce-seo-audit/                       301
 /de/eeat-audit/                      /eeat-audit/                                301
 /de/pre-deploy-seo-check/            /pre-deploy-seo-check/                      301
@@ -143,8 +143,8 @@
 /reaktive-pressearbeit-hannover/     /linkaufbau-hannover/                       301
 /de/digitale-pr-hannover/            /linkaufbau-hannover/                       301
 /de/reaktive-pressearbeit-hannover/  /linkaufbau-hannover/                       301
-/ch-de/digitale-pr-basel/            /ch-de/linkaufbau-basel/                    301
-/ch-de/reaktive-pressearbeit-basel/  /ch-de/linkaufbau-basel/                    301
+/ch-de/digitale-pr-basel/            /ch-de/services/seo-audit-schweiz/          301
+/ch-de/reaktive-pressearbeit-basel/  /ch-de/services/seo-audit-schweiz/          301
 
 # Phase 3c Part 1 (2026-04-24): 12 DE service hubs now serve at /services/<slug>/.
 # The old catch-all /services/:slug/ → /en/services/:slug/ from Phase 2b has been
@@ -174,6 +174,21 @@
 /free-aiso-score/                    /en/aiso-score/                             301
 /audits/free-google-ads-check/       /kostenloser-google-ads-check/              301
 /audits/copywriting-ux-analysis/     /kostenloser-copywriting-check/             301
+
+# ─── Stream B mechanical (2026-04-28): 4 strategic prunes + 2 orphan CH-DE basel spokes ──
+# Schnellcheck retired in favour of /preise/seo/ pricing transparency (Decision 1
+# matrix preserved as internal sales-prep tool, not public route).
+/schnellcheck/                       /preise/seo/                                301
+/ch-de/schnellcheck/                 /ch-de/preise/seo/                          301
+# EN audience-persona-mapping folded into EN content-marketing (Decision 2).
+/en/services/audience-persona-mapping/ /en/services/content-marketing/           301
+# CH-DE Authority hub retired; methodology integrates into seo-audit-schweiz +
+# aiso-check + preise/seo (Decision 3). seo-audit-schweiz is the canonical target.
+/ch-de/services/linkaufbau-schweiz/  /ch-de/services/seo-audit-schweiz/          301
+# CH-DE basel orphan spokes pulled forward from the 26-prune mechanical batch
+# (parents deleted above; spokes would otherwise render orphaned).
+/ch-de/linkaufbau-basel/             /ch-de/services/seo-audit-schweiz/          301
+/ch-de/zielgruppenanalyse-basel/     /ch-de/services/                            301
 
 # Retired markets (/pe/*, /peru/*, /miami/*, /fort-lauderdale/*) return 404
 # via src/pages/404.astro — Cloudflare Pages does not support 410 in _redirects,

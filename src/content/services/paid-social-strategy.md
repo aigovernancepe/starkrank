@@ -14,7 +14,6 @@ features:
   - "Integration with Google Ads for full-funnel attribution"
 relatedServices:
   - "performance-ads-management"
-  - "audience-persona-mapping"
   - "google-ads-management"
 ---
 

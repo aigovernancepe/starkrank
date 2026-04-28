@@ -14,7 +14,6 @@ features:
   - "Cross-channel content distribution strategy"
 relatedServices:
   - "seo-copywriting"
-  - "audience-persona-mapping"
   - "copywriting-audit"
 faq:
   - question: "How is content marketing different from SEO copywriting?"
