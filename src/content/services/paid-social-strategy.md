@@ -38,7 +38,7 @@ Targeting is what makes social advertising profitable. We build audiences in lay
 3. **Interest and behaviour targeting** — Broader audiences based on platform data. Used for top-of-funnel awareness campaigns where the goal is reaching new people who match your customer profile.
 4. **Exclusion lists** — Equally important: we exclude existing customers, recent purchasers, and irrelevant segments to prevent wasted impressions.
 
-For a deeper dive into audience research, our [Audience Persona Mapping](/services/audience-persona-mapping/) service defines who your ideal customers are before we build targeting around them.
+For a deeper dive into audience research, our [Audience Persona Mapping](/services/zielgruppenanalyse/) service defines who your ideal customers are before we build targeting around them.
 
 ## What does the campaign structure look like?
 
