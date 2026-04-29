@@ -12,7 +12,7 @@ const description = 'Was kostet eine SEO-Agentur? StarkRank veröffentlicht Reta
 
 // Pricing commitment marker. Update manually when published bands actually change.
 // Distinct from the freshness/last-edit date (that tracks any file edit via git).
-const priceValidFrom = new Date('2026-04-01');
+const priceValidFrom = new Date('2026-04-29');
 const priceValidFromIso = priceValidFrom.toISOString().split('T')[0];
 const priceValidFromLabel = priceValidFrom.toLocaleDateString('de-DE', { year: 'numeric', month: 'long' });
 
@@ -57,6 +57,11 @@ const projectPrices = [
     service: 'E-E-A-T Audit',
     price: '1.200 €',
     scope: 'Experience-Expertise-Authoritativeness-Trustworthiness-Scoring nach 4×10-Rubrik, 10 Seiten; zusätzliche Seiten 120 €.',
+  },
+  {
+    service: 'Zielgruppenanalyse',
+    price: '1.800 € / 2.800 € / 3.600 €',
+    scope: 'Gestaffelt nach Scope: Single-Markt mit 1–2 Personas / Multi-Persona oder Multi-Markt / Multi-Markt und Multi-Segment.',
   },
 ];
 
@@ -170,6 +175,18 @@ const serviceSchema = {
         name: 'E-E-A-T Audit',
         price: '1200',
         priceCurrency: 'EUR',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Zielgruppenanalyse',
+        priceCurrency: 'EUR',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          minPrice: '1800',
+          maxPrice: '3600',
+          priceCurrency: 'EUR',
+          validFrom: priceValidFromIso,
+        },
       },
     ],
   },
