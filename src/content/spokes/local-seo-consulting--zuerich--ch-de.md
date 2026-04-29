@@ -47,4 +47,4 @@ Die Besonderheit in Zürich: Für viele Branchen reicht eine generische Zürich-
 
 Drei Dinge: Erstens die Platform-Dichte — neben Google Business Profile sind local.ch, search.ch, moneyhouse, swisscom-Verzeichnisse und branchenspezifische Register relevant. Inkonsistenzen über diese Quellen hinweg verwässern das Entity-Signal. Zweitens die Kreisstruktur — ein Unternehmen, das sowohl Kreis 1 als auch Kreis 8 bedient, braucht Einzugsgebiet- und Content-Strategien, die das präzise abbilden. Drittens die Bewertungs-Compliance — Finanzdienstleister und Anwälte können nicht frei Kundenzitate veröffentlichen; hier braucht es andere Trust-Signale als Google-Reviews.
 
-Die Strukturierte-Daten-Arbeit verbindet sich mit der Markup-Strategie unseres [Technischen SEO-Audits](/ch-de/seo-audit-zuerich/) und der Entitätsstrategie unserer [KI-Suchoptimierung](/ch-de/ki-suchoptimierung-zuerich/).
+Die Strukturierte-Daten-Arbeit verbindet sich mit der Markup-Strategie unseres [SEO Audits in Zürich](/ch-de/seo-audit-zuerich/) und der Entitätsstrategie unserer [KI-Suchoptimierung](/ch-de/ki-suchoptimierung-zuerich/).

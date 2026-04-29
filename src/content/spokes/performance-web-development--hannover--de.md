@@ -58,7 +58,7 @@ In der Praxis sind drei Faktoren am häufigsten Performance-kritisch: ungeoptimi
 
 Eine Migration lohnt sich, wenn die bestehende Plattform mehr Aufwand verursacht als sie liefert — wenn Updates Wochen statt Tage dauern, neue Features nur unter hoher Risiko-Akzeptanz möglich sind, oder Performance-Probleme durch Plattform-Architektur fest verbacken sind. Für Hannoveraner Mittelständler mit zehn Jahre alten TYPO3- oder Custom-Installationen ist das oft der Auslöser, wenn neue Geschäftsziele (E-Commerce, Konfigurator, internationale Expansion, Hannover-Messe-Präsenz mit Lead-Funnel) auf die Plattform treffen.
 
-Eine sauber geplante Migration verliert keine SEO-Werte. Wir liefern eine dokumentierte URL-Migration mit Redirect-Map (alte URL → neue URL pro Seite), Schema-Continuity, Content-Audit (was übernommen wird, was zusammengelegt, was gestrichen) und Roll-Forward-Plan. Auf Wunsch parallel ein [Technisches SEO-Audit](/seo-audit-hannover/) als Stand-aufnahme vor der Migration — damit klar ist, welche Seiten welchen organischen Wert haben und prioritär behandelt werden müssen.
+Eine sauber geplante Migration verliert keine SEO-Werte. Wir liefern eine dokumentierte URL-Migration mit Redirect-Map (alte URL → neue URL pro Seite), Schema-Continuity, Content-Audit (was übernommen wird, was zusammengelegt, was gestrichen) und Roll-Forward-Plan. Auf Wunsch parallel ein [SEO Audit in Hannover](/seo-audit-hannover/) als Stand-aufnahme vor der Migration — damit klar ist, welche Seiten welchen organischen Wert haben und prioritär behandelt werden müssen.
 
 ## Was kostet eine neue Website mit StarkRank als Webagentur in Hannover?
 

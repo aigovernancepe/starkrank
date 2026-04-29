@@ -29,7 +29,7 @@ whyParagraphs:
   - "Als Spezialagentur für klassische und KI-gestützte Suche bauen wir Ihre Marke parallel in Google-Trefferlisten und in den generierten Antworten von ChatGPT, Perplexity und Google AI Overviews auf. Das ist der Suchkanal, der die nächste Welle der B2B-Beschaffungs-Recherche definiert — und der Hebel, in dem Zürcher Finanz- und Tech-Unternehmen oft noch fast vollständig blind sind."
 faq:
   - question: "Was kostet SEO und Online-Marketing in Zürich?"
-    answer: "Die kostenlose Erstberatung ist unverbindlich. Das Technical SEO Audit startet bei 1'800 CHF (Standard, bis 1'000 URLs), Mittelstand 3'000 CHF, Enterprise ab 5'000 CHF. Ein E-E-A-T Audit liegt bei 1'500 CHF, spezialisierte E-Commerce-SEO-Audits zwischen 2'500 und 4'000 CHF. Laufende Betreuung im Retainer-Modell startet bei 1'190 CHF/Monat (Einzelunternehmen und KMU), Mittelstandsband 3'000–5'000 CHF/Monat, Enterprise ab 6'000 CHF/Monat. Vollständige Bänder transparent unter /ch-de/preise/seo/."
+    answer: "Die kostenlose Erstberatung ist unverbindlich. Das SEO Audit startet bei 1'800 CHF (Standard, bis 1'000 URLs), Mittelstand 3'000 CHF, Enterprise ab 5'000 CHF. Ein E-E-A-T Audit liegt bei 1'500 CHF, spezialisierte E-Commerce-SEO-Audits zwischen 2'500 und 4'000 CHF. Laufende Betreuung im Retainer-Modell startet bei 1'190 CHF/Monat (Einzelunternehmen und KMU), Mittelstandsband 3'000–5'000 CHF/Monat, Enterprise ab 6'000 CHF/Monat. Vollständige Bänder transparent unter /ch-de/preise/seo/."
   - question: "Arbeitet StarkRank mit Zürcher Finanz- und Versicherungsunternehmen?"
     answer: "Ja, in Compliance-konformen Strukturen. Wir betreuen Banken, Vermögensverwalter und Versicherer mit klarer Trennung von Fach- und Laienkommunikation, FINMA-Pflichtangaben-Logik und revDSG-konformem Tracking. Spekulative Anlageempfehlungen oder beratungsähnliche Inhalte ohne aufsichtsrechtliche Freigabe gehören nicht in unseren Scope."
   - question: "Hat StarkRank ein Büro in Zürich?"
@@ -57,7 +57,7 @@ Für Zürcher Finanz- und Versicherungs-Anbieter kommt eine vierte Schicht dazu:
 
 ## Was kostet SEO und Online-Marketing für ein Zürcher Unternehmen?
 
-Das Technical SEO Audit startet bei 1'800 CHF als Festpreis (Standard-Setup bis 1'000 URLs) und ist der typische Einstieg für Zürcher Unternehmen, die ihre digitale Sichtbarkeit zum ersten Mal systematisch prüfen lassen. Ein E-E-A-T Audit kostet 1'500 CHF, spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2'500 CHF (Kataloge bis 1'000 SKUs) und 4'000 CHF (Enterprise mit 10'000+ SKUs).
+Das SEO Audit startet bei 1'800 CHF als Festpreis (Standard-Setup bis 1'000 URLs) und ist der typische Einstieg für Zürcher Unternehmen, die ihre digitale Sichtbarkeit zum ersten Mal systematisch prüfen lassen. Ein E-E-A-T Audit kostet 1'500 CHF, spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2'500 CHF (Kataloge bis 1'000 SKUs) und 4'000 CHF (Enterprise mit 10'000+ SKUs).
 
 Für laufende Betreuung im Retainer-Modell veröffentlichen wir drei Bänder: ab 1'190 CHF/Monat für Einzelunternehmen und KMU, 3'000–5'000 CHF/Monat für klassischen Mittelstand, ab 6'000 CHF/Monat für Enterprise- und Multi-Standort-Mandate. Zürcher Finanz-, Versicherungs- und etablierte SaaS-Mandate landen häufig im Enterprise-Band, weil Compliance-Anforderungen, Multi-Stack-Setups und mehrere Sprachen den Betreuungsaufwand erhöhen. Die vollständigen Bänder mit Leistungsumfang stehen unter [/ch-de/preise/seo/](/ch-de/preise/seo/) — keine Tagessätze, keine versteckten Setup-Kosten, keine "Beratungsstunden" auf Verdacht.
 

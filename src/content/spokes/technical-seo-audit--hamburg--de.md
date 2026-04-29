@@ -2,9 +2,9 @@
 serviceSlug: "technical-seo-audit"
 citySlug: "hamburg"
 locale: "de"
-title: "Technisches SEO-Audit in Hamburg"
+title: "SEO Audit in Hamburg"
 description: "Belastbare technische Diagnose für Hamburger Websites — von Verlagshäusern und Konzernportalen bis zu E-Commerce-Stacks der großen Hamburger Versandhändler. StarkRank liefert eine priorisierte Roadmap, die klassische Suchmaschinen und KI-Plattformen gleichermaßen adressiert."
-localCTA: "Technisches SEO-Audit für Hamburg anfordern"
+localCTA: "SEO Audit für Hamburg anfordern"
 highlightsTitle: "Was wir prüfen"
 sectorsTitle: "Welche technischen Probleme finden wir am häufigsten?"
 highlights:
