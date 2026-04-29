@@ -76,6 +76,13 @@ const serviceSchema = {
     { '@type': 'Country', name: 'Schweiz' },
   ],
   url: pageUrl,
+  mainEntityOfPage: pageUrl,
+  ...(hub.data.schemaAbout && hub.data.schemaAbout.length > 0
+    ? { about: hub.data.schemaAbout.map((name) => ({ '@type': 'Thing', name })) }
+    : {}),
+  ...(hub.data.schemaMentions && hub.data.schemaMentions.length > 0
+    ? { mentions: hub.data.schemaMentions.map((name) => ({ '@type': 'Thing', name })) }
+    : {}),
 };
 
 const faq = hub.data.faq ?? [];
