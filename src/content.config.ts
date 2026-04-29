@@ -94,6 +94,8 @@ const serviceHubs = defineCollection({
       description: z.string(),
       tools: z.array(z.string()).optional(),
     })).optional(),
+    schemaAbout: z.array(z.string()).optional(),
+    schemaMentions: z.array(z.string()).optional(),
   }),
 });
 
