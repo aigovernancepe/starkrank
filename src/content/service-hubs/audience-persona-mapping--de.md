@@ -127,7 +127,7 @@ Für sehr frühe Startups ohne genug Sales-Gespräche und GA4-Historie ist eine 
 
 ## Was kostet eine Zielgruppenanalyse?
 
-Die Zielgruppenanalyse wird als Festpreis-Projekt kalkuliert; der Preis hängt vom Scope ab. Ein Single-Markt- und Single-Zielgruppen-Projekt (zum Beispiel eine B2B-Dienstleistung in Deutschland) ist schlanker als ein Multi-Markt- und Multi-Segment-Projekt (Enterprise vs. Mittelstand, Deutschland vs. Deutschschweiz, Erstkunden vs. Bestandskunden-Upsell). Die Größenordnung liegt im Bereich unserer übrigen Projekt-Audits, die in unseren [SEO-Preisen](/preise/seo/) als Festpreise dokumentiert sind.
+Die Zielgruppenanalyse wird als Festpreis-Projekt kalkuliert; der Preis hängt vom Scope ab. Ein Single-Markt- und Single-Zielgruppen-Projekt (zum Beispiel eine B2B-Dienstleistung in Deutschland) ist schlanker als ein Multi-Markt- und Multi-Segment-Projekt (Enterprise vs. Mittelstand, Deutschland vs. Deutschschweiz, Erstkunden vs. Bestandskunden-Upsell). Die Festpreise liegen je nach Scope bei 1.800 € (Single-Markt mit 1–2 Personas), 2.800 € (Multi-Persona oder Multi-Markt) oder 3.600 € (Multi-Markt und Multi-Segment) — vollständig in unseren [SEO-Preisen](/preise/seo/) dokumentiert.
 
 Den genauen Scope und Festpreis klären wir in der [kostenlosen Erstberatung](/kontakt/) — wir geben vorab einen festen Preis und ein Lieferdatum, kein Stundenkontingent. Für laufende Persona-Aktualisierung (etwa quartalsweise Validierungs-Checks) ist ein schlanker Retainer-Zusatz auf Bestellung verfügbar, kein separates Produkt.
 
