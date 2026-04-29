@@ -3,7 +3,7 @@ serviceSlug: "technical-seo-audit"
 urlSlug: "seo-audit-agentur"
 locale: "de"
 title: "SEO Audit Agentur"
-description: "SEO Audit Agentur für deutschen B2B-Mittelstand: 6 gewichtete Dimensionen für Google und KI-Auffindbarkeit, priorisierte Roadmap. Ab 790 €."
+description: "SEO Audit Agentur für deutschen B2B-Mittelstand: 6 gewichtete Dimensionen für Google und KI-Auffindbarkeit, priorisierte Roadmap. Ab 1.500 €."
 heroLede: "Als SEO Audit Agentur für deutschen B2B-Mittelstand findet StarkRank die Probleme, an denen Ihre Sichtbarkeit hängt: blockierte Crawler, verwaiste Seiten, fehlerhafte Canonical-Tags, DSGVO-konformes Tracking ohne Datenverlust, KI-Crawler-Zugang. Wir liefern die Befunde nach Impact geordnet als priorisierte Roadmap, die Ihr Entwicklungsteam Stück für Stück abarbeiten kann — kein 300-Zeilen-Dashboard-Dump zum Ausdrucken."
 schemaAbout:
   - "StarkRank"
@@ -116,16 +116,22 @@ Der Check ist die richtige Wahl, wenn Sie eine erste Orientierung wollen, ob KI-
 
 ## Was kostet ein SEO Audit?
 
-Ein SEO Audit kostet bei StarkRank **790 €** netto als Festpreis für eine Standard-Website mit bis zu 1.000 URLs und bis zu zwei Sprachen. Kick-off, Crawl, manuelle Prüfung, Report und der 60-minütige Walkthrough sind im Festpreis enthalten. Größere Sites, E-Commerce-Kataloge mit Filternavigation und Mehrsprachen-Setups werden nach Aufwand kalkuliert; die aktuellen Festpreis-Bänder finden Sie auf unserer [Preisseite](/preise/seo/).
+Ein SEO Audit bei StarkRank ist als Festpreis-Triplet kalkuliert. Drei Bänder, gestaffelt nach Site-Größe und Stack-Komplexität:
 
-Vier Faktoren treiben den Preis im Audit:
+- **Standard — 1.500 € netto**: bis 1.000 URLs, bis zu zwei Sprachen, Single-CMS
+- **Mittelstand — 2.500 € netto**: 1.000–5.000 URLs, multi-CMS oder Headless-Stack, zwei bis drei Sprachen
+- **Enterprise — ab 4.000 € netto**: 5.000+ URLs, internationale Multi-Domain-Setups, individueller Scope
+
+Kick-off, Crawl, manuelle Expertenprüfung, AISO-Score-Bewertung über sechs Dimensionen, priorisierte Roadmap und der 60-minütige Walkthrough sind in jedem Band enthalten. Die aktuellen Festpreis-Bänder publizieren wir transparent auf unserer [Preisseite](/preise/seo/) — keine Time-and-Material-Schätzung mit offenem Ausgang.
+
+Vier Faktoren treiben innerhalb der Bänder den genauen Preis:
 
 - **URL-Volumen** — eine Site mit 500 URLs hat andere Fehlerklassen und Stichprobengrößen als eine mit 50.000
 - **Sprachen und Länder** — mehr Locales bedeuten exponentiell mehr Canonical- und hreflang-Komplexität
 - **Stack-Besonderheiten** — Headless-Architekturen, JavaScript-SPAs, Multi-CMS-Setups oder Composable-Commerce brauchen längere manuelle Prüfung
 - **Schwerpunktsetzung** — reines klassisches SEO, reines AISO oder beides kombiniert mit unterschiedlicher Dimensionen-Gewichtung
 
-Wir kalkulieren transparent und geben vorab einen festen Preis, keine Time-and-Material-Schätzung mit offenem Ausgang. Was im Festpreis nicht enthalten ist: die Umsetzung der Fixes durch Ihr Entwicklungsteam (eigenständig oder im optionalen Retainer), zusätzliche Audit-Runs nach Fix-Phasen (Re-Crawl) und Audits, die außerhalb des Standard-Scopes liegen (etwa Multi-Domain-Setups oder internationale Site-Migrationen).
+Wir kalkulieren transparent und nennen vorab den festen Bandpreis, keine Time-and-Material-Schätzung mit offenem Ausgang. Was im Festpreis nicht enthalten ist: die Umsetzung der Fixes durch Ihr Entwicklungsteam (eigenständig oder im optionalen Retainer) und zusätzliche Audit-Runs nach Fix-Phasen (Re-Crawl als separater Festpreis kalkuliert).
 
 ## Wie läuft ein SEO Audit bei StarkRank ab?
 

@@ -12,7 +12,7 @@ const description = 'Was kostet eine SEO-Agentur in der Schweiz? StarkRank verö
 
 // Pricing commitment marker. Update manually when published bands actually change.
 // Distinct from the freshness/last-edit date (that tracks any file edit via git).
-const priceValidFrom = new Date('2026-04-01');
+const priceValidFrom = new Date('2026-04-29');
 const priceValidFromIso = priceValidFrom.toISOString().split('T')[0];
 const priceValidFromLabel = priceValidFrom.toLocaleDateString('de-CH', { year: 'numeric', month: 'long' });
 
@@ -40,8 +40,8 @@ const retainerBands = [
 const projectPrices = [
   {
     service: 'Technical SEO Audit',
-    price: '990 CHF',
-    scope: 'Einmalige vollumfängliche technische Analyse — Crawlability, Indexability, Core Web Vitals, Schema-Auszeichnung und interne Verlinkung.',
+    price: '1\'800 CHF / 3\'000 CHF / ab 5\'000 CHF',
+    scope: 'Gestaffelt nach Site-Grösse: Standard bis 1\'000 URLs / Mittelstand 1\'000–5\'000 URLs (multi-CMS) / Enterprise 5\'000+ URLs (individueller Scope). Inklusive Crawl, manueller Expertenprüfung, AISO-Score-Bewertung über sechs Dimensionen, priorisierter Roadmap und 60-minütigem Walkthrough.',
   },
   {
     service: 'E-commerce SEO Audit',
@@ -144,8 +144,14 @@ const serviceSchema = {
       {
         '@type': 'Offer',
         name: 'Technical SEO Audit',
-        price: '990',
         priceCurrency: 'CHF',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          minPrice: '1800',
+          maxPrice: '5000',
+          priceCurrency: 'CHF',
+          validFrom: priceValidFromIso,
+        },
       },
       {
         '@type': 'Offer',
