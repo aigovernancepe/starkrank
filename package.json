@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "(git rev-parse --is-shallow-repository 2>/dev/null | grep -q true && git fetch --unshallow 2>/dev/null) || true && astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "salience": "node scripts/salience-verify.mjs"
   },
   "repository": {
     "type": "git",
