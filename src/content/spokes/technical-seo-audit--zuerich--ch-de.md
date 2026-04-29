@@ -3,9 +3,9 @@ serviceSlug: "technical-seo-audit"
 citySlug: "zuerich"
 updatedDate: 2026-04-24
 locale: "ch-de"
-title: "Technisches SEO-Audit in Zürich"
+title: "SEO Audit in Zürich"
 description: "Identifizieren Sie die technischen Probleme, die Ihre Sichtbarkeit in Suchmaschinen und KI-Plattformen bremsen. StarkRank liefert eine vollständige Diagnose mit priorisierter Massnahmenplanung für Zürcher Unternehmen im Finanz-, Versicherungs- und Tech-Sektor."
-localCTA: "Technisches SEO-Audit für Zürich anfordern"
+localCTA: "SEO Audit für Zürich anfordern"
 highlightsTitle: "Was wir prüfen"
 sectorsTitle: "Welche technischen Probleme finden wir am häufigsten?"
 highlights:

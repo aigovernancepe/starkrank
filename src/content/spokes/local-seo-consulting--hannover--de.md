@@ -45,4 +45,4 @@ Für Unternehmen mit physischer Präsenz in Hannover entscheidet lokales SEO dar
 
 Neben Google sind Einträge auf Das Telefonbuch, Gelbe Seiten, GoLocal, Yelp Deutschland und branchenspezifischen Portalen relevant. Die Vorwahl 0511 für Hannover muss konsistent mit oder ohne Ländervorwahl (+49) angegeben werden. Einträge bei der IHK Hannover oder der Handwerkskammer sind vertrauenswürdige Signale, die KI-Modelle als Autoritätsnachweis werten.
 
-Das Strukturierte-Daten-Werk verbindet sich mit der Markup-Strategie unseres [Technischen SEO-Audits](/de/seo-audit-hannover/) und der Entitätsstrategie unserer [KI-Suchoptimierung](/de/ki-suchoptimierung-hannover/).
+Das Strukturierte-Daten-Werk verbindet sich mit der Markup-Strategie unseres [SEO Audits in Hannover](/de/seo-audit-hannover/) und der Entitätsstrategie unserer [KI-Suchoptimierung](/de/ki-suchoptimierung-hannover/).
