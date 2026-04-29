@@ -96,6 +96,10 @@ const serviceHubs = defineCollection({
     })).optional(),
     schemaAbout: z.array(z.string()).optional(),
     schemaMentions: z.array(z.string()).optional(),
+    areaServed: z.array(z.object({
+      type: z.enum(['Country', 'AdministrativeArea', 'State', 'City']),
+      name: z.string(),
+    })).optional(),
   }),
 });
 

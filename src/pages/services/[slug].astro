@@ -71,10 +71,12 @@ const serviceSchema = {
   name: localizedTitle,
   description: hub.data.description,
   provider: { '@id': 'https://starkrank.com/#organization' },
-  areaServed: [
-    { '@type': 'Country', name: 'Deutschland' },
-    { '@type': 'Country', name: 'Schweiz' },
-  ],
+  areaServed: hub.data.areaServed && hub.data.areaServed.length > 0
+    ? hub.data.areaServed.map(({ type, name }) => ({ '@type': type, name }))
+    : [
+        { '@type': 'Country', name: 'Deutschland' },
+        { '@type': 'Country', name: 'Schweiz' },
+      ],
   url: pageUrl,
   mainEntityOfPage: pageUrl,
   ...(hub.data.schemaAbout && hub.data.schemaAbout.length > 0
