@@ -63,4 +63,4 @@ Für Hamburger Unternehmen bedeutet das: Wer in ChatGPT, Perplexity oder Google 
 
 Unser proprietäres AISO-Score-Framework (AI Search Optimisation — KI-Suchoptimierung) bewertet Ihre KI-Suchbereitschaft in sechs Dimensionen. Für Hamburger Kunden gewichten wir zusätzlich DSGVO-konforme Umsetzung (relevant für stark regulierte Branchen wie Luftfahrt, Versicherung und Medien), deutschsprachige Entitäts-Optimierung sowie das Suchverhalten in Hamburgs spezifischen B2B- und Konsumgüter-Märkten.
 
-Das Ergebnis ist keine generische Checkliste, sondern eine priorisierte Roadmap, die zu Ihrer Wettbewerbsposition passt. Für die technische Basis arbeiten wir eng mit unserem [Technischen SEO-Audit](/seo-audit-hamburg/) zusammen, für lokale Sichtbarkeit mit unserer [Lokalen SEO-Beratung](/lokale-seo-beratung-hamburg/).
+Das Ergebnis ist keine generische Checkliste, sondern eine priorisierte Roadmap, die zu Ihrer Wettbewerbsposition passt. Für die technische Basis arbeiten wir eng mit unserem [SEO Audit in Hamburg](/seo-audit-hamburg/) zusammen, für lokale Sichtbarkeit mit unserer [Lokalen SEO-Beratung](/lokale-seo-beratung-hamburg/).

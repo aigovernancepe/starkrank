@@ -65,4 +65,4 @@ Wer in diesen Antworten nicht vorkommt, verliert die Evaluationsphase — oft be
 
 Unser AISO-Score-Framework (AI Search Optimisation — KI-Suchoptimierung) bewertet Ihre KI-Suchbereitschaft entlang von sechs Dimensionen. Für den Standort Zürich gewichten wir Entitätssignale aus dem Schweizer Handelsregister (Zefix), LinkedIn-Unternehmensdaten und branchenspezifische Register (bei regulierten Finanzdienstleistern zusätzlich FINMA-Einträge und sameAs-Verweise) besonders stark — das sind die Signale, über die LLMs Schweizer Unternehmen heute verknüpfen.
 
-Das Ergebnis ist eine priorisierte Roadmap für Ihre Wettbewerbsposition im Zürcher KI-Suchumfeld. Für die technische Umsetzung arbeiten wir mit unserem [Technischen SEO-Audit](/ch-de/seo-audit-zuerich/) zusammen, für lokale Sichtbarkeit mit der [Lokalen SEO-Beratung](/ch-de/lokale-seo-beratung-zuerich/).
+Das Ergebnis ist eine priorisierte Roadmap für Ihre Wettbewerbsposition im Zürcher KI-Suchumfeld. Für die technische Umsetzung arbeiten wir mit unserem [SEO Audit in Zürich](/ch-de/seo-audit-zuerich/) zusammen, für lokale Sichtbarkeit mit der [Lokalen SEO-Beratung](/ch-de/lokale-seo-beratung-zuerich/).

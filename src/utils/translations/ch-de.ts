@@ -46,7 +46,7 @@ export const chde: Record<string, string> = {
 
   // Service Names
   'service.ai-search-optimization': 'KI-Suchoptimierung',
-  'service.technical-seo-audit': 'Technisches SEO-Audit',
+  'service.technical-seo-audit': 'SEO Audit',
   'service.local-seo-consulting': 'Lokale SEO-Beratung',
   'service.performance-ads-management': 'Performance-Ads-Management',
   'service.google-ads-management': 'Google Ads Management',

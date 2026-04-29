@@ -3,7 +3,7 @@ serviceSlug: "technical-seo-audit"
 urlSlug: "seo-audit-schweiz"
 locale: "ch-de"
 title: "SEO Audit Schweiz"
-description: "Technischer SEO-Audit für Schweizer KMU: 150+ Kriterien, revDSG-Check, AI-Crawler-Zugang, priorisierte Roadmap. Ab 1'800 CHF. Kostenlose Erstberatung."
+description: "SEO Audit für Schweizer KMU: 150+ Kriterien, revDSG-Check, AI-Crawler-Zugang, priorisierte Roadmap. Ab 1'800 CHF. Kostenlose Erstberatung."
 heroLede: "SEO Audit Schweiz bei StarkRank ist die systematische Diagnose der Crawl-, Indexierungs- und Rendering-Probleme einer Website — mit revDSG-Konformitäts-Check und Schweizer-Hosting-Empfehlung als CH-spezifische Schicht. Sie erhalten eine priorisierte Roadmap nach Schweregrad sortiert, kein 300-Zeilen-Report zum Ausdrucken."
 processTotalTime: "PT10D"
 processSteps:
@@ -29,7 +29,7 @@ processSteps:
     description: "Monatliches Review der Umsetzung, Re-Crawl nach priorisierten Fixes, enge Verzahnung mit AISO-Score oder Webentwicklungs-Mandat."
 faq:
   - question: "Was kostet ein professioneller SEO Audit in der Schweiz?"
-    answer: "Festpreise publiziert unter [/ch-de/preise/seo/](/ch-de/preise/seo/): Pre-Deploy SEO Check 500 CHF pauschal (bis 30 URLs vor Launch), Technical SEO Audit 1'800 / 3'000 / ab 5'000 CHF nach Site-Grösse, E-E-A-T Audit 1'500 CHF (10 Seiten, 140 CHF pro zusätzliche). E-Commerce-SEO-Audits 2'500 / 3'600 / 4'000 CHF nach Shop-Grösse. Festpreis, keine T&M-Schätzung."
+    answer: "Festpreise publiziert unter [/ch-de/preise/seo/](/ch-de/preise/seo/): Pre-Deploy SEO Check 500 CHF pauschal (bis 30 URLs vor Launch), SEO Audit 1'800 / 3'000 / ab 5'000 CHF nach Site-Grösse, E-E-A-T Audit 1'500 CHF (10 Seiten, 140 CHF pro zusätzliche). E-Commerce-SEO-Audits 2'500 / 3'600 / 4'000 CHF nach Shop-Grösse. Festpreis, keine T&M-Schätzung."
   - question: "Welche Rolle spielt revDSG im SEO Audit für Schweizer Webseiten?"
     answer: "revDSG verlangt Datenschutzerklärung mit Schweizer Datenresidenz-Aussage, Consent Mode v2 default-denied und Auftragsdaten-Verarbeitungsverträge mit allen Drittanbietern (GA4, Hosting, Mailing). Ein Schweizer SEO-Audit prüft diese Anforderungen — DE-/EU-Audits fokussieren auf DSGVO und übersehen revDSG-spezifische Pflichten."
   - question: "Was unterscheidet einen SEO Audit von einem AISO Audit?"
@@ -48,20 +48,20 @@ Das Ergebnis ist eine priorisierte Roadmap mit Schweregrad-Einstufung pro Befund
 
 ## Was kostet ein professioneller SEO Audit in der Schweiz?
 
-StarkRank publiziert die Audit-Tarife transparent unter [/ch-de/preise/seo/](/ch-de/preise/seo/). Die Bänder decken die typischen Mandats-Grössen ab — der Technical SEO Audit ist nach Site-Grösse gestaffelt:
+StarkRank publiziert die Audit-Tarife transparent unter [/ch-de/preise/seo/](/ch-de/preise/seo/). Die Bänder decken die typischen Mandats-Grössen ab — der SEO Audit ist nach Site-Grösse gestaffelt:
 
 | Audit-Tier | Umfang | Preis |
 |-----------|--------|-------|
 | Pre-Deploy SEO Check | bis 30 URLs vor Launch / Migration | 500 CHF pauschal (10 CHF pro zusätzliche URL) |
-| Technical SEO Audit — Standard | bis 1'000 URLs, bis zwei Sprachen, Single-CMS | 1'800 CHF |
-| Technical SEO Audit — Mittelstand | 1'000–5'000 URLs, multi-CMS oder Headless-Stack | 3'000 CHF |
-| Technical SEO Audit — Enterprise | 5'000+ URLs, internationale Multi-Domain | ab 5'000 CHF |
+| SEO Audit — Standard | bis 1'000 URLs, bis zwei Sprachen, Single-CMS | 1'800 CHF |
+| SEO Audit — Mittelstand | 1'000–5'000 URLs, multi-CMS oder Headless-Stack | 3'000 CHF |
+| SEO Audit — Enterprise | 5'000+ URLs, internationale Multi-Domain | ab 5'000 CHF |
 | E-Commerce SEO Audit | Shop-Setup nach Katalog-Grösse | 2'500 / 3'600 / 4'000 CHF |
 | E-E-A-T Audit | 10 Seiten, 4×10-Rubrik-Scoring | 1'500 CHF (140 CHF pro zusätzliche Seite) |
 
 Festpreis nach Briefing, keine T&M-Schätzung mit offenem Ausgang. Die Erstberatung ist kostenlos.
 
-## Was prüft ein Technical SEO Audit konkret?
+## Was prüft ein SEO Audit konkret?
 
 Die fünf Prüfbereiche bei StarkRank:
 

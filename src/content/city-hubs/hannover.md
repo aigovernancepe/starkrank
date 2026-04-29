@@ -30,7 +30,7 @@ whyParagraphs:
   - "Als Spezialagentur für klassische und KI-gestützte Suche bauen wir Ihre Marke parallel in Google-Trefferlisten und in den generierten Antworten von ChatGPT, Perplexity und Google AI Overviews auf. Gerade Hannoveraner Maschinenbau- und IT-Mittelständler werden zunehmend über KI-Vorrecherche von internationalen Einkäufern bewertet — der Suchkanal, in dem die Region am wenigsten vorbereitet ist."
 faq:
   - question: "Was kostet SEO und Online-Marketing in Hannover?"
-    answer: "Die kostenlose Erstberatung ist unverbindlich. Das Technische SEO-Audit startet bei 1.500 € (Standard, bis 1.000 URLs), Mittelstand 2.500 €, Enterprise ab 4.000 €. Ein E-E-A-T-Audit liegt bei 1.200 €, spezialisierte E-Commerce-SEO-Audits zwischen 2.100 und 3.400 €. Laufende Betreuung im Retainer-Modell startet bei 990 €/Monat (Einzelunternehmen), typische Mittelstandsbudgets liegen zwischen 2.000 und 4.000 €/Monat. Vollständige Preisbänder transparent unter /preise/seo/."
+    answer: "Die kostenlose Erstberatung ist unverbindlich. Das SEO Audit startet bei 1.500 € (Standard, bis 1.000 URLs), Mittelstand 2.500 €, Enterprise ab 4.000 €. Ein E-E-A-T-Audit liegt bei 1.200 €, spezialisierte E-Commerce-SEO-Audits zwischen 2.100 und 3.400 €. Laufende Betreuung im Retainer-Modell startet bei 990 €/Monat (Einzelunternehmen), typische Mittelstandsbudgets liegen zwischen 2.000 und 4.000 €/Monat. Vollständige Preisbänder transparent unter /preise/seo/."
   - question: "Arbeitet StarkRank mit Hannoveraner Mittelständlern und Hidden Champions?"
     answer: "Ja, das ist unser Kernsegment. B2B-Mittelstand, Maschinenbau, IT-Dienstleister und industrielle Hightech-Anbieter in Niedersachsen und Norddeutschland bilden den Großteil unseres Hannoveraner Portfolios. Reine Konsumenten-Marken oder öffentliche Verwaltung sind nicht unser Fokus."
   - question: "Hat StarkRank ein Büro in Hannover?"
@@ -66,7 +66,7 @@ Für Aussteller in den großen Hallen-Themen — Industrie 4.0, Energie, Mobilit
 
 ## Was kostet SEO und Online-Marketing für ein Hannoveraner Unternehmen?
 
-Das Technische SEO-Audit startet bei 1.500 € als Festpreis (Standard-Setup bis 1.000 URLs) und ist der typische Einstieg für Hannoveraner Unternehmen, die ihre digitale Sichtbarkeit zum ersten Mal systematisch prüfen lassen. Ein E-E-A-T-Audit (Experience, Expertise, Authoritativeness, Trustworthiness) kostet 1.200 €, spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2.100 € (Kataloge bis 1.000 SKUs) und 3.400 € (Enterprise mit 10.000+ SKUs).
+Das SEO Audit startet bei 1.500 € als Festpreis (Standard-Setup bis 1.000 URLs) und ist der typische Einstieg für Hannoveraner Unternehmen, die ihre digitale Sichtbarkeit zum ersten Mal systematisch prüfen lassen. Ein E-E-A-T-Audit (Experience, Expertise, Authoritativeness, Trustworthiness) kostet 1.200 €, spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2.100 € (Kataloge bis 1.000 SKUs) und 3.400 € (Enterprise mit 10.000+ SKUs).
 
 Für laufende Betreuung im Retainer-Modell veröffentlichen wir drei Bänder: ab 990 €/Monat für Einzelunternehmen und Kleinunternehmen, 2.000–4.000 €/Monat für klassischen Mittelstand, ab 5.000 €/Monat für Enterprise- und Multi-Standort-Mandate. Hannoveraner Maschinenbau- und IT-Mandate landen typischerweise im Mittelstands-Band, je nach Anzahl betreuter Kanäle und ob messebegleitende Strecken Teil des Mandats sind. Die vollständigen Bänder mit Leistungsumfang stehen unter [/preise/seo/](/preise/seo/) — keine Tagessätze, keine versteckten Setup-Kosten, keine "Beratungsstunden" auf Verdacht.
 

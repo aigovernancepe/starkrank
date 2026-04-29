@@ -44,4 +44,4 @@ Für Unternehmen mit physischer Präsenz in Hamburg entscheidet lokales SEO dar�
 
 Neben Google sind in Deutschland Einträge auf Das Telefonbuch, Gelbe Seiten, GoLocal, Yelp Deutschland und branchenspezifischen Portalen relevant. Die Vorwahl 040 muss konsistent mit oder ohne Ländervorwahl (+49) angegeben werden. Einträge bei Handelskammer Hamburg und Handwerkskammer Hamburg sind vertrauenswürdige Signale, die KI-Modelle als Autoritätsnachweis werten.
 
-Die Strukturierten-Daten-Arbeit verbindet sich mit der Markup-Strategie unseres [Technischen SEO-Audits](/seo-audit-hamburg/) und der Entitäts-Strategie unserer [KI-Suchoptimierung](/ki-suchoptimierung-hamburg/) — gemeinsam entsteht ein konsistentes, lokal verankertes Sichtbarkeitsprofil.
+Die Strukturierten-Daten-Arbeit verbindet sich mit der Markup-Strategie unseres [SEO Audits in Hamburg](/seo-audit-hamburg/) und der Entitäts-Strategie unserer [KI-Suchoptimierung](/ki-suchoptimierung-hamburg/) — gemeinsam entsteht ein konsistentes, lokal verankertes Sichtbarkeitsprofil.
