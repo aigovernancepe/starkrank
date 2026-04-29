@@ -35,6 +35,13 @@ deliverables:
   - "Markenentitäts-Strategie für den deutschen und internationalen Markt inklusive sameAs-Anbindung"
   - "KI-Erwähnungs-Monitoring (ChatGPT, Perplexity, Gemini) mit monatlichem Performance-Dashboard"
   - "DSGVO-konforme Umsetzung aller Tracking-, Monitoring- und Crawler-Steuerungs-Maßnahmen"
+clientProvides:
+  - title: "Bing Webmaster Tools: Domain-Verifizierung"
+    description: "Microsofts neues AI-Performance-Dashboard zeigt erstmals, in welchen Copilot- und Bing-Chat-Antworten Ihre Domain bereits zitiert wird. Verifizierung per DNS-TXT-Eintrag oder Datei-Upload — die Anleitung erhalten Sie direkt nach der Buchung."
+  - title: "Google Analytics 4: Leserolle"
+    description: "Damit wir tatsächlichen KI-Traffic von ChatGPT, Perplexity, Claude und Copilot in Ihrem Property nachweisen können."
+  - title: "Google Search Console: Leserolle"
+    description: "Für Klick- und Ranking-Kontext als Vergleichsmaßstab zu Ihrer KI-Sichtbarkeit."
 faq:
   - question: "Was kostet KI-Suchoptimierung in Hamburg?"
     answer: "Die kostenlose Erstbewertung über zwei Dimensionen ist unverbindlich. Das vollständige 6-Dimensionen-Audit beginnt bei 3.000 €, laufende Optimierung ab 3.000 € pro Monat."

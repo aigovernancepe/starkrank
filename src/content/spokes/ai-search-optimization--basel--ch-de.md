@@ -36,6 +36,13 @@ deliverables:
   - "Content-Restrukturierungsplan mit frageorientierten Überschriften und direkten Antworten"
   - "Einrichtung von KI-Erwähnungsmonitoring und monatliches Performance-Dashboard"
   - "revDSG-konforme Umsetzung aller Tracking- und Monitoring-Massnahmen"
+clientProvides:
+  - title: "Bing Webmaster Tools: Domain-Verifizierung"
+    description: "Microsofts neues AI-Performance-Dashboard zeigt erstmals, in welchen Copilot- und Bing-Chat-Antworten Ihre Domain bereits zitiert wird. Verifizierung per DNS-TXT-Eintrag oder Datei-Upload — die Anleitung erhalten Sie direkt nach der Buchung."
+  - title: "Google Analytics 4: Leserolle"
+    description: "Damit wir tatsächlichen KI-Traffic von ChatGPT, Perplexity, Claude und Copilot in Ihrem Property nachweisen können."
+  - title: "Google Search Console: Leserolle"
+    description: "Für Klick- und Ranking-Kontext als Vergleichsmassstab zu Ihrer KI-Sichtbarkeit."
 faq:
   - question: "Was kostet KI-Suchoptimierung in Basel?"
     answer: "Die kostenlose Erstbewertung (2 Dimensionen) ist unverbindlich. Das umfassende 6-Dimensionen-Audit beginnt ab 4'000 CHF. Laufende Optimierung ab 5'000 CHF/Monat."

@@ -115,6 +115,10 @@ const spokes = defineCollection({
       description: z.string(),
     })).optional(),
     deliverables: z.array(z.string()).optional(),
+    clientProvides: z.array(z.object({
+      title: z.string(),
+      description: z.string(),
+    })).optional(),
     faq: z.array(faqItem).optional(),
     updatedDate: z.coerce.date().optional(),
     highlightsTitle: z.string().optional(),

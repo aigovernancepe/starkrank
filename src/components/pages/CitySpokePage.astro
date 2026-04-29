@@ -79,6 +79,7 @@ const SpokeContent = hasSpokeContent ? (await render(spoke)).Content : null;
 const highlights = spoke?.data?.highlights ?? [];
 const sectors = spoke?.data?.sectors ?? [];
 const deliverables = spoke?.data?.deliverables ?? [];
+const clientProvides: Array<{ title: string; description: string }> = spoke?.data?.clientProvides ?? [];
 const faq: Array<{ question: string; answer: string }> = spoke?.data?.faq ?? [];
 const highlightsTitle = spoke?.data?.highlightsTitle ?? null;
 const sectorsTitle = spoke?.data?.sectorsTitle ?? null;
@@ -522,6 +523,27 @@ const allSchemas = [
               {pricingSignal}
             </p>
           )}
+        </Section>
+      )}
+
+      {/* Section 4.5: Client-provided preconditions (AISO + future audit-style services) */}
+      {clientProvides.length > 0 && (
+        <Section bg="cream">
+          <SectionHeader label="Mitwirkung" title="Was Sie vor dem Audit vorbereiten" />
+          <p class="text-base font-body text-gray leading-relaxed mb-8 max-w-3xl">
+            Für eine präzise AISO-Bewertung benötigen wir Lesezugriff auf drei Datenquellen. Setup-Aufwand: rund 15 Minuten.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {clientProvides.map((item: { title: string; description: string }) => (
+              <div class="bg-white border border-gray-light/40 rounded-lg p-5">
+                <h3 class="text-base font-headline font-bold text-navy mb-2">{item.title}</h3>
+                <p class="text-sm font-body text-gray leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+          <p class="mt-6 text-sm font-body text-gray max-w-3xl">
+            Wir nehmen keine Änderungen an Ihren Konten vor. Implementierungsempfehlungen aus dem Audit setzen Sie eigenverantwortlich um — oder beauftragen sie separat.
+          </p>
         </Section>
       )}
 
