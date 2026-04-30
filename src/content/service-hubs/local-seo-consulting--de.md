@@ -4,7 +4,7 @@ urlSlug: "local-seo-agentur"
 locale: "de"
 title: "Local SEO Agentur"
 description: "Local SEO Agentur für deutschen Mittelstand: Citation-Stufenmodell, Google Business Profile, AI-Local-Pack-Readiness. Hannover, Bremen, Hamburg."
-heroLede: "Als Local SEO Agentur für Mittelständler mit Standort und Einzugsgebiet baut StarkRank lokale Sichtbarkeit über das Citation-Stufenmodell auf: sechs Stufen vom Google Business Profile bis zu lokalen Community-Plattformen, in vier Wochen aufgebaut, mit messbarem Ranking-Fortschritt pro Stufe. Lieferung Hannover, Bremen und Hamburg — keine deutschlandweite Coverage-Behauptung, dafür belegte Ortspräsenz im Norden."
+heroLede: "Als Local SEO Agentur für Mittelständler mit Standort und Einzugsgebiet baut StarkRank lokale Sichtbarkeit über das Citation-Stufenmodell auf: sechs Stufen vom Google Business Profile bis zu lokalen Community-Plattformen, in vier Wochen aufgebaut, mit messbarem Ranking-Fortschritt pro Stufe. Lieferung Hannover, Bremen und Hamburg — keine deutschlandweite Abdeckungs-Behauptung, dafür belegte Ortspräsenz im Norden."
 schemaAbout:
   - "StarkRank"
   - "Local SEO Agentur"
@@ -28,14 +28,14 @@ areaServed:
 processTotalTime: "PT28D"
 processSteps:
   - name: "Lokale Baseline-Analyse"
-    description: "Audit der aktuellen lokalen Sichtbarkeit: Google-Business-Profile-Completeness, aktuelle Rankings für lokale Kernsuchanfragen, Citation-Profil über die Top-50 Plattformen, Review-Velocity gegen die Top-3-Wettbewerber im Einzugsgebiet, NAP-Konsistenz, Wettbewerbs-Vergleich. Liefert die Startposition für das Citation-Stufenmodell und identifiziert AI-Local-Pack-blockierende Name-Mismatches."
+    description: "Audit der aktuellen lokalen Sichtbarkeit: Google-Business-Profile-Vollständigkeit, aktuelle Rankings für lokale Kernsuchanfragen, Citation-Profil über die Top-50 Plattformen, Review-Velocity gegen die Top-3-Wettbewerber im Einzugsgebiet, NAP-Konsistenz, Wettbewerbs-Vergleich. Liefert die Startposition für das Citation-Stufenmodell und identifiziert AI-Local-Pack-blockierende Name-Abweichungen."
     tools:
       - "Google Business Profile"
       - "Screaming Frog"
       - "DataForSEO Grid Rank"
       - "Google Search Console"
   - name: "Tier 0: Google Business Profile, Apple Business, Bing Places"
-    description: "Vollständigkeit aller Felder, korrekte Primary- und Additional-Categories, Services- und Products-Listen, Q&A-Pflege, Attributes, GBP-Posts-Strategie, Photo-Upload-Rhythmus, Messaging-Aktivierung. Apple Business Connect und Bing Places parallel aufgesetzt — beides relevant für AI-Suchmaschinen, die nicht ausschließlich auf Google-Daten zugreifen."
+    description: "Vollständigkeit aller Felder, korrekte Primary- und Additional-Categories, Services- und Products-Listen, Q&A-Pflege, Attributes, GBP-Posts-Strategie, Foto-Upload-Rhythmus, Nachrichten-Aktivierung. Apple Business Connect und Bing Places parallel aufgesetzt — beides relevant für AI-Suchmaschinen, die nicht ausschließlich auf Google-Daten zugreifen."
     tools:
       - "Google Business Profile"
       - "Apple Business Connect"
@@ -56,7 +56,7 @@ processSteps:
     description: "Pro Standort eine eigene Landingpage mit LocalBusiness-Schema (geo, openingHours, branchen-spezifische Offer-Typen), standort-spezifischem Content (mindestens 50 % unique pro Standort, keine Stadt-Find-Replace-Klone), hreflang bei Mehrsprachigkeit, IndexNow-Integration. Grid-Rank-Tracking über mehrere Mess-Punkte im Einzugsgebiet als laufende Erfolgsmessung."
 faq:
   - question: "Ab wie vielen Standorten lohnt sich eine Local SEO Agentur?"
-    answer: "Schon ab einem Standort. Für Unternehmen mit zehn oder mehr Standorten ist der Scope breiter (Multi-Location-Management, Portfolio-Roll-up-Reporting, GBP-API-Integration) — dafür bieten wir [Multi-Location SEO](/en/services/multi-location-seo/) als spezialisiertes Produkt an. Zwischen einem und zehn Standorten ist die Local SEO Agentur in der Regel der passende Zugriff."
+    answer: "Schon ab einem Standort. Für Unternehmen mit zehn oder mehr Standorten ist der Umfang breiter (Multi-Location-Management, Portfolio-Roll-up-Reporting, GBP-API-Integration) — dafür bieten wir [Multi-Location SEO](/en/services/multi-location-seo/) als spezialisiertes Produkt an. Zwischen einem und zehn Standorten ist die Local SEO Agentur in der Regel der passende Zugriff."
   - question: "Brauchen wir ein Google Business Profile, um lokal zu ranken?"
     answer: "Ja, für den Local Pack und Google Maps praktisch zwingend, und für den AI Local Pack 2026 erst recht. Ohne GBP ist die lokale Sichtbarkeit auf organische Treffer beschränkt — dort konkurrieren Sie aber gegen Verzeichnis-Einträge, die Sie nicht kontrollieren. Wir helfen bei GBP-Aufsetzung und -Verifikation, falls noch nicht vorhanden, oder bei der Wiederherstellung nach einer Suspension."
   - question: "Funktioniert lokale SEO auch für Dienstleister ohne Publikumsverkehr?"
@@ -66,7 +66,7 @@ faq:
   - question: "Wie messen Sie den Erfolg von Local SEO?"
     answer: "Pro Stufe im Citation-Stufenmodell messen wir die Veränderung in zwei Quellen: Grid-Rank-Scans über mehrere Mess-Punkte im Einzugsgebiet (nicht nur Stadt-Mittelpunkt) und Google-Business-Profile-Insights (Anrufe, Wegbeschreibungen, Direct-Searches versus Discovery-Searches). Ergänzt um GSC-lokale-Klick-Segmentierung und GA4-Conversion-Pfade aus organischen lokalen Quellen. Monatlicher Report mit Vergleich gegen die Top-3-Wettbewerber im Einzugsgebiet."
   - question: "Wie wählt man die richtige Local SEO Agentur aus?"
-    answer: "Drei harte Kriterien: nennt die Agentur konkrete Methodik (named framework, nicht 'unser bewährtes Vorgehen'), benennt sie konkrete Tools (mit Tool-Namen, nicht 'professionelle Tools') und gibt sie Auskunft zu Themen wie Review Jail, AI Local Pack und NAP-Entity-Resolution? Wer auf alle drei plausibel antwortet, hat sich mit dem Stand 2026 ernsthaft auseinandergesetzt. Wer mit Ranking-Garantien arbeitet, eher nicht."
+    answer: "Drei harte Kriterien: nennt die Agentur konkrete Methodik (benanntes Framework, nicht 'unser bewährtes Vorgehen'), benennt sie konkrete Werkzeuge (mit Werkzeug-Namen, nicht 'professionelle Tools') und gibt sie Auskunft zu Themen wie Review Jail, AI Local Pack und NAP-Entity-Resolution? Wer auf alle drei plausibel antwortet, hat sich mit dem Stand 2026 ernsthaft auseinandergesetzt. Wer mit Ranking-Garantien arbeitet, eher nicht."
 ---
 
 ## Was ist eine Local SEO Agentur?
@@ -96,7 +96,7 @@ Die Wochen-Kadenz ist absichtlich. Jede Stufe verändert die Sichtbarkeit messba
 
 Der klassische 3-Pack — die drei Local-Pack-Tiles über den organischen Treffern — ist seit Anfang 2026 nicht mehr die einzige Anzeige-Form lokaler Suchergebnisse auf Mobilgeräten. Google rollt zunehmend ein zusätzliches Format aus, das wir hier AI Local Pack nennen: KI-generierte Antwort-Tiles, die einzelne Anbieter direkt mit Verfügbarkeit, Bewertungen und kurzem Beschreibungstext kombinieren. Die genaue Quote variiert je Branche und Tageszeit; relevant ist: ein wachsender Anteil mobiler lokaler Suchen wird über dieses neue Format gesteuert.
 
-Was sich ändert, ist die Entity-Resolution. Der klassische Local Pack toleriert leichte Diskrepanzen zwischen Ihrem Google-Business-Profile-Namen und Ihrem Website-Title — Google ordnet die Treffer auch dann zu, wenn die Schreibweisen nur ähnlich sind. Der AI Local Pack ist strenger. Ein typisches Failure-Pattern: Ihr GBP-Eintrag heißt „Müller Rechtsanwälte", Ihr Website-Title heißt „Anwaltskanzlei Müller Köln". Im klassischen 3-Pack erscheinen Sie trotzdem, im AI Local Pack zeigt das System ein leeres Tile, weil die Entity-Auflösung fehlschlägt. Reviews und Ranking helfen nicht, wenn der Eintrag entitäts-blind bleibt.
+Was sich ändert, ist die Entity-Resolution. Der klassische Local Pack toleriert leichte Diskrepanzen zwischen Ihrem Google-Business-Profile-Namen und Ihrem Website-Title — Google ordnet die Treffer auch dann zu, wenn die Schreibweisen nur ähnlich sind. Der AI Local Pack ist strenger. Ein typisches Fehler-Muster: Ihr GBP-Eintrag heißt „Müller Rechtsanwälte", Ihr Website-Title heißt „Anwaltskanzlei Müller Köln". Im klassischen 3-Pack erscheinen Sie trotzdem, im AI Local Pack zeigt das System ein leeres Tile, weil die Entity-Auflösung fehlschlägt. Reviews und Ranking helfen nicht, wenn der Eintrag entitäts-blind bleibt.
 
 Die Konsequenz für lokale Sichtbarkeit 2026: NAP-Konsistenz wird nicht nur ein Citation-Hygiene-Thema, sondern zur Voraussetzung für AI-Local-Pack-Sichtbarkeit. Wer als Local SEO Agentur auf einem 2024er-Modell hängenbleibt, übersieht den größeren strukturellen Shift. Wir prüfen im Audit explizit auf Name-Mismatches zwischen GBP, Website-Title, Schema-Markup und den Tier-1- bis Tier-3-Citations, und rückwärts auf jede Plattform, in die Daten propagieren.
 
@@ -136,7 +136,7 @@ Ein Local-SEO-Audit bei deutschen Mittelständlern fördert wiederkehrende Muste
 - **Name-Mismatch GBP versus Website:** der AI-Local-Pack-Killer aus der vorigen Sektion, oft historisch entstanden durch Rebranding ohne synchronisiertes GBP-Update
 - **Alte „Google My Business"-Setups:** Profile, die seit dem Übergang zu Google Business Profile 2022 keine systematische Audit-Runde gesehen haben
 
-Diese Muster sind in der Regel nicht das Ergebnis schlechter Arbeit, sondern das Ergebnis einer einmal-aufgesetzten-und-seitdem-nicht-gepflegten GBP-Basis. Eine strukturierte Audit- und Maintenance-Sequenz holt sie systematisch zurück.
+Diese Muster sind in der Regel nicht das Ergebnis schlechter Arbeit, sondern das Ergebnis einer einmal-aufgesetzten-und-seitdem-nicht-gepflegten GBP-Basis. Eine strukturierte Audit- und Wartungs-Sequenz holt sie systematisch zurück.
 
 ## Wie unterscheidet sich Local SEO von nationaler SEO?
 
@@ -144,7 +144,7 @@ Local SEO und nationale SEO teilen die Suchmaschinenoptimierungs-Grundlagen, div
 
 | Dimension | Local SEO | Nationale SEO |
 |-----------|-----------|---------------|
-| Ranking-Hauptfaktoren | Google Business Profile, NAP-Konsistenz, Reviews, Proximity zum Sucher | Backlink-Profil, Content-Tiefe, technische SEO, E-E-A-T-Signale |
+| Ranking-Hauptfaktoren | Google Business Profile, NAP-Konsistenz, Reviews, Nähe zum Sucher | Backlink-Profil, Content-Tiefe, technische SEO, E-E-A-T-Signale |
 | Schlüssel-Schema | LocalBusiness, Service mit areaServed | Article, Organization, Product |
 | Schlüssel-Tools | GBP, Citation-Crawler, Grid-Rank-Tools | Site-Crawler, Backlink-Analyzer, GSC, GA4 |
 | Sichtbarkeits-Format | Local Pack, AI Local Pack, organisch | AI Overview, organisch |
@@ -162,17 +162,17 @@ Local SEO bei StarkRank wird im Rahmen unserer SEO-Retainer-Bänder berechnet (s
 | Mittelstand | 2.000 – 4.000 €/Monat | Bis 5 Standorte, vollständiges Citation-Stufenmodell, Grid-Rank-Tracking, Q&A-Pflege, Review-Response-SLA |
 | Enterprise / Multi-Standort | ab 5.000 €/Monat | 5+ Standorte, Multi-Location-Koordination, GBP-API-Integration, Portfolio-Roll-up-Reporting |
 
-Welcher Scope der passende ist, hängt von Standort-Anzahl, Branche, Wettbewerbs-Dichte im Einzugsgebiet und vorhandenem internem Team ab. Wir klären das in der [kostenlosen Erstberatung](/kontakt/): kein Sales-Druck, kein automatischer Versand eines vorausgefüllten Vertrags. Für Ketten oder Franchise-Setups mit 20+ Standorten ist [Multi-Location SEO](/en/services/multi-location-seo/) der präzisere Zugriff.
+Welcher Umfang der passende ist, hängt von Standort-Anzahl, Branche, Wettbewerbs-Dichte im Einzugsgebiet und vorhandenem internem Team ab. Wir klären das in der [kostenlosen Erstberatung](/kontakt/): kein Verkaufsdruck, kein automatischer Versand eines vorausgefüllten Vertrags. Für Ketten oder Franchise-Setups mit 20+ Standorten ist [Multi-Location SEO](/en/services/multi-location-seo/) der präzisere Zugriff.
 
 Optional bieten wir das initiale Setup als Festpreis-Projekt (90-Tage-Begleitung nach Standort-Anzahl) ohne laufenden Retainer an, wenn die Erwartung ist, das Local-SEO-Setup einmal sauber aufzubauen und danach intern weiterzuführen.
 
-## Welche Tools wir einsetzen — und welche nicht
+## Welche Werkzeuge wir einsetzen — und welche nicht
 
-Ein bewusst reduzierter Tool-Stack, an dem wir uns festlegen:
+Ein bewusst reduzierter Werkzeug-Stack, an dem wir uns festlegen:
 
 - **Google Business Profile API** für strukturierte Posts, Q&A-Monitoring und Insights-Export jenseits der GBP-UI
-- **Screaming Frog** für vollständige Citation-Crawls und automatisierte NAP-Discrepancy-Detection über Ihre Top-50 Plattformen
-- **DataForSEO Grid Rank** für rang-color-coded lokale Sichtbarkeits-Karten mit mehreren Mess-Punkten im Einzugsgebiet statt nur Stadt-Mittelpunkt
+- **Screaming Frog** für vollständige Citation-Crawls und automatisierte NAP-Diskrepanz-Erkennung über Ihre Top-50 Plattformen
+- **DataForSEO Grid Rank** für rang-farbcodierte lokale Sichtbarkeits-Karten mit mehreren Mess-Punkten im Einzugsgebiet statt nur Stadt-Mittelpunkt
 - **BigQuery** (`starkrank-de-prod.gbp_signals`) für historisches Review-Velocity-Tracking jenseits der GBP-UI-Anzeige-Grenze
 - **Google Search Console und GA4** für organische Sichtbarkeit und Conversion-Pfade jenseits des Local Packs
 - **Manuelle Expertenprüfung** für Q&A-Antworten, Review-Responses und Entity-Resolution: Schritte, die Aufmerksamkeit für die einzelne Formulierung brauchen, nicht Geschwindigkeit
@@ -181,6 +181,6 @@ Was wir bewusst nicht einsetzen:
 
 - **Keine KI für Review-Antworten.** Eine generische LLM-Antwort auf eine 1-Sterne-Bewertung erzeugt mehr Schaden als Reputations-Hilfe. Reviews bekommen menschliche Antworten, oft kurz, immer spezifisch.
 - **Keine KI für Entity-Auflösung.** Schreibweisen-Vergleiche, Telefon-Normalisierung, Adress-Validierung laufen über deterministische Logik, nicht über LLM-Heuristik. Numerisch-identitäre Operationen sind nicht die Stärke generativer Modelle.
-- **Keine „professionelle Tools"-Floskeln.** Wenn ein Tool genannt wird, dann mit Namen und mit Begründung, warum genau dieses und nicht das gefühlt-äquivalente Konkurrenz-Tool.
+- **Keine „professionelle Tools"-Floskeln.** Wenn ein Werkzeug genannt wird, dann mit Namen und mit Begründung, warum genau dieses und nicht das gefühlt-äquivalente Konkurrenz-Werkzeug.
 
-Den Stack passen wir an, wenn ein Vendor sich bewährt oder wegfällt. Aktueller Stand: oben dokumentiert.
+Den Werkzeug-Stack passen wir an, wenn ein Anbieter sich bewährt oder wegfällt. Aktueller Stand: oben dokumentiert.
