@@ -1,0 +1,468 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import Button from '../../components/ui/Button.astro';
+
+const title = 'SEO für Ärzte in der Schweiz — revDSG-konform | StarkRank';
+const description = 'SEO für Schweizer Facharzt-Praxen: revDSG-konform, FMH-Werberecht-bewusst, AI-Search-messbar. Lebende Fallstudie Handzentrum Ost. Erstberatung gratis.';
+
+const pricingTiers = [
+  { tier: 'Einzelpraxis / KMU', price: 'ab 1\'190 CHF', profile: 'Einzelner Standort, klares Spezialgebiet' },
+  { tier: 'Mittelstand / Mehr-Standort', price: '3\'000–5\'000 CHF', profile: '2–4 Standorte oder Klinik-Sub-Spezialgebiet' },
+  { tier: 'Klinik / Multi-Standort', price: 'ab 6\'000 CHF', profile: 'Individueller Scope, krankheitsbild-skalierte Inhalte' },
+];
+
+const comparison = [
+  {
+    axis: 'Hauptträger',
+    praxismarketing: 'Print, Logo, Praxisräume, Patienten-Newsletter',
+    seoForDoctors: 'Indexierbarkeit, Schema-Markup, AI-Citability, Local Pack',
+  },
+  {
+    axis: 'Messbarkeit',
+    praxismarketing: 'Markenwiedererkennung, indirekt',
+    seoForDoctors: 'Position, Klicks, AI-Citation-Quote, direkt',
+  },
+  {
+    axis: 'Reichweite',
+    praxismarketing: 'lokal, Bestandspatienten',
+    seoForDoctors: 'überregional, recherchierende Erstpatienten und Zuweiser',
+  },
+  {
+    axis: 'Häufigkeit',
+    praxismarketing: 'jährliche Brand-Refresh-Zyklen',
+    seoForDoctors: 'quartalsweises Re-Scoring, kontinuierliche Inhaltspflege',
+  },
+];
+
+const measurementMetrics = [
+  {
+    name: 'AISO Score',
+    body: 'StarkRank-eigene 6-Dimensions-Diagnostik 0–100 für AI-Search-Readiness (Crawlability, Structure, Authority, Citability, Freshness, Measurability). Quartalsweises Re-Scoring.',
+  },
+  {
+    name: 'GSC-Indexierungs-Quote',
+    body: 'Wie viele Praxis-URLs sind tatsächlich indexierbar. Bei Erst-Audits liegt die Quote regelmässig unter 50 Prozent.',
+  },
+  {
+    name: 'Position × CTR auf Krankheitsbild-Queries',
+    body: 'Viele Praxen ranken bereits, ohne Klicks zu konvertieren — die Conversion-Surface fehlt.',
+  },
+  {
+    name: 'AI-Citation-Quote',
+    body: 'Wie oft zitieren ChatGPT, Perplexity und Gemini die Praxis im Fachgebiet.',
+  },
+  {
+    name: 'Mobile Core Web Vitals',
+    body: 'LCP, CLS und TBT (Lab-Proxy für INP). Die Mobile-Bedeutung wird systematisch unterschätzt — Mobile-First-Indexierung ist seit Jahren Default.',
+  },
+];
+
+const regulatoryAnchors = [
+  {
+    title: 'revDSG-Konformität',
+    body: 'Datenschutzerklärung mit expliziter Schweizer Datenresidenz-Aussage, Consent Mode v2 default-denied, Auftragsdaten-Verarbeitungsverträge mit allen Drittanbietern (Tracking, Hosting, Formular-Tools). DE-DSGVO-Audits prüfen DSGVO-Wortlaut; revDSG hat eigene Spezifika.',
+  },
+  {
+    title: 'FMH-Standesordnung Werberecht',
+    body: 'Sachlich-berufsbezogene Information statt anpreisender Werbung. Keine vergleichende Werbung. Keine Heilversprechen oder Erfolgsgarantien. Eine Formulierung wie „bestes Karpaltunnel-Resultat in der Region" ist ein Standesrechts-Risiko, kein Marketing-Asset.',
+  },
+  {
+    title: 'HMG-Werberestriktionen',
+    body: 'Werbung für verschreibungspflichtige Heilmittel an Laien ist verboten; Werbung an Fachpersonen ist formal limitiert. Service-Seiten dürfen keine Wirkstoffnamen oder Markenmedikamente als Conversion-Köder nutzen.',
+  },
+];
+
+const collaborationSteps = [
+  {
+    num: '01',
+    title: 'Erstberatung gratis',
+    body: '30 Minuten. Standortdiagnose plus AISO-Quick-Check auf zwei Dimensionen — Crawlability und Structure — damit eine Hausnummer auf dem Tisch liegt.',
+  },
+  {
+    num: '02',
+    title: 'Diagnose-Tiefenphase',
+    body: '1–2 Wochen. Technical Audit, AISO Score Baseline, GSC-Indexierungs-Snapshot, Common-Crawl-Verifikation.',
+  },
+  {
+    num: '03',
+    title: 'Roadmap-Übergabe',
+    body: 'Reihenfolge der Massnahmen, Kostenfeld, Messmetriken, Compliance-Checkpunkte für revDSG, FMH-Standesordnung und HMG.',
+  },
+  {
+    num: '04',
+    title: 'Umsetzung',
+    body: 'Im Retainer für laufende Begleitung, als Festpreis-Audit für Einzeldiagnosen.',
+  },
+  {
+    num: '05',
+    title: 'Quartalsweises Re-Scoring',
+    body: 'AISO Score plus dokumentierte Lessons — sichtbar im Mandat, sichtbar in dieser Fallstudie.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Was ist SEO für Ärzte und für welche Praxen lohnt es sich?',
+    a: 'SEO für Ärzte ist die systematische Optimierung der Praxis-Website für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity und Google AI Overviews — robots-Konfiguration, Schema-Markup, Local-Pack-Sichtbarkeit, AI-Citability. Sie lohnt sich für Spezialkliniken und Facharzt-Praxen mit Selbstzahler-Anteil oder Zuweiser-Funnel. Für reine Hausarzt-Allgemeinmedizin mit voller Patientenliste ist der ROI in der Regel zu schwach.',
+  },
+  {
+    q: 'Welche regulatorischen Besonderheiten gelten für Schweizer Arztpraxen?',
+    a: 'Drei Regulierungs-Anker prägen jede Schweizer Praxis-Website und werden von DE-fokussierten SEO-Audits routinemässig übersehen: revDSG für die Datenverarbeitung, FMH-Standesordnung für das Werberecht und HMG für Heilmittel-Werbung. Jeder dieser Anker hat eigene Sprach- und Pflicht-Spezifika, die in DSGVO- oder Heilmittelwerbegesetz-orientierten Audits schlicht nicht auftauchen — mit dem Ergebnis, dass Schweizer Praxen unter DE-Audit-Logik regelmässig Compliance-Lücken behalten.',
+  },
+  {
+    q: 'Was kostet SEO für eine Arztpraxis in der Schweiz?',
+    a: 'SEO für Ärzte folgt drei transparenten Retainer-Bändern in der Schweiz, ergänzt um pauschale Einmal-Audits, ohne medizinischen Aufschlag. Einzelpraxis und KMU starten ab 1\'190 CHF pro Monat, Mittelstand und Mehr-Standort liegen zwischen 3\'000 und 5\'000 CHF, Klinik und Multi-Standort ab 6\'000 CHF. Vollständige Aufschlüsselung unter /ch-de/preise/seo/.',
+  },
+  {
+    q: 'Wie unterscheidet sich SEO für Fachärzte von klassischem Praxismarketing?',
+    a: 'Praxismarketing baut die Marke an einem Standort — Print, Logo, Praxisräume, Patienten-Newsletter — und misst Markenwiedererkennung indirekt. SEO für Ärzte macht das Fachgebiet jenseits des Einzugsgebiets sichtbar — Indexierbarkeit, Schema-Markup, AI-Citability auf ChatGPT und Google AI Overviews, Local Pack — und misst Position, Klicks sowie AI-Citation-Quote direkt. Beide ergänzen sich; die Zuweiser-Strategie liegt in der Schnittmenge.',
+  },
+  {
+    q: 'Wie messen wir SEO-Erfolg in einer Facharzt-Praxis?',
+    a: 'Fünf Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Facharzt-Praxis, und keine ersetzt eine andere: AISO Score, GSC-Indexierungs-Quote, Position-mal-CTR auf Krankheitsbild-Queries, AI-Citation-Quote auf ChatGPT, Perplexity und Gemini, sowie mobile Core Web Vitals. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.',
+  },
+  {
+    q: 'Wie lange dauert es, bis SEO für Ärzte messbare Ergebnisse zeigt?',
+    a: 'Drei Zeitfenster prägen jede Schweizer Facharzt-Praxis nach einem strukturellen SEO-Unlock: 4 bis 8 Wochen bis zur Index-Wiederaufnahme freigeschalteter Service-Seiten, 2 bis 4 Monate bis zu ersten AI-Citations auf ChatGPT, Perplexity und Google AI Overviews nach Schema-Rollout, sowie 3 bis 6 Monate bis zur stabilen Top-10-Sichtbarkeit auf Krankheitsbild-Queries. Gemessen wird gegen die AISO-Score-Baseline.',
+  },
+  {
+    q: 'Wie läuft die Zusammenarbeit ab?',
+    a: 'Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen, Diagnose-Tiefenphase über 1–2 Wochen mit Technical Audit und AISO Score Baseline, Roadmap-Übergabe mit revDSG-, FMH- und HMG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.',
+  },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://starkrank.com/ch-de/' },
+    { '@type': 'ListItem', position: 2, name: 'SEO für Ärzte', item: 'https://starkrank.com/ch-de/seo-fuer-aerzte/' },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://starkrank.com/ch-de/seo-fuer-aerzte/#service',
+  name: 'SEO für Ärzte',
+  serviceType: 'Search Engine Optimization',
+  description:
+    'SEO für Schweizer Facharzt-Praxen und Spezialkliniken — Indexierbarkeit, Schema-Knotengraph, revDSG-Konformität, FMH-Werberecht-Bewusstsein und AI-Citability auf ChatGPT, Perplexity und Google AI Overviews.',
+  url: 'https://starkrank.com/ch-de/seo-fuer-aerzte/',
+  provider: {
+    '@type': 'Organization',
+    name: 'StarkRank',
+    url: 'https://starkrank.com/',
+  },
+  areaServed: { '@type': 'Country', name: 'Switzerland' },
+  audience: {
+    '@type': 'Audience',
+    audienceType: 'Specialist clinics, Facharzt practices (Switzerland)',
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Einzelpraxis / KMU Retainer',
+      priceCurrency: 'CHF',
+      price: '1190',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        priceCurrency: 'CHF',
+        price: '1190',
+        unitText: 'MONTH',
+        referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' },
+      },
+      url: 'https://starkrank.com/ch-de/preise/seo/',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Mittelstand / Mehr-Standort Retainer',
+      priceCurrency: 'CHF',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'CHF',
+        minPrice: '3000',
+        maxPrice: '5000',
+      },
+      url: 'https://starkrank.com/ch-de/preise/seo/',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Klinik / Multi-Standort Retainer',
+      priceCurrency: 'CHF',
+      price: '6000',
+      url: 'https://starkrank.com/ch-de/preise/seo/',
+    },
+  ],
+  mentions: [
+    {
+      '@type': 'MedicalOrganization',
+      name: 'Handzentrum Ost',
+      url: 'https://handzentrum-ost.ch/',
+    },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': 'https://starkrank.com/ch-de/seo-fuer-aerzte/#faq',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
+---
+
+<BaseLayout title={title} description={description} locale="ch-de" schema={schemas}>
+  <HeroSection
+    headline="SEO für Ärzte"
+    subheadline="Eine Schweizer Facharzt-Praxis kann auf Position 1 für ihren wichtigsten Krankheitsbild-Begriff ranken und trotzdem null Klicks erhalten — weil die Service-Seite in WordPress auf noindex steht. SEO für Ärzte beginnt deshalb nicht beim Content, sondern bei der Inventar-Frage: was sieht Google überhaupt?"
+  >
+    <Button href="/ch-de/kontakt/" variant="primary">Erstberatung anfragen</Button>
+    <Button href="#fallstudie" variant="secondary">Lebende Fallstudie</Button>
+  </HeroSection>
+
+  <Section bg="cream">
+    <div class="max-w-4xl">
+      <p class="text-sm font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3">Profile, die wir betreuen</p>
+      <p class="text-base font-body text-dark leading-relaxed">
+        Handchirurgie · Orthopädie · Plastische Chirurgie · Schönheitschirurgie · Reproduktionsmedizin · Multi-Standort-Spezialkliniken
+      </p>
+      <p class="mt-6 text-sm font-body text-gray leading-relaxed">
+        <strong class="text-navy">revDSG-konform</strong> · <strong class="text-navy">FMH-Standesordnung-bewusst</strong> · <strong class="text-navy">AISO Score quartalsweise</strong> · <strong class="text-navy">kein medizinischer Aufschlag</strong>
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was ist SEO für Ärzte und für welche Praxen lohnt es sich?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        SEO für Ärzte ist die systematische Optimierung der Praxis-Website für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity und Google AI Overviews — robots-Konfiguration, Schema-Markup, Local-Pack-Sichtbarkeit, AI-Citability. Sie lohnt sich für Spezialkliniken und Facharzt-Praxen mit Selbstzahler-Anteil oder Zuweiser-Funnel. Für reine Hausarzt-Allgemeinmedizin mit voller Patientenliste ist der ROI in der Regel zu schwach.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Drei Praxis-Profile bekommen messbare Hebel: Spezialgebiete mit Selbstzahler-Komponente, weil Patienten aktiv recherchieren und die Praxis bewusst wählen; Multi-Standort-Praxen, deren einzelne Standorte im Local Pack separat sichtbar werden müssen; Zuweiser-getriebene Modelle, in denen B2B-Sichtbarkeit gegenüber Hausärzten und Allgemeinchirurgen den eigentlichen Funnel speist. Wer in keines dieser Profile fällt, wird vom organischen Wachstum unter Umständen stärker durch klassische Praxisökonomie als durch SEO begrenzt.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Welche regulatorischen Besonderheiten gelten für Schweizer Arztpraxen?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Drei Regulierungs-Anker prägen jede Schweizer Praxis-Website und werden von DE-fokussierten SEO-Audits routinemässig übersehen: revDSG für die Datenverarbeitung, FMH-Standesordnung für das Werberecht und HMG für Heilmittel-Werbung. Jeder dieser Anker hat eigene Sprach- und Pflicht-Spezifika, die in DSGVO- oder Heilmittelwerbegesetz-orientierten Audits schlicht nicht auftauchen — mit dem Ergebnis, dass Schweizer Praxen unter DE-Audit-Logik regelmässig Compliance-Lücken behalten.
+      </p>
+    </div>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {regulatoryAnchors.map((anchor) => (
+        <div class="bg-white border border-gray-light/40 rounded-lg p-6">
+          <h3 class="text-lg font-headline font-bold text-navy">{anchor.title}</h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed" set:html={anchor.body} />
+        </div>
+      ))}
+    </div>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        In der Praxis bedeutet das: jede Service-Seite, jedes Krankheitsbild und jede Erfolgs-Beschreibung passiert eine Compliance-Linse, bevor sie publiziert wird. Wir prüfen routinemässig Praxis-Websites, deren WordPress-Plugins Pixel und Tracker laden, ohne dass die Datenschutzerklärung sie auflistet — ein revDSG-Rückrufs-Risiko, das technisch in zehn Minuten lösbar ist.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was kostet SEO für eine Arztpraxis in der Schweiz?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        SEO für Ärzte folgt drei transparenten Retainer-Bändern in der Schweiz, ergänzt um pauschale Einmal-Audits, ohne medizinischen Aufschlag. Einzelpraxis und KMU starten ab 1'190 CHF pro Monat, Mittelstand und Mehr-Standort liegen zwischen 3'000 und 5'000 CHF, Klinik und Multi-Standort ab 6'000 CHF. Vollständige Aufschlüsselung unter <a href="/ch-de/preise/seo/" class="text-blue hover:underline">/ch-de/preise/seo/</a>.
+      </p>
+    </div>
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full max-w-4xl border-collapse text-sm font-body">
+        <thead>
+          <tr class="border-b-2 border-navy text-left">
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Tier</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">CHF/Monat</th>
+            <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">Profil</th>
+          </tr>
+        </thead>
+        <tbody>
+          {pricingTiers.map((row) => (
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 font-headline font-bold text-navy">{row.tier}</td>
+              <td class="py-3 pr-4 text-dark">{row.price}</td>
+              <td class="py-3 text-gray">{row.profile}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Welcher Tier zur Praxis passt, hängt weniger an der Mitarbeiterzahl als am SEO-Inventar — Anzahl indexierbarer Service- und Krankheitsbild-Seiten, vorhandener Schema-Knotengraph, Multi-Standort-Komplexität. Das Erstgespräch und eine Quick-Diagnose decken den passenden Tier in 30 Minuten ab; wir kommunizieren ihn vor jeder Mandatsunterschrift.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie unterscheidet sich SEO für Fachärzte von klassischem Praxismarketing?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Praxismarketing baut die Marke an einem Standort — Print, Logo, Praxisräume, Patienten-Newsletter — und misst Markenwiedererkennung indirekt. SEO für Ärzte macht das Fachgebiet jenseits des Einzugsgebiets sichtbar — Indexierbarkeit, Schema-Markup, AI-Citability auf ChatGPT und Google AI Overviews, Local Pack — und misst Position, Klicks sowie AI-Citation-Quote direkt. Beide ergänzen sich; die Zuweiser-Strategie liegt in der Schnittmenge.
+      </p>
+    </div>
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full max-w-4xl border-collapse text-sm font-body">
+        <thead>
+          <tr class="border-b-2 border-navy text-left">
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Achse</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Praxismarketing</th>
+            <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">SEO für Ärzte</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparison.map((row) => (
+            <tr class="border-b border-gray-light/40 align-top">
+              <td class="py-3 pr-4 font-headline font-bold text-navy">{row.axis}</td>
+              <td class="py-3 pr-4 text-gray">{row.praxismarketing}</td>
+              <td class="py-3 text-gray">{row.seoForDoctors}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Die häufigste Fehleinschätzung ist, dass eine schöne neue Praxis-Website automatisch SEO-Fortschritt bedeutet. Sie tut es nicht — eine technisch saubere Marketing-Site kann jeden SEO-Hebel verfehlen, weil ihre Schema-Tiefe Null ist und ihre Krankheitsbild-Seiten als <code>noindex</code> ausgeliefert werden. Das Praxismarketing-Budget ist ausgegeben, der SEO-Hebel bleibt unberührt.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie messen wir SEO-Erfolg in einer Facharzt-Praxis?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Fünf Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Facharzt-Praxis, und keine ersetzt eine andere: AISO Score, GSC-Indexierungs-Quote, Position-mal-CTR auf Krankheitsbild-Queries, AI-Citation-Quote auf ChatGPT, Perplexity und Gemini, sowie mobile Core Web Vitals. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.
+      </p>
+    </div>
+    <ul class="mt-8 space-y-5 max-w-3xl">
+      {measurementMetrics.map((m) => (
+        <li class="border-l-2 border-blue pl-4">
+          <h3 class="text-base font-headline font-bold text-navy">{m.name}</h3>
+          <p class="mt-1 text-sm font-body text-gray leading-relaxed">{m.body}</p>
+        </li>
+      ))}
+    </ul>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Ranking-Reports sind notwendig, aber nicht hinreichend; sie zeigen, wo die Praxis steht, nicht warum. Diagnose verlangt zusätzlich, ob die Sichtbarkeit überhaupt mit Klicks korreliert und ob KI-Antwortmaschinen die Praxis als zitierbare Fachstelle anerkennen.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie lange dauert es, bis SEO für Ärzte messbare Ergebnisse zeigt?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Drei Zeitfenster prägen jede Schweizer Facharzt-Praxis nach einem strukturellen SEO-Unlock: 4 bis 8 Wochen bis zur Index-Wiederaufnahme freigeschalteter Service-Seiten, 2 bis 4 Monate bis zu ersten AI-Citations auf ChatGPT, Perplexity und Google AI Overviews nach Schema-Rollout, sowie 3 bis 6 Monate bis zur stabilen Top-10-Sichtbarkeit auf Krankheitsbild-Queries. Gemessen wird gegen die AISO-Score-Baseline.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Geschwindigkeit ist asymmetrisch zwischen den drei Hebeln. Index-Freischaltung ist eine Konfigurations-Sache und sichtbar, sobald Googlebot die betroffene Seite re-crawlt — bei einem Cloudflare-Pages-IndexNow-Stack passiert das innerhalb weniger Tage, Googles eigene Indexierungs-Kalkulation kann zusätzlich Wochen dauern. AI-Citation-Sichtbarkeit hängt von den Crawl-Zyklen der LLM-Anbieter ab; Common-Crawl-Releases erscheinen monatlich, ChatGPT- und Perplexity-Indexes aktualisieren häufiger. Ranking-Stabilität auf Krankheitsbild-Queries entwickelt sich kontinuierlich aus Schema-Verlinkung, Capsule-Inhalten und ergänzender Authority-Arbeit — kein Einmal-Eingriff, sondern Mandats-Routine.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Eine seriöse Schweizer SEO-Beratung kommuniziert diese Zeitfenster vor jeder Mandats-Unterschrift. Jede Garantie auf „Top-3 in vier Wochen" ist ein Standesrechts-Risiko unter FMH-Werberecht und ein Vertrauens-Risiko gegenüber dem Patienten.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white" id="fallstudie" class="scroll-mt-20">
+    <SectionHeader
+      label="Lebende Fallstudie"
+      title="Wie wirkt die Methodik bei einer Schweizer Facharzt-Klinik?"
+    />
+    <div class="max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Handzentrum Ost ist eine Facharzt-Klinik für Handchirurgie an vier Standorten in der Ostschweiz. Ärztliche Leitung: Dr. med. Jörg Hainich, Facharzt Handchirurgie FMH, Europäisches Diplom Handchirurgie (FESSH). Co-Operating: Stephanie Luz, Fachärztin Chirurgie FMH, EBHS-/FESSH-Diplom. Die Klinik kooperiert mit StarkRank seit April 2026 — diese Sektion wird quartalsweise mit den jeweils messbaren Befunden aktualisiert.
+      </p>
+
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Diagnose (Stand April 2026)</h3>
+      <p class="mt-3 text-sm font-body text-gray leading-relaxed">
+        Befunde verifizierbar gegen Google Search Console, Common Crawl und einen Screaming-Frog-Crawl von 39 Seiten:
+      </p>
+      <ul class="mt-4 space-y-3 text-sm font-body text-gray leading-relaxed">
+        <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-navy">AISO Score Baseline 30 / 100</strong> (Tier „Kritisch"). Strukturelle Schwäche dominant: Structure 2 / 20, Citability 4 / 20, Freshness 3 / 10.</span></li>
+        <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-navy">12 von 49 bekannten URLs indexierbar (24 Prozent)</strong>. Sechs der sieben Service-Seiten sind explizit <code>noindex</code> ausgezeichnet. Die Credentials-Seite ist <code>noindex</code>. Der Zuweiser-Download liefert 404.</span></li>
+        <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-navy">92 Prozent aller organischen Klicks von der Homepage allein</strong>. Service-Seiten ranken nicht schlecht; sie sind aus dem Index gesperrt.</span></li>
+        <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-navy">Position 1 auf <code>Handgelenksbruch</code> mit null Klicks</strong> über 16 Monate. Position 5 auf <code>Karpaltunnelsyndrom</code> ebenfalls null Klicks. Sichtbarkeit ohne Conversion-Surface.</span></li>
+        <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-navy">0 von 39 Seiten mit JSON-LD-Schema</strong>. Eine Vier-Standorte-Praxis ohne <code>MedicalOrganization</code>, <code>hasLocation[]</code> und <code>Physician</code>-Markup ist für KI-Antwortmaschinen effektiv unsichtbar.</span></li>
+      </ul>
+
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Phase 1 — Strukturelle Behebung <span class="text-sm font-label font-semibold uppercase tracking-wide text-blue ml-2">Update folgt ~September 2026</span></h3>
+      <p class="mt-3 text-base font-body text-gray leading-relaxed">
+        Phase 1 läuft. Ziele: indexierbare Service-Seiten freischalten, vollständigen Schema-Knotengraphen ausrollen (<code>MedicalOrganization</code> mit vier <code>hasLocation[]</code>-Knoten plus zwei <code>Physician</code>-Knoten mit <code>hasCredential</code>-Feldern für FMH-, FESSH- und EBHS-Diplome), revDSG-konformen Consent-Mode-v2-Stack einziehen, mobile Core Web Vitals in den grünen Bereich bringen. Messung: AISO Score Re-Run nach Cutover.
+      </p>
+
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Phase 2 — Krankheitsbild-Bibliothek <span class="text-sm font-label font-semibold uppercase tracking-wide text-blue ml-2">Update folgt Q4 2026 / Q1 2027</span></h3>
+      <p class="mt-3 text-base font-body text-gray leading-relaxed">
+        Phase 2 erweitert den Schema-Knotengraphen um SME-Interview-basierte Krankheitsbild-Seiten — Ganglion, Karpaltunnel, Distale Radiusfraktur als Proof-Tranche. Jede Seite kombiniert Capsule-Antwortblock, FAQ-Sektion, <code>MedicalCondition</code>/<code>MedicalProcedure</code>-Schema und kanonisches Cross-Linking zu Physician- und Standort-Knoten. Messung: AI-Citation-Quote auf ChatGPT, Perplexity und Gemini, plus Klick-Konversion auf bereits Top-10-rankenden Krankheitsbild-Queries.
+      </p>
+
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Was wir bisher gelernt haben</h3>
+      <p class="mt-3 text-base font-body text-gray leading-relaxed">
+        Fachklinik-SEO ist eine Inventar-Frage, bevor sie eine Ranking-Frage wird. Bei strukturell gepflegten Praxis-Sites ist die Hebelreihenfolge Indexierbarkeit, Schema-Knotengraph, Capsule-Inhalte, AI-Citation-Tracking — nicht „mehr Backlinks" oder „mehr Content". Diese Reihenfolge gilt für jede Spezialklinik mit gewachsener WordPress- oder Divi-Vergangenheit.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie läuft die Zusammenarbeit ab?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen, Diagnose-Tiefenphase über 1–2 Wochen mit Technical Audit und AISO Score Baseline, Roadmap-Übergabe mit revDSG-, FMH- und HMG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
+      </p>
+    </div>
+    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
+      {collaborationSteps.map((step) => (
+        <li class="bg-white border border-gray-light/40 rounded-lg p-5">
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
+          <h3 class="mt-2 text-base font-headline font-bold text-navy">{step.title}</h3>
+          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Skalierung erst nach Proof-Messung. Vor der Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <SectionHeader label="Fragen & Antworten" title="Häufig gestellte Fragen" />
+      <dl class="mt-8 space-y-8">
+        {faqs.map((f) => (
+          <div>
+            <dt class="text-lg font-headline font-bold text-navy">{f.q}</dt>
+            <dd class="mt-2 text-base font-body text-gray leading-relaxed">{f.a}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </Section>
+
+  <CTABanner
+    title="Bereit für eine ehrliche Diagnose Ihrer Praxis-Sichtbarkeit?"
+    subtitle="30-Minuten-Erstberatung, gratis. AISO-Quick-Check auf zwei Dimensionen plus klare Aussage, ob ein SEO-Mandat, ein Einmal-Audit oder ein anderer Hebel der bessere Einstieg ist."
+  >
+    <Button href="/ch-de/kontakt/" variant="primary">Erstberatung anfragen</Button>
+    <Button href="/ch-de/preise/seo/" variant="secondary">SEO-Preise ansehen</Button>
+    <Button href="/ch-de/aiso-check/" variant="secondary">AISO-Check starten</Button>
+  </CTABanner>
+</BaseLayout>
