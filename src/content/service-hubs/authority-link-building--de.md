@@ -3,12 +3,12 @@ serviceSlug: "authority-link-building"
 urlSlug: "linkaufbau-agentur"
 locale: "de"
 title: "Linkaufbau Agentur"
-description: "Linkaufbau Agentur für deutschen B2B-Mittelstand: Entity-aligned Authority Links, konservative Anker-Verteilung, keine Digital-PR-Pakete, kein Linkkauf."
-heroLede: "Linkaufbau Agentur StarkRank baut für deutschen B2B-Mittelstand Entity-aligned Authority Links auf: Backlinks aus Domains, die im selben Wikidata-Cluster wie Ihr Unternehmen stehen, mit redaktionellem Kontext und konservativer Anker-Verteilung. Wir bieten kein Digital PR, keine Press-Release-Distribution und keine Private-Blog-Networks — und kalibrieren Anker-Texte risikobewusst, um die Devaluations-Muster zu vermeiden, die Google seit dem August-2025-Spam-Update auf Netzwerk-Ebene erkennt."
+description: "Linkaufbau Agentur für deutschen B2B-Mittelstand: Entitätsverankerter Linkaufbau, konservative Anker-Verteilung, keine Digital-PR-Pakete, kein Linkkauf."
+heroLede: "Als Linkaufbau Agentur arbeitet StarkRank für deutschen B2B-Mittelstand nach dem Modell des Entitätsverankerten Linkaufbaus: Backlinks aus Domains, die im selben Wikidata-Cluster wie Ihr Unternehmen stehen, mit redaktionellem Kontext und konservativer Anker-Verteilung. Wir bieten kein Digital PR, keine Press-Release-Distribution und keine Private-Blog-Networks — und kalibrieren Anker-Texte risikobewusst, um die Devaluations-Muster zu vermeiden, die Google seit dem August-2025-Spam-Update auf Netzwerk-Ebene erkennt."
 schemaAbout:
   - "StarkRank"
   - "Linkaufbau Agentur"
-  - "Entity-aligned Authority Links"
+  - "Entitätsverankerter Linkaufbau"
 schemaMentions:
   - "Backlink"
   - "Wikidata"
@@ -58,13 +58,13 @@ faq:
 
 ## Was leistet eine Linkaufbau Agentur?
 
-Eine Linkaufbau Agentur erarbeitet thematisch passende Backlinks von autoritativen Domains, die Ranking, Sichtbarkeit und organischen Traffic langfristig stärken — ohne Footprints, die Google als Manipulation einstuft. StarkRank fokussiert auf Entity-aligned Authority Links: Domains, die im selben Wikidata-Cluster wie Ihr Unternehmen stehen, mit redaktionellem Kontext, exact-Match-armer Anker-Verteilung und ohne Reciprocal-Linking-Logik. Press-Release-Distribution und Digital PR sind kein Angebot.
+Eine Linkaufbau Agentur erarbeitet thematisch passende Backlinks von autoritativen Domains, die Ranking, Sichtbarkeit und organischen Traffic langfristig stärken — ohne Footprints, die Google als Manipulation einstuft. StarkRank fokussiert auf Entitätsverankerten Linkaufbau: Backlinks aus Domains, die im selben Wikidata-Cluster wie Ihr Unternehmen stehen, mit redaktionellem Kontext, exact-Match-armer Anker-Verteilung und ohne Reciprocal-Linking-Logik. Press-Release-Distribution und Digital PR sind kein Angebot.
 
 Was sich gegenüber dem klassischen Link-Building-Geschäft verschoben hat, ist die Risiko-Asymmetrie. Penguin 4.0 läuft seit 2016 als Teil des Kernalgorithmus in Echtzeit und entwertet manipulative Linkmuster algorithmisch, statt nur per manueller Action. Das August-2025-Spam-Update hat diese Logik weiter ausgebaut: SpamBrain bewertet Backlink-Profile heute auf Netzwerk-Ebene neu — also nicht mehr Link-für-Link, sondern als zusammenhängendes Muster aus Domain-Beziehungen, Themen-Clustern, Anker-Verteilung und historischem Verhalten beteiligter Domains. Wer in dieser Welt Links wie 2022 baut, baut Risiko mit auf.
 
-## Entity-aligned Authority Links — die Vier-Dimensionen-Rubrik
+## Entitätsverankerter Linkaufbau — die Vier-Dimensionen-Rubrik
 
-Klassische Link-Prospecting-Methoden starten mit Listen: DR-50+-Domains aus dem Ahrefs-Filter, „thematisch passend" als grobe Selbstauskunft, Outreach im Volumen. Entity-aligned Authority Links kehrt die Reihenfolge um. Wir starten mit der Wikidata-Entity Ihres Unternehmens (oder mit der Inventur, falls noch keine angelegt ist), folgen den `sameAs`-Verknüpfungen zu Wikipedia, LinkedIn, Crunchbase, Branchenwissensgraphen und identifizieren so den Cluster aus Domains, die im strukturierten Web bereits mit Ihrer Entität in Beziehung stehen oder stehen könnten.
+Klassische Link-Prospecting-Methoden starten mit Listen: DR-50+-Domains aus dem Ahrefs-Filter, „thematisch passend" als grobe Selbstauskunft, Outreach im Volumen. Entitätsverankerter Linkaufbau kehrt die Reihenfolge um. Wir starten mit der Wikidata-Entity Ihres Unternehmens (oder mit der Inventur, falls noch keine angelegt ist), folgen den `sameAs`-Verknüpfungen zu Wikipedia, LinkedIn, Crunchbase, Branchenwissensgraphen und identifizieren so den Cluster aus Domains, die im strukturierten Web bereits mit Ihrer Entität in Beziehung stehen oder stehen könnten.
 
 Aus diesem Cluster bewerten wir jede Ziel-Domain entlang von vier Dimensionen — eine Domain qualifiziert sich, wenn sie in mindestens zwei davon dokumentierbar passt:
 
