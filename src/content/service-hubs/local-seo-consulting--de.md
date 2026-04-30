@@ -3,12 +3,12 @@ serviceSlug: "local-seo-consulting"
 urlSlug: "local-seo-agentur"
 locale: "de"
 title: "Local SEO Agentur"
-description: "Local SEO Agentur für deutschen Mittelstand: Branchenverzeichnis-Stufenmodell, Google Business Profile, AI-Local-Pack-Readiness. Hannover, Bremen, Hamburg."
-heroLede: "Als Local SEO Agentur für Mittelständler mit Standort und Einzugsgebiet baut StarkRank lokale Sichtbarkeit über das Branchenverzeichnis-Stufenmodell auf: sechs Stufen vom Google Business Profile bis zu lokalen Community-Plattformen, in vier Wochen aufgebaut, mit messbarem Ranking-Fortschritt pro Stufe. Lieferung Hannover, Bremen und Hamburg — keine deutschlandweite Coverage-Behauptung, dafür belegte Ortspräsenz im Norden."
+description: "Local SEO Agentur für deutschen Mittelstand: Citation-Stufenmodell, Google Business Profile, AI-Local-Pack-Readiness. Hannover, Bremen, Hamburg."
+heroLede: "Als Local SEO Agentur für Mittelständler mit Standort und Einzugsgebiet baut StarkRank lokale Sichtbarkeit über das Citation-Stufenmodell auf: sechs Stufen vom Google Business Profile bis zu lokalen Community-Plattformen, in vier Wochen aufgebaut, mit messbarem Ranking-Fortschritt pro Stufe. Lieferung Hannover, Bremen und Hamburg — keine deutschlandweite Coverage-Behauptung, dafür belegte Ortspräsenz im Norden."
 schemaAbout:
   - "StarkRank"
   - "Local SEO Agentur"
-  - "Branchenverzeichnis-Stufenmodell"
+  - "Citation-Stufenmodell"
 schemaMentions:
   - "Google Business Profile"
   - "Google Maps"
@@ -28,7 +28,7 @@ areaServed:
 processTotalTime: "PT28D"
 processSteps:
   - name: "Lokale Baseline-Analyse"
-    description: "Audit der aktuellen lokalen Sichtbarkeit: Google-Business-Profile-Completeness, aktuelle Rankings für lokale Kernsuchanfragen, Citation-Profil über die Top-50 Plattformen, Review-Velocity gegen die Top-3-Wettbewerber im Einzugsgebiet, NAP-Konsistenz, Wettbewerbs-Vergleich. Liefert die Startposition für das Branchenverzeichnis-Stufenmodell und identifiziert AI-Local-Pack-blockierende Name-Mismatches."
+    description: "Audit der aktuellen lokalen Sichtbarkeit: Google-Business-Profile-Completeness, aktuelle Rankings für lokale Kernsuchanfragen, Citation-Profil über die Top-50 Plattformen, Review-Velocity gegen die Top-3-Wettbewerber im Einzugsgebiet, NAP-Konsistenz, Wettbewerbs-Vergleich. Liefert die Startposition für das Citation-Stufenmodell und identifiziert AI-Local-Pack-blockierende Name-Mismatches."
     tools:
       - "Google Business Profile"
       - "Screaming Frog"
@@ -40,8 +40,8 @@ processSteps:
       - "Google Business Profile"
       - "Apple Business Connect"
       - "Bing Places"
-  - name: "Tier 1–3: Branchenverzeichnis-Stufenmodell"
-    description: "Aufbau und Konsistenz-Pflege nach dem Branchenverzeichnis-Stufenmodell: Tier 1 globale Daten-Aggregatoren (Data Axle, Foursquare, Localeze) in Woche 1–2, Tier 2 internationale Plattformen (Yelp, Facebook Business, YP.com) in Woche 2–3, Tier 3 deutsche Verzeichnisse und Kammern (gelbeseiten.de, Das Örtliche, 11880.com, Cylex, IHK-Verzeichnisse) in Woche 3–4. Reihenfolge zählt — Aggregator-Pipes überschreiben sonst spätere Korrekturen."
+  - name: "Tier 1–3: Citation-Stufenmodell"
+    description: "Aufbau und Konsistenz-Pflege nach dem Citation-Stufenmodell: Tier 1 globale Daten-Aggregatoren (Data Axle, Foursquare, Localeze) in Woche 1–2, Tier 2 internationale Plattformen (Yelp, Facebook Business, YP.com) in Woche 2–3, Tier 3 deutsche Verzeichnisse und Kammern (gelbeseiten.de, Das Örtliche, 11880.com, Cylex, IHK-Verzeichnisse) in Woche 3–4. Reihenfolge zählt — Aggregator-Pipes überschreiben sonst spätere Korrekturen."
     tools:
       - "Data Axle"
       - "Foursquare"
@@ -64,18 +64,18 @@ faq:
   - question: "Wie schnell sehen wir Ranking-Verbesserungen?"
     answer: "Tier 0 (GBP-Optimierung) liefert oft innerhalb von zwei bis vier Wochen erste Bewegung im Local Pack. Tier 1–3 Citations stabilisieren über acht bis zwölf Wochen. Für kompetitive Kernsuchanfragen in dichten Städten (z.B. Steuerberater Hamburg) sind sechs bis zwölf Monate realistisch — dort wird auf Autorität und Review-Velocity gegen etablierte Wettbewerber konkurriert."
   - question: "Wie messen Sie den Erfolg von Local SEO?"
-    answer: "Pro Stufe im Branchenverzeichnis-Stufenmodell messen wir die Veränderung in zwei Quellen: Grid-Rank-Scans über mehrere Mess-Punkte im Einzugsgebiet (nicht nur Stadt-Mittelpunkt) und Google-Business-Profile-Insights (Anrufe, Wegbeschreibungen, Direct-Searches versus Discovery-Searches). Ergänzt um GSC-lokale-Klick-Segmentierung und GA4-Conversion-Pfade aus organischen lokalen Quellen. Monatlicher Report mit Vergleich gegen die Top-3-Wettbewerber im Einzugsgebiet."
+    answer: "Pro Stufe im Citation-Stufenmodell messen wir die Veränderung in zwei Quellen: Grid-Rank-Scans über mehrere Mess-Punkte im Einzugsgebiet (nicht nur Stadt-Mittelpunkt) und Google-Business-Profile-Insights (Anrufe, Wegbeschreibungen, Direct-Searches versus Discovery-Searches). Ergänzt um GSC-lokale-Klick-Segmentierung und GA4-Conversion-Pfade aus organischen lokalen Quellen. Monatlicher Report mit Vergleich gegen die Top-3-Wettbewerber im Einzugsgebiet."
   - question: "Wie wählt man die richtige Local SEO Agentur aus?"
     answer: "Drei harte Kriterien: nennt die Agentur konkrete Methodik (named framework, nicht 'unser bewährtes Vorgehen'), benennt sie konkrete Tools (mit Tool-Namen, nicht 'professionelle Tools') und gibt sie Auskunft zu Themen wie Review Jail, AI Local Pack und NAP-Entity-Resolution? Wer auf alle drei plausibel antwortet, hat sich mit dem Stand 2026 ernsthaft auseinandergesetzt. Wer mit Ranking-Garantien arbeitet, eher nicht."
 ---
 
 ## Was ist eine Local SEO Agentur?
 
-Eine **Local SEO Agentur** sorgt dafür, dass lokal suchende Kunden ein Unternehmen im Local Pack und im neuen AI Local Pack finden. StarkRank arbeitet dafür mit dem Branchenverzeichnis-Stufenmodell — sechs Stufen vom Google Business Profile bis zu lokalen Community-Plattformen, in vier Wochen aufgebaut, mit messbarem Fortschritt pro Stufe.
+Eine **Local SEO Agentur** sorgt dafür, dass lokal suchende Kunden ein Unternehmen im Local Pack und im neuen AI Local Pack finden. StarkRank arbeitet dafür mit dem Citation-Stufenmodell — sechs Stufen vom Google Business Profile bis zu lokalen Community-Plattformen, in vier Wochen aufgebaut, mit messbarem Fortschritt pro Stufe.
 
-## Das Branchenverzeichnis-Stufenmodell: sechs Stufen über vier Wochen
+## Das Citation-Stufenmodell: sechs Stufen über vier Wochen
 
-Klassische Citation-Strategien laufen oft als „50 Verzeichnisse aufbauen und fertig". Das Branchenverzeichnis-Stufenmodell strukturiert dieselbe Aufgabe als sechs aufeinander aufbauende Stufen, mit klaren Wochen-Ankern und einem messbaren Ranking-Effekt nach jeder Stufe. Ihr Marketing-Team, Ihre Geschäftsführung und Ihr Steuerberater (für die Buchung) sehen damit, welche Schritte wann fertig werden und wo der nächste Sichtbarkeits-Sprung herkommen sollte.
+Klassische Citation-Strategien laufen oft als „50 Verzeichnisse aufbauen und fertig". Das Citation-Stufenmodell strukturiert dieselbe Aufgabe als sechs aufeinander aufbauende Stufen, mit klaren Wochen-Ankern und einem messbaren Ranking-Effekt nach jeder Stufe. Ihr Marketing-Team, Ihre Geschäftsführung und Ihr Steuerberater (für die Buchung) sehen damit, welche Schritte wann fertig werden und wo der nächste Sichtbarkeits-Sprung herkommen sollte.
 
 Die sechs Stufen:
 
@@ -159,7 +159,7 @@ Local SEO bei StarkRank wird im Rahmen unserer SEO-Retainer-Bänder berechnet (s
 | Modell | Preisband | Scope |
 |--------|-----------|-------|
 | Einzelunternehmen / Kleinunternehmen | ab 990 €/Monat | Ein Standort, GBP-Pflege plus Tier 0–2 Citations, monatliches Review-Velocity-Tracking |
-| Mittelstand | 2.000 – 4.000 €/Monat | Bis 5 Standorte, vollständiges Branchenverzeichnis-Stufenmodell, Grid-Rank-Tracking, Q&A-Pflege, Review-Response-SLA |
+| Mittelstand | 2.000 – 4.000 €/Monat | Bis 5 Standorte, vollständiges Citation-Stufenmodell, Grid-Rank-Tracking, Q&A-Pflege, Review-Response-SLA |
 | Enterprise / Multi-Standort | ab 5.000 €/Monat | 5+ Standorte, Multi-Location-Koordination, GBP-API-Integration, Portfolio-Roll-up-Reporting |
 
 Welcher Scope der passende ist, hängt von Standort-Anzahl, Branche, Wettbewerbs-Dichte im Einzugsgebiet und vorhandenem internem Team ab. Wir klären das in der [kostenlosen Erstberatung](/kontakt/): kein Sales-Druck, kein automatischer Versand eines vorausgefüllten Vertrags. Für Ketten oder Franchise-Setups mit 20+ Standorten ist [Multi-Location SEO](/en/services/multi-location-seo/) der präzisere Zugriff.
