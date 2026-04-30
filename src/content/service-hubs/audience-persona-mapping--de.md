@@ -5,6 +5,13 @@ locale: "de"
 title: "Zielgruppenanalyse"
 description: "Zielgruppenanalyse: First-Party-Daten, Sales-Input und Search-Intent in funktionale Personas verdichtet. Kostenlose Erstberatung."
 heroLede: "Zielgruppenanalyse, die in der Marketing-Präsentation gut aussieht, aber im Campaign-Setup verschwindet, ist keine Arbeitsgrundlage — sie ist Dekoration. StarkRank baut Personas aus First-Party-Daten, Sales-Gesprächen und Search-Intent-Signalen, sodass sie Ad-Targeting, Landingpage-Varianten, Content-Briefs und CRM-Segmentierung direkt steuern."
+schemaAbout:
+  - "StarkRank"
+  - "Zielgruppenanalyse"
+schemaMentions:
+  - "Persona × Search-Intent matrix"
+  - "Buyer Persona"
+  - "Mittelstand"
 processTotalTime: "PT21D"
 processSteps:
   - name: "Bestehende Daten auswerten (GA4, GSC, CRM)"
