@@ -103,6 +103,13 @@ const cityHubs = {
               </a>
             </li>
           ))}
+          {locale === 'de' && (
+            <li>
+              <a href="/glossar/" class="text-sm font-body text-gray-light hover:text-cream transition-colors">
+                {t('nav.glossary', locale)}
+              </a>
+            </li>
+          )}
         </ul>
       </div>
 

@@ -132,6 +132,22 @@ const spokes = defineCollection({
   }),
 });
 
+const glossary = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/glossary' }),
+  schema: z.object({
+    term: z.string(),
+    slug: z.string(),
+    locale: z.enum(['de', 'ch-de']),
+    bucket: z.enum(['methodology', 'industry-seo', 'ai-search', 'regulatory']),
+    abbreviation: z.string().optional(),
+    aliases: z.array(z.string()).optional(),
+    related: z.array(z.string()).optional(),
+    sources: z
+      .array(z.object({ label: z.string(), url: z.string().url() }))
+      .optional(),
+  }),
+});
+
 const cityHubs = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/city-hubs' }),
   schema: z.object({
@@ -157,4 +173,4 @@ const cityHubs = defineCollection({
   }),
 });
 
-export const collections = { services, blog, cities, spokes, serviceHubs, cityHubs };
+export const collections = { services, blog, cities, spokes, serviceHubs, cityHubs, glossary };

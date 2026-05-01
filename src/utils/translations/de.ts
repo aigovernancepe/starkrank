@@ -6,6 +6,7 @@ export const de: Record<string, string> = {
   'nav.about': 'Über uns',
   'nav.contact': 'Kontakt',
   'nav.locations': 'Standorte',
+  'nav.glossary': 'Glossar',
 
   // Pillar Names
   'pillar.search-ai-intelligence': 'Suche & KI-Intelligenz',
