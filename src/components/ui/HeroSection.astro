@@ -14,6 +14,7 @@ interface Props {
 
 const { headline, subheadline, eyebrow, align = 'center', backgroundImage, backgroundImageAlt } = Astro.props;
 const alignClass = align === 'center' ? 'text-center items-center' : 'text-left items-start';
+const buttonsJustifyClass = align === 'center' ? 'justify-center' : 'justify-start';
 
 // Parse **accent** markers into spans
 function renderHeadline(text: string): string {
@@ -51,7 +52,7 @@ function renderHeadline(text: string): string {
         {subheadline}
       </p>
     )}
-    <div class="mt-8 flex flex-wrap gap-4">
+    <div class:list={['mt-8 flex flex-wrap gap-4', buttonsJustifyClass]}>
       <slot />
     </div>
   </div>
