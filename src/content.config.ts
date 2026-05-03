@@ -133,7 +133,11 @@ const spokes = defineCollection({
 });
 
 const glossary = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/glossary' }),
+  loader: glob({
+    pattern: '**/*.{md,mdx}',
+    base: './src/content/glossary',
+    generateId: ({ entry }) => entry.replace(/\.[^.]+$/, ''),
+  }),
   schema: z.object({
     term: z.string(),
     slug: z.string(),

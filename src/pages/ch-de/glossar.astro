@@ -1,0 +1,240 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import Button from '../../components/ui/Button.astro';
+import { getCollection, render } from 'astro:content';
+import { getSelfLastModified } from '../../utils/getLastModified';
+
+const allEntries = await getCollection('glossary', ({ data }) => data.locale === 'ch-de');
+
+const bucketOrder = ['methodology', 'industry-seo', 'ai-search', 'regulatory'] as const;
+const bucketLabels: Record<typeof bucketOrder[number], string> = {
+  methodology: 'Methodologie',
+  'industry-seo': 'SEO-Grundlagen',
+  'ai-search': 'KI-Suche',
+  regulatory: 'Recht & Datenschutz',
+};
+
+const grouped = bucketOrder.map((bucket) => ({
+  bucket,
+  label: bucketLabels[bucket],
+  entries: allEntries
+    .filter((e) => e.data.bucket === bucket)
+    .sort((a, b) => a.data.term.localeCompare(b.data.term, 'de-CH')),
+}));
+
+const renderedEntries = await Promise.all(
+  allEntries.map(async (entry) => {
+    const { Content } = await render(entry);
+    return [entry.data.slug, Content] as const;
+  }),
+);
+const renderedBySlug = new Map(renderedEntries);
+
+const title = 'Glossar — SEO, KI-Suche und StarkRank-Methodologie | StarkRank';
+const description = 'Begriffe rund um SEO, KI-Suche und die StarkRank-Methodologie. Verlinkt für Kontext, kuratiert ohne Marketing-Schwafel.';
+
+const baseUrl = 'https://starkrank.com';
+
+const definedTermSet = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTermSet',
+  '@id': `${baseUrl}/ch-de/glossar/`,
+  name: 'StarkRank Glossar',
+  description,
+  url: `${baseUrl}/ch-de/glossar/`,
+  inLanguage: 'de-CH',
+  hasDefinedTerm: allEntries.map((e) => ({
+    '@type': 'DefinedTerm',
+    '@id': `${baseUrl}/ch-de/glossar/#${e.data.slug}`,
+    name: e.data.term,
+    inDefinedTermSet: { '@id': `${baseUrl}/ch-de/glossar/` },
+    url: `${baseUrl}/ch-de/glossar/#${e.data.slug}`,
+    ...(e.data.abbreviation ? { alternateName: e.data.abbreviation } : {}),
+  })),
+};
+
+const breadcrumbs = [
+  { label: 'Start', href: '/ch-de/' },
+  { label: 'Glossar', href: '/ch-de/glossar/' },
+];
+
+const lastModified = getSelfLastModified(import.meta.url);
+const lastModifiedIso = lastModified.toISOString().split('T')[0];
+const lastModifiedLabel = lastModified.toLocaleDateString('de-CH', { year: 'numeric', month: 'long' });
+
+const totalTerms = allEntries.length;
+---
+
+<BaseLayout title={title} description={description} locale="ch-de" schema={definedTermSet}>
+  <!-- Hero -->
+  <Section bg="cream">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+      Wissen
+    </span>
+    <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+      Glossar
+    </h1>
+    <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-3xl">
+      {totalTerms} Begriffe rund um SEO, KI-Suche und die StarkRank-Methodologie. Verlinkt für Kontext, kuratiert ohne Marketing-Schwafel — jede Definition mit Quelle, wo eine externe Autorität existiert.
+    </p>
+
+    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+      <span>Zuletzt aktualisiert: <time datetime={lastModifiedIso}>{lastModifiedLabel}</time></span>
+    </div>
+  </Section>
+
+  <!-- Main + sticky sidebar TOC -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+        <!-- Mobile bucket nav (top, scrollable horizontally) -->
+        <nav aria-label="Glossar-Sektionen" class="lg:hidden -mx-6 px-6 pb-2 overflow-x-auto">
+          <ul class="flex gap-3 whitespace-nowrap text-sm font-body">
+            {grouped.map((g) => (
+              <li>
+                <a href={`#bucket-${g.bucket}`} class="inline-block px-3 py-1.5 rounded-full bg-cream border border-gray-light/40 text-navy hover:bg-blue hover:text-white hover:border-blue transition-colors">
+                  {g.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <!-- Main content -->
+        <div class="lg:col-span-2 space-y-0">
+          {grouped.map((group, gIdx) => (
+            <div id={`bucket-${group.bucket}`} class:list={[gIdx === 0 ? '' : 'pt-14 border-t border-gray-light/30', 'pb-14 scroll-mt-24']}>
+              <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-8">
+                {group.label}
+              </h2>
+
+              <div class="space-y-10">
+                {group.entries.map((entry) => {
+                  const Content = renderedBySlug.get(entry.data.slug);
+                  return (
+                    <article id={entry.data.slug} class="scroll-mt-24 group">
+                      <h3 class="text-xl md:text-2xl font-headline font-bold text-navy mb-3 flex items-baseline gap-2">
+                        <span>{entry.data.term}</span>
+                        <a href={`#${entry.data.slug}`} aria-label={`Permalink zu ${entry.data.term}`} class="text-gray-light hover:text-blue text-sm opacity-0 group-hover:opacity-100 transition-opacity">#</a>
+                      </h3>
+
+                      <div class="prose-glossary text-base font-body text-gray leading-relaxed">
+                        {Content && <Content />}
+                      </div>
+
+                      {entry.data.related && entry.data.related.length > 0 && (
+                        <p class="mt-4 text-sm font-body text-gray">
+                          <span class="font-semibold text-dark">Verwandt:</span>{' '}
+                          {entry.data.related.map((relatedSlug, i) => {
+                            const target = allEntries.find((x) => x.data.slug === relatedSlug);
+                            if (!target) return null;
+                            return (
+                              <>
+                                {i > 0 && <span class="text-gray-light"> · </span>}
+                                <a href={`#${relatedSlug}`} class="text-blue hover:text-blue-light underline-offset-2 hover:underline">{target.data.term}</a>
+                              </>
+                            );
+                          })}
+                        </p>
+                      )}
+
+                      {entry.data.sources && entry.data.sources.length > 0 && (
+                        <p class="mt-3 text-sm font-body text-gray">
+                          <span class="font-semibold text-dark">Quelle:</span>{' '}
+                          {entry.data.sources.map((s, i) => (
+                            <>
+                              {i > 0 && <span class="text-gray-light"> · </span>}
+                              <a href={s.url} target="_blank" rel="noopener noreferrer" class="text-blue hover:text-blue-light underline-offset-2 hover:underline">{s.label}</a>
+                            </>
+                          ))}
+                        </p>
+                      )}
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Sticky sidebar TOC (desktop only) -->
+        <aside class="hidden lg:block lg:col-span-1">
+          <div class="lg:sticky lg:top-8 space-y-6 max-h-[calc(100vh-4rem)] overflow-y-auto pr-2">
+            <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-2">Inhalt</p>
+            {grouped.map((group) => (
+              <div class="space-y-1.5">
+                <h3 class="text-xs font-label font-bold uppercase tracking-widest text-navy">{group.label}</h3>
+                <ul class="space-y-1">
+                  {group.entries.map((e) => (
+                    <li>
+                      <a href={`#${e.data.slug}`} class="block text-sm font-body text-gray hover:text-blue border-l-2 border-transparent hover:border-blue pl-3 py-0.5 transition-colors">
+                        {e.data.term}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <CTABanner
+    bg="navy"
+    title="Methodologie live sehen?"
+    subtitle="Wie diese Begriffe in Strategie und Umsetzung zusammenwirken — bei Ihrem Projekt."
+  >
+    <Button href="/ch-de/kontakt/" variant="primary" size="lg">Gespräch buchen</Button>
+    <Button href="/ch-de/preise/seo/" variant="ghost" size="lg">Preise</Button>
+  </CTABanner>
+</BaseLayout>
+
+<style>
+  .prose-glossary :global(p) {
+    margin: 0.5rem 0;
+  }
+  .prose-glossary :global(p:first-child) {
+    margin-top: 0;
+  }
+  .prose-glossary :global(p:last-child) {
+    margin-bottom: 0;
+  }
+  .prose-glossary :global(ul),
+  .prose-glossary :global(ol) {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+  }
+  .prose-glossary :global(ul) {
+    list-style: disc;
+  }
+  .prose-glossary :global(ol) {
+    list-style: decimal;
+  }
+  .prose-glossary :global(li) {
+    margin: 0.25rem 0;
+  }
+  .prose-glossary :global(li::marker) {
+    color: var(--color-blue, #1a5fb4);
+  }
+  .prose-glossary :global(strong) {
+    color: var(--color-dark, #0a0a0a);
+    font-weight: 700;
+  }
+  .prose-glossary :global(a) {
+    color: var(--color-blue, #1a5fb4);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .prose-glossary :global(a:hover) {
+    color: var(--color-blue-light, #5b8def);
+  }
+</style>
