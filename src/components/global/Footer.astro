@@ -103,9 +103,9 @@ const cityHubs = {
               </a>
             </li>
           ))}
-          {locale === 'de' && (
+          {(locale === 'de' || locale === 'ch-de') && (
             <li>
-              <a href="/glossar/" class="text-sm font-body text-gray-light hover:text-cream transition-colors">
+              <a href={locale === 'ch-de' ? '/ch-de/glossar/' : '/glossar/'} class="text-sm font-body text-gray-light hover:text-cream transition-colors">
                 {t('nav.glossary', locale)}
               </a>
             </li>
