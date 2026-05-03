@@ -42,7 +42,7 @@ faq:
 
 ## Was ist ein SEO Audit und was umfasst er in der Schweiz?
 
-Ein SEO Audit (Search Engine Optimisation — Suchmaschinenoptimierung) ist die systematische Diagnose der technischen, inhaltlichen und Off-Page-Faktoren einer Website. In der Schweiz kommt eine Schicht hinzu, die DE- und EU-Audits nicht prüfen: revDSG-Konformität (Schweizer Datenresidenz, Auftragsdaten-Verarbeitungsverträge mit allen Drittanbietern, Berufsgeheimnis-Tauglichkeit für Anwälte, Treuhänder und Ärzte) und Schweizer-Hosting-Empfehlung (Cloudflare europe-west6 in Zürich statt EU-Frankfurt oder US-Edge).
+Ein SEO Audit (Search Engine Optimisation — Suchmaschinenoptimierung) ist die systematische Diagnose der technischen, inhaltlichen und Off-Page-Faktoren einer Website. In der Schweiz kommt eine Schicht hinzu, die DE- und EU-Audits nicht prüfen: [revDSG](/ch-de/glossar/#revdsg)-Konformität (Schweizer Datenresidenz, Auftragsdaten-Verarbeitungsverträge mit allen Drittanbietern, Berufsgeheimnis-Tauglichkeit für Anwälte, Treuhänder und Ärzte) und Schweizer-Hosting-Empfehlung (Cloudflare europe-west6 in Zürich statt EU-Frankfurt oder US-Edge).
 
 Das Ergebnis ist eine priorisierte Roadmap mit Schweregrad-Einstufung pro Befund — keine 300-Zeilen-Liste, sondern eine umsetzbare Reihenfolge, die Ihr Entwicklungsteam Stück für Stück abarbeiten kann.
 
@@ -66,7 +66,7 @@ Festpreis nach Briefing, keine T&M-Schätzung mit offenem Ausgang. Die Erstberat
 Die fünf Prüfbereiche bei StarkRank:
 
 - **Crawl-Budget und Indexierung** — robots.txt-Disziplin, XML-Sitemap-Vollständigkeit, IndexNow-Integration, verwaiste Seiten, Server-Log-Analyse für tatsächlich-erreichende Bots
-- **Core Web Vitals** — LCP unter 2,5 Sekunden, CLS unter 0,1, INP unter 200 Millisekunden auf echten Nutzergeräten (RUM-Daten statt Lighthouse-Idealwerten)
+- **[Core Web Vitals](/ch-de/glossar/#core-web-vitals)** — LCP unter 2,5 Sekunden, CLS unter 0,1, INP unter 200 Millisekunden auf echten Nutzergeräten (RUM-Daten statt Lighthouse-Idealwerten)
 - **Schema-Markup-Tiefe** — JSON-LD-Validität, passende Schema-Typen pro Template (Organization, Service, FAQPage, BreadcrumbList, HowTo), sameAs-Links zu Wikidata und Schweizer Branchen-Registern
 - **Hreflang-Korrektheit** — DE/CH-DE/EN-Varianten, x-default-Fallbacks, Canonical-Konsistenz über Sprachen, Selbst-Referenzen-Symmetrie
 - **KI-Crawler-Zugang** — robots.txt-Richtlinien für GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot; WAF- und CDN-Regeln auf Crawler-Freundlichkeit geprüft
@@ -77,7 +77,7 @@ Jeder Befund wird nach Schweregrad klassifiziert (Blocker, Hoch, Mittel, Niedrig
 
 revDSG (revidiertes Datenschutzgesetz, in Kraft seit 1. September 2023) hat direkten Einfluss auf den Audit-Kriterienkatalog für Schweizer Sites — vier Punkte, die DE-/EU-Audits typischerweise übersehen:
 
-- **Datenschutzerklärung mit Schweizer Datenresidenz-Aussage** — Hosting-Land explizit benannt, Datenexporte ins Ausland aufgelistet
+- **[Datenschutzerklärung](/ch-de/glossar/#datenschutzerklaerung) mit Schweizer Datenresidenz-Aussage** — Hosting-Land explizit benannt, Datenexporte ins Ausland aufgelistet
 - **Consent Mode v2 mit Default-denied** — alle Marketing-Cookies stehen auf "denied", bis aktiv eingewilligt; GA4, Meta Pixel, LinkedIn Insight respektieren den Status korrekt
 - **Auftragsdaten-Verarbeitungsverträge (ADV) mit allen Drittanbietern** — GA4, Hosting, Mailing, Buchungssystem, CRM. revDSG verlangt diese explizit; AVV nach DSGVO-Vorlage genügt nicht ohne Schweizer Anpassungen
 - **Berufsgeheimnis-Tauglichkeit** — für Anwälte, Treuhänder und Ärzte muss Schweizer Hosting (Cloudflare europe-west6 oder vergleichbar) zwingend sein; US-Edge-Routing ist faktisch Mandats-Disqualifikation

@@ -58,7 +58,7 @@ faq:
 
 ## Was prüft eine SEO Audit Agentur?
 
-Eine SEO Audit Agentur prüft eine Website systematisch auf technische Schwachstellen, On-Page-Lücken, Off-Page-Signale, Core Web Vitals und Schema-Konformität und übersetzt die Befunde in einen priorisierten Maßnahmenkatalog. StarkRank arbeitet mit dem AISO-Score-Audit-Rubric: sechs Dimensionen (Crawlability, Structure, Authority, Citability, Freshness, Measurability), gewichtet auf 100 Punkte und dokumentiert pro URL. Kein generischer 12-Punkte-Check, sondern ein reproduzierbares Bewertungsraster.
+Eine SEO Audit Agentur prüft eine Website systematisch auf technische Schwachstellen, On-Page-Lücken, Off-Page-Signale, [Core Web Vitals](/glossar/#core-web-vitals) und Schema-Konformität und übersetzt die Befunde in einen priorisierten Maßnahmenkatalog. StarkRank arbeitet mit dem AISO-Score-Audit-Rubric: sechs Dimensionen (Crawlability, Structure, Authority, Citability, Freshness, Measurability), gewichtet auf 100 Punkte und dokumentiert pro URL. Kein generischer 12-Punkte-Check, sondern ein reproduzierbares Bewertungsraster.
 
 Im Unterschied zu einem reinen SEO-Werkzeug oder einer Generalisten-Agentur arbeitet eine spezialisierte SEO Audit Agentur an der Schnittstelle aus klassischer Suche und KI-Suche. Werkzeuge wie Screaming Frog oder Sitebulb finden Crawl-Fehler, bewerten sie aber nicht im Geschäftskontext. Eine Audit-Agentur priorisiert nach Auswirkung auf Ihre Sichtbarkeit, ordnet Befunde im Verhältnis zu Ihrem Tech-Stack ein und übersetzt sie in eine Reihenfolge, die Ihr Entwicklungsteam abarbeiten kann.
 
@@ -83,7 +83,7 @@ Pro URL fällt der Score in eine von fünf Stufen: 85–100 Punkte heißt **Exce
 
 Klassische SEO-Audits sind 2024er-Stand: Crawlability, Indexierung, Core Web Vitals, Schema-Validität auf der Ebene von Rich-Snippet-Eligibility. Was sie typischerweise nicht prüfen, ist die Schicht, die Sichtbarkeit in ChatGPT, Perplexity und Google AI Overviews entscheidet. Diese Schicht hat im AISO-Score-Modell zwei explizite Dimensionen — Citability und Authority.
 
-Ein konkretes Beispiel für die Mechanik: ein deutscher B2B-Mittelständler mit perfekter klassischer SEO (Core Web Vitals grün, technisch sauber, solides Backlink-Profil) kann im Google AI Overview oder bei ChatGPT trotzdem komplett unsichtbar bleiben. Die Diagnose-Punkte sind oft dieselben: das Organization-Schema enthält keinen `sameAs`-Link auf die Wikidata-Entität, FAQs liegen nicht im Capsule-Format vor (eine extrahierbare Frage gefolgt von einer 35–70-Wörter-Antwort), und das Author-Schema fehlt komplett, sodass keine Person hinter den Inhalten als Entität greifbar wird. Die klassische SEO-Audit-Matrix erkennt diese Lücke nicht; die AISO-Score-Citability-Dimension schon.
+Ein konkretes Beispiel für die Mechanik: ein deutscher B2B-Mittelständler mit perfekter klassischer SEO (Core Web Vitals grün, technisch sauber, solides Backlink-Profil) kann im Google AI Overview oder bei ChatGPT trotzdem komplett unsichtbar bleiben. Die Diagnose-Punkte sind oft dieselben: das Organization-Schema enthält keinen `sameAs`-Link auf die Wikidata-Entität, FAQs liegen nicht im [Capsule](/glossar/#capsule)-Format vor (eine extrahierbare Frage gefolgt von einer 35–70-Wörter-Antwort), und das Author-Schema fehlt komplett, sodass keine Person hinter den Inhalten als Entität greifbar wird. Die klassische SEO-Audit-Matrix erkennt diese Lücke nicht; die AISO-Score-Citability-Dimension schon.
 
 Eine SEO Audit Agentur, die diese Schicht prüft, liefert die Voraussetzung dafür, dass Sie in KI-Antworten überhaupt als zitierbare Quelle erscheinen. Den freien Einstieg in diese Bewertungslogik bietet unser [AISO-Check](/aiso-check/), der die Citability-Dimension mit einer Stichprobe öffentlich demonstriert. Die volle 6-Dimensionen-Auswertung ist Teil des bezahlten Audit-Deliverables.
 
@@ -153,7 +153,7 @@ Ein SEO Audit bei deutschen B2B-Websites fördert erfahrungsgemäß wiederkehren
 - **Cookie-Banner blockieren Rendering** — aggressive Consent-Management-Tools (CMPs) hinter vollflächigen Overlays verhindern manchmal, dass Googlebot den Hauptinhalt überhaupt erreicht, besonders bei DSGVO-strikter Konfiguration
 - **Mehrsprachigkeit mit hreflang-Chaos** — Sprachversionen der gleichen Seite ohne korrekte x-default-Fallbacks, sich widersprechende Canonicals oder asymmetrische Selbst-Referenzen zwischen Locales
 - **Shop-Kategorieseiten mit dünnem Content** — Kategorieseiten, die nur aus Produktgitter bestehen, ohne einführenden Text oder strukturierte Beschreibung — rangieren weder klassisch noch werden sie in KI-Antworten zitiert
-- **Strukturierte Daten ohne Entitätsanker** — Organization-Schema ohne sameAs zu Wikidata, LinkedIn oder Handelsregister: KI-Systeme finden die Marke nicht als zitierbare Entität wieder
+- **Strukturierte Daten ohne [Entitätsanker](/glossar/#entity-anchor)** — Organization-Schema ohne sameAs zu Wikidata, LinkedIn oder Handelsregister: KI-Systeme finden die Marke nicht als zitierbare Entität wieder
 - **Kein llms.txt und keine KI-Bot-Policy** — viele Sites wissen schlicht nicht, dass GPTBot und ClaudeBot eigene Richtlinien lesen
 
 Diese Muster sind nicht zufällig. Sie spiegeln die spezifische Kombination aus deutscher Datenschutz-Regulierung (DSGVO), Bot-Schutz-Standards der großen CDN-Anbieter und fehlendem Bewusstsein für die KI-Crawler-Welle wider.

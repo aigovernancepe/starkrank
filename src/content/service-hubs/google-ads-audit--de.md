@@ -50,7 +50,7 @@ Das Google Ads Audit deckt sieben Prüfbereiche mit quantifiziertem Output pro B
 - **Konto-Struktur** — Kampagnen-Architektur (Search / Performance Max / Shopping / Display), Ad-Group-Granularität, Keyword-Organisation, Match-Type-Strategie und Negative-Keyword-Hygiene
 - **Such-Query-Waste** — Analyse aller tatsächlichen Suchanfragen der letzten 90 Tage, Identifikation nicht-konvertierender Queries mit Euro-genauer Waste-Berechnung, Empfehlung konkreter negativer Keywords und Match-Type-Adjustments
 - **Conversion-Tracking** — Integrität des Tracking-Setups (GA4 + Google Ads direct), Enhanced-Conversions-Status, Attribution-Modell, Conversion-Value-Qualität, Cross-Device- und Offline-Conversion-Import-Setup
-- **Landingpage-Match** — Qualität der Zielseiten je Kampagne und Keyword-Cluster, Core Web Vitals, mobile Usability, Formular-Conversion-Rate, Angebots-Kommunikation oberhalb der Falzlinie
+- **Landingpage-Match** — Qualität der Zielseiten je Kampagne und Keyword-Cluster, [Core Web Vitals](/glossar/#core-web-vitals), mobile Usability, Formular-Conversion-Rate, Angebots-Kommunikation oberhalb der Falzlinie
 - **Audience- und Signals-Layer** — Customer-Match-Listen, Similar-Audiences, In-Market-Segmente, Remarketing-Konfiguration, First-Party-Daten-Integration
 - **Quality Score und Auktions-Performance** — Verteilung der Quality Scores, Impression-Share-Lost nach Budget/Rank/Auktion, Ad-Rank-Analyse, Suchanzeige-Bewertung
 - **Budget-Allokation und Pacing** — Verteilung zwischen Kampagnen-Typen, saisonale Anpassung, Budget-Caps vs. tatsächlichem Ausgabenverhalten, ROAS pro Euro pro Kampagne

@@ -47,7 +47,7 @@ Das Google Ads Management im Retainer deckt acht operative Bereiche ab:
 - **Conversion-Tracking-Integrität** — monatliche Validierung des Tracking-Setups (GA4 + Google Ads direct), Enhanced-Conversions-Status, Offline-Conversion-Import (für Lead-Gen), Event-Parameter-Qualität
 - **Performance-Max-Steuerung** — Asset-Group-Segmentierung, Audience-Signals-Pflege, Brand-Exclusion, Absatzziel-Kalibrierung, Data-Exclusion bei Ausreißern
 - **Ad-Copy und Extensions** — laufende A/B-Tests von Überschriften und Beschreibungen, Pflege der Sitelinks, Callouts, strukturierten Snippets, dynamischer Keyword-Insertion mit Guardrails
-- **Landingpage-Abstimmung** — enge Rückkopplung mit Ihrem Web-Team bei Angebots-Änderungen, A/B-Test-Koordination, Quality-Score-Einfluss von Core Web Vitals und Mobile-UX
+- **Landingpage-Abstimmung** — enge Rückkopplung mit Ihrem Web-Team bei Angebots-Änderungen, A/B-Test-Koordination, Quality-Score-Einfluss von [Core Web Vitals](/glossar/#core-web-vitals) und Mobile-UX
 - **Budget-Steuerung und Pacing** — wöchentliches Pacing-Review, Reallokation zwischen Kampagnen nach Marginal-Return, Saisonale Anpassung, Black-Friday-/Launch-Peak-Management
 - **Reporting und Strategie** — monatlicher Report mit Entscheidungsvorlage, quartalsweise Strategie-Review, Test-Roadmap für neue Märkte, Kampagnen-Typen oder Audiences
 

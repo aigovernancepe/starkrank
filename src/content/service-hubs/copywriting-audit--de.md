@@ -41,7 +41,7 @@ faq:
 
 Ein Copywriting-Audit prüft die Texte Ihrer Website systematisch auf drei Dimensionen: Conversion-Wirkung (überzeugt der Text einen menschlichen Leser), Klarheit (ist er ohne Fachjargon und Nominalstil-Ballast verständlich) und AI-Zitationsfähigkeit (kann eine KI Passagen sauber extrahieren und als Quelle zitieren). Das Ergebnis ist eine Bewertung pro Seite mit priorisierten Rewrite-Empfehlungen.
 
-Bis vor wenigen Jahren war ein Copywriting-Audit eine rein UX- und Conversion-fokussierte Übung. Mit der Verschiebung von Nutzerverhalten in Richtung generativer Suche (ChatGPT, Perplexity, Google AI Overviews) hat sich der Scope erweitert: Texte müssen heute zwei sehr unterschiedliche Leser überzeugen — einen Menschen, der in den ersten zehn Sekunden den Mehrwert erkennen will, und eine KI, die die Passage sauber in eine Antwort extrahieren können soll. Das Audit adressiert beide Schichten in einem Durchgang.
+Bis vor wenigen Jahren war ein Copywriting-Audit eine rein UX- und Conversion-fokussierte Übung. Mit der Verschiebung von Nutzerverhalten in Richtung [generativer Suche](/glossar/#generative-suche) (ChatGPT, Perplexity, Google AI Overviews) hat sich der Scope erweitert: Texte müssen heute zwei sehr unterschiedliche Leser überzeugen — einen Menschen, der in den ersten zehn Sekunden den Mehrwert erkennen will, und eine KI, die die Passage sauber in eine Antwort extrahieren können soll. Das Audit adressiert beide Schichten in einem Durchgang.
 
 ## Was umfasst ein Copywriting-Audit bei StarkRank?
 
@@ -93,7 +93,7 @@ Ein Copywriting-Audit lohnt sich typischerweise in diesen Situationen:
 
 - **Vor einem Website-Relaunch** — die bestehenden Texte auditieren, bevor sie auf die neue Struktur übertragen werden; besser einmal gründlich aufräumen als zweimal halbherzig umziehen
 - **Nach einem Ranking-Anstieg ohne Conversion-Anstieg** — mehr Traffic, gleich viele Leads oder Verkäufe deutet auf ein Conversion-Text-Problem, nicht auf ein SEO-Problem hin
-- **Wenn KI-Suche strategisch wichtig wird** — bestehende Texte auf AI-Zitationsfähigkeit prüfen, bevor die Texte in Content-Marketing-Retainer-Produktion münden
+- **Wenn [KI-Suche](/glossar/#ki-suche) strategisch wichtig wird** — bestehende Texte auf AI-Zitationsfähigkeit prüfen, bevor die Texte in Content-Marketing-Retainer-Produktion münden
 - **Beim Onboarding einer neuen Content-Agentur oder eines neuen Texters** — das Audit liefert der neuen Besetzung eine Baseline und ein Style-Dokument in Befund-Form
 - **Nach einem Brand-Repositioning** — die neue Positionierung in bestehenden Texten durchsetzen, statt sie nur auf der Startseite zu kommunizieren und auf den Subseiten die alte Voice weiterlaufen zu lassen
 - **Für Unternehmen mit mehreren Content-Autoren** — wo Tonalität und Voice-Konsistenz über fünf oder mehr Autor-Profile hinweg sichergestellt werden muss
