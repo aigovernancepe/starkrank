@@ -12,17 +12,25 @@ const localeHome: Record<string, string> = {
 };
 ---
 
-<div class="relative group">
+<div class="relative group" data-locale-switcher>
   <button
+    type="button"
     class="flex items-center gap-1.5 text-sm font-label font-medium text-gray hover:text-dark transition-colors tracking-wide"
     aria-label="Switch country"
+    aria-haspopup="true"
+    aria-expanded="false"
+    data-locale-toggle
   >
     {currentConfig.label}
     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
     </svg>
   </button>
-  <div class="absolute right-0 top-full mt-2 bg-white border border-gray-light rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all min-w-[160px] z-50">
+  <div
+    class="absolute right-0 top-full mt-2 bg-white border border-gray-light rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible data-[open=true]:opacity-100 data-[open=true]:visible transition-all min-w-[160px] z-50"
+    data-locale-menu
+    data-open="false"
+  >
     {Object.entries(localeConfig).map(([locale, config]) => (
       <a
         href={localeHome[locale] ?? `/${locale}/`}
@@ -36,3 +44,26 @@ const localeHome: Record<string, string> = {
     ))}
   </div>
 </div>
+
+<script>
+  document.addEventListener('click', (e) => {
+    const target = e.target as Element | null;
+    const toggle = target?.closest('[data-locale-toggle]');
+    const switcher = target?.closest('[data-locale-switcher]');
+
+    document.querySelectorAll('[data-locale-switcher]').forEach((el) => {
+      const menu = el.querySelector<HTMLElement>('[data-locale-menu]');
+      const btn = el.querySelector<HTMLElement>('[data-locale-toggle]');
+      if (!menu || !btn) return;
+
+      if (toggle && el.contains(toggle)) {
+        const open = menu.dataset.open === 'true';
+        menu.dataset.open = open ? 'false' : 'true';
+        btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      } else if (!switcher || !el.contains(switcher)) {
+        menu.dataset.open = 'false';
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+</script>
