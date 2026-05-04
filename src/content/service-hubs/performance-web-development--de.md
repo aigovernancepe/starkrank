@@ -66,7 +66,7 @@ Norddeutsche Mittelstands-Sektoren haben spezifische Sprache und Sales-Zyklen. D
 
 - **Sektor-Vokabular** — IHK-Hannover-Maschinenbau spricht anders als Münchner Tech-Startup; "Konfigurator", "Schwerlast", "Anlagen-Engineering" vs "MVP", "Series A", "Product-Market-Fit"
 - **Sales-Zyklus-Architektur** — Norddeutscher Mittelstand kauft über 6-18 Monate mit Multi-Stakeholder-Freigabe; Berliner Tech-Startups oft 1-3 Monate Single-Decision-Maker; Webseiten-Architektur folgt der Realität
-- **Compliance-Tiefe** — Norddeutsche Maschinenbau-Mittelständler haben oft AVV-Disziplin und BfDI-Aufsichtspflicht-Routine; Berliner Tech-Startups sind compliance-leichtgewichtiger orientiert
+- **Compliance-Tiefe** — Norddeutsche Maschinenbau-Mittelständler haben oft [AVV](/glossar/#auftragsverarbeitungsvertrag)-Disziplin und BfDI-Aufsichtspflicht-Routine; Berliner Tech-Startups sind compliance-leichtgewichtiger orientiert
 
 Wir bedienen explizit Hannover, Bremen und Hamburg — nicht München, Berlin oder Bayern. Diese Coverage-Honesty ist absichtlich: ein norddeutsches Mandat profitiert von Sektor-Verständnis und IHK-Netzwerk-Tiefe; ein Münchner Tech-Startup oder Berliner Media-Mandat ist bei einer dort ansässigen Agentur strukturell besser aufgehoben.
 
@@ -74,7 +74,7 @@ Wir bedienen explizit Hannover, Bremen und Hamburg — nicht München, Berlin od
 
 Vier Standardstacks decken die typischen Mandats-Konstellationen ab:
 
-- **Astro SSG für Marketingseiten** — pre-rendered HTML mit Schema-Tiefe, Cloudflare europe-west3 (Frankfurt-Edge) für DSGVO-Datenresidenz, optimal für SEO-getriebene Lead-Gen-Websites
+- **Astro SSG für Marketingseiten** — pre-rendered HTML mit Schema-Tiefe, Cloudflare europe-west3 (Frankfurt-Edge) für [DSGVO](/glossar/#dsgvo)-Datenresidenz, optimal für SEO-getriebene Lead-Gen-Websites
 - **Headless WordPress + Astro-Frontend** — für Bestandskunden mit substanziellem CMS-Investment; Migration ohne Content-Verlust, Editorial-Workflow bleibt vertraut
 - **Next.js für Web-Apps mit ERP-Anbindung** — Kunden-Portale, Konfiguratoren, Self-Service-Areas, alles was über statisches Marketing hinausgeht
 - **TYPO3 für regulierte Branchen mit Bestands-Investment** — Energie-/Versorgungs-Sektor, Pharma-/Healthcare-nahe Branchen, wo Bestandsinvestment + IHK-/BNetzA-Compliance-Erfahrung den Stack-Wechsel ökonomisch nicht rechtfertigen
@@ -108,7 +108,7 @@ Wir liefern für Hannover, Bremen und Hamburg — nicht für München, Berlin od
 
 ## Wie unterscheidet sich Performance-Web-Development von klassischem Webagentur-Output?
 
-Klassische Webagentur-Output-Modelle messen Erfolg an Designpreisen (German Web Awards, ADC) oder Auslieferungs-Velocity. Performance-Web-Development misst Erfolg an Core Web Vitals (LCP unter 2,5 Sekunden, CLS unter 0,1, INP unter 200 Millisekunden auf echten Nutzergeräten) und Conversion-Geschwindigkeit. StarkRank baut Astro SSG plus Cloudflare Edge mit Schema-Tiefe als AI-Citation-Layer; Standard-Agenturen optimieren Performance erst nach Go-Live, manchmal nie systematisch — bei IHK-Mittelstand-Mandaten ist das oft ein 12-24-Monate-Wartungsschuldenberg.
+Klassische Webagentur-Output-Modelle messen Erfolg an Designpreisen (German Web Awards, ADC) oder Auslieferungs-Velocity. Performance-Web-Development misst Erfolg an [Core Web Vitals](/glossar/#core-web-vitals) (LCP unter 2,5 Sekunden, CLS unter 0,1, INP unter 200 Millisekunden auf echten Nutzergeräten) und Conversion-Geschwindigkeit. StarkRank baut Astro SSG plus Cloudflare Edge mit Schema-Tiefe als AI-Citation-Layer; Standard-Agenturen optimieren Performance erst nach Go-Live, manchmal nie systematisch — bei IHK-Mittelstand-Mandaten ist das oft ein 12-24-Monate-Wartungsschuldenberg.
 
 ## Was bekommen Sie am Ende des Projekts?
 

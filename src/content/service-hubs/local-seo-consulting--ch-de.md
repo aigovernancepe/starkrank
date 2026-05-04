@@ -38,7 +38,7 @@ faq:
 
 ## Was ist lokale SEO und für wen lohnt sie sich in der Schweiz?
 
-Lokale SEO ist die Optimierung für regionale Suchanfragen wie "Treuhänder Basel", "Anwalt in der Nähe" oder "Coaching Zürich Kreis 4". Für stationäre Schweizer KMU mit Service-Area-Bezug ist sie der höchste organische Hebel — Google liefert für solche Anfragen einen separaten Local-Pack-Block oberhalb der klassischen organischen Treffer.
+[Lokale SEO](/ch-de/glossar/#lokale-seo) ist die Optimierung für regionale Suchanfragen wie "Treuhänder Basel", "Anwalt in der Nähe" oder "Coaching Zürich Kreis 4". Für stationäre Schweizer KMU mit Service-Area-Bezug ist sie der höchste organische Hebel — Google liefert für solche Anfragen einen separaten Local-Pack-Block oberhalb der klassischen organischen Treffer.
 
 Die Hebel unterscheiden sich von generischem SEO. Entscheidend sind Google Business Profile-Completeness, Proximity zum Sucher, NAP-Konsistenz über die wichtigsten Schweizer Verzeichnisse, Review-Velocity (nicht Gesamtanzahl, sondern Reviews der letzten 90 Tage), Schweizer Citations und standort-spezifische Landingpages mit sauberem LocalBusiness-Schema. Service-Area-Businesses (SAB) ohne öffentliche Adresse — typisch für Coaches, B2B-Berater, mobile Handwerker — können über das GBP-SAB-Modell trotzdem im Local Pack erscheinen.
 

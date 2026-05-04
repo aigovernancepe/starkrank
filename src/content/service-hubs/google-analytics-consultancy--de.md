@@ -48,7 +48,7 @@ Die Beratung setzt die drei kritischen Ebenen: technisch (was wird erfasst und w
 Die Beratung deckt sechs Kernbereiche ab:
 
 - **Setup und Tag-Manager-Integration** — GA4-Property-Aufsetzung oder -Revision, Google Tag Manager als Orchestrations-Layer, Migration aus Universal Analytics (falls noch nicht erfolgt), Measurement-ID- und Stream-Konfiguration
-- **Consent Mode v2 und DSGVO** — default=denied-Konfiguration, Integration Ihres Consent-Management-Tools, Server-Side-Tagging-Option für Datenresidenz, modelled-data-Verständnis und -Interpretation, Dokumentation für Datenschutz-Erklärung
+- **Consent Mode v2 und [DSGVO](/glossar/#dsgvo)** — default=denied-Konfiguration, Integration Ihres Consent-Management-Tools, Server-Side-Tagging-Option für Datenresidenz, modelled-data-Verständnis und -Interpretation, Dokumentation für Datenschutz-Erklärung
 - **Event- und Conversion-Schema** — Definition der relevanten Events pro Seitentyp, Conversion-Markierung, Enhanced Measurement-Einstellung, E-Commerce-Events bei Shops, Custom Dimensions und Metrics für Ihr spezifisches Geschäftsmodell
 - **Google Ads- und Search-Console-Verknüpfung** — Enhanced Conversions für Ads, Search Console-Daten-Integration, Attribution-Modell-Abgleich, Offline-Conversion-Import für B2B-Lead-Gen
 - **BigQuery-Export und Rohdaten-Zugriff** — BigQuery-Verknüpfung für Analysen jenseits der UI-Limits, strukturierte Attribution-Modellierung, Cross-Device- und Cross-Channel-Reporting, Rohdaten-Zugriff für Ihr BI-Tool
@@ -61,7 +61,7 @@ Die Beratung kann als Einmal-Setup (für Greenfield oder Migration), als punktue
 Die Beratung läuft in fünf klar getrennten Schritten ab:
 
 1. **Setup-Audit** — Audit des bestehenden GA4-Setups (oder Aufsetzen bei Greenfield), Prüfung der Tag-Manager-Integration, Event-Parameter-Qualität, Consent-Mode-Status, Conversion-Definitions, Verknüpfungen mit Google Ads, Search Console und BigQuery
-2. **Consent Mode und DSGVO** — Konfiguration des Consent Mode v2 mit default=denied, Integration Ihres Consent-Management-Tools (CMP), Server-Side-Tagging-Option für Datenresidenz, Dokumentation der Datenschutz-Konformität für Impressum und Datenschutz-Erklärung
+2. **Consent Mode und DSGVO** — Konfiguration des Consent Mode v2 mit default=denied, Integration Ihres Consent-Management-Tools (CMP), Server-Side-Tagging-Option für Datenresidenz, Dokumentation der Datenschutz-Konformität für [Impressum](/glossar/#impressum) und Datenschutz-Erklärung
 3. **Event- und Conversion-Schema** — Definition der relevanten Events pro Seitentyp, Conversion-Markierung, Enhanced Measurement-Einstellung, E-Commerce-Ereignisse bei Shops, Custom Dimensions und Metrics für Ihr Geschäftsmodell
 4. **BigQuery-Export und Attribution** — BigQuery-Verknüpfung für rohdatenbasierte Analysen jenseits der GA4-UI-Limits, strukturierte Attribution-Modellierung, Cross-Device- und Cross-Channel-Reporting, Rohdaten-Zugriff für Ihr BI-Tool (Looker Studio, Metabase, Power BI)
 5. **Reporting-Dashboards und Training** — Aufbau zielgruppenspezifischer Dashboards in Looker Studio, Schulung Ihres Teams im Umgang mit GA4 und Consent-Mode-Artefakten (Modelled Data), laufende Support-Option im Retainer

@@ -42,9 +42,9 @@ faq:
 
 ## Was leistet eine Webagentur in der Schweiz?
 
-Eine Schweizer Webagentur baut Webseiten und Web-Apps für Schweizer KMU mit revDSG-konformer Datenverarbeitung, Schweizer Hosting und CHF-Verträgen. Die Leistungstiefe reicht von Architektur-Beratung über Webdesign und Webentwicklung bis zu laufendem Performance-Monitoring und Schema-Pflege für KI-Citability.
+Eine Schweizer Webagentur baut Webseiten und Web-Apps für Schweizer KMU mit [revDSG](/ch-de/glossar/#revdsg)-konformer Datenverarbeitung, Schweizer Hosting und CHF-Verträgen. Die Leistungstiefe reicht von Architektur-Beratung über Webdesign und Webentwicklung bis zu laufendem Performance-Monitoring und Schema-Pflege für KI-Citability.
 
-Der praktische Unterschied zu einer reinen Webdesign-Agentur liegt in der Tiefe: Performance-Web-Development setzt das Performance-Budget pro Template als Constraint vor dem ersten Komponenten-Design, baut Schema.org-Ausspielung in die Architektur statt als Plugin-Nachträglichkeit, und prüft KI-Crawler-Zugang (GPTBot, ClaudeBot, PerplexityBot) vor dem Launch — nicht nach 6 Monaten als Sichtbarkeits-Loch.
+Der praktische Unterschied zu einer reinen Webdesign-Agentur liegt in der Tiefe: Performance-Web-Development setzt das Performance-Budget pro Template als Constraint vor dem ersten Komponenten-Design, baut Schema.org-Ausspielung in die Architektur statt als Plugin-Nachträglichkeit, und prüft KI-[Crawler](/ch-de/glossar/#crawling)-Zugang (GPTBot, ClaudeBot, PerplexityBot) vor dem Launch — nicht nach 6 Monaten als Sichtbarkeits-Loch.
 
 ## Wann lohnt sich eine Schweizer Webagentur statt einer ausländischen Lösung?
 
@@ -74,7 +74,7 @@ Webentwicklungs-Projekte (KMU-Webseite mit 15-25 Seiten, mehrsprachig, mit Schem
 
 ## Wie unterscheidet sich Performance-Web-Development von klassischer Webentwicklung?
 
-Klassische Webentwicklung optimiert Performance oft nachträglich oder gar nicht systematisch — Core Web Vitals werden zum Launch geprüft, dann selten wieder. Performance-Web-Development behandelt Performance als Build-Target, nicht als Optimierungs-Phase: Performance-Budget pro Template ist Constraint, Lighthouse CI blockiert PRs bei Regression, Real User Monitoring (RUM) trackt produktive Performance auf echten Schweizer Nutzergeräten statt Lighthouse-Idealwerten. Ergebnis: LCP unter 2,5 Sekunden, CLS unter 0,1, INP unter 200 Millisekunden — als Launch-Baseline, nicht als 6-Monate-später-Optimierungs-Ziel.
+Klassische Webentwicklung optimiert Performance oft nachträglich oder gar nicht systematisch — [Core Web Vitals](/ch-de/glossar/#core-web-vitals) werden zum Launch geprüft, dann selten wieder. Performance-Web-Development behandelt Performance als Build-Target, nicht als Optimierungs-Phase: Performance-Budget pro Template ist Constraint, Lighthouse CI blockiert PRs bei Regression, Real User Monitoring (RUM) trackt produktive Performance auf echten Schweizer Nutzergeräten statt Lighthouse-Idealwerten. Ergebnis: LCP unter 2,5 Sekunden, CLS unter 0,1, INP unter 200 Millisekunden — als Launch-Baseline, nicht als 6-Monate-später-Optimierungs-Ziel.
 
 ## Welche Branchen und Regionen bedient StarkRank?
 

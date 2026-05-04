@@ -66,7 +66,7 @@ Der [kostenlose Google-Ads-Check](/ch-de/kostenloser-google-ads-check/) identifi
 
 Vier harte Differenzierungs-Achsen:
 
-- **Tracking in europe-west6** — Google Tag Manager Server-Side mit Schweizer Edge erfüllt die revDSG-Datenresidenz-Erwartung für Berufsgeheimnis-relevante Branchen
+- **Tracking in europe-west6** — Google Tag Manager Server-Side mit Schweizer Edge erfüllt die [revDSG](/ch-de/glossar/#revdsg)-Datenresidenz-Erwartung für Berufsgeheimnis-relevante Branchen
 - **revDSG-Consent-Mode-Setup** — eine Schweizer Agentur kennt den Unterschied zwischen DSGVO- und revDSG-Anforderungen an die Cookie-Banner-Logik (TTDSG für DE vs revDSG für CH)
 - **Schweizer Branchen-CPC-Wissen** — wir kennen die typischen CHF-CPCs in Schweizer Treuhand, Anwalt, Handwerk, Coaching; ein DE-Anbieter verallgemeinert oft EUR-Daten 1:1
 - **CHF-Verträge ohne Wechselkursrisiko** — über 12-Monats-Mandate produzieren EUR-Verträge regelmässig 5-15 Prozent versteckte Kosten durch CHF/EUR-Schwankung
@@ -94,7 +94,7 @@ Die acht Prüfbereiche im [kostenlosen Google-Ads-Check](/ch-de/kostenloser-goog
 - **Negativ-Keyword-Tiefe** — Konto-Ebene und Kampagnen-Ebene, Stop-Wort-Listen für irrelevante Branchen
 - **Quality-Score-Verteilung** — Identifikation der Anzeigen mit niedrigem QS und Landingpage-Konsistenz-Lücken
 - **Conversion-Tracking-Validität** — Consent-Mode-Konfiguration, Enhanced Conversions, Offline-Conversion-Import bei B2B
-- **Landingpage-Performance** — Core Web Vitals, Mobile-UX, Conversion-Rate-Bench gegen Branchendurchschnitt
+- **Landingpage-Performance** — [Core Web Vitals](/ch-de/glossar/#core-web-vitals), Mobile-UX, Conversion-Rate-Bench gegen Branchendurchschnitt
 - **Budget-Allocation-Effizienz** — Pacing, Marginal-Return-Analyse zwischen Kampagnen
 - **Smart-Bidding-vs-Manual-Begründung** — wann welcher Bid-Strategie-Typ für welche Kampagne sinnvoll ist
 

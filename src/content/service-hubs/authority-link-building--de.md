@@ -58,13 +58,13 @@ faq:
 
 ## Was leistet eine Linkaufbau Agentur?
 
-Eine Linkaufbau Agentur erarbeitet thematisch passende Backlinks von autoritativen Domains, die Ranking, Sichtbarkeit und organischen Traffic langfristig stärken — ohne Manipulationsspuren, die Google als Verstoß einstuft. StarkRank fokussiert auf Entitätsverankerten Linkaufbau: Backlinks aus Domains, die im selben Wikidata-Cluster wie Ihr Unternehmen stehen, mit redaktionellem Kontext, exact-Match-armer Anker-Verteilung und ohne Gegenseitige-Verlinkungs-Logik. Verteilung von Pressemitteilungen und digitale Pressearbeit sind kein Angebot.
+Eine Linkaufbau Agentur erarbeitet thematisch passende [Backlinks](/glossar/#backlink) von autoritativen Domains, die Ranking, Sichtbarkeit und organischen Traffic langfristig stärken — ohne Manipulationsspuren, die Google als Verstoß einstuft. StarkRank fokussiert auf Entitätsverankerten Linkaufbau: Backlinks aus Domains, die im selben Wikidata-Cluster wie Ihr Unternehmen stehen, mit redaktionellem Kontext, exact-Match-armer Anker-Verteilung und ohne Gegenseitige-Verlinkungs-Logik. Verteilung von Pressemitteilungen und digitale Pressearbeit sind kein Angebot.
 
 Was sich gegenüber dem klassischen Linkaufbau-Geschäft verschoben hat, ist die Risiko-Asymmetrie. Penguin 4.0 läuft seit 2016 als Teil des Kernalgorithmus in Echtzeit und entwertet manipulative Linkmuster algorithmisch, statt nur per Manual Action. Das August-2025-Spam-Update hat diese Logik weiter ausgebaut: SpamBrain bewertet Backlink-Profile heute auf Netzwerk-Ebene neu — also nicht mehr Link-für-Link, sondern als zusammenhängendes Muster aus Domain-Beziehungen, Themen-Clustern, Anker-Verteilung und historischem Verhalten beteiligter Domains. Wer in dieser Welt Links wie 2022 baut, baut Risiko mit auf.
 
 ## Entitätsverankerter Linkaufbau — die Vier-Dimensionen-Rubrik
 
-Klassische Link-Recherche-Methoden starten mit Listen: DR-50+-Domains aus dem Ahrefs-Filter, „thematisch passend" als grobe Selbstauskunft, Ansprache im Volumen. Entitätsverankerter Linkaufbau kehrt die Reihenfolge um. Wir starten mit der Wikidata-Entity Ihres Unternehmens (oder mit der Inventur, falls noch keine angelegt ist), folgen den `sameAs`-Verknüpfungen zu Wikipedia, LinkedIn, Crunchbase, Branchenwissensgraphen und identifizieren so den Cluster aus Domains, die im strukturierten Web bereits mit Ihrer Entität in Beziehung stehen oder stehen könnten.
+Klassische Link-Recherche-Methoden starten mit Listen: DR-50+-Domains aus dem Ahrefs-Filter, „thematisch passend" als grobe Selbstauskunft, Ansprache im Volumen. [Entitätsverankerter Linkaufbau](/glossar/#entitaetsverankerter-linkaufbau) kehrt die Reihenfolge um. Wir starten mit der Wikidata-Entity Ihres Unternehmens (oder mit der Inventur, falls noch keine angelegt ist), folgen den `sameAs`-Verknüpfungen zu Wikipedia, LinkedIn, Crunchbase, Branchenwissensgraphen und identifizieren so den Cluster aus Domains, die im strukturierten Web bereits mit Ihrer Entität in Beziehung stehen oder stehen könnten.
 
 Aus diesem Cluster bewerten wir jede Ziel-Domain entlang von vier Dimensionen — eine Domain qualifiziert sich, wenn sie in mindestens zwei davon dokumentierbar passt:
 
@@ -155,6 +155,6 @@ Was wir bewusst nicht einsetzen:
 
 - **Keine KI für Anfrage-Texte.** Generische LLM-Anfragen sind in den Posteingängen redaktioneller Kontakte 2026 mehrheitlich erkennbar — die Annahme-Quote sinkt deutlich, und der Reputationsschaden bei einer versehentlich verschickten halluzinierten Anfrage ist asymmetrisch.
 - **Keine KI für Anker-Text-Generierung.** Anker-Text ist ein Risiko-Signal (siehe Anker-Verteilungs-Sektion), kein Kreativ-Ergebnis. Die Auswahl folgt deterministischer Logik gegen die kalibrierte Zielverteilung, nicht LLM-Heuristik.
-- **Keine Massen-Ansprache-Tools.** Werkzeuge, die hunderte Empfänger pro Tag versenden, kollidieren mit der DSGVO-Praxis aus dem FAQ und produzieren Antwort-Quoten gegen Null. Ansprache läuft individuell, getrackt, nachvollziehbar.
+- **Keine Massen-Ansprache-Tools.** Werkzeuge, die hunderte Empfänger pro Tag versenden, kollidieren mit der [DSGVO](/glossar/#dsgvo)-Praxis aus dem FAQ und produzieren Antwort-Quoten gegen Null. Ansprache läuft individuell, getrackt, nachvollziehbar.
 
 Den Werkzeug-Stack passen wir an, wenn ein Werkzeug sich bewährt oder wegfällt. Aktueller Stand: oben dokumentiert. Für die thematischen Anschlüsse verweisen wir gezielt — Autoritäts-Dimension im Audit über die [SEO Audit Agentur](/services/seo-audit-agentur/), lokale Citation-Logik über die [Local SEO Agentur](/services/local-seo-agentur/), E-E-A-T-Signale über das [E-E-A-T-Audit](/eeat-audit/) und KI-Suche über den [AISO-Check](/aiso-check/).

@@ -46,14 +46,14 @@ faq:
 
 Technisches Webdesign ist der Ansatz, Websites primär aus SEO-, Performance- und Crawlability-Perspektive zu gestalten, ohne dabei Design- oder UX-Qualität zu opfern. Der Unterschied zu klassischem Webdesign ist das Framing: statt einer Reihenfolge, in der Design-Entscheidungen zuerst getroffen und SEO nachträglich reingearbeitet wird, ist die Grundhaltung, eine SEO-native Website zu bauen, deren Design und UX auf dem technischen Fundament aufbauen.
 
-Der praktische Unterschied zeigt sich in Architektur-Entscheidungen. Ein klassisches Webdesign trifft Design-Entscheidungen zuerst und löst die technischen Konsequenzen nachträglich — was oft zu Hero-Bildern mit 4 MB, Third-Party-Animationen, die Core Web Vitals ruinieren, und Cookie-Bannern, die kritische Inhalte für Crawler blockieren, führt. Technisches Webdesign setzt das Performance-Budget pro Template als Constraint, bevor das erste Komponenten-Design entsteht, und behandelt Schema.org-Ausspielung, hreflang-Konsistenz und KI-Crawler-Zugriff als harte Anforderungen, nicht als nachträgliche Extras.
+Der praktische Unterschied zeigt sich in Architektur-Entscheidungen. Ein klassisches Webdesign trifft Design-Entscheidungen zuerst und löst die technischen Konsequenzen nachträglich — was oft zu Hero-Bildern mit 4 MB, Third-Party-Animationen, die [Core Web Vitals](/glossar/#core-web-vitals) ruinieren, und Cookie-Bannern, die kritische Inhalte für Crawler blockieren, führt. Technisches Webdesign setzt das Performance-Budget pro Template als Constraint, bevor das erste Komponenten-Design entsteht, und behandelt Schema.org-Ausspielung, hreflang-Konsistenz und KI-Crawler-Zugriff als harte Anforderungen, nicht als nachträgliche Extras.
 
 ## Was umfasst technisches Webdesign bei StarkRank?
 
 Das technische Webdesign deckt sechs Kernbereiche ab:
 
 - **Informations-Architektur** — Seitenstruktur mit SEO-Priorisierung, saubere URL-Konventionen, Breadcrumb- und interne Linkarchitektur, hreflang-Struktur bei Mehrsprachigkeit
-- **Jamstack-Stack-Aufbau** — Astro als Primär-Framework, Tailwind CSS, Cloudflare Pages auf europe-west3 (Frankfurt-Edge) für DSGVO-Datenresidenz, Content-Schicht nach Bedarf (flat-file Markdown, Sanity, Contentful, Storyblok)
+- **Jamstack-Stack-Aufbau** — Astro als Primär-Framework, Tailwind CSS, Cloudflare Pages auf europe-west3 (Frankfurt-Edge) für [DSGVO](/glossar/#dsgvo)-Datenresidenz, Content-Schicht nach Bedarf (flat-file Markdown, Sanity, Contentful, Storyblok)
 - **Schema.org-Ausspielung** — JSON-LD pro Template nach Seitentyp (Organization, LocalBusiness, Service, Article, Product, FAQPage, BreadcrumbList, HowTo), sameAs-Pflege für Entity-Signale
 - **Core-Web-Vitals-Performance** — LCP unter 2,5 Sekunden, CLS unter 0,1, INP unter 200 Millisekunden auf echten Nutzergeräten (nicht nur Lighthouse-Idealwerten), Performance-Budget pro Template
 - **KI-Crawler-Kompatibilität** — robots.txt mit expliziten Richtlinien für GPTBot, ClaudeBot, PerplexityBot und OAI-SearchBot, llms.txt mit kuratierten Inhalten, WAF-Regeln auf Crawler-Freundlichkeit geprüft
@@ -65,7 +65,7 @@ Das Ergebnis ist eine Site, die Core Web Vitals aus dem Stand hält, in klassisc
 
 DSGVO-konformes Webdesign geht für deutschen B2B-Mittelstand über einen Cookie-Banner deutlich hinaus. Die Konformität ist auditierbar — und genau das prüfen Aufsichtsbehörden, Konzern-Einkauf und IHK-Datenschutz-Audits regelmäßig:
 
-- **Datenschutzerklärung mit Aufsichtsbehörden-Bezug** — zuständige Landes-Datenschutzbehörde (LfDI/HmbBfDI je Standort) explizit benannt, Datenexporte ins Ausland aufgelistet, Verantwortliche und Auftragsverarbeiter sauber getrennt.
+- **[Datenschutzerklärung](/glossar/#datenschutzerklaerung) mit Aufsichtsbehörden-Bezug** — zuständige Landes-Datenschutzbehörde (LfDI/HmbBfDI je Standort) explizit benannt, Datenexporte ins Ausland aufgelistet, Verantwortliche und Auftragsverarbeiter sauber getrennt.
 - **Consent Mode v2 mit Default-denied** — alle Marketing-Cookies stehen auf "denied", bis der Besucher aktiv einwilligt; Google Analytics, Meta Pixel und LinkedIn Insight Tag respektieren den Status korrekt. TTDSG-konforme Banner-Logik ohne Cookie-Wall.
 - **Auftragsverarbeitungsverträge (AVV) mit allen Drittanbietern** — GA4, Hosting-Provider, Mailing, CRM, Marketing-Automation. Jeder Anbieter mit Zugriff auf personenbezogene Daten braucht einen AVV nach Artikel 28 DSGVO. StarkRank liefert die Vorlagen-Mappe als Compliance-Beilage.
 - **Datenresidenz EU** — Cloudflare Pages auf europe-west3 (Frankfurt) statt US-Edge; selbst-gehostete Fonts statt Google Fonts CDN; EU-gehostete Bilder eliminieren typische Compliance-Lücken.

@@ -40,11 +40,11 @@ faq:
 
 SEO-Texterstellung produziert Texte, die in Google-Ergebnissen ranken UND in KI-Antworten extrahiert werden, ohne menschliche Leser zu verlieren. Der Unterschied zur klassischen Texterstellung liegt nicht im Keyword-Einsatz, sondern in der strukturellen Disziplin: jede Überschrift ist eine Frage, jede Antwort ein eigenständiger Block in einem dokumentierten Format, jeder Text wird gegen Anti-AI-Patterns und Information-Gain-Lücken geprüft, bevor er live geht.
 
-Die Verschiebung durch KI-Suche hat die Disziplin verändert. Früher war das Primärziel das Erreichen der Google-Top-10. Heute ist das Primärziel doppelt: Google-Top-10 PLUS Extraktion durch ChatGPT-mit-Browsing, Perplexity und Google AI Overviews als zitierte Quelle. Beides gleichzeitig zu treffen erfordert andere strukturelle Entscheidungen als reines Google-Copywriting — vor allem chunkbare Antwortblöcke, saubere Entity-Benennung und antwortformatierte Überschriften.
+Die Verschiebung durch [KI-Suche](/glossar/#ki-suche) hat die Disziplin verändert. Früher war das Primärziel das Erreichen der Google-Top-10. Heute ist das Primärziel doppelt: Google-Top-10 PLUS Extraktion durch ChatGPT-mit-Browsing, Perplexity und Google AI Overviews als zitierte Quelle. Beides gleichzeitig zu treffen erfordert andere strukturelle Entscheidungen als reines Google-Copywriting — vor allem chunkbare Antwortblöcke, saubere Entity-Benennung und antwortformatierte Überschriften.
 
 ## Capsule Content Technique: unsere Methode
 
-Die Capsule Content Technique ist die StarkRank-eigene Methode, mit der wir SEO-Texte strukturieren. Sie kombiniert drei Pflichtelemente: jede H2 als echte Nutzerfrage formuliert, jeder Antwortblock im Format gewählt nach Query-Pattern (Absatz, Liste, Tabelle, numerisch), und das Zielkeyword innerhalb der ersten 20 Wörter jedes Antwortblocks. Diese Seite ist selbst nach der Methode geschrieben — Sie sehen die Regeln in jedem Abschnitt umgesetzt.
+Die [Capsule](/glossar/#capsule) Content Technique ist die StarkRank-eigene Methode, mit der wir SEO-Texte strukturieren. Sie kombiniert drei Pflichtelemente: jede H2 als echte Nutzerfrage formuliert, jeder Antwortblock im Format gewählt nach Query-Pattern (Absatz, Liste, Tabelle, numerisch), und das Zielkeyword innerhalb der ersten 20 Wörter jedes Antwortblocks. Diese Seite ist selbst nach der Methode geschrieben — Sie sehen die Regeln in jedem Abschnitt umgesetzt.
 
 ### H2-als-Frage + 40-bis-60-Wort-Antwortblock
 
@@ -110,7 +110,7 @@ KI-Tools sind 2026 Standard in jeder Content-Pipeline. Die Frage ist nicht ob, s
 
 **Wo wir KI explizit NICHT einsetzen:**
 
-- **Finaler Text** — wird von Menschen mit Fachkenntnissen geschrieben, nicht generiert. KI-generierte Texte landen erkennbar in den typischen Anti-AI-Schreibmustern (Power-Eröffnungen, generische Übergänge, übermäßiger Em-Dash-Einsatz, austauschbare Marketing-Floskeln), die wir explizit prüfen und vermeiden.
+- **Finaler Text** — wird von Menschen mit Fachkenntnissen geschrieben, nicht generiert. KI-generierte Texte landen erkennbar in den typischen [Anti-AI-Schreibmustern](/glossar/#anti-ai-writing) (Power-Eröffnungen, generische Übergänge, übermäßiger Em-Dash-Einsatz, austauschbare Marketing-Floskeln), die wir explizit prüfen und vermeiden.
 - **Statistiken, Zitate und Fall-Daten** — werden manuell verifiziert, nicht generiert. Halluzinations-Risiko ist real und in regulierten Branchen (Finanzen, Versicherung, Medizin) ein Compliance-Problem.
 - **Preis-Aussagen und Service-Versprechen** — werden gegen unsere [Preisseite](/preise/seo/) abgeglichen, nicht aus Trainingsdaten rekonstruiert.
 - **E-E-A-T-Signale** — Author-Entity, Expertise-Belege und verifizierbare Erfahrungsberichte werden manuell verankert, nicht synthetisiert.

@@ -71,7 +71,7 @@ faq:
 
 ## Was ist eine Local SEO Agentur?
 
-Eine **Local SEO Agentur** sorgt dafür, dass lokal suchende Kunden ein Unternehmen im Local Pack und im neuen AI Local Pack finden. StarkRank arbeitet dafür mit dem Citation-Stufenmodell — sechs Stufen vom Google Business Profile bis zu lokalen Community-Plattformen, in vier Wochen aufgebaut, mit messbarem Fortschritt pro Stufe.
+Eine **[Local SEO](/glossar/#lokale-seo) Agentur** sorgt dafür, dass lokal suchende Kunden ein Unternehmen im Local Pack und im neuen AI Local Pack finden. StarkRank arbeitet dafür mit dem [Citation-Stufenmodell](/glossar/#citation-stufenmodell) — sechs Stufen vom Google Business Profile bis zu lokalen Community-Plattformen, in vier Wochen aufgebaut, mit messbarem Fortschritt pro Stufe.
 
 ## Das Citation-Stufenmodell: sechs Stufen über vier Wochen
 
@@ -106,7 +106,7 @@ NAP — Name, Address, Phone — klingt wie eine Hygiene-Checkliste, ist aber f�
 
 Typische Schreibvarianten, die wir in Audits regelmäßig finden:
 
-- **Rechtsform-Drift:** „Müller Rechtsanwälte" auf Google, „Müller Rechtsanwälte GmbH" auf gelbeseiten.de, „Müller Rechtsanwälte GmbH & Co. KG" im Impressum
+- **Rechtsform-Drift:** „Müller Rechtsanwälte" auf Google, „Müller Rechtsanwälte GmbH" auf gelbeseiten.de, „Müller Rechtsanwälte GmbH & Co. KG" im [Impressum](/glossar/#impressum)
 - **Telefon-Format:** „+49 511 1234567" auf GBP, „0511 1234567" auf Das Örtliche, „0049 511-1234-567" auf 11880.com
 - **Adress-Schreibweise:** „Bahnhofstr. 12" versus „Bahnhofstraße 12" versus „Bahnhof-Straße 12"
 - **Standort-Anker:** Filiale auf Google als „Müller Hannover", auf Cylex als „Müller Hannover Mitte", auf branchen-spezifischer Plattform als „Müller Standort Hannover-Linden"
