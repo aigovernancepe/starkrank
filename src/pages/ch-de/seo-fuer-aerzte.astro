@@ -391,9 +391,9 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         Handzentrum Ost ist eine Facharzt-Klinik für Handchirurgie an vier Standorten in der Ostschweiz. Ärztliche Leitung: Dr. med. Jörg Hainich, Facharzt Handchirurgie FMH, Europäisches Diplom Handchirurgie (FESSH). Co-Operating: Stephanie Luz, Fachärztin Chirurgie FMH, EBHS-/FESSH-Diplom. Die Klinik kooperiert mit StarkRank seit April 2026 — diese Sektion wird quartalsweise mit den jeweils messbaren Befunden aktualisiert.
       </p>
 
-      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Diagnose (Stand April 2026)</h3>
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Phase 0 — Diagnose und Quick Wins (April 2026)</h3>
       <p class="mt-3 text-sm font-body text-gray leading-relaxed">
-        Befunde verifizierbar gegen Google Search Console, Common Crawl und einen Screaming-Frog-Crawl von 39 Seiten:
+        Diagnose, verifizierbar gegen Google Search Console, Common Crawl und einen Screaming-Frog-Crawl von 39 Seiten:
       </p>
       <ul class="mt-4 space-y-3 text-sm font-body text-gray leading-relaxed">
         <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-navy">AISO Score Baseline 30 / 100</strong> (Tier „Kritisch"). Strukturelle Schwäche dominant: Structure 2 / 20, Citability 4 / 20, Freshness 3 / 10.</span></li>
@@ -402,15 +402,18 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-navy">Position 1 auf <code>Handgelenksbruch</code> mit null Klicks</strong> über 16 Monate. Position 5 auf <code>Karpaltunnelsyndrom</code> ebenfalls null Klicks. Sichtbarkeit ohne Conversion-Surface.</span></li>
         <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-navy">0 von 39 Seiten mit JSON-LD-Schema</strong>. Eine Vier-Standorte-Praxis ohne <code>MedicalOrganization</code>, <code>hasLocation[]</code> und <code>Physician</code>-Markup ist für KI-Antwortmaschinen effektiv unsichtbar.</span></li>
       </ul>
-
-      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Phase 1 — Strukturelle Behebung <span class="text-sm font-label font-semibold uppercase tracking-wide text-blue ml-2">Update folgt ~September 2026</span></h3>
-      <p class="mt-3 text-base font-body text-gray leading-relaxed">
-        Phase 1 läuft. Ziele: indexierbare Service-Seiten freischalten, vollständigen Schema-Knotengraphen ausrollen (<code>MedicalOrganization</code> mit vier <code>hasLocation[]</code>-Knoten plus zwei <code>Physician</code>-Knoten mit <code>hasCredential</code>-Feldern für FMH-, FESSH- und EBHS-Diplome), revDSG-konformen Consent-Mode-v2-Stack einziehen, mobile Core Web Vitals in den grünen Bereich bringen. Messung: AISO Score Re-Run nach Cutover.
+      <p class="mt-4 text-sm font-body text-gray leading-relaxed">
+        Quick Wins ausgerollt am Ende der Diagnose-Phase: Schema-Knotengraph-Fundament auf der Homepage — <code>MedicalOrganization</code> mit vier <code>hasLocation[]</code>-Knoten und zwei <code>Physician</code>-Knoten mit FMH-, FESSH- und EBHS-Credentials. 14 Meta-Beschreibungen für die wichtigsten Seiten neu angelegt. Tippfehler korrigiert.
       </p>
 
-      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Phase 2 — Krankheitsbild-Bibliothek <span class="text-sm font-label font-semibold uppercase tracking-wide text-blue ml-2">Update folgt Q4 2026 / Q1 2027</span></h3>
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Phase 1 — Snippet-Engineering und AI-Citation-Layer <span class="text-sm font-label font-semibold uppercase tracking-wide text-blue ml-2">Update folgt ~Juni 2026</span></h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
-        Phase 2 erweitert den Schema-Knotengraphen um SME-Interview-basierte Krankheitsbild-Seiten — Ganglion, Karpaltunnel, Distale Radiusfraktur als Proof-Tranche. Jede Seite kombiniert Capsule-Antwortblock, FAQ-Sektion, <code>MedicalCondition</code>/<code>MedicalProcedure</code>-Schema und kanonisches Cross-Linking zu Physician- und Standort-Knoten. Messung: AI-Citation-Quote auf ChatGPT, Perplexity und Gemini, plus Klick-Konversion auf bereits Top-10-rankenden Krankheitsbild-Queries.
+        Phase 1 ist als gezielte Quick-Wins-Tranche aufgesetzt — sie schliesst die Konversions- und AI-Citation-Lücke über dem in Phase 0 ausgerollten Schema-Fundament. Konkreter Scope: Snippet-Engineering der bereits Top-rankenden Krankheitsbild-Seite (Position 1 für „Handgelenksbruch", null Klicks über 16 Monate), <code>MedicalCondition</code>-Schema für Distale Radiusfraktur als verknüpfte Entität im bestehenden Graphen, Indexierungs-Freigabe der Credentials-Seite, AI-Citation-Spotchecks auf ChatGPT, Perplexity und Gemini gegen Krankheitsbild-Queries als Messung.
+      </p>
+
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Phase 2 — Strukturelle Vollausbau und Krankheitsbild-Bibliothek <span class="text-sm font-label font-semibold uppercase tracking-wide text-blue ml-2">Update folgt nach Phase-1-Auswertung</span></h3>
+      <p class="mt-3 text-base font-body text-gray leading-relaxed">
+        Phase 2 setzt auf den Phase-1-Befunden auf — sie wird konfiguriert, sobald die 30-Tage-Daten aus Phase 1 vorliegen. Vorgesehene Scope-Bausteine: Indexierungs-Freigabe der verbleibenden Service-Seiten, revDSG-konformer Consent-Mode-v2-Stack, mobile Core Web Vitals in den grünen Bereich, plus SME-Interview-basierte Krankheitsbild-Seiten (Ganglion, Karpaltunnel, weitere Distale Radiusfraktur-Erweiterungen) als Proof-Tranche der Skalierungs-Hypothese.
       </p>
 
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Was wir bisher gelernt haben</h3>
