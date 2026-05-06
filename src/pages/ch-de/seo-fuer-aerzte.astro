@@ -10,9 +10,9 @@ const title = 'SEO für Ärzte in der Schweiz — revDSG-konform | StarkRank';
 const description = 'SEO für Schweizer Facharzt-Praxen: revDSG-konform, FMH-Werberecht-bewusst, AI-Search-messbar. Lebende Fallstudie Handzentrum Ost. Erstberatung gratis.';
 
 const pricingTiers = [
-  { tier: 'Einzelpraxis / KMU', price: 'ab 1\'190 CHF', profile: 'Einzelner Standort, klares Spezialgebiet' },
-  { tier: 'Mittelstand / Mehr-Standort', price: '3\'000–5\'000 CHF', profile: '2–4 Standorte oder Klinik-Sub-Spezialgebiet' },
-  { tier: 'Klinik / Multi-Standort', price: 'ab 6\'000 CHF', profile: 'Individueller Scope, krankheitsbild-skalierte Inhalte' },
+  { tier: 'Einzelpraxis / KMU', price: '1\'190 CHF', profile: 'Einzelner Standort, klares Spezialgebiet' },
+  { tier: 'Mittelstand / Mehr-Standort', price: '3\'000–5\'000 CHF', profile: '2–4 Standorte · Festpreis nach Diagnose-Phase' },
+  { tier: 'Klinik / Multi-Standort', price: 'ab 6\'000 CHF', profile: 'Individueller Scope · Festpreis nach Diagnose-Phase' },
 ];
 
 const comparison = [
@@ -115,7 +115,7 @@ const faqs = [
   },
   {
     q: 'Was kostet SEO für eine Arztpraxis in der Schweiz?',
-    a: 'SEO für Ärzte folgt drei transparenten Retainer-Bändern in der Schweiz, ergänzt um pauschale Einmal-Audits, ohne medizinischen Aufschlag. Einzelpraxis und KMU starten ab 1\'190 CHF pro Monat, Mittelstand und Mehr-Standort liegen zwischen 3\'000 und 5\'000 CHF, Klinik und Multi-Standort ab 6\'000 CHF. Vollständige Aufschlüsselung unter /ch-de/preise/seo/.',
+    a: 'SEO für Ärzte folgt drei transparenten Festpreis-Bändern in der Schweiz, ergänzt um pauschale Einmal-Audits, ohne medizinischen Aufschlag. Einzelpraxis und KMU zahlen 1\'190 CHF monatlich, Mittelstand und Mehr-Standort liegen zwischen 3\'000 und 5\'000 CHF pro Monat, Klinik und Multi-Standort starten bei 6\'000 CHF pro Monat. Vollständige Aufschlüsselung unter /ch-de/preise/seo/.',
   },
   {
     q: 'Wie unterscheidet sich SEO für Fachärzte von klassischem Praxismarketing?',
@@ -194,7 +194,11 @@ const serviceSchema = {
       '@type': 'Offer',
       name: 'Klinik / Multi-Standort Retainer',
       priceCurrency: 'CHF',
-      price: '6000',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'CHF',
+        minPrice: '6000',
+      },
       url: 'https://starkrank.com/ch-de/preise/seo/',
     },
   ],
@@ -280,7 +284,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was kostet SEO für eine Arztpraxis in der Schweiz?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        SEO für Ärzte folgt drei transparenten Retainer-Bändern in der Schweiz, ergänzt um pauschale Einmal-Audits, ohne medizinischen Aufschlag. Einzelpraxis und KMU starten ab 1'190 CHF pro Monat, Mittelstand und Mehr-Standort liegen zwischen 3'000 und 5'000 CHF, Klinik und Multi-Standort ab 6'000 CHF. Vollständige Aufschlüsselung unter <a href="/ch-de/preise/seo/" class="text-blue hover:underline">/ch-de/preise/seo/</a>.
+        SEO für Ärzte folgt drei transparenten Festpreis-Bändern in der Schweiz, ergänzt um pauschale Einmal-Audits, ohne medizinischen Aufschlag. Einzelpraxis und KMU zahlen 1'190 CHF monatlich, Mittelstand und Mehr-Standort liegen zwischen 3'000 und 5'000 CHF pro Monat, Klinik und Multi-Standort starten bei 6'000 CHF pro Monat. Vollständige Aufschlüsselung unter <a href="/ch-de/preise/seo/" class="text-blue hover:underline">/ch-de/preise/seo/</a>.
       </p>
     </div>
     <div class="mt-8 overflow-x-auto">
@@ -302,6 +306,11 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
           ))}
         </tbody>
       </table>
+    </div>
+    <div class="mt-6 max-w-4xl">
+      <p class="text-sm font-body text-gray leading-relaxed">
+        <strong class="text-navy">Monatlicher Festpreis</strong> · <strong class="text-navy">keine Stundenabrechnung</strong> · <strong class="text-navy">keine Setup-Gebühr</strong> · <strong class="text-navy">planbar im Praxis-Budget</strong>
+      </p>
     </div>
     <div class="mt-8 max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
@@ -396,11 +405,11 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         Diagnose, verifizierbar gegen Google Search Console, Common Crawl und einen Screaming-Frog-Crawl von 39 Seiten:
       </p>
       <ul class="mt-4 space-y-3 text-sm font-body text-gray leading-relaxed">
-        <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-dark">AISO Score Baseline 30 / 100</strong> (Tier „Kritisch"). Strukturelle Schwäche dominant: Structure 2 / 20, Citability 4 / 20, Freshness 3 / 10.</span></li>
-        <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-dark">12 von 49 bekannten URLs indexierbar (24 Prozent)</strong>. Sechs der sieben Service-Seiten sind explizit <code>noindex</code> ausgezeichnet. Die Credentials-Seite ist <code>noindex</code>. Der Zuweiser-Download liefert 404.</span></li>
-        <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-dark">92 Prozent aller organischen Klicks von der Homepage allein</strong>. Service-Seiten ranken nicht schlecht; sie sind aus dem Index gesperrt.</span></li>
-        <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-dark">Position 1 auf „Handgelenksbruch" mit null Klicks</strong> über 16 Monate. Position 5 auf „Karpaltunnelsyndrom" ebenfalls null Klicks. Sichtbarkeit ohne Conversion-Surface.</span></li>
-        <li class="flex gap-3"><span class="text-blue mt-1.5 shrink-0">▪</span><span><strong class="text-dark">0 von 39 Seiten mit JSON-LD-Schema</strong>. Eine Vier-Standorte-Praxis ohne <code>MedicalOrganization</code>, <code>hasLocation[]</code> und <code>Physician</code>-Markup ist für KI-Antwortmaschinen effektiv unsichtbar.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">AISO Score Baseline 30 / 100</strong> (Tier „Kritisch"). Strukturelle Schwäche dominant: Structure 2 / 20, Citability 4 / 20, Freshness 3 / 10.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">12 von 49 bekannten URLs indexierbar (24 Prozent)</strong>. Sechs der sieben Service-Seiten sind explizit <code>noindex</code> ausgezeichnet. Die Credentials-Seite ist <code>noindex</code>. Der Zuweiser-Download liefert 404.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">92 Prozent aller organischen Klicks von der Homepage allein</strong>. Service-Seiten ranken nicht schlecht; sie sind aus dem Index gesperrt.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Position 1 auf „Handgelenksbruch" mit null Klicks</strong> über 16 Monate. Position 5 auf „Karpaltunnelsyndrom" ebenfalls null Klicks. Sichtbarkeit ohne Conversion-Surface.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">0 von 39 Seiten mit JSON-LD-Schema</strong>. Eine Vier-Standorte-Praxis ohne <code>MedicalOrganization</code>, <code>hasLocation[]</code> und <code>Physician</code>-Markup ist für KI-Antwortmaschinen effektiv unsichtbar.</span></li>
       </ul>
       <p class="mt-4 text-sm font-body text-gray leading-relaxed">
         Quick Wins ausgerollt am Ende der Diagnose-Phase: Schema-Knotengraph-Fundament auf der Homepage — <code>MedicalOrganization</code> mit vier <code>hasLocation[]</code>-Knoten und zwei <code>Physician</code>-Knoten mit FMH-, FESSH- und EBHS-Credentials. 14 Meta-Beschreibungen für die wichtigsten Seiten neu angelegt. Tippfehler korrigiert.
