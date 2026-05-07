@@ -56,8 +56,8 @@ const measurementMetrics = [
     body: 'Wie oft zitieren ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot die Praxis im Fachgebiet.',
   },
   {
-    name: 'Mobile Core Web Vitals',
-    body: 'LCP, CLS und TBT (Lab-Proxy für INP). Die Mobile-Bedeutung wird systematisch unterschätzt — Mobile-First-Indexierung ist seit Jahren Default.',
+    name: 'Mobile Core Web Vitals und Ladezeiten',
+    body: 'LCP, CLS und TBT (Lab-Proxy für INP). Schlechte Mobile-Ladezeiten sind ein direkter Konversions-Killer für Selbstzahler-Anfragen — Mobile-First-Indexierung ist seit Jahren Default.',
   },
 ];
 
@@ -80,7 +80,7 @@ const collaborationSteps = [
   {
     num: '01',
     title: 'Erstberatung gratis',
-    body: '30 Minuten. Standortdiagnose plus AISO-Quick-Check auf zwei Dimensionen — Crawlability und Structure — damit eine Hausnummer auf dem Tisch liegt.',
+    body: '30 Minuten. Termin online vereinbaren. Standortdiagnose plus AISO-Quick-Check auf zwei Dimensionen — Crawlability und Structure — damit eine Hausnummer auf dem Tisch liegt.',
   },
   {
     num: '02',
@@ -107,7 +107,7 @@ const collaborationSteps = [
 const faqs = [
   {
     q: 'Was ist SEO für Ärzte und für welche Praxen lohnt es sich?',
-    a: 'SEO für Ärzte ist die systematische Optimierung der Praxis-Website für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — robots-Konfiguration, Schema-Markup, Local-Pack-Sichtbarkeit, AI-Citability. Sie lohnt sich für Spezialkliniken und Facharzt-Praxen mit Selbstzahler-Anteil oder Zuweiser-Funnel. Für reine Hausarzt-Allgemeinmedizin mit voller Patientenliste ist der ROI in der Regel zu schwach.',
+    a: 'SEO für Ärzte (Suchmaschinenoptimierung) ist die systematische Optimierung der Online-Präsenz einer Schweizer Facharzt-Praxis für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — robots-Konfiguration, Schema-Markup, Local-Pack-Sichtbarkeit, AI-Citability. Sie lohnt sich für Spezialkliniken und Facharzt-Praxen mit Selbstzahler-Anteil oder Zuweiser-Funnel. Für reine Hausarzt-Allgemeinmedizin mit voller Patientenliste ist der ROI in der Regel zu schwach.',
   },
   {
     q: 'Welche regulatorischen Besonderheiten gelten für Schweizer Arztpraxen?',
@@ -253,10 +253,13 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was ist SEO für Ärzte und für welche Praxen lohnt es sich?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        SEO für Ärzte ist die systematische Optimierung der Praxis-Website für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — robots-Konfiguration, Schema-Markup, Local-Pack-Sichtbarkeit, AI-Citability. Sie lohnt sich für Spezialkliniken und Facharzt-Praxen mit Selbstzahler-Anteil oder Zuweiser-Funnel. Für reine Hausarzt-Allgemeinmedizin mit voller Patientenliste ist der ROI in der Regel zu schwach.
+        SEO für Ärzte (Suchmaschinenoptimierung) ist die systematische Optimierung der Online-Präsenz einer Schweizer Facharzt-Praxis für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — robots-Konfiguration, Schema-Markup, Local-Pack-Sichtbarkeit, AI-Citability. Sie lohnt sich für Spezialkliniken und Facharzt-Praxen mit Selbstzahler-Anteil oder Zuweiser-Funnel. Für reine Hausarzt-Allgemeinmedizin mit voller Patientenliste ist der ROI in der Regel zu schwach.
       </p>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
         Drei Praxis-Profile bekommen messbare Hebel: Spezialgebiete mit Selbstzahler-Komponente, weil Patienten aktiv recherchieren und die Praxis bewusst wählen; Multi-Standort-Praxen, deren einzelne Standorte im Local Pack separat sichtbar werden müssen; Zuweiser-getriebene Modelle, in denen B2B-Sichtbarkeit gegenüber Hausärzten und Allgemeinchirurgen den eigentlichen Funnel speist. Wer in keines dieser Profile fällt, wird vom organischen Wachstum unter Umständen stärker durch klassische Praxisökonomie als durch SEO begrenzt.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Wer als Praxis mehr Patienten über organische Sichtbarkeit gewinnen will, muss die digitale Präsenz konsistent für Behandlungs-Suchanfragen optimieren — nicht generisch für Marken-Reach. Eine SEO-Strategie für eine Facharzt-Praxis startet bei der Inventar-Diagnose und arbeitet sich von dort zu Capsule-Inhalten und Authority hoch.
       </p>
     </div>
   </Section>
@@ -351,7 +354,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </div>
     <div class="mt-8 max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
-        Die häufigste Fehleinschätzung ist, dass eine schöne neue Praxis-Website automatisch SEO-Fortschritt bedeutet. Sie tut es nicht — eine technisch saubere Marketing-Site kann jeden SEO-Hebel verfehlen, weil ihre Schema-Tiefe Null ist und ihre Krankheitsbild-Seiten als <code>noindex</code> ausgeliefert werden. Das Praxismarketing-Budget ist ausgegeben, der SEO-Hebel bleibt unberührt.
+        Die häufigste Fehleinschätzung ist, dass eine schöne neue Praxiswebsite automatisch SEO-Fortschritt bedeutet. Sie tut es nicht — eine technisch saubere Marketing-Site kann jeden SEO-Hebel verfehlen, weil ihre Schema-Tiefe Null ist und ihre Krankheitsbild-Seiten als <code>noindex</code> ausgeliefert werden. Das Marketing-Budget ist ausgegeben, der SEO-Hebel bleibt unberührt. Eine spezialisierte SEO-Agentur verfolgt deshalb einen anderen Pfad als ein klassisches Branding-Studio — sie startet bei der Inventar-Diagnose, nicht beim Markenauftritt.
       </p>
     </div>
   </Section>
@@ -373,7 +376,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </ul>
     <div class="mt-8 max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
-        Ranking-Reports sind notwendig, aber nicht hinreichend; sie zeigen, wo die Praxis steht, nicht warum. Diagnose verlangt zusätzlich, ob die Sichtbarkeit überhaupt mit Klicks korreliert und ob KI-Antwortmaschinen die Praxis als zitierbare Fachstelle anerkennen.
+        Ranking-Reports sind notwendig, aber nicht hinreichend; sie zeigen, wo die Praxis steht, nicht warum. Diagnose verlangt zusätzlich, ob die Sichtbarkeit überhaupt mit Klicks korreliert und ob KI-Antwortmaschinen die Praxis als zitierbare Fachstelle anerkennen. Welche der fünf Metriken im konkreten Fall am relevantesten ist, hängt am Praxis-Profil — eine Spezialklinik braucht andere Schwerpunkte als ein Multi-Standort-Spezialist, und beide brauchen SEO-Expertise mit Schweizer Compliance-Bezug.
       </p>
     </div>
   </Section>
@@ -453,7 +456,10 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </ol>
     <div class="mt-8 max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
-        Skalierung erst nach Proof-Messung. Vor der Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
+        Skalierung erst nach Proof-Messung. Vor der Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist. Praxisinhaberinnen und Praxisinhaber, die das ausprobieren wollen, können uns direkt kontaktieren — wir antworten in der Regel innerhalb eines Werktages.
+      </p>
+      <p class="mt-6 text-base font-body text-gray leading-relaxed">
+        Bei einem vollständigen Re-Launch koordinieren wir mit Webdesign-Partnern, damit Schema-Knotengraph und Google-Unternehmensprofil-Anbindung direkt im neuen Stack landen statt nachträglich. Das spart Doppelarbeit und reduziert Compliance-Risiko in der Übergangsphase.
       </p>
     </div>
   </Section>
