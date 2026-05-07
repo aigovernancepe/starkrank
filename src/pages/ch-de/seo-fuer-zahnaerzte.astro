@@ -48,19 +48,23 @@ const measurementMetrics = [
     body: 'Wie viele Behandlungs-URLs sind tatsächlich indexierbar. Bei Audits regelmässig unter 60 Prozent bei Zahnarztpraxen mit gewachsener WordPress-Vergangenheit.',
   },
   {
-    name: 'Position × CTR auf Selbstzahler-Behandlungs-Queries',
-    body: 'Zahnimplantat, Veneers, Bleaching, Invisalign Erwachsene — viele Praxen ranken bereits, ohne Klicks zu konvertieren.',
+    name: 'Position × CTR auf Selbstzahler-Behandlungs-Keywords',
+    body: 'Suchanfragen wie Zahnimplantat, Veneers, Bleaching oder Invisalign Erwachsene — viele Praxen ranken bereits auf diesen Keywords, ohne Klicks zu konvertieren. Position allein ist kein Erfolgsindikator.',
   },
   {
     name: 'AI-Citation-Quote',
-    body: 'Wie oft zitieren ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot die Praxis bei Behandlungs-Queries.',
+    body: 'Wie oft zitieren ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot die Praxis bei Behandlungs-Suchanfragen. Für Selbstzahler-Recherche zunehmend relevant.',
   },
   {
-    name: 'Mobile Core Web Vitals',
-    body: 'LCP, CLS, TBT (Lab-Proxy für INP). Bei DIVI- oder Bridge-Theme-Praxen systematisch im roten Bereich.',
+    name: 'Local-Pack-Position auf Google Maps',
+    body: 'Sichtbarkeit im lokalen Suchergebnis via Google Unternehmensprofil. Für Selbstzahler-Neupatienten oft wichtiger als Position 1 in der organischen Suche, weil sich Patienten bei der Zahnarztsuche stark an Bewertungen und Distanz orientieren — Lokales SEO ist hier der eigentliche Hebel.',
   },
   {
-    name: 'Cost-per-Lead aus organic',
+    name: 'Mobile Core Web Vitals und Ladezeiten',
+    body: 'LCP, CLS, TBT (Lab-Proxy für INP). Bei DIVI- oder Bridge-Theme-Praxen sind die Ladezeiten systematisch im roten Bereich — ein direkter Konversions-Killer für Premium-Anfragen.',
+  },
+  {
+    name: 'Cost-per-Lead aus organischer Suche',
     body: 'Gemessen via Phone-Tracker oder Form-Submission-Tagging. Kein Ranking-Report-Ersatz für Diagnose.',
   },
 ];
@@ -115,7 +119,7 @@ const collaborationSteps = [
 const faqs = [
   {
     q: 'Was ist SEO für Zahnärzte und für welche Praxen lohnt es sich?',
-    a: 'SEO für Zahnärzte ist die systematische Optimierung der Praxis-Website für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — Indexierbarkeit, Schema-Markup für Dentist und Behandlungs-Knoten, Local-Pack-Sichtbarkeit, AI-Citability. Sie lohnt sich für Aesthetic-, Implantat- und Premium-Positionierung mit Selbstzahler-Anteil. Für reine KVG-Grundversorgung mit voller Patientenliste ist der ROI in der Regel zu schwach.',
+    a: 'SEO für Zahnärzte (Suchmaschinenoptimierung) ist die systematische Optimierung der Praxis-Website und der gesamten Online-Präsenz für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — Indexierbarkeit, Schema-Markup für Dentist und Behandlungs-Knoten, Local-Pack-Sichtbarkeit auf Google Maps, AI-Citability. Sie lohnt sich für Aesthetic-, Implantat- und Premium-Positionierung mit Selbstzahler-Anteil. Für reine KVG-Grundversorgung mit voller Patientenliste ist der ROI in der Regel zu schwach.',
   },
   {
     q: 'Welche regulatorischen Besonderheiten gelten für Schweizer Zahnarztpraxen?',
@@ -131,7 +135,7 @@ const faqs = [
   },
   {
     q: 'Wie messen wir SEO-Erfolg in einer Zahnarztpraxis?',
-    a: 'Sechs Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Zahnarztpraxis: AISO Score, GSC-Indexierungs-Quote, Position-mal-CTR auf Selbstzahler-Behandlungs-Queries, AI-Citation-Quote auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, mobile Core Web Vitals und Cost-per-Lead aus organic. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.',
+    a: 'Sieben Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Zahnarztpraxis: AISO Score, GSC-Indexierungs-Quote, Position-mal-CTR auf Selbstzahler-Behandlungs-Keywords und Suchanfragen, AI-Citation-Quote auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Local-Pack-Position auf Google Maps via Google Unternehmensprofil, mobile Core Web Vitals und Ladezeiten sowie Cost-per-Lead aus organischer Suche. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.',
   },
   {
     q: 'Was zeigt eine typische Pre-Engagement-Diagnose bei einer Schweizer Aesthetic-Zahnarztpraxis?',
@@ -266,7 +270,10 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was ist SEO für Zahnärzte und für welche Praxen lohnt es sich?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        SEO für Zahnärzte ist die systematische Optimierung der Praxis-Website für Google-Suche und KI-Antwortmaschinen — Indexierbarkeit, <a href="/ch-de/glossar/schema-org/" class="text-blue hover:underline">Schema.org-Markup</a> für <code>Dentist</code> und Behandlungs-Knoten, Local-Pack-Sichtbarkeit, AI-Citability bei ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot. Sie lohnt sich für Aesthetic-, Implantat- und Premium-Positionierung mit Selbstzahler-Anteil. Für reine KVG-Grundversorgung mit voller Patientenliste ist der ROI in der Regel zu schwach.
+        SEO für Zahnärzte (Suchmaschinenoptimierung) ist die systematische Optimierung der Praxis-Website und der gesamten Online-Präsenz für Google-Suche und KI-Antwortmaschinen — Indexierbarkeit, <a href="/ch-de/glossar/schema-org/" class="text-blue hover:underline">Schema.org-Markup</a> für <code>Dentist</code> und Behandlungs-Knoten, Local-Pack-Sichtbarkeit auf Google Maps, AI-Citability bei ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot. Sie lohnt sich für Aesthetic-, Implantat- und Premium-Positionierung mit Selbstzahler-Anteil. Für reine KVG-Grundversorgung mit voller Patientenliste ist der ROI in der Regel zu schwach.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Patienten beginnen ihre Zahnarztsuche heute fast immer online — über konkrete Suchanfragen wie «Zahnimplantat Kosten» oder «Veneers Basel», ergänzt um KI-Antwortmaschinen, die in den Suchergebnissen zunehmend prominenten Platz einnehmen. Wer als Praxis bei diesen Behandlungs-Keywords nicht sichtbar ist, verliert Selbstzahler-Neupatienten an Wettbewerber, deren Schema-Knotengraph sauber implementiert ist.
       </p>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
         Der Schweizer Dental-Sektor ist mehrheitlich Selbstzahler — die Grundversicherung (KVG) deckt nur Notfälle und definierte Erkrankungen, anders als in Deutschland mit der gesetzlichen Krankenversicherung. Premium-Behandlungen wie Implantate, Veneers, Aligner oder Bleaching sind komplett selbstzahler-finanziert mit Behandlungs-Tickets von 2'000 bis 15'000 CHF. Diese ökonomische Grundlage macht Zahnarzt-SEO näher an E-Commerce-SEO als an klassischer Praxis-Webseite — Patienten recherchieren behandlungsspezifisch, vergleichen Anbieter, und der CAC-Spielraum rechtfertigt einen Multi-Touch-Funnel.
@@ -328,6 +335,11 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         <strong class="text-navy">Monatlicher Festpreis</strong> · <strong class="text-navy">keine Stundenabrechnung</strong> · <strong class="text-navy">keine Setup-Gebühr</strong> · <strong class="text-navy">planbar im Praxis-Budget</strong>
       </p>
     </div>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Welche SEO-Agentur zur Praxis passt, hängt weniger an der Anbieter-Grösse als an Methodologie-Tiefe und Branchen-Erfahrung mit dem Schweizer Dental-Sektor. Der Retainer ist eine Investition in laufende Sichtbarkeit, die gegen den Customer-Lifetime-Value einer Selbstzahler-Behandlung gerechnet werden sollte — nicht gegen den Behandlungs-Einzelpreis.
+      </p>
+    </div>
   </Section>
 
   <Section bg="cream">
@@ -368,7 +380,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie messen wir SEO-Erfolg in einer Zahnarztpraxis?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Sechs Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Zahnarztpraxis, und keine ersetzt eine andere: <a href="/ch-de/glossar/aiso-score/" class="text-blue hover:underline">AISO Score</a>, GSC-Indexierungs-Quote, Position-mal-CTR auf Selbstzahler-Behandlungs-Queries, AI-Citation-Quote, mobile <a href="/ch-de/glossar/core-web-vitals/" class="text-blue hover:underline">Core Web Vitals</a> und Cost-per-Lead aus organic. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine.
+        Sieben Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Zahnarztpraxis, und keine ersetzt eine andere: <a href="/ch-de/glossar/aiso-score/" class="text-blue hover:underline">AISO Score</a>, GSC-Indexierungs-Quote, Position-mal-CTR auf Selbstzahler-Behandlungs-Keywords und Suchanfragen, AI-Citation-Quote, Local-Pack-Position auf Google Maps via Google Unternehmensprofil, mobile <a href="/ch-de/glossar/core-web-vitals/" class="text-blue hover:underline">Core Web Vitals</a> und Ladezeiten sowie Cost-per-Lead aus organischer Suche. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine.
       </p>
     </div>
     <ul class="mt-8 space-y-5 max-w-3xl">
@@ -381,7 +393,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </ul>
     <div class="mt-8 max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
-        Ranking-Reports sind notwendig, aber nicht hinreichend; sie zeigen, wo die Praxis steht, nicht warum. Diagnose verlangt zusätzlich, ob die Sichtbarkeit überhaupt mit Klicks korreliert, ob KI-Antwortmaschinen die Praxis als zitierbare Fachstelle anerkennen, und ob die mobile Performance Selbstzahler-Patienten an die Konkurrenz verliert.
+        Ranking-Reports sind notwendig, aber nicht hinreichend; sie zeigen, wo die Praxis steht, nicht warum. Diagnose verlangt zusätzlich, ob die Sichtbarkeit überhaupt mit Klicks korreliert, ob KI-Antwortmaschinen die Praxis als zitierbare Fachstelle anerkennen, und ob die mobile Performance Selbstzahler-Patienten an die Konkurrenz verliert. Welche der sieben Metriken im konkreten Fall am relevantesten ist, hängt am Praxis-Profil — eine Aesthetic-Praxis ohne Local-Pack-Sichtbarkeit verliert Patienten anders als eine Implantat-Klinik mit blockierten AI-Crawlern.
       </p>
     </div>
   </Section>
@@ -413,7 +425,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Hebelreihenfolge — was wir empfehlen</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
-        Aus dieser Befundlage ist die Reihenfolge: AI-Crawler-Zugang sicherstellen, Schema-Knotengraph für <code>Dentist</code> plus <code>Person</code>×N plus <code>Service</code>×N aufbauen, Locale- und Stale-Cleanup, Capsule-Format auf Behandlungs-Pages, Service-Lücken-Schliessung über SME-Interview. Nicht «mehr Backlinks», nicht «mehr Content», nicht «Ranking-Reports». Diese Reihenfolge gilt für jede Schweizer Aesthetic- oder Implantat-Praxis mit gewachsener WordPress- oder Squarespace-Vergangenheit.
+        Aus dieser Befundlage ist die Reihenfolge: AI-Crawler-Zugang sicherstellen, Schema-Knotengraph für <code>Dentist</code> plus <code>Person</code>×N plus <code>Service</code>×N aufbauen, Locale- und Stale-Cleanup, Capsule-Format auf Behandlungs-Pages, Service-Lücken-Schliessung über SME-Interview. Nicht «mehr Backlinks», nicht «mehr Content», nicht «Ranking-Reports». Diese Reihenfolge gilt für jede Schweizer Aesthetic- oder Implantat-Praxis mit gewachsener WordPress- oder Squarespace-Vergangenheit und erfordert Schema- und Compliance-Expertise, die in DE-fokussierten Audits typischerweise nicht angelegt ist.
       </p>
 
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Was wir gelernt haben</h3>
