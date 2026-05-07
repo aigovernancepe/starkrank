@@ -1,0 +1,466 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import Button from '../../components/ui/Button.astro';
+
+const title = 'SEO für Zahnärzte in der Schweiz — revDSG-konform | StarkRank';
+const description = 'SEO für Schweizer Aesthetic- und Implantat-Praxen: revDSG-konform, SSO-Werberecht-bewusst, AI-Search-messbar. Beispiel-Diagnose inklusive. Erstberatung gratis.';
+
+const pricingTiers = [
+  { tier: 'Einzelpraxis / Einzelunternehmen', price: '1\'190 CHF', profile: 'Einzelner Standort, klares Spezialgebiet (Aesthetik, Implantologie)' },
+  { tier: 'Mittelstand', price: '3\'000–5\'000 CHF', profile: 'Aesthetic-/Implantat-Spezialisierung mit eigenem Behandler-Team' },
+  { tier: 'Enterprise / Multi-Behandler-AG', price: 'ab 6\'000 CHF', profile: 'Familien-AG, Multi-Behandler, individueller Scope' },
+];
+
+const comparison = [
+  {
+    axis: 'Suchverhalten',
+    allgemeinmedizin: 'standortgebunden («Hausarzt Basel», «Notfall Bern»)',
+    zahnarzt: 'behandlungsspezifisch («Zahnimplantat Kosten», «Veneers Basel», «Invisalign Erwachsene»)',
+  },
+  {
+    axis: 'Konversions-Pfad',
+    allgemeinmedizin: 'Single-Touch, KVG-getrieben, niedriger CAC',
+    zahnarzt: 'Multi-Touch-Funnel, hohe CAC-Toleranz (Behandlungs-Ticket 2\'000–15\'000 CHF)',
+  },
+  {
+    axis: 'Content-Bedarf',
+    allgemeinmedizin: 'Sprechstundenzeiten, Notfallkontakt, Lageplan',
+    zahnarzt: 'Behandlungs-Capsules mit Kosten-Bandbreite, Vorher-Nachher-Compliance, Zertifikate',
+  },
+  {
+    axis: 'AI-Citability-Hebel',
+    allgemeinmedizin: 'Pharma-Inhalte dominieren — Über-Zitations-Problem',
+    zahnarzt: 'systematisch unter-zitiert — Schema-Lücke ist der eigentliche Hebel',
+  },
+];
+
+const measurementMetrics = [
+  {
+    name: 'AISO Score',
+    body: 'StarkRank-eigene 6-Dimensionen-Diagnostik 0–100 für AI-Search-Readiness — Crawlability, Structure, Authority, Citability, Freshness, Measurability. Quartalsweises Re-Scoring.',
+  },
+  {
+    name: 'GSC Indexierungs-Quote',
+    body: 'Wie viele Behandlungs-URLs sind tatsächlich indexierbar. Bei Audits regelmässig unter 60 Prozent bei Zahnarztpraxen mit gewachsener WordPress-Vergangenheit.',
+  },
+  {
+    name: 'Position × CTR auf Selbstzahler-Behandlungs-Queries',
+    body: 'Zahnimplantat, Veneers, Bleaching, Invisalign Erwachsene — viele Praxen ranken bereits, ohne Klicks zu konvertieren.',
+  },
+  {
+    name: 'AI-Citation-Quote',
+    body: 'Wie oft zitieren ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot die Praxis bei Behandlungs-Queries.',
+  },
+  {
+    name: 'Mobile Core Web Vitals',
+    body: 'LCP, CLS, TBT (Lab-Proxy für INP). Bei DIVI- oder Bridge-Theme-Praxen systematisch im roten Bereich.',
+  },
+  {
+    name: 'Cost-per-Lead aus organic',
+    body: 'Gemessen via Phone-Tracker oder Form-Submission-Tagging. Kein Ranking-Report-Ersatz für Diagnose.',
+  },
+];
+
+const regulatoryAnchors = [
+  {
+    title: 'revDSG-Konformität',
+    body: 'Datenschutzerklärung mit expliziter Schweizer Datenresidenz-Aussage, Consent Mode v2 default-denied, Auftragsdaten-Verarbeitungsverträge mit allen Drittanbietern (Praxisverwaltung, Online-Buchung, Tracking, Hosting). DE-DSGVO-Audits prüfen DSGVO-Wortlaut; revDSG hat eigene Spezifika.',
+  },
+  {
+    title: 'SSO-Standesordnung Werberecht',
+    body: 'Sachlich-berufsbezogene Information statt anpreisender Werbung. Keine vergleichende Werbung. Der Titel «Spezialist SSO» ist geschützt — er darf nur mit zertifiziertem Weiterbildungsausweis geführt werden, ungeprüfte Selbstbenennungen sind ein Standesrechts-Risiko.',
+  },
+  {
+    title: 'HMG-Werberestriktionen',
+    body: 'Werbung für verschreibungspflichtige Heilmittel an Laien ist verboten — betrifft Lokalanästhetika, Beruhigungsmittel und Antibiotika in der Behandlungsbeschreibung. Auch keine Heilversprechen oder Erfolgsgarantien.',
+  },
+  {
+    title: 'Vorher-Nachher-Bilder',
+    body: 'In der Schweiz unter SSO-Standesordnung und revDSG strenger als in Deutschland: schriftliche Einwilligung pro Bild ist Pflicht, sonst Werbe-Aufsichts-Risiko. Pauschale Einwilligung im Behandlungsvertrag reicht nicht aus.',
+  },
+];
+
+const collaborationSteps = [
+  {
+    num: '01',
+    title: 'Erstberatung gratis',
+    body: '30 Minuten. Standortdiagnose plus AISO-Quick-Check auf zwei Dimensionen — Crawlability und Structure — damit eine Hausnummer auf dem Tisch liegt.',
+  },
+  {
+    num: '02',
+    title: 'Diagnose-Tiefenphase',
+    body: '1–2 Wochen. Technical Audit, AISO Score Baseline, GSC-Indexierungs-Snapshot, AI-Crawler-User-Agent-Test, Screaming-Frog-Crawl.',
+  },
+  {
+    num: '03',
+    title: 'Roadmap-Übergabe',
+    body: 'Hebelreihenfolge, Kostenfeld, Messmetriken. Compliance-Checkpunkte für revDSG, SSO-Standesordnung und HMG.',
+  },
+  {
+    num: '04',
+    title: 'Umsetzung',
+    body: 'Im Retainer für laufende Begleitung, als Festpreis-Audit für Einzeldiagnosen.',
+  },
+  {
+    num: '05',
+    title: 'Quartalsweises Re-Scoring',
+    body: 'AISO Score plus dokumentierte Lessons. Skalierung erst nach Proof-Messung — nicht vor Mandats-Unterschrift versprochen.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Was ist SEO für Zahnärzte und für welche Praxen lohnt es sich?',
+    a: 'SEO für Zahnärzte ist die systematische Optimierung der Praxis-Website für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — Indexierbarkeit, Schema-Markup für Dentist und Behandlungs-Knoten, Local-Pack-Sichtbarkeit, AI-Citability. Sie lohnt sich für Aesthetic-, Implantat- und Premium-Positionierung mit Selbstzahler-Anteil. Für reine KVG-Grundversorgung mit voller Patientenliste ist der ROI in der Regel zu schwach.',
+  },
+  {
+    q: 'Welche regulatorischen Besonderheiten gelten für Schweizer Zahnarztpraxen?',
+    a: 'Vier Anker prägen jede Schweizer Zahnarztpraxis-Website und werden von DE-fokussierten SEO-Audits routinemässig übersehen: revDSG für die Datenverarbeitung, SSO-Standesordnung für das Werberecht, HMG für Heilmittel-Werbung, plus die strikte Vorher-Nachher-Bild-Compliance mit schriftlicher Einwilligung pro Bild. Jeder dieser Anker hat eigene Sprach- und Pflicht-Spezifika, die in DSGVO-orientierten Audits schlicht nicht auftauchen.',
+  },
+  {
+    q: 'Was kostet SEO für eine Zahnarztpraxis in der Schweiz?',
+    a: 'SEO für Zahnärzte folgt drei transparenten Festpreis-Bändern in der Schweiz, ergänzt um pauschale Einmal-Audits, ohne zahnmedizinischen Aufschlag. Einzelpraxis und Einzelunternehmen zahlen ab 1\'190 CHF monatlich, Mittelstand mit Aesthetic- oder Implantat-Spezialisierung liegt zwischen 3\'000 und 5\'000 CHF pro Monat, Multi-Behandler-AG startet bei 6\'000 CHF pro Monat. Vollständige Aufschlüsselung unter /ch-de/preise/seo/.',
+  },
+  {
+    q: 'Wie unterscheidet sich SEO für Zahnärzte von Praxismarketing für Allgemeinmedizin?',
+    a: 'Vier Achsen unterscheiden Zahnarzt-SEO von Allgemeinmedizin-Praxismarketing: Suchverhalten (Zahnarzt-Patient recherchiert behandlungsspezifisch, Allgemein-Patient sucht standortgebunden), Konversions-Pfad (Zahnarzt-Behandlungs-Ticket 2\'000–15\'000 CHF rechtfertigt Multi-Touch-Funnel), Content-Bedarf (Behandlungs-Capsules statt Sprechstundenzeiten) und AI-Citability-Hebel (Zahnarzt-Praxen sind in KI-Antwortmaschinen systematisch unter-zitiert, Allgemeinmedizin hat das umgekehrte Problem). Zahnarzt-SEO ist näher an E-Commerce-SEO als an klassischer Praxis-Webseite.',
+  },
+  {
+    q: 'Wie messen wir SEO-Erfolg in einer Zahnarztpraxis?',
+    a: 'Sechs Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Zahnarztpraxis: AISO Score, GSC-Indexierungs-Quote, Position-mal-CTR auf Selbstzahler-Behandlungs-Queries, AI-Citation-Quote auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, mobile Core Web Vitals und Cost-per-Lead aus organic. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.',
+  },
+  {
+    q: 'Was zeigt eine typische Pre-Engagement-Diagnose bei einer Schweizer Aesthetic-Zahnarztpraxis?',
+    a: 'Die Pattern wiederholen sich: AISO Score Baseline um 30 von 100, kein Behandlungs-spezifisches Schema (kein Dentist-Knoten, kein Person-Knoten für Behandler, kein Service-Knoten für Behandlungsbereiche), de_DE-Locale-Bug auf Schweizer Praxis, Stale-Content live (Coronavirus-H2 von 2020, Sommerferien-Notice von 2019), Service-Lücken bei Top-Selbstzahler-Behandlungen (Veneers, Aligner). Bei einer von vier auditierten Praxen blockiert zusätzlich die Plesk- oder Wordfence-Default-WAF die AI-Crawler GPTBot, ClaudeBot und PerplexityBot per HTTP 406.',
+  },
+  {
+    q: 'Wie läuft die Zusammenarbeit ab?',
+    a: 'Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen, Diagnose-Tiefenphase über 1–2 Wochen mit Technical Audit, AISO Score Baseline, GSC-Indexierungs-Snapshot, AI-Crawler-User-Agent-Test und Screaming-Frog-Crawl, Roadmap-Übergabe mit revDSG-, SSO- und HMG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.',
+  },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://starkrank.com/ch-de/' },
+    { '@type': 'ListItem', position: 2, name: 'SEO für Ärzte', item: 'https://starkrank.com/ch-de/seo-fuer-aerzte/' },
+    { '@type': 'ListItem', position: 3, name: 'SEO für Zahnärzte', item: 'https://starkrank.com/ch-de/seo-fuer-zahnaerzte/' },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://starkrank.com/ch-de/seo-fuer-zahnaerzte/#service',
+  name: 'SEO für Zahnärzte',
+  serviceType: 'Search Engine Optimization',
+  description:
+    'SEO für Schweizer Aesthetic- und Implantat-Zahnarztpraxen — Indexierbarkeit, Schema-Knotengraph für Dentist und Behandlungs-Knoten, revDSG-Konformität, SSO-Werberecht-Bewusstsein und AI-Citability auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot.',
+  url: 'https://starkrank.com/ch-de/seo-fuer-zahnaerzte/',
+  isPartOf: {
+    '@type': 'Service',
+    '@id': 'https://starkrank.com/ch-de/seo-fuer-aerzte/#service',
+    name: 'SEO für Ärzte',
+    url: 'https://starkrank.com/ch-de/seo-fuer-aerzte/',
+  },
+  provider: {
+    '@type': 'Organization',
+    '@id': 'https://starkrank.com/#organization',
+    name: 'StarkRank',
+    legalName: 'Datanalytico Feye',
+    alternateName: ['Datanalytico Feye'],
+    url: 'https://starkrank.com/',
+  },
+  areaServed: { '@type': 'Country', name: 'Switzerland' },
+  audience: {
+    '@type': 'Audience',
+    audienceType: 'Dental Practices, Aesthetic Dentistry, Implantology (Switzerland)',
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Einzelpraxis / Einzelunternehmen Retainer',
+      priceCurrency: 'CHF',
+      price: '1190',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        priceCurrency: 'CHF',
+        price: '1190',
+        unitText: 'MONTH',
+        referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' },
+      },
+      url: 'https://starkrank.com/ch-de/preise/seo/',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Mittelstand Retainer',
+      priceCurrency: 'CHF',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'CHF',
+        minPrice: '3000',
+        maxPrice: '5000',
+      },
+      url: 'https://starkrank.com/ch-de/preise/seo/',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Enterprise / Multi-Behandler-AG Retainer',
+      priceCurrency: 'CHF',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'CHF',
+        minPrice: '6000',
+      },
+      url: 'https://starkrank.com/ch-de/preise/seo/',
+    },
+  ],
+  mentions: [
+    { '@type': 'Legislation', name: 'revDSG', url: 'https://www.fedlex.admin.ch/eli/cc/2022/491/de' },
+    { '@type': 'Organization', name: 'Schweizerische Zahnärzte-Gesellschaft SSO', url: 'https://www.sso.ch/' },
+    { '@type': 'Legislation', name: 'HMG', url: 'https://www.fedlex.admin.ch/eli/cc/2001/422/de' },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': 'https://starkrank.com/ch-de/seo-fuer-zahnaerzte/#faq',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
+---
+
+<BaseLayout title={title} description={description} locale="ch-de" schema={schemas}>
+  <HeroSection
+    headline="SEO für Zahnärzte"
+    subheadline="Eine Schweizer Aesthetic-Zahnarztpraxis kann acht Behandlungs-Pages live haben und trotzdem in keiner KI-Antwortmaschine zitiert werden — weil der Schema-Knotengraph fehlt. SEO für Zahnärzte beginnt deshalb nicht bei mehr Content, sondern bei der Inventar-Frage: was sieht Google, was sehen ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot überhaupt?"
+  >
+    <Button href="/ch-de/kontakt/" variant="primary">Erstberatung anfragen</Button>
+    <Button href="#beispiel-diagnose" variant="secondary">Beispiel-Diagnose ansehen</Button>
+  </HeroSection>
+
+  <Section bg="cream">
+    <div class="max-w-4xl">
+      <p class="text-sm font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3">Profile, die wir betreuen</p>
+      <p class="text-base font-body text-dark leading-relaxed">
+        Aesthetic-Zahnmedizin · Implantologie · Premium-Privatleistungs-Praxen · Kieferorthopädie mit Aligner-Schwerpunkt · Multi-Behandler-AG mit Selbstzahler-Anteil
+      </p>
+      <p class="mt-6 text-sm font-body text-gray leading-relaxed">
+        <strong class="text-navy">revDSG-konform</strong> · <strong class="text-navy">SSO-Standesordnung-bewusst</strong> · <strong class="text-navy">AISO Score quartalsweise</strong> · <strong class="text-navy">kein zahnmedizinischer Aufschlag</strong>
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was ist SEO für Zahnärzte und für welche Praxen lohnt es sich?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        SEO für Zahnärzte ist die systematische Optimierung der Praxis-Website für Google-Suche und KI-Antwortmaschinen — Indexierbarkeit, <a href="/ch-de/glossar/schema-org/" class="text-blue hover:underline">Schema.org-Markup</a> für <code>Dentist</code> und Behandlungs-Knoten, Local-Pack-Sichtbarkeit, AI-Citability bei ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot. Sie lohnt sich für Aesthetic-, Implantat- und Premium-Positionierung mit Selbstzahler-Anteil. Für reine KVG-Grundversorgung mit voller Patientenliste ist der ROI in der Regel zu schwach.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Der Schweizer Dental-Sektor ist mehrheitlich Selbstzahler — die Grundversicherung (KVG) deckt nur Notfälle und definierte Erkrankungen, anders als in Deutschland mit der gesetzlichen Krankenversicherung. Premium-Behandlungen wie Implantate, Veneers, Aligner oder Bleaching sind komplett selbstzahler-finanziert mit Behandlungs-Tickets von 2'000 bis 15'000 CHF. Diese ökonomische Grundlage macht Zahnarzt-SEO näher an E-Commerce-SEO als an klassischer Praxis-Webseite — Patienten recherchieren behandlungsspezifisch, vergleichen Anbieter, und der CAC-Spielraum rechtfertigt einen Multi-Touch-Funnel.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Welche regulatorischen Besonderheiten gelten für Schweizer Zahnarztpraxen?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Vier Anker prägen jede Schweizer Zahnarztpraxis-Website und werden von DE-fokussierten SEO-Audits routinemässig übersehen: revDSG für die Datenverarbeitung, SSO-Standesordnung für das Werberecht, HMG für Heilmittel-Werbung und die strikte Vorher-Nachher-Bild-Compliance. Jeder Anker hat eigene Pflicht-Spezifika, die in DSGVO-orientierten Audits schlicht nicht auftauchen — mit dem Ergebnis, dass Schweizer Zahnarztpraxen unter DE-Audit-Logik regelmässig Compliance-Lücken behalten.
+      </p>
+    </div>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      {regulatoryAnchors.map((anchor) => (
+        <div class="bg-white border border-gray-light/40 rounded-lg p-6">
+          <h3 class="text-lg font-headline font-bold text-navy">{anchor.title}</h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">{anchor.body}</p>
+        </div>
+      ))}
+    </div>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        In der Praxis bedeutet das: jede Behandlungs-Seite, jedes Vorher-Nachher-Bild und jede Erfolgs-Beschreibung passiert eine Compliance-Linse, bevor sie publiziert wird. Wir prüfen routinemässig Praxis-Websites, deren Online-Buchungs-Plugins Patienten-Daten an US-Hosts senden, ohne dass der Auftragsdaten-Verarbeitungsvertrag das deckt — ein revDSG-Rückrufs-Risiko, das technisch in zehn Minuten lösbar ist.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was kostet SEO für eine Zahnarztpraxis in der Schweiz?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        SEO für Zahnärzte folgt drei transparenten Festpreis-Bändern in der Schweiz, ergänzt um pauschale Einmal-Audits, ohne zahnmedizinischen Aufschlag. Einzelpraxis und Einzelunternehmen zahlen ab 1'190 CHF monatlich, Mittelstand liegt zwischen 3'000 und 5'000 CHF pro Monat, Multi-Behandler-AG startet bei 6'000 CHF pro Monat. Vollständige Aufschlüsselung inklusive Audit-Preise unter <a href="/ch-de/preise/seo/" class="text-blue hover:underline">/ch-de/preise/seo/</a>.
+      </p>
+    </div>
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full max-w-4xl border-collapse text-sm font-body">
+        <thead>
+          <tr class="border-b-2 border-navy text-left">
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Tier</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">CHF/Monat</th>
+            <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">Profil</th>
+          </tr>
+        </thead>
+        <tbody>
+          {pricingTiers.map((row) => (
+            <tr class="border-b border-gray-light/40">
+              <td class="py-3 pr-4 font-headline font-bold text-navy">{row.tier}</td>
+              <td class="py-3 pr-4 text-dark">{row.price}</td>
+              <td class="py-3 text-gray">{row.profile}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-6 max-w-4xl">
+      <p class="text-sm font-body text-gray leading-relaxed">
+        <strong class="text-navy">Monatlicher Festpreis</strong> · <strong class="text-navy">keine Stundenabrechnung</strong> · <strong class="text-navy">keine Setup-Gebühr</strong> · <strong class="text-navy">planbar im Praxis-Budget</strong>
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie unterscheidet sich SEO für Zahnärzte von Praxismarketing für Allgemeinmedizin?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Vier Achsen unterscheiden Zahnarzt-SEO von Allgemeinmedizin-Praxismarketing. Die Differenz ist nicht graduell — sie verändert die Hebelreihenfolge, das Content-Inventar und die Messmetriken vollständig.
+      </p>
+    </div>
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full max-w-5xl border-collapse text-sm font-body">
+        <thead>
+          <tr class="border-b-2 border-navy text-left">
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Achse</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Allgemeinmedizin</th>
+            <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">Zahnarzt-SEO</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparison.map((row) => (
+            <tr class="border-b border-gray-light/40 align-top">
+              <td class="py-3 pr-4 font-headline font-bold text-navy">{row.axis}</td>
+              <td class="py-3 pr-4 text-gray">{row.allgemeinmedizin}</td>
+              <td class="py-3 text-gray">{row.zahnarzt}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Die häufigste Fehleinschätzung ist, dass eine schöne neue Praxis-Website automatisch SEO-Fortschritt bedeutet. Sie tut es nicht — eine technisch saubere Marketing-Site kann jeden SEO-Hebel verfehlen, weil ihre Schema-Tiefe Null ist und Top-Selbstzahler-Behandlungen wie Veneers oder Aligner gar nicht als eigene URL existieren.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie messen wir SEO-Erfolg in einer Zahnarztpraxis?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Sechs Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Zahnarztpraxis, und keine ersetzt eine andere: <a href="/ch-de/glossar/aiso-score/" class="text-blue hover:underline">AISO Score</a>, GSC-Indexierungs-Quote, Position-mal-CTR auf Selbstzahler-Behandlungs-Queries, AI-Citation-Quote, mobile <a href="/ch-de/glossar/core-web-vitals/" class="text-blue hover:underline">Core Web Vitals</a> und Cost-per-Lead aus organic. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine.
+      </p>
+    </div>
+    <ul class="mt-8 space-y-5 max-w-3xl">
+      {measurementMetrics.map((m) => (
+        <li class="border-l-2 border-blue pl-4">
+          <h3 class="text-base font-headline font-bold text-navy">{m.name}</h3>
+          <p class="mt-1 text-sm font-body text-gray leading-relaxed">{m.body}</p>
+        </li>
+      ))}
+    </ul>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Ranking-Reports sind notwendig, aber nicht hinreichend; sie zeigen, wo die Praxis steht, nicht warum. Diagnose verlangt zusätzlich, ob die Sichtbarkeit überhaupt mit Klicks korreliert, ob KI-Antwortmaschinen die Praxis als zitierbare Fachstelle anerkennen, und ob die mobile Performance Selbstzahler-Patienten an die Konkurrenz verliert.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="cream" id="beispiel-diagnose" class="scroll-mt-20">
+    <SectionHeader
+      label="Beispiel-Diagnose"
+      title="Anonymisierte Schweizer Aesthetic-Zahnarztpraxis"
+    />
+    <div class="max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Pre-Engagement-Diagnose einer anonymisierten Aesthetic-Zahnarztpraxis in der Deutschschweiz mit 150+ Top-Bewertungen, Familien-AG-Struktur, Implantologie-Spezialisierung und WordPress-Stack mit Yoast-SEO. Diagnose ist auditiv (curl-Tests, DataForSEO-SERP-Snapshot, Screaming-Frog-Crawl von 240 URLs); kein Mandat aktiv. Die genannten Befund-Pattern treffen auf drei von vier auditierten Schweizer Zahnarztpraxen zu — dies ist kein Einzelfall.
+      </p>
+
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Diagnose-Befunde (Mai 2026, anonymisiert)</h3>
+      <ul class="mt-4 space-y-3 text-base font-body text-gray leading-relaxed">
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">AISO Score Baseline ~30 / 100</strong> (Tier «Kritisch»). Schwächste Dimensionen: Structure 2 / 20, Citability 4 / 20, Authority 5 / 15.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Null Behandlungs-spezifisches Schema</strong>. Yoast-Default liefert <code>WebPage + BreadcrumbList + WebSite + Organization</code>, aber kein <code>Dentist</code>-Knoten, kein <code>Person</code>-Knoten für die zwei Behandler trotz Team-Page, kein <code>Service</code>-Knoten für die acht Behandlungsbereiche, kein <code>medicalSpecialty</code> trotz expliziter Implantologie-Positionierung.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Locale-Bug systematisch</strong>: <code>og:locale: de_DE</code> und <code>&lt;html lang="de"&gt;</code> auf einer Schweizer Praxis. Yoast-Default-Setting ungeprüft übernommen — sendet falsches Markt-Signal an LLMs und Suchmaschinen.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Stale-Content live</strong>: Hero-Section <code>dateModified</code> von 2023, Sommerferien-Notice von 2019 noch sichtbar, Coronavirus-H2 von 2020 noch aktiv, News-Archiv enthält einen Single-Post von 2017. Freshness-Signal kollabiert.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Service-Lücke gegenüber Marktnachfrage</strong>: acht Behandlungs-Pages live (Implantologie, Bleaching, Wurzelkanal, Parodontitis, Kinderbehandlung, Füllungstherapie, Dentalhygiene, Rekonstruktive Zahnmedizin), aber keine Veneers-Page, keine Aligner-/Invisalign-Page — beides Top-Selbstzahler-Long-Tail-Queries (Veneers-Cluster CH ~80/Mo, Invisalign Erwachsene ~120/Mo). Verlorene User-Intent-Surface.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">H1-Pattern broken</strong>: Service-Pages zeigen nur Behandlungs-Namen in Versalien, keine Query-Form, keine Standort-Anchoring. Datenschutz-Page hat drei H1, News- und Kinderbehandlung-Pages haben null H1.</span></li>
+      </ul>
+
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Wo das AI-Crawler-Problem dazukommt</h3>
+      <p class="mt-3 text-base font-body text-gray leading-relaxed">
+        Bei einer von vier auditierten Praxen blockiert die Plesk- oder Wordfence-Default-WAF-Konfiguration GPTBot, ClaudeBot und PerplexityBot per HTTP 406, während Googlebot und Bingbot durchkommen. Inhaberinnen und Inhaber wissen von dem Block nichts. Fix in unter einer Stunde via Plugin-Whitelist möglich. Ohne Fix ist die Praxis für ChatGPT, Claude und Perplexity strukturell unsichtbar — egal wie gut der restliche Schema-Knotengraph wäre.
+      </p>
+
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Hebelreihenfolge — was wir empfehlen</h3>
+      <p class="mt-3 text-base font-body text-gray leading-relaxed">
+        Aus dieser Befundlage ist die Reihenfolge: AI-Crawler-Zugang sicherstellen, Schema-Knotengraph für <code>Dentist</code> plus <code>Person</code>×N plus <code>Service</code>×N aufbauen, Locale- und Stale-Cleanup, Capsule-Format auf Behandlungs-Pages, Service-Lücken-Schliessung über SME-Interview. Nicht «mehr Backlinks», nicht «mehr Content», nicht «Ranking-Reports». Diese Reihenfolge gilt für jede Schweizer Aesthetic- oder Implantat-Praxis mit gewachsener WordPress- oder Squarespace-Vergangenheit.
+      </p>
+
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Was wir gelernt haben</h3>
+      <p class="mt-3 text-base font-body text-gray leading-relaxed">
+        Zahnarzt-SEO in der Schweiz ist eine Inventar- und Sichtbarkeits-Frage, bevor sie eine Ranking-Frage wird. Behandlungs-Pages existieren oft, sind aber im Schema unsichtbar; Top-Selbstzahler-Behandlungen wie Veneers oder Aligner fehlen häufig komplett als eigene URL. Die Inventar-Schicht ist der erste Hebel; AI-Citability ist der zweite; Ranking-Effekte folgen mit 60 bis 90 Tagen Verzögerung.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie läuft die Zusammenarbeit ab?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen, Diagnose-Tiefenphase über 1–2 Wochen mit Technical Audit, AISO Score Baseline, GSC-Indexierungs-Snapshot, AI-Crawler-User-Agent-Test und Screaming-Frog-Crawl, Roadmap-Übergabe mit revDSG-, SSO- und HMG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
+      </p>
+    </div>
+    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
+      {collaborationSteps.map((step) => (
+        <li class="bg-cream border border-gray-light/40 rounded-lg p-5">
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
+          <h3 class="mt-2 text-base font-headline font-bold text-navy">{step.title}</h3>
+          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <SectionHeader label="Fragen & Antworten" title="Häufig gestellte Fragen" />
+      <dl class="mt-8 space-y-8">
+        {faqs.map((f) => (
+          <div>
+            <dt class="text-lg font-headline font-bold text-navy">{f.q}</dt>
+            <dd class="mt-2 text-base font-body text-gray leading-relaxed">{f.a}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </Section>
+
+  <CTABanner
+    title="Bereit für eine ehrliche Diagnose Ihrer Praxis-Sichtbarkeit?"
+    subtitle="30-Minuten-Erstberatung, gratis. AISO-Quick-Check auf zwei Dimensionen plus klare Aussage, ob ein SEO-Mandat, ein Einmal-Audit oder ein anderer Hebel der bessere Einstieg ist."
+  >
+    <Button href="/ch-de/kontakt/" variant="primary">Erstberatung anfragen</Button>
+    <Button href="/ch-de/preise/seo/" variant="secondary">SEO-Preise ansehen</Button>
+    <Button href="/ch-de/aiso-check/" variant="secondary">AISO-Check starten</Button>
+  </CTABanner>
+</BaseLayout>
