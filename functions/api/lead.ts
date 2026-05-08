@@ -100,9 +100,13 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   const sheetResult = await appendToSheetVerbose(env.APPS_SCRIPT_URL, payload);
   if (!sheetResult.ok) {
-    const detail = encodeURIComponent(sheetResult.detail ?? 'unknown').slice(0, 300);
+    const envKeys = env ? Object.keys(env).join(',') : 'env-undefined';
+    const urlLen = (env?.APPS_SCRIPT_URL ?? '').length;
+    const secretLen = (env?.APPS_SCRIPT_SECRET ?? '').length;
+    const fullDetail = `${sheetResult.detail}|keys=${envKeys}|url-len=${urlLen}|secret-len=${secretLen}`;
+    const detail = encodeURIComponent(fullDetail).slice(0, 600);
     if (wantsJson) {
-      return jsonResponse({ ok: false, error: 'sheet-failed', detail: sheetResult.detail }, 502);
+      return jsonResponse({ ok: false, error: 'sheet-failed', detail: fullDetail }, 502);
     }
     const origin = new URL(request.url).origin || SITE_ORIGIN;
     return Response.redirect(
