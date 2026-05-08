@@ -167,6 +167,13 @@ async function verifyTurnstile(token: string, secret: string, request: Request):
 }
 
 async function appendToSheet(appsScriptUrl: string, payload: Record<string, unknown>): Promise<boolean> {
+  if (!appsScriptUrl) {
+    console.error('[lead-form] APPS_SCRIPT_URL is empty');
+    return false;
+  }
+  if (!appsScriptUrl.endsWith('/exec')) {
+    console.error('[lead-form] APPS_SCRIPT_URL does not end with /exec — got:', appsScriptUrl.slice(-30));
+  }
   try {
     const res = await fetch(appsScriptUrl, {
       method: 'POST',
@@ -174,10 +181,25 @@ async function appendToSheet(appsScriptUrl: string, payload: Record<string, unkn
       body: JSON.stringify(payload),
       redirect: 'follow',
     });
-    if (!res.ok) return false;
-    const data = (await res.json()) as { ok?: boolean };
-    return data.ok === true;
-  } catch {
+    const text = await res.text();
+    if (!res.ok) {
+      console.error('[lead-form] Apps Script HTTP error:', res.status, text.slice(0, 200));
+      return false;
+    }
+    let data: { ok?: boolean; error?: string };
+    try {
+      data = JSON.parse(text) as { ok?: boolean; error?: string };
+    } catch {
+      console.error('[lead-form] Apps Script returned non-JSON:', text.slice(0, 200));
+      return false;
+    }
+    if (data.ok !== true) {
+      console.error('[lead-form] Apps Script returned non-ok:', data);
+      return false;
+    }
+    return true;
+  } catch (err) {
+    console.error('[lead-form] Apps Script fetch threw:', err);
     return false;
   }
 }
