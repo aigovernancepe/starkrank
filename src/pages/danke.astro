@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/ui/HeroSection.astro';
+import Button from '../components/ui/Button.astro';
+import { t } from '../utils/i18n';
+---
+
+<BaseLayout
+  title={`${t('thanks.title', 'de')} — StarkRank`}
+  description={t('thanks.body', 'de')}
+  locale="de"
+  noViewTransitions
+>
+  <meta slot="head" name="robots" content="noindex" />
+  <HeroSection
+    headline={t('thanks.title', 'de')}
+    subheadline={t('thanks.body', 'de')}
+  >
+    <Button href="/" variant="primary" size="lg">{t('thanks.cta', 'de')}</Button>
+  </HeroSection>
+</BaseLayout>

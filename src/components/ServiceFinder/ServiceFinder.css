@@ -479,6 +479,28 @@
   text-decoration: underline;
 }
 
+.sf-email-form__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-gray);
+  margin: 0.75rem 0;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.sf-email-form__consent input[type='checkbox'] {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.sf-email-form__consent a {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
 .sf-email-form__error {
   font-family: var(--font-body);
   font-size: 0.8125rem;
