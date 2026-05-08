@@ -38,36 +38,54 @@ export default function ResultStep({
   const [formState, setFormState] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   const [formData, setFormData] = useState<Record<string, string>>({});
 
+  const [consentChecked, setConsentChecked] = useState(false);
+
+  function marketToLocale(m: Market): 'de' | 'ch-de' | 'en' {
+    if (m === 'de') return 'de';
+    if (m === 'ch-de') return 'ch-de';
+    return 'en';
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (!consentChecked) return;
     setFormState('sending');
 
-    const portalId = import.meta.env.PUBLIC_HUBSPOT_PORTAL_ID || '';
-    const formId = import.meta.env.PUBLIC_HUBSPOT_SCHNELLCHECK_FORM_ID || '';
+    const intentData = JSON.stringify({
+      role,
+      role_label: roleLabel,
+      industry,
+      industry_label: industryLabel,
+      questions: selectedQuestions,
+      market,
+      results: results.map(r => r.serviceId),
+      completed: new Date().toISOString(),
+    });
 
-    if (!portalId || !formId) {
-      setFormState('sent');
-      onEmailSubmit();
-      return;
-    }
+    const recommendedServices = results.map(r => r.serviceId).join(', ');
+    const message = `Service Finder result: ${recommendedServices}. Role: ${roleLabel}. Industry: ${industryLabel}.`;
+
+    const body = new FormData();
+    body.set('form_type', 'service-finder');
+    body.set('locale', marketToLocale(market));
+    body.set('lead_source_page', window.location.pathname);
+    body.set('name', formData.firstname || '');
+    body.set('email', formData.email || '');
+    body.set('message', message);
+    body.set('intent_data', intentData);
+    body.set('consent', 'true');
+    body.set('website', '');
 
     try {
-      await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`, {
+      const res = await fetch('/api/lead', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          fields: [
-            { name: 'email', value: formData.email || '' },
-            { name: 'firstname', value: formData.firstname || '' },
-            { name: 'service_finder_data', value: JSON.stringify({ role, role_label: roleLabel, industry, industry_label: industryLabel, questions: selectedQuestions, market, results: results.map(r => r.serviceId), completed: new Date().toISOString() }) },
-            { name: 'lead_source_page', value: window.location.pathname },
-          ],
-          context: {
-            pageUri: window.location.href,
-            pageName: document.title,
-          },
-        }),
+        headers: { 'Accept': 'application/json' },
+        body,
       });
+      if (!res.ok) {
+        setFormState('error');
+        return;
+      }
       setFormState('sent');
       onEmailSubmit();
     } catch {
@@ -138,13 +156,24 @@ export default function ResultStep({
                 />
               </div>
             ))}
-            {emailCapture.privacyNote && (
-              <p
-                className="sf-email-form__privacy"
-                dangerouslySetInnerHTML={{ __html: emailCapture.privacyNote }}
+            <label className="sf-email-form__consent">
+              <input
+                type="checkbox"
+                checked={consentChecked}
+                onChange={e => setConsentChecked(e.target.checked)}
+                required
               />
-            )}
-            <button type="submit" className="sf-submit" disabled={formState === 'sending'}>
+              {emailCapture.privacyNote ? (
+                <span dangerouslySetInnerHTML={{ __html: emailCapture.privacyNote }} />
+              ) : (
+                <span>I consent to having my data processed.</span>
+              )}
+            </label>
+            <button
+              type="submit"
+              className="sf-submit"
+              disabled={formState === 'sending' || !consentChecked}
+            >
               {formState === 'sending' ? '...' : emailCapture.buttonText}
             </button>
             {formState === 'error' && (

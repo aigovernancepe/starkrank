@@ -1,0 +1,198 @@
+---
+import { t } from '../../utils/i18n';
+import type { Locale } from '../../data/locales';
+
+type FormType = 'kontakt' | 'aiso' | 'copywriting' | 'google-ads' | 'service-finder';
+
+interface Props {
+  formType: FormType;
+  locale: Locale;
+}
+
+const { formType, locale } = Astro.props;
+const leadSourcePage = Astro.url.pathname;
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
+
+const buttonKey =
+  formType === 'kontakt'
+    ? 'leadForm.button.kontakt'
+    : formType === 'aiso'
+      ? 'leadForm.button.aiso'
+      : formType === 'copywriting'
+        ? 'leadForm.button.copywriting'
+        : 'leadForm.button.googleAds';
+
+const messagePlaceholderKey =
+  formType === 'kontakt'
+    ? 'leadForm.placeholder.message.kontakt'
+    : formType === 'aiso'
+      ? 'leadForm.placeholder.message.aiso'
+      : formType === 'copywriting'
+        ? 'leadForm.placeholder.message.copywriting'
+        : 'leadForm.placeholder.message.googleAds';
+
+const showWebsiteField = formType === 'aiso' || formType === 'copywriting' || formType === 'google-ads';
+const showGoogleAdsId = formType === 'google-ads';
+const showCompanyAndPhone = formType === 'kontakt';
+
+const inputClass =
+  'w-full rounded-md border border-gray-light/60 bg-white px-4 py-3 font-body text-base text-dark placeholder:text-gray-light focus:border-blue focus:outline-none focus:ring-2 focus:ring-blue/20 transition-colors';
+const labelClass = 'block text-sm font-label font-semibold text-navy mb-1';
+const errorParam = Astro.url.searchParams.get('error');
+---
+
+<form method="POST" action="/api/lead" class="space-y-5" data-lead-form>
+  <input type="hidden" name="form_type" value={formType} />
+  <input type="hidden" name="locale" value={locale} />
+  <input type="hidden" name="lead_source_page" value={leadSourcePage} />
+
+  <div aria-hidden="true" class="absolute left-[-9999px] w-px h-px overflow-hidden">
+    <label>
+      Website
+      <input type="text" name="website" tabindex="-1" autocomplete="off" />
+    </label>
+  </div>
+
+  {errorParam && (
+    <div class="rounded-md border border-red-300 bg-red-50 px-4 py-3 text-sm font-body text-red-800">
+      {errorParam === 'missing-fields' && t('leadForm.error.missing', locale)}
+      {errorParam === 'invalid-email' && t('leadForm.error.invalidEmail', locale)}
+      {(errorParam === 'turnstile-missing' || errorParam === 'turnstile-failed') && t('leadForm.error.turnstile', locale)}
+      {errorParam === 'sheet-failed' && t('leadForm.error.sheet', locale)}
+    </div>
+  )}
+
+  <div>
+    <label for="lf-name" class={labelClass}>
+      {t('leadForm.label.name', locale)} <span class="text-red-600">*</span>
+    </label>
+    <input
+      id="lf-name"
+      type="text"
+      name="name"
+      required
+      autocomplete="name"
+      placeholder={t('leadForm.placeholder.name', locale)}
+      class={inputClass}
+    />
+  </div>
+
+  <div>
+    <label for="lf-email" class={labelClass}>
+      {t('leadForm.label.email', locale)} <span class="text-red-600">*</span>
+    </label>
+    <input
+      id="lf-email"
+      type="email"
+      name="email"
+      required
+      autocomplete="email"
+      placeholder={t('leadForm.placeholder.email', locale)}
+      class={inputClass}
+    />
+  </div>
+
+  {showCompanyAndPhone && (
+    <>
+      <div>
+        <label for="lf-company" class={labelClass}>
+          {t('leadForm.label.company', locale)}
+        </label>
+        <input
+          id="lf-company"
+          type="text"
+          name="company"
+          autocomplete="organization"
+          class={inputClass}
+        />
+      </div>
+
+      <div>
+        <label for="lf-phone" class={labelClass}>
+          {t('leadForm.label.phone', locale)}
+        </label>
+        <input
+          id="lf-phone"
+          type="tel"
+          name="phone"
+          autocomplete="tel"
+          class={inputClass}
+        />
+      </div>
+    </>
+  )}
+
+  {showWebsiteField && (
+    <div>
+      <label for="lf-website" class={labelClass}>
+        {t('leadForm.label.website', locale)} <span class="text-red-600">*</span>
+      </label>
+      <input
+        id="lf-website"
+        type="url"
+        name="website_url"
+        required
+        autocomplete="url"
+        placeholder={t('leadForm.placeholder.website', locale)}
+        class={inputClass}
+      />
+    </div>
+  )}
+
+  {showGoogleAdsId && (
+    <div>
+      <label for="lf-google-ads-id" class={labelClass}>
+        {t('leadForm.label.googleAdsId', locale)}
+      </label>
+      <input
+        id="lf-google-ads-id"
+        type="text"
+        name="google_ads_customer_id"
+        placeholder={t('leadForm.placeholder.googleAdsId', locale)}
+        class={inputClass}
+      />
+    </div>
+  )}
+
+  <div>
+    <label for="lf-message" class={labelClass}>
+      {t('leadForm.label.message', locale)} <span class="text-red-600">*</span>
+    </label>
+    <textarea
+      id="lf-message"
+      name="message"
+      required
+      rows="5"
+      placeholder={t(messagePlaceholderKey, locale)}
+      class={`${inputClass} resize-y`}
+    ></textarea>
+  </div>
+
+  <div class="flex items-start gap-3">
+    <input
+      id="lf-consent"
+      type="checkbox"
+      name="consent"
+      value="true"
+      required
+      class="mt-1 h-4 w-4 rounded border-gray-light text-blue focus:ring-2 focus:ring-blue/30"
+    />
+    <label for="lf-consent" class="text-sm font-body text-gray" set:html={t('leadForm.consent.text', locale)}></label>
+  </div>
+
+  <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="light"></div>
+
+  <button
+    type="submit"
+    class="inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide rounded-md bg-blue text-white px-8 py-4 text-sm hover:bg-blue-light transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+  >
+    {t(buttonKey, locale)}
+  </button>
+</form>
+
+<script
+  is:inline
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer
+></script>
