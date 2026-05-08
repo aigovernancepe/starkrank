@@ -57,21 +57,21 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const consent = get('consent');
 
   if (!name || !email || !message || consent !== 'true') {
-    return errorResponse(locale, 'missing-fields', wantsJson);
+    return errorResponse(locale, 'missing-fields', request, wantsJson);
   }
   if (!isValidEmail(email)) {
-    return errorResponse(locale, 'invalid-email', wantsJson);
+    return errorResponse(locale, 'invalid-email', request, wantsJson);
   }
 
   // Service Finder skips Turnstile — multi-step wizard provides its own friction layer.
   if (formType !== 'service-finder') {
     const turnstileToken = get('cf-turnstile-response');
     if (!turnstileToken) {
-      return errorResponse(locale, 'turnstile-missing', wantsJson);
+      return errorResponse(locale, 'turnstile-missing', request, wantsJson);
     }
     const turnstilePass = await verifyTurnstile(turnstileToken, env.TURNSTILE_SECRET_KEY, request);
     if (!turnstilePass) {
-      return errorResponse(locale, 'turnstile-failed', wantsJson);
+      return errorResponse(locale, 'turnstile-failed', request, wantsJson);
     }
   }
 
@@ -100,7 +100,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   const sheetOk = await appendToSheet(env.APPS_SCRIPT_URL, payload);
   if (!sheetOk) {
-    return errorResponse(locale, 'sheet-failed', wantsJson);
+    return errorResponse(locale, 'sheet-failed', request, wantsJson);
   }
 
   await sendNotification(env.RESEND_API_KEY, env.LEAD_NOTIFY_EMAIL, payload).catch(() => {
@@ -137,11 +137,11 @@ function redirectURL(locale: string, request: Request): string {
   return `${origin}${THANK_YOU_PATH[safeLocale]}`;
 }
 
-function errorResponse(locale: Locale, code: string, wantsJson = false): Response {
+function errorResponse(locale: Locale, code: string, request: Request, wantsJson = false): Response {
   if (wantsJson) {
     return jsonResponse({ ok: false, error: code }, 400);
   }
-  const origin = SITE_ORIGIN;
+  const origin = new URL(request.url).origin || SITE_ORIGIN;
   const target = `${origin}${THANK_YOU_PATH[locale]}?error=${encodeURIComponent(code)}`;
   return Response.redirect(target, 303);
 }
