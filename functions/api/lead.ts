@@ -98,9 +98,17 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     ip_country: ipCountry,
   };
 
-  const sheetOk = await appendToSheet(env.APPS_SCRIPT_URL, payload);
-  if (!sheetOk) {
-    return errorResponse(locale, 'sheet-failed', request, wantsJson);
+  const sheetResult = await appendToSheetVerbose(env.APPS_SCRIPT_URL, payload);
+  if (!sheetResult.ok) {
+    const detail = encodeURIComponent(sheetResult.detail ?? 'unknown').slice(0, 300);
+    if (wantsJson) {
+      return jsonResponse({ ok: false, error: 'sheet-failed', detail: sheetResult.detail }, 502);
+    }
+    const origin = new URL(request.url).origin || SITE_ORIGIN;
+    return Response.redirect(
+      `${origin}${THANK_YOU_PATH[locale]}?error=sheet-failed&detail=${detail}`,
+      303
+    );
   }
 
   await sendNotification(env.RESEND_API_KEY, env.LEAD_NOTIFY_EMAIL, payload).catch(() => {
@@ -166,13 +174,15 @@ async function verifyTurnstile(token: string, secret: string, request: Request):
   }
 }
 
-async function appendToSheet(appsScriptUrl: string, payload: Record<string, unknown>): Promise<boolean> {
+async function appendToSheetVerbose(
+  appsScriptUrl: string,
+  payload: Record<string, unknown>
+): Promise<{ ok: boolean; detail?: string }> {
   if (!appsScriptUrl) {
-    console.error('[lead-form] APPS_SCRIPT_URL is empty');
-    return false;
+    return { ok: false, detail: 'env-empty' };
   }
   if (!appsScriptUrl.endsWith('/exec')) {
-    console.error('[lead-form] APPS_SCRIPT_URL does not end with /exec — got:', appsScriptUrl.slice(-30));
+    return { ok: false, detail: `bad-url-suffix:${appsScriptUrl.slice(-20)}` };
   }
   try {
     const res = await fetch(appsScriptUrl, {
@@ -183,24 +193,20 @@ async function appendToSheet(appsScriptUrl: string, payload: Record<string, unkn
     });
     const text = await res.text();
     if (!res.ok) {
-      console.error('[lead-form] Apps Script HTTP error:', res.status, text.slice(0, 200));
-      return false;
+      return { ok: false, detail: `http-${res.status}:${text.slice(0, 80)}` };
     }
     let data: { ok?: boolean; error?: string };
     try {
       data = JSON.parse(text) as { ok?: boolean; error?: string };
     } catch {
-      console.error('[lead-form] Apps Script returned non-JSON:', text.slice(0, 200));
-      return false;
+      return { ok: false, detail: `non-json:${text.slice(0, 80)}` };
     }
     if (data.ok !== true) {
-      console.error('[lead-form] Apps Script returned non-ok:', data);
-      return false;
+      return { ok: false, detail: `apps-script-error:${data.error ?? 'no-error-field'}` };
     }
-    return true;
+    return { ok: true };
   } catch (err) {
-    console.error('[lead-form] Apps Script fetch threw:', err);
-    return false;
+    return { ok: false, detail: `fetch-threw:${String(err).slice(0, 80)}` };
   }
 }
 
