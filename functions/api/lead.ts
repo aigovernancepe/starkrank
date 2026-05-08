@@ -98,21 +98,9 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     ip_country: ipCountry,
   };
 
-  const sheetResult = await appendToSheetVerbose(env.APPS_SCRIPT_URL, payload);
-  if (!sheetResult.ok) {
-    const envKeys = env ? Object.keys(env).join(',') : 'env-undefined';
-    const urlLen = (env?.APPS_SCRIPT_URL ?? '').length;
-    const secretLen = (env?.APPS_SCRIPT_SECRET ?? '').length;
-    const fullDetail = `${sheetResult.detail}|keys=${envKeys}|url-len=${urlLen}|secret-len=${secretLen}`;
-    const detail = encodeURIComponent(fullDetail).slice(0, 600);
-    if (wantsJson) {
-      return jsonResponse({ ok: false, error: 'sheet-failed', detail: fullDetail }, 502);
-    }
-    const origin = new URL(request.url).origin || SITE_ORIGIN;
-    return Response.redirect(
-      `${origin}${THANK_YOU_PATH[locale]}?error=sheet-failed&detail=${detail}`,
-      303
-    );
+  const sheetOk = await appendToSheet(env.APPS_SCRIPT_URL, payload);
+  if (!sheetOk) {
+    return errorResponse(locale, 'sheet-failed', request, wantsJson);
   }
 
   await sendNotification(env.RESEND_API_KEY, env.LEAD_NOTIFY_EMAIL, payload).catch(() => {
@@ -178,16 +166,8 @@ async function verifyTurnstile(token: string, secret: string, request: Request):
   }
 }
 
-async function appendToSheetVerbose(
-  appsScriptUrl: string,
-  payload: Record<string, unknown>
-): Promise<{ ok: boolean; detail?: string }> {
-  if (!appsScriptUrl) {
-    return { ok: false, detail: 'env-empty' };
-  }
-  if (!appsScriptUrl.endsWith('/exec')) {
-    return { ok: false, detail: `bad-url-suffix:${appsScriptUrl.slice(-20)}` };
-  }
+async function appendToSheet(appsScriptUrl: string, payload: Record<string, unknown>): Promise<boolean> {
+  if (!appsScriptUrl) return false;
   try {
     const res = await fetch(appsScriptUrl, {
       method: 'POST',
@@ -195,22 +175,11 @@ async function appendToSheetVerbose(
       body: JSON.stringify(payload),
       redirect: 'follow',
     });
-    const text = await res.text();
-    if (!res.ok) {
-      return { ok: false, detail: `http-${res.status}:${text.slice(0, 80)}` };
-    }
-    let data: { ok?: boolean; error?: string };
-    try {
-      data = JSON.parse(text) as { ok?: boolean; error?: string };
-    } catch {
-      return { ok: false, detail: `non-json:${text.slice(0, 80)}` };
-    }
-    if (data.ok !== true) {
-      return { ok: false, detail: `apps-script-error:${data.error ?? 'no-error-field'}` };
-    }
-    return { ok: true };
-  } catch (err) {
-    return { ok: false, detail: `fetch-threw:${String(err).slice(0, 80)}` };
+    if (!res.ok) return false;
+    const data = (await res.json()) as { ok?: boolean };
+    return data.ok === true;
+  } catch {
+    return false;
   }
 }
 
