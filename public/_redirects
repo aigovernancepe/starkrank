@@ -118,7 +118,6 @@
 /find-your-service/                  /en/find-your-service/                      301
 /free-google-ads-audit/              /en/free-google-ads-audit/                  301
 /free-copywriting-audit/             /en/free-copywriting-audit/                 301
-/case-studies/                       /en/case-studies/                           301
 /blog/                               /en/blog/                                   301
 /blog/*                              /en/blog/:splat                             301
 
