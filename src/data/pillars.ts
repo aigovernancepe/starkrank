@@ -34,10 +34,10 @@ export const pillars: Pillar[] = [
   },
   {
     id: 'authority-pr',
-    name: 'Authority',
+    name: 'Digital PR',
     tagline: 'The Reputation Engine',
     description:
-      'Turn your brand into a source of truth through strategic link building and E-E-A-T signals.',
+      'Turn your brand into a source of truth through strategic digital PR and E-E-A-T signals.',
     services: [
       'authority-link-building',
       'eeat-audit',
@@ -82,9 +82,9 @@ const pillarTranslations: Record<string, Record<string, { name: string; tagline:
       description: 'Wachstum mit chirurgischer Präzision durch Google Ads und Paid-Social-Kampagnen.',
     },
     'authority-pr': {
-      name: 'Autorität',
+      name: 'Digital PR',
       tagline: 'Die Reputations-Engine',
-      description: 'Machen Sie Ihre Marke zur vertrauenswürdigen Quelle durch strategischen Linkaufbau und E-E-A-T-Signale.',
+      description: 'Machen Sie Ihre Marke zur vertrauenswürdigen Quelle durch strategische Digital PR und E-E-A-T-Signale.',
     },
     'content-copywriting': {
       name: 'Content & Texterstellung',
@@ -109,9 +109,9 @@ const pillarTranslations: Record<string, Record<string, { name: string; tagline:
       description: 'Wachstum mit chirurgischer Präzision durch Google Ads und Paid-Social-Kampagnen.',
     },
     'authority-pr': {
-      name: 'Autorität',
+      name: 'Digital PR',
       tagline: 'Die Reputations-Engine',
-      description: 'Machen Sie Ihre Marke zur vertrauenswürdigen Quelle durch strategischen Linkaufbau und E-E-A-T-Signale.',
+      description: 'Machen Sie Ihre Marke zur vertrauenswürdigen Quelle durch strategische Digital PR und E-E-A-T-Signale.',
     },
     'content-copywriting': {
       name: 'Content & Texterstellung',
