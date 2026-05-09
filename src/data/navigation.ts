@@ -168,8 +168,11 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
 
   const prefix = localePrefixFor(locale);
 
-  // Blog index — each locale has its own index page
-  if (href === '/blog/') return `${prefix}/blog/`;
+  // Blog index — each locale has its own index page.
+  // DE blog stays at /de/blog/* (Phase 2b debt — see public/_redirects);
+  // override the empty DE prefix so the menu doesn't point at /blog/, which
+  // _redirects 301s to /en/blog/.
+  if (href === '/blog/') return locale === 'de' ? '/de/blog/' : `${prefix}/blog/`;
 
   // Case studies — EN-only tree; non-EN locales link cross-locale into /en/
   if (href === '/case-studies/') {
