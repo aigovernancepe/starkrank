@@ -7,8 +7,8 @@ import Card from '../../components/ui/Card.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import Button from '../../components/ui/Button.astro';
 
-const title = 'SEO Kosten — Transparente Retainer-Bänder | StarkRank';
-const description = 'Was kostet eine SEO-Agentur? StarkRank veröffentlicht Retainer-Bänder ab 990 €/Monat und Audit-Preise transparent. Kleine Agentur, niedriger Overhead, faire Preise für den Mittelstand.';
+const title = 'SEO Kosten — Transparente SEO-Retainer | StarkRank';
+const description = 'Was kostet eine SEO-Agentur? StarkRank veröffentlicht SEO-Retainer ab 990 €/Monat und Audit-Preise transparent. Kleine Agentur, niedriger Overhead, faire Preise für den Mittelstand.';
 
 // Pricing commitment marker. Update manually when published bands actually change.
 // Distinct from the freshness/last-edit date (that tracks any file edit via git).
@@ -18,14 +18,14 @@ const priceValidFromLabel = priceValidFrom.toLocaleDateString('de-DE', { year: '
 
 const retainerBands = [
   {
-    label: 'Einzelunternehmen & Kleinunternehmen',
+    label: 'Solo & Kleinunternehmen',
     price: 'ab 990 €/Monat',
     description:
       'Technisches SEO-Monitoring, quartalsweise Reviews und laufende On-Page-Optimierung für Unternehmen mit einem Standort und kleinem Content-Team.',
   },
   {
     label: 'Mittelstand',
-    price: '2.000 – 4.000 €/Monat',
+    price: 'ab 2.000 €/Monat',
     description:
       'Vollumfänglicher Retainer mit technischer Optimierung, Content-Kollaboration und monatlichem Reporting. Für Unternehmen, die SEO als echten Wachstumskanal betreiben.',
   },
@@ -50,12 +50,12 @@ const projectPrices = [
   },
   {
     service: 'Pre-Deploy SEO Check',
-    price: '500 € pauschal',
+    price: 'ab 500 €',
     scope: 'Bis zu 30 URLs vor dem Launch einer neuen Site oder Migration, 10 € pro zusätzliche URL.',
   },
   {
     service: 'E-E-A-T Audit',
-    price: '1.200 €',
+    price: 'ab 1.200 €',
     scope: 'Experience-Expertise-Authoritativeness-Trustworthiness-Scoring nach 4×10-Rubrik, 10 Seiten; zusätzliche Seiten 120 €.',
   },
   {
@@ -66,7 +66,7 @@ const projectPrices = [
 ];
 
 const priceFactors = [
-  'Größe und Komplexität der Website — Anzahl der URLs, Domain-Alter und bestehende technische Schuld.',
+  'Größe und Komplexität der Website — Anzahl der URLs, Domain-Alter und vorhandene technische Altlasten.',
   'Sprach- und Standort-Setup — Single-Market, DACH-weit oder international mit mehrsprachiger Auslieferung.',
   'Wettbewerbsintensität in Ihrer Branche — SaaS-SEO und lokale Dienstleister unterscheiden sich deutlich im Aufwand.',
   'Umfang der Content-Kollaboration — reiner Technik-Retainer oder inklusive Content-Pipeline.',
@@ -112,7 +112,7 @@ const serviceSchema = {
     itemListElement: [
       {
         '@type': 'Offer',
-        name: 'SEO-Retainer — Einzelunternehmen & Kleinunternehmen',
+        name: 'SEO-Retainer — Solo & Kleinunternehmen',
         priceCurrency: 'EUR',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
@@ -229,11 +229,12 @@ const schemas = [serviceSchema, breadcrumbSchema, faqSchema];
   </Fragment>
 
   <HeroSection
+    eyebrow="Transparent · Fair · Nachvollziehbar"
     headline="SEO-Preise"
     subheadline="Was kostet eine SEO-Agentur? Bei StarkRank zahlen Sie das, was Ihr Unternehmensmaßstab braucht — keine aufgeblähten Agenturstrukturen, keine undurchsichtigen Pauschalverträge."
   >
     <Button href="/kontakt/" variant="primary">Kostenlose Erstberatung</Button>
-    <Button href="#retainer-baender" variant="secondary">Retainer-Bänder ansehen</Button>
+    <Button href="#retainer-baender" variant="secondary">SEO-Retainer ansehen</Button>
   </HeroSection>
 
   <Section bg="cream">
@@ -247,7 +248,7 @@ const schemas = [serviceSchema, breadcrumbSchema, faqSchema];
         Wir sind eine kleine Agentur mit niedrigem Overhead. Das heißt: Sie zahlen für Arbeit an Ihrem Account, nicht für Großraumbüros in München-Maxvorstadt oder repräsentative Frankfurter Altbau-Adressen. Gleiche Qualität, andere Kostenstruktur.
       </p>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Wir veröffentlichen Retainer-Bänder und Audit-Preise, weil Preistransparenz selbst in der DACH-Agenturlandschaft selten ist. Unser Ziel: Sie erkennen vor dem ersten Gespräch, ob ein Projekt mit uns finanziell realistisch ist.
+        Wir veröffentlichen SEO-Retainer und Audit-Preise, weil Preistransparenz selbst in der DACH-Agenturlandschaft selten ist. Unser Ziel: Sie erkennen vor dem ersten Gespräch, ob ein Projekt mit uns finanziell realistisch ist.
       </p>
     </div>
   </Section>
@@ -255,7 +256,7 @@ const schemas = [serviceSchema, breadcrumbSchema, faqSchema];
   <Section bg="white" id="retainer-baender" class="scroll-mt-20">
     <SectionHeader
       label="Monatliche Betreuung"
-      title="Retainer-Bänder"
+      title="SEO-Retainer (Kontinuierliche Optimierung)"
       subtitle="Drei Größen, keine aufgedrückten Zusatzpakete. Alle Preise exklusive Mehrwertsteuer."
     />
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
