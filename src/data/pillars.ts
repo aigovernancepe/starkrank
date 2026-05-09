@@ -45,7 +45,7 @@ export const pillars: Pillar[] = [
   },
   {
     id: 'content-copywriting',
-    name: 'Content & Copywriting',
+    name: 'Content',
     tagline: 'The Engage Engine',
     description:
       'Create content that engages humans and ranks in search engines through strategic copywriting and persona mapping.',
@@ -87,7 +87,7 @@ const pillarTranslations: Record<string, Record<string, { name: string; tagline:
       description: 'Machen Sie Ihre Marke zur vertrauenswürdigen Quelle durch strategische Digital PR und E-E-A-T-Signale.',
     },
     'content-copywriting': {
-      name: 'Content & Texterstellung',
+      name: 'Content',
       tagline: 'Die Engagement-Engine',
       description: 'Erstellen Sie Inhalte, die Menschen begeistern und in Suchmaschinen ranken — durch strategische Texterstellung und Persona-Mapping.',
     },
@@ -114,7 +114,7 @@ const pillarTranslations: Record<string, Record<string, { name: string; tagline:
       description: 'Machen Sie Ihre Marke zur vertrauenswürdigen Quelle durch strategische Digital PR und E-E-A-T-Signale.',
     },
     'content-copywriting': {
-      name: 'Content & Texterstellung',
+      name: 'Content',
       tagline: 'Die Engagement-Engine',
       description: 'Erstellen Sie Inhalte, die Menschen begeistern und in Suchmaschinen ranken — durch strategische Texterstellung und Persona-Mapping.',
     },
