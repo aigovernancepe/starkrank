@@ -3,19 +3,39 @@ interface Props {
   bg?: 'cream' | 'navy';
   title: string;
   subtitle?: string;
+  /** Optional background image URL. When set, a navy/80 overlay is applied
+      so cream text remains readable, regardless of the `bg` prop. */
+  backgroundImage?: string;
+  /** Alt text for the background image. Required when backgroundImage is set. */
+  backgroundImageAlt?: string;
 }
 
-const { bg = 'navy', title, subtitle } = Astro.props;
-const bgClass = bg === 'navy' ? 'bg-navy text-cream' : 'bg-cream text-dark';
+const { bg = 'navy', title, subtitle, backgroundImage, backgroundImageAlt } = Astro.props;
+const hasImage = Boolean(backgroundImage);
+const bgClass = hasImage ? '' : (bg === 'navy' ? 'bg-navy text-cream' : 'bg-cream text-dark');
+const titleColor = hasImage || bg === 'navy' ? 'text-cream' : 'text-navy';
+const subtitleColor = hasImage || bg === 'navy' ? 'text-gray-light' : 'text-gray';
 ---
 
-<section class:list={[bgClass, 'py-16 md:py-20']}>
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class:list={['text-3xl md:text-4xl font-headline font-black tracking-tight', bg === 'navy' ? 'text-cream' : 'text-navy']}>
+<section class:list={['relative py-16 md:py-20 overflow-hidden', bgClass]}>
+  {hasImage && (
+    <div class="absolute inset-0">
+      <img
+        src={backgroundImage}
+        alt={backgroundImageAlt || ''}
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div class="absolute inset-0 bg-navy/80"></div>
+    </div>
+  )}
+
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+    <h2 class:list={['text-3xl md:text-4xl font-headline font-black tracking-tight', titleColor]}>
       {title}
     </h2>
     {subtitle && (
-      <p class:list={['mt-4 text-lg font-body', bg === 'navy' ? 'text-gray-light' : 'text-gray']}>
+      <p class:list={['mt-4 text-lg font-body', subtitleColor]}>
         {subtitle}
       </p>
     )}
