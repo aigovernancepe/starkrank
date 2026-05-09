@@ -25,7 +25,6 @@ export const mainNav: NavItem[] = [
     href: '/preise/seo/',
     hiddenInLocales: ['en'],
   },
-  { label: 'Case Studies', href: '/case-studies/' },
   { label: 'Blog', href: '/blog/' },
   { label: 'About', href: '/about/' },
   { label: 'Contact', href: '/contact/' },
@@ -41,7 +40,6 @@ export const footerNav = {
   ],
   company: [
     { label: 'About', href: '/about/' },
-    { label: 'Case Studies', href: '/case-studies/' },
     { label: 'Blog', href: '/blog/' },
     { label: 'Contact', href: '/contact/' },
   ],
@@ -174,12 +172,7 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
   // _redirects 301s to /en/blog/.
   if (href === '/blog/') return locale === 'de' ? '/de/blog/' : `${prefix}/blog/`;
 
-  // Case studies — EN-only tree; non-EN locales link cross-locale into /en/
-  if (href === '/case-studies/') {
-    return locale === 'en' ? '/en/case-studies/' : '/en/case-studies/';
-  }
-
-  // Pricing — DE + CH-DE only; hidden in EN nav via hiddenInLocales.
+// Pricing — DE + CH-DE only; hidden in EN nav via hiddenInLocales.
   // Currently a single entry pointing at /preise/seo/; will restructure
   // to a dropdown when /preise/google-ads/ unparks.
   if (href === '/preise/seo/') {

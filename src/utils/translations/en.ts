@@ -2,7 +2,6 @@ export const en: Record<string, string> = {
   // Navigation
   'nav.services': 'Services',
   'nav.pricing': 'Pricing',
-  'nav.caseStudies': 'Case Studies',
   'nav.blog': 'Blog',
   'nav.about': 'About',
   'nav.contact': 'Contact',
