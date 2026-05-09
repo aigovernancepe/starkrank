@@ -12,7 +12,7 @@ export const chde: Record<string, string> = {
   'pillar.search-ai-intelligence': 'Suche & KI-Intelligenz',
   'pillar.performance-media': 'Performance Media',
   'pillar.authority-pr': 'Digital PR',
-  'pillar.content-copywriting': 'Content & Texterstellung',
+  'pillar.content-copywriting': 'Content',
   'pillar.data-web': 'Daten & Web',
 
   'hero.headline': 'Datenbasiertes Wachstum für das KI-Zeitalter',

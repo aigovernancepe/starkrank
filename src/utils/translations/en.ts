@@ -12,7 +12,7 @@ export const en: Record<string, string> = {
   'pillar.search-ai-intelligence': 'Search & AI Intelligence',
   'pillar.performance-media': 'Performance Media',
   'pillar.authority-pr': 'Digital PR',
-  'pillar.content-copywriting': 'Content & Copywriting',
+  'pillar.content-copywriting': 'Content',
   'pillar.data-web': 'Data & Web',
 
   // Hero

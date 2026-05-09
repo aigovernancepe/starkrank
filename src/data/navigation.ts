@@ -16,7 +16,7 @@ export const mainNav: NavItem[] = [
       { label: 'Search & AI Intelligence', href: '/services/#search-ai-intelligence' },
       { label: 'Performance Media', href: '/services/#performance-media' },
       { label: 'Digital PR', href: '/services/#authority-pr' },
-      { label: 'Content & Copywriting', href: '/services/#content-copywriting' },
+      { label: 'Content', href: '/services/#content-copywriting' },
       { label: 'Data & Web', href: '/services/#data-web' },
     ],
   },
@@ -36,7 +36,7 @@ export const footerNav = {
     { label: 'Search & AI', href: '/services/#search-ai-intelligence' },
     { label: 'Performance Media', href: '/services/#performance-media' },
     { label: 'Digital PR', href: '/services/#authority-pr' },
-    { label: 'Content & Copy', href: '/services/#content-copywriting' },
+    { label: 'Content', href: '/services/#content-copywriting' },
     { label: 'Data & Web', href: '/services/#data-web' },
   ],
   company: [
