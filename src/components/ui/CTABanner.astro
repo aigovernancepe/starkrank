@@ -8,9 +8,12 @@ interface Props {
   backgroundImage?: string;
   /** Alt text for the background image. Required when backgroundImage is set. */
   backgroundImageAlt?: string;
+  /** CSS object-position for the background image (e.g. "center top" to keep
+      faces visible when subjects sit in the upper third of the frame). */
+  imagePosition?: string;
 }
 
-const { bg = 'navy', title, subtitle, backgroundImage, backgroundImageAlt } = Astro.props;
+const { bg = 'navy', title, subtitle, backgroundImage, backgroundImageAlt, imagePosition = 'center' } = Astro.props;
 const hasImage = Boolean(backgroundImage);
 const bgClass = hasImage ? '' : (bg === 'navy' ? 'bg-navy text-cream' : 'bg-cream text-dark');
 const titleColor = hasImage || bg === 'navy' ? 'text-cream' : 'text-navy';
@@ -24,6 +27,7 @@ const subtitleColor = hasImage || bg === 'navy' ? 'text-gray-light' : 'text-gray
         src={backgroundImage}
         alt={backgroundImageAlt || ''}
         class="w-full h-full object-cover"
+        style={`object-position: ${imagePosition}`}
         loading="lazy"
       />
       <div class="absolute inset-0 bg-navy/80"></div>
