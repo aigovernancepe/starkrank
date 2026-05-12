@@ -1,0 +1,23 @@
+---
+interface Props {
+  date: string;
+  label?: string;
+  locale?: string;
+}
+
+const { date, label = 'Aktualisiert', locale = 'de-CH' } = Astro.props;
+
+const formatted = new Intl.DateTimeFormat(locale, {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(new Date(date));
+---
+
+<div class="bg-cream/40 border-b border-gray-light/30">
+  <div class="container mx-auto px-4 py-3">
+    <p class="text-xs font-label uppercase tracking-[0.15em] text-gray">
+      {label}: <time datetime={date} class="text-navy font-semibold">{formatted}</time>
+    </p>
+  </div>
+</div>

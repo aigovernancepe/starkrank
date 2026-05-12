@@ -5,9 +5,13 @@ import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import Button from '../../components/ui/Button.astro';
+import LastUpdated from '../../components/seo/LastUpdated.astro';
 
 const title = 'SEO für Praxisgründer in der Schweiz — Festpreis | StarkRank';
 const description = 'Festpreis-Pakete für die ersten drei Praxisjahre: AISO-Startpaket, Technisches Webdesign, Komplettpaket. CHF-Pricing transparent, kein Retainer.';
+
+const datePublished = '2026-05-12';
+const dateModified = '2026-05-12';
 
 const pricingTiers = [
   {
@@ -115,6 +119,8 @@ const serviceSchema = {
   '@id': 'https://starkrank.com/ch-de/seo-fuer-praxisgruender/#service',
   name: 'SEO für Praxisgründer',
   serviceType: 'Search Engine Optimization',
+  datePublished,
+  dateModified,
   description:
     'Festpreis-Pakete für Ärzte und Zahnärzte in den ersten drei Praxisjahre: AISO-Audit, Schema-Implementation, Google-Unternehmensprofil-Aufsetzung, optional komplette Website-Erstellung. Kein laufender Retainer, AISO-First von Tag 1.',
   url: 'https://starkrank.com/ch-de/seo-fuer-praxisgruender/',
@@ -180,6 +186,8 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <Button href="/ch-de/kontakt/" variant="primary">Erstberatung anfragen</Button>
     <Button href="#preise" variant="secondary">Pakete ansehen</Button>
   </HeroSection>
+
+  <LastUpdated date={dateModified} />
 
   <Section bg="cream">
     <div class="max-w-4xl">
