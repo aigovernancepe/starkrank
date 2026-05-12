@@ -362,6 +362,32 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 
   <Section bg="cream">
     <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie läuft die Zusammenarbeit ab?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen, Diagnose-Tiefenphase über 1–2 Wochen mit Technical Audit und AISO Score Baseline, Roadmap-Übergabe mit revDSG-, FMH- und HMG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
+      </p>
+    </div>
+    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
+      {collaborationSteps.map((step) => (
+        <li class="bg-white border border-gray-light/40 rounded-lg p-5">
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
+          <h3 class="mt-2 text-base font-headline font-bold text-navy">{step.title}</h3>
+          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Skalierung erst nach Proof-Messung. Vor der Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist. Praxisinhaberinnen und Praxisinhaber, die das ausprobieren wollen, können uns direkt kontaktieren — wir antworten in der Regel innerhalb eines Werktages.
+      </p>
+      <p class="mt-6 text-base font-body text-gray leading-relaxed">
+        Bei einem vollständigen Re-Launch koordinieren wir mit Webdesign-Partnern, damit Schema-Knotengraph und Google-Unternehmensprofil-Anbindung direkt im neuen Stack landen statt nachträglich. Das spart Doppelarbeit und reduziert Compliance-Risiko in der Übergangsphase.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie unterscheidet sich SEO für Fachärzte von klassischem Praxismarketing?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
         Praxismarketing baut die Marke an einem Standort — Print, Logo, Praxisräume, Patienten-Newsletter — und misst Markenwiedererkennung indirekt. SEO für Ärzte macht das Fachgebiet jenseits des Einzugsgebiets sichtbar — Indexierbarkeit, Schema-Markup, AI-Citability auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Local Pack — und misst Position, Klicks sowie AI-Citation-Quote direkt. Beide ergänzen sich; die Zuweiser-Strategie liegt in der Schnittmenge.
@@ -469,32 +495,6 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Was wir bisher gelernt haben</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
         Fachklinik-SEO ist eine Inventar-Frage, bevor sie eine Ranking-Frage wird. Bei strukturell gepflegten Praxis-Sites ist die Hebelreihenfolge Indexierbarkeit, Schema-Knotengraph, Capsule-Inhalte, AI-Citation-Tracking — nicht „mehr Backlinks" oder „mehr Content". Diese Reihenfolge gilt für jede Spezialklinik mit gewachsener WordPress- oder Divi-Vergangenheit.
-      </p>
-    </div>
-  </Section>
-
-  <Section bg="cream">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie läuft die Zusammenarbeit ab?</h2>
-      <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen, Diagnose-Tiefenphase über 1–2 Wochen mit Technical Audit und AISO Score Baseline, Roadmap-Übergabe mit revDSG-, FMH- und HMG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
-      </p>
-    </div>
-    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
-      {collaborationSteps.map((step) => (
-        <li class="bg-white border border-gray-light/40 rounded-lg p-5">
-          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
-          <h3 class="mt-2 text-base font-headline font-bold text-navy">{step.title}</h3>
-          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{step.body}</p>
-        </li>
-      ))}
-    </ol>
-    <div class="mt-8 max-w-3xl">
-      <p class="text-base font-body text-gray leading-relaxed">
-        Skalierung erst nach Proof-Messung. Vor der Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist. Praxisinhaberinnen und Praxisinhaber, die das ausprobieren wollen, können uns direkt kontaktieren — wir antworten in der Regel innerhalb eines Werktages.
-      </p>
-      <p class="mt-6 text-base font-body text-gray leading-relaxed">
-        Bei einem vollständigen Re-Launch koordinieren wir mit Webdesign-Partnern, damit Schema-Knotengraph und Google-Unternehmensprofil-Anbindung direkt im neuen Stack landen statt nachträglich. Das spart Doppelarbeit und reduziert Compliance-Risiko in der Übergangsphase.
       </p>
     </div>
   </Section>
