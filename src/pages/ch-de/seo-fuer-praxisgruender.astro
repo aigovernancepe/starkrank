@@ -260,6 +260,24 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 
   <Section bg="cream">
     <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie läuft die Zusammenarbeit ab?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Fünf Schritte vom Erstkontakt zur Go-Live-Übergabe. Kommunikation in der Build-Phase läuft auf Abruf bei konkreten Rückfragen, ergänzt durch eine wöchentliche Status-Mail — keine starren wöchentlichen Calls. Zeitknappheit ist das zentrale Problem für Praxisinhaber; das Vorgehen ist daran kalibriert.
+      </p>
+    </div>
+    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
+      {collaborationSteps.map((step) => (
+        <li class="bg-white border border-gray-light/40 rounded-lg p-5">
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
+          <h3 class="mt-2 text-base font-headline font-bold text-navy">{step.title}</h3>
+          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was ist im Technischen Webdesign konkret enthalten?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
         Astro-basierte Website-Erstellung mit AISO-First-Architektur — Schema-Markup ist von Tag 1 integriert, nicht nachträglich aufgesetzt. Der Unterschied zu klassischen Webdesign-Agenturen liegt in der Reihenfolge: Schema und Inventar-Logik kommen zuerst, Visual-Layer setzt darauf auf.
@@ -278,24 +296,6 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         Nicht enthalten sind Praxis-Fotografie (separate Empfehlung an Fotografen vor Ort), Domain-Erwerb-Kosten (gehen direkt an Sie als Praxisinhaber) und Content-Schreiben über die 2–3 Krankheitsbild-Seiten hinaus (300 CHF pro weitere Seite als Add-on).
       </p>
     </div>
-  </Section>
-
-  <Section bg="white">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie läuft die Zusammenarbeit ab?</h2>
-      <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Fünf Schritte vom Erstkontakt zur Go-Live-Übergabe. Kommunikation in der Build-Phase läuft auf Abruf bei konkreten Rückfragen, ergänzt durch eine wöchentliche Status-Mail — keine starren wöchentlichen Calls. Zeitknappheit ist das zentrale Problem für Praxisinhaber; das Vorgehen ist daran kalibriert.
-      </p>
-    </div>
-    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
-      {collaborationSteps.map((step) => (
-        <li class="bg-white border border-gray-light/40 rounded-lg p-5">
-          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
-          <h3 class="mt-2 text-base font-headline font-bold text-navy">{step.title}</h3>
-          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{step.body}</p>
-        </li>
-      ))}
-    </ol>
   </Section>
 
   <Section bg="cream">

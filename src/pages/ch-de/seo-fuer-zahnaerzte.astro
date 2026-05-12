@@ -354,6 +354,29 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 
   <Section bg="cream">
     <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie läuft die Zusammenarbeit ab?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen, Diagnose-Tiefenphase über 1–2 Wochen mit Technical Audit, AISO Score Baseline, GSC-Indexierungs-Snapshot, AI-Crawler-User-Agent-Test und Screaming-Frog-Crawl, Roadmap-Übergabe mit revDSG-, SSO- und HMG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
+      </p>
+    </div>
+    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
+      {collaborationSteps.map((step) => (
+        <li class="bg-white border border-gray-light/40 rounded-lg p-5">
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
+          <h3 class="mt-2 text-base font-headline font-bold text-navy">{step.title}</h3>
+          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Bei einem vollständigen Re-Launch koordinieren wir mit Webdesign-Partnern, damit Schema- und Content-Struktur direkt im neuen Stack landen statt nachträglich. Das spart Doppelarbeit und reduziert Compliance-Risiko in der Übergangsphase.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie unterscheidet sich SEO für Zahnärzte von Praxismarketing für Allgemeinmedizin?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
         Vier Achsen unterscheiden Zahnarzt-SEO von Allgemeinmedizin-Praxismarketing. Die Differenz ist nicht graduell — sie verändert die Hebelreihenfolge, das Content-Inventar und die Messmetriken vollständig.
@@ -441,29 +464,6 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Was wir gelernt haben</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
         Zahnarzt-SEO in der Schweiz ist eine Inventar- und Sichtbarkeits-Frage, bevor sie eine Ranking-Frage wird. Behandlungs-Pages existieren oft, sind aber im Schema unsichtbar; Top-Selbstzahler-Behandlungen wie Veneers oder Aligner fehlen häufig komplett als eigene URL. Die Inventar-Schicht ist der erste Hebel; AI-Citability ist der zweite; Ranking-Effekte folgen mit 60 bis 90 Tagen Verzögerung.
-      </p>
-    </div>
-  </Section>
-
-  <Section bg="white">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie läuft die Zusammenarbeit ab?</h2>
-      <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen, Diagnose-Tiefenphase über 1–2 Wochen mit Technical Audit, AISO Score Baseline, GSC-Indexierungs-Snapshot, AI-Crawler-User-Agent-Test und Screaming-Frog-Crawl, Roadmap-Übergabe mit revDSG-, SSO- und HMG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
-      </p>
-    </div>
-    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
-      {collaborationSteps.map((step) => (
-        <li class="bg-cream border border-gray-light/40 rounded-lg p-5">
-          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
-          <h3 class="mt-2 text-base font-headline font-bold text-navy">{step.title}</h3>
-          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{step.body}</p>
-        </li>
-      ))}
-    </ol>
-    <div class="mt-8 max-w-3xl">
-      <p class="text-base font-body text-gray leading-relaxed">
-        Bei einem vollständigen Re-Launch koordinieren wir mit Webdesign-Partnern, damit Schema- und Content-Struktur direkt im neuen Stack landen statt nachträglich. Das spart Doppelarbeit und reduziert Compliance-Risiko in der Übergangsphase.
       </p>
     </div>
   </Section>
