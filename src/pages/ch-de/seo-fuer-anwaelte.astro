@@ -53,11 +53,11 @@ const measurementMetrics = [
   },
   {
     name: 'GSC-Indexierungs-Quote',
-    body: 'Wie viele Kanzlei-URLs sind tatsächlich indexierbar. Auffindbarkeit beginnt hier. Eine gepflegte Online Präsenz nützt wenig, wenn die Hälfte der Service-Seiten aus dem Index gesperrt ist — bei Erst-Audits Schweizer Anwaltskanzleien liegt die Quote regelmässig unter 50 Prozent (siehe Beispiel-Diagnose weiter unten).',
+    body: 'Wie viele Kanzlei-URLs sind tatsächlich indexierbar. Auffindbarkeit beginnt hier. Eine gepflegte Online-Präsenz nützt wenig, wenn die Hälfte der Service-Seiten aus dem Index gesperrt ist — potenzielle Mandanten suchen auf relevanten Keywords, finden die Kanzlei aber nicht. Bei Erst-Audits Schweizer Anwaltskanzleien liegt die Quote regelmässig unter 50 Prozent (siehe Beispiel-Diagnose weiter unten).',
   },
   {
     name: 'Position × CTR auf Rechtsgebiets-Queries',
-    body: 'Viele Kanzleien sind in den Suchergebnissen bereits gut platziert auf Rechtsgebiets-Begriffe — Ranking bei Google solide, aber ohne Klicks. Die Conversion-Surface in den Suchergebnissen von Google fehlt: Titel ohne Query-Match, Meta-Description leer, keine Sub-Listen. Rankings konvertieren erst, wenn das Snippet die Suchanfrage einlöst.',
+    body: 'Viele Kanzleien sind in den Suchergebnissen bereits gut platziert auf Rechtsgebiets-Begriffe — Ranking bei Google solide, aber ohne Klicks. Die Conversion-Surface in den Suchergebnissen von Google fehlt: Titel ohne Query-Match, Meta-Description leer, keine Sub-Listen. Hier zu optimieren bedeutet nicht, weiter zu ranken — Rankings konvertieren erst, wenn das Snippet die Suchanfrage einlöst.',
   },
   {
     name: 'AI-Citation-Quote',
@@ -69,7 +69,7 @@ const measurementMetrics = [
   },
   {
     name: 'Mobile Core Web Vitals und schnelle Ladezeit',
-    body: 'LCP, CLS und TBT (Lab-Proxy für INP) plus Bounce Rate als Frühindikator — eine hohe Absprungrate auf Rechtsgebiets-Seiten signalisiert oft Performance- oder Intent-Mismatch. Schlechte Ladezeiten sind ein direkter Konversions-Killer für Mandanten-Anfragen über mobile Endgeräte. Tools wie Google PageSpeed Insights geben eine erste Diagnose; vollständige technische SEO und technische Optimierung folgen im Audit.',
+    body: 'LCP, CLS und TBT (Lab-Proxy für INP) plus Bounce Rate als Frühindikator — eine hohe Absprungrate auf Rechtsgebiets-Seiten signalisiert oft Performance- oder Intent-Mismatch. Schlechte Ladezeiten sind ein direkter Konversions-Killer für Mandanten-Anfragen über mobile Endgeräte; schnelle Ladezeiten unter zwei Sekunden korrelieren empirisch mit höherer Mandats-Konversion. Tools wie Google PageSpeed Insights geben eine erste Diagnose; vollständige technische SEO und technische Optimierung folgen im Audit.',
   },
   {
     name: 'Cost-per-Lead aus organischer Suche',
@@ -116,7 +116,7 @@ const collaborationSteps = [
   {
     num: '05',
     title: 'Kommunikation auf Abruf · Quartalsweises Re-Scoring',
-    body: 'Zwischen den Quartalsterminen läuft Kommunikation projektgetrieben — kurze E-Mail-Reminders für anstehende Aufgaben, keine starren monatlichen Calls. AISO Score plus dokumentierte Lessons sichtbar im Mandat, langfristig als Trend statt als einmaliger Snapshot.',
+    body: 'Zwischen den Quartalsterminen läuft Kommunikation projektgetrieben — kurze E-Mail-Reminders für anstehende Aufgaben, keine starren monatlichen Calls. AISO Score plus dokumentierte Lessons sichtbar im Mandat, langfristig als Trend statt als einmaliger Snapshot — Ziel ist ein planbarer Zustrom neuer Mandanten über organische Suche statt zufälliger Empfehlungen.',
   },
 ];
 
@@ -302,7 +302,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         Drei Kanzlei-Profile bekommen messbare Hebel: spezialisierte Anwälte mit klarem Rechtsgebiets-Funnel (Wirtschaftsrecht, IT-/Markenrecht, Familienrecht, Erbrecht, Mediation), weil Mandanten online aktiv recherchieren und die Kanzlei bewusst wählen; Mid-Tier-Kanzleien mit 2–5 Anwälten, deren Spezialisierungs-Seiten separat sichtbar werden müssen; B2B-fokussierte Boutique-Wirtschaftskanzleien, deren Mandanten ausserhalb des klassischen Empfehlungs-Netzes über Branchen-Queries finden. Wer als Anwaltskanzlei in keines dieser Profile fällt, wird vom organischen Wachstum unter Umständen stärker durch Mandanten-Kapazität als durch SEO begrenzt.
       </p>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Wer als Kanzlei mehr Mandanten über organische Sichtbarkeit gewinnen will, muss die digitale Präsenz konsistent auf Rechtsgebiets-Suchanfragen optimieren — nicht generisch für Marken-Reach. Mandanten recherchieren konkrete Rechtsberatungs-Themen online, bevor sie überhaupt eine Kanzlei kontaktieren; die organische Sichtbarkeit muss diesen Recherche-Pfad bedienen. Eine SEO-Strategie für eine Anwaltskanzlei startet deshalb bei der Compliance- und Inventar-Diagnose und arbeitet sich von dort zu Capsule-Inhalten und Authority hoch.
+        Wer als Kanzlei mehr Mandanten über organische Sichtbarkeit gewinnen will, muss die digitale Präsenz konsistent auf Rechtsgebiets-Suchanfragen optimieren — nicht generisch für Marken-Reach. Wenn potenzielle Mandanten online nach einem Anwalt suchen, recherchieren sie konkrete Rechtsberatungs-Themen, bevor sie überhaupt eine Kanzlei kontaktieren; die organische Sichtbarkeit muss diesen Recherche-Pfad bedienen. Eine SEO-Strategie für eine Anwaltskanzlei startet deshalb bei der Compliance- und Inventar-Diagnose und arbeitet sich von dort zu Capsule-Inhalten und Authority hoch.
       </p>
     </div>
   </Section>
@@ -397,7 +397,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </div>
     <div class="mt-8 max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
-        Suchmaschinenmarketing (SEM) und SEO werden in der Kanzlei-Praxis oft gleichgesetzt — SEM bespielt bezahlte Anzeigen via Google Ads, SEO bespielt organische Sichtbarkeit. Diese Seite behandelt ausschliesslich den organischen Hebel. Die häufigste Fehleinschätzung ist, dass eine schöne neue Kanzlei-Website automatisch SEO-Fortschritt bedeutet. Sie tut es nicht — eine technisch saubere Marketing-Site kann jeden SEO-Hebel verfehlen, weil ihre Schema-Tiefe Null ist und ihre Rechtsgebiets-Seiten als <code>noindex</code> ausgeliefert werden. Das Marketing-Budget ist ausgegeben, der SEO-Hebel bleibt unberührt. Eine spezialisierte SEO-Agentur verfolgt deshalb einen anderen Pfad als ein klassisches Branding-Studio — sie startet bei der Compliance- und Inventar-Diagnose, nicht beim Markenauftritt.
+        Suchmaschinenmarketing (SEM, auch Suchmaschinenwerbung) und SEO werden in der Kanzlei-Praxis oft gleichgesetzt — SEM bespielt bezahlte Anzeigen via Google Ads, SEO bespielt organische Sichtbarkeit. Google Ads kann für hochpreisige Rechtsgebiete kurzfristig Sichtbarkeit liefern, kompensiert aber keine strukturellen SEO-Lücken — und Google Ads addiert keine AI-Citation-Quote auf ChatGPT, Perplexity oder Microsoft Copilot. Diese Seite behandelt ausschliesslich den organischen Hebel. Die häufigste Fehleinschätzung ist, dass eine schöne neue Kanzlei-Website automatisch SEO-Fortschritt bedeutet. Sie tut es nicht — eine technisch saubere Marketing-Site kann jeden SEO-Hebel verfehlen, weil ihre Schema-Tiefe Null ist und ihre Rechtsgebiets-Seiten als <code>noindex</code> ausgeliefert werden. Das Marketing-Budget ist ausgegeben, der SEO-Hebel bleibt unberührt. Eine spezialisierte SEO-Agentur verfolgt deshalb einen anderen Pfad als ein klassisches Branding-Studio — sie startet bei der Compliance- und Inventar-Diagnose, nicht beim Markenauftritt.
       </p>
     </div>
   </Section>
@@ -406,7 +406,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie messen wir SEO-Erfolg, mehr Sichtbarkeit und mehr Mandanten in einer Anwaltskanzlei?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Die einzige Outcome-Metrik, die für eine Anwaltskanzlei wirklich zählt, ist der Mandantenzulauf nach Quelle. Vorbedingung ist ein sauberes Zielgruppe-Match zwischen Mandats-Profil und organischer Sichtbarkeit — ohne korrektes Rechtsgebiet-Targeting wird jede Erhöhung der Klicks zu Streuverlust. Sieben technische Diagnose-Metriken zeigen, woher der Zulauf kommt, und keine ersetzt eine andere: <a href="/ch-de/glossar/aiso-score/" class="text-blue hover:underline">AISO Score</a>, GSC-Indexierungs-Quote, Position-mal-CTR auf Rechtsgebiets-Queries, AI-Citation-Quote auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Lokale SEO im Local Pack auf Google Maps via Google Unternehmensprofil, mobile Core Web Vitals und Ladezeiten sowie Cost-per-Lead aus organischer Suche. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.
+        Die einzige Outcome-Metrik, die für eine Anwaltskanzlei wirklich zählt, ist der Mandantenzulauf nach Quelle. Vorbedingung ist ein sauberes Zielgruppe-Match zwischen Mandats-Profil, den relevanten Rechtsgebiets-Keywords und organischer Sichtbarkeit — ohne korrektes Rechtsgebiet-Targeting und ohne die richtigen Keywords wird jede Erhöhung der Klicks zu Streuverlust. Sieben technische Diagnose-Metriken zeigen, woher der Zulauf kommt, und keine ersetzt eine andere: <a href="/ch-de/glossar/aiso-score/" class="text-blue hover:underline">AISO Score</a>, GSC-Indexierungs-Quote, Position-mal-CTR auf Rechtsgebiets-Queries, AI-Citation-Quote auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Lokale SEO im Local Pack auf Google Maps via Google Unternehmensprofil, mobile Core Web Vitals und Ladezeiten sowie Cost-per-Lead aus organischer Suche. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.
       </p>
     </div>
     <ul class="mt-8 space-y-5 max-w-3xl">
@@ -450,7 +450,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Hebelreihenfolge — was wir empfehlen</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
-        Aus dieser Befundlage ergibt sich die Hebelreihenfolge: UWG-Impressum-Compliance prüfen, AI-Crawler-Zugang sicherstellen, LegalService-Schema-Knotengraph mit <code>Person</code>- und <code>Service</code>-Knoten aufbauen, Locale- und Title-Cleanup, Capsule-Format auf Rechtsgebiets-Seiten, AI-Citation-Tracking als Mandats-Routine. Nicht „mehr Backlinks", nicht „mehr Content", nicht „Monthly Ranking-Reports als Hauptwert". Die SEO-Massnahmen folgen dieser Reihenfolge bei jeder Schweizer Anwaltskanzlei mit gewachsener WordPress-, TYPO3-, Wix-, Jimdo- oder Craft-Vergangenheit — Links von anderen Websites haben hier keinen Hebel, solange die strukturelle Inventar-Schicht fehlt.
+        Aus dieser Befundlage ergibt sich die Hebelreihenfolge, in der wir die Sichtbarkeit der Kanzlei optimieren: UWG-Impressum-Compliance prüfen, AI-Crawler-Zugang sicherstellen, LegalService-Schema-Knotengraph mit <code>Person</code>- und <code>Service</code>-Knoten aufbauen, Locale- und Title-Cleanup, Capsule-Format auf Rechtsgebiets-Seiten, AI-Citation-Tracking als Mandats-Routine. Nicht „mehr Backlinks", nicht „mehr Content", nicht „Monthly Ranking-Reports als Hauptwert". Die SEO-Massnahmen folgen dieser Reihenfolge bei jeder Schweizer Anwaltskanzlei mit gewachsener WordPress-, TYPO3-, Wix-, Jimdo- oder Craft-Vergangenheit — Links von anderen Websites haben hier keinen Hebel, solange die strukturelle Inventar-Schicht fehlt.
       </p>
 
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Was wir bisher gelernt haben</h3>
