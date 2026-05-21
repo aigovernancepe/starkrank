@@ -6,3 +6,6 @@ dist/
 docs/
 .env
 .env.*
+
+# Image compression backups (keep pre-compressed source out of repo)
+public/images/*-original.*

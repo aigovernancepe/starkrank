@@ -33,6 +33,12 @@ const verticals = [
     description:
       'Aesthetic- und Implantat-Zahnarztpraxen mit Selbstzahler-Anteil — revDSG-konform, SSO-Standesordnung-bewusst, mit anonymisierter Phase-0-Beispiel-Diagnose statt Mandats-Versprechen.',
   },
+  {
+    label: 'SEO für Anwälte',
+    href: '/ch-de/seo-fuer-anwaelte/',
+    description:
+      'Schweizer Anwaltskanzleien mit Spezialisierungs-Funnel (Wirtschaft, Familienrecht, Mediation, Erbrecht) — revDSG-konform, BGFA-Standesregeln-bewusst, mit LegalService-Schema-Strukturierung.',
+  },
 ];
 
 const processSteps = [
@@ -104,11 +110,11 @@ const processSteps = [
   <Section bg="white">
     <SectionHeader
       label="Branchen-Lösungen"
-      title="Spezialisiert für Schweizer Praxen mit Selbstzahler-Funnel"
-      subtitle="Vertikale Hub-Seiten für Branchen mit eigener Compliance- und Suchlandschaft — ergänzend zu den horizontalen Bausteinen oben."
+      title="Für Schweizer Berufe mit strengen Werbevorschriften"
+      subtitle="Manche Branchen brauchen mehr als Standard-SEO — wir kennen die Standesregeln, die andere Agenturen übersehen."
       align="center"
     />
-    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
       {verticals.map((v) => (
         <Card href={v.href}>
           <h3 class="text-lg font-headline font-bold text-navy">{v.label}</h3>
