@@ -58,6 +58,16 @@ const chCities = allCities
     href: `/${getSpokePath(service.data.slug, c.data.citySlug, 'ch-de')}/`,
   }));
 
+// CH-DE vertical landings (audience-cut, not service-cut). Hardcoded list:
+// these are standalone .astro pages, not collection entries. Render in sidebar
+// only when hub opts in via showVerticals frontmatter.
+const verticalLandings = [
+  { title: 'SEO für Ärzte', href: '/ch-de/seo-fuer-aerzte/' },
+  { title: 'SEO für Zahnärzte', href: '/ch-de/seo-fuer-zahnaerzte/' },
+  { title: 'SEO für Anwälte', href: '/ch-de/seo-fuer-anwaelte/' },
+  { title: 'SEO für Notare', href: '/ch-de/seo-fuer-notare/' },
+];
+
 const effectiveDate = getEffectiveUpdatedDate(hub.filePath, hub.data.updatedDate);
 
 const site = Astro.site?.origin ?? 'https://starkrank.com';
@@ -256,6 +266,19 @@ const hreflangAlternates = [
                 {relatedServices.map((r) => (
                   <Card href={`/ch-de/services/${r.slug}/`}>
                     <h4 class="text-sm font-headline font-bold text-navy">{r.title}</h4>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {hub.data.showVerticals && (
+            <div>
+              <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Für Ihre Branche</h3>
+              <div class="space-y-3">
+                {verticalLandings.map((v) => (
+                  <Card href={v.href}>
+                    <h4 class="text-sm font-headline font-bold text-navy">{v.title}</h4>
                   </Card>
                 ))}
               </div>

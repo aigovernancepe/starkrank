@@ -4,6 +4,7 @@ urlSlug: "lokale-seo-schweiz"
 locale: "ch-de"
 title: "Lokale SEO Schweiz"
 description: "Lokale SEO für Deutschschweizer KMU: GBP-Optimierung, NAP-Konsistenz, Schweizer Verzeichnisse (local.ch, search.ch, moneyhouse). revDSG-konform."
+showVerticals: true
 heroLede: "Lokale SEO Schweiz bei StarkRank optimiert Schweizer KMU für regionale Suchanfragen — Google Business Profile, NAP-Konsistenz über Schweizer Verzeichnisse (local.ch, search.ch, moneyhouse, Schweizer Wirtschaftsregister) und standort-spezifische Landingpages mit LocalBusiness-Schema. Für stationäre KMU und Service-Area-Businesses (SAB) in Basel, Zürich und Bern."
 processTotalTime: "PT21D"
 processSteps:
