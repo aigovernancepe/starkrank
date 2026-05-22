@@ -341,6 +341,35 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 
   <Section bg="white">
     <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie läuft die Zusammenarbeit für eine langfristige SEO-Strategie ab?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit Quick-Diagnose, Diagnose-Tiefenphase über 1–2 Wochen, Roadmap-Übergabe mit Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Die Erstberatung deckt zwei Sichtprüfungen ab: einen AISO-Quick-Check auf zwei Dimensionen (Crawlability und Structure) und die UWG-Impressum-Sichtprüfung. Die Tiefenphase ergänzt um Technical Audit und AISO Score Baseline. Roadmap und Compliance-Check decken revDSG, BGFA und UWG ab. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
+      </p>
+    </div>
+    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
+      {collaborationSteps.map((step) => (
+        <li class="bg-white border border-gray-light/40 rounded-lg p-5">
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
+          <h3 class="mt-2 text-base font-headline font-bold text-navy">{step.title}</h3>
+          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Eine gute SEO Strategie für eine Schweizer Kanzlei beginnt nicht mit einem Versprechen, sondern mit einer ehrlichen Bestandsaufnahme — Kontakt zu unseren SEO-Experten unter <a href="/ch-de/kontakt/" class="text-blue hover:underline">/ch-de/kontakt/</a>. Wir antworten in der Regel innerhalb eines Werktages.
+      </p>
+      <p class="mt-6 text-base font-body text-gray leading-relaxed">
+        Bei einem vollständigen Re-Launch koordinieren wir mit Webdesign-Partnern, damit strukturierte LegalService-Daten und Google-Unternehmensprofil-Anbindung direkt im neuen Stack landen statt nachträglich. Das spart Doppelarbeit und reduziert Compliance-Risiko in der Übergangsphase.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was kostet SEO für eine Anwaltskanzlei in der Schweiz?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
         Die Kosten für SEO einer Schweizer Anwaltskanzlei folgen drei transparenten Festpreis-Bändern (SEO Massnahmen im Retainer-Modell), ohne Anwalts-Aufschlag. Einzelanwalt und Kleinkanzlei zahlen 1'190 CHF monatlich, Mid-Tier-Kanzleien (2–5 Anwälte mit Spezialisierung) liegen zwischen 3'000 und 5'000 CHF pro Monat, Multi-Standort- oder Boutique-Wirtschaftskanzleien starten ab 6'000 CHF pro Monat. Vollständige Aufschlüsselung unter <a href="/ch-de/preise/seo/" class="text-blue hover:underline">/ch-de/preise/seo/</a>.
@@ -378,7 +407,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </div>
   </Section>
 
-  <Section bg="cream">
+  <Section bg="white">
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie unterscheidet sich SEO für Anwälte von klassischem Kanzleimarketing?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
@@ -418,7 +447,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </div>
   </Section>
 
-  <Section bg="white">
+  <Section bg="cream">
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie messen wir SEO-Erfolg, mehr Sichtbarkeit und mehr Mandanten in einer Anwaltskanzlei?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
@@ -443,7 +472,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </div>
   </Section>
 
-  <Section bg="cream" id="beispiel-diagnose" class="scroll-mt-20">
+  <Section bg="white" id="beispiel-diagnose" class="scroll-mt-20">
     <SectionHeader
       label="Beispiel-Diagnose"
       title="Wiederkehrende Befunde aus Schweizer Anwaltskanzleien"
@@ -475,35 +504,6 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Was wir bisher gelernt haben</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
         SEO für Anwaltskanzleien in der Schweiz ist eine Compliance- und Inventar-Frage, bevor sie eine Ranking-Frage wird. UWG-Impressum-Pflicht plus BGFA-Werberecht setzen den Rahmen, in dem überhaupt erst optimiert werden darf. Strukturierte Daten (LegalService) schliessen die Lücke zu KI-Antwortmaschinen, die in 0 von 19 auditierten Kanzleien existiert. Ranking-Effekte folgen mit 60 bis 90 Tagen Verzögerung — wer die eigene Website als Akquise-Kanal aufbaut, plant gegen die Lead-Wert-Dichte (B2B-Premium-Retainer), nicht gegen Suchvolumen. Das gilt für Anwaltskanzleien gleichermassen wie für spezialisierte Rechtsanwälte mit eigenem Funnel.
-      </p>
-    </div>
-  </Section>
-
-  <Section bg="white">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie läuft die Zusammenarbeit für eine langfristige SEO-Strategie ab?</h2>
-      <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit Quick-Diagnose, Diagnose-Tiefenphase über 1–2 Wochen, Roadmap-Übergabe mit Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring.
-      </p>
-      <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Die Erstberatung deckt zwei Sichtprüfungen ab: einen AISO-Quick-Check auf zwei Dimensionen (Crawlability und Structure) und die UWG-Impressum-Sichtprüfung. Die Tiefenphase ergänzt um Technical Audit und AISO Score Baseline. Roadmap und Compliance-Check decken revDSG, BGFA und UWG ab. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
-      </p>
-    </div>
-    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
-      {collaborationSteps.map((step) => (
-        <li class="bg-white border border-gray-light/40 rounded-lg p-5">
-          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
-          <h3 class="mt-2 text-base font-headline font-bold text-navy">{step.title}</h3>
-          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{step.body}</p>
-        </li>
-      ))}
-    </ol>
-    <div class="mt-8 max-w-3xl">
-      <p class="text-base font-body text-gray leading-relaxed">
-        Eine gute SEO Strategie für eine Schweizer Kanzlei beginnt nicht mit einem Versprechen, sondern mit einer ehrlichen Bestandsaufnahme — Kontakt zu unseren SEO-Experten unter <a href="/ch-de/kontakt/" class="text-blue hover:underline">/ch-de/kontakt/</a>. Wir antworten in der Regel innerhalb eines Werktages.
-      </p>
-      <p class="mt-6 text-base font-body text-gray leading-relaxed">
-        Bei einem vollständigen Re-Launch koordinieren wir mit Webdesign-Partnern, damit strukturierte LegalService-Daten und Google-Unternehmensprofil-Anbindung direkt im neuen Stack landen statt nachträglich. Das spart Doppelarbeit und reduziert Compliance-Risiko in der Übergangsphase.
       </p>
     </div>
   </Section>
