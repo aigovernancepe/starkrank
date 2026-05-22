@@ -16,6 +16,8 @@ interface Props {
   schema?: Record<string, unknown> | Record<string, unknown>[];
   noViewTransitions?: boolean;
   hreflangAlternates?: Array<{ hreflang: string; href: string }>;
+  /** Path to LCP hero image — emits <link rel="preload"> in head for faster LCP. */
+  preloadImage?: string;
 }
 
 const {
@@ -27,6 +29,7 @@ const {
   schema,
   noViewTransitions = false,
   hreflangAlternates,
+  preloadImage,
 } = Astro.props;
 
 const lang = getLangAttribute(locale);
@@ -112,6 +115,10 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     <!-- Font preloads -->
     <link rel="preload" href="/fonts/InterTight-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/DMSans-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    {preloadImage && (
+      <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />
+    )}
 
     <!-- JSON-LD Schema -->
     {schema && (
