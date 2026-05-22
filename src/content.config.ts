@@ -100,6 +100,7 @@ const serviceHubs = defineCollection({
       type: z.enum(['Country', 'AdministrativeArea', 'State', 'City']),
       name: z.string(),
     })).optional(),
+    showVerticals: z.boolean().optional(),
   }),
 });
 
