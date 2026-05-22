@@ -72,12 +72,19 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
     </script>
 
     <!-- GA4 — respects consent mode, loads in denied state by default. -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-FCS0HH5VC0"></script>
+    <!-- GTM script load is deferred until window.load to keep the main thread free during LCP.
+         Events fired before GTM is ready are queued in dataLayer and processed retroactively. -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-FCS0HH5VC0');
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-FCS0HH5VC0';
+        document.head.appendChild(s);
+      }, { once: true });
     </script>
 
     <!-- SEO -->
