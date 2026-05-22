@@ -22,13 +22,13 @@ const pricingTiers = [
 const comparison = [
   {
     axis: 'Hauptträger',
-    kanzleimarketing: 'Brand, Logo, Visitenkarten-Auftritt, Empfehlungs-Netzwerk, BILANZ-/WHO\'S-WHO-Listings',
-    seoForLawyers: 'Indexierbarkeit, LegalService-Schema-Markup, AI-Citability, Local SEO im Local Pack',
+    kanzleimarketing: 'Logo, Visitenkarten-Auftritt, Empfehlungs-Netzwerk, BILANZ-/WHO\'S-WHO-Listings',
+    seoForLawyers: 'Auffindbarkeit, strukturierte Daten (LegalService), Sichtbarkeit in KI-Antwortmaschinen, Sichtbarkeit im Local Pack',
   },
   {
     axis: 'Messbarkeit',
     kanzleimarketing: 'Markenwiedererkennung, indirekt',
-    seoForLawyers: 'Ranking, Klicks, AI-Citation-Quote, direkt',
+    seoForLawyers: 'Ranking, Klicks und Zitations-Quote in KI-Antwortmaschinen, direkt',
   },
   {
     axis: 'Reichweite',
@@ -38,49 +38,49 @@ const comparison = [
   {
     axis: 'Häufigkeit',
     kanzleimarketing: 'jährliche Brand-Refresh-Zyklen, langfristig auf Empfehlungs-Netz ausgerichtet',
-    seoForLawyers: 'quartalsweises Re-Scoring, kontinuierliche Inhaltspflege, AI-Citation-Spotchecks — ebenfalls langfristig, aber mit monatlich messbaren Zwischenschritten in den Rankings',
+    seoForLawyers: 'quartalsweises Re-Scoring, kontinuierliche Inhaltspflege, Stichproben in KI-Antwortmaschinen — ebenfalls langfristig, aber mit monatlich messbaren Zwischenschritten in den Rankings',
   },
 ];
 
 const measurementMetrics = [
   {
     name: 'Mandantenzulauf nach Quelle',
-    body: 'Welche Erstmandate kamen über organische Suche, Google-Unternehmensprofil, KI-Antwortmaschinen oder Empfehlung. Quelle-Attribution direkt in der Mandatsaufnahme — eine Frage im Erstgespräch, sauber dokumentiert. Mandatsanfragen ohne Quellen-Attribution erschweren jede SEO-ROI-Bewertung; neue Mandanten gewinnen wir nur dann strukturiert dazu, wenn die Akquise-Schicht überhaupt messbar ist. Alle technischen Metriken weiter unten dienen dieser Outcome-Achse.',
+    body: 'Welche Erstmandate kamen über organische Suche, Google-Unternehmensprofil, KI-Antwortmaschinen oder Empfehlung. Die Quellen-Zuordnung passiert direkt in der Mandatsaufnahme — eine Frage im Erstgespräch, sauber dokumentiert. Mandatsanfragen ohne Quellen-Zuordnung erschweren jede Erfolgs-Bewertung; neue Mandanten gewinnen wir nur dann strukturiert dazu, wenn die Akquise-Schicht messbar ist. Alle technischen Metriken weiter unten dienen dieser Outcome-Achse.',
   },
   {
     name: 'AISO Score',
     body: 'StarkRank-eigene 6-Dimensions-Diagnostik 0–100 für AI-Search-Readiness (Crawlability, Structure, Authority, Citability, Freshness, Measurability). Quartalsweises Re-Scoring.',
   },
   {
-    name: 'GSC-Indexierungs-Quote',
-    body: 'Wie viele Kanzlei-URLs sind tatsächlich indexierbar. Auffindbarkeit beginnt hier. Eine gepflegte Online-Präsenz nützt wenig, wenn die Hälfte der Service-Seiten aus dem Index gesperrt ist — potenzielle Mandanten suchen auf relevanten Keywords, finden die Kanzlei aber nicht. Bei Erst-Audits Schweizer Anwaltskanzleien liegt die Quote regelmässig unter 50 Prozent (siehe Beispiel-Diagnose weiter unten).',
+    name: 'Indexierungs-Quote in der Google Search Console',
+    body: 'Wie viele Kanzlei-Seiten Google überhaupt kennt. Auffindbarkeit beginnt hier. Eine gepflegte Online-Präsenz nützt wenig, wenn die Hälfte der Service-Seiten aus dem Google-Index gesperrt ist — potenzielle Mandanten suchen auf relevanten Suchbegriffen, finden die Kanzlei aber nicht. Bei Erst-Audits Schweizer Anwaltskanzleien liegt die Quote regelmässig unter 50 Prozent (siehe Beispiel-Diagnose weiter unten).',
   },
   {
-    name: 'Position × CTR auf Rechtsgebiets-Queries',
-    body: 'Viele Kanzleien sind in den Suchergebnissen bereits gut platziert auf Rechtsgebiets-Begriffe — Ranking bei Google solide, aber ohne Klicks. Die Conversion-Surface in den Suchergebnissen von Google fehlt: Titel ohne Query-Match, Meta-Description leer, keine Sub-Listen. Hier zu optimieren bedeutet nicht, weiter zu ranken — Rankings konvertieren erst, wenn das Snippet die Suchanfrage einlöst.',
+    name: 'Position × Klickrate auf Rechtsgebiets-Suchanfragen',
+    body: 'Viele Kanzleien sind auf Rechtsgebiets-Begriffe in den Suchergebnissen bereits gut platziert — Ranking solide, aber ohne Klicks. Die anklick-Anreize im Suchergebnis fehlen: der Titel trifft die Suchanfrage nicht, die Meta-Description ist leer, Sub-Listen fehlen. Hier zu optimieren bedeutet nicht, weiter zu ranken — Rankings konvertieren erst, wenn das Snippet die Suchanfrage einlöst.',
   },
   {
-    name: 'AI-Citation-Quote',
-    body: 'Wie oft zitieren ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot die Kanzlei im jeweiligen Rechtsgebiet. Spotchecks gegen die wichtigsten Rechtsgebiets-Queries quartalsweise.',
+    name: 'Zitations-Quote in KI-Antwortmaschinen',
+    body: 'Wie oft zitieren ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot die Kanzlei im jeweiligen Rechtsgebiet. Quartalsweise Stichproben gegen die wichtigsten Rechtsgebiets-Suchanfragen.',
   },
   {
     name: 'Lokale SEO im Local Pack auf Google Maps',
     body: 'Sichtbarkeit im lokalen Suchergebnis via Google Unternehmensprofil — die drei Begriffe Google Maps, Google My Business und Google Business Profil bezeichnen denselben Eintrag. Für Stadtteil- oder Kanton-spezifische Mandats-Akquise oft der relevanteste Hebel, weil Mandanten lokal wählen, bevor sie das Rechtsgebiet bewusst wählen.',
   },
   {
-    name: 'Mobile Core Web Vitals und schnelle Ladezeit',
-    body: 'LCP, CLS und TBT (Lab-Proxy für INP) plus Bounce Rate als Frühindikator — eine hohe Absprungrate auf Rechtsgebiets-Seiten signalisiert oft Performance- oder Intent-Mismatch. Schlechte Ladezeiten sind ein direkter Konversions-Killer für Mandanten-Anfragen über mobile Endgeräte; schnelle Ladezeiten unter zwei Sekunden korrelieren empirisch mit höherer Mandats-Konversion. Tools wie Google PageSpeed Insights geben eine erste Diagnose; vollständige technische SEO und technische Optimierung folgen im Audit.',
+    name: 'Mobile Ladezeit und Stabilität auf dem Smartphone',
+    body: 'Ladezeit, Layout-Stabilität und Reaktionszeit der Kanzlei-Website auf dem Smartphone, plus Absprungrate als Frühindikator — eine hohe Absprungrate auf Rechtsgebiets-Seiten deutet oft auf zu langsame Seiten oder auf einen Themen-Mismatch hin. Schlechte Ladezeiten sind ein direkter Konversions-Killer für Mandanten-Anfragen über mobile Endgeräte; eine Ladezeit unter zwei Sekunden korreliert empirisch mit höherer Mandats-Konversion. Tools wie Google PageSpeed Insights geben eine erste Diagnose; die vollständige technische Optimierung folgt im Audit.',
   },
   {
-    name: 'Cost-per-Lead aus organischer Suche',
-    body: 'Gemessen via Phone-Tracker oder Form-Submission-Tagging. Kein Ranking-Report-Ersatz für Diagnose; isoliert die organische Akquise von Empfehlungs-Effekten und misst, wie viele Mandatsanfragen tatsächlich aus der Online-Sichtbarkeit konvertieren.',
+    name: 'Kosten pro Anfrage aus organischer Suche',
+    body: 'Gemessen über Anruf-Tracking oder die Formular-Auswertung der Website. Kein Ranking-Report-Ersatz für Diagnose; isoliert die organische Akquise von Empfehlungs-Effekten und misst, wie viele Mandatsanfragen tatsächlich aus der Online-Sichtbarkeit konvertieren.',
   },
 ];
 
 const regulatoryAnchors = [
   {
     title: 'revDSG-Konformität',
-    body: 'Datenschutzerklärung mit expliziter Schweizer Datenresidenz-Aussage, Consent Mode v2 default-denied, Auftragsdaten-Verarbeitungsverträge mit allen Drittanbietern (Tracking, Hosting, Formular-Tools, AI-Assistent-Plugins). Das revDSG hat eigene Spezifika beim Schutz von Mandanten-Daten unter dem Anwaltsgeheimnis, die in Audits mit DE-Datenschutz-Logik regelmässig fehlen.',
+    body: 'Datenschutzerklärung mit expliziter Schweizer Datenresidenz-Aussage, Cookie-Einwilligung standardmässig deaktiviert, Auftragsdaten-Verarbeitungsverträge mit allen Drittanbietern (Tracking, Hosting, Formular-Tools, KI-Assistenten). Das revDSG hat eigene Spezifika beim Schutz von Mandanten-Daten unter dem Anwaltsgeheimnis, die in einem Audit ohne Schweizer Rechts-Bezug regelmässig untergehen.',
   },
   {
     title: 'BGFA-Standesregeln (Werberecht)',
@@ -101,7 +101,7 @@ const collaborationSteps = [
   {
     num: '02',
     title: 'Diagnose-Tiefenphase',
-    body: '1–2 Wochen. Technical Audit, AISO Score Baseline, GSC-Indexierungs-Snapshot, AI-Crawler-User-Agent-Test, Screaming-Frog-Crawl der gesamten Kanzlei-Domain.',
+    body: '1–2 Wochen. Vollständiges technisches Audit, AISO Score Baseline, Indexierungs-Snapshot aus der Google Search Console, Sichtprüfung mit verschiedenen KI-Crawler-Kennungen und vollständiger Site-Crawl der Kanzlei-Domain.',
   },
   {
     num: '03',
@@ -123,11 +123,11 @@ const collaborationSteps = [
 const faqs = [
   {
     q: 'Was ist SEO für Anwälte und für welche Kanzleien lohnt es sich?',
-    a: 'SEO für Anwälte (Suchmaschinenoptimierung, search engine optimization) ist die systematische Optimierung der Online-Präsenz einer Schweizer Anwaltskanzlei für Suchmaschinen und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — robots-Konfiguration, LegalService-Schema-Markup, Local-Pack-Sichtbarkeit, Auffindbarkeit auf juristischen Suchanfragen. Anwälte und Kanzleien mit Spezialisierungs-Funnel (Wirtschaftsrecht, Familienrecht, Mediation, Erbrecht, IT-/Markenrecht) gewinnen messbar mehr Mandanten über organische Sichtbarkeit. Für reine Pflichtmandats- oder Strafverteidigungs-Praxen mit voller Mandanten-Auslastung ist der ROI zu schwach.',
+    a: 'SEO für Anwälte (Suchmaschinenoptimierung, search engine optimization) ist die systematische Optimierung der Online-Präsenz einer Schweizer Anwaltskanzlei für Suchmaschinen und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot. Konkret heisst das: Zugang für Google und KI-Crawler, strukturierte Daten (LegalService), Sichtbarkeit im Local Pack und Auffindbarkeit auf juristischen Suchanfragen. Anwälte und Kanzleien mit Spezialisierungs-Funnel (Wirtschaftsrecht, Familienrecht, Mediation, Erbrecht, IT-/Markenrecht) gewinnen messbar mehr Mandanten über organische Sichtbarkeit. Für reine Pflichtmandats- oder Strafverteidigungs-Praxen mit voller Mandanten-Auslastung lohnt sich der Aufwand strukturell nicht.',
   },
   {
     q: 'Welche regulatorischen Besonderheiten gelten für Schweizer Anwaltskanzleien und Rechtsanwälte?',
-    a: 'Drei Regulierungs-Anker prägen jede Schweizer Kanzlei Website und werden von DE-fokussierten SEO-Audits routinemässig übersehen: revDSG für die Datenverarbeitung, BGFA-Standesregeln für das Werberecht und UWG Art. 3 Abs. 1 lit. s für die Impressum-Pflicht. Diese drei Anker greifen ineinander — wer juristische Expertise online sichtbar macht, muss alle drei gleichzeitig erfüllen.',
+    a: 'Drei Regulierungs-Anker prägen jede Schweizer Kanzlei-Website: revDSG für die Datenverarbeitung, BGFA-Standesregeln für das Werberecht und UWG Art. 3 Abs. 1 lit. s für die Impressum-Pflicht. Diese drei Anker greifen ineinander — wer juristische Expertise online sichtbar macht, muss alle drei gleichzeitig erfüllen. Ein Audit ohne Schweizer Rechts-Bezug lässt diese Spezifika regelmässig stehen.',
   },
   {
     q: 'Was kostet SEO für eine Anwaltskanzlei in der Schweiz?',
@@ -135,19 +135,19 @@ const faqs = [
   },
   {
     q: 'Wie unterscheidet sich SEO für Anwälte von klassischem Kanzleimarketing?',
-    a: 'Kanzleimarketing baut die Marke — Logo, Visitenkarte, Empfehlungs-Netzwerk, BILANZ- und WHO\'S-WHO-Listings — und misst Markenwiedererkennung indirekt. SEO für Anwälte macht das Rechtsgebiet jenseits des Empfehlungs-Netzes sichtbar — Indexierbarkeit, LegalService-Schema-Markup, AI-Citability auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Local SEO im Local Pack — und misst Position, Klicks sowie AI-Citation-Quote direkt. Beide ergänzen sich; die Empfehlungs-Logik liegt in der Schnittmenge.',
+    a: 'Kanzleimarketing baut die Marke — Logo, Visitenkarte, Empfehlungs-Netzwerk, BILANZ- und WHO\'S-WHO-Listings — und misst Markenwiedererkennung indirekt. SEO für Anwälte macht das Rechtsgebiet jenseits des Empfehlungs-Netzes sichtbar: Auffindbarkeit, strukturierte Daten (LegalService), Sichtbarkeit in ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot und im Local Pack — gemessen über Position, Klicks und Zitations-Quote. Beide Kanäle ergänzen sich; die Empfehlungs-Logik liegt in der Schnittmenge.',
   },
   {
     q: 'Wie messen wir SEO-Erfolg, mehr Sichtbarkeit und mehr Mandanten in einer Anwaltskanzlei?',
-    a: 'Im Zentrum steht der Mandantenzulauf nach Quelle — welche Erstmandate kamen über organische Suche, Google-Unternehmensprofil, KI-Antwortmaschinen oder Empfehlung. Sieben technische Diagnose-Metriken zeigen, woher er kommt: AISO Score, GSC-Indexierungs-Quote, Position-mal-CTR auf Rechtsgebiets-Queries, AI-Citation-Quote auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Lokale SEO im Local Pack auf Google Maps via Google Unternehmensprofil, mobile Core Web Vitals und Ladezeiten sowie Cost-per-Lead aus organischer Suche. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine.',
+    a: 'Im Zentrum steht der Mandantenzulauf nach Quelle — welche Erstmandate kamen über organische Suche, Google-Unternehmensprofil, KI-Antwortmaschinen oder Empfehlung. Sieben Diagnose-Metriken zeigen, woher der Zulauf kommt: AISO Score, Indexierungs-Quote in der Google Search Console, Position-mal-Klickrate auf Rechtsgebiets-Suchanfragen, Zitations-Quote in ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Sichtbarkeit im Local Pack via Google Unternehmensprofil, mobile Ladezeit sowie Kosten pro Anfrage aus organischer Suche. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine.',
   },
   {
     q: 'Wie läuft die Zusammenarbeit für eine langfristige SEO-Strategie ab?',
-    a: 'Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen plus UWG-Impressum-Sichtprüfung, Diagnose-Tiefenphase über 1–2 Wochen mit Technical Audit und AISO Score Baseline, Roadmap-Übergabe mit revDSG-, BGFA- und UWG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring bei projektgetriebener Kommunikation dazwischen — keine starren monatlichen Calls. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.',
+    a: 'Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check und UWG-Impressum-Sichtprüfung, Diagnose-Tiefenphase über 1–2 Wochen mit vollständigem technischen Audit und AISO Score Baseline, Roadmap-Übergabe mit Compliance-Check zu revDSG, BGFA und UWG, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring bei projektgetriebener Kommunikation dazwischen — keine starren monatlichen Calls. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.',
   },
   {
     q: 'Wie lange dauert es, bis SEO für Anwälte messbare Ergebnisse zeigt?',
-    a: 'Vier Zeitfenster prägen jede Schweizer Anwaltskanzlei nach einem strukturellen SEO-Unlock: 4 bis 8 Wochen bis zur Index-Wiederaufnahme freigeschalteter Service-Seiten, 2 bis 4 Monate bis zu ersten AI-Citations auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot nach Schema-Rollout, 3 bis 6 Monate bis zur stabilen Top-10-Sichtbarkeit auf Rechtsgebiets-Queries, und 6 bis 12 Monate bis zu einem messbaren Mandanten-Zulauf-Effekt — denn zwischen Sichtbarkeit und Mandats-Vereinbarung liegen Recherche- und Vertrauens-Phasen, die nicht beschleunigbar sind. Jede Garantie auf „Top-3 in vier Wochen" ist ein Standesregeln-Risiko unter BGFA-Werberecht.',
+    a: 'Vier Zeitfenster prägen jede Schweizer Anwaltskanzlei nach einer strukturellen SEO-Bereinigung: 4 bis 8 Wochen bis Google die freigeschalteten Service-Seiten wieder im Index hat, 2 bis 4 Monate bis zu ersten Zitierungen in ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot nach Einbau der strukturierten Daten, 3 bis 6 Monate bis zur stabilen Top-10-Sichtbarkeit auf Rechtsgebiets-Suchanfragen, und 6 bis 12 Monate bis zu einem messbaren Mandanten-Zulauf — denn zwischen Sichtbarkeit und Mandats-Vereinbarung liegen Recherche- und Vertrauens-Phasen, die nicht beschleunigbar sind. Jede Garantie auf „Top-3 in vier Wochen" ist ein Standesregeln-Risiko unter BGFA-Werberecht.',
   },
 ];
 
@@ -169,7 +169,7 @@ const serviceSchema = {
   datePublished,
   dateModified,
   description:
-    'SEO für Schweizer Anwaltskanzleien — Indexierbarkeit, LegalService-Schema-Knotengraph, revDSG-Konformität, BGFA-Standesregeln-Bewusstsein, UWG-Impressum-Compliance und AI-Citability auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot.',
+    'SEO für Schweizer Anwaltskanzleien — Auffindbarkeit, strukturierte LegalService-Daten, revDSG-Konformität, BGFA-Standesregeln-Bewusstsein, UWG-Impressum-Compliance und Sichtbarkeit in KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot.',
   url: 'https://starkrank.com/ch-de/seo-fuer-anwaelte/',
   provider: {
     '@type': 'Organization',
@@ -369,7 +369,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </div>
     <div class="mt-8 max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
-        Einmal-Audits sind separat preislich verankert (Technical SEO Audit 990 CHF, E-E-A-T Audit 1'400 CHF, Pre-Deploy SEO Check 500 CHF). Welcher Tier zur Kanzlei passt, hängt weniger an der Anwalts-Zahl als am SEO-Inventar — Anzahl indexierbarer Rechtsgebiets-Seiten, vorhandener LegalService-Schema-Knotengraph, Multi-Standort-Komplexität. Das Erstgespräch und eine Quick-Diagnose decken den passenden Tier in 30 Minuten ab; wir kommunizieren ihn als SEO-Agentur vor jeder Mandatsunterschrift.
+        Einmal-Audits sind separat preislich verankert (Technical SEO Audit 990 CHF, E-E-A-T Audit 1'400 CHF, Pre-Deploy SEO Check 500 CHF). Welcher Tier zur Kanzlei passt, hängt weniger an der Anwalts-Zahl als am SEO-Inventar — Anzahl indexierbarer Rechtsgebiets-Seiten, vorhandener strukturierte LegalService-Daten, Multi-Standort-Komplexität. Das Erstgespräch und eine Quick-Diagnose decken den passenden Tier in 30 Minuten ab; wir kommunizieren ihn als SEO-Agentur vor jeder Mandatsunterschrift.
       </p>
     </div>
   </Section>
@@ -378,7 +378,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie unterscheidet sich SEO für Anwälte von klassischem Kanzleimarketing?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Kanzleimarketing baut die Marke — Logo, Visitenkarten-Auftritt, Empfehlungs-Netzwerk, BILANZ- und WHO'S-WHO-Listings — und misst Markenwiedererkennung indirekt. SEO für Anwälte macht das Rechtsgebiet jenseits des Empfehlungs-Netzes sichtbar und misst Rankings, Klicks und AI-Citation-Quote direkt.
+        Kanzleimarketing baut die Marke — Logo, Visitenkarten-Auftritt, Empfehlungs-Netzwerk, BILANZ- und WHO'S-WHO-Listings — und misst Markenwiedererkennung indirekt. SEO für Anwälte macht das Rechtsgebiet jenseits des Empfehlungs-Netzes sichtbar und misst Rankings, Klicks und Zitations-Quote in KI-Antwortmaschinen direkt.
       </p>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
         Beide Kanäle ergänzen sich: wer mehr Mandanten gewinnen will, stimmt sie auf dasselbe Rechtsgebiet-Profil ab. Die Zuweiser- und Empfehlungs-Logik liegt in der Schnittmenge — sie wird durch SEO nicht ersetzt, sondern um eine messbare Akquise-Schicht über Google, Google Maps und KI-Antwortmaschinen ergänzt.
@@ -421,7 +421,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         Die Outcome-Metrik, die für eine Anwaltskanzlei wirklich zählt, ist der Mandantenzulauf nach Quelle — welche Erstmandate kamen über organische Suche, Google Unternehmensprofil, KI-Antwortmaschinen oder Empfehlung.
       </p>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Vorbedingung ist ein sauberes Match zwischen Mandats-Profil, den relevanten Rechtsgebiets-Suchbegriffen und organischer Sichtbarkeit — ohne dieses Match wird jede Erhöhung der Klicks zu Streuverlust. Sieben Diagnose-Metriken zeigen, woher der Zulauf kommt: <a href="/ch-de/glossar/aiso-score/" class="text-blue hover:underline">AISO Score</a>, Indexierungs-Quote in der Google Search Console, Position-mal-CTR auf Rechtsgebiets-Suchanfragen, AI-Citation-Quote auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Sichtbarkeit im Local Pack via Google Unternehmensprofil, mobile Core Web Vitals und Ladezeiten sowie Cost-per-Lead aus organischer Suche. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.
+        Vorbedingung ist ein sauberes Match zwischen Mandats-Profil, den relevanten Rechtsgebiets-Suchbegriffen und organischer Sichtbarkeit — ohne dieses Match wird jede Erhöhung der Klicks zu Streuverlust. Sieben Diagnose-Metriken zeigen, woher der Zulauf kommt: <a href="/ch-de/glossar/aiso-score/" class="text-blue hover:underline">AISO Score</a>, Indexierungs-Quote in der Google Search Console, Position-mal-Klickrate auf Rechtsgebiets-Suchanfragen, Zitations-Quote in KI-Antwortmaschinen auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Sichtbarkeit im Local Pack via Google Unternehmensprofil, mobile Ladezeit und Stabilität sowie Kosten pro Anfrage aus organischer Suche. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.
       </p>
     </div>
     <ul class="mt-8 space-y-5 max-w-3xl">
@@ -442,35 +442,35 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
   <Section bg="cream" id="beispiel-diagnose" class="scroll-mt-20">
     <SectionHeader
       label="Beispiel-Diagnose"
-      title="Pattern-Befunde aus Schweizer Anwaltskanzleien"
+      title="Wiederkehrende Befunde aus Schweizer Anwaltskanzleien"
     />
     <div class="max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
-        Pre-Engagement-Audits von 19 Schweizer Anwaltskanzleien (Basel-Stadt, Baselland, weitere Deutschschweizer Standorte — Solo bis Mid-Tier, Stack-divers über WordPress, TYPO3, Wix, Joomla, Jimdo, Craft, Webflow und React-SPA) zeigen folgende Pattern-Befunde, kreuzvalidiert via 5-User-Agent-curl-Sweep, Screaming-Frog-Crawl und DataForSEO-SERP-Snapshots. Die genannten Pattern treffen wiederholt auf — die Befunde unten sind anonymisiert; kein Mandat ist aktiv.
+        Vor-Mandats-Audits von 19 Schweizer Anwaltskanzleien (Basel-Stadt, Baselland, weitere Deutschschweizer Standorte — Solo bis Mid-Tier, quer durch gängige Content-Management-Systeme und moderne JavaScript-Frameworks) zeigen folgende wiederkehrende Muster. Geprüft mit verschiedenen Crawler-Kennungen, vollständigem Site-Crawl und SERP-Snapshots. Die Befunde unten sind anonymisiert; kein Mandat ist aktiv.
       </p>
 
-      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Diagnose-Befunde (anonymisiert, Mai 2026)</h3>
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Befunde (anonymisiert, Mai 2026)</h3>
       <ul class="mt-4 space-y-3 text-base font-body text-gray leading-relaxed">
-        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">0 von 19 Kanzleien mit LegalService-Schema-Markup</strong>. Schema.org dokumentiert <code>LegalService</code> explizit als Subtyp für Anwaltskanzleien — auf 19 von 19 auditierten Sites nicht implementiert. Befund kreuzvalidierbar via curl-Inspektion in 60 Sekunden.</span></li>
-        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Nur 1 von 10 Basel-Kanzleien mit korrektem <code>de-CH</code> Locale-Tag</strong>. Vier Sites senden <code>de-DE</code> (CMS-Default falsch übernommen), zwei senden <code>en</code> (technischer Joomla- oder Craft-Default-Bug trotz deutschem Content). Der Locale-Bug sendet falsches Markt-Signal an LLMs und Suchmaschinen.</span></li>
-        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">8 von 10 Basel-Kanzleien mit UWG-Impressum-Compliance-Pain</strong>. Fünf harte Violations (Impressum fehlt komplett oder Template-Platzhalter mit fremder Adresse), drei partielle (Impressum vorhanden, aber UID- oder Anwaltsregister-Nummer fehlt). UWG Art. 3 Abs. 1 lit. s ist nicht optional für anwaltliche Online-Auftritte.</span></li>
-        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">15 von 19 Kanzleien mit 0 H1 oder Multi-H1 statisch</strong> — Page-Builder (Divi, Elementor, SP-Pagebuilder) rendern H1 client-side, AI-Crawler ohne Headless-Browser sehen nichts. Multi-H1-Extremfall bei einer Site: 30 H1-Tags auf der Homepage.</span></li>
-        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">3 von 10 Basel-Kanzleien mit AI-Crawler-WAF-Block (Tier 4 / 4+++)</strong>. Cloudflare- oder Wordfence-Default-Bot-Management blockiert GPTBot, ClaudeBot oder PerplexityBot per HTTP 403 oder 510. Eine Kanzlei (Jimdo-Stack) blockiert alle drei Big-LLM-Crawler — für ChatGPT, Claude und Perplexity strukturell unsichtbar.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">0 von 19 Kanzleien mit LegalService-Strukturdaten</strong>. Schema.org definiert LegalService explizit als Strukturtyp für Anwaltskanzleien — auf 19 von 19 auditierten Sites nicht implementiert. Der Befund ist in unter einer Minute im Quelltext der Seite prüfbar.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Nur 1 von 10 Basel-Kanzleien mit korrekter Sprach-Kennzeichnung (de-CH) im HTML</strong>. Vier Sites senden de-DE (das CMS hat die Standard-Sprache nicht überschrieben), zwei senden en (technische CMS-Voreinstellung trotz deutschem Content). KI-Sprachmodelle und Suchmaschinen interpretieren die Kanzlei dadurch im falschen Markt.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">8 von 10 Basel-Kanzleien mit Lücken im Impressum</strong>. Fünf harte Mängel (Impressum fehlt komplett oder enthält eine fremde Adresse aus einer Template-Vorlage), drei partielle (Impressum vorhanden, aber UID- oder Anwaltsregister-Nummer fehlt). UWG Art. 3 Abs. 1 lit. s ist nicht optional für anwaltliche Online-Auftritte.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">15 von 19 Kanzleien ohne saubere Hauptüberschrift (H1)</strong> — moderne Page-Builder bauen die Überschrift erst per JavaScript im Browser auf; einfache Crawler, wie sie KI-Antwortmaschinen verwenden, sehen sie nicht. Im Extremfall fanden wir 30 H1-Tags auf einer Homepage.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">3 von 10 Basel-Kanzleien blockieren KI-Crawler über ihre Firewall</strong>. Die Standard-Bot-Schutz-Einstellungen von Cloudflare oder Wordfence weisen die Crawler von ChatGPT, Claude und Perplexity ab. Eine Kanzlei blockiert alle drei gleichzeitig — für die wichtigsten KI-Antwortmaschinen damit strukturell unsichtbar.</span></li>
       </ul>
 
-      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Sekundär-Befunde (Screaming-Frog-Bulk-Crawl)</h3>
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Sekundär-Befunde aus dem Site-Crawl</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
-        Webflow-Site mit Double-Slash-URL-Duplikaten (21 URLs systematisch doppelt indexierbar, Canonical-Config-Bug). WordPress-Site mit <code>/sample-page-copy-copy-copy/</code> als öffentlich erreichbarer Developer-Leftover-Page. WordPress-Site mit Person-Schema, das den falschen Vornamen der Inhaberin nennt — AI-Search baut die falsche Person-Brand-Mapping. React-SPA mit <code>Disallow: /imprint</code> in robots.txt plus null Server-Side-Rendering. <strong class="text-navy">Pattern-Lehre: „Frontend optisch ok plus SEO komplett tot" ist die zweithäufigste Konfiguration in der Schweizer Anwalts-Vertikale.</strong>
+        Eine Webflow-Site, bei der 21 URLs systematisch doppelt im Google-Index liegen. Eine WordPress-Site mit einer öffentlich erreichbaren Vorlage-Seite aus der Entwicklung. Eine WordPress-Site, deren strukturierte Person-Daten den falschen Vornamen der Inhaberin nennen — KI-Antwortmaschinen verknüpfen damit den falschen Namen mit der Kanzlei. Eine Single-Page-App, deren Impressum für Suchmaschinen gesperrt ist und deren Inhalte nur per JavaScript geladen werden. <strong class="text-navy">Wiederkehrende Lehre: „Optisch saubere Website, SEO komplett tot" ist die zweithäufigste Konfiguration in dieser Vertikale.</strong>
       </p>
 
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Hebelreihenfolge — was wir empfehlen</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
-        Aus dieser Befundlage ergibt sich die Hebelreihenfolge, in der wir die Sichtbarkeit der Kanzlei optimieren: UWG-Impressum-Compliance prüfen, AI-Crawler-Zugang sicherstellen, LegalService-Schema-Knotengraph mit <code>Person</code>- und <code>Service</code>-Knoten aufbauen, Locale- und Title-Cleanup, Capsule-Format auf Rechtsgebiets-Seiten, AI-Citation-Tracking als Mandats-Routine. Nicht „mehr Backlinks", nicht „mehr Content", nicht „Monthly Ranking-Reports als Hauptwert". Die SEO-Massnahmen folgen dieser Reihenfolge bei jeder Schweizer Anwaltskanzlei mit gewachsener WordPress-, TYPO3-, Wix-, Jimdo- oder Craft-Vergangenheit — Links von anderen Websites haben hier keinen Hebel, solange die strukturelle Inventar-Schicht fehlt.
+        Aus dieser Befundlage ergibt sich die Hebelreihenfolge, in der wir die Sichtbarkeit der Kanzlei optimieren: die UWG-Impressum-Anforderungen abdecken, den Zugang für KI-Crawler sicherstellen, strukturierte Daten (LegalService) mit Person- und Service-Einträgen aufbauen, Sprach-Kennzeichnung und Seitentitel bereinigen, das Capsule-Format auf den Rechtsgebiets-Seiten umsetzen und die Zitations-Quote in KI-Antwortmaschinen als Mandats-Routine messen. Nicht „mehr Backlinks", nicht „mehr Content", nicht „Ranking-Reports als Hauptwert". Die Reihenfolge gilt für jede Schweizer Anwaltskanzlei mit gewachsener CMS-Vergangenheit — Links von anderen Websites haben keinen Hebel, solange die strukturelle Inventar-Schicht fehlt.
       </p>
 
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Was wir bisher gelernt haben</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
-        SEO für Anwaltskanzleien in der Schweiz ist eine Compliance- und Inventar-Frage, bevor sie eine Ranking-Frage wird. UWG-Impressum-Pflicht plus BGFA-Werberecht setzen den Rahmen, in dem überhaupt erst optimiert werden darf; das LegalService-Schema schliesst die strukturelle Lücke zu AI-Antwortmaschinen, die in 0 von 19 auditierten Kanzleien existiert. Ranking-Effekte folgen mit 60 bis 90 Tagen Verzögerung — wer die eigene Website als Akquise-Kanal aufbauen will, plant gegen die Lead-Wert-Dichte (B2B-Premium-Retainer), nicht gegen Suchvolumen. Das gilt für Anwaltskanzleien gleichermassen wie für spezialisierte Rechtsanwälte mit eigenem Funnel — SEO für Rechtsanwälte ohne Schema-Knotengraph bleibt strukturell unsichtbar.
+        SEO für Anwaltskanzleien in der Schweiz ist eine Compliance- und Inventar-Frage, bevor sie eine Ranking-Frage wird. UWG-Impressum-Pflicht plus BGFA-Werberecht setzen den Rahmen, in dem überhaupt erst optimiert werden darf. Strukturierte Daten (LegalService) schliessen die Lücke zu KI-Antwortmaschinen, die in 0 von 19 auditierten Kanzleien existiert. Ranking-Effekte folgen mit 60 bis 90 Tagen Verzögerung — wer die eigene Website als Akquise-Kanal aufbaut, plant gegen die Lead-Wert-Dichte (B2B-Premium-Retainer), nicht gegen Suchvolumen. Das gilt für Anwaltskanzleien gleichermassen wie für spezialisierte Rechtsanwälte mit eigenem Funnel.
       </p>
     </div>
   </Section>
@@ -499,7 +499,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         Eine gute SEO Strategie für eine Schweizer Kanzlei beginnt nicht mit einem Versprechen, sondern mit einer ehrlichen Bestandsaufnahme — Kontakt zu unseren SEO-Experten unter <a href="/ch-de/kontakt/" class="text-blue hover:underline">/ch-de/kontakt/</a>. Wir antworten in der Regel innerhalb eines Werktages.
       </p>
       <p class="mt-6 text-base font-body text-gray leading-relaxed">
-        Bei einem vollständigen Re-Launch koordinieren wir mit Webdesign-Partnern, damit LegalService-Schema-Knotengraph und Google-Unternehmensprofil-Anbindung direkt im neuen Stack landen statt nachträglich. Das spart Doppelarbeit und reduziert Compliance-Risiko in der Übergangsphase.
+        Bei einem vollständigen Re-Launch koordinieren wir mit Webdesign-Partnern, damit strukturierte LegalService-Daten und Google-Unternehmensprofil-Anbindung direkt im neuen Stack landen statt nachträglich. Das spart Doppelarbeit und reduziert Compliance-Risiko in der Übergangsphase.
       </p>
     </div>
   </Section>

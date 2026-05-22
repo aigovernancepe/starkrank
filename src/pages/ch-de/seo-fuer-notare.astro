@@ -23,64 +23,64 @@ const comparison = [
   {
     axis: 'Hauptträger',
     register: 'Eintrag im kantonalen Notariatsregister, Mitgliederliste der Notariatskammer, local.ch-Eintrag, provenexpert.com — passive Sichtbarkeit aus behördlichen Quellen',
-    seoForNotaries: 'Aktive Indexierbarkeit, LegalService-Schema-Markup, AI-Citability auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Local SEO im Local Pack auf Google Maps',
+    seoForNotaries: 'Aktive Auffindbarkeit, strukturierte Daten (LegalService), Sichtbarkeit in KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Sichtbarkeit im Local Pack auf Google Maps',
   },
   {
     axis: 'Messbarkeit',
-    register: 'Passive Listung, keine Tracking-Möglichkeit, keine Klick-Daten',
-    seoForNotaries: 'Position, Klicks auf Beurkundungs-Queries, AI-Citation-Quote, positiven Bewertungen, direkt messbar via GSC und GA4 mit Quartal-Spotcheck',
+    register: 'Passive Listung, keine Messung, keine Klick-Daten',
+    seoForNotaries: 'Position, Klicks auf Beurkundungs-Suchanfragen, Zitations-Quote in KI-Antwortmaschinen und positive Bewertungen — direkt messbar in der Google Search Console und Google Analytics, quartalsweise nachgeprüft',
   },
   {
     axis: 'Reichweite',
     register: 'Lokal, regional auf Kantons-Grenze beschränkt, keine Differenzierung im Snippet',
-    seoForNotaries: 'Lokal plus Long-Tail-Beurkundungs-Themen, Differenzierung im Snippet durch Spezialisierungs-Funnel — wenn potenzielle Mandanten online nach einem Notariat suchen, entscheidet das Snippet, ob der Notar prominent als Kompetenz-Anker erscheint oder nur als generisches „Advokatur & Notariat“',
+    seoForNotaries: 'Lokal plus spezifische Beurkundungs-Themen, Differenzierung im Snippet durch Spezialisierungs-Funnel — wenn potenzielle Mandanten online nach einem Notariat suchen, entscheidet das Snippet, ob der Notar prominent als Kompetenz-Anker erscheint oder nur als generisches „Advokatur & Notariat“',
   },
   {
     axis: 'Häufigkeit',
     register: 'Jährliche Aktualisierung über die Notariatskammer und Aufsichtsbehörde, statisch zwischen den Zyklen',
-    seoForNotaries: 'Quartalsweises Re-Scoring, kontinuierliche Inhaltspflege auf Beurkundungs-Themen, AI-Citation-Spotchecks, regelmässige Updates der Service-Beschreibungen — ebenfalls langfristig, aber mit monatlich messbaren Zwischenschritten in den Rankings',
+    seoForNotaries: 'Quartalsweises Re-Scoring, kontinuierliche Inhaltspflege auf Beurkundungs-Themen, Stichproben in KI-Antwortmaschinen und regelmässige Updates der Service-Beschreibungen — ebenfalls langfristig, aber mit monatlich messbaren Zwischenschritten in den Rankings',
   },
 ];
 
 const measurementMetrics = [
   {
     name: 'Mandantenzulauf nach Quelle',
-    body: 'Welche Erstmandate kamen über organische Suche, Google Unternehmensprofil, KI-Antwortmaschinen, Berufsregister-Listing oder Empfehlung. Quelle-Attribution direkt in der Mandatsaufnahme — eine Frage am Erstgespräch, sauber dokumentiert. Beurkundungs-Volumen pro Thema (Erbvertrag, Hauskauf, Gesellschaftsgründung) als Sub-Achse, weil Notariats-Themen unterschiedliche Akquise-Pfade haben. Mandatsanfragen ohne Quellen-Attribution erschweren jede SEO-ROI-Bewertung; neue Mandanten gewinnen wir nur dann strukturiert dazu, wenn die Akquise-Schicht überhaupt messbar ist.',
+    body: 'Welche Erstmandate kamen über organische Suche, Google Unternehmensprofil, KI-Antwortmaschinen, Berufsregister-Listing oder Empfehlung. Die Quellen-Zuordnung passiert direkt in der Mandatsaufnahme — eine Frage im Erstgespräch, sauber dokumentiert. Das Beurkundungs-Volumen pro Thema (Erbvertrag, Hauskauf, Gesellschaftsgründung) wird als Sub-Achse mitgeführt, weil Notariats-Themen unterschiedliche Akquise-Pfade haben. Mandatsanfragen ohne Quellen-Zuordnung erschweren jede Erfolgs-Bewertung; neue Mandanten gewinnen wir nur dann strukturiert dazu, wenn die Akquise-Schicht messbar ist.',
   },
   {
     name: 'AISO Score',
     body: 'StarkRank-eigene 6-Dimensions-Diagnostik 0–100 für AI-Search-Readiness (Crawlability, Structure, Authority, Citability, Freshness, Measurability). Quartalsweises Re-Scoring.',
   },
   {
-    name: 'GSC-Indexierungs-Quote',
-    body: 'Wie viele Notariats-URLs sind tatsächlich indexierbar. Eine gepflegte Online Präsenz nützt wenig, wenn die Hälfte der Service-Unterseiten aus dem Index gesperrt ist — potenzielle Mandanten suchen auf Beurkundungs-Themen, finden das Notariat aber nicht. Bei Erst-Audits Schweizer Notariate liegt die Quote regelmässig unter 60 Prozent (Custom-PHP-Sites, Squarespace-JS-only-Renderings, ältere Joomla-Installationen).',
+    name: 'Indexierungs-Quote in der Google Search Console',
+    body: 'Wie viele Notariats-Seiten Google überhaupt kennt. Eine gepflegte Online-Präsenz nützt wenig, wenn die Hälfte der Service-Unterseiten aus dem Google-Index gesperrt ist — potenzielle Mandanten suchen ein Beurkundungs-Thema, finden das Notariat aber nicht. Bei Erst-Audits Schweizer Notariate liegt die Quote regelmässig unter 60 Prozent, oft weil ältere Eigenbauten, JavaScript-lastige Templates oder veraltete Content-Management-Systeme im Einsatz sind.',
   },
   {
-    name: 'Position × CTR auf Beurkundungs-Queries',
-    body: 'Viele Notariate ranken bereits für Beurkundungs-Themen — Erbvertrag-Beratung, Hauskauf-Notar, Gesellschaftsgründung-Beurkundung — und sind in den Suchergebnissen gut platziert, ohne dass Klicks konvertieren. Die Conversion-Surface im Snippet fehlt: Titel ohne Query-Match auf die Suchanfrage, Meta-Description leer, keine Sub-Listen. Hier zu optimieren bedeutet nicht, weiter zu ranken — Rankings konvertieren erst, wenn das Snippet die Suchanfrage einlöst.',
+    name: 'Position × Klickrate auf Beurkundungs-Suchanfragen',
+    body: 'Viele Notariate ranken bereits für Beurkundungs-Themen — Erbvertrag-Beratung, Hauskauf-Notar, Gesellschaftsgründung-Beurkundung — und sind in den Suchergebnissen gut platziert, ohne dass Klicks konvertieren. Die anklick-Anreize im Suchergebnis fehlen: der Titel trifft die Suchanfrage nicht, die Meta-Description ist leer, Sub-Listen fehlen. Hier zu optimieren bedeutet nicht, weiter zu ranken — Rankings konvertieren erst, wenn das Snippet die Suchanfrage einlöst.',
   },
   {
-    name: 'AI-Citation-Quote',
-    body: 'Wie oft zitieren ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot das Notariat im Spezialisierungs-Gebiet. Spotchecks gegen die wichtigsten Beurkundungs-Queries quartalsweise.',
+    name: 'Zitations-Quote in KI-Antwortmaschinen',
+    body: 'Wie oft zitieren ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot das Notariat im Spezialisierungs-Gebiet. Quartalsweise Stichproben gegen die wichtigsten Beurkundungs-Suchanfragen.',
   },
   {
     name: 'Lokale SEO im Local Pack auf Google Maps',
     body: 'Sichtbarkeit im lokalen Suchergebnis via Google Unternehmensprofil — Google My Business, Google Unternehmensprofil und Google Business Profil bezeichnen denselben Eintrag. Für ein Notariat oft der relevanteste Hebel überhaupt, weil Mandanten lokal wählen, bevor sie das Beurkundungs-Thema bewusst wählen.',
   },
   {
-    name: 'Mobile Core Web Vitals und schnelle Ladezeit',
-    body: 'LCP, CLS und TBT (Lab-Proxy für INP). Schlechte Ladezeiten sind ein direkter Konversions-Killer für Mandanten-Anfragen über mobile Endgeräte; schnelle Ladezeit unter zwei Sekunden korreliert empirisch mit höherer Mandats-Konversion. Tools wie Google PageSpeed Insights geben eine erste Diagnose; vollständige technische SEO und technische Optimierung folgen im Audit.',
+    name: 'Mobile Ladezeit und Stabilität auf dem Smartphone',
+    body: 'Ladezeit, Layout-Stabilität und Reaktionszeit der Notariats-Website auf dem Smartphone. Schlechte Ladezeiten sind ein direkter Konversions-Killer für Mandanten-Anfragen über mobile Endgeräte; eine Ladezeit unter zwei Sekunden korreliert empirisch mit höherer Mandats-Konversion. Tools wie Google PageSpeed Insights geben eine erste Diagnose; die vollständige technische Optimierung folgt im Audit.',
   },
   {
-    name: 'Cost-per-Lead aus organischer Suche',
-    body: 'Gemessen via Phone-Tracker oder Form-Submission-Tagging. Kein Ranking-Report-Ersatz für Diagnose; isoliert die organische Akquise von Empfehlungs-Effekten und misst, wie viele Mandatsanfragen tatsächlich aus der Online-Sichtbarkeit konvertieren.',
+    name: 'Kosten pro Anfrage aus organischer Suche',
+    body: 'Gemessen über Anruf-Tracking oder die Formular-Auswertung der Website. Kein Ranking-Report-Ersatz für Diagnose; isoliert die organische Akquise von Empfehlungs-Effekten und misst, wie viele Mandatsanfragen tatsächlich aus der Online-Sichtbarkeit konvertieren.',
   },
 ];
 
 const regulatoryAnchors = [
   {
     title: 'revDSG + Art. 321 StGB Berufsgeheimnis',
-    body: 'Datenschutzerklärung mit expliziter Schweizer Datenresidenz-Aussage, Consent Mode v2 default-denied, Auftragsdaten-Verarbeitungsverträge mit allen Drittanbietern (Tracking, Hosting, Formular-Tools, AI-Assistent-Plugins). Notarielle Verschwiegenheit unter Art. 321 StGB ist strikter als das Anwaltsgeheimnis — ein Datenleck mit Mandanten-PII aus einem Erbvertrag oder einer Beurkundung kann strafrechtlich relevant werden. Audits mit DE-Datenschutz-Logik verfehlen diese Schweizer Spezifika regelmässig.',
+    body: 'Datenschutzerklärung mit expliziter Schweizer Datenresidenz-Aussage, Cookie-Einwilligung standardmässig deaktiviert, Auftragsdaten-Verarbeitungsverträge mit allen Drittanbietern (Tracking, Hosting, Formular-Tools, KI-Assistenten). Die notarielle Verschwiegenheit unter Art. 321 StGB ist strikter als das Anwaltsgeheimnis — ein Datenleck mit Mandanten-Daten aus einem Erbvertrag oder einer Beurkundung kann strafrechtlich relevant werden. Ein Audit ohne Schweizer Rechts-Bezug lässt diese Spezifika regelmässig stehen.',
   },
   {
     title: 'Kantonales Notariatsgesetz + SBN-Standesordnung (Werberecht)',
@@ -98,8 +98,8 @@ const localSeoItems = [
     body: 'Google My Business, Google Unternehmensprofil und Google Business Profil sind drei Begriffe für denselben Eintrag. Ohne verifiziertes Profil ist das Notariat im Local Pack auf Google Maps strukturell unsichtbar. Kategorien: Notar als primary, Rechtsanwalt als secondary bei Advokatur-Notariat-Kombination. Öffnungszeit, Kontaktinformationen, URL, Foto.',
   },
   {
-    title: 'LegalService-Schema mit LocalBusiness-Knoten',
-    body: 'Strukturierte Daten mit @type LegalService plus @type LocalBusiness, vollständige NAP-Konsistenz: Notariats-Name, Adresse, Telefon identisch zu Berufsregister, Google Unternehmensprofil und Impressum. Strukturierte Daten ohne Konsistenz sind ein AI-Citation-Risiko.',
+    title: 'Strukturierte Daten (LegalService + LocalBusiness)',
+    body: 'Die Website wird mit LegalService- und LocalBusiness-Markierung versehen. Notariats-Name, Adresse und Telefon müssen identisch zu Berufsregister, Google Unternehmensprofil und Impressum sein — Abweichungen verwirren KI-Antwortmaschinen, die Quellen abgleichen, und kosten Sichtbarkeit.',
   },
   {
     title: 'Kantonales Notariatsregister-Listing aktiv prüfen',
@@ -128,7 +128,7 @@ const collaborationSteps = [
   {
     num: '02',
     title: 'Diagnose-Tiefenphase',
-    body: '1–2 Wochen. Technical Audit, AISO Score Baseline, GSC-Indexierungs-Snapshot, AI-Crawler-User-Agent-Test, Screaming-Frog-Crawl der gesamten Notariats-Domain, Google-Unternehmensprofil-Audit.',
+    body: '1–2 Wochen. Vollständiges technisches Audit, AISO Score Baseline, Indexierungs-Snapshot aus der Google Search Console, Sichtprüfung mit verschiedenen KI-Crawler-Kennungen, vollständiger Site-Crawl der Notariats-Domain und Google-Unternehmensprofil-Audit.',
   },
   {
     num: '03',
@@ -150,11 +150,11 @@ const collaborationSteps = [
 const faqs = [
   {
     q: 'Was ist SEO für Notare und für welche Notariate lohnt es sich?',
-    a: 'SEO für Notare (Suchmaschinenoptimierung, search engine optimization) ist die systematische Optimierung der Online-Präsenz eines Schweizer Notariats für Suchmaschinen und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — robots-Konfiguration, LegalService-Schema-Markup, Local-Pack-Sichtbarkeit auf Beurkundungs- und Beglaubigungs-Suchanfragen. Notare im Freien Notariat der Kantone BS, BL, GE, JU, SH, UR, OW, NW, SZ und GL mit Spezialisierungs-Funnel (Erbverträge, Ehe-/Vermögensverträge, Immobilien-Beurkundungen, Gesellschaftsgründungen, Vorsorgeaufträge) gewinnen messbar mehr Mandanten über organische Sichtbarkeit und lokale Suche. Für Amtsnotare in Kantonen mit staatlichem Notariat (ZH, BE, AG, LU, SO, FR, NE, GR, ZG, VS, TG) ist der ROI strukturell schwach — als kantonale Funktionäre sind sie nicht im Wettbewerb um Mandanten.',
+    a: 'SEO für Notare (Suchmaschinenoptimierung, search engine optimization) ist die systematische Optimierung der Online-Präsenz eines Schweizer Notariats für Suchmaschinen und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot. Konkret heisst das: Zugang für Google und KI-Crawler, strukturierte Daten (LegalService) und Sichtbarkeit im Local Pack auf Beurkundungs- und Beglaubigungs-Suchanfragen. Notare im Freien Notariat der Kantone BS, BL, GE, JU, SH, UR, OW, NW, SZ und GL mit Spezialisierungs-Funnel (Erbverträge, Ehe-/Vermögensverträge, Immobilien-Beurkundungen, Gesellschaftsgründungen, Vorsorgeaufträge) gewinnen messbar mehr Mandanten über organische Sichtbarkeit und lokale Suche. Für Amtsnotare in Kantonen mit staatlichem Notariat (ZH, BE, AG, LU, SO, FR, NE, GR, ZG, VS, TG) lohnt sich der Aufwand strukturell nicht — als kantonale Funktionäre sind sie nicht im Wettbewerb um Mandanten.',
   },
   {
     q: 'Welche regulatorischen Besonderheiten gelten für Schweizer Notariate?',
-    a: 'Drei Regulierungs-Anker prägen jedes Schweizer Notariat und werden von DE-fokussierten SEO-Audits routinemässig übersehen: revDSG plus Art. 321 StGB für das Berufsgeheimnis, das kantonale Notariatsgesetz plus die SBN-Standesordnung für das Werberecht (das Werbeverbot variiert kantonal), und UWG Art. 3 Abs. 1 lit. s für die Impressum-Pflicht im Online-Auftritt. Diese drei Anker greifen ineinander — wer notarielle Expertise online sichtbar macht, muss alle drei gleichzeitig erfüllen und sie kantonal-spezifisch verankern.',
+    a: 'Drei Regulierungs-Anker prägen jedes Schweizer Notariat: revDSG plus Art. 321 StGB für das Berufsgeheimnis, das kantonale Notariatsgesetz plus die SBN-Standesordnung für das Werberecht (das Werbeverbot variiert kantonal), und UWG Art. 3 Abs. 1 lit. s für die Impressum-Pflicht im Online-Auftritt. Diese drei Anker greifen ineinander — wer notarielle Expertise online sichtbar macht, muss alle drei gleichzeitig erfüllen und sie kantonal-spezifisch verankern. Ein Audit ohne Schweizer Rechts-Bezug lässt diese Spezifika regelmässig stehen.',
   },
   {
     q: 'Was kostet SEO für ein Notariat in der Schweiz?',
@@ -162,19 +162,19 @@ const faqs = [
   },
   {
     q: 'Wie unterscheidet sich SEO für Notare von kantonaler Berufsregister-Sichtbarkeit?',
-    a: 'Das kantonale Notariatsregister listet das Notariat passiv über behördliche Quellen — Notariatskammer-Mitgliederliste, kantonales Notarverzeichnis, local.ch — und ist die Vertrauensbasis für AI-Antwortmaschinen, die ChatGPT, Perplexity und Google AI Overviews als primäre Quelle für lokale Notar-Queries nutzen. SEO für Notare ist die aktive Wahrnehmungs-Schicht darüber — Indexierbarkeit, LegalService-Schema-Markup, AI-Citability, Local SEO im Local Pack — und misst Rankings, Klicks sowie AI-Citation-Quote direkt. Beide ergänzen sich; das Berufsregister-Listing differenziert sich erst durch den Site-Stack im AI-Snippet.',
+    a: 'Das kantonale Notariatsregister listet das Notariat passiv über behördliche Quellen — Notariatskammer-Mitgliederliste, kantonales Notarverzeichnis, local.ch — und ist eine wichtige Vertrauensquelle für ChatGPT, Perplexity und Google AI Overviews bei lokalen Notar-Suchanfragen. SEO für Notare ist die aktive Wahrnehmungs-Schicht darüber: Auffindbarkeit, strukturierte Daten (LegalService), Sichtbarkeit in KI-Antwortmaschinen und im Local Pack — gemessen über Rankings, Klicks und Zitations-Quote. Beide Kanäle ergänzen sich; das Register bringt das Notariat ins Listing, der eigene Site-Stack entscheidet über die Wiedererkennung im KI-Snippet.',
   },
   {
     q: 'Wie verbessern Notariate ihre lokale Sichtbarkeit über Google Maps und das Local Pack?',
-    a: 'Sechs Hebel: Google Unternehmensprofil vollständig und verifiziert (alle drei Begriffe Google My Business, Google Unternehmensprofil, Google Business Profil bezeichnen denselben Eintrag), LegalService-Schema kombiniert mit LocalBusiness-Knoten und NAP-Konsistenz, kantonales Notariatsregister-Listing aktiv prüfen und vervollständigen, Bewertungen aktiv einladen und auf jede beantworten, Beurkundungs-Themen als eigene Unterseite im Capsule-Format mit lokalen Keywords, sowie Multi-Standort-Schema mit separaten LocalBusiness-Knoten pro Filiale.',
+    a: 'Sechs Hebel: Google Unternehmensprofil vollständig und verifiziert (Google My Business, Google Unternehmensprofil und Google Business Profil bezeichnen denselben Eintrag), strukturierte Daten (LegalService + LocalBusiness) mit konsistenten Anschriftsdaten, kantonales Notariatsregister-Listing aktiv prüfen und vervollständigen, Bewertungen einladen und auf jede beantworten, Beurkundungs-Themen als eigene Unterseite im Capsule-Format mit lokalen Suchbegriffen sowie separate LocalBusiness-Markierungen pro Filiale bei Multi-Standort-Notariaten.',
   },
   {
     q: 'Wie messen wir SEO-Erfolg, mehr Sichtbarkeit und mehr Mandanten in einem Notariat?',
-    a: 'Im Zentrum steht der Mandantenzulauf nach Quelle — welche Erstmandate kamen über organische Suche, Google Unternehmensprofil, KI-Antwortmaschinen, Berufsregister-Listing oder Empfehlung, plus Beurkundungs-Volumen pro Thema als Sub-Achse. Sieben technische Diagnose-Metriken zeigen, woher er kommt: AISO Score, GSC-Indexierungs-Quote, Position-mal-CTR auf Beurkundungs-Queries, AI-Citation-Quote auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Lokale SEO im Local Pack auf Google Maps via Google Unternehmensprofil, mobile Core Web Vitals und Ladezeiten sowie Cost-per-Lead aus organischer Suche. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine.',
+    a: 'Im Zentrum steht der Mandantenzulauf nach Quelle — welche Erstmandate kamen über organische Suche, Google Unternehmensprofil, KI-Antwortmaschinen, Berufsregister-Listing oder Empfehlung, plus Beurkundungs-Volumen pro Thema als Sub-Achse. Sieben Diagnose-Metriken zeigen, woher der Zulauf kommt: AISO Score, Indexierungs-Quote in der Google Search Console, Position-mal-Klickrate auf Beurkundungs-Suchanfragen, Zitations-Quote in ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Sichtbarkeit im Local Pack via Google Unternehmensprofil, mobile Ladezeit sowie Kosten pro Anfrage aus organischer Suche. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine.',
   },
   {
     q: 'Wie läuft die Zusammenarbeit für eine langfristige SEO-Strategie ab?',
-    a: 'Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen plus UWG-Impressum-Sichtprüfung plus kantonales Notariatsregister-Cross-Check, Diagnose-Tiefenphase über 1–2 Wochen mit Technical Audit, AISO Score Baseline und Google-Unternehmensprofil-Audit, Roadmap-Übergabe mit revDSG-, NotG-, SBN- und UWG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring bei projektgetriebener Kommunikation dazwischen. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.',
+    a: 'Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check, UWG-Impressum-Sichtprüfung und Cross-Check des kantonalen Notariatsregister-Eintrags, Diagnose-Tiefenphase über 1–2 Wochen mit vollständigem technischen Audit, AISO Score Baseline und Google-Unternehmensprofil-Audit, Roadmap-Übergabe mit Compliance-Check zu revDSG, NotG, SBN-Standesordnung und UWG, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring bei projektgetriebener Kommunikation dazwischen. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.',
   },
   {
     q: 'Kann KI wie ChatGPT SEO-Texte für Notariate schreiben?',
@@ -182,7 +182,7 @@ const faqs = [
   },
   {
     q: 'Wie lange dauert es, bis SEO für Notare messbare Ergebnisse zeigt?',
-    a: 'Vier Zeitfenster prägen jedes Schweizer Notariat nach einem strukturellen SEO-Unlock: 4 bis 8 Wochen bis zur Index-Wiederaufnahme freigeschalteter Service-Unterseiten, 2 bis 4 Monate bis zu ersten AI-Citations auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot nach Schema-Rollout, 3 bis 6 Monate bis zur stabilen Top-10-Sichtbarkeit auf Beurkundungs-Queries und stabiler Local-Pack-Präsenz, und 6 bis 12 Monate bis zu einem messbaren Mandanten-Zulauf-Effekt — denn zwischen Sichtbarkeit und Beurkundungs-Mandat liegen Recherche- und Vertrauens-Phasen, die nicht beschleunigbar sind. Jede Garantie auf „Top-3 in vier Wochen" ist ein berufsrechtliches Risiko unter SBN-Standesordnung und kantonalem Notariatsgesetz.',
+    a: 'Vier Zeitfenster prägen jedes Schweizer Notariat nach einer strukturellen SEO-Bereinigung: 4 bis 8 Wochen bis Google die freigeschalteten Service-Unterseiten wieder im Index hat, 2 bis 4 Monate bis zu ersten Zitierungen in ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot nach Einbau der strukturierten Daten, 3 bis 6 Monate bis zur stabilen Top-10-Sichtbarkeit auf Beurkundungs-Suchanfragen und stabiler Local-Pack-Präsenz, und 6 bis 12 Monate bis zu einem messbaren Mandanten-Zulauf — denn zwischen Sichtbarkeit und Beurkundungs-Mandat liegen Recherche- und Vertrauens-Phasen, die nicht beschleunigbar sind. Jede Garantie auf „Top-3 in vier Wochen" ist ein berufsrechtliches Risiko unter SBN-Standesordnung und kantonalem Notariatsgesetz.',
   },
 ];
 
@@ -204,7 +204,7 @@ const serviceSchema = {
   datePublished,
   dateModified,
   description:
-    'SEO für Schweizer Notariate — Indexierbarkeit, LegalService- und LocalBusiness-Schema-Knotengraph, revDSG-Konformität plus Art. 321 StGB Berufsgeheimnis, kantonales-Notariatsgesetz- und SBN-Standesordnung-Bewusstsein, UWG-Impressum-Compliance und AI-Citability auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot.',
+    'SEO für Schweizer Notariate — Auffindbarkeit, strukturierte LegalService- und LocalBusiness-Daten, revDSG-Konformität plus Art. 321 StGB Berufsgeheimnis, kantonales-Notariatsgesetz- und SBN-Standesordnung-Bewusstsein, UWG-Impressum-Compliance und Sichtbarkeit in KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot.',
   url: 'https://starkrank.com/ch-de/seo-fuer-notare/',
   provider: {
     '@type': 'Organization',
@@ -404,7 +404,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </div>
     <div class="mt-8 max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
-        Einmal-Audits sind separat preislich verankert (Technical SEO Audit 990 CHF, E-E-A-T Audit 1'400 CHF, Pre-Deploy SEO Check 500 CHF). Welcher Tier zum Notariat passt, hängt weniger an der Anzahl Partner als am SEO-Inventar — Anzahl indexierbarer Beurkundungs-Unterseiten, vorhandener LegalService-Schema-Knotengraph, Multi-Standort-Komplexität. Das Erstgespräch und eine Quick-Diagnose decken den passenden Tier in 30 Minuten ab; wir kommunizieren ihn als SEO-Agentur vor jeder Mandatsunterschrift.
+        Einmal-Audits sind separat preislich verankert (Technical SEO Audit 990 CHF, E-E-A-T Audit 1'400 CHF, Pre-Deploy SEO Check 500 CHF). Welcher Tier zum Notariat passt, hängt weniger an der Anzahl Partner als am SEO-Inventar — Anzahl indexierbarer Beurkundungs-Unterseiten, vorhandener strukturierte LegalService-Daten, Multi-Standort-Komplexität. Das Erstgespräch und eine Quick-Diagnose decken den passenden Tier in 30 Minuten ab; wir kommunizieren ihn als SEO-Agentur vor jeder Mandatsunterschrift.
       </p>
     </div>
   </Section>
@@ -416,7 +416,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         Das kantonale Notariatsregister listet jedes Notariat passiv — Notariatskammer-Mitgliederliste, kantonales Notarverzeichnis, local.ch — und ist eine wichtige Vertrauensquelle für ChatGPT, Perplexity und Google AI Overviews bei lokalen Notar-Suchanfragen.
       </p>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        SEO für Notare ist die aktive Wahrnehmungs-Schicht darüber: die eigene Website wird für Google und KI-Crawler erschlossen, mit strukturierten Daten (LegalService) als Notariat gekennzeichnet, im Local Pack auf Google Maps positioniert und für jedes Beurkundungs-Thema separat sichtbar gemacht. Rankings, Klicks und AI-Citation-Quote werden direkt gemessen — anders als beim passiven Register-Listing. Beide Kanäle ergänzen sich: das Register bringt das Notariat ins Listing, der eigene Site-Stack entscheidet, ob es im AI-Snippet als Erbrechts-Spezialist, Immobilien-Notar oder Allgemein-Notariat wiedererkennbar ist.
+        SEO für Notare ist die aktive Wahrnehmungs-Schicht darüber: die eigene Website wird für Google und KI-Crawler erschlossen, mit strukturierten Daten (LegalService) als Notariat gekennzeichnet, im Local Pack auf Google Maps positioniert und für jedes Beurkundungs-Thema separat sichtbar gemacht. Rankings, Klicks und Zitations-Quote in KI-Antwortmaschinen werden direkt gemessen — anders als beim passiven Register-Listing. Beide Kanäle ergänzen sich: das Register bringt das Notariat ins Listing, der eigene Site-Stack entscheidet, ob es im KI-Snippet als Erbrechts-Spezialist, Immobilien-Notar oder Allgemein-Notariat wiedererkennbar ist.
       </p>
     </div>
     <div class="mt-8 overflow-x-auto">
@@ -473,7 +473,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         Die Outcome-Metrik, die für ein Notariat wirklich zählt, ist der Mandantenzulauf nach Quelle — welche Erstmandate kamen über organische Suche, Google Unternehmensprofil, KI-Antwortmaschinen, Berufsregister-Listing oder Empfehlung.
       </p>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Vorbedingung ist ein sauberes Match zwischen Beurkundungs-Spezialisierung, den relevanten Suchbegriffen und organischer Sichtbarkeit — ohne dieses Match wird jede Erhöhung der Klicks zu Streuverlust. Sieben Diagnose-Metriken zeigen, woher der Zulauf kommt: <a href="/ch-de/glossar/aiso-score/" class="text-blue hover:underline">AISO Score</a>, Indexierungs-Quote in der Google Search Console, Position-mal-CTR auf Beurkundungs-Suchanfragen, AI-Citation-Quote auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Sichtbarkeit im Local Pack via Google Unternehmensprofil, mobile Core Web Vitals und Ladezeiten sowie Cost-per-Lead aus organischer Suche. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.
+        Vorbedingung ist ein sauberes Match zwischen Beurkundungs-Spezialisierung, den relevanten Suchbegriffen und organischer Sichtbarkeit — ohne dieses Match wird jede Erhöhung der Klicks zu Streuverlust. Sieben Diagnose-Metriken zeigen, woher der Zulauf kommt: <a href="/ch-de/glossar/aiso-score/" class="text-blue hover:underline">AISO Score</a>, Indexierungs-Quote in der Google Search Console, Position-mal-Klickrate auf Beurkundungs-Suchanfragen, Zitations-Quote in KI-Antwortmaschinen auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot, Sichtbarkeit im Local Pack via Google Unternehmensprofil, mobile Ladezeit und Stabilität sowie Kosten pro Anfrage aus organischer Suche. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.
       </p>
     </div>
     <ul class="mt-8 space-y-5 max-w-3xl">
@@ -494,28 +494,28 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
   <Section bg="white" id="beispiel-diagnose" class="scroll-mt-20">
     <SectionHeader
       label="Beispiel-Diagnose"
-      title="Pattern-Befunde aus Schweizer Notariaten"
+      title="Wiederkehrende Befunde aus Schweizer Notariaten"
     />
     <div class="max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
-        Eine kurze AI-Visibility-Sondierung an zwei BL-Notariaten Mai 2026 plus die transferable Befundlage aus einem 19-Site-Bulk-Audit Schweizer Anwaltskanzleien (Basel-Stadt, Baselland, weitere Deutschschweizer Standorte, Mai 2026) ergibt drei wiederkehrende Pattern. Die Befunde sind aggregiert; kein Mandat ist aktiv. Notar-spezifische Vollerhebung steht im Mini-Wave-Pilot zweites Quartal 2026 noch aus.
+        Eine kurze Sondierung an zwei BL-Notariaten Mai 2026 plus die übertragbare Befundlage aus einem 19-Sites-Audit Schweizer Anwaltskanzleien (Basel-Stadt, Baselland, weitere Deutschschweizer Standorte, Mai 2026) ergibt drei wiederkehrende Muster. Die Befunde sind aggregiert; kein Mandat ist aktiv. Eine notar-spezifische Vollerhebung steht im Mini-Wave-Pilot zweites Quartal 2026 noch aus.
       </p>
 
-      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Diagnose-Befunde (anonymisiert, Mai 2026)</h3>
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Befunde (anonymisiert, Mai 2026)</h3>
       <ul class="mt-4 space-y-3 text-base font-body text-gray leading-relaxed">
-        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">AI-Antwortmaschinen zitieren das kantonale Notariatsregister als primäre Quelle für lokale Notar-Queries</strong>. ChatGPT, Perplexity und Google AI Overviews listen Schweizer Notariate für Region-Queries (etwa „Notariat in Binningen") aus notariat-baselland.ch, notariatskammerbasel.ch und local.ch, nicht primär aus der Notariats-Website. Pattern verifiziert an zwei BL-Notariaten Mai 2026: beide werden in der Binningen-Notariats-Liste korrekt gelistet, obwohl ihre eigenen Websites 5 Jahre nicht gepflegt sind und ihre Brand-Phrase in keinem Page-Title vorkommt. Pitch-Verschiebung: nicht „unsichtbar im AI-Snippet", sondern <strong class="text-navy">Listing-Differenzierung im AI-Snippet</strong> — der Notar erscheint als #N von M; der Site-Stack entscheidet, ob das Snippet klare Spezialisierung wiedergibt oder nur „Advokatur & Notariat“.</span></li>
-        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">0 LegalService-Schema-Markup auf den getesteten Notariats-Sites</strong>. Die zwei BL-Sondierungs-Sites haben weder <code>LegalService</code> noch <code>LocalBusiness</code> strukturierte Daten implementiert; das Anwaltskanzleien-Bulk (19 Sites) zeigt den gleichen Pattern (0 von 19). Schema.org dokumentiert <code>LegalService</code> explizit als Subtyp für notarielle und anwaltliche Dienstleistungen — auf den geprüften Sites nicht vorhanden. Befund kreuzvalidierbar via curl-Inspektion in 60 Sekunden.</span></li>
-        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">UWG-Impressum-Compliance-Pattern aus Anwalts-Bulk übertragbar</strong>. Im 19-Site-Anwalts-Bulk zeigten acht von zehn Basler Sites Impressum-Compliance-Pain (fünf harte Violations: Impressum fehlt komplett oder Template-Platzhalter mit fremder Adresse; drei partielle: Impressum vorhanden, aber UID- oder Berufsregister-Nummer fehlt). Das gleiche UWG-Art-3-Abs-1-lit-s-Risiko gilt für Notariate strikter, weil der Notar als öffentliche Urkundsperson eine zusätzliche Identifikations-Pflicht trägt. Notar-spezifische Vollerhebung im Mini-Wave-Pilot zweites Quartal 2026 ausstehend.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">KI-Antwortmaschinen ziehen ihre Antworten für lokale Notar-Suchen aus dem kantonalen Notariatsregister, nicht primär aus der Notariats-Website</strong>. ChatGPT, Perplexity und Google AI Overviews listen Schweizer Notariate bei Suchanfragen wie „Notariat in Binningen" über notariat-baselland.ch, notariatskammerbasel.ch und local.ch. An zwei BL-Notariaten Mai 2026 verifiziert: beide werden in der Binningen-Notariats-Liste korrekt geführt, obwohl ihre eigenen Websites seit Jahren nicht gepflegt sind und der Notariats-Name in keinem Seitentitel vorkommt. Folgerung: nicht „unsichtbar im KI-Snippet", sondern <strong class="text-navy">Differenzierung im KI-Snippet</strong> — der Notar erscheint als #N von M, und der eigene Site-Stack entscheidet, ob das Snippet eine klare Spezialisierung wiedergibt oder nur „Advokatur & Notariat“.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">0 LegalService-Strukturdaten auf den getesteten Notariats-Websites</strong>. Die zwei BL-Sondierungs-Sites haben weder LegalService- noch LocalBusiness-Strukturdaten implementiert; das 19-Sites-Audit der Anwaltskanzleien zeigt dasselbe Muster (0 von 19). Schema.org definiert LegalService explizit als Strukturtyp für notarielle und anwaltliche Dienstleistungen — auf den geprüften Sites nicht vorhanden. Der Befund ist in unter einer Minute im Quelltext der Seite prüfbar.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Das UWG-Impressum-Muster aus dem Anwalts-Audit lässt sich übertragen</strong>. Im 19-Sites-Audit der Anwaltskanzleien zeigten acht von zehn Basler Sites Lücken im Impressum (fünf harte Mängel: Impressum fehlt komplett oder enthält eine fremde Adresse aus einer Template-Vorlage; drei partielle: Impressum vorhanden, aber UID- oder Berufsregister-Nummer fehlt). Für Notariate gilt das UWG-Risiko strikter, weil der Notar als öffentliche Urkundsperson eine zusätzliche Identifikations-Pflicht trägt. Eine notar-spezifische Vollerhebung steht im Mini-Wave-Pilot zweites Quartal 2026 noch aus.</span></li>
       </ul>
 
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Hebelreihenfolge — was wir empfehlen</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
-        Aus dieser Befundlage ergibt sich die Hebelreihenfolge, in der wir die Sichtbarkeit eines Notariats optimieren: kantonales Notariatsregister-Listing auditieren, UWG-Impressum-Compliance prüfen, Google Unternehmensprofil verifizieren und vervollständigen, LegalService- plus LocalBusiness-Schema-Knotengraph mit Service-Knoten pro Beurkundungs-Thema aufbauen, Capsule-Format auf Service-Unterseiten, AI-Citation-Tracking als Mandats-Routine. Nicht „mehr Backlinks", nicht „mehr Content", nicht „Monthly Ranking-Reports als Hauptwert". Die Reihenfolge gilt für jedes Schweizer Notariat im Freien Notariat mit gewachsener WordPress-, Squarespace-, Joomla- oder Custom-PHP-Vergangenheit.
+        Aus dieser Befundlage ergibt sich die Hebelreihenfolge, in der wir die Sichtbarkeit eines Notariats optimieren: das kantonale Notariatsregister-Listing prüfen, die UWG-Impressum-Anforderungen abdecken, das Google Unternehmensprofil verifizieren und vervollständigen, strukturierte Daten (LegalService und LocalBusiness) je Beurkundungs-Thema aufbauen, das Capsule-Format auf den Service-Unterseiten umsetzen und die Zitations-Quote in KI-Antwortmaschinen als Mandats-Routine messen. Nicht „mehr Backlinks", nicht „mehr Content", nicht „Ranking-Reports als Hauptwert". Die Reihenfolge gilt für jedes Schweizer Notariat im Freien Notariat mit gewachsener CMS-Vergangenheit.
       </p>
 
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Was wir bisher gelernt haben</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
-        SEO für Notariate in der Schweiz ist eine Listing-Differenzierungs- und Inventar-Frage, bevor sie eine Ranking-Frage wird. Die kantonalen Notariatsregister speisen die AI-Antworten und das Local Pack; der eigene Site-Stack entscheidet, ob die Wiedererkennung im Snippet als Erbrechts-Spezialist, Immobilien-Notar oder Allgemein-Notariat trägt. Das LegalService-Schema schliesst die strukturelle Lücke zu AI-Antwortmaschinen, die in den geprüften Notariats-Sites nicht existiert. Ranking-Effekte folgen mit 60 bis 90 Tagen Verzögerung — wer das eigene Notariat als Akquise-Kanal aufbauen will, plant gegen die Lead-Wert-Dichte (Beurkundungs-Mandate 800–5'000 CHF Wert), nicht gegen Suchvolumen. Das gilt für Solo-Notare gleichermassen wie für 2-Partner-Notariate mit Spezialisierungs-Funnel — SEO für Notare ohne Schema-Knotengraph bleibt strukturell unsichtbar in der AI-Suche.
+        SEO für Notariate in der Schweiz ist eine Frage der Differenzierung im Listing und der Inventar-Hygiene, bevor sie eine Ranking-Frage wird. Die kantonalen Notariatsregister speisen KI-Antworten und Local Pack; der eigene Site-Stack entscheidet, ob das Notariat im Snippet als Erbrechts-Spezialist, Immobilien-Notar oder Allgemein-Notariat wiedererkennbar ist. Strukturierte Daten (LegalService) schliessen die Lücke zu KI-Antwortmaschinen, die auf den geprüften Notariats-Websites nicht existiert. Ranking-Effekte folgen mit 60 bis 90 Tagen Verzögerung — wer das eigene Notariat als Akquise-Kanal aufbaut, plant gegen die Lead-Wert-Dichte (Beurkundungs-Mandate 800–5'000 CHF Wert), nicht gegen Suchvolumen.
       </p>
     </div>
   </Section>
@@ -544,7 +544,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         Eine gute SEO Strategie für ein Schweizer Notariat beginnt nicht mit einem Versprechen, sondern mit einer ehrlichen Bestandsaufnahme — Kontakt zu unseren SEO-Experten unter <a href="/ch-de/kontakt/" class="text-blue hover:underline">/ch-de/kontakt/</a>. Wir antworten in der Regel innerhalb eines Werktages.
       </p>
       <p class="mt-6 text-base font-body text-gray leading-relaxed">
-        Bei einem vollständigen Re-Launch koordinieren wir mit Webdesign-Partnern, damit LegalService-Schema-Knotengraph plus LocalBusiness-Multi-Standort-Knoten und Google-Unternehmensprofil-Anbindung direkt im neuen Stack landen statt nachträglich. Das spart Doppelarbeit und reduziert Compliance-Risiko in der Übergangsphase.
+        Bei einem vollständigen Re-Launch koordinieren wir mit Webdesign-Partnern, damit strukturierte LegalService-Daten, separate LocalBusiness-Markierungen pro Standort und die Google-Unternehmensprofil-Anbindung direkt im neuen Stack landen statt nachträglich. Das spart Doppelarbeit und reduziert Compliance-Risiko in der Übergangsphase.
       </p>
     </div>
   </Section>
