@@ -1,0 +1,450 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Card from '../../components/ui/Card.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import EcommerceForkBox from '../../components/ch-de/EcommerceForkBox.astro';
+import { getSelfLastModified } from '../../utils/getLastModified';
+
+const title = "Onlineshop erstellen lassen — ab 3'900 CHF | StarkRank";
+const description = "Schweizer Agentur für Shopify-Builds mit SEO-Fundament. Vier Festpreis-Pakete ab 3'900 CHF. TWINT, revDSG. Liefertermin 3 bis 14 Wochen.";
+const canonicalUrl = 'https://starkrank.com/ch-de/onlineshop-erstellen-lassen/';
+
+const breadcrumbs = [
+  { label: 'Start', href: '/ch-de/' },
+  { label: 'Onlineshop erstellen lassen', href: '/ch-de/onlineshop-erstellen-lassen/' },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://starkrank.com/ch-de/' },
+    { '@type': 'ListItem', position: 2, name: 'Onlineshop erstellen lassen', item: canonicalUrl },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${canonicalUrl}#service`,
+  name: 'Onlineshop erstellen lassen',
+  alternateName: ['Shopify-Build', 'Webshop erstellen lassen', 'Online-Shop Erstellung'],
+  description:
+    "Schweizer Agentur für Shopify-Onlineshop-Builds mit SEO-Fundament. Vier Festpreis-Pakete von 3'900 CHF (Lean-Launch, Solo-Gründer/in) bis 39'000 CHF (Signature, Premium-Marke). Inklusive TWINT, revDSG-konformer Cookie-Logik, Schema-Markup, Loom-Hand-off-Tutorial.",
+  url: canonicalUrl,
+  mainEntityOfPage: canonicalUrl,
+  serviceType: 'E-Commerce Website Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'StarkRank',
+    url: 'https://starkrank.com',
+  },
+  areaServed: [{ '@type': 'Country', name: 'Switzerland' }],
+  about: [
+    { '@type': 'Thing', name: 'Elektronischer Handel', sameAs: 'https://de.wikipedia.org/wiki/Elektronischer_Handel' },
+    { '@type': 'Thing', name: 'Shopify', sameAs: 'https://de.wikipedia.org/wiki/Shopify' },
+    { '@type': 'Thing', name: 'WordPress', sameAs: 'https://de.wikipedia.org/wiki/WordPress' },
+    { '@type': 'Thing', name: 'Search Engine Optimization', sameAs: 'https://de.wikipedia.org/wiki/Suchmaschinenoptimierung' },
+  ],
+  mentions: [
+    { '@type': 'Thing', name: 'TWINT', sameAs: 'https://de.wikipedia.org/wiki/Twint' },
+    { '@type': 'Thing', name: 'Stripe', sameAs: 'https://de.wikipedia.org/wiki/Stripe_(Unternehmen)' },
+    { '@type': 'Thing', name: 'WooCommerce', sameAs: 'https://de.wikipedia.org/wiki/WooCommerce' },
+    { '@type': 'Thing', name: 'Zielgruppe', sameAs: 'https://de.wikipedia.org/wiki/Zielgruppe' },
+  ],
+  isRelatedTo: {
+    '@type': 'Service',
+    '@id': 'https://starkrank.com/ch-de/ecommerce-seo-audit/#service',
+    name: 'E-Commerce-SEO-Audit',
+    url: 'https://starkrank.com/ch-de/ecommerce-seo-audit/',
+  },
+  author: {
+    '@type': 'Person',
+    '@id': 'https://starkrank.com/ch-de/ueber-uns/#wilko-feye',
+    name: 'Wilko Feye',
+    url: 'https://starkrank.com/ch-de/ueber-uns/',
+    sameAs: ['https://www.linkedin.com/in/wilkofeye/'],
+    worksFor: { '@type': 'Organization', name: 'StarkRank', url: 'https://starkrank.com' },
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Onlineshop-Build-Pakete Schweiz',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        name: 'Lean-Launch — Solo-Gründer/in',
+        description:
+          'Shopify-Setup + CH-Konfiguration + Standard-Theme + Schema-Basis + SEO-Fundament + Hand-off-Tutorial. Sie befüllen Produkte selbst. Liefertermin 3 bis 4 Wochen.',
+        price: '3900',
+        priceCurrency: 'CHF',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '3900',
+          priceCurrency: 'CHF',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'project' },
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Launch — Etabliertes KMU',
+        description:
+          'Wie Lean-Launch plus Premium-Theme, Produkt-Upload bis 20 SKUs, vollständiges Schema, erweiterte SEO-Foundation. Liefertermin 5 bis 7 Wochen.',
+        price: '9900',
+        priceCurrency: 'CHF',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '9900',
+          priceCurrency: 'CHF',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'project' },
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Growth — Mehrmarken-Skalierer',
+        description:
+          'Wie Launch plus erweiterte Theme-Customization, Produkt-Upload bis 100 SKUs, Lookbook-Editorial, Apple Pay, Hub-Spoke-Content-Architektur. Liefertermin 8 bis 10 Wochen.',
+        price: '19900',
+        priceCurrency: 'CHF',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '19900',
+          priceCurrency: 'CHF',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'project' },
+        },
+      },
+      {
+        '@type': 'Offer',
+        name: 'Signature — Premium-Marke',
+        description:
+          'Wie Growth plus Custom-Design (Figma-first), Produkt-Upload bis 300 SKUs, Pre-Order/Drop-Logik, Server-side Tracking, 3 Monate SEO-Retainer. Liefertermin 11 bis 14 Wochen.',
+        price: '39000',
+        priceCurrency: 'CHF',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '39000',
+          priceCurrency: 'CHF',
+          referenceQuantity: { '@type': 'QuantitativeValue', value: '1', unitText: 'project' },
+        },
+      },
+    ],
+  },
+};
+
+const schemas = [serviceSchema, breadcrumbSchema];
+
+const packageTiers = [
+  { key: 'lean', name: 'Lean-Launch', bestFor: 'Solo-Gründer/in, ≤20 Produkte', price: "3'900 CHF" },
+  { key: 'launch', name: 'Launch', bestFor: 'Etabliertes KMU, 10-50 Produkte', price: "9'900 CHF" },
+  { key: 'growth', name: 'Growth', bestFor: 'Mehrmarken-Skalierer, 50-300 Produkte', price: "19'900 CHF" },
+  { key: 'signature', name: 'Signature', bestFor: 'Premium-Marke, Custom-Anspruch', price: "39'000 CHF" },
+];
+
+const packageRows = [
+  { label: 'Shopify-Setup + CH-Konfiguration', cells: ['Ja', 'Ja', 'Ja', 'Ja'] },
+  { label: 'Premium-Theme + Brand-Polish', cells: ['Standard-Theme', 'Premium-Theme', 'Premium-Theme + erweiterte Customization', 'Custom-Design (Figma-first)'] },
+  { label: 'Produkt-Upload', cells: ['Sie selbst', 'Bis 20 SKUs', 'Bis 100 SKUs', 'Bis 300 SKUs + Lookbook-Editorial'] },
+  { label: 'Core-Pages (Home, Shop, About, Kontakt, FAQ)', cells: ['5', '5', '7 (+ Lookbook + Editorial)', '10+ (+ Custom-Templates)'] },
+  { label: 'Schema-Markup (Organization, Product, Offer)', cells: ['Basis', 'Vollständig', 'Vollständig + erweiterte Properties', 'Vollständig + Custom-Entities'] },
+  { label: 'SEO-Fundament (Meta, Headings, robots/sitemap, GSC)', cells: ['Ja', 'Ja', 'Ja + Hub-Spoke-Architektur', 'Ja + 90-Tage-Retainer'] },
+  { label: 'TWINT, Stripe, Klarna', cells: ['Ja', 'Ja', 'Ja + Apple Pay', 'Ja + Pre-Order/Drop-Logik'] },
+  { label: 'revDSG-Cookie-Logik + Impressum/AGB-Templates', cells: ['Ja', 'Ja', 'Ja', 'Ja + Custom-Legal-Review'] },
+  { label: 'GA4 + Consent Mode v2', cells: ['Ja', 'Ja', 'Ja + Conversion-Funnels', 'Ja + Server-side Tracking'] },
+  { label: 'Loom-Hand-off-Tutorial', cells: ['Ja', 'Ja', 'Ja + Live-Schulung', 'Ja + Live-Schulung + Doku'] },
+  { label: 'Liefertermin', cells: ['3-4 Wochen', '5-7 Wochen', '8-10 Wochen', '11-14 Wochen'] },
+];
+
+const processSteps = [
+  {
+    num: 1,
+    title: 'Klären (Woche 1, Kickoff)',
+    body: '90-min-Call zu Zielgruppe, Produktsortiment, USP-Sortierung, Domain-Klärung, Steuerregistrierung CH. Sie liefern: Brand-Assets (Logo, Farben, Schrift falls vorhanden), Produkt-Inventory als CSV oder Liste, 2-3 Referenz-Shops, die Ihnen gefallen.',
+  },
+  {
+    num: 2,
+    title: 'Aufbauen (Woche 2-3)',
+    body: 'Shopify-Account einrichten, Domain mappen, MWST 8.1%-Setup, Shipping-Zonen CH und EU, Theme installieren und Brand-Polish, Payment-Gateways scharfschalten (Shopify Payments mit TWINT, Stripe, Klarna), revDSG-Cookie-Banner, Impressum + Datenschutz + AGB-Templates. Sie sehen Ende Woche 3 die erste Staging-Version.',
+  },
+  {
+    num: 3,
+    title: 'Befüllen + QA-prüfen (Woche 3-10)',
+    body: 'Produkte hochladen (oder Schulung für Self-Upload bei Lean-Launch), Schema-Markup setzen, SEO-Fundament legen, Core-Pages texten, Cross-browser- und Mobile-QA fahren, CWV-Pass sichern, Email-Templates für Bestellbestätigung.',
+  },
+  {
+    num: 4,
+    title: 'Live schalten + übergeben (Woche 4-14)',
+    body: 'DNS umschalten, Google Search Console + Bing Webmaster anschliessen, Sitemap einreichen, Loom-Tutorials drehen (Produkte verwalten, Bestellungen, Discounts), Live-Walk-through-Call.',
+  },
+];
+
+const faqItems = [
+  {
+    q: 'Was kostet es, einen Onlineshop in der Schweiz erstellen zu lassen?',
+    a: "Schweizer Agenturen bewegen sich zwischen 3'500 CHF für Standard-Setups und 19'000 CHF+ für skalierbare B2B-Lösungen. Bei StarkRank zahlen Sie ab 3'900 CHF (Lean-Launch, Sie befüllen) bis 39'000 CHF (Signature, Custom-Design plus Retainer). Die Spreizung entsteht durch drei Hebel: Wer befüllt die Produkte, wie viel Custom-Design ist drin, und ob laufende Betreuung dazugehört. Sie wählen das Paket nach Ihrer Phase, nicht nach unserem Verkaufsdruck.",
+  },
+  {
+    q: 'Wie viel Geld brauche ich für einen Onlineshop insgesamt?',
+    a: "Über die Agenturkosten hinaus rechnen Sie mit: Shopify-Subscription 39-399 CHF pro Monat, Domain 12-20 CHF pro Jahr, Premium-Theme 300-400 CHF einmalig (oft in den Paketen enthalten), bei Bedarf Produktfotografie 500-3'000 CHF. Total laufende Kosten ab Monat 2: ab 50 CHF pro Monat plus Transaktionsgebühren.",
+  },
+  {
+    q: 'Lohnt es sich, einen Onlineshop zu eröffnen?',
+    a: 'Ein Onlineshop lohnt sich, wenn Sie ein klar definiertes Produkt mit nachgewiesener Nachfrage haben, eine realistische Customer-Acquisition-Strategie (organisch, Ads, Direct, Wholesale) und einen Deckungsbeitrag, der diese Akquise finanziert. Ohne Akquisitionsplan ist ein Shop nur Infrastruktur; die Frage ist, ob Sie genug Kunden in den Shop bekommen.',
+  },
+  {
+    q: 'Welches Shopsystem ist das beste für die Schweiz?',
+    a: 'Für die deutliche Mehrheit der neuen Schweizer Shops, die wir betreuen, ist Shopify die richtige Wahl: native TWINT, eingebaute CH-Steuerlogik, robuste Wartung. WooCommerce passt bei bestehender WordPress-Infrastruktur oder speziellen Custom-Anforderungen. Schweizer Anbieter wie Hostpoint Webshop oder KLARA eignen sich für sehr einfache Setups mit unter 30 Produkten und minimalem Wachstumsanspruch.',
+  },
+  {
+    q: 'Bauen Sie auch auf WooCommerce, Magento oder Custom?',
+    a: 'Für Neubauten empfehlen wir fast immer Shopify. WooCommerce-Builds übernehmen wir, wenn eine bestehende WordPress-Infrastruktur die Migration zu Shopify unwirtschaftlich macht. Magento bauen wir nicht neu auf, weil der Aufwand-Nutzen-Quotient für die meisten KMU ungünstig ist. Bei diesen Stacks führen wir aber E-Commerce-Audits durch.',
+  },
+  {
+    q: 'Was passiert nach dem Launch?',
+    a: "Sie bekommen ein Loom-Hand-off-Tutorial und können den Shop selbst weiterführen. Optional: SEO-Retainer ab 1'190 CHF pro Monat (im Signature-Paket inkludiert für 3 Monate), oder das E-Commerce-SEO-Audit nach 6 Monaten als Optimierungs-Check, sobald echte Daten vorliegen.",
+  },
+];
+
+const relatedLinks = [
+  { title: 'E-Commerce-SEO-Audit', href: '/ch-de/ecommerce-seo-audit/' },
+  { title: 'KI-Suchoptimierung', href: '/ch-de/aiso-check/' },
+  { title: 'Kontakt + Erstgespräch', href: '/ch-de/kontakt/' },
+];
+
+const lastModified = getSelfLastModified(import.meta.url);
+const lastModifiedIso = lastModified.toISOString().split('T')[0];
+const lastModifiedLabel = lastModified.toLocaleDateString('de-CH', { year: 'numeric', month: 'long' });
+---
+
+<BaseLayout title={title} description={description} locale="ch-de" schema={schemas}>
+  <!-- Hero -->
+  <Section bg="cream">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+      Data &amp; Web
+    </span>
+    <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+      Onlineshop erstellen lassen — Shopify-Build mit SEO-Fundament für den Schweizer Markt
+    </h1>
+    <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-3xl">
+      Sie wollen einen Onlineshop erstellen lassen, der nicht nur funktioniert, sondern ab Tag eins gefunden wird. Wir bauen Shopify-Shops mit SEO-Fundament: Capsule-Content auf Produktseiten, vollständiges Schema-Markup, TWINT-Integration und revDSG-konformes Tracking. Vier Festpreis-Stufen ab 3'900 CHF, damit Sie für das Paket zahlen, das zu Ihrer Phase passt.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <Button href="/ch-de/kontakt/" variant="primary" size="lg">Erstgespräch buchen</Button>
+      <Button href="#pakete" variant="ghost" size="lg">Pakete vergleichen</Button>
+    </div>
+
+    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+      <span>Zuletzt aktualisiert: <time datetime={lastModifiedIso}>{lastModifiedLabel}</time></span>
+      <span>Von <a href="/ch-de/ueber-uns/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank</span>
+    </div>
+  </Section>
+
+  <!-- Trust Bar (compact single-bar, two stacked lines, mid-dot separators) -->
+  <section class="bg-white border-b border-gray-light/30">
+    <div class="max-w-7xl mx-auto px-6 py-5 space-y-2">
+      <p class="text-sm font-body text-gray leading-relaxed">
+        <span class="font-headline font-bold text-navy">Was Sie bekommen:</span>
+        Verkaufsbereiter Shopify-Shop · TWINT, Stripe, Klarna · revDSG-konforme Cookie-Logik · SEO-Fundament + Schema · Loom-Hand-off-Tutorial
+      </p>
+      <p class="text-sm font-body text-gray leading-relaxed">
+        <span class="font-headline font-bold text-navy">Liefertermin 3 bis 14 Wochen</span> je nach Paket · Festpreis · Schweizer Hochdeutsch
+      </p>
+    </div>
+  </section>
+
+  <!-- Build-vs-Audit Fork Box: push visitors with existing shop to the audit page -->
+  <EcommerceForkBox variant="build-to-audit" />
+
+  <!-- Body capsules with sidebar -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2 space-y-0">
+
+          <div class="pb-14">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              Was bedeutet "Onlineshop erstellen lassen" bei StarkRank?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Onlineshop erstellen lassen heisst bei StarkRank: Sie bekommen einen verkaufsbereiten Shopify-Shop, der in 3 bis 14 Wochen in der Schweiz live geht. Wir übernehmen Setup, Theme-Customization, Schema-Markup, SEO-Fundament, Zahlungsanbindung (TWINT, Stripe, Klarna), revDSG-konforme Cookie-Logik und ein Loom-Tutorial. Sie liefern Bilder, Brand-Input und Produkt-Specs.</p>
+              <p>Der Unterschied zu einer Standard-Webagentur liegt im SEO-Fundament. Im Elektronischen Handel (E-Commerce) entscheidet die Schema-Tiefe darüber, ob Ihre Produkte in Suchmaschinen und KI-Antworten überhaupt erscheinen — die meisten Schweizer Shopify-Builds optimieren SEO als Nachgedanke (oder gar nicht), sodass Sie 6 Monate nach Launch feststellen, dass Google Ihre Produkte nicht zitiert. Wir bauen Schema-Markup, Capsule-Content auf Produktseiten (PDPs) und Kategorieseiten (PLPs) sowie KI-Suche-Lesbarkeit von Anfang an mit ein. Das ist der nachhaltigste Weg, neben grossen Brands sichtbar zu bleiben, ohne deren Ad-Budget mitzubringen.</p>
+              <p>Was nicht inkludiert ist: Produktfotografie, Texterstellung für Über-uns-Stories oder Editorial-Lookbook-Inhalte, Logo-Design oder Markenbuch-Erstellung. Wenn Sie das brauchen, klären wir es im Erstgespräch und vermitteln Partner oder erweitern den Scope.</p>
+            </div>
+          </div>
+
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              Warum bauen wir auf Shopify und nicht WooCommerce oder Custom?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Für die deutliche Mehrheit der neuen Schweizer Onlineshops, die wir betreuen, ist Shopify die richtige Wahl: native TWINT-Anbindung über Shopify Payments, eingebaute Steuerlogik für CH und EU, breites Theme-Ökosystem, vorhersehbare Wartung. WooCommerce auf WordPress lohnt sich nur bei sehr spezifischen Custom-Anforderungen oder vorhandener WordPress-Infrastruktur. Custom-Headless rechtfertigt sich erst ab signifikantem Skalierungsvolumen.</p>
+              <p>Konkret: Wir empfehlen Shopify, wenn Sie zwischen 10 und 1'000 Produkten verkaufen, Standard-Versandregeln innerhalb der Schweiz und EU brauchen, und keine ungewöhnlichen Workflow-Integrationen (etwa zu einem speziellen ERP oder einer eigenen Lagerverwaltung) im ersten Jahr planen. Bei Marktplatz-Modellen, Subscriptions mit komplexen Abrechnungslogiken oder B2B-Shops mit Preisstaffelung pro Kundengruppe greifen wir auf Shopify-Apps zurück, statt das Shop-System zu wechseln. Falls Ihre Anforderungen ausserhalb dieses Bereichs liegen, sagen wir das im Erstgespräch und empfehlen einen anderen Stack oder einen anderen Anbieter.</p>
+            </div>
+          </div>
+
+          <div id="pakete" class="pt-14 pb-14 border-t border-gray-light/30 scroll-mt-24">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              Welches Paket passt zu Ihrer Phase?
+            </h2>
+            <p class="text-base font-body text-gray leading-relaxed mb-8">
+              Vier Stufen, gestaffelt nach Anspruch und Selbstanteil. Lean-Launch für Solo-Gründer/in, die selbst befüllen. Launch für etablierte KMU mit Cash-Reserve. Growth für Mehrmarken-Skalierer oder wachsende Shops mit erweiterten Features. Signature für Premium-Marken mit Custom-Design-Anspruch und laufender SEO-Betreuung. Die Trennlinie liegt zwischen Inhouse-Aufwand (Lean-Launch und Launch, bei denen Sie befüllen oder nur wenige SKUs übergeben) und Agentur-Vollservice (Growth und Signature, mit Mehrmarken-Skalierung plus Custom-Design).
+            </p>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm font-body border-collapse bg-white border border-gray-light/40 rounded-lg">
+                <thead>
+                  <tr class="border-b-2 border-navy/20">
+                    <th class="text-left py-4 px-4 font-headline font-bold text-navy"></th>
+                    {packageTiers.map((t) => (
+                      <th class="text-center py-4 px-4 font-headline font-bold text-navy">{t.name}</th>
+                    ))}
+                  </tr>
+                  <tr class="border-b border-gray-light/40 bg-cream/50">
+                    <td class="py-3 px-4 text-dark font-semibold">Am besten für</td>
+                    {packageTiers.map((t) => (
+                      <td class="py-3 px-4 text-center text-gray text-xs">{t.bestFor}</td>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {packageRows.map((row) => (
+                    <tr class="border-b border-gray-light/40">
+                      <td class="py-3 px-4 text-dark">{row.label}</td>
+                      {row.cells.map((cell) => (
+                        <td class="py-3 px-4 text-center text-gray text-xs">{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                  <tr class="border-t-2 border-navy/20 bg-cream">
+                    <td class="py-4 px-4 font-headline font-bold text-navy">Festpreis</td>
+                    {packageTiers.map((t) => (
+                      <td class="py-4 px-4 text-center font-headline font-black text-navy text-xl">{t.price}</td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td></td>
+                    {packageTiers.map(() => (
+                      <td class="py-4 px-4 text-center"><Button href="/ch-de/kontakt/" variant="ghost" size="sm">Erstgespräch</Button></td>
+                    ))}
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-white border border-gray-light/40 rounded-lg p-6">
+                <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-2">Laufende Kosten</p>
+                <p class="text-sm font-body text-gray">Shopify-Subscription 39-399 CHF pro Monat, Domain 12-20 CHF pro Jahr, Premium-Theme 300-400 CHF einmalig (in den Paketen Launch/Growth/Signature enthalten). Die Schätzung ist konservativ und ändert sich nicht durch unsere Empfehlungen.</p>
+              </div>
+              <div class="bg-white border border-gray-light/40 rounded-lg p-6">
+                <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-2">Bundle</p>
+                <p class="text-sm font-body text-gray">Wer das Signature-Paket bucht, bekommt das <a href="/ch-de/ecommerce-seo-audit/" class="text-blue hover:text-blue-light font-semibold">E-Commerce-SEO-Audit</a> nach 6 Monaten zum Vorzugspreis (1'500 CHF statt 2'500-4'000 CHF). So validieren wir, was nach Launch tatsächlich funktioniert.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              Wie läuft der Prozess ab?
+            </h2>
+            <p class="text-base font-body text-gray leading-relaxed mb-8">
+              Der Build-Prozess gliedert sich in vier klar getaktete Phasen: Kickoff und Brand-Discovery, Aufbau und Konfiguration, Inhaltsbefüllung und QA, Go-Live mit Hand-off. Sie sehen den Shop ab Woche 2 in einer Staging-Umgebung. Jede Phase hat definierte Inputs und Outputs, damit Sie wissen, wann Sie was liefern müssen, und parallel an Produktfotografie oder Brand-Texten arbeiten können.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {processSteps.map((step) => (
+                <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+                  <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue text-white font-headline font-bold mb-4">{step.num}</div>
+                  <h3 class="text-base font-headline font-bold text-navy mb-2">{step.title}</h3>
+                  <p class="text-sm font-body text-gray leading-relaxed">{step.body}</p>
+                </div>
+              ))}
+            </div>
+            <p class="mt-6 text-sm font-body text-gray leading-relaxed">
+              Feedback-Schleifen sind in jeder Phase eingebaut. Standardmässig zwei bis drei Revisionsrunden pro Paket; darüber hinaus laufen Änderungen nach Aufwand.
+            </p>
+          </div>
+
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              Wann lohnt sich Agentur vs Selbermachen?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Selbermachen lohnt sich, wenn Sie weniger als 20 Produkte verkaufen, mit einem Standard-Theme leben können und 30-60 Stunden Lernzeit haben. Shopify hat heute solide DIY-Wizards. Agentur lohnt sich, wenn Ihr Stundenlohn höher ist als die Agenturkosten geteilt durch die selbst aufgewandten Stunden, oder wenn der Shop einen Markenstandard erreichen muss, den ein Anfänger-Setup nicht liefert.</p>
+              <p>Konkretes Rechenbeispiel: Wenn Sie als Solo-Gründerin in 60 Stunden selbst aufbauen können und Ihr Opportunity-Stundenlohn bei 80 CHF liegt, kostet Sie das 4'800 CHF. Das Lean-Launch-Paket bei 3'900 CHF ist dann tatsächlich günstiger, plus Sie bekommen ein SEO-Fundament, das Sie selbst nicht aufbauen können. Bei einem Stundenlohn von 40 CHF kostet Sie der Eigenbau 2'400 CHF (plus Lernzeit) und Selbermachen rechnet sich, wenn Sie das SEO-Fundament nachträglich nicht brauchen.</p>
+              <p>Für Mode-Brands oder hochwertige Produktpräsentation liefert eine Agentur spürbar konsistentere Conversion-Raten als ein Anfänger-DIY-Setup, weil Theme-Auswahl, Trust-Elemente und Checkout-Flow von Anfang an stimmen. Das ist der echte Hebel, nicht die reine Bauzeit.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-1">
+          <div class="lg:sticky lg:top-8 space-y-6">
+            <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+              <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Was inklusive ist</p>
+              <div class="space-y-2 text-sm font-body text-gray">
+                <div class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0 mt-2"></span><span>Shopify-Setup + CH-Konfiguration (MWST, Shipping)</span></div>
+                <div class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0 mt-2"></span><span>TWINT, Stripe, Klarna, Apple Pay</span></div>
+                <div class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0 mt-2"></span><span>Premium-Theme + Brand-Polish</span></div>
+                <div class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0 mt-2"></span><span>Schema-Markup (Organization, Product, Offer)</span></div>
+                <div class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0 mt-2"></span><span>SEO-Fundament (Meta, Schema, Sitemaps, GSC)</span></div>
+                <div class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0 mt-2"></span><span>revDSG-konforme Cookie-Logik + Impressum-Templates</span></div>
+                <div class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0 mt-2"></span><span>GA4 + Consent Mode v2</span></div>
+                <div class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0 mt-2"></span><span>Loom-Hand-off-Tutorial</span></div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Verwandte Services</h3>
+              <div class="space-y-3">
+                {relatedLinks.map((r) => (
+                  <Card href={r.href}>
+                    <h4 class="text-sm font-headline font-bold text-navy">{r.title}</h4>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (no FAQPage schema per Google deprecation 2026-05-07) -->
+  <Section bg="cream">
+    <SectionHeader label="FAQ" title="Welche Fragen kommen am häufigsten zur Onlineshop-Erstellung?" />
+    <p class="text-base font-body text-gray leading-relaxed max-w-3xl mb-10">
+      Die folgenden sechs Fragen kommen in fast jedem Erstgespräch zur Onlineshop-Erstellung vor: Marktpreise in der Schweiz, Gesamtkosten über die Agentur hinaus, Shopsystem-Wahl, Stack-Empfehlungen für WooCommerce oder Custom, Lohnt-sich-Bewertung und was nach dem Launch passiert. Die Antworten spiegeln die Standardhaltung von StarkRank; im konkreten Auftrag kann sich davon einzelnes verschieben.
+    </p>
+    <div class="max-w-3xl space-y-6">
+      {faqItems.map((item) => (
+        <details class="group bg-white border border-gray-light/40 rounded-lg">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer p-6 font-headline font-bold text-navy text-base md:text-lg select-none">
+            {item.q}
+            <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm font-body text-gray leading-relaxed">
+            {item.a}
+          </div>
+        </details>
+      ))}
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <CTABanner
+    bg="navy"
+    title="Bereit, Ihren Onlineshop in der Schweiz erstellen zu lassen?"
+    subtitle="Im 30-min-Erstgespräch klären wir Ihre Phase, Ihren Stack, Ihre realistische Zeitachse und welches Paket passt. Sie bekommen am Ende des Calls eine konkrete Empfehlung mit Preis und Liefertermin, oder einen ehrlichen Hinweis, dass Sie aktuell besser selbst bauen oder bei einem anderen Anbieter angefragt sind. Wir verkaufen kein Paket, das nicht passt."
+  >
+    <Button href="/ch-de/kontakt/" variant="primary" size="lg">Erstgespräch buchen</Button>
+    <Button href="#pakete" variant="secondary" size="lg">Pakete vergleichen</Button>
+  </CTABanner>
+</BaseLayout>

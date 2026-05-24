@@ -1,0 +1,51 @@
+---
+type Variant = 'build-to-audit' | 'audit-to-build';
+
+interface Props {
+  variant: Variant;
+}
+
+const { variant } = Astro.props;
+
+const config = {
+  'build-to-audit': {
+    label: 'Falscher Match?',
+    headline: 'Sie haben schon einen Shop und wollen ihn besser ranken?',
+    sub: 'Dann ist der E-Commerce-SEO-Audit der richtige Einstieg — er deckt 8 Bereiche ab (Schema, Faceted Nav, Variants, Category Thin Content, OOS, Crawl-Budget, PLP/PDP-SEO, Konversions-Funnel) und liefert eine priorisierte Fix-Liste.',
+    cta: 'Zum E-Commerce-SEO-Audit',
+    href: '/ch-de/ecommerce-seo-audit/',
+  },
+  'audit-to-build': {
+    label: 'Falscher Match?',
+    headline: 'Sie haben noch keinen Shop und wollen einen bauen lassen?',
+    sub: "Dann ist der Shopify-Build mit SEO-Fundament der richtige Einstieg. Vier Festpreis-Stufen ab 3'900 CHF, Liefertermin 3 bis 14 Wochen je nach Paket.",
+    cta: 'Onlineshop erstellen lassen',
+    href: '/ch-de/onlineshop-erstellen-lassen/',
+  },
+}[variant];
+---
+
+<section class="bg-white border-b border-gray-light/30">
+  <div class="max-w-7xl mx-auto px-6 py-8">
+    <div class="bg-cream border-l-4 border-blue rounded-r-lg p-6 md:p-7 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="md:flex-1">
+        <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-2">{config.label}</p>
+        <h2 class="text-lg md:text-xl font-headline font-bold text-navy leading-snug">
+          {config.headline}
+        </h2>
+        <p class="mt-2 text-sm font-body text-gray leading-relaxed">
+          {config.sub}
+        </p>
+      </div>
+      <div class="md:shrink-0">
+        <a
+          href={config.href}
+          class="inline-flex items-center gap-2 px-5 py-3 bg-blue hover:bg-blue-light text-white font-headline font-bold text-sm rounded-md transition-colors whitespace-nowrap"
+        >
+          {config.cta}
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
