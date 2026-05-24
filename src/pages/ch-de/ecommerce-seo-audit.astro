@@ -6,6 +6,7 @@ import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
 import Button from '../../components/ui/Button.astro';
 import Card from '../../components/ui/Card.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
+import EcommerceForkBox from '../../components/ch-de/EcommerceForkBox.astro';
 
 const title = 'Online Shop SEO Audit — Produktschema | StarkRank Schweiz';
 const description = 'Produktkatalog-SEO ist eine eigene Disziplin. Wir prüfen die 8 Schwachstellen Ihrer PDPs, PLPs und Filternavigation — Lieferung in 7 Tagen.';
@@ -31,6 +32,12 @@ const serviceSchema = {
       { '@type': 'Offer', name: 'E-Commerce-SEO-Audit — Enterprise', description: 'Kataloge 10.000+ SKUs. 25+ PDPs + 8 PLPs validiert. Lieferung in 10-14 Werktagen.', price: '4000', priceCurrency: 'CHF' },
       { '@type': 'Offer', name: 'E-Commerce Schema-Monitoring', description: 'Laufende Produktschema-Validierung als Retainer. Monatliche rotierende 10-SKU-Stichprobe, Regressions-Warnungen, Delta-Reporting.', price: '800', priceCurrency: 'CHF' },
     ],
+  },
+  isRelatedTo: {
+    '@type': 'Service',
+    '@id': 'https://starkrank.com/ch-de/onlineshop-erstellen-lassen/#service',
+    name: 'Onlineshop erstellen lassen',
+    url: 'https://starkrank.com/ch-de/onlineshop-erstellen-lassen/',
   },
 };
 
@@ -124,6 +131,9 @@ const lastModifiedLabel = lastModified.toLocaleDateString('de-CH', { year: 'nume
       <span>Von <a href="/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank</span>
     </div>
   </Section>
+
+  <!-- Build-vs-Audit Fork Box: push visitors without a shop yet to the build page -->
+  <EcommerceForkBox variant="audit-to-build" />
 
   <!-- Main content + sidebar -->
   <section class="bg-white">
