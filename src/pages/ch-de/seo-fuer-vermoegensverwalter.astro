@@ -1,0 +1,617 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import Button from '../../components/ui/Button.astro';
+import LastUpdated from '../../components/seo/LastUpdated.astro';
+
+const title = 'SEO für Vermögensverwalter — FINMA-bewusst | StarkRank';
+const description = 'SEO für FINMA-bewilligte Schweizer Vermögensverwalter: FINIG-, FIDLEG- und VSV-Standesregeln-bewusst, LLMO-strukturiert. Erstberatung gratis.';
+
+const datePublished = '2026-05-25';
+const dateModified = '2026-05-25';
+
+const pricingTiers = [
+  {
+    tier: 'Entity- und LLMO-Basis',
+    price: 'ab 1\'190 CHF',
+    profile: 'Single-Partner-VV, ein Standort, ein Spezialisierungs-Funnel — Schema-Knotengraph, FINMA-Listing-Konsistenz, AISO-Score-Baseline, FAQ-Block',
+  },
+  {
+    tier: 'Content-Paket mit Nischen-Funnels',
+    price: '3\'000–5\'000 CHF',
+    profile: '2–6 Partner, mehrere Nischen-Mandanten-Segmente, Capsule-Inhalte pro Segment, AI-Citation-Tracking',
+  },
+  {
+    tier: 'Laufender Retainer',
+    price: 'ab 6\'000 CHF',
+    profile: 'Multi-Standort-Schema, mehrsprachige Skalierung, kontinuierliche Authority-Arbeit, Quartal-Re-Scoring',
+  },
+];
+
+const regulatoryAnchors = [
+  {
+    title: 'FINIG-Bewilligungspflicht und AO-Aufsicht (Art. 17ff FINIG)',
+    body: 'Seit dem 1. Januar 2020 sind Vermögensverwalter bewilligungspflichtig; die FINMA erteilt die Bewilligung, die laufende Aufsicht erfolgt durch eine Aufsichtsorganisation: AOOS (Zürich, vom VSV gegründet), FINcontrol Suisse AG (Zug), OSFIN (Neuchâtel), OSIF (Genf), SO-FIT (Lausanne). Per FINMA-Statistik 2025 sind rund 1\'500 Vermögensverwalter bewilligt. Die Online-Sichtbarkeit muss diesen Status verankern: FINMA-Bewilligungs-Eintrag verlinken, AO-Anschluss benennen, VSV-/SAAM-Mitgliedschaft auszeichnen.',
+  },
+  {
+    title: 'FIDLEG-Verhaltenspflichten und FINMA-RS 2025/2',
+    body: 'Seit dem 1. Januar 2026 ist das FINMA-Rundschreiben 2025/2 vollumfänglich anwendbar — Informationspflichten gegenüber Privat- und professionellen Kunden, Eignungs- und Angemessenheitsprüfung, Risikoaufklärung. Auf der Website betrifft das jede Service-Beschreibung: Aussagen über erwartete Renditen sind FIDLEG-konform zu formulieren, jede Werbung ist als solche zu kennzeichnen (Art. 68 FIDLEG), Risikohinweise sind sichtbar zu integrieren.',
+  },
+  {
+    title: 'VSV-/SAAM-Standesregeln und revDSG',
+    body: 'Die Schweizerischen Standesregeln des VSV sind als Mindeststandard FINMA-anerkannt (FINMA-RS 2008/10) — Auftritt sachlich-berufsbezogen statt anpreisend, keine vergleichende Werbung, keine Erfolgsgarantien. Plus revDSG-Konformität: Datenschutzerklärung mit Schweizer Datenresidenz-Aussage, Consent Mode v2 default-denied, Auftragsdaten-Verarbeitungsverträge mit allen Drittanbietern.',
+  },
+];
+
+const comparison = [
+  {
+    axis: 'Hauptträger',
+    referral: 'Family-Office-Cluster, Steuerberater-/Treuhänder-Empfehlungen, Anwalts-Cross-Referrals',
+    seoForVV: 'Indexierbarkeit, FinancialService-Schema, AI-Citability, Capsule-Inhalte',
+  },
+  {
+    axis: 'Messbarkeit',
+    referral: 'schwer attribuierbar, Lead-Wert pro Quelle selten dokumentiert',
+    seoForVV: 'Position, Klicks auf Vorsorge-Queries, AI-Citation-Quote, organische Suche direkt messbar',
+  },
+  {
+    axis: 'Reichweite',
+    referral: 'limitiert auf das bestehende Netzwerk, potenzielle Kunden überlappen mit Bestandsmandanten',
+    seoForVV: 'recherche-getriebene Erstkontakte ausserhalb des Netzwerks, regelmässige Updates der Service-Inhalte tragen Ranking',
+  },
+  {
+    axis: 'Compliance-Lastigkeit',
+    referral: 'minimal (persönliche Aussage)',
+    seoForVV: 'maximal — jede Service-Beschreibung passiert FIDLEG-, FINMA-RS-2025/2- und VSV-Standesregeln-Check',
+  },
+];
+
+const niches = [
+  {
+    name: 'Vorsorge 50+ / Pensionierung',
+    leadProfile: 'Auflösung 2./3. Säule, Freizügigkeit, Pensions-Lump-Sum — Mandanten-Wert CHF 500k–3 Mio.',
+    anchor: 'Pensionierung Vermögensverwaltung, Freizügigkeitskonto auflösen, Säule 3a auszahlen Strategie',
+  },
+  {
+    name: 'Unternehmerverkauf / Liquiditätsereignis',
+    leadProfile: 'Strategische M&A-Erlös-Allokation, Re-investitions-Diversifikation — Mandant-Wert CHF 2–20 Mio.',
+    anchor: 'Verkaufserlös anlegen Schweiz, Liquiditätsereignis Vermögensverwaltung',
+  },
+  {
+    name: 'Expats / Tech-RSU-Diversifikation',
+    leadProfile: 'ZH/Zug-basierte Tech-Angestellte mit RSU-Concentration, US-Steuer-Komplexität',
+    anchor: 'RSU Diversifikation Schweiz, Vermögensverwalter Expat Zürich',
+  },
+  {
+    name: 'Generationswechsel / Erbplanung',
+    leadProfile: 'Trans-Generationale Vermögensübergabe, Family-Office-Light-Know-how',
+    anchor: 'Erbplanung Vermögensverwalter, Generationswechsel Vermögen Schweiz',
+  },
+];
+
+const measurementMetrics = [
+  {
+    name: 'Mandanten-Anfragen nach Quelle (Outcome-Anker)',
+    body: 'Welche Erst-Anfragen kamen über organische Suche, KI-Antwortmaschinen, FINMA-/VSV-Listing-Click, Empfehlung — eine Frage am Erstgespräch, damit mehr Kunden zur passenden Zielgruppe und Spezialisierungs-Nische zuordenbar werden.',
+  },
+  {
+    name: 'AISO Score',
+    body: 'StarkRank-eigene 6-Dimensions-Diagnostik 0–100 für AI-Search-Readiness (Crawlability, Structure, Authority, Citability, Freshness, Measurability). Quartalsweises Re-Scoring als nachhaltiger Trend.',
+  },
+  {
+    name: 'GSC-Indexierungs-Quote',
+    body: 'Wie viele VV-URLs sind tatsächlich indexierbar. Bei Erst-Audits liegt die Indexierung erfahrungsgemäss unter 60 Prozent (Webflow, Squarespace, Custom-PHP). Die Google Search Console liefert die Baseline.',
+  },
+  {
+    name: 'Position × CTR und AI-Citation-Quote auf Nischen-Queries',
+    body: 'Viele VV-Sites ranken auf Long-Tail-Vorsorge-Themen, ohne dass Klicks konvertieren — Top-Keywords zeigen Position, aber Snippet-Title und Meta-Description sind nicht auf die Such-Intent abgestimmt. Parallel dazu: wie oft zitieren ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot die Boutique auf Vorsorge-, Erbplanungs- oder Vermögensaufbau-Queries — wer als Quelle erscheint, gewinnt einen Wahrnehmungs-Vorsprung.',
+  },
+  {
+    name: 'FINMA-/VSV-Listing-Konsistenz',
+    body: 'Name, Adresse, UID, Bewilligungs-Nummer, AO-Anschluss identisch auf eigener Site, FINMA-Bewilligungsliste, VSV-Mitgliedersuche, Handelsregister. NAP-Inkonsistenz untergräbt die Glaubwürdigkeit der Entity-Verankerung.',
+  },
+  {
+    name: 'Mobile Core Web Vitals und Ladezeiten',
+    body: 'LCP, CLS und TBT (Lab-Proxy für INP) plus Lead-Form-Latenz — Ladezeiten unter Mobile-First-Indexierung sind häufig der grösste verdeckte Konversions-Killer. Google PageSpeed Insights und Screaming Frog liefern die Diagnose-Baseline; technische SEO-Massnahmen folgen im Audit.',
+  },
+];
+
+const aiCitabilitySteps = [
+  {
+    num: '01',
+    title: 'FinancialService-Schema mit provider-Knoten und sameAs zur FINMA-Liste',
+    body: 'Strukturierte Daten machen die Boutique als regulierte Entität für die Suchmaschine maschinen-lesbar — Pflicht-Properties: name, legalName, taxID (UID), sameAs zur FINMA-Bewilligungs-PDF und VSV-Mitgliedersuche.',
+  },
+  {
+    num: '02',
+    title: 'Person-Schema für jeden Partner mit hasCredential',
+    body: 'Ohne Person-Knoten ist die Boutique gesichtslos. CFA, CIIA, eidg. dipl. Finanzanalytiker, MAS Banking & Finance als verifizierbare Credentials, plus sameAs zur LinkedIn-Person-Page für seriöse Authority-Verankerung.',
+  },
+  {
+    num: '03',
+    title: 'Capsule-Sektionen pro Spezialisierungs-Funnel',
+    body: 'Eine H2-Frage-Form pro Nische, 40–60-Wörter-Antwort-Capsule, Sub-Detail darunter, mit klarem Suchintention-Match — AI-Antworten extrahieren genau diese Block-Form, intern verlinkt nach search-engine-optimization-konformer Hierarchie.',
+  },
+  {
+    num: '04',
+    title: 'Original-Daten und FIDLEG-konforme Branchen-Beobachtungen publizieren',
+    body: 'Kommodisierte Vorsorge-Allgemeinplätze werden nie zitiert. Eigene Datenpunkte aus dem Mandanten-Bestand werden zitiert, sofern FIDLEG-konform formuliert — keine konkrete Performance-Aussage. SEO-Strategien für die Finanzbranche unterscheiden sich genau hier; interne Verlinkung zwischen Service-Unterseiten verstärkt die Capsule-Struktur.',
+  },
+  {
+    num: '05',
+    title: 'Quartalsweises AI-Citation-Spotcheck-Protokoll',
+    body: '15–20 Nischen-Queries auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — wer wird in welcher Position in den Suchergebnissen zitiert. Nicht-Erscheinen ist das eigentliche Diagnose-Signal.',
+  },
+];
+
+const collaborationSteps = [
+  {
+    num: '01',
+    title: 'Erstberatung gratis',
+    body: '30 Minuten. Boutique-Diagnose plus AISO-Quick-Check auf Crawlability und Structure, plus FINMA-/VSV-/Zefix-Listing-Cross-Check und FIDLEG-Sicht-Prüfung.',
+  },
+  {
+    num: '02',
+    title: 'Diagnose-Tiefenphase',
+    body: '1–2 Wochen. Technical Audit, AISO Score Baseline, GSC-Indexierungs-Snapshot, AI-Crawler-Test, Screaming-Frog-Crawl, FINMA-/VSV-/AO-Listing-Audit, plus Keyword Recherche auf Nischen-Suchbegriffe.',
+  },
+  {
+    num: '03',
+    title: 'Roadmap-Übergabe',
+    body: 'Reihenfolge der Suchmaschinenoptimierung-Massnahmen als SEO Strategie und Keyword Strategie, Kostenfeld, Messmetriken, Compliance-Checkpunkte für FINIG, FIDLEG, FINMA-RS 2025/2, VSV-Standesregeln und revDSG.',
+  },
+  {
+    num: '04',
+    title: 'Umsetzung im Retainer oder Festpreis-Audit',
+    body: 'Schema, Capsule-Content je Nische, FINMA-Listing-Pflege und Reporting aus einer Hand.',
+  },
+  {
+    num: '05',
+    title: 'Quartalsweises Re-Scoring',
+    body: 'AISO Score plus dokumentierte Lessons als Trend, nicht als einmaliger Snapshot.',
+  },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://starkrank.com/ch-de/' },
+    { '@type': 'ListItem', position: 2, name: 'SEO für Vermögensverwalter', item: 'https://starkrank.com/ch-de/seo-fuer-vermoegensverwalter/' },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://starkrank.com/ch-de/seo-fuer-vermoegensverwalter/#service',
+  name: 'SEO für Vermögensverwalter',
+  serviceType: 'Search Engine Optimization',
+  datePublished,
+  dateModified,
+  description:
+    'SEO für FINMA-bewilligte Schweizer Vermögensverwalter — Auffindbarkeit, strukturierte FinancialService-Daten, FINIG- und FIDLEG-Compliance, FINMA-RS 2025/2-Bewusstsein, VSV-Standesregeln-respektierend, revDSG-konform und Sichtbarkeit in KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot.',
+  url: 'https://starkrank.com/ch-de/seo-fuer-vermoegensverwalter/',
+  provider: {
+    '@type': 'Organization',
+    '@id': 'https://starkrank.com/#organization',
+    name: 'StarkRank',
+    legalName: 'Datanalytico Feye',
+    alternateName: ['Datanalytico Feye'],
+    url: 'https://starkrank.com/',
+  },
+  areaServed: { '@type': 'Country', name: 'Switzerland' },
+  audience: {
+    '@type': 'Audience',
+    audienceType: 'FINMA-licensed independent asset managers, wealth management boutiques (Switzerland)',
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Entity- und LLMO-Basis Retainer',
+      priceCurrency: 'CHF',
+      price: '1190',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        priceCurrency: 'CHF',
+        price: '1190',
+        unitText: 'MONTH',
+        referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' },
+      },
+      url: 'https://starkrank.com/ch-de/preise/seo/',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Content-Paket mit Nischen-Funnels Retainer',
+      priceCurrency: 'CHF',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'CHF',
+        minPrice: '3000',
+        maxPrice: '5000',
+      },
+      url: 'https://starkrank.com/ch-de/preise/seo/',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Laufender Retainer (Multi-Standort)',
+      priceCurrency: 'CHF',
+      price: '6000',
+      url: 'https://starkrank.com/ch-de/preise/seo/',
+    },
+  ],
+  mentions: [
+    {
+      '@type': 'GovernmentOrganization',
+      name: 'Eidgenössische Finanzmarktaufsicht FINMA',
+      url: 'https://www.finma.ch/',
+    },
+    {
+      '@type': 'Legislation',
+      name: 'FINIG — Bundesgesetz über die Finanzinstitute',
+      url: 'https://www.fedlex.admin.ch/eli/cc/2018/801/de',
+    },
+    {
+      '@type': 'Legislation',
+      name: 'FIDLEG — Finanzdienstleistungsgesetz',
+      url: 'https://www.fedlex.admin.ch/eli/cc/2019/758/de',
+    },
+    {
+      '@type': 'CreativeWork',
+      name: 'FINMA-Rundschreiben 2025/2 — Verhaltenspflichten nach FIDLEG/FIDLEV',
+      url: 'https://www.finma.ch/',
+    },
+    {
+      '@type': 'Organization',
+      name: 'Verband Schweizerischer Vermögensverwalter (VSV/SAAM)',
+      url: 'https://www.vsv-asg.ch/',
+    },
+    {
+      '@type': 'Organization',
+      name: 'Aufsichtsorganisation AOOS',
+      url: 'https://www.aoos.ch/',
+    },
+    {
+      '@type': 'Legislation',
+      name: 'revDSG — revidiertes Datenschutzgesetz',
+      url: 'https://www.fedlex.admin.ch/eli/cc/2022/491/de',
+    },
+  ],
+};
+
+const faqs = [
+  {
+    q: 'Was ist SEO für Vermögensverwalter und für welche Boutiquen lohnt es sich?',
+    a: 'SEO für Vermögensverwalter (Suchmaschinenoptimierung, search engine optimization) ist die systematische Optimierung der Online Präsenz einer FINMA-bewilligten Vermögensverwalter-Boutique für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — Indexierbarkeit, FinancialService-Schema, Entity-Konsistenz zur FINMA-Aufsichtsliste, LLMO-Antwort-Citability auf Vorsorge-, Erbplanungs- und Vermögensaufbau-Fragen.',
+  },
+  {
+    q: 'Welche regulatorischen Besonderheiten gelten für Schweizer Vermögensverwalter?',
+    a: 'Drei Regulierungs-Anker prägen jede Schweizer Vermögensverwaltungs-Website und werden von DE-fokussierten SEO-Audits routinemässig übersehen — FINIG-Bewilligung und AO-Aufsicht, FIDLEG-Verhaltenspflichten unter FINMA-RS 2025/2, sowie VSV-Standesregeln in Kombination mit revDSG. Jeder dieser Anker hat eigene Sprach- und Pflicht-Spezifika, die in BaFin-/WpHG-/KAGB-orientierten Audits schlicht nicht auftauchen — mit dem Ergebnis, dass Schweizer Vermögensverwalter unter DE-Audit-Logik regelmässig Compliance-Lücken behalten.',
+  },
+  {
+    q: 'Was kostet SEO für eine Vermögensverwalter-Boutique in der Schweiz?',
+    a: 'SEO-Massnahmen für eine Vermögensverwalter-Boutique folgen drei transparenten Festpreis-Bändern, ohne VV-Aufschlag und ohne Provision auf das verwaltete Vermögen. Solo-VV ab 1\'190 CHF pro Monat, Mid-Tier mit Spezialisierungs-Funnel 3\'000–5\'000 CHF, Multi-Standort ab 6\'000 CHF. Vollständige Aufschlüsselung unter /ch-de/preise/seo/.',
+  },
+  {
+    q: 'Wie unterscheidet sich SEO für Vermögensverwalter von klassischem Empfehlungsmarketing?',
+    a: 'Empfehlungsmarketing baut auf dem bestehenden Netzwerk auf — persönliche Empfehlungen aus Family-Office-Cluster, Steuerberater-/Treuhänder-Kanälen, Anwalts-Cross-Referrals, schwer attribuierbar in Suchergebnissen, lokal stark, strukturell limitiert. SEO für Vermögensverwalter erweitert die Sichtbarkeit auf recherche-getriebene Erstkontakte — aktive Indexierbarkeit, FinancialService-Schema, AI-Citability auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — und konkurriert nicht mit dem Empfehlungs-Default, sondern ergänzt ihn.',
+  },
+  {
+    q: 'Welche Spezialisierungs-Nischen tragen messbar Sichtbarkeit?',
+    a: 'Vier Nischen-Funnel zeigen in der Deutschschweiz überdurchschnittliche Recherche-Intensität bei schwacher Wettbewerber-Adressierung — jede ist eine eigene Zielgruppe mit eigenem Suchverhalten und eigener Lead-Wert-Dichte. Die Buyer-Research-Stichprobe zeigt: alle gesichteten Boutiquen nutzen das identische Vier-Wort-Muster als Wertversprechen, keine surfacing eine Nische im First-Fold.',
+  },
+  {
+    q: 'Wie messen wir SEO-Erfolg in einer Vermögensverwalter-Boutique?',
+    a: 'Sechs Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Vermögensverwalter-Boutique, und keine ersetzt eine andere — Mandanten-Anfragen nach Quelle als Outcome-Anker, AISO Score, GSC-Indexierungs-Quote, Position × CTR und AI-Citation-Quote auf Nischen-Suchanfragen, FINMA-/VSV-Listing-Konsistenz, mobile Core Web Vitals. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.',
+  },
+  {
+    q: 'Wie kommt eine Vermögensverwalter-Boutique in die Antworten von ChatGPT und Perplexity?',
+    a: 'Fünf Schritte machen aus einer namenlosen FINMA-Lizenz-Nummer eine zitierbare Boutique in KI-Antwortmaschinen — strukturierte Daten als Grundlage, Person-Entity-Verknüpfung als Authority-Anker, Capsule-Inhalte pro Spezialisierungs-Funnel mit Substanz statt Reklame, eigene Datenpunkte mit FIDLEG-Verträglichkeit, quartalsweise Spotchecks gegen Nischen-Queries. Die Reihenfolge ist nicht beliebig.',
+  },
+  {
+    q: 'Welches Sichtbarkeits-Pattern zeigt der Schweizer Vermögensverwalter-Markt?',
+    a: 'Eine Buyer-Research-Sichtung von rund zehn typischen CH-VV-Boutiquen aus den Räumen Zürich, Basel und Zug zeigt drei wiederkehrende Pattern: Boilerplate-Konvergenz im Wertversprechen, null FinancialService-Schema in der Stichprobe, LLMO-Vakuum auf Vorsorge- und Erbplanungs-Queries. Die Befunde sind aggregiert; kein Mandat ist aktiv. Eine Detail-Crawl-Erhebung folgt im Mini-Wave-Pilot 2026-Q3.',
+  },
+  {
+    q: 'Wie läuft die Zusammenarbeit ab?',
+    a: 'Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen plus FINMA-/VSV-Listing-Cross-Check, Diagnose-Tiefenphase mit Technical Audit und AISO Score Baseline, Roadmap-Übergabe mit FINIG-/FIDLEG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.',
+  },
+  {
+    q: 'Wie lange dauert es, bis SEO für Vermögensverwalter messbare Ergebnisse zeigt?',
+    a: 'Vier Zeitfenster prägen jede Schweizer Vermögensverwalter-Boutique nach einem strukturellen SEO-Unlock: 4 bis 8 Wochen bis zur Index-Wiederaufnahme freigeschalteter Service-Unterseiten, 2 bis 4 Monate bis zu ersten AI-Citations auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot nach Schema-Rollout, 3 bis 6 Monate bis zur stabilen Top-10-Sichtbarkeit auf Nischen-Vorsorge-/Anlage-Queries, 6 bis 12 Monate bis zu einem messbaren Mandanten-Anfragen-Effekt.',
+  },
+  {
+    q: 'Darf ein Schweizer Vermögensverwalter überhaupt werben?',
+    a: 'Ja, mit klaren Limits. FIDLEG Art. 68 verlangt, dass Werbung als solche erkennbar ist und nicht irreführt. Die VSV-Standesregeln (FINMA-RS 2008/10) verlangen sachlich-berufsbezogene Information statt anpreisender Werbung. Konkrete Performance-Versprechen, Erfolgsgarantien, vergleichende Werbung gegen andere Vermögensverwalter oder Banken sind ausgeschlossen. SEO, Capsule-Content und Entity-Schema sind keine Werbung im engeren Sinn — sie machen Substanz auffindbar und bleiben damit zeitgemäss im Standesrechts-Rahmen.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': 'https://starkrank.com/ch-de/seo-fuer-vermoegensverwalter/#faq',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
+---
+
+<BaseLayout title={title} description={description} locale="ch-de" schema={schemas} preloadImage="/images/vermoegensverwalter-hero.webp">
+  <HeroSection
+    headline="SEO für Vermögensverwalter"
+    subheadline="Eine Schweizer Vermögensverwalter-Boutique mit AuM CHF 800 Mio. wirkt im ersten Bildschirm-Drittel ihrer Website ununterscheidbar von einer mit CHF 80 Mio. — fünf Adjektive als Wertversprechen, kein Spezialisierungs-Funnel, kein FinancialService-Schema, keine Verankerung zur FINMA-Bewilligungsliste. SEO für Vermögensverwalter beginnt deshalb nicht beim Content, sondern bei der Differenzierungs- und Entity-Frage."
+    backgroundImage="/images/vermoegensverwalter-hero.webp"
+    backgroundImageAlt="Schweizer Vermögensverwalter-Boutique — Partner am Konferenztisch mit Tablet-Dashboard, abstrakte Portfolio-Allokations-Visualisierung, See-Andeutung im Fenster"
+  >
+    <Button href="/ch-de/erstberatung/" variant="primary">Erstberatung anfragen</Button>
+    <Button href="/ch-de/aiso-check/" variant="secondary">AISO-Check starten</Button>
+  </HeroSection>
+
+  <LastUpdated date={dateModified} />
+
+  <Section bg="cream">
+    <div class="max-w-4xl">
+      <p class="text-sm font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3">Boutique-Profile, die wir adressieren</p>
+      <p class="text-base font-body text-dark leading-relaxed">
+        Solo-VV · 2–6-Partner-Boutique · Multi-Standort-VV · Family-Office-Light · Generationswechsel-Mandate · Expat-Tech-RSU-Spezialisierung
+      </p>
+      <p class="mt-6 text-sm font-body text-gray leading-relaxed">
+        <strong class="text-navy">FINIG-bewusst</strong> · <strong class="text-navy">FIDLEG- und FINMA-RS-2025/2-konform</strong> · <strong class="text-navy">VSV-Standesregeln-respektierend</strong> · <strong class="text-navy">revDSG-konform</strong> · <strong class="text-navy">AISO Score quartalsweise</strong>
+      </p>
+      <p class="mt-6 text-sm font-body text-gray leading-relaxed">
+        Verwandte Vertikal-Hubs für regulierte Berufe: <a href="/ch-de/seo-fuer-anwaelte/" class="text-blue hover:underline">SEO für Anwälte</a> · <a href="/ch-de/seo-fuer-notare/" class="text-blue hover:underline">SEO für Notare</a> · <a href="/ch-de/seo-fuer-aerzte/" class="text-blue hover:underline">SEO für Ärzte</a> — gleiche Methodik-Familie, andere Berufs-Compliance.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was ist SEO für Vermögensverwalter und für welche Boutiquen lohnt es sich?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        SEO für Vermögensverwalter (Suchmaschinenoptimierung, search engine optimization) ist die systematische Optimierung der Online Präsenz einer FINMA-bewilligten Vermögensverwalter-Boutique für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — Indexierbarkeit, FinancialService-Schema, Entity-Konsistenz zur FINMA-Aufsichtsliste, LLMO-Antwort-Citability auf Vorsorge-, Erbplanungs- und Vermögensaufbau-Fragen.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Sie lohnt sich für unabhängige Vermögensverwalter mit Spezialisierungs-Funnel (Generationswechsel, Unternehmerverkauf, Expat-/Tech-RSU-Mandate, Vorsorge 50+) und AuM CHF 100 Mio. – CHF 2 Mrd., bei denen ein einziger qualifizierter Mandanten-Lead den Jahres-Ertrag der Sichtbarkeits-Arbeit mehrfach abdeckt. Für Universal-Banken und Versicherungen mit eigener Marketing-Funktion und für reine Robo-Advisor-Plattformen ist der ROI-Pfad ein anderer — die Finanzbranche ist regulatorisch fragmentiert, der Wettbewerb in der Vermögensverwaltung im engeren Sinn umkämpft, aber strukturell anders als der Massenmarkt eines Finanzdienstleisters.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Welche regulatorischen Besonderheiten gelten für Schweizer Vermögensverwalter?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Drei Regulierungs-Anker prägen jede Schweizer Vermögensverwaltungs-Website und werden von DE-fokussierten SEO-Audits routinemässig übersehen — FINIG-Bewilligung und AO-Aufsicht, FIDLEG-Verhaltenspflichten unter FINMA-RS 2025/2, sowie VSV-Standesregeln in Kombination mit revDSG. Jeder dieser Anker hat eigene Sprach- und Pflicht-Spezifika, die in BaFin-/WpHG-/KAGB-orientierten Audits schlicht nicht auftauchen — mit dem Ergebnis, dass Schweizer Vermögensverwalter unter DE-Audit-Logik regelmässig Compliance-Lücken behalten.
+      </p>
+    </div>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {regulatoryAnchors.map((anchor) => (
+        <div class="bg-white border border-gray-light/40 rounded-lg p-6">
+          <h3 class="text-lg font-headline font-bold text-navy">{anchor.title}</h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">{anchor.body}</p>
+        </div>
+      ))}
+    </div>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Diese drei Anker greifen ineinander — wer Vermögensverwaltungs-Expertise online sichtbar machen will, ohne ein Standesrechts- oder Aufsichts-Risiko zu erzeugen, baut die Sichtbarkeit innerhalb dieser drei Linien.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was kostet SEO für eine Vermögensverwalter-Boutique in der Schweiz?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        SEO-Massnahmen für eine Vermögensverwalter-Boutique folgen drei transparenten Festpreis-Bändern, ohne VV-Aufschlag und ohne Provision auf das verwaltete Vermögen. Solo-VV ab 1'190 CHF pro Monat, Mid-Tier mit Spezialisierungs-Funnel 3'000–5'000 CHF, Multi-Standort ab 6'000 CHF. Vollständige Aufschlüsselung unter <a href="/ch-de/preise/seo/" class="text-blue hover:underline">/ch-de/preise/seo/</a>.
+      </p>
+    </div>
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full max-w-4xl border-collapse text-sm font-body">
+        <thead>
+          <tr class="border-b-2 border-navy text-left">
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Tier</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">CHF/Monat</th>
+            <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">Profil</th>
+          </tr>
+        </thead>
+        <tbody>
+          {pricingTiers.map((row) => (
+            <tr class="border-b border-gray-light/40 align-top">
+              <td class="py-3 pr-4 font-headline font-bold text-navy">{row.tier}</td>
+              <td class="py-3 pr-4 text-dark">{row.price}</td>
+              <td class="py-3 text-gray">{row.profile}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Einmalige Audits separat: Technical SEO Audit 990 CHF, E-E-A-T-Audit 1'400 CHF, Pre-Deploy SEO Check 500 CHF. Welcher Tier zur Boutique passt, hängt am SEO-Inventar (Schema-Tiefe, Nischen-Funnel, Multi-Standort) — die Investition wird vor jeder Mandatsunterschrift kommuniziert.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie unterscheidet sich SEO für Vermögensverwalter von klassischem Empfehlungsmarketing?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Empfehlungsmarketing baut auf dem bestehenden Netzwerk auf — persönliche Empfehlungen aus Family-Office-Cluster, Steuerberater-/Treuhänder-Kanälen, Anwalts-Cross-Referrals, schwer attribuierbar in Suchergebnissen, lokal stark, strukturell limitiert. SEO für Vermögensverwalter erweitert die Sichtbarkeit auf recherche-getriebene Erstkontakte — aktive Indexierbarkeit, FinancialService-Schema, AI-Citability auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — und konkurriert nicht mit dem Empfehlungs-Default, sondern ergänzt ihn.
+      </p>
+    </div>
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full max-w-4xl border-collapse text-sm font-body">
+        <thead>
+          <tr class="border-b-2 border-navy text-left">
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Achse</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Empfehlungsmarketing</th>
+            <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">SEO für Vermögensverwalter</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparison.map((row) => (
+            <tr class="border-b border-gray-light/40 align-top">
+              <td class="py-3 pr-4 font-headline font-bold text-navy">{row.axis}</td>
+              <td class="py-3 pr-4 text-gray">{row.referral}</td>
+              <td class="py-3 text-gray">{row.seoForVV}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Beide ergänzen sich; Empfehlung ist die Vertrauens-Basis, SEO ist die Wahrnehmungs-Schicht für recherche-getriebene Erstkontakte. In regulierten Berufen wie Notariat oder Vermögensverwaltung wirkt Standesrecht wie ein Werbeverbot — also gewinnt, wer über Substanz und Auffindbarkeit punktet statt über Reklame. SEO bleibt damit auch unter Standesrechts-Limits zeitgemäss.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Welche Spezialisierungs-Nischen tragen messbar Sichtbarkeit?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Vier Nischen-Funnel zeigen in der Deutschschweiz überdurchschnittliche Recherche-Intensität bei schwacher Wettbewerber-Adressierung — jede ist eine eigene Zielgruppe mit eigenem Suchverhalten und eigener Lead-Wert-Dichte. Die Buyer-Research-Stichprobe zeigt: alle gesichteten Boutiquen nutzen das identische Vier-Wort-Muster als Wertversprechen, keine surfacing eine Nische im First-Fold.
+      </p>
+    </div>
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full max-w-4xl border-collapse text-sm font-body">
+        <thead>
+          <tr class="border-b-2 border-navy text-left">
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Nische</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Lead-Profil</th>
+            <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">Such-Recherche-Anchor</th>
+          </tr>
+        </thead>
+        <tbody>
+          {niches.map((row) => (
+            <tr class="border-b border-gray-light/40 align-top">
+              <td class="py-3 pr-4 font-headline font-bold text-navy">{row.name}</td>
+              <td class="py-3 pr-4 text-gray">{row.leadProfile}</td>
+              <td class="py-3 text-gray">{row.anchor}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Jede Nische ist eine eigene Capsule-Sektion oder Service-Unterseite mit eigenem H2 und Schema-Service-Knoten — nicht eine generische „Leistungen“-Seite. Wer eine Nische ehrlich, mit anonymisierten Mandanten-Beispielen, deckt, hat die wahrscheinlich höchste Wahrnehmungs-Asymmetrie im CH-VV-Markt.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie messen wir SEO-Erfolg in einer Vermögensverwalter-Boutique?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Sechs Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Vermögensverwalter-Boutique, und keine ersetzt eine andere — Mandanten-Anfragen nach Quelle als Outcome-Anker, <a href="/ch-de/glossar/aiso-score/" class="text-blue hover:underline">AISO Score</a>, GSC-Indexierungs-Quote, Position × CTR und AI-Citation-Quote auf Nischen-Suchanfragen, FINMA-/VSV-Listing-Konsistenz, mobile Core Web Vitals. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.
+      </p>
+    </div>
+    <ul class="mt-8 space-y-5 max-w-3xl">
+      {measurementMetrics.map((m) => (
+        <li class="border-l-2 border-blue pl-4">
+          <h3 class="text-base font-headline font-bold text-navy">{m.name}</h3>
+          <p class="mt-1 text-sm font-body text-gray leading-relaxed">{m.body}</p>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie kommt eine Vermögensverwalter-Boutique in die Antworten von ChatGPT und Perplexity?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Fünf Schritte machen aus einer namenlosen FINMA-Lizenz-Nummer eine zitierbare Boutique in KI-Antwortmaschinen — strukturierte Daten als Grundlage, Person-Entity-Verknüpfung als Authority-Anker, Capsule-Inhalte pro Spezialisierungs-Funnel mit Substanz statt Reklame, eigene Datenpunkte mit FIDLEG-Verträglichkeit, quartalsweise Spotchecks gegen Nischen-Queries. Die Reihenfolge ist nicht beliebig.
+      </p>
+    </div>
+    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
+      {aiCitabilitySteps.map((step) => (
+        <li class="bg-white border border-gray-light/40 rounded-lg p-5">
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
+          <h3 class="mt-2 text-base font-headline font-bold text-navy">{step.title}</h3>
+          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Welches Sichtbarkeits-Pattern zeigt der Schweizer Vermögensverwalter-Markt?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Eine Buyer-Research-Sichtung von rund zehn typischen CH-VV-Boutiquen aus den Räumen Zürich, Basel und Zug zeigt drei wiederkehrende Pattern: Boilerplate-Konvergenz im Wertversprechen, null FinancialService-Schema in der Stichprobe, LLMO-Vakuum auf Vorsorge- und Erbplanungs-Queries. Die Befunde sind aggregiert; kein Mandat ist aktiv. Eine Detail-Crawl-Erhebung folgt im Mini-Wave-Pilot 2026-Q3.
+      </p>
+      <ul class="mt-6 space-y-4 text-base font-body text-gray leading-relaxed">
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Boilerplate-Konvergenz im Wertversprechen</strong>. Alle gesichteten Sites nutzen das identische Vier-Wort-Muster „individuell · diskret · unabhängig · transparent · persönlich“ als primäres Wertversprechen. Keine sichtbare Spezialisierungs-Nische in Hero, H1 oder Service-Navigation — eine Boutique mit AuM CHF 800 Mio. wirkt im First-Fold ununterscheidbar von einer mit CHF 80 Mio. Differenzierungs-Asymmetrie ist messbar gross, aber ungenutzt; der DE-dominierte SERP ist umkämpft, genau diese Lücke öffnet sich für CH-spezifische Boutiquen.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Null FinancialService-Schema in der Stichprobe</strong>. Keine der gesichteten Sites hat strukturierte Daten mit <code class="text-xs font-mono">@type: FinancialService</code> und <code class="text-xs font-mono">@type: Person</code>-Knoten für die Partner inklusive <code class="text-xs font-mono">hasCredential</code> und <code class="text-xs font-mono">sameAs</code> zur FINMA-Liste. Für AI-Antwortmaschinen ist die Boutique damit eine namenlose Entität ohne nachweisbare Regulierungs-Verankerung.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">LLMO-Vakuum auf den Nischen-Queries</strong>. Spotcheck-Queries an ChatGPT und vergleichbare LLM-Antwortmaschinen 2026-05-24 zu „Wer macht SEO für Schweizer Vermögensverwalter“ und „Wie wird ein FINMA-Vermögensverwalter online sichtbar“ liefern generische SEO-Top-10-Listen ohne VV-Spezialisierungs-Zitate. Vorsorge-/Erbplanungs-Queries werden von Banken-Inhalten und Vergleichsportalen dominiert; Boutique-VV erscheinen praktisch nicht.</span></li>
+      </ul>
+      <p class="mt-6 text-base font-body text-gray leading-relaxed">
+        Die Hebelreihenfolge daraus: <strong class="text-navy">FINMA-/VSV-/Zefix-Listing-Konsistenz auditieren → FINIG-/FIDLEG-Compliance-Sweep der Site-Texte → FinancialService- und Person-Schema-Knotengraph mit sameAs zur FINMA-Liste → Spezialisierungs-Nischen-Capsules je Funnel → AI-Citation-Tracking als Mandats-Routine → quartalsweises Re-Scoring</strong>. Nicht „mehr Backlinks“, nicht „mehr Blog-Content“, nicht „Monthly Ranking-Reports als Hauptwert“ — Auffindbarkeit folgt aus Substanz, nicht aus Reklame.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie läuft die Zusammenarbeit ab?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen plus FINMA-/VSV-Listing-Cross-Check, Diagnose-Tiefenphase mit Technical Audit und AISO Score Baseline, Roadmap-Übergabe mit FINIG-/FIDLEG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
+      </p>
+    </div>
+    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
+      {collaborationSteps.map((step) => (
+        <li class="bg-white border border-gray-light/40 rounded-lg p-5">
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
+          <h3 class="mt-2 text-base font-headline font-bold text-navy">{step.title}</h3>
+          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Eine seriöse Schweizer SEO-Beratung kommuniziert kein Ergebnis, das nicht aus Diagnose-Daten ableitbar ist — gutes Auftreten zählt mehr als das schnelle. Kontakt zu unseren SEO-Experten im digitalen Marketing-Portfolio für regulierte Berufe unter <a href="/ch-de/erstberatung/" class="text-blue hover:underline">/ch-de/erstberatung/</a>.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie lange dauert es, bis SEO für Vermögensverwalter messbare Ergebnisse zeigt?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Vier Zeitfenster prägen jede Schweizer Vermögensverwalter-Boutique nach einem strukturellen SEO-Unlock: 4 bis 8 Wochen bis zur Index-Wiederaufnahme freigeschalteter Service-Unterseiten, 2 bis 4 Monate bis zu ersten AI-Citations auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot nach Schema-Rollout, 3 bis 6 Monate bis zur stabilen Top-10-Sichtbarkeit auf Nischen-Vorsorge-/Anlage-Queries, 6 bis 12 Monate bis zu einem messbaren Mandanten-Anfragen-Effekt.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Zwischen Sichtbarkeit und VV-Mandat liegen Recherche- und Vertrauens-Phasen mit durchschnittlich 3 bis 9 Monaten Lead-Time. Jede Garantie auf „Top-3 in vier Wochen“ ist im Standesrechts-Kontext (VSV-Standesregeln, FINMA-RS 2025/2) ein zusätzliches Risiko.
+      </p>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Darf ein Schweizer Vermögensverwalter überhaupt werben?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Ja, mit klaren Limits. FIDLEG Art. 68 verlangt, dass Werbung als solche erkennbar ist und nicht irreführt. Die VSV-Standesregeln (FINMA-RS 2008/10) verlangen sachlich-berufsbezogene Information statt anpreisender Werbung. Konkrete Performance-Versprechen, Erfolgsgarantien, vergleichende Werbung gegen andere Vermögensverwalter oder Banken sind ausgeschlossen. SEO, Capsule-Content und Entity-Schema sind keine Werbung im engeren Sinn — sie machen Substanz auffindbar und bleiben damit zeitgemäss im Standesrechts-Rahmen.
+      </p>
+      <p class="mt-6 text-sm font-body text-gray leading-relaxed">
+        <strong class="text-navy">Verwandte Vertikal-Seiten</strong>: <a href="/ch-de/seo-fuer-anwaelte/" class="text-blue hover:underline">SEO für Anwälte</a> · <a href="/ch-de/seo-fuer-notare/" class="text-blue hover:underline">SEO für Notare</a> · <a href="/ch-de/seo-fuer-aerzte/" class="text-blue hover:underline">SEO für Ärzte</a> · SEO für Treuhänder (in Vorbereitung)
+      </p>
+    </div>
+  </Section>
+
+  <CTABanner
+    title="Bereit für eine ehrliche Diagnose Ihrer VV-Sichtbarkeit?"
+    subtitle="30-Minuten-Erstberatung, gratis. AISO-Quick-Check auf zwei Dimensionen plus FINMA-/VSV-/Zefix-Listing-Cross-Check plus FIDLEG-Sicht-Prüfung — danach eine klare Aussage, ob ein SEO-Mandat, ein Einmal-Audit oder ein anderer Hebel der bessere Einstieg ist."
+  >
+    <Button href="/ch-de/erstberatung/" variant="primary">Erstberatung anfragen</Button>
+    <Button href="/ch-de/preise/seo/" variant="secondary">SEO-Preise ansehen</Button>
+    <Button href="/ch-de/aiso-check/" variant="secondary">AISO-Check starten</Button>
+  </CTABanner>
+</BaseLayout>
