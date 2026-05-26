@@ -41,17 +41,17 @@ const siteBuildTiers = [
   {
     label: 'Small Hub',
     price: 'ab 3\'900 CHF',
-    description: '5–7 Pages: Hub, Team, Anlagephilosophie / Service, ein Service-Page, FinSv-Compliance-Block, Kontakt. DE only. FinancialService- und Person-Schema (1 GF). revDSG-Block. Profil: Solo-VV / Single-Partner-Boutique.',
+    description: '5–7 Seiten: Hub, Team, Anlagephilosophie / Service, eine Service-Seite, FinSv-Compliance-Block, Kontakt. Nur Deutsch. FinancialService- und Person-Schema (1 GF). revDSG-Block. Profil: Solo-Vermögensverwalter / Einzel-Partner-Boutique.',
   },
   {
     label: 'Medium Hub',
     price: 'ab 6\'900 CHF',
-    description: '8–12 Pages: + 1–2 Spezialisierungs-Nischen als eigene Service-Pages, 2–3 Person-Schemata, Risikohinweise nach FINMA-RS 2025/2, optional Blog-Setup. Profil: Mid-Tier-Boutique mit Nischen-Funnel.',
+    description: '8–12 Seiten: + 1–2 Spezialisierungs-Nischen als eigene Service-Seiten, 2–3 Person-Schemata, Risikohinweise nach FINMA-RS 2025/2, auf Wunsch Blog-Aufbau. Profil: Boutique mittlerer Grösse mit Nischen-Funnel.',
   },
   {
     label: 'Large Hub',
     price: 'ab 8\'900 CHF',
-    description: '15+ Pages: + Multi-Partner mit 5+ Person-Schemata, Multi-Standort- oder -Gruppe-Setup, optional Portfolio- und Produkte-Listings, bilingual DE+EN, Multi-Schema-Stack. Profil: Multi-Partner / Multi-Standort.',
+    description: '15+ Seiten: + Multi-Partner mit 5+ Person-Schemata, Multi-Standort- oder Gruppen-Aufbau, auf Wunsch Portfolio- und Produkte-Verzeichnisse, zweisprachig Deutsch und Englisch, Multi-Schema-Aufbau. Profil: Multi-Partner / Multi-Standort.',
   },
 ];
 
@@ -109,7 +109,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'SEO-Dienstleistungen Schweiz',
   description:
-    'SEO-Retainer, Festpreis-Site-Builds für Vermögensverwalter-Boutiquen und Einmal-Audits für Schweizer Unternehmen — technisches SEO, KI-Suchoptimierung, E-Commerce-SEO und E-E-A-T-Analysen, mit Datenverarbeitung in der Schweiz.',
+    'SEO-Retainer, Festpreis-Webauftritte für Vermögensverwalter-Boutiquen und Einmal-Audits für Schweizer Unternehmen — technisches SEO, KI-Suchoptimierung, E-Commerce-SEO und E-E-A-T-Analysen, mit Datenverarbeitung in der Schweiz.',
   provider: {
     '@type': 'Organization',
     name: 'StarkRank',
@@ -121,7 +121,7 @@ const serviceSchema = {
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'SEO-Retainer, VV-Hub Site-Builds und Audit-Preise (Schweiz)',
+    name: 'SEO-Retainer, VV-Webauftritt-Festpreise und Audit-Preise (Schweiz)',
     itemListElement: [
       {
         '@type': 'Offer',
@@ -161,7 +161,7 @@ const serviceSchema = {
       },
       {
         '@type': 'Offer',
-        name: 'VV-Hub Site-Build — Small',
+        name: 'VV-Webauftritt — Small',
         price: '3900',
         priceCurrency: 'CHF',
         priceSpecification: {
@@ -173,7 +173,7 @@ const serviceSchema = {
       },
       {
         '@type': 'Offer',
-        name: 'VV-Hub Site-Build — Medium',
+        name: 'VV-Webauftritt — Medium',
         price: '6900',
         priceCurrency: 'CHF',
         priceSpecification: {
@@ -185,7 +185,7 @@ const serviceSchema = {
       },
       {
         '@type': 'Offer',
-        name: 'VV-Hub Site-Build — Large',
+        name: 'VV-Webauftritt — Large',
         price: '8900',
         priceCurrency: 'CHF',
         priceSpecification: {
@@ -309,9 +309,9 @@ const schemas = [serviceSchema, breadcrumbSchema, faqSchema];
 
   <Section bg="cream" id="site-builds" class="scroll-mt-20">
     <SectionHeader
-      label="Festpreis-Site-Build"
-      title="VV-Hub Site-Build (Vermögensverwalter-Boutique)"
-      subtitle="Drei Tier-Anker für Boutiquen ohne aktive Web-Identität — analog zum Onlineshop-Tier-Modell, kalibriert an der Site-Struktur der 14 Best-Substance-VV-Sites mit FinancialService-Schema. Build und Retainer separat buchbar, kein Bundle-Zwang. Alle Preise exklusive Mehrwertsteuer."
+      label="Festpreis-Webauftritt"
+      title="VV-Webauftritt (Vermögensverwalter-Boutique)"
+      subtitle="Drei Preis-Anker für Boutiquen ohne aktive Web-Identität — analog zum Onlineshop-Modell, kalibriert an der Seitenstruktur der 14 inhaltsstärksten Vermögensverwalter-Webauftritte mit FinancialService-Schema. Webauftritt und Retainer separat buchbar, kein Paket-Zwang. Alle Preise exklusive Mehrwertsteuer."
     />
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {siteBuildTiers.map((tier) => (
@@ -324,7 +324,7 @@ const schemas = [serviceSchema, breadcrumbSchema, faqSchema];
     </div>
     <div class="mt-8 max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
-        Site-Build ist auf FINMA-bewilligte Vermögensverwalter zugeschnitten — FIDLEG- und FINMA-RS-2025/2-konformer Compliance-Block, FinancialService- und Person-Schema mit Verweis auf die FINMA-Bewilligungsliste, revDSG-konformer Datenschutz, Schweizer-Hosting auf Cloudflare. Welcher Tier zur Boutique passt, ergibt die <a href="/ch-de/erstberatung/" class="text-blue hover:underline">Erstberatung</a> anhand Service-Funnels, Partner-Struktur und Mehrsprachen-Bedarf. Hintergrund zur Kalibrierung im <a href="/ch-de/seo-fuer-vermoegensverwalter/#sie-haben-heute-keine-eigene-web-identitaet" class="text-blue hover:underline">SEO für Vermögensverwalter-Hub</a>.
+        Der Webauftritt ist auf FINMA-bewilligte Vermögensverwalter zugeschnitten — FIDLEG- und FINMA-RS-2025/2-konformer Compliance-Block, FinancialService- und Person-Schema mit Verweis auf die FINMA-Bewilligungsliste, revDSG-konformer Datenschutz, Schweizer Hosting auf Cloudflare. Welcher Tier zur Boutique passt, ergibt die <a href="/ch-de/erstberatung/" class="text-blue hover:underline">Erstberatung</a> anhand Service-Funnels, Partner-Struktur und Mehrsprachen-Bedarf. Hintergrund zur Kalibrierung im <a href="/ch-de/seo-fuer-vermoegensverwalter/#sie-haben-heute-keine-eigene-web-identitaet" class="text-blue hover:underline">SEO für Vermögensverwalter-Hub</a>.
       </p>
     </div>
   </Section>
