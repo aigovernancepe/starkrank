@@ -1,44 +1,88 @@
 ---
-title: "SEO-Agentur auswählen: 8 Prüfkriterien"
-description: "Woran Sie eine gute SEO-Agentur in der Schweiz erkennen — 8 Prüfkriterien inkl. revDSG-Kompetenz, Mehrsprachigkeit und persönlicher Betreuung."
+title: "SEO-Agentur Schweiz auswählen: Checkliste 2026"
+description: "SEO-Agentur in der Schweiz auswählen — 8 Prüfkriterien, revDSG-Kompetenz, Mehrsprachigkeit und persönliche Betreuung. Checkliste 2026 von StarkRank."
 pubDate: 2026-03-05
 updatedDate: 2026-05-26
 author: "Wilko Feye"
-tags: ["seo agentur schweiz", "seo agentur auswählen", "seo beratung schweiz"]
+tags: ["seo agentur schweiz", "seo agentur auswählen", "seo beratung schweiz", "checkliste 2026", "ki-suchoptimierung"]
 locale: "ch-de"
 category: "SEO-Strategie"
 faq:
   - question: "Brauche ich eine Schweizer oder deutsche SEO-Agentur?"
     answer: "Eine deutsche Agentur kann funktionieren, wenn sie Schweizer Kunden betreut, revDSG kennt, Mehrsprachigkeit versteht und für Treffen kommt. Wenn einer dieser Punkte fehlt, ist eine Schweizer Agentur sicherer."
   - question: "Was kostet eine gute SEO-Agentur in der Schweiz?"
-    answer: "Lokales KMU: 3'000–5'000 CHF/Monat. Regulierte Branchen: 5'000–10'000 CHF/Monat. Nationale, mehrsprachige Strategien: 8'000–15'000 CHF/Monat."
+    answer: "KMU mit lokalem Fokus: 1'190–3'000 CHF/Monat. Regulierte Branchen (Banking, Recht, Medizin): 3'000–5'000 CHF/Monat. Nationale, mehrsprachige Strategien: 5'000–10'000 CHF/Monat."
   - question: "Wie lange sollte ich mich binden?"
-    answer: "90-Tage-Erstlaufzeit, danach monatliche Kündbarkeit. Bei Schweizer Preisen sollte die Agentur nach 90 Tagen messbare Fortschritte zeigen."
+    answer: "90-Tage-Erstlaufzeit, danach monatliche Kündbarkeit. Bei Schweizer Preisen sollte die Agentur nach 90 Tagen messbare Fortschritte zeigen. Jahresverträge ohne Performance-Klauseln sind auch in der Schweiz nicht Standard."
+  - question: "Was ist der Unterschied zwischen SEO, SEA und KI-Suchoptimierung?"
+    answer: "SEO (Suchmaschinenoptimierung) zielt auf organische Sichtbarkeit in der Google-Suche. SEA (Search Engine Advertising, primär Google Ads) ist bezahlter Suchverkehr. KI-Suchoptimierung (AISO/LLMO/GEO) zielt auf Zitierung in KI-Antwort-Systemen wie ChatGPT, Perplexity und Google AI Overviews."
   - question: "Kann ich SEO intern machen?"
-    answer: "Für Grundlagen ja. Für wettbewerbsintensive Branchen und mehrsprachige KI-Suchoptimierung ist externe Expertise in der Regel effizienter."
+    answer: "Für Grundlagen (Google Unternehmensprofil, technische Basics) ja. Für wettbewerbsintensive Branchen, Content-Erstellung, Linkaufbau und insbesondere mehrsprachige und KI-Suchoptimierung ist externe Expertise in der Regel effizienter."
   - question: "Was, wenn ich meine Agentur wechseln möchte?"
-    answer: "Sichern Sie alle Account-Zugänge, lassen Sie ein unabhängiges Audit durchführen, und vergleichen Sie die Pflichtenheft beider Agenturen."
+    answer: "Sichern Sie zuerst alle Account-Zugänge (Search Console, Analytics, Ads, Google Unternehmensprofil). Lassen Sie die neue Agentur ein unabhängiges Audit durchführen. Vergleichen Sie die Pflichtenheft beider Agenturen — der Unterschied in der Detailtiefe sagt viel über die Arbeitsqualität aus."
+  - question: "Was bedeutet AISO und wie unterscheidet es sich von LLMO und GEO?"
+    answer: "AISO (AI Search Optimisation) ist StarkRank-Terminologie für die Optimierung von Websites zur Zitierung durch KI-Antwort-Systeme. LLMO und GEO bezeichnen dasselbe Feld mit anderem Akzent. AISO ist methodisch breiter als reines Schema-Markup — die sechs Dimensionen Crawlability, Structure, Authority, Citability, Freshness und Measurability werden gleichgewichtig betrachtet."
 ---
 
-Die Wahl einer SEO-Agentur erfordert in der Schweiz zusätzliche Sorgfalt. Neben den üblichen Qualitätskriterien kommen Schweiz-spezifische Anforderungen hinzu: revDSG-Compliance, Mehrsprachigkeit (DE/FR/IT), die Erwartung persönlicher Betreuung und ein Qualitätsverständnis, das über das hinausgeht, was im DACH-Raum anderswo Standard ist. Dieser Leitfaden gibt Ihnen 8 konkrete Prüfkriterien — plus 3 Schweizer Zusatzprüfungen, die den Unterschied zwischen einer guten und einer für Ihr Unternehmen geeigneten Agentur ausmachen.
+Die Wahl einer SEO-Agentur (Suchmaschinenoptimierung, englisch *Search Engine Optimization*) erfordert in der Schweiz zusätzliche Sorgfalt. Neben den üblichen Qualitätskriterien kommen Schweiz-spezifische Anforderungen hinzu: revDSG-Compliance, Mehrsprachigkeit (DE/FR/IT), die Erwartung persönlicher Betreuung und ein Qualitätsverständnis, das über das hinausgeht, was im übrigen DACH-Raum Standard ist. Dieser Leitfaden gibt Ihnen 8 konkrete Prüfkriterien, drei Schweizer Zusatzprüfungen und eine vollständige Checkliste 2026 — inklusive der Kapitel, die zwischen einer guten und einer für Ihr Unternehmen passenden Agentur entscheiden.
+
+---
+
+## Was macht eine SEO-Agentur konkret?
+
+Eine SEO-Agentur verbessert die organische Sichtbarkeit Ihrer Website in Suchmaschinen wie Google sowie in KI-Antwort-Systemen wie ChatGPT, Perplexity und Google AI Overviews. Die Arbeitsweise umfasst vier wiederkehrende Bereiche: **technische SEO** (Indexierung, Core Web Vitals, Crawl-Steuerung), **Content & Keywords** (Recherche pro Sprache, redaktionelle Optimierung, Capsule-Format für KI-Zitierbarkeit), **Linkaufbau & Authority** (Backlinks aus relevanten Domains, Entitäts-Verankerung) sowie **Mess- und Reporting** (Search Console, Analytics, KI-Citation-Tracking).
+
+Eine seriöse Agentur arbeitet spezialisiert und transparent: Der Spezialist erklärt Ihnen, welche Tools (Search Console, Ahrefs, Screaming Frog, NeuronWriter) auf welche Domain angewendet werden, welche Rankings beobachtet werden und nach welchen Bewertungs-Kriterien Erfolg messbar wird. Die Wahl der richtigen Agentur entscheidet sich an dieser Konkretheit, nicht an Werbeversprechen.
 
 ---
 
 ## Warum ist die Agenturwahl in der Schweiz besonders anspruchsvoll?
 
-Der Schweizer SEO-Markt ist klein und spezialisiert. Es gibt weniger Anbieter als in Deutschland, aber die Qualitätserwartung der Kunden ist höher. Gleichzeitig drängen deutsche Agenturen in den Schweizer Markt — oft ohne die lokalen Besonderheiten wirklich zu verstehen.
+Der Schweizer SEO-Markt ist klein und spezialisiert. Es gibt weniger Anbieter als in Deutschland, aber die Qualitätserwartung der Kunden ist höher. Gleichzeitig drängen deutsche Agenturen in den Schweizer Markt, oft ohne die lokalen Besonderheiten wirklich zu verstehen.
 
 Die häufigsten Probleme, die wir bei Schweizer Unternehmen sehen:
 
-1. **Deutsche Agentur ohne Schweizer Kompetenz** — Implementiert DSGVO statt revDSG, versteht die Mehrsprachigkeit nicht, kennt die lokalen Verzeichnisse (local.ch, search.ch) nicht.
-2. **Set-and-Forget nach dem Erstaudit** — Liefert ein umfassendes Audit ab, dann passiert monatelang nichts. Die 5'000 CHF/Monat fliessen, aber die Sichtbarkeit stagniert.
-3. **Fehlende persönliche Betreuung** — Rein digitale Kommunikation, kein namentlicher Ansprechpartner, keine Bereitschaft für ein Treffen in Zürich, Bern oder Basel.
+1. **Deutsche Agentur ohne Schweizer Kompetenz** — implementiert DSGVO statt revDSG, versteht die Mehrsprachigkeit nicht, kennt die lokalen Verzeichnisse (local.ch, search.ch) nicht.
+2. **Set-and-Forget nach dem Erstaudit** — liefert ein umfassendes Audit ab, dann passiert monatelang nichts. Die 5'000 CHF Retainer pro Monat fliessen, aber die Sichtbarkeit stagniert.
+3. **Fehlende persönliche Betreuung** — rein digitale Kommunikation, kein namentlicher Ansprechpartner, keine Bereitschaft für ein Treffen in Zürich, Bern oder Basel.
 
 ---
 
 ## Was leistet eine SEO-Agentur konkret für ein Schweizer KMU?
 
-Eine SEO-Agentur übernimmt für ein Schweizer KMU vier wiederkehrende Arbeitsfelder: technische Site-Optimierung (Mobile, Indexierung, Core Web Vitals), Content- und Keyword-Strategie pro Sprache, lokale Sichtbarkeit (Google Unternehmensprofil, local.ch, search.ch) und laufende Performance-Messung. Für ein typisches KMU mit lokalem Fokus bedeutet das in der Praxis: 1–2 strategische Sessions pro Monat, 4–8 inhaltliche Optimierungen pro Quartal, Monatsreporting mit Handlungsempfehlungen statt reinen Ranking-Tabellen. Das Honorar bewegt sich entsprechend zwischen 1'190 CHF (Einzelunternehmen) und 5'000 CHF pro Monat (etablierter Mittelstand).
+Eine SEO-Agentur übernimmt für ein Schweizer KMU vier wiederkehrende Arbeitsfelder: technische Site-Optimierung (Mobile, Indexierung, Core Web Vitals), Content- und Keyword-Strategie pro Sprache, lokale Sichtbarkeit (Google Unternehmensprofil, local.ch, search.ch) und laufende Performance-Messung. Für ein typisches KMU mit lokalem Fokus bedeutet das in der Praxis 1–2 strategische Sessions pro Monat, 4–8 inhaltliche Optimierungen pro Quartal sowie ein Monatsreporting mit Handlungsempfehlungen statt reinen Ranking-Tabellen.
+
+## Was kostet eine SEO-Agentur in der Schweiz?
+
+Eine seriöse SEO-Agentur in der Schweiz arbeitet im monatlichen Retainer-Modell zwischen 1'190 CHF (Einzelunternehmen, lokaler Fokus) und 6'000 CHF (Mittelstand, multi-channel). Einmal-Audits liegen zwischen 990 CHF (Technical SEO Audit) und 4'000 CHF (E-Commerce SEO Audit, drei Sprachen). Preise unter 800 CHF im Monat decken in der Schweiz keinen professionellen Lieferumfang ab — bei Schweizer Lohn-Niveau entspricht das maximal 4–5 produktiven Stunden.
+
+Die drei Retainer-Bänder im Detail:
+
+| Band | Preis (CHF/Monat) | Typischer Lieferumfang |
+|---|---|---|
+| **Einzelunternehmen / KMU** | ab 1'190 | 1 Strategie-Session/Monat, 2–3 Content-Edits/Monat, lokales SEO (GBP + 2 Schweizer Verzeichnisse), Quartals-Reporting |
+| **Mittelstand** | 3'000–5'000 | 2 Sessions/Monat, 4–8 Content-Optimierungen/Quartal, technisches Monitoring, Linkaufbau, Monatsreporting mit Handlungsempfehlungen |
+| **Enterprise / Multi-Standort** | ab 6'000 | Individueller Scope, mehrsprachige Strategie (DE/FR/IT/EN), dedizierter Stratege, KI-Suchoptimierung, Wochen-/Monatszyklen |
+
+Vorsicht bei Pauschal-Angeboten unter 800 CHF: Sie zahlen meist für automatisierte Tool-Reports, nicht für strategische Arbeit. Die Differenz wird über Set-and-Forget kompensiert, die Sichtbarkeit folgt nicht.
+
+[Detail-Aufschlüsselung: Was kostet SEO in der Schweiz? →](/ch-de/blog/seo-kosten-schweiz/)
+
+---
+
+## Spezialist oder Full-Service? Freelancer oder Agentur?
+
+Für die meisten Schweizer KMU ist eine spezialisierte SEO-Agentur (4–15 Personen) die richtige Wahl. Freelancer haben tieferes Know-how in einem Teilbereich, aber liefern bei Krankheit oder Urlaub nichts. Full-Service-Agenturen (40+ Personen) decken SEO, Google Ads, Content, Web-Design und mehr ab, aber das SEO-Team ist oft das schwächste Glied.
+
+**Spezialist (Solo oder Mini-Team)**: Geeignet für klar abgegrenzte Audits oder Einzel-Projekte (E-E-A-T-Audit, technisches Audit, einmalige Content-Strategie). Risiko: Single Point of Failure, kein Backup, oft kein Multi-Channel-Wissen.
+
+**Spezialisierte SEO-Agentur (4–15 Personen)**: Der typische Sweet Spot für Schweizer KMU. Ausreichende Tiefe in allen vier SEO-Bereichen, persönliche Betreuung möglich, Retainer skaliert sauber mit Wachstum.
+
+**Full-Service-Agentur (40+ Personen)**: Geeignet, wenn Sie SEO, Paid Media und Web-Design aus einer Hand wollen und die internen Schnittstellen nicht selbst managen möchten. Risiko: SEO wird zum Nebenprodukt, Strategen wechseln, Reporting wird generisch.
+
+Prüfen Sie, ob die Agentur in Ihrer Branche Erfahrung hat (z.B. B2B Maschinenbau, Treuhand, Medizin). Branchen-Know-how ist in der Schweiz häufig wichtiger als reine Agentur-Grösse.
+
+---
 
 ## Was ist ein SEO-Check durch eine Agentur — und was sollten Sie konkret erhalten?
 
@@ -52,15 +96,15 @@ Ein Agentur-SEO-Check ist eine strukturierte Diagnose Ihrer Website-Sichtbarkeit
 
 ### 1. „Können Sie mir ein echtes Kunden-Dashboard aus der Schweiz zeigen?"
 
-Nicht eine deutsche Fallstudie — ein Schweizer Unternehmen. Sie möchten sehen, dass die Agentur die Schweizer Suchdynamik versteht: kleinere Suchvolumen, höhere CPCs, kantonale Unterschiede. Wenn die Agentur nur deutsche Referenzen hat, fehlt ihr möglicherweise die Schweizer Marktkenntnis.
+Nicht eine deutsche Fallstudie, sondern ein Schweizer Unternehmen. Sie möchten sehen, dass die Agentur die Schweizer Suchdynamik versteht: kleinere Suchvolumen, höhere CPCs, kantonale Unterschiede, andere Wettbewerber als im deutschen Markt. Wenn die Agentur nur deutsche Referenzen hat, fehlt ihr möglicherweise die Schweizer Marktkenntnis, besonders im Lokal-SEO und im Wettbewerb mit etablierten CH-Verzeichnissen wie local.ch und search.ch.
 
 ### 2. „Was genau tun Sie in Monat 1?"
 
-Die Antwort muss spezifisch sein: Technisches Audit → revDSG-Compliance-Check → Keyword-Recherche pro Sprache → Content-Plan → Google-Profil-Optimierung. „Wir beginnen mit der Optimierung" reicht nicht. Fordern Sie eine detaillierte Leistungsbeschreibung (Pflichtenheft) mit Meilensteinen.
+Die Antwort muss spezifisch sein: technisches Audit → revDSG-Compliance-Check → Keyword-Recherche pro Sprache → Content-Plan → Google-Profil-Optimierung. „Wir beginnen mit der Optimierung" reicht nicht. Fordern Sie eine detaillierte Leistungsbeschreibung (Pflichtenheft) mit Meilensteinen und konkreten Deliverables pro Quartal.
 
 ### 3. „Wer ist mein persönlicher Ansprechpartner?"
 
-In der Schweiz ist ein namentlicher Ansprechpartner keine Zusatzleistung — er ist Grundvoraussetzung. Sie sollten diese Person am Telefon oder bei einem Treffen kennenlernen, bevor Sie unterschreiben. Wenn die Agentur Ihnen keinen festen Strategen zuordnet, wird Ihr Account von wechselnden Mitarbeitern betreut.
+In der Schweiz ist ein namentlicher Ansprechpartner keine Zusatzleistung, sondern Grundvoraussetzung. Sie sollten diese Person am Telefon oder bei einem Treffen kennenlernen, bevor Sie unterschreiben. Wenn die Agentur Ihnen keinen festen Strategen zuordnet, wird Ihr Account von wechselnden Mitarbeitern betreut, und die Strategie zerfällt im Quartalsrhythmus.
 
 ### 4. „Sind Sie bereit, sich persönlich zu treffen?"
 
@@ -68,19 +112,52 @@ Für viele Schweizer Entscheider ist ein persönliches Treffen vor der Beauftrag
 
 ### 5. „Wie gehen Sie mit revDSG und Consent Mode um?"
 
-Das ist der Schweiz-spezifische Lackmustest. Die Agentur muss den Unterschied zwischen revDSG und DSGVO erklären können: andere Rechtsgrundlagen, EDÖB als Aufsichtsbehörde, eigene Anforderungen an Cookie-Einwilligungen. Wenn sie nur „Wir machen DSGVO" sagt, versteht sie den Schweizer Markt nicht. Mehr zur Datenverarbeitung bei uns finden Sie in unserer [Datenschutzerklärung](/ch-de/datenschutz/).
+Das ist der Schweiz-spezifische Lackmustest. Die Agentur muss den Unterschied zwischen revDSG und DSGVO erklären können: andere Rechtsgrundlagen, EDÖB als Aufsichtsbehörde, eigene Anforderungen an Cookie-Einwilligungen und Bearbeitungs-Verzeichnis. Wenn sie nur „Wir machen DSGVO" sagt, versteht sie den Schweizer Markt nicht. Mehr zur Datenverarbeitung bei uns finden Sie in unserer [Datenschutzerklärung](/ch-de/datenschutz/).
 
 ### 6. „Wie handhaben Sie Mehrsprachigkeit?"
 
-Für viele Schweizer Unternehmen ist die Antwort auf diese Frage entscheidend. Prüfen Sie: Macht die Agentur eigenständige Keyword-Recherche pro Sprache (DE, FR, IT)? Oder übersetzt sie nur die deutschen Inhalte? Übersetzung ist keine SEO-Strategie — jeder Sprachmarkt hat eigene Suchgewohnheiten und Wettbewerbssituationen.
+Für viele Schweizer Unternehmen ist die Antwort auf diese Frage entscheidend. Prüfen Sie: Macht die Agentur eigenständige Keyword-Recherche pro Sprache (DE, FR, IT)? Oder übersetzt sie nur die deutschen Inhalte? Übersetzung ist keine SEO-Strategie. Jeder Sprachmarkt hat eigene Suchgewohnheiten und Wettbewerbssituationen. Achten Sie auch auf saubere hreflang-Implementierung und Schweizer Domain-Strategie.
 
 ### 7. „Welche Vertragslaufzeit gilt?"
 
-In der Schweiz sind 90-Tage-Erstlaufzeiten angemessen. Monatliche Kündbarkeit danach. Vermeiden Sie Jahresverträge ohne Leistungsklauseln — gerade bei den höheren Schweizer Agenturpreisen.
+In der Schweiz sind 90-Tage-Erstlaufzeiten angemessen, danach monatliche Kündbarkeit. Vermeiden Sie Jahresverträge ohne Leistungsklauseln, gerade bei den höheren Schweizer Agenturpreisen. Eine seriöse Agentur muss bereits nach 90 Tagen messbare Fortschrittsindikatoren zeigen.
 
 ### 8. „Wie gehen Sie mit KI-Suche um?"
 
-ChatGPT und Google AI Overviews gewinnen auch in der Deutschschweiz an Bedeutung. Schweizer Unternehmen, insbesondere in beratungsintensiven Branchen (Private Banking, Recht, Treuhand), müssen sicherstellen, dass ihre Agentur einen Ansatz für KI-Suchoptimierung hat — nicht nur klassisches Google-SEO. Mit unserem [kostenlosen AI Search Optimization Check](/ch-de/aiso-check/) bewerten wir Ihre KI-Suchbereitschaft in zwei Dimensionen.
+ChatGPT, Perplexity und Google AI Overviews gewinnen auch in der Deutschschweiz an Bedeutung. Schweizer Unternehmen, insbesondere in beratungsintensiven Branchen (Private Banking, Recht, Treuhand, Medizin), müssen sicherstellen, dass ihre Agentur einen konkreten Ansatz für KI-Suchoptimierung hat, nicht nur klassisches Google-SEO. Fragen Sie nach AISO-/LLMO-/GEO-Methodik und nach Beispielen für Citation-Erfolge. Mit unserem [kostenlosen AI Search Optimization Check](/ch-de/aiso-check/) bewerten wir Ihre KI-Suchbereitschaft in zwei Dimensionen.
+
+---
+
+## revDSG vs. DSGVO: Der praktische Unterschied für SEO-Agenturen
+
+Das revDSG (revidiertes Datenschutzgesetz, in Kraft seit 1. September 2023) ist mit der DSGVO weitgehend kompatibel, aber nicht identisch. Eine SEO-Agentur, die nur DSGVO „mitdenkt", übersieht in der Praxis fünf Schweizer Besonderheiten, die bei einem EDÖB-Audit zu Beanstandungen führen:
+
+1. **Verzeichnis der Bearbeitungstätigkeiten** (Art. 12 revDSG): Pflicht ab 250 Mitarbeitenden oder bei umfangreicher Bearbeitung besonders schützenswerter Daten. Inhalt unterscheidet sich von Art. 30 DSGVO.
+2. **Profiling-Definition**: revDSG kennt „Profiling mit hohem Risiko" als separate Kategorie mit verschärften Pflichten. Google Analytics und Retargeting fallen in der Regel darunter, und die Cookie-Einwilligung muss das abbilden.
+3. **EDÖB als Aufsichtsbehörde**: Der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte hat eigene Praxis-Hinweise, die von EU-Aufsichtsbehörden abweichen. Eine deutsche Agentur, die auf BfDI-Leitlinien arbeitet, wendet falsche Massstäbe an.
+4. **Drittland-Übermittlung**: USA gilt unter revDSG als Land mit angemessenem Datenschutz (per Bundesratsbeschluss), unter DSGVO ist die Lage komplizierter. Konsequenz: Tracking-Tools werden in der Schweiz anders bewertet als in der EU.
+5. **Daten-Bearbeitungs-Vertrag**: Schweizer Standard ist der DPA nach revDSG-Vorlage. EU-SCCs alleine genügen nicht, wenn der Auftraggeber Schweizer Kunden bedient.
+
+Eine SEO-Agentur, die Sie für den Schweizer Markt betreuen soll, muss diese fünf Punkte konkret beantworten können. „Wir kennen das EDÖB-Merkblatt zu Cookies" ist ein guter Test-Satz. Eine echte Schweizer Kompetenz erklärt Ihnen, wann Sie eine vorgängige Einwilligung brauchen und wann ein berechtigtes Interesse genügt.
+
+---
+
+## KI-Suchoptimierung: Was Sie konkret von einer Agentur erwarten dürfen
+
+KI-Suchoptimierung (AISO, branded Acronym von StarkRank für AI Search Optimisation, synonym mit LLMO und Generative Engine Optimization GEO) ist kein separater Service neben SEO, sondern eine Methodik-Erweiterung. Sechs Dimensionen entscheiden, ob ChatGPT, Perplexity oder Google AI Overviews Ihre Website als Quelle zitieren:
+
+- **Crawlability** (20%): Robots.txt-Zugang für GPTBot, ClaudeBot, PerplexityBot; Server-Side Rendering; Accessibility-Tree.
+- **Structure** (20%): JSON-LD Schema.org (Organization, LocalBusiness, Article, Person), semantisches HTML, saubere Heading-Hierarchie.
+- **Authority** (15%): Wikidata-Eintrag, sameAs-Links zu LinkedIn / Crunchbase, E-E-A-T-Signale, Person-Schema für Autoren.
+- **Citability** (20%): Answer-First-Content (40–60-Wort-Capsule pro Frage), eigene Daten, Information Gain gegenüber Wettbewerbern, FAQ-Sektionen.
+- **Freshness** (10%): „Letzte Aktualisierung"-Stempel, 90-Tage-Update-Zyklen für Kernseiten.
+- **Measurability** (15%): GA4-Channel-Group für AI-Referrals (ChatGPT, Perplexity, Copilot), Consent Mode v2 sauber implementiert.
+
+Eine SEO-Agentur, die KI-Suchoptimierung anbietet, muss diese sechs Dimensionen mindestens benennen und für mindestens drei davon ein Reporting-Pattern zeigen können. Wenn das Angebot bei „Schema-Markup einfügen" endet, fehlen 80% der Methodik.
+
+Praktischer Test: Bitten Sie die Agentur, eine Bestands-URL Ihrer Website nach diesen Dimensionen zu bewerten. Eine seriöse Agentur liefert in 30 Minuten eine erste Einschätzung. Wer auf „Das müssen wir zuerst analysieren" zurückweicht, hat keine Methodik im Schrank.
+
+[Kostenloser AI Search Optimization Check (2 Dimensionen) →](/ch-de/aiso-check/)
 
 ---
 
@@ -88,40 +165,42 @@ ChatGPT und Google AI Overviews gewinnen auch in der Deutschschweiz an Bedeutung
 
 ### Handelsregister-Check
 
-Prüfen Sie die Agentur im Handelsregister (zefix.ch). Ein eingetragenes Schweizer Unternehmen bietet mehr Rechtssicherheit als eine ausländische Agentur ohne Schweizer Niederlassung. Bei grösseren Mandaten ist dies oft eine Compliance-Anforderung Ihrer eigenen Rechtsabteilung.
+Prüfen Sie die Agentur im Handelsregister (zefix.ch). Ein eingetragenes Schweizer Unternehmen bietet mehr Rechtssicherheit als eine ausländische Agentur ohne Schweizer Niederlassung. Bei grösseren Mandaten ist dies oft eine Compliance-Anforderung Ihrer eigenen Rechtsabteilung, gerade in regulierten Branchen wie Banking und Versicherung.
 
 ### Referenzen aus Ihrer Region
 
-Der Schweizer Markt ist regional: Zürich funktioniert anders als die Romandie, und Basel anders als Bern. Fragen Sie nach Referenzen aus Ihrem Kanton oder Ihrer Wirtschaftsregion. Eine Agentur mit Erfahrung in Genf ist nicht automatisch die richtige für Zürich.
+Der Schweizer Markt ist regional: Zürich funktioniert anders als die Romandie, Basel anders als Bern. Fragen Sie nach Referenzen aus Ihrem Kanton oder Ihrer Wirtschaftsregion. Eine Agentur mit Erfahrung in Genf ist nicht automatisch die richtige für Zürich. Andere Wettbewerber, andere Suchgewohnheiten, andere lokale Verzeichnisse.
 
 ### Datenhaltung und Hosting
 
-Wo werden Ihre Daten verarbeitet? Für regulierte Branchen (Banking, Versicherungen, Gesundheit) kann die Datenhaltung in der Schweiz eine Voraussetzung sein. Klären Sie, ob die Agentur Schweizer Hosting und Datenverarbeitung garantieren kann.
+Wo werden Ihre Daten verarbeitet? Für regulierte Branchen (Banking, Versicherungen, Gesundheit) kann die Datenhaltung in der Schweiz eine Voraussetzung sein. Klären Sie, ob die Agentur Schweizer Hosting (z.B. Infomaniak, Hostpoint, Cloudflare europe-west6 Zürich) und Datenverarbeitung im Land garantieren kann.
 
 ---
 
-## Welche Warnsignale sind Ausschlusskriterien?
+## Warnsignale: Woran erkennen Sie unseriöse Anbieter?
 
-- **Nur DSGVO-Kompetenz, kein revDSG** — Die Agentur kennt den Schweizer Markt nicht
-- **Keine Schweizer Referenzen** — Ungeprüfte Behauptung von Marktkenntnis
-- **„Wir garantieren Platz 1"** — In der Schweiz wie überall: unseriös
-- **Kein persönlicher Ansprechpartner** — Für den Schweizer Markt inakzeptabel
-- **Nur einsprachig** — Wenn Ihr Geschäft mehrere Sprachregionen bedient und die Agentur nur DE kann
-- **Preise deutlich unter Markt** — Unter 2'500 CHF/Monat wird in der Schweiz kein professionelles SEO geliefert
+- **Nur DSGVO-Kompetenz, kein revDSG** — die Agentur kennt den Schweizer Markt nicht.
+- **Keine Schweizer Referenzen** — ungeprüfte Behauptung von Marktkenntnis.
+- **„Wir garantieren Platz 1"** — in der Schweiz wie überall: unseriös. Niemand garantiert Google-Rankings.
+- **Kein persönlicher Ansprechpartner** — für den Schweizer Markt inakzeptabel.
+- **Nur einsprachig** — wenn Ihr Geschäft mehrere Sprachregionen bedient und die Agentur nur DE kann.
+- **Preise deutlich unter Markt** — unter 800 CHF pro Monat wird in der Schweiz kein professionelles SEO geliefert; unter 2'500 CHF kein Mittelstand-Lieferumfang.
+- **Listicle-„Top-10-SEO-Agenturen"-Bewertungen, die die Agentur selbst publiziert** — selbst-bewertende Vergleichs-Artikel sind in der Schweiz UWG-grenzwertig.
+- **Keine konkreten Tools genannt** — eine professionelle Agentur arbeitet mit Search Console, Ahrefs oder Sistrix, Screaming Frog, einem Content-Optimierungs-Tool (NeuronWriter, Surfer, Frase). Wer keine Tools nennt, hat keine Arbeitsweise.
 
 ---
 
 ## Wie beurteilen Sie die Ergebnisse nach Beauftragung?
 
-**Monat 1–2**: Technisches Audit, revDSG-Compliance-Check, Keyword-Recherche pro Sprache, Google Unternehmensprofil optimiert. Sie verstehen den Plan.
+**Monat 1–2**: Technisches Audit, revDSG-Compliance-Check, Keyword-Recherche pro Sprache, Google Unternehmensprofil optimiert. Sie verstehen den Plan und sehen die ersten Onpage-Optimierungen.
 
-**Monat 3–4**: Rankingbewegungen für Ziel-Keywords, neue Inhalte veröffentlicht, erste Verbesserungen in der Search Console sichtbar.
+**Monat 3–4**: Rankingbewegungen für Ziel-Keywords, neue Inhalte veröffentlicht, erste Verbesserungen in der Search Console sichtbar (Impressionen-Anstieg, CTR-Verbesserung auf priorisierte URLs).
 
-**Monat 5–6**: Messbarer Anstieg des organischen Traffics, neue Anfragen über Google, erweiterte Keyword-Abdeckung.
+**Monat 5–6**: Messbarer Anstieg des organischen Traffics, neue Anfragen über Google, erweiterte Keyword-Abdeckung in der Domain. Erste Top-10-Platzierungen in mittel-kompetitiven Keywords.
 
-**Monat 7–12**: Wachsender Effekt — signifikant mehr organischer Traffic, konsistenter Anfragefluss, KI-Suchzitationen beginnen.
+**Monat 7–12**: Wachsender Effekt, signifikant mehr organischer Traffic, konsistenter Anfragefluss, KI-Suchzitationen beginnen sichtbar zu werden (ChatGPT/Perplexity nennen Ihre Domain in relevanten Antworten).
 
-Bei den höheren Schweizer Agenturpreisen haben Sie das Recht, bereits nach 90 Tagen klare Fortschrittsindikatoren zu verlangen.
+Bei den höheren Schweizer Agenturpreisen haben Sie das Recht, bereits nach 90 Tagen klare Fortschrittsindikatoren zu verlangen — Indexierungs-Coverage, neue Rankings im Bereich 11–30, Lieferung der versprochenen Content-Stücke.
 
 [Kostenloser AI-Search-Check →](/ch-de/aiso-check/)
 [Was kostet SEO in der Schweiz? →](/ch-de/blog/seo-kosten-schweiz/)
