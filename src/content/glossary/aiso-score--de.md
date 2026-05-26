@@ -1,22 +1,22 @@
 ---
-term: "AISO Score"
+term: "AI Search Optimization Score"
 slug: "aiso-score"
 locale: "de"
 bucket: "methodology"
 abbreviation: "AISO"
 aliases:
-  - "AI Search Optimization Score"
+  - "AISO Score"
   - "AISO-Score"
 related:
   - "ki-suche"
   - "generative-suche"
   - "5-element-methodologie"
 sources:
-  - label: "StarkRank — AISO-Check"
+  - label: "StarkRank — AI Search Optimization Check"
     url: "https://starkrank.com/aiso-check/"
 ---
 
-Der **AISO Score** (AI Search Optimization Score) ist eine StarkRank-eigene 6-Dimensionen-Diagnostik von 0 bis 100, die misst, wie gut eine Website für KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot zitierbar ist.
+Der **AI Search Optimization Score** (AISO Score) ist eine StarkRank-eigene 6-Dimensionen-Diagnostik von 0 bis 100, die misst, wie gut eine Website für KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot zitierbar ist.
 
 Die sechs Dimensionen:
 
