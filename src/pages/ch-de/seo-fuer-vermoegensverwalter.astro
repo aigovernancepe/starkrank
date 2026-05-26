@@ -685,18 +685,18 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
       <table class="w-full max-w-4xl border-collapse text-sm font-body">
         <thead>
           <tr class="border-b-2 border-navy text-left">
-            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Tier</th>
-            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Pages</th>
-            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Festpreis</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy whitespace-nowrap">Tier</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy whitespace-nowrap">Seiten</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy whitespace-nowrap">Festpreis</th>
             <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">Profil</th>
           </tr>
         </thead>
         <tbody>
           {buildTiers.map((row) => (
             <tr class="border-b border-gray-light/40 align-top">
-              <td class="py-3 pr-4 font-headline font-bold text-navy">{row.tier}</td>
-              <td class="py-3 pr-4 text-dark">{row.pages}</td>
-              <td class="py-3 pr-4 text-dark">{row.price}</td>
+              <td class="py-3 pr-4 font-headline font-bold text-navy whitespace-nowrap">{row.tier}</td>
+              <td class="py-3 pr-4 text-dark whitespace-nowrap">{row.pages}</td>
+              <td class="py-3 pr-4 text-dark whitespace-nowrap">{row.price}</td>
               <td class="py-3 text-gray">{row.profile}</td>
             </tr>
           ))}
@@ -710,16 +710,16 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
       <table class="w-full max-w-4xl border-collapse text-sm font-body">
         <thead>
           <tr class="border-b-2 border-navy text-left">
-            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Tier</th>
-            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">CHF/Monat</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy whitespace-nowrap">Tier</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy whitespace-nowrap">CHF/Monat</th>
             <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">Profil</th>
           </tr>
         </thead>
         <tbody>
           {pricingTiers.map((row) => (
             <tr class="border-b border-gray-light/40 align-top">
-              <td class="py-3 pr-4 font-headline font-bold text-navy">{row.tier}</td>
-              <td class="py-3 pr-4 text-dark">{row.price}</td>
+              <td class="py-3 pr-4 font-headline font-bold text-navy whitespace-nowrap">{row.tier}</td>
+              <td class="py-3 pr-4 text-dark whitespace-nowrap">{row.price}</td>
               <td class="py-3 text-gray">{row.profile}</td>
             </tr>
           ))}
