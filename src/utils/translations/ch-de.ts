@@ -117,7 +117,7 @@ export const chde: Record<string, string> = {
   'leadForm.placeholder.message.copywriting': 'Welche Texte sollen wir prüfen? Welche Conversion-Ziele haben Sie?',
   'leadForm.placeholder.message.googleAds': 'Welche Kampagnen laufen? Welches Budget? Welche Ziele?',
   'leadForm.button.kontakt': 'Nachricht senden',
-  'leadForm.button.aiso': 'AISO-Check anfordern',
+  'leadForm.button.aiso': 'AI-Search-Check anfordern',
   'leadForm.button.copywriting': 'Copywriting-Check anfordern',
   'leadForm.button.googleAds': 'Google-Ads-Check anfordern',
   'leadForm.consent.text': 'Ich willige ein, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet werden. Hinweise zur Verarbeitung in der <a href="/ch-de/datenschutz/" class="underline">Datenschutzerklärung</a>.',

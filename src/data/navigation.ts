@@ -46,7 +46,7 @@ export const footerNav = {
   audits: [
     { label: 'Free Google Ads Audit', href: '/free-google-ads-audit/' },
     { label: 'Copywriting Audit', href: '/free-copywriting-audit/' },
-    { label: 'Free AISO Score', href: '/aiso-score/' },
+    { label: 'Free AI Search Optimization Score', href: '/aiso-score/' },
   ],
   legal: [
     { label: 'Privacy Policy', href: '/privacy/' },
@@ -82,17 +82,17 @@ const aboutPaths: Record<Locale, string> = {
 /** Locale-specific lead magnet overrides for footer audits section. */
 const auditPaths: Record<Locale, NavItem[]> = {
   en: [
-    { label: 'Free AISO Score', href: '/en/aiso-score/' },
+    { label: 'Free AI Search Optimization Score', href: '/en/aiso-score/' },
     { label: 'Free Google Ads Audit', href: '/en/free-google-ads-audit/' },
     { label: 'Free Copywriting Audit', href: '/en/free-copywriting-audit/' },
   ],
   de: [
-    { label: 'Kostenloser AISO-Check', href: '/aiso-check/' },
+    { label: 'Kostenloser AI Search Optimization Check', href: '/aiso-check/' },
     { label: 'Kostenloser Google Ads Check', href: '/kostenloser-google-ads-check/' },
     { label: 'Kostenloser Copywriting Check', href: '/kostenloser-copywriting-check/' },
   ],
   'ch-de': [
-    { label: 'Kostenloser AISO-Check', href: '/ch-de/aiso-check/' },
+    { label: 'Kostenloser AI Search Optimization Check', href: '/ch-de/aiso-check/' },
     { label: 'Kostenloser Google Ads Check', href: '/ch-de/kostenloser-google-ads-check/' },
     { label: 'Kostenloser Copywriting Check', href: '/ch-de/kostenloser-copywriting-check/' },
   ],
