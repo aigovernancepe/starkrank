@@ -15,7 +15,7 @@ sources:
     url: "https://developers.google.com/search/docs/appearance/featured-snippets"
 ---
 
-Eine **Capsule** ist ein 60- bis 120-Wörter-Antwortblock am Beginn eines Inhalts, der die Hauptfrage in zitierbarer Form beantwortet. Element 1 der [5-Element-Methodologie](#5-element-methodologie).
+Eine **Capsule** ist ein 40- bis 60-Wörter-Antwortblock am Beginn eines Inhalts, der die Hauptfrage in zitierbarer Form beantwortet. Element 1 der [5-Element-Methodologie](#5-element-methodologie).
 
 Die Capsule erfüllt drei Funktionen gleichzeitig:
 
