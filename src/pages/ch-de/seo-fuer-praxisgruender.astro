@@ -15,29 +15,29 @@ const dateModified = '2026-05-12';
 
 const pricingTiers = [
   {
-    sku: 'AISO-Startpaket',
+    sku: 'AI-Search-Startpaket',
     price: '1\'490 CHF',
     cadence: 'einmalig',
-    profile: 'Für Praxen mit bereits vorhandener Website. AISO-Audit, Schema-Implementation auf der bestehenden Site, Google-Unternehmensprofil-Aufsetzung, ein Strategie-Call.',
+    profile: 'Für Praxen mit bereits vorhandener Website. AI Search Optimization Audit, Schema-Implementation auf der bestehenden Site, Google-Unternehmensprofil-Aufsetzung, ein Strategie-Call.',
   },
   {
     sku: 'Technisches Webdesign',
     price: '2\'990 CHF',
     cadence: 'einmalig',
-    profile: 'Für Praxen ohne Website oder nur mit Landing-Page. Astro-basierte Website mit 6–7 Standard-Seiten, 2–3 Krankheitsbild-Seiten inklusive, AISO-First-Architektur, Hosting im ersten Jahr inklusive. Lieferzeit 4–6 Wochen.',
+    profile: 'Für Praxen ohne Website oder nur mit Landing-Page. Astro-basierte Website mit 6–7 Standard-Seiten, 2–3 Krankheitsbild-Seiten inklusive, AI-Search-First-Architektur, Hosting im ersten Jahr inklusive. Lieferzeit 4–6 Wochen.',
   },
   {
     sku: 'Gründer-Komplettpaket',
     price: '3\'990 CHF',
     cadence: 'einmalig',
-    profile: 'Beide Pakete kombiniert, Bundle-Vorteil 490 CHF. AISO-First von Tag 1, ohne Retrofit.',
+    profile: 'Beide Pakete kombiniert, Bundle-Vorteil 490 CHF. AI-Search-First von Tag 1, ohne Retrofit.',
   },
 ];
 
 const webdesignInclusions = [
   '6–7 Standard-Seiten Praxiswebsite: Startseite, Über uns, Leistungen-Übersicht, Kontakt, Impressum, Datenschutz',
   '2–3 Krankheitsbild-Seiten als Initial-Library für Patienten-Suchanfragen (über die 2–3 hinaus: 300 CHF pro weitere Seite)',
-  'AISO-First-Architektur: Suchmaschinenoptimierung und Schema-Markup (MedicalOrganization, Physician, MedicalCondition) sind von Tag 1 integriert',
+  'AI-Search-First-Architektur: Suchmaschinenoptimierung und Schema-Markup (MedicalOrganization, Physician, MedicalCondition) sind von Tag 1 integriert',
   'Local-SEO-Anbindung: Google-Unternehmensprofil (auch bekannt als Google My Business) vollständig eingerichtet inklusive Praxis-Öffnungszeiten und Kategorisierung',
   'Mobile-First-Layout mit schnellen Ladezeiten, Core Web Vitals im grünen Bereich, Cloudflare-Pages-Hosting im ersten Jahr',
   'Selbstverwaltungs-UI für MPA-/Mitarbeiter-Einträge und Text-Anpassungen — keine externen Tickets für einfache Updates',
@@ -49,7 +49,7 @@ const collaborationSteps = [
   {
     num: '01',
     title: 'Erstberatung gratis',
-    body: '30 Minuten. Bedarfs-Check, Persona-Klarheit, Entscheidung zwischen AISO-Startpaket, Technischem Webdesign oder Bundle.',
+    body: '30 Minuten. Bedarfs-Check, Persona-Klarheit, Entscheidung zwischen AI-Search-Startpaket, Technischem Webdesign oder Bundle.',
   },
   {
     num: '02',
@@ -76,7 +76,7 @@ const collaborationSteps = [
 const faqs = [
   {
     q: 'Was beinhaltet das SEO-Paket für Praxisgründer?',
-    a: 'SEO für Praxisgründer ist ein Festpreis-Paket für die ersten drei Praxisjahre — AISO-Audit, Schema-Implementation, Google-Unternehmensprofil-Aufsetzung, optional komplette Website-Erstellung. Kein laufender Retainer, keine Bindung. Nach drei Jahren wechselt das Modell in eine laufende Begleitung, falls die Praxis dann etabliert ist.',
+    a: 'SEO für Praxisgründer ist ein Festpreis-Paket für die ersten drei Praxisjahre — AI Search Optimization Audit, Schema-Implementation, Google-Unternehmensprofil-Aufsetzung, optional komplette Website-Erstellung. Kein laufender Retainer, keine Bindung. Nach drei Jahren wechselt das Modell in eine laufende Begleitung, falls die Praxis dann etabliert ist.',
   },
   {
     q: 'Warum brauchen Gründer eine andere Preislogik als etablierte Praxen?',
@@ -84,11 +84,11 @@ const faqs = [
   },
   {
     q: 'Was kostet ein SEO-Paket für die Praxisgründung in der Schweiz?',
-    a: 'Drei Festpreis-Pakete plus Krankheitsbild-Add-on stehen zur Wahl: AISO-Startpaket für Praxen mit bestehender Website 1\'490 CHF einmalig, Technisches Webdesign für Praxen ohne Website 2\'990 CHF einmalig, Gründer-Komplettpaket als Bundle der beiden 3\'990 CHF einmalig mit 490 CHF Bundle-Vorteil. Krankheitsbild-Seiten über die 2–3 inkludierten hinaus 300 CHF pro weitere Seite, nur im Rahmen des Webdesign-Pakets.',
+    a: 'Drei Festpreis-Pakete plus Krankheitsbild-Add-on stehen zur Wahl: AI-Search-Startpaket für Praxen mit bestehender Website 1\'490 CHF einmalig, Technisches Webdesign für Praxen ohne Website 2\'990 CHF einmalig, Gründer-Komplettpaket als Bundle der beiden 3\'990 CHF einmalig mit 490 CHF Bundle-Vorteil. Krankheitsbild-Seiten über die 2–3 inkludierten hinaus 300 CHF pro weitere Seite, nur im Rahmen des Webdesign-Pakets.',
   },
   {
     q: 'Was ist im Technischen Webdesign konkret enthalten?',
-    a: 'Astro-basierte Praxiswebsite mit AISO-First-Architektur — Schema-Markup (MedicalOrganization, Physician, MedicalCondition) und Local-SEO-Anbindung an das Google-Unternehmensprofil (auch bekannt als Google My Business) sind von Tag 1 integriert, nicht nachträglich aufgesetzt. Inklusive sind 6–7 Standard-Seiten (Startseite, Über uns, Leistungen-Übersicht, Kontakt, Impressum, Datenschutz, 2–3 Krankheitsbild-Seiten für Patienten-Suchanfragen), Mobile-First-Layout mit schnellen Ladezeiten und Core Web Vitals im grünen Bereich, Cloudflare-Pages-Hosting im ersten Jahr, ein Briefing-Call und zwei Content-Review-Runden, sowie Selbstverwaltungs-UI für MPA-/Mitarbeiter-Einträge und Öffnungszeiten-Anpassungen. Nicht inklusive: Praxis-Fotografie, Domain-Erwerb-Kosten, Content-Schreiben über die 2–3 Krankheitsbilder hinaus, sowie laufende Keyword-Recherche und Backlink-Aufbau (kommen in der Retainer-Phase ab Jahr 4).',
+    a: 'Astro-basierte Praxiswebsite mit AI-Search-First-Architektur — Schema-Markup (MedicalOrganization, Physician, MedicalCondition) und Local-SEO-Anbindung an das Google-Unternehmensprofil (auch bekannt als Google My Business) sind von Tag 1 integriert, nicht nachträglich aufgesetzt. Inklusive sind 6–7 Standard-Seiten (Startseite, Über uns, Leistungen-Übersicht, Kontakt, Impressum, Datenschutz, 2–3 Krankheitsbild-Seiten für Patienten-Suchanfragen), Mobile-First-Layout mit schnellen Ladezeiten und Core Web Vitals im grünen Bereich, Cloudflare-Pages-Hosting im ersten Jahr, ein Briefing-Call und zwei Content-Review-Runden, sowie Selbstverwaltungs-UI für MPA-/Mitarbeiter-Einträge und Öffnungszeiten-Anpassungen. Nicht inklusive: Praxis-Fotografie, Domain-Erwerb-Kosten, Content-Schreiben über die 2–3 Krankheitsbilder hinaus, sowie laufende Keyword-Recherche und Backlink-Aufbau (kommen in der Retainer-Phase ab Jahr 4).',
   },
   {
     q: 'Wie läuft die Zusammenarbeit ab?',
@@ -137,10 +137,10 @@ const serviceSchema = {
   offers: [
     {
       '@type': 'Offer',
-      name: 'AISO-Startpaket',
+      name: 'AI-Search-Startpaket',
       priceCurrency: 'CHF',
       price: '1490',
-      description: 'AISO-Audit, Schema-Implementation für bestehende Website, GBP-Aufsetzung, Strategie-Call. Einmalpreis.',
+      description: 'AI Search Optimization Audit, Schema-Implementation für bestehende Website, GBP-Aufsetzung, Strategie-Call. Einmalpreis.',
       url: 'https://starkrank.com/ch-de/seo-fuer-praxisgruender/',
     },
     {
@@ -148,7 +148,7 @@ const serviceSchema = {
       name: 'Technisches Webdesign',
       priceCurrency: 'CHF',
       price: '2990',
-      description: 'Astro-basierte Website-Erstellung mit AISO-First-Architektur, 6–7 Seiten plus 2–3 Krankheitsbild-Seiten, Hosting Jahr 1, Selbstverwaltungs-UI. Einmalpreis.',
+      description: 'Astro-basierte Website-Erstellung mit AI-Search-First-Architektur, 6–7 Seiten plus 2–3 Krankheitsbild-Seiten, Hosting Jahr 1, Selbstverwaltungs-UI. Einmalpreis.',
       url: 'https://starkrank.com/ch-de/seo-fuer-praxisgruender/',
     },
     {
@@ -156,7 +156,7 @@ const serviceSchema = {
       name: 'Gründer-Komplettpaket',
       priceCurrency: 'CHF',
       price: '3990',
-      description: 'Bundle aus AISO-Startpaket plus Technisches Webdesign. 490 CHF Bundle-Vorteil. Einmalpreis.',
+      description: 'Bundle aus AI-Search-Startpaket plus Technisches Webdesign. 490 CHF Bundle-Vorteil. Einmalpreis.',
       url: 'https://starkrank.com/ch-de/seo-fuer-praxisgruender/',
     },
   ],
@@ -179,7 +179,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas}>
   <HeroSection
     headline="SEO für Praxisgründer"
-    subheadline="Drei Festpreis-Pakete für die ersten drei Praxisjahre — AISO-Startpaket, Technisches Webdesign, Gründer-Komplettpaket. Kein laufender Retainer, ein Briefing, klare Lieferzeit, Selbstverwaltungs-UI für den Alltag. Wenn die Praxis nach drei Jahren etabliert ist, wechselt das Modell in eine laufende Begleitung."
+    subheadline="Drei Festpreis-Pakete für die ersten drei Praxisjahre — AI-Search-Startpaket, Technisches Webdesign, Gründer-Komplettpaket. Kein laufender Retainer, ein Briefing, klare Lieferzeit, Selbstverwaltungs-UI für den Alltag. Wenn die Praxis nach drei Jahren etabliert ist, wechselt das Modell in eine laufende Begleitung."
     backgroundImage="/images/aerzte-hero.webp"
     backgroundImageAlt="Leere Sprechstunden-Empfangstheke einer modernen Schweizer Arztpraxis"
   >
@@ -208,7 +208,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was beinhaltet das SEO-Paket für Praxisgründer?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        SEO für Praxisgründer ist ein Festpreis-Paket für die ersten drei Praxisjahre — AISO-Audit, Schema-Implementation für die Praxiswebsite, Google-Unternehmensprofil-Aufsetzung (auch bekannt als Google My Business), optional komplette Website-Erstellung. Kein laufender Retainer, keine Bindung. Nach drei Jahren wechselt das Modell in eine laufende Begleitung, falls die Praxis dann etabliert ist.
+        SEO für Praxisgründer ist ein Festpreis-Paket für die ersten drei Praxisjahre — AI Search Optimization Audit, Schema-Implementation für die Praxiswebsite, Google-Unternehmensprofil-Aufsetzung (auch bekannt als Google My Business), optional komplette Website-Erstellung. Kein laufender Retainer, keine Bindung. Nach drei Jahren wechselt das Modell in eine laufende Begleitung, falls die Praxis dann etabliert ist.
       </p>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
         Die Logik dahinter: Eine Gründerpraxis weiss in den ersten Jahren noch nicht, was ein zusätzlicher Patient ökonomisch bedeutet, hat aber konkrete Cashflow-Sorgen über fixe monatliche Ausgaben. Ein Festpreis ist eine klare Endgrösse, planbar im Praxis-Budget. Sobald die Praxis etabliert ist und den Patientenwert kennt, ist eine laufende Begleitung der nächste sinnvolle Schritt — mit Keyword-Recherche, Ranking-Monitoring, Backlink-Aufbau und kontinuierlicher Suchmaschinenoptimierung.
@@ -280,7 +280,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was ist im Technischen Webdesign konkret enthalten?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Astro-basierte Website-Erstellung mit AISO-First-Architektur — Schema-Markup ist von Tag 1 integriert, nicht nachträglich aufgesetzt. Der Unterschied zu klassischen Webdesign-Agenturen liegt in der Reihenfolge: Schema und Inventar-Logik kommen zuerst, Visual-Layer setzt darauf auf.
+        Astro-basierte Website-Erstellung mit AI-Search-First-Architektur — Schema-Markup ist von Tag 1 integriert, nicht nachträglich aufgesetzt. Der Unterschied zu klassischen Webdesign-Agenturen liegt in der Reihenfolge: Schema und Inventar-Logik kommen zuerst, Visual-Layer setzt darauf auf.
       </p>
     </div>
     <ul class="mt-8 space-y-4 max-w-3xl">
@@ -341,6 +341,6 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     subtitle="30-Minuten-Erstberatung, gratis. Klare Aussage, welches der drei Pakete zur Praxis-Situation passt und in welcher Reihenfolge die Build-Phase läuft."
   >
     <Button href="/ch-de/kontakt/" variant="primary">Erstberatung anfragen</Button>
-    <Button href="/ch-de/aiso-check/" variant="secondary">AISO-Check starten</Button>
+    <Button href="/ch-de/aiso-check/" variant="secondary">AI-Search-Check starten</Button>
   </CTABanner>
 </BaseLayout>
