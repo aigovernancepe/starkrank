@@ -13,7 +13,7 @@ faq:
   - question: "Wann amortisiert sich SEO?"
     answer: "Für die meisten mittelständischen Unternehmen mit 3.000–5.000 €/Monat liegt der Break-even bei Monat 6–9. Nach 12 Monaten sind die Kosten pro Lead 50–70 % günstiger als bezahlte Werbung."
   - question: "Sollte ich mehr für KI-Suchoptimierung bezahlen?"
-    answer: "Ja — wenn die Agentur erklären kann, was sie konkret tun. Eine Agentur mit einem strukturierten Ansatz wie einem AISO Score ist den Aufpreis wert gegenüber einer, die nur KI auf ihre Website geschrieben hat."
+    answer: "Ja — wenn die Agentur erklären kann, was sie konkret tun. Eine Agentur mit einem strukturierten Ansatz wie einem AI Search Optimization Score ist den Aufpreis wert gegenüber einer, die nur KI auf ihre Website geschrieben hat."
   - question: "Kann ich SEO-Preise verhandeln?"
     answer: "Ja, aber verhandeln Sie den Umfang, nicht die Qualität. Ein kleinerer Keyword-Satz oder vierteljährliche Content-Kadenz kann Kosten senken. Verhandeln Sie niemals bei technischer Qualität oder Compliance."
   - question: "Wann ist der beste Zeitpunkt, SEO zu beauftragen?"
@@ -129,12 +129,12 @@ Vermeiden Sie Agenturen, die diese Leistungen als eigenständige Services verkau
 
 KI-Suchoptimierung ist ein neuer Posten, der vor zwei Jahren nicht existierte:
 
-- **AISO-Score-Bewertung** — Messung Ihrer KI-Suchbereitschaft über 6 Dimensionen (Crawlbarkeit, Struktur, Autorität, Zitierbarkeit, Aktualität, Messbarkeit). Üblicherweise in der Erstanalyse enthalten.
+- **AI Search Optimization Score-Bewertung** — Messung Ihrer KI-Suchbereitschaft über 6 Dimensionen (Crawlbarkeit, Struktur, Autorität, Zitierbarkeit, Aktualität, Messbarkeit). Üblicherweise in der Erstanalyse enthalten.
 - **Entity-Aufbau** — Strukturierte Daten, Knowledge-Graph-Signale, sameAs-Verlinkungen, Autorenattribution. Zusätzlich 500–1.500 €/Monat.
 - **Content-Umstrukturierung für KI-Zitation** — Bestehende Inhalte in ein Format umwandeln, das KI-Plattformen extrahieren und zuordnen können. Einmaliges Projekt: 3.000–8.000 €.
 - **KI-Sichtbarkeitsmessung** — Tracking, wie oft Ihre Marke im Vergleich zu Wettbewerbern in KI-Antworten zitiert wird. 500–1.000 €/Monat.
 
 Agenturen, die keinerlei KI-Suchoptimierung anbieten, verlieren den Anschluss. Bis 2027 wird dies kein Zusatzservice mehr sein — es wird Standard.
 
-[Kostenloser AISO-Check →](/de/aiso-check/)
+[Kostenloser AI-Search-Check →](/de/aiso-check/)
 [SEO-Agentur auswählen: Worauf achten? →](/de/blog/seo-agentur-auswaehlen/)

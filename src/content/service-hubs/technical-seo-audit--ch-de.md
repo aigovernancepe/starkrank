@@ -9,7 +9,7 @@ heroLede: "SEO Audit Schweiz bei StarkRank ist die systematische Diagnose der Cr
 processTotalTime: "PT10D"
 processSteps:
   - name: "Briefing und Zugriff-Setup"
-    description: "30-minütiger Call zur Zieldefinition (klassisches SEO, AISO, oder beides), Tool-Zugang freischalten (Google Search Console, GA4, Server-Logs falls verfügbar), Kritisch-Templates definieren."
+    description: "30-minütiger Call zur Zieldefinition (klassisches SEO, AI Search Optimization, oder beides), Tool-Zugang freischalten (Google Search Console, GA4, Server-Logs falls verfügbar), Kritisch-Templates definieren."
     tools:
       - "Google Search Console"
       - "GA4"
@@ -27,14 +27,14 @@ processSteps:
   - name: "Audit-Bericht und Walkthrough"
     description: "Bericht mit Befunden nach Schweregrad sortiert (Blocker / Hoch / Mittel / Niedrig), pro Befund konkrete Fix-Empfehlung mit Aufwandsschätzung, 60-minütiger Walkthrough mit Ihrem Team."
   - name: "Optionale Umsetzungsbegleitung"
-    description: "Monatliches Review der Umsetzung, Re-Crawl nach priorisierten Fixes, enge Verzahnung mit AISO-Score oder Webentwicklungs-Mandat."
+    description: "Monatliches Review der Umsetzung, Re-Crawl nach priorisierten Fixes, enge Verzahnung mit AI Search Optimization Score oder Webentwicklungs-Mandat."
 faq:
   - question: "Was kostet ein professioneller SEO Audit in der Schweiz?"
     answer: "Festpreise publiziert unter [/ch-de/preise/seo/](/ch-de/preise/seo/): Pre-Deploy SEO Check 500 CHF pauschal (bis 30 URLs vor Launch), SEO Audit 1'800 / 3'000 / ab 5'000 CHF nach Site-Grösse, E-E-A-T Audit 1'500 CHF (10 Seiten, 140 CHF pro zusätzliche). E-Commerce-SEO-Audits 2'500 / 3'600 / 4'000 CHF nach Shop-Grösse. Festpreis, keine T&M-Schätzung."
   - question: "Welche Rolle spielt revDSG im SEO Audit für Schweizer Webseiten?"
     answer: "revDSG verlangt Datenschutzerklärung mit Schweizer Datenresidenz-Aussage, Consent Mode v2 default-denied und Auftragsdaten-Verarbeitungsverträge mit allen Drittanbietern (GA4, Hosting, Mailing). Ein Schweizer SEO-Audit prüft diese Anforderungen — DE-/EU-Audits fokussieren auf DSGVO und übersehen revDSG-spezifische Pflichten."
-  - question: "Was unterscheidet einen SEO Audit von einem AISO Audit?"
-    answer: "SEO-Audit prüft Google-Ranking-Faktoren (Crawlability, Indexierung, Schema-Validität, Core Web Vitals). AISO-Audit prüft Citability für ChatGPT, Perplexity und Google AI Overviews (KI-Crawler-Zugang, Entitätssignale, chunkbare Antwortblöcke, llms.txt). Beide ergänzen sich — Schema-Tiefe ist die Schnittmenge. Verlinkt auf [/ch-de/aiso-check/](/ch-de/aiso-check/)."
+  - question: "Was unterscheidet einen SEO Audit von einem AI Search Optimization Audit?"
+    answer: "SEO-Audit prüft Google-Ranking-Faktoren (Crawlability, Indexierung, Schema-Validität, Core Web Vitals). AI Search Optimization Audit prüft Citability für ChatGPT, Perplexity und Google AI Overviews (KI-Crawler-Zugang, Entitätssignale, chunkbare Antwortblöcke, llms.txt). Beide ergänzen sich — Schema-Tiefe ist die Schnittmenge. Verlinkt auf [/ch-de/aiso-check/](/ch-de/aiso-check/)."
   - question: "Wann ist der richtige Zeitpunkt für einen SEO Audit?"
     answer: "Vor einem Re-Launch (Pre-Deploy Check), nach einem Core-Update mit Sichtbarkeitsverlust, bei Plateau nach 6+ Monaten organischer Stagnation, vor SEA-Budgeterhöhung (Landingpages oft schwach), oder alle 12-18 Monate als Routine-Health-Check."
   - question: "Wie lange dauert das Audit?"
@@ -85,18 +85,18 @@ revDSG (revidiertes Datenschutzgesetz, in Kraft seit 1. September 2023) hat dire
 
 StarkRank liefert die revDSG-Schicht als dokumentierte Compliance-Beilage zum Audit-Bericht.
 
-## Was unterscheidet einen SEO Audit von einem AISO Audit?
+## Was unterscheidet einen SEO Audit von einem AI Search Optimization Audit?
 
 Beide adressieren Sichtbarkeit, aber mit unterschiedlichen Ranking-Mechaniken. Vier Vergleichsachsen:
 
-| Dimension | SEO Audit | AISO Audit |
+| Dimension | SEO Audit | AI Search Optimization Audit |
 |-----------|-----------|------------|
 | Primäre Crawler | Googlebot, Bingbot | GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot |
 | Messpunkt | Rankings, Klicks, Impressionen in GSC | Markenzitationen in KI-Antworten |
 | Content-Format | H1/H2-Struktur, semantisches HTML | Chunkbare Antwortblöcke, Frage-Überschriften |
 | Authority-Signal | Backlinks, Domain-Autorität | Entitätssignale, sameAs zu Wikidata, Awards |
 
-Beide ergänzen sich — Schema-Tiefe ist die Schnittmenge. Wer beides braucht, kombiniert SEO-Audit (technische Basis) mit dem [AISO-Score](/ch-de/aiso-check/) (KI-Sichtbarkeits-Schicht).
+Beide ergänzen sich — Schema-Tiefe ist die Schnittmenge. Wer beides braucht, kombiniert SEO-Audit (technische Basis) mit dem [AI Search Optimization Score](/ch-de/aiso-check/) (KI-Sichtbarkeits-Schicht).
 
 ## Wie läuft ein SEO Audit bei StarkRank ab?
 
@@ -106,7 +106,7 @@ Der Audit-Prozess in fünf Schritten über typischerweise zehn bis fünfzehn Arb
 2. **Crawl und Datensammlung** (Tag 2-4) — Screaming Frog plus DataForSEO Crawl, Server-Log-Sample der letzten 30 Tage, Abgleich mit Google Search Console Coverage
 3. **Manuelle Expertenprüfung** (Tag 5-8) — Sichtung kritischer Templates durch einen Menschen, Schema-Validität, revDSG-Konformitäts-Check, Canonical-Logik
 4. **Audit-Bericht-Übergabe und Walkthrough** (Tag 9-10) — Bericht nach Schweregrad sortiert, 60-minütiger Walkthrough mit Ihrem Team zur gemeinsamen Einordnung
-5. **Optionale Umsetzungsbegleitung** — monatliches Review der Umsetzung, Re-Crawl nach priorisierten Fixes, enger Anschluss an [Webdesign Schweiz](/ch-de/services/webdesign-schweiz/) oder [AISO-Score](/ch-de/aiso-check/)
+5. **Optionale Umsetzungsbegleitung** — monatliches Review der Umsetzung, Re-Crawl nach priorisierten Fixes, enger Anschluss an [Webdesign Schweiz](/ch-de/services/webdesign-schweiz/) oder [AI Search Optimization Score](/ch-de/aiso-check/)
 
 Nach Schritt 4 sind Sie handlungsfähig — unabhängig davon, ob die Umsetzung intern, mit Ihrem bestehenden Partner oder mit uns im Retainer fortgeführt wird.
 

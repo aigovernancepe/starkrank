@@ -68,7 +68,7 @@ In der Schweiz sind 90-Tage-Erstlaufzeiten angemessen. Monatliche Kündbarkeit d
 
 ### 8. „Wie gehen Sie mit KI-Suche um?"
 
-ChatGPT und Google AI Overviews gewinnen auch in der Deutschschweiz an Bedeutung. Schweizer Unternehmen, insbesondere in beratungsintensiven Branchen (Private Banking, Recht, Treuhand), müssen sicherstellen, dass ihre Agentur einen Ansatz für KI-Suchoptimierung hat — nicht nur klassisches Google-SEO. Mit unserem [kostenlosen AISO-Check](/ch-de/aiso-check/) bewerten wir Ihre KI-Suchbereitschaft in zwei Dimensionen.
+ChatGPT und Google AI Overviews gewinnen auch in der Deutschschweiz an Bedeutung. Schweizer Unternehmen, insbesondere in beratungsintensiven Branchen (Private Banking, Recht, Treuhand), müssen sicherstellen, dass ihre Agentur einen Ansatz für KI-Suchoptimierung hat — nicht nur klassisches Google-SEO. Mit unserem [kostenlosen AI Search Optimization Check](/ch-de/aiso-check/) bewerten wir Ihre KI-Suchbereitschaft in zwei Dimensionen.
 
 ---
 
@@ -111,5 +111,5 @@ Wo werden Ihre Daten verarbeitet? Für regulierte Branchen (Banking, Versicherun
 
 Bei den höheren Schweizer Agenturpreisen haben Sie das Recht, bereits nach 90 Tagen klare Fortschrittsindikatoren zu verlangen.
 
-[Kostenloser AISO-Check →](/ch-de/aiso-check/)
+[Kostenloser AI-Search-Check →](/ch-de/aiso-check/)
 [Was kostet SEO in der Schweiz? →](/ch-de/blog/seo-kosten-schweiz/)

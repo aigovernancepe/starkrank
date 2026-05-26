@@ -127,7 +127,7 @@ When evaluating agencies in 2026, ask about:
 - **Content structure for citation** — Answer-first formatting that AI platforms can extract and attribute
 - **AI visibility measurement** — Tools and processes to track when and where AI platforms mention your business
 
-An agency that has a framework for AI search optimization (like an AISO Score) demonstrates they're thinking about where search is going, not where it's been.
+An agency that has a framework for AI search optimization (like an AI Search Optimization Score) demonstrates they're thinking about where search is going, not where it's been.
 
 ---
 
@@ -137,5 +137,5 @@ The best predictor of a good agency relationship is transparency before the sale
 
 Use this 10-point framework. Ask every question. Demand specific answers. And if something feels off — trust the feeling. You've been burned once. You know what evasion sounds like.
 
-[Get Your Free AISO Score →](/aiso-score/) — See exactly where your SEO stands before talking to any agency.
+[Get Your Free AI Search Score →](/aiso-score/) — See exactly where your SEO stands before talking to any agency.
 [Read: What Does SEO Cost? Pricing Guide 2026 →](/blog/seo-pricing-guide/)

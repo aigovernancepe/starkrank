@@ -96,5 +96,5 @@ Schweizer Unternehmen sind typischerweise Early Adopter bei Technologietrends. K
 
 Für Branchen mit hohem Beratungsbedarf (Private Banking, Recht, Medizin) ist KI-Sichtbarkeit besonders relevant: Potenzielle Kunden fragen ChatGPT „Welche Anwaltskanzlei in Zürich ist spezialisiert auf..." — und die Antwort kommt aus Ihrem organischen Content, nicht aus Ihrer Google-Anzeige.
 
-[Kostenloser AISO-Check →](/ch-de/aiso-check/)
+[Kostenloser AI-Search-Check →](/ch-de/aiso-check/)
 [Was kostet SEO in der Schweiz? →](/ch-de/blog/seo-kosten-schweiz/)

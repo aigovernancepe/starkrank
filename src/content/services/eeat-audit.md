@@ -27,7 +27,7 @@ Each of the four E-E-A-T dimensions is scored 0–10 against specific signals:
 
 **Expertise (subject-matter depth)** — credentials on page, author pages with bios, topical clustering that demonstrates coverage depth, correct use of technical vocabulary, citations to primary sources.
 
-**Authoritativeness (external recognition)** — backlinks from authoritative domains, AI-platform citations, Knowledge Graph entity presence, `sameAs` coverage across Wikidata, Crunchbase, LinkedIn. This dimension complements — doesn't duplicate — the Authority dimension of our [AISO Score framework](/aiso-score/).
+**Authoritativeness (external recognition)** — backlinks from authoritative domains, AI-platform citations, Knowledge Graph entity presence, `sameAs` coverage across Wikidata, Crunchbase, LinkedIn. This dimension complements — doesn't duplicate — the Authority dimension of our [AI Search Optimization Score framework](/aiso-score/).
 
 **Trustworthiness (accuracy and compliance)** — accurate contact details, transparent pricing where relevant, visible policies, regulatory compliance for YMYL verticals. For regulated topics, we check signals against applicable frameworks (GDPR, HWG, UWG, BRAO, WpHG in DACH contexts). The Trustworthiness check is indicative and does not replace legal review; any final regulatory assessment should be commissioned separately.
 

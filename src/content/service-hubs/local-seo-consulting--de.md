@@ -150,7 +150,7 @@ Local SEO und nationale SEO teilen die Suchmaschinenoptimierungs-Grundlagen, div
 | Sichtbarkeits-Format | Local Pack, AI Local Pack, organisch | AI Overview, organisch |
 | Erfolgs-Messung | Anrufe, Wegbeschreibungen, lokale Klicks | Sichtbarkeits-Index, Sessions, Conversions |
 
-Wer beides braucht — und das gilt für die meisten Mittelstands-Dienstleister mit Standort und Online-Komponente — sollte beides als getrennte, aber miteinander verzahnte Disziplinen führen. Wir kombinieren Local SEO mit klassischem Audit-Vorgehen unter dem Dach der StarkRank-AISO-Methodik (siehe [SEO Audit Agentur](/services/seo-audit-agentur/)): die Audit-Dimensionen Crawlability, Structure und Citability gelten für beide Welten, nur die Ranking-Faktor-Gewichtung verschiebt sich.
+Wer beides braucht — und das gilt für die meisten Mittelstands-Dienstleister mit Standort und Online-Komponente — sollte beides als getrennte, aber miteinander verzahnte Disziplinen führen. Wir kombinieren Local SEO mit klassischem Audit-Vorgehen unter dem Dach der StarkRank AI-Search-Methodik (siehe [SEO Audit Agentur](/services/seo-audit-agentur/)): die Audit-Dimensionen Crawlability, Structure und Citability gelten für beide Welten, nur die Ranking-Faktor-Gewichtung verschiebt sich.
 
 ## Was kostet eine Local SEO Agentur?
 
