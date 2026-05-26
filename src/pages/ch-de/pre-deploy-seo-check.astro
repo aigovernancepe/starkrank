@@ -40,7 +40,7 @@ const faqItems = [
   { question: 'Wie viele URLs sollten wir baselinen?', answer: '15 bis 30 URLs sind der ideale Umfang für das 500er-Paket. Wählen Sie Ihre wertvollsten Seiten: Startseite, umsatzstärkste Seiten, Top-10-organische-Landing-Pages nach Search-Console-Klicks und alle URLs, die sich im Deploy gezielt ändern. Für grössere Websites 10 CHF pro URL über 30.' },
   { question: 'Was passiert, wenn ein CRITICAL-Befund mitten im Deploy auslöst?', answer: 'Das Skript endet mit Exit-Code 1 und stoppt Ihre CI/CD-Pipeline, falls es in die Deploy-Kette eingebunden ist. Sie rollen zurück, beheben und deployen erneut oder überstimmen den Block bei einem False Positive. Der Markdown-Bericht nennt URL, Regel und Alt-Neu-Werte, sodass die Entscheidung Minuten dauert.' },
   { question: 'Ist der Check idempotent — können wir den Diff mehrfach ausführen?', answer: 'Ja. Der Diff-Befehl ruft die URLs erneut ab und vergleicht jedes Mal gegen die gespeicherte Baseline. Sie können ihn direkt nach dem Deploy ausführen, eine Stunde später, einen Tag später, eine Woche später — die Baseline bleibt, bis Sie explizit re-baselinen.' },
-  { question: 'Wie verhält sich der Check zum AISO-Check?', answer: 'Verschiedene Zwecke. Der AISO-Check prüft auf KI-Suche-Readiness (kann ChatGPT Sie zitieren?) — er ist diagnostisch. Der Pre-Deploy-Check erkennt Regressionen zwischen zwei Zuständen — er ist ein Deploy-Gate. Nutzen Sie den AISO-Check zur Diagnose von KI-Suche-Lücken, den Pre-Deploy-Check zum Schutz vor stillen SEO-Regressionen während Releases.' },
+  { question: 'Wie verhält sich der Check zum AI Search Optimization Check?', answer: 'Verschiedene Zwecke. Der AI Search Optimization Check prüft auf KI-Suche-Readiness (kann ChatGPT Sie zitieren?) — er ist diagnostisch. Der Pre-Deploy-Check erkennt Regressionen zwischen zwei Zuständen — er ist ein Deploy-Gate. Nutzen Sie den AI Search Optimization Check zur Diagnose von KI-Suche-Lücken, den Pre-Deploy-Check zum Schutz vor stillen SEO-Regressionen während Releases.' },
 ];
 
 const faqSchema = {
@@ -88,7 +88,7 @@ const relatedLinks = [
   { title: 'SEO Audit in Basel', href: '/seo-audit-basel/' },
   { title: 'E-Commerce-SEO-Audit', href: '/ecommerce-seo-audit/' },
   { title: 'KI-Suchoptimierung', href: '/ki-suchoptimierung-basel/' },
-  { title: 'Kostenloser AISO-Check', href: '/aiso-check/' },
+  { title: 'Kostenloser AI-Search-Check', href: '/aiso-check/' },
 ];
 import { getSelfLastModified } from '../../utils/getLastModified';
 const lastModified = getSelfLastModified(import.meta.url);

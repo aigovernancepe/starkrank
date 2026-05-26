@@ -123,7 +123,7 @@ export const en: Record<string, string> = {
   'leadForm.placeholder.message.copywriting': 'Which copy should we review? What are your conversion goals?',
   'leadForm.placeholder.message.googleAds': 'Which campaigns are running? What is your budget? What are your goals?',
   'leadForm.button.kontakt': 'Send message',
-  'leadForm.button.aiso': 'Request AISO check',
+  'leadForm.button.aiso': 'Request AI Search check',
   'leadForm.button.copywriting': 'Request copywriting check',
   'leadForm.button.googleAds': 'Request Google Ads check',
   'leadForm.consent.text': 'I consent to my information being processed to handle this enquiry. See processing details in the <a href="/privacy/" class="underline">privacy policy</a>.',

@@ -134,8 +134,8 @@ export const en: ServiceFinderLocale = {
       submitButton: 'Show my results',
       startOver: 'Start over',
       secondaryCta: {
-        text: 'Not sure where to start? Get a free AISO Score \u2014 our AI search readiness diagnostic.',
-        buttonText: 'Get My Free AISO Score',
+        text: 'Not sure where to start? Get a free AI Search Optimization Score \u2014 our AI search readiness diagnostic.',
+        buttonText: 'Get My Free AI Search Score',
         link: '/free-aiso-score/',
       },
       emailCapture: {
@@ -156,7 +156,7 @@ export const en: ServiceFinderLocale = {
         'aiso-score': {
           headline: 'Your business is invisible to AI search',
           description: 'ChatGPT, Perplexity, and Google AI Overviews are how customers discover businesses now. We make sure they find you.',
-          ctaText: 'Free AISO check',
+          ctaText: 'Free AI Search check',
         },
         'local-seo': {
           headline: 'You\u2019re missing out on local customers',
@@ -299,8 +299,8 @@ export const en: ServiceFinderLocale = {
       answer: 'You\u2019ll see our most common recommendations based on your role and general business challenges. For a tailored assessment, book a free consultation.',
     },
     {
-      question: 'How is this different from the AISO Score?',
-      answer: 'The AISO Score specifically measures your AI search readiness across 6 dimensions. This diagnostic is broader \u2014 it helps you figure out which of our services (including AISO) match your business needs.',
+      question: 'How is this different from the AI Search Optimization Score?',
+      answer: 'The AI Search Optimization Score specifically measures your AI search readiness across 6 dimensions. This diagnostic is broader \u2014 it helps you figure out which of our services (including AI Search Optimization) match your business needs.',
     },
   ],
 };
