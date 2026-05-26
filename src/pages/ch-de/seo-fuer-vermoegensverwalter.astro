@@ -17,7 +17,7 @@ const pricingTiers = [
   {
     tier: 'Entity- und LLMO-Basis',
     price: 'ab 1\'190 CHF',
-    profile: 'Single-Partner-VV, ein Standort, ein Spezialisierungs-Funnel — Schema-Knotengraph, FINMA-Listing-Konsistenz, AISO-Score-Baseline, FAQ-Block',
+    profile: 'Single-Partner-VV, ein Standort, ein Spezialisierungs-Funnel — Schema-Knotengraph, FINMA-Listing-Konsistenz, AI Search Optimization Score Baseline, FAQ-Block',
   },
   {
     tier: 'Content-Paket mit Nischen-Funnels',
@@ -98,7 +98,7 @@ const measurementMetrics = [
     body: 'Welche Erst-Anfragen kamen über organische Suche, KI-Antwortmaschinen, FINMA-/VSV-Listing-Click, Empfehlung — eine Frage am Erstgespräch, damit mehr Kunden zur passenden Zielgruppe und Spezialisierungs-Nische zuordenbar werden.',
   },
   {
-    name: 'AISO Score',
+    name: 'AI Search Optimization Score',
     body: 'StarkRank-eigene 6-Dimensions-Diagnostik 0–100 für AI-Search-Readiness (Crawlability, Structure, Authority, Citability, Freshness, Measurability). Quartalsweises Re-Scoring als nachhaltiger Trend.',
   },
   {
@@ -151,12 +151,12 @@ const collaborationSteps = [
   {
     num: '01',
     title: 'Erstberatung gratis',
-    body: '30 Minuten. Boutique-Diagnose plus AISO-Quick-Check auf Crawlability und Structure, plus FINMA-/VSV-/Zefix-Listing-Cross-Check und FIDLEG-Sicht-Prüfung.',
+    body: '30 Minuten. Boutique-Diagnose plus AI-Search-Quick-Check auf Crawlability und Structure, plus FINMA-/VSV-/Zefix-Listing-Cross-Check und FIDLEG-Sicht-Prüfung.',
   },
   {
     num: '02',
     title: 'Diagnose-Tiefenphase',
-    body: '1–2 Wochen. Technical Audit, AISO Score Baseline, GSC-Indexierungs-Snapshot, AI-Crawler-Test, Screaming-Frog-Crawl, FINMA-/VSV-/AO-Listing-Audit, plus Keyword Recherche auf Nischen-Suchbegriffe.',
+    body: '1–2 Wochen. Technical Audit, AI Search Optimization Score Baseline, GSC-Indexierungs-Snapshot, AI-Crawler-Test, Screaming-Frog-Crawl, FINMA-/VSV-/AO-Listing-Audit, plus Keyword Recherche auf Nischen-Suchbegriffe.',
   },
   {
     num: '03',
@@ -171,7 +171,7 @@ const collaborationSteps = [
   {
     num: '05',
     title: 'Quartalsweises Re-Scoring',
-    body: 'AISO Score plus dokumentierte Lessons als Trend, nicht als einmaliger Snapshot.',
+    body: 'AI Search Optimization Score plus dokumentierte Lessons als Trend, nicht als einmaliger Snapshot.',
   },
 ];
 
@@ -305,7 +305,7 @@ const faqs = [
   },
   {
     q: 'Wie messen wir SEO-Erfolg in einer Vermögensverwalter-Boutique?',
-    a: 'Sechs Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Vermögensverwalter-Boutique, und keine ersetzt eine andere — Mandanten-Anfragen nach Quelle als Outcome-Anker, AISO Score, GSC-Indexierungs-Quote, Position × CTR und AI-Citation-Quote auf Nischen-Suchanfragen, FINMA-/VSV-Listing-Konsistenz, mobile Core Web Vitals. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.',
+    a: 'Sechs Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Vermögensverwalter-Boutique, und keine ersetzt eine andere — Mandanten-Anfragen nach Quelle als Outcome-Anker, AI Search Optimization Score, GSC-Indexierungs-Quote, Position × CTR und AI-Citation-Quote auf Nischen-Suchanfragen, FINMA-/VSV-Listing-Konsistenz, mobile Core Web Vitals. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.',
   },
   {
     q: 'Wie kommt eine Vermögensverwalter-Boutique in die Antworten von ChatGPT und Perplexity?',
@@ -317,7 +317,7 @@ const faqs = [
   },
   {
     q: 'Wie läuft die Zusammenarbeit ab?',
-    a: 'Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen plus FINMA-/VSV-Listing-Cross-Check, Diagnose-Tiefenphase mit Technical Audit und AISO Score Baseline, Roadmap-Übergabe mit FINIG-/FIDLEG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.',
+    a: 'Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AI-Search-Quick-Check auf zwei Dimensionen plus FINMA-/VSV-Listing-Cross-Check, Diagnose-Tiefenphase mit Technical Audit und AI Search Optimization Score Baseline, Roadmap-Übergabe mit FINIG-/FIDLEG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.',
   },
   {
     q: 'Wie lange dauert es, bis SEO für Vermögensverwalter messbare Ergebnisse zeigt?',
@@ -351,7 +351,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     backgroundImageAlt="Schweizer Vermögensverwalter-Boutique — Partner am Konferenztisch mit Tablet-Dashboard, abstrakte Portfolio-Allokations-Visualisierung, See-Andeutung im Fenster"
   >
     <Button href="/ch-de/erstberatung/" variant="primary">Erstberatung anfragen</Button>
-    <Button href="/ch-de/aiso-check/" variant="secondary">AISO-Check starten</Button>
+    <Button href="/ch-de/aiso-check/" variant="secondary">AI-Search-Check starten</Button>
   </HeroSection>
 
   <LastUpdated date={dateModified} />
@@ -363,7 +363,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         Solo-VV · 2–6-Partner-Boutique · Multi-Standort-VV · Family-Office-Light · Generationswechsel-Mandate · Expat-Tech-RSU-Spezialisierung
       </p>
       <p class="mt-6 text-sm font-body text-gray leading-relaxed">
-        <strong class="text-navy">FINIG-bewusst</strong> · <strong class="text-navy">FIDLEG- und FINMA-RS-2025/2-konform</strong> · <strong class="text-navy">VSV-Standesregeln-respektierend</strong> · <strong class="text-navy">revDSG-konform</strong> · <strong class="text-navy">AISO Score quartalsweise</strong>
+        <strong class="text-navy">FINIG-bewusst</strong> · <strong class="text-navy">FIDLEG- und FINMA-RS-2025/2-konform</strong> · <strong class="text-navy">VSV-Standesregeln-respektierend</strong> · <strong class="text-navy">revDSG-konform</strong> · <strong class="text-navy">AI Search Optimization Score quartalsweise</strong>
       </p>
       <p class="mt-6 text-sm font-body text-gray leading-relaxed">
         Verwandte Vertikal-Hubs für regulierte Berufe: <a href="/ch-de/seo-fuer-anwaelte/" class="text-blue hover:underline">SEO für Anwälte</a> · <a href="/ch-de/seo-fuer-notare/" class="text-blue hover:underline">SEO für Notare</a> · <a href="/ch-de/seo-fuer-aerzte/" class="text-blue hover:underline">SEO für Ärzte</a> — gleiche Methodik-Familie, andere Berufs-Compliance.
@@ -523,7 +523,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie messen wir SEO-Erfolg in einer Vermögensverwalter-Boutique?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Sechs Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Vermögensverwalter-Boutique, und keine ersetzt eine andere — Mandanten-Anfragen nach Quelle als Outcome-Anker, <a href="/ch-de/glossar/aiso-score/" class="text-blue hover:underline">AISO Score</a>, GSC-Indexierungs-Quote, Position × CTR und AI-Citation-Quote auf Nischen-Suchanfragen, FINMA-/VSV-Listing-Konsistenz, mobile Core Web Vitals. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.
+        Sechs Metriken bilden die Diagnose-Achse für SEO in einer Schweizer Vermögensverwalter-Boutique, und keine ersetzt eine andere — Mandanten-Anfragen nach Quelle als Outcome-Anker, <a href="/ch-de/glossar/aiso-score/" class="text-blue hover:underline">AI Search Optimization Score</a>, GSC-Indexierungs-Quote, Position × CTR und AI-Citation-Quote auf Nischen-Suchanfragen, FINMA-/VSV-Listing-Konsistenz, mobile Core Web Vitals. Quartalsweises Re-Scoring verankert die Achse als Mandats-Routine, nicht als einmalige Erhebung.
       </p>
       <h3 class="mt-8 text-xl font-headline font-bold text-navy">Welche Metriken die SEO-Strategie ranking-relevant machen</h3>
     </div>
@@ -595,7 +595,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         <li><strong class="text-navy">Strukturierte Daten</strong>: zur Boutique und zu jedem Partner aufbauen, mit Verweis auf die FINMA-Bewilligungsliste.</li>
         <li><strong class="text-navy">Nischen-Inhalte</strong>: pro Spezialisierungs-Nische einen eigenen Antwort-Block, der eine konkrete Recherche-Frage löst.</li>
         <li><strong class="text-navy">KI-Stichprobe</strong>: quartalsweise prüfen, ob ChatGPT, Perplexity und Google AI Overviews die Boutique zitieren.</li>
-        <li><strong class="text-navy">Re-Scoring</strong>: AISO Score neu messen, Trend dokumentieren.</li>
+        <li><strong class="text-navy">Re-Scoring</strong>: AI Search Optimization Score neu messen, Trend dokumentieren.</li>
       </ol>
       <p class="mt-6 text-base font-body text-gray leading-relaxed">
         Nicht „mehr Backlinks“, nicht „mehr Blog-Content“, nicht „Monatsberichte als Hauptwert“ — Auffindbarkeit folgt aus Substanz, nicht aus Reklame.
@@ -607,7 +607,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie läuft die Zusammenarbeit ab?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AISO-Quick-Check auf zwei Dimensionen plus FINMA-/VSV-Listing-Cross-Check, Diagnose-Tiefenphase mit Technical Audit und AISO Score Baseline, Roadmap-Übergabe mit FINIG-/FIDLEG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
+        Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AI-Search-Quick-Check auf zwei Dimensionen plus FINMA-/VSV-Listing-Cross-Check, Diagnose-Tiefenphase mit Technical Audit und AI Search Optimization Score Baseline, Roadmap-Übergabe mit FINIG-/FIDLEG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
       </p>
     </div>
     <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
@@ -655,10 +655,10 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 
   <CTABanner
     title="Bereit für eine ehrliche Diagnose Ihrer VV-Sichtbarkeit?"
-    subtitle="30-Minuten-Erstberatung, gratis. AISO-Quick-Check auf zwei Dimensionen plus FINMA-/VSV-/Zefix-Listing-Cross-Check plus FIDLEG-Sicht-Prüfung — danach eine klare Aussage, ob ein SEO-Mandat, ein Einmal-Audit oder ein anderer Hebel der bessere Einstieg ist."
+    subtitle="30-Minuten-Erstberatung, gratis. AI-Search-Quick-Check auf zwei Dimensionen plus FINMA-/VSV-/Zefix-Listing-Cross-Check plus FIDLEG-Sicht-Prüfung — danach eine klare Aussage, ob ein SEO-Mandat, ein Einmal-Audit oder ein anderer Hebel der bessere Einstieg ist."
   >
     <Button href="/ch-de/erstberatung/" variant="primary">Erstberatung anfragen</Button>
     <Button href="/ch-de/preise/seo/" variant="secondary">SEO-Preise ansehen</Button>
-    <Button href="/ch-de/aiso-check/" variant="secondary">AISO-Check starten</Button>
+    <Button href="/ch-de/aiso-check/" variant="secondary">AI-Search-Check starten</Button>
   </CTABanner>
 </BaseLayout>
