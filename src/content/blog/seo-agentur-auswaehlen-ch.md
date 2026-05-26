@@ -2,7 +2,7 @@
 title: "SEO-Agentur auswählen: 8 Prüfkriterien"
 description: "Woran Sie eine gute SEO-Agentur in der Schweiz erkennen — 8 Prüfkriterien inkl. revDSG-Kompetenz, Mehrsprachigkeit und persönlicher Betreuung."
 pubDate: 2026-03-05
-updatedDate: 2026-03-05
+updatedDate: 2026-05-26
 author: "Wilko Feye"
 tags: ["seo agentur schweiz", "seo agentur auswählen", "seo beratung schweiz"]
 locale: "ch-de"
@@ -33,6 +33,18 @@ Die häufigsten Probleme, die wir bei Schweizer Unternehmen sehen:
 1. **Deutsche Agentur ohne Schweizer Kompetenz** — Implementiert DSGVO statt revDSG, versteht die Mehrsprachigkeit nicht, kennt die lokalen Verzeichnisse (local.ch, search.ch) nicht.
 2. **Set-and-Forget nach dem Erstaudit** — Liefert ein umfassendes Audit ab, dann passiert monatelang nichts. Die 5'000 CHF/Monat fliessen, aber die Sichtbarkeit stagniert.
 3. **Fehlende persönliche Betreuung** — Rein digitale Kommunikation, kein namentlicher Ansprechpartner, keine Bereitschaft für ein Treffen in Zürich, Bern oder Basel.
+
+---
+
+## Was leistet eine SEO-Agentur konkret für ein Schweizer KMU?
+
+Eine SEO-Agentur übernimmt für ein Schweizer KMU vier wiederkehrende Arbeitsfelder: technische Site-Optimierung (Mobile, Indexierung, Core Web Vitals), Content- und Keyword-Strategie pro Sprache, lokale Sichtbarkeit (Google Unternehmensprofil, local.ch, search.ch) und laufende Performance-Messung. Für ein typisches KMU mit lokalem Fokus bedeutet das in der Praxis: 1–2 strategische Sessions pro Monat, 4–8 inhaltliche Optimierungen pro Quartal, Monatsreporting mit Handlungsempfehlungen statt reinen Ranking-Tabellen. Das Honorar bewegt sich entsprechend zwischen 1'190 CHF (Einzelunternehmen) und 5'000 CHF pro Monat (etablierter Mittelstand).
+
+## Was ist ein SEO-Check durch eine Agentur — und was sollten Sie konkret erhalten?
+
+Ein Agentur-SEO-Check ist eine strukturierte Diagnose Ihrer Website-Sichtbarkeit, die zwischen kostenloser Schnellbewertung (1–2 Dimensionen, automatisiert) und vollständigem Audit (6–10 Dimensionen, manuell, 990–3'990 CHF) liegt. Ein seriöser Check umfasst mindestens: technisches Crawling, Index-Status, Top-Rankings im Vergleich zu zwei Wettbewerbern, Content-Lücken-Analyse sowie eine konkret formulierte Massnahmenliste mit Aufwands- und Effekt-Einschätzung. Was Sie nicht erhalten sollten: einen Standard-PDF-Report aus einem SEO-Tool, der nichts über Ihre Schweizer Branche aussagt.
+
+[Kostenloser AI Search Optimization Check (2 Dimensionen) →](/ch-de/aiso-check/)
 
 ---
 
