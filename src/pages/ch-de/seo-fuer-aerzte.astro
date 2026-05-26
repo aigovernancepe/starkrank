@@ -92,6 +92,21 @@ const regulatoryAnchors = [
   },
 ];
 
+const keyBenefits = [
+  {
+    title: 'Selbstzahler-Patienten erreichen',
+    body: 'Eine Privat-Sprechstunde, eine ästhetische Behandlung oder eine spezialisierte Diagnostik wird vom Patienten meist online recherchiert — bevor er zum Telefon greift. Eine sichtbare Praxis steht in dieser Recherche zuerst und ist die erste, die kontaktiert wird.',
+  },
+  {
+    title: 'In KI-Antworten zitiert werden',
+    body: 'ChatGPT, Perplexity und Google AI Overviews beantworten medizinische Fragen zunehmend mit Quellenverweis. Wer dort als Quelle erscheint, gewinnt Vertrauen, bevor der Patient die Praxis-Website überhaupt öffnet.',
+  },
+  {
+    title: 'Lokale Sichtbarkeit in Google Maps',
+    body: 'Patienten, die in Ihrer Region nach einem Facharzt suchen, sehen zuerst das Local Pack mit Karte. Ein vollständiger Google-Unternehmensprofil-Eintrag mit aktuellen Bewertungen entscheidet, welche Praxis sie anklicken.',
+  },
+];
+
 const collaborationSteps = [
   {
     num: '01',
@@ -123,7 +138,7 @@ const collaborationSteps = [
 const faqs = [
   {
     q: 'Was ist SEO für Ärzte und für welche Praxen lohnt es sich?',
-    a: 'SEO für Ärzte (Suchmaschinenoptimierung) ist die systematische Optimierung der Online-Präsenz einer Schweizer Facharzt-Praxis für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — robots-Konfiguration, Schema-Markup, Local-Pack-Sichtbarkeit, AI-Citability. Sie lohnt sich für Spezialkliniken und Facharzt-Praxen mit Selbstzahler-Anteil oder Zuweiser-Funnel. Für reine Hausarzt-Allgemeinmedizin mit voller Patientenliste ist der ROI in der Regel zu schwach.',
+    a: 'SEO für Ärzte sorgt dafür, dass Ihre Praxis bei Google und in KI-Antworten von ChatGPT, Perplexity oder Google AI Overviews sichtbar ist, wenn Patienten online nach einem Facharzt in ihrer Region suchen. Sie lohnt sich für Facharztpraxen und Spezialkliniken mit Selbstzahler-Anteil, Zuweiser-Funnel oder freien Behandlungs-Kapazitäten — nicht für ausgebuchte Hausarztpraxen mit Warteliste.',
   },
   {
     q: 'Welche regulatorischen Besonderheiten gelten für Schweizer Arztpraxen?',
@@ -278,14 +293,20 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was ist SEO für Ärzte und für welche Praxen lohnt es sich?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        SEO für Ärzte (Suchmaschinenoptimierung) ist die systematische Optimierung der Online-Präsenz einer Schweizer Facharzt-Praxis für Google-Suche und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot — robots-Konfiguration, Schema-Markup, Local-Pack-Sichtbarkeit, AI-Citability. Sie lohnt sich für Spezialkliniken und Facharzt-Praxen mit Selbstzahler-Anteil oder Zuweiser-Funnel. Für reine Hausarzt-Allgemeinmedizin mit voller Patientenliste ist der ROI in der Regel zu schwach.
+        SEO für Ärzte sorgt dafür, dass Ihre Praxis bei Google und in KI-Antworten von ChatGPT, Perplexity oder Google AI Overviews sichtbar ist, wenn Patienten online nach einem Facharzt in ihrer Region suchen. Sie lohnt sich für Facharztpraxen und Spezialkliniken mit Selbstzahler-Anteil, Zuweiser-Funnel oder freien Behandlungs-Kapazitäten — nicht für ausgebuchte Hausarztpraxen mit Warteliste.
       </p>
+      <h3 class="mt-8 text-xl font-headline font-bold text-navy">Für welche Praxisprofile lohnt sich Suchmaschinen-Optimierung?</h3>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Drei Praxis-Profile bekommen messbare Hebel: Spezialgebiete mit Selbstzahler-Komponente, weil Patienten aktiv recherchieren und die Praxis bewusst wählen; Multi-Standort-Praxen, deren einzelne Standorte im Local Pack separat sichtbar werden müssen; Zuweiser-getriebene Modelle, in denen B2B-Sichtbarkeit gegenüber Hausärzten und Allgemeinchirurgen den eigentlichen Funnel speist. Wer in keines dieser Profile fällt, wird vom organischen Wachstum unter Umständen stärker durch klassische Praxisökonomie als durch SEO begrenzt.
+        Drei Praxisprofile bekommen den klarsten Hebel — Spezialgebiete mit Selbstzahler-Komponente (etwa Ästhetik, Sportorthopädie, Allergologie, Kinderwunsch), Multi-Standort-Praxen, deren einzelne Standorte in Google Maps separat auftauchen sollen, und zuweisergetriebene Modelle, in denen die Sichtbarkeit gegenüber Hausärzten und kleineren Kliniken den Funnel speist. Wer in keines dieser Profile fällt — etwa eine ausgebuchte Hausarztpraxis ohne freie Kapazitäten — profitiert vom organischen Wachstum weniger; in diesem Fall ist die ehrlichere Empfehlung, den Hebel woanders anzusetzen.
       </p>
-      <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Wer als Praxis mehr Patienten über organische Sichtbarkeit gewinnen will, muss die digitale Präsenz konsistent für Behandlungs-Suchanfragen optimieren — nicht generisch für Marken-Reach. Eine SEO-Strategie für eine Facharzt-Praxis startet bei der Inventar-Diagnose und arbeitet sich von dort zu Capsule-Inhalten und Authority hoch.
-      </p>
+    </div>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {keyBenefits.map((benefit) => (
+        <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+          <h3 class="text-lg font-headline font-bold text-navy">{benefit.title}</h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">{benefit.body}</p>
+        </div>
+      ))}
     </div>
   </Section>
 

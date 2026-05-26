@@ -119,6 +119,21 @@ const localSeoItems = [
   },
 ];
 
+const keyBenefits = [
+  {
+    title: 'Mandanten ausserhalb des Empfehlungs-Netzes erreichen',
+    body: 'Wer einen Notar für eine konkrete Beurkundung sucht — Erbvertrag, Hauskauf, Gesellschaftsgründung —, googelt zuerst und vergleicht Notariate. Ein sichtbares Notariat taucht in dieser Recherche zuerst auf und steht auf der Shortlist für die Erstanfrage.',
+  },
+  {
+    title: 'In KI-Antworten zitiert werden',
+    body: 'ChatGPT, Perplexity und Google AI Overviews beantworten Fragen zu Erbrecht, Immobilienkauf oder Gesellschaftsgründung zunehmend mit Quellenverweis. Wer dort als Quelle erscheint, gewinnt Vertrauen, bevor der Mandant die Notariats-Website öffnet.',
+  },
+  {
+    title: 'Lokale Sichtbarkeit in Google Maps',
+    body: 'Mandanten, die in Ihrer Region nach einem Notariat oder einer konkreten Beurkundung suchen, sehen zuerst das Local Pack mit Karte. Ein vollständiger Google-Unternehmensprofil-Eintrag mit aktuellen Bewertungen entscheidet, welches Notariat sie anklicken.',
+  },
+];
+
 const collaborationSteps = [
   {
     num: '01',
@@ -327,17 +342,20 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was ist SEO für Notare und für welche Notariate lohnt es sich?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        SEO für Notare (Suchmaschinenoptimierung, search engine optimization) ist die systematische Optimierung der Online-Präsenz eines Schweizer Notariats für Suchmaschinen und KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot.
+        SEO für Notare sorgt dafür, dass Ihr Notariat bei Google und in KI-Antworten von ChatGPT, Perplexity oder Google AI Overviews sichtbar ist, wenn Mandanten online nach einer Beurkundung — Erbvertrag, Hauskauf, Gesellschaftsgründung — in ihrer Region suchen. Sie lohnt sich für Notariate im Freien Notariat — nicht für Amtsnotare in Kantonen mit staatlichem Notariat.
       </p>
+      <h3 class="mt-8 text-xl font-headline font-bold text-navy">Für welche Notariats-Profile lohnt sich Suchmaschinen-Optimierung?</h3>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Konkret heisst das: die Notariats-Website muss für Google und KI-Crawler zugänglich sein, im Local Pack auf Google Maps als Notariat erkennbar erscheinen und auf typische Beurkundungs-Suchanfragen — „Notar Erbvertrag Schwyz", „Hauskauf Beurkundung Liestal", „Gesellschaftsgründung Notariat Glarus" — als kompetente Anlaufstelle sichtbar werden. Notare im Freien Notariat (BS, BL, GE, JU, SH, UR, OW, NW, SZ, GL) mit Spezialisierungs-Funnel gewinnen damit messbar mehr Mandanten über organische Suche und Google Maps. Strukturierte Daten (<a href="/ch-de/glossar/schema-org/" class="text-blue hover:underline">LegalService-Schema</a>) sind dabei der Hebel, mit dem KI-Antwortmaschinen das Notariat überhaupt erst als Notariat — nicht als Werbeanzeige — erkennen.
+        Den klarsten Hebel haben Notariate im Freien Notariat (BS, BL, GE, JU, SH, UR, OW, NW, SZ, GL) — Solo-Notare mit definiertem Beurkundungs-Funnel (Erbverträge, Immobilien, Gesellschaftsgründungen), 2-Partner-Notariate mit Spezialisierungs-Profil, und Advokatur-Notariat-Kombinationen mit Filialen, deren lokale Sichtbarkeit pro Standort eigenständig optimiert werden muss. Für Amtsnotare in Kantonen mit staatlichem Notariat (ZH, BE, AG, LU, SO, FR, NE, GR, ZG, VS, TG) ist der ROI dagegen strukturell schwach — sie werden über die kantonale Zuteilung beschäftigt und stehen nicht im Wettbewerb um Mandanten.
       </p>
-      <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Drei Notariats-Profile haben den klarsten Hebel: Solo-Notare mit einem definierten Beurkundungs-Funnel (Erbverträge, Immobilien, Gesellschaftsgründungen), weil Mandanten online aktiv recherchieren und das Notariat bewusst wählen; 2-Partner-Notariate mit Spezialisierungs-Profil, deren Beurkundungs-Themen je eine eigene Unterseite brauchen; Advokatur-Notariat-Kombinationen mit Filialen, deren lokale Sichtbarkeit pro Standort unabhängig optimiert werden muss. Wer als Notariat in keines dieser Profile fällt, wird vom organischen Wachstum unter Umständen stärker durch Mandanten-Kapazität als durch SEO begrenzt.
-      </p>
-      <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Für Amtsnotare in Kantonen mit staatlichem Notariat (ZH, BE, AG, LU, SO, FR, NE, GR, ZG, VS, TG) ist der ROI strukturell schwach — sie sind als kantonale Funktionäre nicht im Wettbewerb um Mandanten und werden über die kantonale Zuteilung beschäftigt. Wer als Notariat im Freien Notariat mehr Mandanten gewinnen will, richtet die digitale Präsenz konsistent auf konkrete Beurkundungs-Themen aus — denn Mandanten suchen das Thema („Erbvertrag", „Hauskauf-Beurkundung") in Kombination mit ihrer Region, bevor sie überhaupt ein Notariat kontaktieren.
-      </p>
+    </div>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {keyBenefits.map((benefit) => (
+        <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+          <h3 class="text-lg font-headline font-bold text-navy">{benefit.title}</h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">{benefit.body}</p>
+        </div>
+      ))}
     </div>
   </Section>
 
