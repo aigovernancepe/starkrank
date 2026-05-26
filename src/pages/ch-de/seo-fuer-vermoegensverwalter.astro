@@ -586,11 +586,11 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </div>
   </Section>
 
-  <Section bg="cream">
+  <Section bg="cream" id="webauftritt">
     <div class="max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Sie haben heute keine eigene Web-Identität?</h2>
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Sie haben heute keine eigene Web-Identität — oder wollen Ihre Webseite neu aufsetzen?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        18 Prozent der Deutschschweizer Boutiquen sind aktuell ohne aktive Webpräsenz — entweder nie aufgebaut, verloren nach Wartungsabbruch, oder Marken-Wechsel ohne fertige Neu-Umsetzung. Wir bauen FIDLEG- und FINMA-RS-2025/2-konforme Webauftritte zum Festpreis, separat oder kombiniert mit dem 6-Monats-SEO-Retainer. Drei Preis-Anker, kalibriert an der Seitenstruktur der 14 inhaltsstärksten Vermögensverwalter-Webauftritte der Branche:
+        18 Prozent der Deutschschweizer Boutiquen sind aktuell ohne aktive Webpräsenz — viele weitere betreiben Sites, die nach Marken-Wechsel, Compliance-Update auf FIDLEG und FINMA-RS 2025/2 oder Tool-Migration neu aufgesetzt gehören. Wir bauen FIDLEG- und FINMA-RS-2025/2-konforme Webauftritte zum Festpreis, separat oder kombiniert mit dem 6-Monats-SEO-Retainer — sowohl als Neubau als auch als Relaunch zum gleichen Preis-Anker, da die Anzahl Seiten und die Compliance-Tiefe das Pricing definieren, nicht der Ausgangszustand. Drei Preis-Anker, kalibriert an der Seitenstruktur der 14 inhaltsstärksten Vermögensverwalter-Webauftritte der Branche:
       </p>
     </div>
     <div class="mt-8 overflow-x-auto">
@@ -677,34 +677,9 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was kostet SEO für eine Vermögensverwalter-Boutique in der Schweiz?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        Zwei Preis-Achsen, transparent und ohne VV-Aufschlag oder Provision auf das verwaltete Vermögen: Festpreis-Webauftritt für Boutiquen ohne aktive Web-Identität (3'900 / 6'900 / 8'900 CHF einmalig), und laufender SEO-Retainer für Boutiquen mit bestehender Site (ab 1'190 CHF pro Monat). Beides separat buchbar. Vollständige Aufschlüsselung unter <a href="/ch-de/preise/seo/" class="text-blue hover:underline">/ch-de/preise/seo/</a>.
+        Zwei Preis-Achsen, transparent und ohne VV-Aufschlag oder Provision auf das verwaltete Vermögen: einmaliger <a href="#webauftritt" class="text-blue hover:underline">Festpreis-Webauftritt</a> für Boutiquen ohne aktive Web-Identität oder mit Relaunch-Bedarf (3'900 / 6'900 / 8'900 CHF), und laufender SEO-Retainer für Boutiquen mit bestehender Site (ab 1'190 CHF pro Monat). Beides separat buchbar. Vollständige Aufschlüsselung unter <a href="/ch-de/preise/seo/" class="text-blue hover:underline">/ch-de/preise/seo/</a>.
       </p>
-      <h3 class="mt-8 text-xl font-headline font-bold text-navy">Webauftritt (Festpreis, einmalig)</h3>
-    </div>
-    <div class="mt-4 overflow-x-auto">
-      <table class="w-full max-w-4xl border-collapse text-sm font-body">
-        <thead>
-          <tr class="border-b-2 border-navy text-left">
-            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy whitespace-nowrap">Tier</th>
-            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy whitespace-nowrap">Seiten</th>
-            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy whitespace-nowrap">Festpreis</th>
-            <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">Profil</th>
-          </tr>
-        </thead>
-        <tbody>
-          {buildTiers.map((row) => (
-            <tr class="border-b border-gray-light/40 align-top">
-              <td class="py-3 pr-4 font-headline font-bold text-navy whitespace-nowrap">{row.tier}</td>
-              <td class="py-3 pr-4 text-dark whitespace-nowrap">{row.pages}</td>
-              <td class="py-3 pr-4 text-dark whitespace-nowrap">{row.price}</td>
-              <td class="py-3 text-gray">{row.profile}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <div class="mt-8 max-w-3xl">
-      <h3 class="text-xl font-headline font-bold text-navy">SEO-Retainer (laufend, monatlich)</h3>
+      <h3 class="mt-8 text-xl font-headline font-bold text-navy">SEO-Retainer (laufend, monatlich)</h3>
     </div>
     <div class="mt-4 overflow-x-auto">
       <table class="w-full max-w-4xl border-collapse text-sm font-body">
