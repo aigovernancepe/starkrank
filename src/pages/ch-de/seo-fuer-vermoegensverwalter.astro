@@ -11,7 +11,28 @@ const title = 'SEO für Vermögensverwalter — FINMA-bewusst | StarkRank';
 const description = 'SEO für FINMA-bewilligte Schweizer Vermögensverwalter: FINIG-, FIDLEG- und VSV-Standesregeln-bewusst, LLMO-strukturiert. Erstberatung gratis.';
 
 const datePublished = '2026-05-25';
-const dateModified = '2026-05-25';
+const dateModified = '2026-05-26';
+
+const buildTiers = [
+  {
+    tier: 'Small VV-Hub',
+    pages: '5–7 Pages',
+    price: '3\'900 CHF',
+    profile: 'Hub, Team, Anlagephilosophie, ein Service-Page, FinSv-Compliance-Block, Kontakt; DE only; FinancialService-Schema und Person-Schema für den GF; revDSG-Block. Solo-VV / Single-Partner-Boutique.',
+  },
+  {
+    tier: 'Medium VV-Hub',
+    pages: '8–12 Pages',
+    price: '6\'900 CHF',
+    profile: '+ ein bis zwei Spezialisierungs-Nischen als eigene Service-Pages, zwei bis drei Person-Schemata, Risikohinweise nach FINMA-RS 2025/2, optional Blog-Setup. Mid-Tier-Boutique mit Nischen-Funnel.',
+  },
+  {
+    tier: 'Large VV-Hub',
+    pages: '15+ Pages',
+    price: '8\'900 CHF',
+    profile: '+ Multi-Partner-Struktur mit fünf oder mehr Person-Schemata, Multi-Standort- oder -Gruppe-Setup, optional Portfolio- und Produkte-Listings, bilingual DE+EN, Multi-Schema-Stack. Multi-Partner- oder Multi-Standort-Boutique.',
+  },
+];
 
 const pricingTiers = [
   {
@@ -565,6 +586,46 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </div>
   </Section>
 
+  <Section bg="cream">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Sie haben heute keine eigene Web-Identität?</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        18 Prozent der DCH-Boutiquen sind aktuell web-leer — entweder nie aufgebaut, verloren nach Wartungsabbruch, oder Brand-Wechsel ohne fertige Neu-Implementation. Wir bauen FIDLEG- und FINMA-RS-2025/2-konforme Web-Identitäten als Festpreis-Site-Build, separat oder kombiniert mit dem 6-Monats-SEO-Retainer. Drei Tier-Anker, kalibriert an der Site-Struktur der 14 Best-Substance-VV-Sites der Branche:
+      </p>
+    </div>
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full max-w-4xl border-collapse text-sm font-body">
+        <thead>
+          <tr class="border-b-2 border-navy text-left">
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Tier</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Pages</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Festpreis</th>
+            <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">Profil</th>
+          </tr>
+        </thead>
+        <tbody>
+          {buildTiers.map((row) => (
+            <tr class="border-b border-gray-light/40 align-top">
+              <td class="py-3 pr-4 font-headline font-bold text-navy">{row.tier}</td>
+              <td class="py-3 pr-4 text-dark">{row.pages}</td>
+              <td class="py-3 pr-4 text-dark">{row.price}</td>
+              <td class="py-3 text-gray">{row.profile}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-8 max-w-3xl">
+      <p class="text-base font-body text-gray leading-relaxed">
+        Site-Build und SEO-Retainer sind separat buchbar — kein Bundle-Zwang. Wer nur die Web-Identität braucht, bucht den Build; wer eine bestehende Site hat und nur Sichtbarkeit, bucht den Retainer. Welcher Build-Tier zur Boutique passt, ergibt die Erstberatung anhand Service-Funnels, Partner-Struktur und Mehrsprachen-Bedarf.
+      </p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <Button href="/ch-de/erstberatung/" variant="primary">Erstberatung anfragen</Button>
+        <Button href="/ch-de/aiso-check/" variant="secondary">AI-Search-Check starten</Button>
+      </div>
+    </div>
+  </Section>
+
   <Section bg="white">
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Wie messen wir SEO-Erfolg in einer Vermögensverwalter-Boutique?</h2>
@@ -616,10 +677,36 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     <div class="max-w-3xl">
       <h2 class="text-2xl md:text-3xl font-headline font-bold text-navy">Was kostet SEO für eine Vermögensverwalter-Boutique in der Schweiz?</h2>
       <p class="mt-4 text-base font-body text-gray leading-relaxed">
-        SEO-Massnahmen für eine Vermögensverwalter-Boutique folgen drei transparenten Festpreis-Bändern, ohne VV-Aufschlag und ohne Provision auf das verwaltete Vermögen. Solo-VV ab 1'190 CHF pro Monat, Mid-Tier mit Spezialisierungs-Funnel 3'000–5'000 CHF, Multi-Standort ab 6'000 CHF. Vollständige Aufschlüsselung unter <a href="/ch-de/preise/seo/" class="text-blue hover:underline">/ch-de/preise/seo/</a>.
+        Zwei Preis-Achsen, transparent und ohne VV-Aufschlag oder Provision auf das verwaltete Vermögen: Festpreis-Site-Build für Boutiquen ohne aktive Web-Identität (3'900 / 6'900 / 8'900 CHF einmalig), und laufender SEO-Retainer für Boutiquen mit bestehender Site (ab 1'190 CHF pro Monat). Beides separat buchbar. Vollständige Aufschlüsselung unter <a href="/ch-de/preise/seo/" class="text-blue hover:underline">/ch-de/preise/seo/</a>.
       </p>
+      <h3 class="mt-8 text-xl font-headline font-bold text-navy">Site-Build (Festpreis, einmalig)</h3>
     </div>
-    <div class="mt-8 overflow-x-auto">
+    <div class="mt-4 overflow-x-auto">
+      <table class="w-full max-w-4xl border-collapse text-sm font-body">
+        <thead>
+          <tr class="border-b-2 border-navy text-left">
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Tier</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Pages</th>
+            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Festpreis</th>
+            <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">Profil</th>
+          </tr>
+        </thead>
+        <tbody>
+          {buildTiers.map((row) => (
+            <tr class="border-b border-gray-light/40 align-top">
+              <td class="py-3 pr-4 font-headline font-bold text-navy">{row.tier}</td>
+              <td class="py-3 pr-4 text-dark">{row.pages}</td>
+              <td class="py-3 pr-4 text-dark">{row.price}</td>
+              <td class="py-3 text-gray">{row.profile}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-8 max-w-3xl">
+      <h3 class="text-xl font-headline font-bold text-navy">SEO-Retainer (laufend, monatlich)</h3>
+    </div>
+    <div class="mt-4 overflow-x-auto">
       <table class="w-full max-w-4xl border-collapse text-sm font-body">
         <thead>
           <tr class="border-b-2 border-navy text-left">
@@ -641,7 +728,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
     </div>
     <div class="mt-8 max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
-        Einmalige Audits separat: Technical SEO Audit 990 CHF, E-E-A-T-Audit 1'400 CHF, Pre-Deploy SEO Check 500 CHF. Welcher Tier zur Boutique passt, hängt am SEO-Inventar (Schema-Tiefe, Nischen-Funnel, Multi-Standort) — die Investition wird vor jeder Mandatsunterschrift kommuniziert.
+        Einmalige Audits separat: Technical SEO Audit 990 CHF, E-E-A-T-Audit 1'400 CHF, Pre-Deploy SEO Check 500 CHF. Welcher Build-Tier oder Retainer-Tier zur Boutique passt, hängt am SEO-Inventar (Schema-Tiefe, Nischen-Funnel, Multi-Standort) — die Investition wird vor jeder Mandatsunterschrift kommuniziert.
       </p>
     </div>
   </Section>
