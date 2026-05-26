@@ -6,7 +6,7 @@ description: "Optimize visibility across AI search engines like ChatGPT, Perplex
 pillar: "search-ai-intelligence"
 isPillarHub: true
 features:
-  - "Full AI search visibility audit (AISO Score)"
+  - "Full AI search visibility audit (AI Search Optimization Score)"
   - "AI crawler access and indexing verification"
   - "Answer-oriented content restructuring"
   - "Brand entity and trust signal strategy"
@@ -17,19 +17,19 @@ relatedServices:
   - "content-marketing"
 faq:
   - question: "Is AI search optimization different from SEO?"
-    answer: "Yes. SEO focuses on ranking in search engine results pages. AI search optimization focuses on being cited in AI-generated answers. The technical foundations overlap — crawlability, structured data, quality content — but AI search requires additional strategies: entity optimization, answer-first content structure, AI crawler access, and citation-specific monitoring. We layer AISO on top of your existing SEO, not instead of it."
+    answer: "Yes. SEO focuses on ranking in search engine results pages. AI search optimization focuses on being cited in AI-generated answers. The technical foundations overlap — crawlability, structured data, quality content — but AI search requires additional strategies: entity optimization, answer-first content structure, AI crawler access, and citation-specific monitoring. We layer AI Search Optimization on top of your existing SEO, not instead of it."
   - question: "Which AI search platforms matter most?"
     answer: "The primary platforms are Google AI Overviews, ChatGPT (with browsing), Perplexity, and Bing Copilot. Their combined query volume is growing rapidly, and each uses slightly different retrieval methods. A strategy that covers all four is the right framing — we track citations across all platforms through our AI Share of Voice analysis."
   - question: "How long before we see results?"
-    answer: "Technical foundations (crawler access, structured data, content restructuring) can be implemented in 4-8 weeks. Brand entity and citation building take 3-6 months to mature. AI search monitoring shows measurable changes within the first month of tracking. Most clients see their AISO Score improve by 15-25 points in the first 90 days."
+    answer: "Technical foundations (crawler access, structured data, content restructuring) can be implemented in 4-8 weeks. Brand entity and citation building take 3-6 months to mature. AI search monitoring shows measurable changes within the first month of tracking. Most clients see their AI Search Optimization Score improve by 15-25 points in the first 90 days."
   - question: "Do we need to change our existing website?"
     answer: "Not a redesign — but targeted changes to content structure, schema markup, and crawler configuration are typically required. We prioritize changes by impact and work within your existing CMS and tech stack. The highest-impact changes (robots.txt updates, schema additions, content restructuring) are often implementable within days."
   - question: "Can you work alongside our existing SEO agency?"
     answer: "Yes. AI search optimization is a specialist layer that complements traditional SEO. We work alongside existing agencies or in-house teams, focusing specifically on the AI visibility gap. We share findings transparently and coordinate on technical changes."
-  - question: "How is the AISO Score calculated?"
+  - question: "How is the AI Search Optimization Score calculated?"
     answer: "Each of the 6 dimensions has a detailed scoring rubric with specific criteria. For example, Crawlability scores 20/20 if all 5 AI bots are explicitly allowed, llms.txt exists, and SSR is confirmed. The methodology is transparent — you see exactly why you scored what you scored and what to fix."
   - question: "What makes StarkRank different from other SEO agencies?"
-    answer: "We built the AISO Score framework specifically to measure AI search readiness — something most agencies don't track at all. Our content pipeline uses semantic NLP optimization and a 7-dimension automated review gate. And we operate across the DACH region (Germany and Switzerland), so we understand how AI search varies between the two markets."
+    answer: "We built the AI Search Optimization Score framework specifically to measure AI search readiness — something most agencies don't track at all. Our content pipeline uses semantic NLP optimization and a 7-dimension automated review gate. And we operate across the DACH region (Germany and Switzerland), so we understand how AI search varies between the two markets."
 ---
 
 AI-powered search engines — ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot — now answer questions directly, citing sources inline. Ranking on page one is no longer enough. If your content is not structured for retrieval-augmented generation (RAG), your brand is invisible to the fastest-growing search channel. Yet most businesses have no strategy for it.
@@ -42,9 +42,9 @@ Traditional search engines rank pages by links and relevance signals. AI search 
 
 The consequence is clear: a page that ranks well in Google may never appear in an AI-generated answer if it lacks clear structure, entity signals, or crawler access. Optimizing for AI search requires a distinct set of strategies layered on top of — not replacing — traditional SEO.
 
-## What is the StarkRank AISO Score?
+## What is the StarkRank AI Search Optimization Score?
 
-The AISO Score is our proprietary framework for measuring AI search readiness. Every engagement starts with a scored audit across six dimensions:
+The AI Search Optimization Score is our proprietary framework for measuring AI search readiness. Every engagement starts with a scored audit across six dimensions:
 
 1. **Crawlability** — Can AI bots (GPTBot, ClaudeBot, PerplexityBot) access your content? We verify robots.txt rules, llms.txt configuration, JavaScript rendering barriers, and server log evidence of AI crawler activity.
 
@@ -75,7 +75,7 @@ RAG systems extract information in chunks — typically the opening sentences of
 - **Comparison tables** and numbered lists that AI models extract verbatim
 - **FAQ sections** with schema markup for direct question-answer mapping
 
-This is not just formatting — it determines whether your content gets cited or ignored. For content creation and copywriting support, our [Content Marketing](/services/content-marketing-agentur/) team works alongside AISO strategy.
+This is not just formatting — it determines whether your content gets cited or ignored. For content creation and copywriting support, our [Content Marketing](/services/content-marketing-agentur/) team works alongside AI Search Optimization strategy.
 
 ## How do brand entity and trust signals affect AI citations?
 

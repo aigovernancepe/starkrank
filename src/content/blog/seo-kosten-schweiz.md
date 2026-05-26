@@ -88,12 +88,12 @@ Die Schweiz hat 8,8 Millionen Einwohner in 26 Kantonen. Der Suchmarkt ist kleine
 
 ## Wie verändert KI-Suche die SEO-Investition?
 
-KI-Suchoptimierung ist auch in der Schweiz relevant — möglicherweise sogar mehr als im deutschen Markt, da Schweizer Early Adopter bei Technologietrends sind. Mit unserem [kostenlosen AISO-Check](/ch-de/aiso-check/) können Sie Ihre aktuelle KI-Suchbereitschaft einschätzen, bevor Sie in eine Optimierung investieren:
+KI-Suchoptimierung ist auch in der Schweiz relevant — möglicherweise sogar mehr als im deutschen Markt, da Schweizer Early Adopter bei Technologietrends sind. Mit unserem [kostenlosen AI Search Optimization Check](/ch-de/aiso-check/) können Sie Ihre aktuelle KI-Suchbereitschaft einschätzen, bevor Sie in eine Optimierung investieren:
 
-- **AISO-Score-Bewertung** — Messung der KI-Suchbereitschaft über 6 Dimensionen. Im Erstaudit enthalten oder als eigenständige Bewertung.
+- **AI Search Optimization Score-Bewertung** — Messung der KI-Suchbereitschaft über 6 Dimensionen. Im Erstaudit enthalten oder als eigenständige Bewertung.
 - **Entity-Aufbau** — Strukturierte Daten, Knowledge-Graph-Signale. Zusätzlich 800–2'000 CHF/Monat.
 - **Content für KI-Zitation** — Bestehende Inhalte in ein KI-extrahierbares Format umwandeln. Einmaliges Projekt: 5'000–10'000 CHF.
 - **KI-Sichtbarkeitsmessung** — Tracking der Markenzitationen in KI-Antworten. 800–1'500 CHF/Monat.
 
-[Kostenloser AISO-Check →](/ch-de/aiso-check/)
+[Kostenloser AI-Search-Check →](/ch-de/aiso-check/)
 [SEO-Agentur auswählen: Worauf achten? →](/ch-de/blog/seo-agentur-auswaehlen-ch/)

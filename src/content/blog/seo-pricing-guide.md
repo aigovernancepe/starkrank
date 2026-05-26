@@ -14,7 +14,7 @@ faq:
   - question: "How long until SEO pays for itself?"
     answer: "For most local businesses investing $2,000-3,000/month, break-even occurs in month 6-9. By month 12, the cost-per-lead from organic search is typically 50-70% lower than paid advertising."
   - question: "Should I pay more for an agency that does AI search optimization?"
-    answer: "Yes — if they can explain what they actually do. An agency with a structured approach like an AISO Score is worth the premium over one that just added AI to their website."
+    answer: "Yes — if they can explain what they actually do. An agency with a structured approach like an AI Search Optimization Score is worth the premium over one that just added AI to their website."
   - question: "Can I negotiate SEO pricing?"
     answer: "Yes, but negotiate scope, not quality. A smaller keyword set, fewer locations, or quarterly content cadence can reduce cost without cutting corners. Never negotiate on technical quality or compliance."
   - question: "What's the difference between cheap and expensive SEO?"
@@ -148,7 +148,7 @@ Avoid agencies selling these as standalone services or including them as "value 
 
 AI search optimization is a new line item that didn't exist two years ago. Here's what it adds:
 
-- **AISO Score assessment** — Evaluating your AI search readiness across 6 dimensions (crawlability, structure, authority, citability, freshness, measurability). Usually included in initial audits or as a standalone assessment.
+- **AI Search Optimization Score assessment** — Evaluating your AI search readiness across 6 dimensions (crawlability, structure, authority, citability, freshness, measurability). Usually included in initial audits or as a standalone assessment.
 - **Entity building** — Structured data, Knowledge Graph signals, sameAs links, author attribution. Adds $500-1,500/month depending on scope.
 - **Content restructuring for AI citation** — Reformatting existing content into capsule format (40-60 word direct answers) that AI platforms can extract and attribute. One-time project: $2,000-5,000.
 - **AI Share of Voice monitoring** — Tracking how often your brand is cited vs. competitors across AI platforms. New service, typically $500-1,000/month.
@@ -156,4 +156,4 @@ AI search optimization is a new line item that didn't exist two years ago. Here'
 Agencies that don't offer any AI search optimization are pricing themselves out of relevance. By 2027, this won't be a separate line item — it'll be table stakes.
 
 [Read: How to Choose an SEO Agency →](/blog/how-to-choose-seo-agency/)
-[Get Your Free AISO Score →](/aiso-score/)
+[Get Your Free AI Search Score →](/aiso-score/)

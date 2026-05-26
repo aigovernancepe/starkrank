@@ -116,7 +116,7 @@ Fragen Sie bei der Agenturauswahl 2026 nach:
 - **Content-Struktur für Zitation** — Answer-First-Formatierung, die KI-Plattformen extrahieren und zuordnen können
 - **KI-Sichtbarkeitsmessung** — Tools und Prozesse, um zu tracken, wann und wo KI-Plattformen Ihr Unternehmen erwähnen
 
-Eine Agentur mit einem Framework für KI-Suchoptimierung (wie einem AISO Score) zeigt, dass sie darüber nachdenkt, wohin sich Suche entwickelt — nicht, wo sie war.
+Eine Agentur mit einem Framework für KI-Suchoptimierung (wie einem AI Search Optimization Score) zeigt, dass sie darüber nachdenkt, wohin sich Suche entwickelt — nicht, wo sie war.
 
 ---
 
@@ -126,5 +126,5 @@ Der beste Indikator für eine gute Agenturbeziehung ist Transparenz vor dem Verk
 
 Nutzen Sie diese 8 Prüfkriterien. Stellen Sie jede Frage. Fordern Sie konkrete Antworten. Und wenn sich etwas falsch anfühlt — vertrauen Sie dem Gefühl. Sie wissen, wie Ausweichen klingt.
 
-[Kostenloser AISO-Check →](/de/aiso-check/)
+[Kostenloser AI-Search-Check →](/de/aiso-check/)
 [Was kostet SEO? Preisleitfaden 2026 →](/de/blog/seo-kosten/)

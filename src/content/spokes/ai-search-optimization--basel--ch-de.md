@@ -5,8 +5,8 @@ updatedDate: 2026-03-22
 locale: "ch-de"
 title: "KI-Suchoptimierung in Basel"
 description: "Positionieren Sie Ihr Basler Unternehmen in den Antworten von ChatGPT, Perplexity und Google AI Overviews. StarkRank auditiert, restrukturiert und überwacht Ihre digitale Präsenz für maximale KI-Sichtbarkeit im Schweizer und internationalen Markt."
-localCTA: "Kostenlose AISO-Ersteinschätzung für Basel anfordern"
-highlightsTitle: "Der AISO Score: Sechs Dimensionen"
+localCTA: "Kostenlose AI-Search-Ersteinschätzung für Basel anfordern"
+highlightsTitle: "Der AI Search Optimization Score: Sechs Dimensionen"
 highlights:
   - title: "Crawlbarkeit"
     description: "Können GPTBot, ClaudeBot und PerplexityBot auf Ihre Inhalte zugreifen? Wir prüfen robots.txt, llms.txt, WAF-Konfigurationen und Server-Logs auf KI-Crawler-Aktivität."
@@ -30,7 +30,7 @@ sectors:
   - name: "Logistik und Handel"
     description: "Die trinationale Lage macht Basel zum Logistik-Knotenpunkt. Unternehmen werden über KI-Suche in drei Sprachen verglichen."
 deliverables:
-  - "Vollständige AISO-Score-Analyse mit Bewertung pro Dimension und Branchenvergleich für den Schweizer Markt"
+  - "Vollständige AI Search Optimization Score-Analyse mit Bewertung pro Dimension und Branchenvergleich für den Schweizer Markt"
   - "Entitätsstrategie in Deutsch und Englisch für Sichtbarkeit im DACH-Raum"
   - "Überprüfung des Zugangs für GPTBot, ClaudeBot und PerplexityBot auf Ihrer Infrastruktur"
   - "Content-Restrukturierungsplan mit frageorientierten Überschriften und direkten Antworten"
@@ -60,8 +60,8 @@ Basel liegt am Dreiländereck Schweiz–Deutschland–Frankreich und ist Heimat 
 
 Für Basler Unternehmen bedeutet das eine besondere Chance: Der Markt ist international ausgerichtet und hochkompetitiv. StarkRank fokussiert sich auf deutsch- und englischsprachige KI-Sichtbarkeit — für französischsprachige Präsenz in der Romandie oder am Elsass-Rand ist eine Agentur mit Native-Copy-Kapazität die richtige Wahl. Wer in den deutschsprachigen KI-Antworten nicht vorkommt, verliert Sichtbarkeit gegenüber Wettbewerbern, die diesen Kanal bereits bedienen.
 
-## Wie funktioniert der AISO Score für den Schweizer Markt?
+## Wie funktioniert der AI Search Optimization Score für den Schweizer Markt?
 
-Unser AISO-Score-Framework (AI Search Optimisation — KI-Suchoptimierung) bewertet Ihre KI-Suchbereitschaft anhand von sechs Dimensionen. Für den Standort Basel berücksichtigen wir zusätzlich revDSG-konforme Umsetzung und grenzüberschreitende Sichtbarkeit im DACH-Raum — der deutschsprachige Kern deckt die kommerziell relevanten Zielgruppen ab.
+Unser AI Search Optimization Score Framework (AISO) bewertet Ihre KI-Suchbereitschaft anhand von sechs Dimensionen. Für den Standort Basel berücksichtigen wir zusätzlich revDSG-konforme Umsetzung und grenzüberschreitende Sichtbarkeit im DACH-Raum — der deutschsprachige Kern deckt die kommerziell relevanten Zielgruppen ab.
 
 Das Ergebnis ist eine priorisierte Roadmap für Ihre Wettbewerbsposition in Basel. Für die technische Umsetzung arbeiten wir mit unserem [SEO Audit in Basel](/ch-de/seo-audit-basel/) zusammen, und für lokale Sichtbarkeit mit unserem [Lokalen SEO-Service](/ch-de/lokale-seo-beratung-basel/).

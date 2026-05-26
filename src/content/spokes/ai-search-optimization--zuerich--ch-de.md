@@ -5,8 +5,8 @@ updatedDate: 2026-04-24
 locale: "ch-de"
 title: "KI-Suchoptimierung in Zürich"
 description: "Positionieren Sie Ihr Zürcher Unternehmen in den Antworten von ChatGPT, Perplexity, Claude und Google AI Overviews. StarkRank auditiert Ihre KI-Sichtbarkeit und baut die Autoritätssignale, die Finanzdienstleister, Tech-Scale-ups und Versicherer in Zürich brauchen."
-localCTA: "Kostenlose AISO-Ersteinschätzung für Zürich anfordern"
-highlightsTitle: "Der AISO Score: Sechs Dimensionen"
+localCTA: "Kostenlose AI-Search-Ersteinschätzung für Zürich anfordern"
+highlightsTitle: "Der AI Search Optimization Score: Sechs Dimensionen"
 highlights:
   - title: "Crawlbarkeit"
     description: "Haben GPTBot, ClaudeBot und PerplexityBot Zugriff auf Ihre Inhalte? Wir prüfen robots.txt, llms.txt, WAF-Regeln und Server-Logs — besonders relevant für Zürcher Finanz- und Insurance-Websites mit restriktiven Edge-Konfigurationen."
@@ -31,7 +31,7 @@ sectors:
   - name: "Beratung und Professional Services"
     description: "Zürcher Strategieberater, Wirtschaftsprüfer und Spezialanwälte werden von Entscheidern über LLMs vorevaluiert, bevor ein erstes Gespräch stattfindet. Sichtbarkeit in KI-Antworten ersetzt zunehmend Kaltakquise und Referrals als erster Kontaktpunkt."
 deliverables:
-  - "Vollständige AISO-Score-Analyse mit Bewertung pro Dimension und Wettbewerbsvergleich im Zürcher Sektor"
+  - "Vollständige AI Search Optimization Score-Analyse mit Bewertung pro Dimension und Wettbewerbsvergleich im Zürcher Sektor"
   - "Entity-Strategie mit Organization- und FinancialService-Schema (wo zutreffend), sameAs-Links zu Zefix, LinkedIn und Wikidata"
   - "Crawler-Audit für GPTBot, ClaudeBot, PerplexityBot inklusive WAF- und CDN-Konfigurationsprüfung"
   - "Content-Restrukturierungsplan mit frageorientierten Überschriften und direkten Antwortblöcken"
@@ -61,8 +61,8 @@ Zürich ist der grösste Finanzplatz der Schweiz, Sitz der meisten Schweizer Ver
 
 Wer in diesen Antworten nicht vorkommt, verliert die Evaluationsphase — oft bevor ein erstes Gespräch überhaupt stattfindet. Für den Zürcher Finanz- und Tech-Markt ist das besonders relevant, weil Entscheider zunehmend LLMs als erste Recherche-Stufe nutzen.
 
-## Wie funktioniert der AISO Score für den Zürcher Markt?
+## Wie funktioniert der AI Search Optimization Score für den Zürcher Markt?
 
-Unser AISO-Score-Framework (AI Search Optimisation — KI-Suchoptimierung) bewertet Ihre KI-Suchbereitschaft entlang von sechs Dimensionen. Für den Standort Zürich gewichten wir Entitätssignale aus dem Schweizer Handelsregister (Zefix), LinkedIn-Unternehmensdaten und branchenspezifische Register (bei regulierten Finanzdienstleistern zusätzlich FINMA-Einträge und sameAs-Verweise) besonders stark — das sind die Signale, über die LLMs Schweizer Unternehmen heute verknüpfen.
+Unser AI Search Optimization Score Framework (AISO) bewertet Ihre KI-Suchbereitschaft entlang von sechs Dimensionen. Für den Standort Zürich gewichten wir Entitätssignale aus dem Schweizer Handelsregister (Zefix), LinkedIn-Unternehmensdaten und branchenspezifische Register (bei regulierten Finanzdienstleistern zusätzlich FINMA-Einträge und sameAs-Verweise) besonders stark — das sind die Signale, über die LLMs Schweizer Unternehmen heute verknüpfen.
 
 Das Ergebnis ist eine priorisierte Roadmap für Ihre Wettbewerbsposition im Zürcher KI-Suchumfeld. Für die technische Umsetzung arbeiten wir mit unserem [SEO Audit in Zürich](/ch-de/seo-audit-zuerich/) zusammen, für lokale Sichtbarkeit mit der [Lokalen SEO-Beratung](/ch-de/lokale-seo-beratung-zuerich/).

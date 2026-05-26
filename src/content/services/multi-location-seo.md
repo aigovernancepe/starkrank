@@ -13,7 +13,7 @@ features:
   - "NAP consistency audits (critical post-M&A)"
   - "Location-specific grid-based rank tracking"
   - "Per-location ROI reporting with portfolio rollup"
-  - "AI search optimization per location (AISO Score)"
+  - "AI search optimization per location (AI Search Optimization Score)"
 relatedServices:
   - "ai-search-optimization"
   - "local-seo-consulting"
