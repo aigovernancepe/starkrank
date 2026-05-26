@@ -597,18 +597,18 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
       <table class="w-full max-w-4xl border-collapse text-sm font-body">
         <thead>
           <tr class="border-b-2 border-navy text-left">
-            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Tier</th>
-            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Seiten</th>
-            <th class="py-3 pr-4 font-label font-bold uppercase tracking-wide text-xs text-navy">Festpreis</th>
+            <th class="py-3 pr-6 font-label font-bold uppercase tracking-wide text-xs text-navy whitespace-nowrap">Tier</th>
+            <th class="py-3 pr-6 font-label font-bold uppercase tracking-wide text-xs text-navy whitespace-nowrap">Seiten</th>
+            <th class="py-3 pr-6 font-label font-bold uppercase tracking-wide text-xs text-navy whitespace-nowrap">Festpreis</th>
             <th class="py-3 font-label font-bold uppercase tracking-wide text-xs text-navy">Profil</th>
           </tr>
         </thead>
         <tbody>
           {buildTiers.map((row) => (
             <tr class="border-b border-gray-light/40 align-top">
-              <td class="py-3 pr-4 font-headline font-bold text-navy">{row.tier}</td>
-              <td class="py-3 pr-4 text-dark">{row.pages}</td>
-              <td class="py-3 pr-4 text-dark">{row.price}</td>
+              <td class="py-3 pr-6 font-headline font-bold text-navy whitespace-nowrap">{row.tier}</td>
+              <td class="py-3 pr-6 text-dark whitespace-nowrap">{row.pages}</td>
+              <td class="py-3 pr-6 text-dark whitespace-nowrap">{row.price}</td>
               <td class="py-3 text-gray">{row.profile}</td>
             </tr>
           ))}
@@ -621,7 +621,7 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
       </p>
       <div class="mt-6 flex flex-col sm:flex-row gap-3">
         <Button href="/ch-de/erstberatung/" variant="primary">Erstberatung anfragen</Button>
-        <Button href="/ch-de/aiso-check/" variant="secondary">AI-Search-Check starten</Button>
+        <Button href="/ch-de/aiso-check/" variant="outline">AI-Search-Check starten</Button>
       </div>
     </div>
   </Section>
