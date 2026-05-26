@@ -33,7 +33,7 @@ const serviceSchema = {
 };
 
 const faqItems = [
-  { question: 'Wie unterscheidet sich das vom Authority-Dimension im AISO Score?', answer: 'Die AISO-Authority-Dimension (15% Gewicht, Teil unseres 6-Dimensions-KI-Suche-Readiness-Audits) deckt Knowledge-Graph-Präsenz, sameAs-Abdeckung und LLM-Trainingsdaten-Sichtbarkeit ab. Das E-E-A-T-Audit ist der evidenzbasierte Deep-Dive darunter — 40 Punkte, Signal für Signal, fokussiert auf das, was Content zeigt, statt auf Entitäts-Ebene-Signale. Sie ergänzen sich.' },
+  { question: 'Wie unterscheidet sich das vom Authority-Dimension im AI Search Optimization Score?', answer: 'Die AI-Search-Authority-Dimension (15% Gewicht, Teil unseres 6-Dimensions-KI-Suche-Readiness-Audits) deckt Knowledge-Graph-Präsenz, sameAs-Abdeckung und LLM-Trainingsdaten-Sichtbarkeit ab. Das E-E-A-T-Audit ist der evidenzbasierte Deep-Dive darunter — 40 Punkte, Signal für Signal, fokussiert auf das, was Content zeigt, statt auf Entitäts-Ebene-Signale. Sie ergänzen sich.' },
   { question: 'Warum ist Experience die am meisten unterschätzte Dimension?', answer: 'Experience-Content kann nicht von KI erzeugt werden — er muss von jemandem kommen, der es tatsächlich getan hat. Fehlschlag-Stories, Workflow-Details, Fallanekdoten mit konkreten Zahlen und eigene Fotografien sind für Wettbewerber ausserordentlich schwer zu kopieren und für Googles Rater wie LLM-Zitations-Systeme ausserordentlich stark.' },
   { question: 'Was, wenn Experience als Abwesend bewertet wird?', answer: 'Experience-Content wird extrahiert, nicht geschrieben. Wird Experience als Abwesend oder Schwach bewertet, ist die wirksamste Remediation ein Experteninterview oder eine Expertenbibliothek mit Ihrem Fachexperten. Die Audit-Empfehlung nennt, welche Themen und Dimensionen das Interview abdecken soll.' },
   { question: 'Wie bewertet das Audit YMYL-Compliance?', answer: 'Für Zahnmedizin, Recht, Medizin, Finanzberatung, Handwerk und Kfz prüfen wir Trustworthiness-Signale gegen anwendbare Regularien (revDSG, HMG, UWG, FINMA-Regulierung, FMH-Vorgaben, DSGVO bei grenzüberschreitendem Geschäft). Compliance-Lücken erscheinen als Trustworthiness-Evidenz und drücken den Trust-Score. Sie erscheinen im Remediation-Plan als priorisierte Fixes. Die Prüfung ist indikativ und ersetzt keine juristische Stellungnahme; eine abschliessende rechtliche Bewertung ist separat zu beauftragen.' },
@@ -80,7 +80,7 @@ const relatedLinks = [
   { title: 'Experteninterview', href: '/ch-de/experteninterview/' },
   { title: 'Expertenbibliothek', href: '/ch-de/expertenbibliothek/' },
   { title: 'Content-Marketing', href: '/content-marketing-basel/' },
-  { title: 'Kostenloser AISO-Check', href: '/aiso-check/' },
+  { title: 'Kostenloser AI-Search-Check', href: '/aiso-check/' },
 ];
 import { getSelfLastModified } from '../../utils/getLastModified';
 const lastModified = getSelfLastModified(import.meta.url);
@@ -203,7 +203,7 @@ const lastModifiedLabel = lastModified.toLocaleDateString('de-CH', { year: 'nume
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Signal-Evidenz pro Dimension</strong> — konkrete Beobachtungen mit URLs und Zeilen-Referenzen für Vorhandenes und Abwesendes</span></li>
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Priorisierter Remediation-Plan</strong> — Top-3-Fixes pro Dimension, geordnet nach Wirkung gewichtet mit Machbarkeit</span></li>
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">YMYL-Compliance-Abgleich</strong><sup>*</sup> — anwendbare Regularien markiert und Trustworthiness-Signalen zugeordnet</span></li>
-              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Querverweise</strong> — Abgleich mit AISO-Authority-Dimension, Copywriting-Audit-E-E-A-T-Subscore und Experteninterview-Dateien</span></li>
+              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Querverweise</strong> — Abgleich mit AI-Search-Authority-Dimension, Copywriting-Audit-E-E-A-T-Subscore und Experteninterview-Dateien</span></li>
               <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">90-Tage-Re-Audit</strong> — Folge-Bewertung zur Verfolgung von Dimensions-Deltas und Signal-Progression</span></li>
             </ul>
             <p class="text-sm text-gray/70 mt-4"><sup>*</sup> Der Compliance-Abgleich ist indikativ und ersetzt keine juristische Stellungnahme; eine abschliessende rechtliche Bewertung ist separat zu beauftragen.</p>
@@ -220,7 +220,7 @@ const lastModifiedLabel = lastModified.toLocaleDateString('de-CH', { year: 'nume
                 <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0"></span><span>40-Punkte-Composite</span></div>
                 <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0"></span><span>4 Dimensionen × 10 Punkte</span></div>
                 <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0"></span><span>90-Tage-Re-Audit inklusive</span></div>
-                <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0"></span><span>Speist AISO-Authority-Dimension</span></div>
+                <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0"></span><span>Speist AI-Search-Authority-Dimension</span></div>
               </div>
             </div>
 
@@ -249,7 +249,7 @@ const lastModifiedLabel = lastModified.toLocaleDateString('de-CH', { year: 'nume
   <Section bg="cream">
     <SectionHeader label="Preise" title="Wie viel kostet das E-E-A-T-Audit?" />
     <p class="text-base font-body text-gray leading-relaxed max-w-3xl mb-10">
-      1'500 CHF pauschal für ein Einzel-Site-Audit mit Stichprobe bis zu 10 repräsentativen Seiten. Grössere Stichproben über 10 Seiten kosten 140 CHF pro Seite. Beim Bündeln mit dem AISO Score Bundle (3'600 CHF) ist das E-E-A-T-Audit ohne Aufpreis enthalten und wird zur Evidenz-Ebene unter der AISO-Authority-Dimension.
+      1'500 CHF pauschal für ein Einzel-Site-Audit mit Stichprobe bis zu 10 repräsentativen Seiten. Grössere Stichproben über 10 Seiten kosten 140 CHF pro Seite. Beim Bündeln mit dem AI Search Optimization Score Bundle (3'600 CHF) ist das E-E-A-T-Audit ohne Aufpreis enthalten und wird zur Evidenz-Ebene unter der AI-Search-Authority-Dimension.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
@@ -269,16 +269,16 @@ const lastModifiedLabel = lastModified.toLocaleDateString('de-CH', { year: 'nume
       </div>
 
       <div class="bg-white border-2 border-blue rounded-lg p-6 flex flex-col">
-        <h3 class="text-lg font-headline font-black text-navy mb-2">AISO-Bundle</h3>
+        <h3 class="text-lg font-headline font-black text-navy mb-2">AI-Search-Bundle</h3>
         <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">KI-Suche-Readiness + E-E-A-T-Deep-Dive</p>
         <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
           <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Alle Features des Standalone-Audits</li>
-          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> AISO Score 6-Dimensions-Audit</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> AI Search Optimization Score 6-Dimensions-Audit</li>
           <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Wettbewerbs-Benchmarking</li>
           <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> E-E-A-T als Evidenz-Ebene unter Authority</li>
         </ul>
         <p class="text-2xl font-headline font-black text-navy mb-4">3'600 CHF <span class="text-sm font-body font-normal text-gray">(E-E-A-T enthalten)</span></p>
-        <Button href="/ch-de/kontakt/" variant="primary" size="md">AISO-Bundle buchen</Button>
+        <Button href="/ch-de/kontakt/" variant="primary" size="md">AI-Search-Bundle buchen</Button>
       </div>
     </div>
 
@@ -328,6 +328,6 @@ const lastModifiedLabel = lastModified.toLocaleDateString('de-CH', { year: 'nume
   <!-- CTA -->
   <CTABanner bg="navy" title="Bereit, zu bewerten, was Google und KI tatsächlich belohnen?" subtitle="Unsere 40-Punkte-Rubrik, evidenzbasierte Signalanalyse und das 90-Tage-Re-Audit liefern Ihnen einen Score, den Sie verteidigen können, einen Remediation-Plan, den Sie umsetzen können, und ein Re-Scoring, das Fortschritt belegt. 1'500 CHF pauschal, geliefert in 7 Tagen.">
     <Button href="/ch-de/kontakt/" variant="primary" size="lg">E-E-A-T-Audit buchen</Button>
-    <Button href="/ch-de/ki-suchoptimierung-basel/" variant="secondary" size="lg">AISO-Bundle anfragen</Button>
+    <Button href="/ch-de/ki-suchoptimierung-basel/" variant="secondary" size="lg">AI-Search-Bundle anfragen</Button>
   </CTABanner>
 </BaseLayout>
