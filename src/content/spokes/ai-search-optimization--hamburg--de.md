@@ -3,7 +3,7 @@ serviceSlug: "ai-search-optimization"
 citySlug: "hamburg"
 locale: "de"
 title: "KI-Suchoptimierung in Hamburg"
-description: "Verankern Sie Ihr Hamburger Unternehmen in den Antworten von ChatGPT, Perplexity und Google AI Overviews. StarkRank misst, restrukturiert und überwacht Ihre digitale Präsenz für nachhaltige Sichtbarkeit in KI-gestützter Suche."
+description: "Verankern Sie Ihr Hamburger Unternehmen in ChatGPT, Perplexity und Google AI Overviews. StarkRank baut Ihre Präsenz für nachhaltige KI-Sichtbarkeit."
 localCTA: "Kostenlose AI-Search-Ersteinschätzung für Hamburg anfordern"
 highlightsTitle: "Der AI Search Optimization Score: Sechs Dimensionen"
 highlights:

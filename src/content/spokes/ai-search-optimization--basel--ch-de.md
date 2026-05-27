@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-22
 locale: "ch-de"
 title: "KI-Suchoptimierung in Basel"
-description: "Positionieren Sie Ihr Basler Unternehmen in den Antworten von ChatGPT, Perplexity und Google AI Overviews. StarkRank auditiert, restrukturiert und überwacht Ihre digitale Präsenz für maximale KI-Sichtbarkeit im Schweizer und internationalen Markt."
+description: "Positionieren Sie Ihr Basler Unternehmen in ChatGPT, Perplexity und Google AI Overviews. StarkRank baut Ihre Präsenz für maximale KI-Sichtbarkeit."
 localCTA: "Kostenlose AI-Search-Ersteinschätzung für Basel anfordern"
 highlightsTitle: "Der AI Search Optimization Score: Sechs Dimensionen"
 highlights:

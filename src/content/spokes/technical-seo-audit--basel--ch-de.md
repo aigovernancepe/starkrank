@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-22
 locale: "ch-de"
 title: "SEO Audit in Basel"
-description: "Identifizieren Sie die technischen Probleme, die Ihre Sichtbarkeit in Suchmaschinen und KI-Plattformen bremsen. StarkRank liefert eine vollständige Diagnose mit priorisierter Massnahmenplanung für Unternehmen in Basel."
+description: "Technische SEO-Diagnose für Basler Unternehmen. StarkRank identifiziert Probleme, die Ihre Sichtbarkeit in Suchmaschinen und KI-Plattformen bremsen."
 localCTA: "SEO Audit für Basel anfordern"
 highlightsTitle: "Was wir prüfen"
 sectorsTitle: "Welche technischen Probleme finden wir am häufigsten?"

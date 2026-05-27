@@ -4,7 +4,7 @@ citySlug: "zuerich"
 updatedDate: 2026-04-24
 locale: "ch-de"
 title: "KI-Suchoptimierung in Zürich"
-description: "Positionieren Sie Ihr Zürcher Unternehmen in den Antworten von ChatGPT, Perplexity, Claude und Google AI Overviews. StarkRank auditiert Ihre KI-Sichtbarkeit und baut die Autoritätssignale, die Finanzdienstleister, Tech-Scale-ups und Versicherer in Zürich brauchen."
+description: "Positionieren Sie Ihr Zürcher Unternehmen in ChatGPT, Perplexity und Google AI Overviews. StarkRank baut Autoritätssignale für Finanz und Tech."
 localCTA: "Kostenlose AI-Search-Ersteinschätzung für Zürich anfordern"
 highlightsTitle: "Der AI Search Optimization Score: Sechs Dimensionen"
 highlights:

@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-23
 locale: "ch-de"
 title: "Content Marketing in Basel"
-description: "Wir entwickeln mehrsprachige Content-Hubs für Basler Unternehmen aus Pharma, Life Sciences und Finanzdienstleistungen. Strategischer Content in Deutsch, Französisch und Englisch — optimiert für organische Suche, KI-Zitierbarkeit und grenzüberschreitende Sichtbarkeit im Dreiländereck."
+description: "Wir entwickeln mehrsprachige Content-Hubs für Basler Pharma-Unternehmen — optimiert für organische Suche und KI-Zitierbarkeit am Dreiländereck."
 localCTA: "Kostenlose Content-Strategie für Basel anfordern"
 highlightsTitle: "Fünf Säulen unserer Content-Strategie für Basel"
 highlights:

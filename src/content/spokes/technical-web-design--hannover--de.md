@@ -4,7 +4,7 @@ citySlug: "hannover"
 updatedDate: 2026-03-23
 locale: "de"
 title: "Technisches Webdesign in Hannover"
-description: "StarkRank entwickelt technisch exzellente Websites für Hannoveraner Mittelständler — DSGVO-konform, barrierearm, performant und optimiert für industrielle B2B-Zielgruppen."
+description: "StarkRank entwickelt technisch exzellente Websites für Hannoveraner Mittelständler — DSGVO-konform, barrierearm und für industrielle B2B-Zielgruppen."
 localCTA: "Kostenloses Webdesign-Erstgespräch für Hannover vereinbaren"
 highlightsTitle: "Technisches Webdesign: Unsere Kernbereiche"
 highlights:

@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-23
 locale: "ch-de"
 title: "SEO-Texterstellung in Basel"
-description: "Suchmaschinenoptimierte Texte für Basler Unternehmen in Deutsch, Französisch und Englisch. Wir schreiben Fachcopy für Pharma, Life Sciences und Finanzdienstleistungen — optimiert für Google, KI-Suchplattformen und die regulatorischen Anforderungen des Schweizer Marktes."
+description: "SEO-Texte für Basler Pharma-Unternehmen in DE/FR/EN — optimiert für Google, KI-Suchplattformen und revDSG-konforme Anforderungen."
 localCTA: "Kostenloses SEO-Textkonzept für Basel anfordern"
 highlightsTitle: "Unser Ansatz für SEO-Texte am Dreiländereck"
 highlights:

@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-23
 locale: "ch-de"
 title: "Google Analytics Beratung in Basel"
-description: "revDSG-konforme Analytics-Implementierung für Basler Unternehmen. StarkRank richtet GA4 für trinationales Tracking, Pharma-Compliance und mehrsprachige B2B-Attributionsmodelle ein — datenschutzkonform und geschäftsrelevant."
+description: "revDSG-konforme Analytics-Implementierung für Basler Unternehmen. StarkRank richtet GA4 für Pharma-Compliance und mehrsprachige B2B-Attribution ein."
 localCTA: "Kostenloses Analytics-Audit für Basel anfordern"
 highlightsTitle: "Unser Analytics-Beratungsansatz für Basel"
 highlights:

@@ -4,7 +4,7 @@ citySlug: "zuerich"
 updatedDate: 2026-04-24
 locale: "ch-de"
 title: "Content Marketing in Zürich"
-description: "Wir entwickeln Content-Hubs für Zürcher Unternehmen aus Finanzdienstleistungen, Versicherungen, Beratung und Tech. Thought Leadership in Schweizer Hochdeutsch und Englisch — strukturiert für organische Suche, KI-Zitierbarkeit und institutionelle Käuferreisen."
+description: "Content-Hubs für Zürcher Finanz- und Tech-Unternehmen. Thought Leadership (DE/EN) — strukturiert für organische Suche, KI-Zitierbarkeit und Käuferreisen."
 localCTA: "Kostenlose Content-Strategie für Zürich anfordern"
 highlightsTitle: "Fünf Säulen unserer Content-Strategie für Zürich"
 highlights:

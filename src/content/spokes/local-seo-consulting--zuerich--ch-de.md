@@ -4,7 +4,7 @@ citySlug: "zuerich"
 updatedDate: 2026-04-24
 locale: "ch-de"
 title: "Lokale SEO-Beratung in Zürich"
-description: "Dominieren Sie die lokalen Suchergebnisse und Google Maps in Zürich. StarkRank optimiert Ihre lokale Präsenz für Kreis 1, Enge, Paradeplatz und die gesamte Stadt — in klassischen Suchmaschinen und KI-Plattformen."
+description: "Dominieren Sie lokale Suchergebnisse und Google Maps in Zürich. StarkRank optimiert Ihre Präsenz für Kreis 1, Paradeplatz und die gesamte Stadt."
 localCTA: "Lokale Sichtbarkeit in Zürich verbessern"
 highlightsTitle: "Was wir optimieren"
 sectorsTitle: "Welche Zürcher Unternehmen profitieren am stärksten?"

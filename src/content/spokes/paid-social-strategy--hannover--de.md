@@ -4,7 +4,7 @@ citySlug: "hannover"
 updatedDate: 2026-03-23
 locale: "de"
 title: "Paid Social Strategy in Hannover"
-description: "Paid Social Strategie für B2B-Unternehmen in Hannover. StarkRank entwickelt LinkedIn-Kampagnen für industrielle Leadgenerierung, Meta-Strategien für Employer Branding und DSGVO-konformes Tracking für alle Social-Ads-Kanäle."
+description: "Paid Social Strategie für B2B-Unternehmen in Hannover. StarkRank baut LinkedIn-Kampagnen für industrielle Leads plus DSGVO-konformes Tracking."
 localCTA: "Kostenlose Paid Social Analyse für Hannover anfordern"
 highlightsTitle: "Was unsere Paid Social Strategy umfasst"
 highlights:

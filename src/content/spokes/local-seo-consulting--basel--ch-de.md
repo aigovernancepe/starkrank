@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-22
 locale: "ch-de"
 title: "Lokale SEO-Beratung in Basel"
-description: "Dominieren Sie die lokalen Suchergebnisse und Google Maps in der Region Basel. StarkRank optimiert Ihre lokale Präsenz für Sichtbarkeit in der Schweiz, Deutschland und Frankreich — in klassischen Suchmaschinen und KI-Plattformen."
+description: "Dominieren Sie lokale Suchergebnisse und Google Maps in Basel. StarkRank optimiert Ihre Präsenz am Dreiländereck — in Suchmaschinen und KI-Plattformen."
 localCTA: "Lokale Sichtbarkeit in Basel verbessern"
 highlightsTitle: "Was wir optimieren"
 sectorsTitle: "Welche lokalen Unternehmen profitieren am stärksten?"

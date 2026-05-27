@@ -4,7 +4,7 @@ citySlug: "hannover"
 updatedDate: 2026-03-23
 locale: "de"
 title: "Google Ads Audit in Hannover"
-description: "Unabhängiges Google Ads Audit für Unternehmen in Hannover. StarkRank analysiert Kontostruktur, Keyword-Qualität, Gebotsstrategien und Conversion-Tracking — und zeigt, wo Ihr Mittelstand-Budget verschwendet wird."
+description: "Unabhängiges Google Ads Audit in Hannover. StarkRank prüft Kontostruktur, Keywords und Tracking — und zeigt, wo Ihr Mittelstands-Budget verpufft."
 localCTA: "Kostenloses Google Ads Audit für Hannover starten"
 highlightsTitle: "Was unser Google Ads Audit abdeckt"
 highlights:

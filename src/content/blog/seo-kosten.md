@@ -1,6 +1,6 @@
 ---
 title: "Was kostet SEO? Der ehrliche Preisleitfaden 2026"
-description: "SEO kostet zwischen 2.000 und 10.000 Euro pro Monat. Was jede Preisstufe beinhaltet, welche Faktoren den Preis bestimmen und wie Sie Fehlinvestitionen vermeiden."
+description: "SEO kostet zwischen 2.000 und 10.000 Euro pro Monat. Was jede Preisstufe beinhaltet und wie Sie Fehlinvestitionen vermeiden."
 pubDate: 2026-01-08
 updatedDate: 2026-01-08
 author: "Janko Feye"

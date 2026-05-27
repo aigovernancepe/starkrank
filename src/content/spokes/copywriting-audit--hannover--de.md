@@ -4,7 +4,7 @@ citySlug: "hannover"
 updatedDate: 2026-03-23
 locale: "de"
 title: "Text-Audit in Hannover"
-description: "Umfassender Text-Audit für Unternehmen in Hannover: E-E-A-T-Bewertung, KI-Zitierfähigkeitsanalyse und GEO-Readiness-Check. StarkRank identifiziert Optimierungspotenziale für den DACH-Markt."
+description: "Text-Audit für Unternehmen in Hannover: E-E-A-T-Bewertung, KI-Zitierfähigkeit und GEO-Readiness-Check für den Mittelstand."
 localCTA: "Kostenlosen Text-Audit für Hannover anfordern"
 highlightsTitle: "Vier Dimensionen unseres Text-Audits"
 highlights:

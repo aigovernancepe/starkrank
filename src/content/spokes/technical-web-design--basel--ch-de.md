@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-23
 locale: "ch-de"
 title: "Technisches Webdesign in Basel"
-description: "StarkRank gestaltet barrierefreie, compliance-konforme Websites für Basler Unternehmen. Von Pharma-Portalen bis zu mehrsprachigen B2B-Plattformen — technisch einwandfrei, revDSG-konform und für den trinationalen Markt optimiert."
+description: "StarkRank gestaltet barrierefreie, revDSG-konforme Websites für Basler Unternehmen — Pharma-Portale und mehrsprachige B2B-Plattformen am Dreiländereck."
 localCTA: "Kostenloses Webdesign-Erstgespräch für Basel vereinbaren"
 highlightsTitle: "Unser technischer Webdesign-Ansatz"
 highlights:

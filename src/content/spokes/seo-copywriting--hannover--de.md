@@ -4,7 +4,7 @@ citySlug: "hannover"
 updatedDate: 2026-03-23
 locale: "de"
 title: "SEO-Texterstellung in Hannover"
-description: "Entity-basierte SEO-Texte für B2B-Unternehmen in Hannover. StarkRank verbindet technisches Schreiben mit Keyword-Strategie und KI-Optimierung für maximale Sichtbarkeit im deutschen Markt."
+description: "Entity-basierte SEO-Texte für B2B-Unternehmen in Hannover. StarkRank verbindet technisches Schreiben mit KI-Optimierung für maximale Sichtbarkeit."
 localCTA: "Kostenloses SEO-Text-Audit für Hannover anfordern"
 highlightsTitle: "Fünf Prinzipien unserer SEO-Texterstellung"
 highlights:

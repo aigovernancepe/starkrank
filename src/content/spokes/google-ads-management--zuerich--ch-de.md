@@ -4,7 +4,7 @@ citySlug: "zuerich"
 updatedDate: 2026-04-24
 locale: "ch-de"
 title: "Google Ads (PPC) Management in Zürich"
-description: "Professionelles Google-Ads-Management für Zürcher Unternehmen im teuersten Paid-Search-Markt der Schweiz. StarkRank baut kampagnenstrukturen, die im Finanz-, Versicherungs- und Tech-Sektor tragfähige CPAs liefern — mit transparenter Gebotssteuerung und Quality-Score-Disziplin."
+description: "Google-Ads-Management für Zürcher Unternehmen im teuersten Paid-Search-Markt. StarkRank liefert tragfähige CPAs im Finanz-, Versicherungs- und Tech-Sektor."
 localCTA: "Kostenlose Google-Ads-Beratung für Zürich anfordern"
 highlightsTitle: "Was unser Google-Ads-Management umfasst"
 highlights:
