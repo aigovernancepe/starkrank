@@ -75,12 +75,55 @@ const processSteps = [
     body: 'Monatliche Daten, Quartals-Review, Pivot wo nötig. Was nicht wirkt, fliegt. Was wirkt, skaliert. Zurück zu Schritt 01 mit neuer Datenlage.',
   },
 ];
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://starkrank.com/#organization',
+  name: 'StarkRank',
+  url: 'https://starkrank.com',
+  logo: 'https://starkrank.com/SR-Logo-standard_high-res.png',
+  description: 'Digital-Marketing-Agentur aus der Deutschschweiz mit Fokus auf KI-Suchoptimierung, technisches SEO und datengetriebene Wachstumsstrategien — aktiv in Basel, Zürich, Bern und der übrigen Deutschschweiz.',
+  sameAs: [
+    'https://www.linkedin.com/company/starkrank',
+    'https://www.wikidata.org/wiki/Q138764144',
+    'https://www.crunchbase.com/organization/starkrank',
+    'https://www.local.ch/de/d/oberwil-bl/4104/informatikdienstleistungen/starkrank-feye-KN9ZenQHAYQeeoIE6nM2SQ',
+    'https://www.search.ch/tel/oberwil/langegasse-117/starkrank-feye',
+  ],
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      email: 'info@starkrank.com',
+      contactType: 'sales',
+      areaServed: 'CH',
+      availableLanguage: ['German', 'English'],
+    },
+    {
+      '@type': 'ContactPoint',
+      email: 'kontakt@starkrank.com',
+      contactType: 'sales',
+      areaServed: 'DE',
+      availableLanguage: ['German', 'English'],
+    },
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://starkrank.com/#website',
+  name: 'StarkRank',
+  url: 'https://starkrank.com',
+  publisher: { '@id': 'https://starkrank.com/#organization' },
+};
 ---
 
 <BaseLayout
   title="StarkRank Schweiz — SEO & KI-Suchoptimierung für KMU"
   description="StarkRank ist eine Schweizer Digital-Marketing-Agentur mit Fokus auf KI-Suchoptimierung, technisches SEO und datengetriebene Wachstumsstrategien für Unternehmen in der Schweiz."
   locale="ch-de"
+  schema={[orgSchema, websiteSchema]}
 >
   <HeroSection
     eyebrow="Stark in Search. Stark in Data. Stark in Growth."
