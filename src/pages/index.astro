@@ -41,12 +41,55 @@ const processSteps = [
     body: 'Monatliche Daten, Quartals-Review, Pivot wo nötig. Was nicht wirkt, fliegt. Was wirkt, skaliert. Zurück zu Schritt 01 mit neuer Datenlage.',
   },
 ];
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://starkrank.com/#organization',
+  name: 'StarkRank',
+  url: 'https://starkrank.com',
+  logo: 'https://starkrank.com/SR-Logo-standard_high-res.png',
+  description: 'Datengetriebene Digital-Marketing-Agentur mit Fokus auf KI-Suchoptimierung, technisches SEO und Performance-Marketing für den deutschen Mittelstand — Sitz im Raum Hannover.',
+  sameAs: [
+    'https://www.linkedin.com/company/starkrank',
+    'https://www.wikidata.org/wiki/Q138764144',
+    'https://www.crunchbase.com/organization/starkrank',
+    'https://www.local.ch/de/d/oberwil-bl/4104/informatikdienstleistungen/starkrank-feye-KN9ZenQHAYQeeoIE6nM2SQ',
+    'https://www.search.ch/tel/oberwil/langegasse-117/starkrank-feye',
+  ],
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      email: 'info@starkrank.com',
+      contactType: 'sales',
+      areaServed: 'CH',
+      availableLanguage: ['German', 'English'],
+    },
+    {
+      '@type': 'ContactPoint',
+      email: 'kontakt@starkrank.com',
+      contactType: 'sales',
+      areaServed: 'DE',
+      availableLanguage: ['German', 'English'],
+    },
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://starkrank.com/#website',
+  name: 'StarkRank',
+  url: 'https://starkrank.com',
+  publisher: { '@id': 'https://starkrank.com/#organization' },
+};
 ---
 
 <BaseLayout
   title="StarkRank — SEO & KI-Suchoptimierung für den Mittelstand"
   description="StarkRank unterstützt Unternehmen und den Mittelstand mit KI-Suchoptimierung, technischem SEO, Performance-Marketing und datengetriebenen Wachstumsstrategien — mit Sitz im Raum Hannover, aktiv im ganzen Nordwesten."
   locale="de"
+  schema={[orgSchema, websiteSchema]}
 >
   <HeroSection
     eyebrow="Stark in Search. Stark in Data. Stark in Growth."
