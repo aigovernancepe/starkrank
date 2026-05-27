@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-23
 locale: "ch-de"
 title: "Text-Audit in Basel"
-description: "Systematische Bewertung Ihrer bestehenden Inhalte in Deutsch, Französisch und Englisch. Wir analysieren Textqualität, SEO-Performance, KI-Zitierbarkeit und regulatorische Konformität für Basler Unternehmen aus Pharma, Life Sciences und Finanzdienstleistungen."
+description: "Bewertung Ihrer Inhalte (DE/FR/EN): Textqualität, SEO-Performance, KI-Zitierbarkeit und revDSG-Konformität für Basler Pharma-Unternehmen."
 localCTA: "Kostenloses Text-Audit für Basel anfordern"
 highlightsTitle: "Was unser Text-Audit für Basel umfasst"
 highlights:

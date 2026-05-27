@@ -4,7 +4,7 @@ citySlug: "zuerich"
 updatedDate: 2026-04-24
 locale: "ch-de"
 title: "Google Ads Audit in Zürich"
-description: "Umfassendes Google-Ads-Audit für Zürcher Unternehmen im teuersten Paid-Search-Markt der Schweiz. StarkRank identifiziert Budgetlecks, prüft revDSG-konformes Tracking und deckt Optimierungspotenziale im Finanz-, Versicherungs- und Tech-Segment auf."
+description: "Google-Ads-Audit für Zürcher Unternehmen. StarkRank identifiziert Budgetlecks und prüft revDSG-konformes Tracking im Finanz- und Tech-Sektor."
 localCTA: "Kostenloses Google-Ads-Audit für Zürich anfordern"
 highlightsTitle: "Was unser Google-Ads-Audit prüft"
 highlights:

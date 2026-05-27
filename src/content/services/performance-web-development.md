@@ -1,7 +1,7 @@
 ---
 title: "Performance Web Development"
 slug: "performance-web-development"
-description: "Performance-engineered web development for Core Web Vitals, accessibility, and AI-readiness. Modern stacks (Astro, Next.js, Spryker, Shopware) implemented for speed, conversion, and long-term maintainability."
+description: "Performance-engineered web development for Core Web Vitals, accessibility, and AI-readiness. Modern stacks (Astro, Next.js, Shopware) built for speed."
 pillar: "data-web"
 isPillarHub: false
 features:

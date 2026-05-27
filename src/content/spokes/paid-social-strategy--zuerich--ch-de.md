@@ -4,7 +4,7 @@ citySlug: "zuerich"
 updatedDate: 2026-04-24
 locale: "ch-de"
 title: "Paid-Social-Strategie in Zürich"
-description: "Bezahlte Social-Media-Strategie für Zürcher Unternehmen auf LinkedIn, Meta und YouTube. StarkRank entwickelt B2B-Kampagnen für Finanzdienstleister, Versicherer und Tech-Scale-ups — mit präzisem Funktions- und Seniorität-Targeting in Schweizer Hochdeutsch."
+description: "Paid Social Strategie für Zürcher Unternehmen auf LinkedIn und Meta. StarkRank baut B2B-Kampagnen für Finanzdienstleister, Versicherer und Tech-Scale-ups."
 localCTA: "Kostenlose Paid-Social-Beratung für Zürich anfordern"
 highlightsTitle: "Was unsere Paid-Social-Strategie umfasst"
 highlights:

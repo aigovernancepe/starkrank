@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-23
 locale: "ch-de"
 title: "Paid Social Strategie in Basel"
-description: "Bezahlte Social-Media-Strategie für Basler Unternehmen auf LinkedIn, Meta und TikTok. StarkRank entwickelt mehrsprachige Kampagnen (DE/FR/EN) mit Fokus auf Pharma/B2B-Targeting und grenzüberschreitende Zielgruppenansprache am Dreiländereck."
+description: "Paid Social Strategie für Basler Unternehmen auf LinkedIn und Meta. Mehrsprachige Kampagnen (DE/FR/EN) mit Pharma- und B2B-Targeting am Dreiländereck."
 localCTA: "Kostenlose Paid-Social-Beratung für Basel anfordern"
 highlightsTitle: "Was unsere Paid Social Strategie umfasst"
 highlights:

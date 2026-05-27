@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-23
 locale: "ch-de"
 title: "Google Ads Audit in Basel"
-description: "Umfassendes Google Ads Audit für Basler Unternehmen. StarkRank identifiziert verschwendetes Budget, prüft revDSG-konformes Tracking und deckt Optimierungspotenziale im Schweizer Premium-CPC-Markt auf."
+description: "Google Ads Audit für Basler Unternehmen. StarkRank identifiziert verschwendetes Budget, prüft revDSG-konformes Tracking und deckt CPC-Potenziale auf."
 localCTA: "Kostenloses Google Ads Audit für Basel anfordern"
 highlightsTitle: "Was unser Google Ads Audit prüft"
 highlights:

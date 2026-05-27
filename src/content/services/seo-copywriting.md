@@ -1,7 +1,7 @@
 ---
 title: "SEO Copywriting"
 slug: "seo-copywriting"
-description: "SEO copywriting that ranks in Google AND gets cited by ChatGPT, Perplexity, and AI Overviews. Capsule Content Technique, transparent AI policy, fixed price per article."
+description: "SEO copywriting that ranks in Google and gets cited by ChatGPT, Perplexity, and AI Overviews. Capsule Content Technique, fixed price per article."
 pillar: "content-copywriting"
 isPillarHub: false
 updatedDate: 2026-04-28

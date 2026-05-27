@@ -2,7 +2,7 @@
 title: "E-commerce SEO Audit"
 slug: "ecommerce-seo-audit"
 updatedDate: 2026-04-23
-description: "Specialist SEO audit for product catalog websites covering 8 weakness areas: product schema, filter navigation, variant handling, category pages, out-of-stock behaviour, sitemap coverage, review schema, and PDP image optimisation. Delivered in 7 business days."
+description: "Specialist SEO audit for product catalogs: product schema, filter navigation, variants, category pages, PDP images. Delivered in 7 business days."
 pillar: "search-ai-intelligence"
 isPillarHub: false
 features:

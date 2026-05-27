@@ -2,7 +2,7 @@
 title: "E-E-A-T Audit"
 slug: "eeat-audit"
 updatedDate: 2026-04-23
-description: "Evidence-based assessment of demonstrated Experience, Expertise, Authoritativeness, and Trustworthiness across a 4-dimension, 40-point rubric. Includes signal-based remediation, YMYL compliance check, and a 90-day re-audit."
+description: "Evidence-based E-E-A-T assessment across a 4-dimension, 40-point rubric. Includes signal-based remediation, YMYL compliance check, and a 90-day re-audit."
 pillar: "authority-pr"
 isPillarHub: false
 features:

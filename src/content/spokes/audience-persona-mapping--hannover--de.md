@@ -4,7 +4,7 @@ citySlug: "hannover"
 updatedDate: 2026-03-23
 locale: "de"
 title: "Zielgruppenanalyse in Hannover"
-description: "Datengetriebene B2B-Zielgruppenanalyse für Unternehmen in Hannover. StarkRank erstellt Buyer Personas für Mittelstands-Entscheider, analysiert Suchverhalten und LinkedIn-Aktivität und identifiziert die Inhalte, die Ihre Zielgruppe wirklich bewegen."
+description: "Datengetriebene B2B-Zielgruppenanalyse in Hannover. StarkRank erstellt Buyer Personas für Mittelstands-Entscheider auf Basis von Such- und LinkedIn-Daten."
 localCTA: "Kostenlose Persona-Erstanalyse für Hannover anfordern"
 highlightsTitle: "Unser Ansatz für B2B-Persona-Entwicklung"
 highlights:

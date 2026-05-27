@@ -4,7 +4,7 @@ citySlug: "basel"
 updatedDate: 2026-03-23
 locale: "ch-de"
 title: "Google Ads (PPC) Management in Basel"
-description: "Professionelles Google Ads Management für Basler Unternehmen. StarkRank entwickelt präzise Kampagnenstrukturen für den Schweizer Premium-Markt — mit mehrsprachiger Keyword-Strategie (DE/FR/EN) und pharma-optimiertem B2B-Targeting."
+description: "Google Ads Management für Basler Unternehmen. Mehrsprachige Keyword-Strategie (DE/FR/EN) mit pharma-optimiertem B2B-Targeting am Dreiländereck."
 localCTA: "Kostenlose Google Ads Beratung für Basel anfordern"
 highlightsTitle: "Was unser Google Ads Management umfasst"
 highlights:
