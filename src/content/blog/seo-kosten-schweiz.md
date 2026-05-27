@@ -1,5 +1,5 @@
 ---
-title: "Was kostet SEO in der Schweiz? 2026"
+title: "SEO Kosten Schweiz 2026: Was kostet eine SEO-Agentur?"
 description: "SEO in der Schweiz kostet 3'000–12'000 CHF pro Monat. Was jede Preisstufe beinhaltet und worauf Schweizer Unternehmen achten sollten."
 pubDate: 2026-01-22
 updatedDate: 2026-01-22
