@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/ui/Section.astro';
+import Breadcrumbs from '../components/ui/Breadcrumbs.astro';
+import Button from '../components/ui/Button.astro';
+import Card from '../components/ui/Card.astro';
+import CTABanner from '../components/ui/CTABanner.astro';
+import { Content } from '../markdown/b2b-seo.md';
+import { getSelfLastModified } from '../utils/getLastModified';
+
+const site = Astro.site?.origin ?? 'https://starkrank.com';
+const pageUrl = `${site}/b2b-seo/`;
+
+const title = 'B2B-SEO-Agentur für Hersteller & Industrie | StarkRank';
+const description = 'B2B-SEO-Agentur für Industrie und Hersteller: sichtbar in Google und in KI-Antworten wie ChatGPT. Messbar mit dem AI Search Optimization Score.';
+
+// FAQ — mirrors the visible "Welche Fragen stellen B2B-Unternehmen..." section
+// in the body 1:1 (Schema-Content-Parität, §5.5). Source of truth for the
+// FAQPage schema below; the rendered Q&A lives in src/markdown/b2b-seo.md.
+const faqItems = [
+  {
+    question: 'Lohnt sich SEO bei niedrigen B2B-Suchvolumina?',
+    answer: 'Ja. Im B2B entscheidet die Kaufabsicht, nicht das Volumen. Wenige Suchanfragen mit hohem CPC stehen oft für konkrete Beschaffungsprozesse, ein einziger Lead kann den Aufwand mehrfach decken. Reichweite ist im B2B nachrangig; Präzision auf kaufstarke Keywords zählt.',
+  },
+  {
+    question: 'Ersetzt KI-Suche die klassische SEO im B2B?',
+    answer: 'Nein. KI-Funktionen wie ChatGPT, Perplexity und Google-KI-Antworten setzen auf dem klassischen Ranking-System auf. Wer in KI-Antworten zitiert werden will, braucht ein solides SEO-Fundament: technische Erreichbarkeit, Content-Qualität und ein konsistentes Entity-Fundament. Beides gehört zusammen.',
+  },
+  {
+    question: 'Wie lange dauert B2B-SEO bis zu ersten Ergebnissen?',
+    answer: 'B2B-SEO wirkt über Monate, passend zu den langen Verkaufszyklen. Technisch lassen sich schnelle Erfolge und KI-Sichtbarkeit oft früh verbessern; nachhaltige Rankings und Zitierfähigkeit für kaufstarke Keywords bauen sich über mehrere Monate auf. Deshalb arbeiten wir im Retainer-Modell statt mit Einmal-Projekten.',
+  },
+  {
+    question: 'Was unterscheidet SEO von SEA im B2B?',
+    answer: 'SEA (Google Ads) liefert sofortige Reichweite gegen einen Klickpreis pro Lead; SEO baut einen organischen Bestand auf, der über die Zeit günstiger wird. Im B2B ergänzen sich beide: SEA für kurzfristige Kampagnen, SEO und KI-Zitierfähigkeit für nachhaltige Sichtbarkeit.',
+  },
+  {
+    question: 'Arbeitet StarkRank mit unserem bestehenden Web-Team zusammen?',
+    answer: 'Ja. Unser Standardmodell liefert priorisierte, umsetzbare Empfehlungen fürs interne Web-Team, abgestimmt auf Ihre vorhandenen Systeme. Auf Wunsch übernehmen wir Umsetzung und laufendes Reporting, das bestimmt der Umfang, nicht ein festes Paket.',
+  },
+];
+
+// provider bound by @id to the canonical Organization node (defined in
+// SchemaOrg.astro + emitted on the homepage). Same convention as the
+// /services/[slug] hubs — cross-page @id reference, not a re-declared node.
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'B2B-SEO',
+  serviceType: 'B2B Search Engine Optimization',
+  url: pageUrl,
+  provider: { '@id': 'https://starkrank.com/#organization' },
+  areaServed: [
+    { '@type': 'Country', name: 'Deutschland' },
+    { '@type': 'Country', name: 'Schweiz' },
+  ],
+  audience: {
+    '@type': 'BusinessAudience',
+    audienceType: 'B2B-Hersteller, Industrie- und Technologieunternehmen',
+  },
+  description:
+    'B2B-SEO-Agentur für Hersteller, Industrie- und Technologieunternehmen im DACH-Raum. Sichtbarkeit in Google und in KI-Antworten, messbar mit dem AI Search Optimization Score.',
+};
+
+// BreadcrumbList is emitted by the <Breadcrumbs> component below (same names +
+// URLs), so it is intentionally NOT duplicated here. Page carries exactly three
+// schema objects: Service + FAQPage (here) and BreadcrumbList (Breadcrumbs).
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const schemas = [serviceSchema, faqSchema];
+
+const breadcrumbs = [
+  { label: 'Start', href: '/' },
+  { label: 'B2B-SEO', href: '/b2b-seo/' },
+];
+
+// DE-root page, CH-DE mirror (/ch-de/b2b-seo/) comes later — self-referential
+// hreflang only, no dangling alternates.
+const hreflangAlternates = [
+  { hreflang: 'de-DE', href: pageUrl },
+  { hreflang: 'x-default', href: pageUrl },
+];
+
+const relatedLinks = [
+  { title: 'Kostenloser AI-Search-Check', href: '/aiso-check/' },
+  { title: 'SEO Audit Agentur', href: '/services/seo-audit-agentur/' },
+  { title: 'E-Commerce-SEO-Audit', href: '/ecommerce-seo-audit/' },
+  { title: 'E-E-A-T-Audit', href: '/eeat-audit/' },
+  { title: 'Preise SEO', href: '/preise/seo/' },
+];
+
+const lastModified = getSelfLastModified(import.meta.url);
+const lastModifiedIso = lastModified.toISOString().split('T')[0];
+const lastModifiedLabel = lastModified.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' });
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale="de"
+  schema={schemas}
+  hreflangAlternates={hreflangAlternates}
+>
+  <Section bg="cream">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2">
+        <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+          Search &amp; AI Intelligence
+        </span>
+        <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+          B2B-SEO-Agentur: Sichtbarkeit, wo B2B-Einkäufer heute recherchieren
+        </h1>
+
+        <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+          <span>
+            Zuletzt aktualisiert: <time datetime={lastModifiedIso}>{lastModifiedLabel}</time>
+          </span>
+          <span>
+            Von <a href="/ueber-uns/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
+          </span>
+        </div>
+
+        <div class="mt-8 prose prose-lg max-w-none font-body text-dark prose-numbered-cards prose-branded-bullets
+          [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:font-headline [&>h2]:font-black [&>h2]:text-navy [&>h2]:tracking-tight [&>h2]:mt-14 [&>h2]:mb-4 [&>h2]:pt-6 [&>h2]:border-t [&>h2]:border-gray-light/30
+          [&>p]:leading-relaxed [&>p]:text-gray [&>p]:mb-6
+          [&_strong]:text-dark
+          [&_a]:text-blue [&_a]:font-semibold [&_a:hover]:text-blue-light
+          first:[&>h2]:mt-0 first:[&>h2]:pt-0 first:[&>h2]:border-t-0
+          [&>ol]:space-y-4
+          [&>ol>li]:bg-white [&>ol>li]:border [&>ol>li]:border-gray-light/40 [&>ol>li]:rounded-lg [&>ol>li]:p-5 [&>ol>li]:text-gray [&>ol>li]:text-base [&>ol>li]:leading-relaxed
+          [&>ul]:space-y-3
+          [&>ul>li]:text-gray [&>ul>li]:text-base [&>ul>li]:leading-relaxed
+          [&_table]:my-8 [&_table]:w-full [&_table]:border-collapse [&_table]:text-sm [&_table]:bg-white [&_table]:border [&_table]:border-gray-light/40 [&_table]:rounded-lg [&_table]:overflow-hidden
+          [&_thead]:bg-cream [&_thead]:border-b-2 [&_thead]:border-navy/20
+          [&_th]:text-left [&_th]:font-headline [&_th]:font-bold [&_th]:text-navy [&_th]:px-4 [&_th]:py-3 [&_th]:align-top
+          [&_tbody_tr]:border-b [&_tbody_tr]:border-gray-light/30 [&_tbody_tr:last-child]:border-b-0
+          [&_td]:px-4 [&_td]:py-3 [&_td]:text-gray [&_td]:leading-relaxed [&_td]:align-top
+          [&_td:first-child]:font-semibold [&_td:first-child]:text-dark">
+          <Content />
+        </div>
+
+        <div class="mt-12">
+          <Button href="/kontakt/" variant="primary" size="lg">Kostenlose Erstberatung anfordern</Button>
+        </div>
+      </div>
+
+      <aside class="lg:col-span-1">
+        <div class="lg:sticky lg:top-8 space-y-8">
+          <div class="bg-white border border-gray-light/40 rounded-lg p-6">
+            <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Methodik</p>
+            <div class="space-y-2 text-sm font-body text-gray">
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0"></span><span>AI Search Optimization Score</span></div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0"></span><span>6 Dimensionen, 0–100 Punkte</span></div>
+              <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0"></span><span>Google- und KI-Sichtbarkeit</span></div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Verwandte Dienstleistungen</h3>
+            <div class="space-y-3">
+              {relatedLinks.map((r) => (
+                <Card href={r.href}>
+                  <h4 class="text-sm font-headline font-bold text-navy">{r.title}</h4>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </Section>
+
+  <CTABanner bg="navy" title="Bereit für messbare B2B-Sichtbarkeit?" subtitle="Kostenlose KI-Sichtbarkeits-Ersteinschätzung — wir prüfen Ihre aktuelle Sichtbarkeit in Google und in KI-Antworten und skizzieren die größten Hebel.">
+    <Button href="/aiso-check/" variant="primary" size="lg">KI-Sichtbarkeits-Check anfordern</Button>
+    <Button href="/kontakt/" variant="secondary" size="lg">Erstgespräch vereinbaren</Button>
+  </CTABanner>
+</BaseLayout>
