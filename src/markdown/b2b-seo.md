@@ -48,6 +48,19 @@ Die Zusammenarbeit beginnt mit einer kostenlosen Ersteinschätzung und einem Aud
 
 Sie behalten die Kontrolle: Unsere SEO-Beratung liefert umsetzbare Empfehlungen für Ihr internes Team und übernimmt auf Wunsch die Umsetzung. Den Umfang bestimmen Sie, nicht ein festes Paket.
 
+## Was kostet eine B2B-SEO-Agentur, und woran erkennt man die passende?
+
+B2B-SEO ist eine laufende Dienstleistung, kein einmaliges Projekt, und wird in der Regel als monatlicher Retainer abgerechnet, weil Wirkung über Verkaufszyklen hinweg entsteht. StarkRank veröffentlicht seine Bänder transparent: ab 990 € für einzelne KMU und 2.000–4.000 € für den mehrkanaligen Mittelstand. Für Enterprise- und Multi-Standort-Mandate, etwa bei global aufgestellten Herstellern, wird der Umfang individuell zugeschnitten, ohne Pauschalversprechen.
+
+Bei der Auswahl einer B2B-SEO-Agentur zählen andere Kriterien als reine Ranking-Versprechen. Nicht jeder SEO-Dienstleister kennt die Beschaffungslogik im B2B:
+
+- **Versteht die Agentur Ihre Branche und Ihren Beschaffungsprozess?** Beschaffungsgremium und Verkaufszyklus müssen in die Content-Strategie einfließen, nicht nur Keywords.
+- **Misst sie KI-Sichtbarkeit, nicht nur Google-Rankings?** Ein benanntes, nachvollziehbares Framework ist ein Qualitätssignal.
+- **Arbeitet sie mit Ihrem Web-Team zusammen?** Umsetzbare Empfehlungen schlagen undurchsichtige Arbeit hinter verschlossenen Türen.
+- **Ist die Preislogik offen?** Veröffentlichte Bänder statt „Preis auf Anfrage" zeigen, dass die Leistung definiert ist.
+
+Ein Warnsignal bleibt jede garantierte Top-Platzierung: Seriöse SEO arbeitet mit Substanz und Wahrscheinlichkeiten, nicht mit Garantien.
+
 → **[Kostenlose KI-Sichtbarkeits-Ersteinschätzung anfordern](/aiso-check/)**
 
 ## Was unterscheidet B2B-SEO von B2C?
@@ -100,19 +113,6 @@ Eine B2B-SEO-Strategie begleitet das Beschaffungsgremium über die gesamte Custo
 3. **Decision**, Anbieterkriterien, Referenzlogik und Beschaffungssicherheit adressieren.
 
 Jede Rolle braucht ihre eigene Antwort: Die Fachabteilung sucht technische Tiefe, der Einkauf will Vergleichbarkeit und Konditionen, die Geschäftsführung fragt nach ROI und Risiko. Eine B2B-Seite, die nur eine Rolle bedient, verliert die anderen, und damit oft die Mehrheit im Gremium. Jeder Kontaktpunkt ist zugleich eine eigene Suchanfrage und damit eine Chance, in Google und in KI-Antworten genannt zu werden.
-
-## Was kostet eine B2B-SEO-Agentur, und woran erkennt man die passende?
-
-B2B-SEO ist eine laufende Dienstleistung, kein einmaliges Projekt, und wird in der Regel als monatlicher Retainer abgerechnet, weil Wirkung über Verkaufszyklen hinweg entsteht. StarkRank veröffentlicht seine Bänder transparent: ab 990 € für einzelne KMU und 2.000–4.000 € für den mehrkanaligen Mittelstand. Für Enterprise- und Multi-Standort-Mandate, etwa bei global aufgestellten Herstellern, wird der Umfang individuell zugeschnitten, ohne Pauschalversprechen.
-
-Bei der Auswahl einer B2B-SEO-Agentur zählen andere Kriterien als reine Ranking-Versprechen. Nicht jeder SEO-Dienstleister kennt die Beschaffungslogik im B2B:
-
-- **Versteht die Agentur Ihre Branche und Ihren Beschaffungsprozess?** Beschaffungsgremium und Verkaufszyklus müssen in die Content-Strategie einfließen, nicht nur Keywords.
-- **Misst sie KI-Sichtbarkeit, nicht nur Google-Rankings?** Ein benanntes, nachvollziehbares Framework ist ein Qualitätssignal.
-- **Arbeitet sie mit Ihrem Web-Team zusammen?** Umsetzbare Empfehlungen schlagen undurchsichtige Arbeit hinter verschlossenen Türen.
-- **Ist die Preislogik offen?** Veröffentlichte Bänder statt „Preis auf Anfrage" zeigen, dass die Leistung definiert ist.
-
-Ein Warnsignal bleibt jede garantierte Top-Platzierung: Seriöse SEO arbeitet mit Substanz und Wahrscheinlichkeiten, nicht mit Garantien.
 
 ## Wann ist B2B-SEO nicht sinnvoll?
 
