@@ -61,7 +61,7 @@ Bei der Auswahl einer B2B-SEO-Agentur zählen andere Kriterien als reine Ranking
 
 Ein Warnsignal bleibt jede garantierte Top-Platzierung: Seriöse SEO arbeitet mit Substanz und Wahrscheinlichkeiten, nicht mit Garantien.
 
-→ **[Kostenlose KI-Sichtbarkeits-Ersteinschätzung anfordern](/aiso-check/)**
+<div class="not-prose mt-8 mb-10"><a href="/aiso-check/" class="inline-flex items-center justify-center gap-2 font-label font-semibold uppercase tracking-wide transition-all rounded-md bg-blue text-white! hover:bg-blue-light hover:text-white! no-underline! px-8 py-4 text-sm">Kostenlose KI-Sichtbarkeits-Ersteinschätzung anfordern</a></div>
 
 ## Was unterscheidet B2B-SEO von B2C?
 
