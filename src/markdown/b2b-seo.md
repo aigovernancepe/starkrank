@@ -37,6 +37,17 @@ Drei Punkte unterscheiden uns von einer klassischen SEO-Agentur:
 
 Den größten Hebel hat im B2B oft die Dimension Authority, und sie entsteht außerhalb der eigenen Website. KI-Systeme verstehen Inhalte als Beziehungen zwischen erkannten Entitäten: Unternehmen, Produkte, Verfahren, Personen. Damit ein Hersteller zitiert wird, muss seine Marke konsistent benannt und über das Web hinweg verknüpft sein: identische Schreibweise von Firmen- und Produktnamen, ein gepflegter Knowledge-Graph-Eintrag und sameAs-Verknüpfungen zu Profilen, die die KI bereits kennt. Solche konsistenten Signale schaffen Vertrauen und heben einen Hersteller im Wettbewerb sichtbar ab. Dieses Entity-Fundament ist im B2B häufig die größte Lücke und zugleich der schnellste Hebel, an dem unser Know-how und unsere Expertise ansetzen.
 
+## Wie läuft die Zusammenarbeit mit StarkRank ab?
+
+Die Zusammenarbeit beginnt mit einer kostenlosen Ersteinschätzung und einem Audit, das die Ausgangslage über alle sechs Dimensionen vermisst. Darauf folgt ein laufendes Mandat mit festem Rhythmus: monatliche Umsetzungspakete, regelmäßige Abstimmung mit Ihrem Web-Team und ein Quartals-Review zur Nachsteuerung. So bleibt die Wirkung über den langen Verkaufszyklus planbar.
+
+1. **Erstgespräch & Ersteinschätzung**, Ziele, Zielgruppe und Wettbewerber klären.
+2. **Audit & AI Search Optimization Score**, Ausgangslage und größte Hebel offenlegen.
+3. **Umsetzung in Sprints**, priorisierte Maßnahmen für Technik, Content und Entity-Fundament.
+4. **Reporting & Review**, Ranking, KI-Zitierfähigkeit und Leadgenerierung als feste KPIs messen.
+
+Sie behalten die Kontrolle: Unsere SEO-Beratung liefert umsetzbare Empfehlungen für Ihr internes Team und übernimmt auf Wunsch die Umsetzung. Den Umfang bestimmen Sie, nicht ein festes Paket.
+
 → **[Kostenlose KI-Sichtbarkeits-Ersteinschätzung anfordern](/aiso-check/)**
 
 ## Was unterscheidet B2B-SEO von B2C?
@@ -102,17 +113,6 @@ Bei der Auswahl einer B2B-SEO-Agentur zählen andere Kriterien als reine Ranking
 - **Ist die Preislogik offen?** Veröffentlichte Bänder statt „Preis auf Anfrage" zeigen, dass die Leistung definiert ist.
 
 Ein Warnsignal bleibt jede garantierte Top-Platzierung: Seriöse SEO arbeitet mit Substanz und Wahrscheinlichkeiten, nicht mit Garantien.
-
-## Wie läuft die Zusammenarbeit mit StarkRank ab?
-
-Die Zusammenarbeit beginnt mit einer kostenlosen Ersteinschätzung und einem Audit, das die Ausgangslage über alle sechs Dimensionen vermisst. Darauf folgt ein laufendes Mandat mit festem Rhythmus: monatliche Umsetzungspakete, regelmäßige Abstimmung mit Ihrem Web-Team und ein Quartals-Review zur Nachsteuerung. So bleibt die Wirkung über den langen Verkaufszyklus planbar.
-
-1. **Erstgespräch & Ersteinschätzung**, Ziele, Zielgruppe und Wettbewerber klären.
-2. **Audit & AI Search Optimization Score**, Ausgangslage und größte Hebel offenlegen.
-3. **Umsetzung in Sprints**, priorisierte Maßnahmen für Technik, Content und Entity-Fundament.
-4. **Reporting & Review**, Ranking, KI-Zitierfähigkeit und Leadgenerierung als feste KPIs messen.
-
-Sie behalten die Kontrolle: Unsere SEO-Beratung liefert umsetzbare Empfehlungen für Ihr internes Team und übernimmt auf Wunsch die Umsetzung. Den Umfang bestimmen Sie, nicht ein festes Paket.
 
 ## Wann ist B2B-SEO nicht sinnvoll?
 
