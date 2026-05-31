@@ -12,7 +12,7 @@ const site = Astro.site?.origin ?? 'https://starkrank.com';
 const pageUrl = `${site}/b2b-seo/`;
 
 const title = 'B2B-SEO-Agentur für Hersteller & Industrie | StarkRank';
-const description = 'B2B-SEO-Agentur für Industrie und Hersteller: sichtbar in Google und in KI-Antworten wie ChatGPT. Messbar mit dem AI Search Optimization Score.';
+const description = 'B2B-SEO-Agentur für Hersteller und Industrie: mehr qualifizierte Leads aus Google und KI-Antworten, messbar mit dem AI Search Optimization Score.';
 
 // FAQ — mirrors the visible "Welche Fragen stellen B2B-Unternehmen..." section
 // in the body 1:1 (Schema-Content-Parität, §5.5). Source of truth for the
@@ -20,7 +20,7 @@ const description = 'B2B-SEO-Agentur für Industrie und Hersteller: sichtbar in 
 const faqItems = [
   {
     question: 'Lohnt sich SEO bei niedrigen B2B-Suchvolumina?',
-    answer: 'Ja. Im B2B entscheidet die Kaufabsicht, nicht das Volumen. Wenige Suchanfragen mit hohem CPC stehen oft für konkrete Beschaffungsprozesse, ein einziger Lead kann den Aufwand mehrfach decken. Reichweite ist im B2B nachrangig; Präzision auf kaufstarke Keywords zählt.',
+    answer: 'Ja. Im B2B entscheidet die Kaufabsicht, nicht das Volumen. Wenige Suchanfragen mit hohem CPC stehen oft für konkrete Beschaffungsprozesse, ein einziger qualifizierter Lead kann den Aufwand mehrfach decken. Präzision auf kaufstarke Keywords zählt mehr als Reichweite.',
   },
   {
     question: 'Ersetzt KI-Suche die klassische SEO im B2B?',
@@ -28,15 +28,15 @@ const faqItems = [
   },
   {
     question: 'Wie lange dauert B2B-SEO bis zu ersten Ergebnissen?',
-    answer: 'B2B-SEO wirkt über Monate, passend zu den langen Verkaufszyklen. Technisch lassen sich schnelle Erfolge und KI-Sichtbarkeit oft früh verbessern; nachhaltige Rankings und Zitierfähigkeit für kaufstarke Keywords bauen sich über mehrere Monate auf. Deshalb arbeiten wir im Retainer-Modell statt mit Einmal-Projekten.',
+    answer: 'B2B-SEO wirkt über Monate, passend zu den langen Verkaufszyklen. Technische Quick-Wins und KI-Sichtbarkeit lassen sich oft früh verbessern; nachhaltige Rankings und Zitierfähigkeit für kaufstarke Keywords bauen sich über mehrere Monate auf. Deshalb arbeiten wir im Retainer-Modell statt mit Einmal-Projekten.',
   },
   {
     question: 'Was unterscheidet SEO von SEA im B2B?',
-    answer: 'SEA (Google Ads) liefert sofortige Reichweite gegen einen Klickpreis pro Lead; SEO baut einen organischen Bestand auf, der über die Zeit günstiger wird. Im B2B ergänzen sich beide: SEA für kurzfristige Kampagnen, SEO und KI-Zitierfähigkeit für nachhaltige Sichtbarkeit.',
+    answer: 'SEA (Google Ads) liefert sofortige Reichweite gegen einen Klickpreis pro Lead; SEO baut einen organischen Bestand auf, der über die Zeit günstiger wird. Im B2B ergänzen sich beide: bezahlte Suche für kurzfristige Kampagnen, SEO und KI-Zitierfähigkeit für langfristige Präsenz.',
   },
   {
     question: 'Arbeitet StarkRank mit unserem bestehenden Web-Team zusammen?',
-    answer: 'Ja. Unser Standardmodell liefert priorisierte, umsetzbare Empfehlungen fürs interne Web-Team, abgestimmt auf Ihre vorhandenen Systeme. Auf Wunsch übernehmen wir Umsetzung und laufendes Reporting, das bestimmt der Umfang, nicht ein festes Paket.',
+    answer: 'Ja. Unser Standardmodell liefert priorisierte, umsetzbare Empfehlungen fürs interne Web-Team, abgestimmt auf Ihre Systeme. Auf Wunsch übernehmen wir Umsetzung und laufendes Reporting. Das bestimmt der Umfang, nicht ein festes Paket.',
   },
 ];
 
@@ -59,7 +59,7 @@ const serviceSchema = {
     audienceType: 'B2B-Hersteller, Industrie- und Technologieunternehmen',
   },
   description:
-    'B2B-SEO-Agentur für Hersteller, Industrie- und Technologieunternehmen im DACH-Raum. Sichtbarkeit in Google und in KI-Antworten, messbar mit dem AI Search Optimization Score.',
+    'Auf B2B spezialisierte SEO-Agentur für Hersteller, Industrie- und Technologieunternehmen im DACH-Raum. Mehr qualifizierte Leads aus Google und KI-Antworten, messbar mit dem AI Search Optimization Score.',
 };
 
 // BreadcrumbList is emitted by the <Breadcrumbs> component below (same names +
@@ -118,7 +118,7 @@ const lastModifiedLabel = lastModified.toLocaleDateString('de-DE', { month: 'lon
           Search &amp; AI Intelligence
         </span>
         <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
-          B2B-SEO-Agentur: Sichtbarkeit, wo B2B-Einkäufer heute recherchieren
+          B2B-SEO-Agentur für Hersteller, Industrie und Technologie
         </h1>
 
         <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
