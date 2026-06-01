@@ -6,7 +6,7 @@ import SectionHeader from '../components/ui/SectionHeader.astro';
 import PillarCard from '../components/ui/PillarCard.astro';
 import BuildingGraphicStatic from '../components/ui/BuildingGraphicStatic.astro';
 import Button from '../components/ui/Button.astro';
-import CTABanner from '../components/ui/CTABanner.astro';
+import CTASplit from '../components/ui/CTASplit.astro';
 import { getLocalizedPillars } from '../data/pillars';
 
 const pillars = getLocalizedPillars('de');
@@ -170,14 +170,14 @@ const websiteSchema = {
     </div>
   </Section>
 
-  <CTABanner
-    bg="navy"
+  <CTASplit
+    eyebrow="Erstgespräch"
     title="Bereit zu wachsen?"
-    subtitle="Buchen Sie eine kostenlose Erstberatung."
-    backgroundImage="/images/home-cta.webp"
-    backgroundImageAlt="StarkRank-Team im Erstgespräch — drei Berater im offenen Austausch mit Kaffee, Basler Münster durchs Fenster sichtbar."
+    subtitle="Buchen Sie eine kostenlose Erstberatung — unverbindlich, ohne Verkaufsdruck. Wir hören erst zu, bevor wir etwas vorschlagen."
+    image="/images/home-cta.webp"
+    imageAlt="StarkRank-Team im Erstgespräch — drei Berater im offenen Austausch mit Kaffee."
     imagePosition="center top"
   >
     <Button href="/kontakt/" variant="primary" size="lg">Kontaktieren Sie uns</Button>
-  </CTABanner>
+  </CTASplit>
 </BaseLayout>
