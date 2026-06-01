@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import HeroSection from '../../../components/ui/HeroSection.astro';
+import SplitHero from '../../../components/ui/SplitHero.astro';
 import Section from '../../../components/ui/Section.astro';
 import SectionHeader from '../../../components/ui/SectionHeader.astro';
 import Card from '../../../components/ui/Card.astro';
+import BuildingGraphicStatic from '../../../components/ui/BuildingGraphicStatic.astro';
 import { getCollection } from 'astro:content';
 import { getLocalizedPillars } from '../../../data/pillars';
 import { getLocalizedNavHref } from '../../../data/navigation';
@@ -62,12 +63,22 @@ const servicesByPillar = pillars.map((pillar) => {
   description="Das vollständige StarkRank-Leistungsspektrum für Schweizer Unternehmen: KI-Suchoptimierung, technisches SEO, Google Ads, Content-Marketing und Analytics-Beratung — mit Datenverarbeitung in der Schweiz."
   locale="ch-de"
 >
-  <HeroSection
+  <SplitHero
     headline="Unsere Dienstleistungen"
     subheadline="Datenbasiertes Wachstum von KI-Suchintelligenz bis zu transparenter Messung — fokussiert auf Unternehmen in der Deutschschweiz."
-    backgroundImage="/images/services-hero.webp"
-    backgroundImageAlt="StarkRank-Team in detaillierter Strategie-Diskussion an einer gedruckten Wireframe-Skizze, Tageslicht und Stadtblick durchs Fenster — drei Teammitglieder im fokussierten Austausch."
+    image="/images/services-hero.webp"
+    imageAlt="StarkRank-Team in detaillierter Strategie-Diskussion an einer gedruckten Wireframe-Skizze, Tageslicht und Stadtblick durchs Fenster — drei Teammitglieder im fokussierten Austausch."
+    imagePosition="center top"
   />
+
+  <Section bg="white">
+    <SectionHeader
+      label="Übersicht"
+      title="Fünf Bausteine des digitalen Wachstums"
+      subtitle="Vier Bausteine des digitalen Marketings stehen auf dem Fundament Daten & Web. Klicken Sie einen Baustein an, um direkt zum Leistungsbereich zu springen."
+    />
+    <BuildingGraphicStatic linked />
+  </Section>
 
   {servicesByPillar.map(({ pillar, services }, idx) => (
     <Section bg={idx % 2 === 0 ? 'cream' : 'white'} id={pillar.id} class="scroll-mt-20">

@@ -7,7 +7,35 @@
  *
  * Font: the delivered file referenced "Inter 18pt"; remapped to the site brand stack
  * ('Inter Tight') so it renders with the loaded webfont. Geometry/kerning unchanged.
+ *
+ * `linked` (opt-in): turns each block into an in-page anchor to its pillar section
+ * (#search-ai-intelligence … #data-web). Used on /services as a clickable overview /
+ * table of contents. Default false keeps the flat homepage rendering untouched.
+ * Anchor href works without JS; a small enhancement adds smooth scroll (reduced-motion safe).
  */
+interface Props {
+  /** When true, each block links to its pillar section and gains hover/scroll behaviour. */
+  linked?: boolean;
+}
+
+const { linked = false } = Astro.props;
+
+// Wrapper element per block: clickable <a> when linked, plain <g> otherwise.
+const Wrapper = linked ? 'a' : 'g';
+
+const blockAria: Record<string, string> = {
+  'search-ai-intelligence': 'Zum Leistungsbereich Suche & KI scrollen',
+  'performance-media': 'Zum Leistungsbereich Performance Media scrollen',
+  'authority-pr': 'Zum Leistungsbereich Digital PR scrollen',
+  'content-copywriting': 'Zum Leistungsbereich Content scrollen',
+  'data-web': 'Zum Leistungsbereich Daten & Web scrollen',
+};
+
+function wrapAttrs(id: string) {
+  return linked
+    ? { href: `#${id}`, 'aria-label': blockAria[id], class: 'bg-block' }
+    : { id };
+}
 ---
 
 <svg
@@ -35,35 +63,86 @@
       }
     </style>
   </defs>
-  <g id="search-ai-intelligence">
+  <Wrapper {...wrapAttrs('search-ai-intelligence')}>
     <g>
       <polygon class="cls-6" points="74.14 15.12 15.51 73.74 15.51 349.32 186.29 349.32 186.29 15.12 74.14 15.12"/>
       <text class="cls-10" text-anchor="middle"><tspan x="100.9" y="185.84">Suche</tspan><tspan x="100.9" y="218.91">&amp; KI</tspan></text>
     </g>
-  </g>
-  <g id="performance-media">
+  </Wrapper>
+  <Wrapper {...wrapAttrs('performance-media')}>
     <g>
       <polygon class="cls-6" points="273.65 15.12 215.02 73.74 215.02 349.32 385.8 349.32 385.8 15.12 273.65 15.12"/>
       <text class="cls-10" text-anchor="middle"><tspan x="300.41" y="186.78">Performance</tspan><tspan x="300.41" y="219.85">Media</tspan></text>
     </g>
-  </g>
-  <g id="authority-pr">
+  </Wrapper>
+  <Wrapper {...wrapAttrs('authority-pr')}>
     <g>
       <polygon class="cls-6" points="472.94 15.12 414.31 73.74 414.31 349.32 585.09 349.32 585.09 15.12 472.94 15.12"/>
       <text class="cls-10" text-anchor="middle"><tspan x="499.7" y="204.43">Digital PR</tspan></text>
     </g>
-  </g>
-  <g id="content-copywriting">
+  </Wrapper>
+  <Wrapper {...wrapAttrs('content-copywriting')}>
     <g>
       <polygon class="cls-6" points="698.93 264.16 719.19 284.42 654.29 349.32 671.73 349.32 727.99 293.06 784.42 349.32 784.49 349.32 784.49 15.12 672.34 15.12 613.71 73.74 613.71 349.32 613.77 349.32 698.93 264.16"/>
       <polygon class="cls-6" points="746.72 349.32 729.15 331.91 711.75 349.32 746.72 349.32"/>
     </g>
     <text class="cls-10" text-anchor="middle"><tspan x="699.1" y="202.61">Content</tspan></text>
-  </g>
-  <g id="data-web">
+  </Wrapper>
+  <Wrapper {...wrapAttrs('data-web')}>
     <g>
       <polygon class="cls-1" points="702.16 358.9 671.53 389.54 671.53 358.9 15.51 358.88 15.51 414.86 784.19 414.88 784.19 358.91 702.16 358.9"/>
       <text class="cls-10" text-anchor="middle"><tspan x="399.85" y="397.19">Daten &amp; Web</tspan></text>
     </g>
-  </g>
+  </Wrapper>
 </svg>
+
+{linked && (
+  <style>
+    .bg-block {
+      cursor: pointer;
+      transition: transform 220ms cubic-bezier(0.4, 0, 0.2, 1);
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    .bg-block polygon {
+      transition: filter 220ms ease;
+    }
+    .bg-block:hover,
+    .bg-block:focus-visible {
+      transform: translateY(-6px);
+    }
+    .bg-block:hover polygon,
+    .bg-block:focus-visible polygon {
+      filter: brightness(1.08);
+    }
+    .bg-block:focus-visible {
+      outline: 2px solid #3b7dd8;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .bg-block,
+      .bg-block polygon {
+        transition: none !important;
+      }
+      .bg-block:hover,
+      .bg-block:focus-visible {
+        transform: none !important;
+      }
+    }
+  </style>
+
+  <script>
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll<HTMLAnchorElement>('.bg-block').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const href = link.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+        const target = document.querySelector<HTMLElement>(href);
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+      });
+    });
+  </script>
+)}
