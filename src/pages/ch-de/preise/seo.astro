@@ -4,7 +4,7 @@ import HeroSection from '../../../components/ui/HeroSection.astro';
 import Section from '../../../components/ui/Section.astro';
 import SectionHeader from '../../../components/ui/SectionHeader.astro';
 import Card from '../../../components/ui/Card.astro';
-import CTABanner from '../../../components/ui/CTABanner.astro';
+import CTASplit from '../../../components/ui/CTASplit.astro';
 import Button from '../../../components/ui/Button.astro';
 
 const title = 'SEO Kosten Schweiz — Transparente Retainer | StarkRank';
@@ -378,13 +378,15 @@ const schemas = [serviceSchema, breadcrumbSchema, faqSchema];
     </div>
   </Section>
 
-  <CTABanner
+  <CTASplit
+    eyebrow="Erstberatung"
     title="Welches Paket passt zu Ihrem Unternehmen?"
     subtitle="15-minütige Erstberatung, unverbindlich. Wir sagen Ihnen direkt, ob ein Retainer oder ein Audit der bessere Einstieg ist — und welcher Umfang realistisch zu Ihrem aktuellen Stand passt."
-    backgroundImage="/images/pricing-cta.webp"
-    backgroundImageAlt="StarkRank-Team in Erstgespräch — drei Berater am Tisch mit Laptop und Notizen, Basler Münster im Hintergrund."
+    image="/images/pricing-cta.webp"
+    imageAlt="StarkRank-Team in Erstgespräch — drei Berater am Tisch mit Laptop und Notizen, Basler Münster im Hintergrund."
+    imagePosition="center top"
   >
     <Button href="/ch-de/kontakt/" variant="primary">Kostenlose Erstberatung</Button>
     <Button href="/ch-de/kostenloser-google-ads-check/" variant="secondary">Kostenlose Audits ansehen</Button>
-  </CTABanner>
+  </CTASplit>
 </BaseLayout>
