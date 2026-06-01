@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HeroSection from '../components/ui/HeroSection.astro';
+import SplitHero from '../components/ui/SplitHero.astro';
 import Section from '../components/ui/Section.astro';
 import SectionHeader from '../components/ui/SectionHeader.astro';
 import LeadForm from '../components/ui/LeadForm.astro';
@@ -12,11 +12,13 @@ import LeadForm from '../components/ui/LeadForm.astro';
   locale="de"
   noViewTransitions
 >
-  <HeroSection
+  <SplitHero
     headline="Kontakt"
     subheadline="So läuft ein Erstgespräch ab — 15–20 Minuten am Telefon oder per Video, kostenlos und unverbindlich. Wir klären Scope und Budget — und empfehlen den Einstieg, der realistisch zu Ihrem aktuellen Stand passt."
-    backgroundImage="/images/kontakt-hero.webp"
-    backgroundImageAlt="StarkRank-Beraterin mit Headset im Erstgespräch, Kollege macht handschriftliche Notizen, Tageslicht und Basler Stadtblick durchs Fenster."
+    image="/images/kontakt-hero.webp"
+    imageAlt="StarkRank-Beraterin mit Headset im Erstgespräch, Kollege macht handschriftliche Notizen, Tageslicht und Basler Stadtblick durchs Fenster."
+    imagePosition="center top"
+    caption="Erstgespräch bei StarkRank"
   />
 
   <Section bg="cream">
