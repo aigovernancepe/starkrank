@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import HeroSection from '../../components/ui/HeroSection.astro';
+import SplitHero from '../../components/ui/SplitHero.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
@@ -311,15 +311,15 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 ---
 
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas} preloadImage="/images/notare-hero.webp">
-  <HeroSection
+  <SplitHero
     headline="SEO für Notare"
     subheadline="Sie sind im Register korrekt eingetragen — und gewinnen trotzdem keine Mandate, weil Google und ChatGPT Ihre Beurkundungs-Spezialisierungen gar nicht sehen. Bei Notaren prüfen wir zuerst, was Suchmaschinen und KI-Antworten von Ihrem Notariat zeigen — UWG-konform, bevor wir Content schreiben."
-    backgroundImage="/images/notare-hero.webp"
-    backgroundImageAlt="Notarin am Laptop in einem hellen Schweizer Notariats-Backoffice — Bildschirm zeigt abstraktes Diagnose-Dashboard mit aufsteigender Sichtbarkeitskurve"
+    image="/images/notare-hero.webp"
+    imageAlt="Notarin am Laptop in einem hellen Schweizer Notariats-Backoffice — Bildschirm zeigt abstraktes Diagnose-Dashboard mit aufsteigender Sichtbarkeitskurve"
   >
     <Button href="/ch-de/kontakt/" variant="primary">Erstberatung anfragen</Button>
     <Button href="#beispiel-diagnose" variant="secondary">Beispiel-Diagnose</Button>
-  </HeroSection>
+  </SplitHero>
 
   <LastUpdated date={dateModified} />
 

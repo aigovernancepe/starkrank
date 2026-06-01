@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import HeroSection from '../../components/ui/HeroSection.astro';
+import SplitHero from '../../components/ui/SplitHero.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
@@ -284,15 +284,15 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 ---
 
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas} preloadImage="/images/anwaelte-hero.webp">
-  <HeroSection
+  <SplitHero
     headline="SEO für Anwälte"
     subheadline="Sie stehen bei Google ganz oben — und gewinnen trotzdem keine Mandate, weil Ihre Kanzlei bei ChatGPT unvollständig oder falsch ankommt. Bei Anwälten prüfen wir zuerst, was Google und KI-Suchen von Ihrer Kanzlei sehen — BGFA-konform, bevor wir Content schreiben."
-    backgroundImage="/images/anwaelte-hero.webp"
-    backgroundImageAlt="Anwältin am Laptop in einem hellen Schweizer Kanzlei-Backoffice — Bildschirm zeigt abstraktes Diagnose-Dashboard mit aufsteigender Sichtbarkeitskurve"
+    image="/images/anwaelte-hero.webp"
+    imageAlt="Anwältin am Laptop in einem hellen Schweizer Kanzlei-Backoffice — Bildschirm zeigt abstraktes Diagnose-Dashboard mit aufsteigender Sichtbarkeitskurve"
   >
     <Button href="/ch-de/kontakt/" variant="primary">Erstberatung anfragen</Button>
     <Button href="#beispiel-diagnose" variant="secondary">Beispiel-Diagnose</Button>
-  </HeroSection>
+  </SplitHero>
 
   <LastUpdated date={dateModified} />
 

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import HeroSection from '../../components/ui/HeroSection.astro';
+import SplitHero from '../../components/ui/SplitHero.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
@@ -384,15 +384,15 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 ---
 
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas} preloadImage="/images/vermoegensverwalter-hero.webp">
-  <HeroSection
+  <SplitHero
     headline="SEO für Vermögensverwalter"
     subheadline="Ihre Mandanten recherchieren bei Google und ChatGPT — und klicken weiter, wenn sie Ihre Boutique nicht klar sehen. Wir machen Ihre Substanz sichtbar, FIDLEG- und VSV-konform."
-    backgroundImage="/images/vermoegensverwalter-hero.webp"
-    backgroundImageAlt="Schweizer Vermögensverwalter-Boutique — Partner am Konferenztisch mit Tablet-Dashboard, abstrakte Portfolio-Allokations-Visualisierung, See-Andeutung im Fenster"
+    image="/images/vermoegensverwalter-hero.webp"
+    imageAlt="Schweizer Vermögensverwalter-Boutique — Partner am Konferenztisch mit Tablet-Dashboard, abstrakte Portfolio-Allokations-Visualisierung, See-Andeutung im Fenster"
   >
     <Button href="/ch-de/erstberatung/" variant="primary">Erstberatung anfragen</Button>
     <Button href="/ch-de/aiso-check/" variant="secondary">AI-Search-Check starten</Button>
-  </HeroSection>
+  </SplitHero>
 
   <LastUpdated date={dateModified} />
 

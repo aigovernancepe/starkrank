@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import HeroSection from '../../components/ui/HeroSection.astro';
+import SplitHero from '../../components/ui/SplitHero.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
@@ -259,15 +259,15 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 ---
 
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas} preloadImage="/images/aerzte-hero.webp">
-  <HeroSection
+  <SplitHero
     headline="SEO für Ärzte"
     subheadline="Sie ranken auf Position 1 für Ihren wichtigsten Krankheitsbild-Begriff — und ChatGPT zitiert trotzdem nicht Sie, sondern Ihre Konkurrenz. Bei Ärzten prüfen wir zuerst, was Google und KI-Suchen von Ihrer Praxis-Website überhaupt sehen, bevor wir Content optimieren."
-    backgroundImage="/images/aerzte-hero.webp"
-    backgroundImageAlt="Fachärztin am Schreibtisch in einer Schweizer Praxis — Laptop zeigt Diagnose-Dashboard mit aufsteigender Sichtbarkeitskurve"
+    image="/images/aerzte-hero.webp"
+    imageAlt="Fachärztin am Schreibtisch in einer Schweizer Praxis — Laptop zeigt Diagnose-Dashboard mit aufsteigender Sichtbarkeitskurve"
   >
     <Button href="/ch-de/kontakt/" variant="primary">Erstberatung anfragen</Button>
     <Button href="#fallstudie" variant="secondary">Lebende Fallstudie</Button>
-  </HeroSection>
+  </SplitHero>
 
   <LastUpdated date={dateModified} />
 

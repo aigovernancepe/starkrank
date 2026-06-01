@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import HeroSection from '../../components/ui/HeroSection.astro';
+import SplitHero from '../../components/ui/SplitHero.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
@@ -177,15 +177,15 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 ---
 
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas}>
-  <HeroSection
+  <SplitHero
     headline="SEO für Praxisgründer"
     subheadline="Drei Festpreis-Pakete für die ersten drei Praxisjahre — AI-Search-Startpaket, Technisches Webdesign, Gründer-Komplettpaket. Kein laufender Retainer, ein Briefing, klare Lieferzeit, Selbstverwaltungs-UI für den Alltag. Wenn die Praxis nach drei Jahren etabliert ist, wechselt das Modell in eine laufende Begleitung."
-    backgroundImage="/images/aerzte-hero.webp"
-    backgroundImageAlt="Leere Sprechstunden-Empfangstheke einer modernen Schweizer Arztpraxis"
+    image="/images/aerzte-hero.webp"
+    imageAlt="Ärztin am Schreibtisch in einer neu gegründeten Schweizer Praxis — Laptop zeigt Sichtbarkeits-Dashboard"
   >
     <Button href="/ch-de/kontakt/" variant="primary">Erstberatung anfragen</Button>
     <Button href="#preise" variant="secondary">Pakete ansehen</Button>
-  </HeroSection>
+  </SplitHero>
 
   <LastUpdated date={dateModified} />
 

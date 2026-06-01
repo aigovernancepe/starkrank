@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import HeroSection from '../../components/ui/HeroSection.astro';
+import SplitHero from '../../components/ui/SplitHero.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
@@ -267,15 +267,15 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
 ---
 
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas} preloadImage="/images/zahnaerzte-hero.webp">
-  <HeroSection
+  <SplitHero
     headline="SEO für Zahnärzte"
     subheadline="Sie haben mehrere Behandlungs-Pages live — und ChatGPT, Perplexity und Google AI Overviews zitieren trotzdem die Konkurrenz. Bei Zahnärzten prüfen wir zuerst, was Suchmaschinen und KI-Antwortmaschinen von Ihrer Praxis-Website sehen, bevor wir neuen Content schreiben."
-    backgroundImage="/images/zahnaerzte-hero.webp"
-    backgroundImageAlt="Zahnärztin am Schreibtisch in einer Schweizer Aesthetic-Praxis — Laptop zeigt Diagnose-Dashboard mit aufsteigender Sichtbarkeitskurve"
+    image="/images/zahnaerzte-hero.webp"
+    imageAlt="Zahnärztin am Schreibtisch in einer Schweizer Aesthetic-Praxis — Laptop zeigt Diagnose-Dashboard mit aufsteigender Sichtbarkeitskurve"
   >
     <Button href="/ch-de/kontakt/" variant="primary">Erstberatung anfragen</Button>
     <Button href="#beispiel-diagnose" variant="secondary">Beispiel-Diagnose ansehen</Button>
-  </HeroSection>
+  </SplitHero>
 
   <LastUpdated date={dateModified} />
 
