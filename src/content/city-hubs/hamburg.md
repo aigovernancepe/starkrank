@@ -42,13 +42,23 @@ faq:
 cta: "Kostenlose Erstberatung für Hamburg anfordern"
 ---
 
-## Was macht eine SEO Agentur in Hamburg genau?
+<details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6" open>
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Was macht eine SEO Agentur in Hamburg genau?</h2>
+<svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+</summary>
 
 Eine SEO-Agentur in Hamburg baut digitale Sichtbarkeit für Unternehmen aus E-Commerce, Verlagen, Maritime und Hightech-Industrie auf — mit technischem Audit, Content-Strategie, Linkaufbau und KI-Antwort-Optimierung. StarkRank verbindet das mit einer Spezialisierung auf datenintensive Konsumgüter- und B2B-Märkte mit globaler Reichweite.
 
 Konkret heißt das: Wir analysieren, wo Ihre Hamburger Zielgruppe heute sucht — Google für die erste Anbieter-Recherche, LinkedIn für B2B-Verifikation, KI-Tools wie ChatGPT oder Perplexity für die Vorauswahl, plus E-Commerce-spezifische Kanäle wie Vergleichsportale und Marktplätze. Daraus entsteht eine Roadmap mit klaren Meilensteinen, statt einer generischen Standard-Empfehlung. Versandhandels-Marken brauchen schnelle Iteration auf Sortiment- und Performance-Ebene; Verlage eine Mischung aus redaktioneller Reichweite und Subscriber-Conversion; Maritime-Anbieter zweisprachige Strecken für globale Beschaffungs-Recherche; Luftfahrt-Zulieferer Compliance-konforme Inhalte mit hoher fachlicher Tiefe.
 
-## Wie suchen B2B- und Konsumgüter-Käufer in Hamburg tatsächlich nach Anbietern?
+</details>
+
+<details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Wie suchen B2B- und Konsumgüter-Käufer in Hamburg tatsächlich nach Anbietern?</h2>
+<svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+</summary>
 
 Hamburger Kaufentscheider verwenden vier Kanäle parallel — Google für Anbieter- und Produktrecherche ("Webagentur Hamburg", "Marketing Agentur Hamburg", Kategorie-Suchen im E-Commerce), LinkedIn für B2B-Anbieter-Verifikation, KI-Tools wie ChatGPT und Perplexity für die Vorauswahl, und im Versandhandels- und Konsumgüter-Bereich zunehmend direkte KI-Empfehlungen für Markenkauf-Entscheidungen.
 
@@ -56,7 +66,13 @@ Bei B2B-Aufträgen unter 10.000 € landet die Mehrheit direkt bei Google-Suchen
 
 Für Maritime-, Luftfahrt- und Verlags-Branchen kommt eine fünfte Schicht dazu: Spezialisierte Branchen-Plattformen (Maritime-Verzeichnisse, MRO-Datenbanken, Mediendaten-Portale), in denen Sichtbarkeit oft kaufentscheidend ist. Wir bauen Präsenz in allen relevanten Schichten parallel auf, weil die Conversion erst entsteht, wenn die Touchpoints konsistent sind.
 
-## Welche Recherche-Wege nutzen Versandhandel- und Verlags-Entscheider in Hamburg?
+</details>
+
+<details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Welche Recherche-Wege nutzen Versandhandel- und Verlags-Entscheider in Hamburg?</h2>
+<svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+</summary>
 
 Im Hamburger Versandhandels-Cluster läuft Anbieter-Recherche fast vollständig digital — Category Manager und Performance-Verantwortliche bewerten Tools, Plattformen und Dienstleister über LinkedIn, Branchen-Newsletter, Webinare und KI-gestützte Vorauswahl. Klassische SERPs spielen für die Vorauswahl eine kleinere Rolle als in anderen B2B-Verticals; sie werden dann relevant, wenn ein konkreter Anbieter-Shortlist-Eintrag auf Verifikation geprüft wird.
 
@@ -64,10 +80,18 @@ Verlags- und Mediendienstleister recherchieren noch anders — Programm-Verantwo
 
 Wer als Anbieter nur auf Google-Rankings setzt und LinkedIn plus KI-Sichtbarkeit ignoriert, übersieht die Phase, in der die Anbieter-Auswahl tatsächlich stattfindet — und tritt erst auf, wenn die Entscheidung bereits zwischen drei oder vier Wettbewerbern fällt, die in den Vorauswahl-Kanälen sichtbarer waren.
 
-## Was kostet SEO und Online-Marketing für ein Hamburger Unternehmen?
+</details>
+
+<details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Was kostet SEO und Online-Marketing für ein Hamburger Unternehmen?</h2>
+<svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+</summary>
 
 Das SEO Audit startet bei 1.500 € als Festpreis (Standard-Setup bis 1.000 URLs) und ist der typische Einstieg für Hamburger Unternehmen, die ihre digitale Sichtbarkeit zum ersten Mal systematisch prüfen lassen. Ein E-E-A-T-Audit (Experience, Expertise, Authoritativeness, Trustworthiness) kostet 1.200 €, spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2.100 € (Kataloge bis 1.000 SKUs) und 3.400 € (Enterprise mit 10.000+ SKUs) — besonders relevant für Hamburger Versandhandels-Marken mit größeren Produktkatalogen.
 
 Für laufende Betreuung im Retainer-Modell veröffentlichen wir drei Bänder: ab 990 €/Monat für Einzelunternehmen und Kleinunternehmen, 2.000–4.000 €/Monat für klassischen Mittelstand, ab 5.000 €/Monat für Enterprise- und Multi-Standort-Mandate. Hamburger Versandhandels- und Verlags-Mandate landen häufig im oberen Mittelstands- oder Enterprise-Band, je nach Anzahl betreuter Kanäle und ob Performance-Media-Budgets im Mandat enthalten sind. Die vollständigen Bänder mit Leistungsumfang stehen unter [/preise/seo/](/preise/seo/) — keine Tagessätze, keine versteckten Setup-Kosten, keine "Beratungsstunden" auf Verdacht.
 
 Für Hamburger Unternehmen mit erstem SEO-Engagement empfehlen wir oft, mit einem abgegrenzten Audit (ab 1.500 € technisch oder 1.200 € E-E-A-T) plus umsetzbarer Roadmap zu starten — statt direkt in einen Retainer einzusteigen. So testen Sie Arbeitsweise und Wirkung, bevor Sie sich monatlich binden.
+
+</details>

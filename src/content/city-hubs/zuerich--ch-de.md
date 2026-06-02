@@ -41,13 +41,23 @@ faq:
 cta: "Kostenlose Erstberatung für Zürich anfordern"
 ---
 
-## Was macht eine SEO-Agentur in Zürich genau?
+<details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6" open>
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Was macht eine SEO-Agentur in Zürich genau?</h2>
+<svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+</summary>
 
 Eine SEO-Agentur in Zürich baut digitale Sichtbarkeit für Unternehmen mit regionalem oder schweizweitem Marktfokus auf — mit technischem Audit, Content-Strategie, Linkaufbau und lokaler Optimierung für Google Maps und KI-Antworten. StarkRank verbindet das mit einer Spezialisierung auf Finanzdienstleistungen, Versicherung, Tech und professionelle Beratungsdienste.
 
 Konkret bedeutet das: Wir analysieren, wo Ihre Zürcher Zielgruppe heute sucht — Google, LinkedIn, branchenspezifische Plattformen, KI-Tools wie ChatGPT oder Perplexity. Daraus entsteht eine Roadmap mit klaren Meilensteinen, statt einer generischen Standard-Empfehlung. Banken brauchen FINMA-konforme Content-Pfade; Versicherer eine saubere Trennung von B2B- und B2C-Funnels; SaaS-Anbieter vor allem KI-Sichtbarkeit für die technische Vorrecherche; Beratungen Thought-Leadership-Sichtbarkeit, die zur tatsächlichen Expertise passt.
 
-## Wie suchen B2B-Entscheider in Zürich tatsächlich nach Anbietern?
+</details>
+
+<details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Wie suchen B2B-Entscheider in Zürich tatsächlich nach Anbietern?</h2>
+<svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+</summary>
 
 Zürcher B2B-Entscheider verwenden drei Kanäle parallel — Google für die Long List ("SEO Agentur Zürich", "Webagentur Zürich"), LinkedIn für die Verifikation des Anbieter-Profils, und zunehmend KI-Tools wie ChatGPT oder Perplexity für die Vorrecherche. Im Zürcher Finanz- und Tech-Umfeld liegt die KI-Vorrecherche-Quote messbar höher als im DACH-Durchschnitt — Anbieter ohne Sichtbarkeit in generierten KI-Antworten verlieren bereits heute spürbare Touchpoints.
 
@@ -55,7 +65,13 @@ Bei Aufträgen unter 10'000 CHF landet die Mehrheit direkt bei Google-Suchen mit
 
 Für Zürcher Finanz- und Versicherungs-Anbieter kommt eine vierte Schicht dazu: spezialisierte Branchen-Verzeichnisse, Vergleichsplattformen (Comparis, BonusCheck) und Beschaffungs-Portale, in denen Sichtbarkeit oft mehr zählt als das Google-Ranking. Wir bauen Präsenz in allen vier Schichten auf, weil die Conversion erst entsteht, wenn alle Touchpoints konsistent sind.
 
-## Was kostet SEO und Online-Marketing für ein Zürcher Unternehmen?
+</details>
+
+<details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Was kostet SEO und Online-Marketing für ein Zürcher Unternehmen?</h2>
+<svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+</summary>
 
 Das SEO Audit startet bei 1'800 CHF als Festpreis (Standard-Setup bis 1'000 URLs) und ist der typische Einstieg für Zürcher Unternehmen, die ihre digitale Sichtbarkeit zum ersten Mal systematisch prüfen lassen. Ein E-E-A-T Audit kostet 1'500 CHF, spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2'500 CHF (Kataloge bis 1'000 SKUs) und 4'000 CHF (Enterprise mit 10'000+ SKUs).
 
@@ -64,3 +80,5 @@ Für laufende Betreuung im Retainer-Modell veröffentlichen wir drei Bänder: ab
 Für Zürcher Unternehmen mit knappem Budget oder erstmaligem SEO-Engagement empfehlen wir oft, mit einem abgegrenzten Audit (ab 1'800 CHF technisch oder 1'500 CHF E-E-A-T) plus umsetzbarer Roadmap zu starten — statt direkt in einen Retainer einzusteigen. So testen Sie Arbeitsweise und Wirkung, bevor Sie sich monatlich binden.
 
 Wer in Zürich einen neuen Onlineshop bauen lässt statt einen bestehenden zu optimieren, findet unser schweizweites Festpreis-Angebot unter [Onlineshop erstellen lassen](/ch-de/onlineshop-erstellen-lassen/) — vier Stufen ab 3'900 CHF (Shopify-Build mit SEO-Fundament, TWINT, revDSG-Cookie-Logik).
+
+</details>
