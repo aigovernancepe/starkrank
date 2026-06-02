@@ -2,11 +2,14 @@
 /**
  * Static brand version of the five-building-blocks graphic (delivered by design, Janko).
  * Flat — no frame, no shadow, no hover/click interactivity. Headline + caption live
- * outside the graphic (in the SectionHeader). German labels only → DE + CH-DE.
- * EN keeps the interactive, localized BuildingGraphic.astro.
+ * outside the graphic (in the SectionHeader). Used across all locales (DE, CH-DE, EN);
+ * only two labels differ by language (Suche & KI / Daten & Web → Search & AI / Data & Web),
+ * the rest (Performance Media, Digital PR, Content) are identical.
  *
- * Font: the delivered file referenced "Inter 18pt"; remapped to the site brand stack
- * ('Inter Tight') so it renders with the loaded webfont. Geometry/kerning unchanged.
+ * Font: 'Inter' — the design-delivered original ("Inter 18pt"), self-hosted in global.css.
+ * Whole-word labels with text-anchor="middle" let the font own letter-spacing, so glyph
+ * widths never drift (the delivered file hard-coded per-glyph X values that broke under
+ * any other render font). Geometry unchanged.
  *
  * `linked` (opt-in): turns each block into an in-page anchor to its pillar section
  * (#search-ai-intelligence … #data-web). Used on /services as a clickable overview /
@@ -16,20 +19,47 @@
 interface Props {
   /** When true, each block links to its pillar section and gains hover/scroll behaviour. */
   linked?: boolean;
+  /** Locale — switches the two language-dependent labels and a11y strings. Default 'de'. */
+  locale?: 'de' | 'ch-de' | 'en';
 }
 
-const { linked = false } = Astro.props;
+const { linked = false, locale = 'de' } = Astro.props;
+const isEn = locale === 'en';
 
 // Wrapper element per block: clickable <a> when linked, plain <g> otherwise.
 const Wrapper = linked ? 'a' : 'g';
 
-const blockAria: Record<string, string> = {
-  'search-ai-intelligence': 'Zum Leistungsbereich Suche & KI scrollen',
-  'performance-media': 'Zum Leistungsbereich Performance Media scrollen',
-  'authority-pr': 'Zum Leistungsbereich Digital PR scrollen',
-  'content-copywriting': 'Zum Leistungsbereich Content scrollen',
-  'data-web': 'Zum Leistungsbereich Daten & Web scrollen',
+// Only "Suche & KI" / "Daten & Web" differ by language; rest are identical EN/DE.
+const labels = {
+  searchAi: isEn ? ['Search', '& AI'] : ['Suche', '& KI'],
+  dataWeb: isEn ? 'Data & Web' : 'Daten & Web',
 };
+
+const a11y = isEn
+  ? {
+      title: 'Five Building Blocks of Digital Growth',
+      desc: 'Four building blocks of digital marketing — Search & AI, Performance Media, Digital PR and Content — rest on the fifth block: Data & Web.',
+      blockAria: {
+        'search-ai-intelligence': 'Jump to the Search & AI services',
+        'performance-media': 'Jump to the Performance Media services',
+        'authority-pr': 'Jump to the Digital PR services',
+        'content-copywriting': 'Jump to the Content services',
+        'data-web': 'Jump to the Data & Web services',
+      } as Record<string, string>,
+    }
+  : {
+      title: 'Fünf Bausteine des digitalen Wachstums',
+      desc: 'Vier Bausteine des digitalen Marketings — Suche & KI, Performance Media, Digital PR und Content — stehen auf dem fünften Baustein: Daten & Web.',
+      blockAria: {
+        'search-ai-intelligence': 'Zum Leistungsbereich Suche & KI scrollen',
+        'performance-media': 'Zum Leistungsbereich Performance Media scrollen',
+        'authority-pr': 'Zum Leistungsbereich Digital PR scrollen',
+        'content-copywriting': 'Zum Leistungsbereich Content scrollen',
+        'data-web': 'Zum Leistungsbereich Daten & Web scrollen',
+      } as Record<string, string>,
+    };
+
+const blockAria = a11y.blockAria;
 
 function wrapAttrs(id: string) {
   return linked
@@ -45,8 +75,8 @@ function wrapAttrs(id: string) {
   aria-labelledby="bg-title bg-desc"
   class="w-full h-auto max-w-3xl mx-auto mt-8"
 >
-  <title id="bg-title">Fünf Bausteine des digitalen Wachstums</title>
-  <desc id="bg-desc">Vier Bausteine des digitalen Marketings — Suche &amp; KI, Performance Media, Digital PR und Content — stehen auf dem fünften Baustein: Daten &amp; Web.</desc>
+  <title id="bg-title">{a11y.title}</title>
+  <desc id="bg-desc">{a11y.desc}</desc>
   <defs>
     <style>
       .cls-1 { fill: #3b7dd8; }
@@ -56,7 +86,7 @@ function wrapAttrs(id: string) {
          for "Inter 18pt", which broke under any other render font). */
       .cls-10 {
         fill: #fff;
-        font-family: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif;
+        font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
         font-size: 27.56px;
         font-weight: 700;
         letter-spacing: -.02em;
@@ -66,7 +96,7 @@ function wrapAttrs(id: string) {
   <Wrapper {...wrapAttrs('search-ai-intelligence')}>
     <g>
       <polygon class="cls-6" points="74.14 15.12 15.51 73.74 15.51 349.32 186.29 349.32 186.29 15.12 74.14 15.12"/>
-      <text class="cls-10" text-anchor="middle"><tspan x="100.9" y="185.84">Suche</tspan><tspan x="100.9" y="218.91">&amp; KI</tspan></text>
+      <text class="cls-10" text-anchor="middle"><tspan x="100.9" y="185.84">{labels.searchAi[0]}</tspan><tspan x="100.9" y="218.91">{labels.searchAi[1]}</tspan></text>
     </g>
   </Wrapper>
   <Wrapper {...wrapAttrs('performance-media')}>
@@ -91,7 +121,7 @@ function wrapAttrs(id: string) {
   <Wrapper {...wrapAttrs('data-web')}>
     <g>
       <polygon class="cls-1" points="702.16 358.9 671.53 389.54 671.53 358.9 15.51 358.88 15.51 414.86 784.19 414.88 784.19 358.91 702.16 358.9"/>
-      <text class="cls-10" text-anchor="middle"><tspan x="399.85" y="397.19">Daten &amp; Web</tspan></text>
+      <text class="cls-10" text-anchor="middle"><tspan x="399.85" y="397.19">{labels.dataWeb}</tspan></text>
     </g>
   </Wrapper>
 </svg>
