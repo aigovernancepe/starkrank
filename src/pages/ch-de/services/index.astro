@@ -87,14 +87,15 @@ const servicesByPillar = pillars.map((pillar) => {
         label={pillar.tagline}
         title={pillar.name}
         subtitle={pillar.description}
+        align="center"
       />
       {pillar.id === 'performance-media' && (
-        <p class="mt-4 mb-8 text-sm font-body text-gray leading-relaxed max-w-3xl">
+        <p class="mt-4 mb-8 text-sm font-body text-gray leading-relaxed max-w-3xl mx-auto text-center">
           Auch bekannt als <strong>SEA-Agentur</strong> (Search Engine Advertising) — StarkRank bietet Google Ads Management, Google Ads Audit und Paid Social Strategy.
         </p>
       )}
       {pillar.id === 'search-ai-intelligence' && (
-        <p class="mt-4 mb-8 text-sm font-body text-gray leading-relaxed max-w-3xl">
+        <p class="mt-4 mb-8 text-sm font-body text-gray leading-relaxed max-w-3xl mx-auto text-center">
           Auch bekannt als <strong>LLMO-Agentur</strong> (Large Language Model Optimization) — StarkRank bietet Optimierung dafür, dass Ihre Marke in ChatGPT, Perplexity, Claude, Copilot und Google AI Overviews zitiert und empfohlen wird.
         </p>
       )}
@@ -109,8 +110,8 @@ const servicesByPillar = pillars.map((pillar) => {
 
       {pillar.id === 'content-copywriting' && (
         <div class="mt-12 pt-10 border-t border-gray-light/40">
-          <h3 class="text-xs font-label font-bold uppercase tracking-[0.2em] text-blue mb-2">Content-Produkte</h3>
-          <p class="text-sm font-body text-gray leading-relaxed mb-6 max-w-2xl">Strukturierte First-Party-Assets, die jede Content-Pipeline mit nicht-generischem Expertenwissen speisen — ergänzend zum Content-Marketing-Retainer oder standalone buchbar.</p>
+          <h3 class="text-xs font-label font-bold uppercase tracking-[0.2em] text-blue mb-2 text-center">Content-Produkte</h3>
+          <p class="text-sm font-body text-gray leading-relaxed mb-6 max-w-2xl mx-auto text-center">Strukturierte First-Party-Assets, die jede Content-Pipeline mit nicht-generischem Expertenwissen speisen — ergänzend zum Content-Marketing-Retainer oder standalone buchbar.</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card href="/ch-de/expertenbibliothek/">
               <span class="text-xs font-label font-semibold uppercase tracking-wide text-blue">Ab 2'500 CHF</span>
