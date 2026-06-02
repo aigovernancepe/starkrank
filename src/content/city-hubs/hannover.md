@@ -42,13 +42,23 @@ faq:
 cta: "Kostenlose Erstberatung für Hannover anfordern"
 ---
 
-## Was macht eine SEO Agentur in Hannover genau?
+<details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6" open>
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
+<span>Was macht eine SEO Agentur in Hannover genau?</span>
+<svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+</summary>
 
 Eine SEO-Agentur in Hannover baut digitale Sichtbarkeit für Unternehmen mit regionalem oder norddeutschem Marktfokus auf — mit technischem Audit, Content-Strategie, Linkaufbau und lokaler Optimierung für Google Maps und KI-Antworten. StarkRank verbindet das mit einer Spezialisierung auf B2B-Mittelstand und Maschinenbau.
 
 Konkret heißt das: Wir analysieren, wo Ihre Hannoveraner Zielgruppe heute sucht — Google für die erste Anbieter-Recherche, LinkedIn für die Verifikation, branchenspezifische Plattformen für Ausschreibungen und Beschaffung, zunehmend KI-Tools wie ChatGPT oder Perplexity für die Vorauswahl. Daraus entsteht eine Roadmap mit klaren Meilensteinen, statt einer generischen Standard-Empfehlung. Maschinenbauer brauchen Long-Tail-Optimierung für Komponenten und Verfahren plus englische Inhalte für internationale Einkäufer; IT-Dienstleister eine Strategie, die zwischen Demo-Funnel und Thought-Leadership balanciert; Logistikanbieter eine Mischung aus lokaler und überregionaler Sichtbarkeit.
 
-## Wie suchen B2B-Entscheider in Hannover tatsächlich nach Anbietern?
+</details>
+
+<details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
+<span>Wie suchen B2B-Entscheider in Hannover tatsächlich nach Anbietern?</span>
+<svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+</summary>
 
 Hannoveraner B2B-Entscheider verwenden drei Kanäle parallel — Google für die Long List ("Webagentur Hannover", "SEO Agentur Hannover", "Maschinenbau-Marketing Hannover"), LinkedIn für die Verifikation des Anbieter-Profils, und zunehmend KI-Tools wie ChatGPT oder Perplexity für die Vorrecherche. Die Reihenfolge hängt von der Anschaffungsgröße ab.
 
@@ -56,7 +66,13 @@ Bei Aufträgen unter 10.000 € landet die Mehrheit direkt bei Google-Suchen mit
 
 Für Maschinenbau- und Automotive-Zulieferer kommt eine vierte Schicht dazu: Branchenportale wie VDI Nachrichten, Industrieanzeiger, Heise und produktspezifische B2B-Marktplätze. Sichtbarkeit dort zählt für Beschaffungs-Entscheider oft mehr als das pure Google-Ranking. Wir bauen Präsenz in allen vier Schichten auf, weil die Conversion erst entsteht, wenn alle Touchpoints konsistent sind.
 
-## Wie verändert die Hannover Messe das Suchverhalten von B2B-Einkäufern?
+</details>
+
+<details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
+<span>Wie verändert die Hannover Messe das Suchverhalten von B2B-Einkäufern?</span>
+<svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+</summary>
 
 Vor und während der Hannover Messe steigt das Suchvolumen für branchenspezifische Hannover-Begriffe spürbar an — internationale Fachbesucher recherchieren Anbieter, Hotels, Logistik-Dienstleister und lokale Spezialisten in einem komprimierten Zeitfenster. Wer in dieser Phase nicht sichtbar ist, verliert Lead-Volumen, das ein gesamtes Vertriebsquartal definieren kann.
 
@@ -64,10 +80,18 @@ Konkret bedeutet das eine vierfach gestaffelte Strategie: Vor-Messe-Sichtbarkeit
 
 Für Aussteller in den großen Hallen-Themen — Industrie 4.0, Energie, Mobilität, Digital Ecosystems — multiplizieren sich die Effekte deutlich, weil die Suchnachfrage in diesen Themen im April-Zeitfenster auf ein internationales Publikum trifft, das den Rest des Jahres weniger aktiv über Hannover-spezifische Begriffe sucht.
 
-## Was kostet SEO und Online-Marketing für ein Hannoveraner Unternehmen?
+</details>
+
+<details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
+<span>Was kostet SEO und Online-Marketing für ein Hannoveraner Unternehmen?</span>
+<svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+</summary>
 
 Das SEO Audit startet bei 1.500 € als Festpreis (Standard-Setup bis 1.000 URLs) und ist der typische Einstieg für Hannoveraner Unternehmen, die ihre digitale Sichtbarkeit zum ersten Mal systematisch prüfen lassen. Ein E-E-A-T-Audit (Experience, Expertise, Authoritativeness, Trustworthiness) kostet 1.200 €, spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2.100 € (Kataloge bis 1.000 SKUs) und 3.400 € (Enterprise mit 10.000+ SKUs).
 
 Für laufende Betreuung im Retainer-Modell veröffentlichen wir drei Bänder: ab 990 €/Monat für Einzelunternehmen und Kleinunternehmen, 2.000–4.000 €/Monat für klassischen Mittelstand, ab 5.000 €/Monat für Enterprise- und Multi-Standort-Mandate. Hannoveraner Maschinenbau- und IT-Mandate landen typischerweise im Mittelstands-Band, je nach Anzahl betreuter Kanäle und ob messebegleitende Strecken Teil des Mandats sind. Die vollständigen Bänder mit Leistungsumfang stehen unter [/preise/seo/](/preise/seo/) — keine Tagessätze, keine versteckten Setup-Kosten, keine "Beratungsstunden" auf Verdacht.
 
 Für Hannoveraner Unternehmen mit erstem SEO-Engagement empfehlen wir oft, mit einem abgegrenzten Audit (ab 1.500 € technisch oder 1.200 € E-E-A-T) plus umsetzbarer Roadmap zu starten — statt direkt in einen Retainer einzusteigen. So testen Sie Arbeitsweise und Wirkung, bevor Sie sich monatlich binden.
+
+</details>
