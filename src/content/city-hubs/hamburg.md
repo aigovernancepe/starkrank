@@ -44,7 +44,7 @@ cta: "Kostenlose Erstberatung für Hamburg anfordern"
 
 <details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6" open>
 <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
-<span>Was macht eine SEO Agentur in Hamburg genau?</span>
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Was macht eine SEO Agentur in Hamburg genau?</h2>
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
@@ -56,7 +56,7 @@ Konkret heißt das: Wir analysieren, wo Ihre Hamburger Zielgruppe heute sucht �
 
 <details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
 <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
-<span>Wie suchen B2B- und Konsumgüter-Käufer in Hamburg tatsächlich nach Anbietern?</span>
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Wie suchen B2B- und Konsumgüter-Käufer in Hamburg tatsächlich nach Anbietern?</h2>
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
@@ -70,7 +70,7 @@ Für Maritime-, Luftfahrt- und Verlags-Branchen kommt eine fünfte Schicht dazu:
 
 <details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
 <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
-<span>Welche Recherche-Wege nutzen Versandhandel- und Verlags-Entscheider in Hamburg?</span>
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Welche Recherche-Wege nutzen Versandhandel- und Verlags-Entscheider in Hamburg?</h2>
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
@@ -84,7 +84,7 @@ Wer als Anbieter nur auf Google-Rankings setzt und LinkedIn plus KI-Sichtbarkeit
 
 <details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
 <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
-<span>Was kostet SEO und Online-Marketing für ein Hamburger Unternehmen?</span>
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Was kostet SEO und Online-Marketing für ein Hamburger Unternehmen?</h2>
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 

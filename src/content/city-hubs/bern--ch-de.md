@@ -38,7 +38,7 @@ cta: "Kostenlose Erstberatung für Bern anfordern"
 
 <details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6" open>
 <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
-<span>Was macht eine SEO-Agentur in Bern genau?</span>
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Was macht eine SEO-Agentur in Bern genau?</h2>
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
@@ -50,7 +50,7 @@ Konkret bedeutet das: Wir analysieren, wo Ihre Berner Zielgruppe heute sucht —
 
 <details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
 <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
-<span>Wie suchen B2B-Entscheider in Bern tatsächlich nach Anbietern?</span>
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Wie suchen B2B-Entscheider in Bern tatsächlich nach Anbietern?</h2>
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
@@ -64,7 +64,7 @@ Für Berner Anbieter mit Bundesverwaltungs-Umfeld kommt eine vierte Schicht dazu
 
 <details class="group mt-4 bg-white border border-gray-light/40 rounded-lg p-5 md:p-6">
 <summary class="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-headline font-bold text-navy text-lg">
-<span>Was kostet SEO und Online-Marketing für ein Berner Unternehmen?</span>
+<h2 class="m-0 text-lg font-headline font-bold text-navy">Was kostet SEO und Online-Marketing für ein Berner Unternehmen?</h2>
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
