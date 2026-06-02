@@ -15,18 +15,41 @@
  * (#search-ai-intelligence … #data-web). Used on /services as a clickable overview /
  * table of contents. Default false keeps the flat homepage rendering untouched.
  * Anchor href works without JS; a small enhancement adds smooth scroll (reduced-motion safe).
+ *
+ * `panels` (opt-in, mutually exclusive with `linked`): MOBILE-only accordion. Each block
+ * on the compact mobile graphic becomes a toggle that expands an info box (tagline + name +
+ * description + CTA) right below the graphic — so the visitor reads a pillar without
+ * scrolling away. The desktop graphic stays purely decorative (the desktop pillar cards
+ * carry navigation there). Used on the DE/CH-DE homepages.
  */
+import { t } from '../../utils/i18n';
+
+interface PanelItem {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  href: string;
+}
+
 interface Props {
   /** When true, each block links to its pillar section and gains hover/scroll behaviour. */
   linked?: boolean;
   /** Locale — switches the two language-dependent labels and a11y strings. Default 'de'. */
   locale?: 'de' | 'ch-de' | 'en';
+  /** When provided (and not `linked`), mobile blocks toggle an info box per pillar. */
+  panels?: PanelItem[];
 }
 
-const { linked = false, locale = 'de' } = Astro.props;
+const { linked = false, locale = 'de', panels } = Astro.props;
 const isEn = locale === 'en';
 
-// Wrapper element per block: clickable <a> when linked, plain <g> otherwise.
+// Mobile accordion: only when panels are passed and we're not in linked mode.
+const accordion = !linked && Array.isArray(panels) && panels.length > 0;
+const panelCta = t('cta.learnMore', locale);
+
+// Wrapper element per block: clickable <a> when linked, plain <g> otherwise (the
+// accordion turns the <g> into a button via role/tabindex attrs, not a tag swap).
 const Wrapper = linked ? 'a' : 'g';
 
 // Only "Suche & KI" / "Daten & Web" differ by language; rest are identical EN/DE.
@@ -60,14 +83,36 @@ const a11y = isEn
     };
 
 const blockAria = a11y.blockAria;
+const panelById: Record<string, PanelItem> = accordion
+  ? Object.fromEntries(panels!.map((p) => [p.id, p]))
+  : {};
 
-// `suffix` keeps the two SVGs' group ids unique in non-linked mode (the desktop
-// and mobile graphics both live in the DOM, one hidden per breakpoint). In linked
-// mode both point at the same in-page section anchor, so no suffix is applied.
-function wrapAttrs(id: string, suffix = '') {
+// Desktop graphic: clickable anchor when linked, otherwise a plain decorative group
+// (this includes accordion mode — desktop navigation lives in the pillar cards).
+function desktopAttrs(id: string) {
   return linked
     ? { href: `#${id}`, 'aria-label': blockAria[id], class: 'bg-block' }
-    : { id: `${id}${suffix}` };
+    : { id };
+}
+
+// Mobile graphic: anchor when linked; an ARIA toggle button when accordion; else a
+// plain group. The `-m` id suffix keeps non-interactive ids unique against the
+// desktop SVG (both graphics live in the DOM, one hidden per breakpoint).
+function mobileAttrs(id: string) {
+  if (linked) return { href: `#${id}`, 'aria-label': blockAria[id], class: 'bg-block' };
+  if (accordion) {
+    const name = panelById[id]?.name ?? id;
+    return {
+      role: 'button',
+      tabindex: '0',
+      'data-bg-toggle': id,
+      'aria-controls': `bg-panel-${id}`,
+      'aria-expanded': 'false',
+      'aria-label': isEn ? `Show ${name} details` : `${name} – Beschreibung anzeigen`,
+      class: 'bg-block bg-toggle',
+    };
+  }
+  return { id: `${id}-m` };
 }
 ---
 
@@ -100,32 +145,32 @@ function wrapAttrs(id: string, suffix = '') {
       }
     </style>
   </defs>
-  <Wrapper {...wrapAttrs('search-ai-intelligence')}>
+  <Wrapper {...desktopAttrs('search-ai-intelligence')}>
     <g>
       <polygon class="cls-6" points="74.14 15.12 15.51 73.74 15.51 349.32 186.29 349.32 186.29 15.12 74.14 15.12"/>
       <text class="cls-10" text-anchor="middle"><tspan x="100.9" y="185.84">{labels.searchAi[0]}</tspan><tspan x="100.9" y="218.91">{labels.searchAi[1]}</tspan></text>
     </g>
   </Wrapper>
-  <Wrapper {...wrapAttrs('performance-media')}>
+  <Wrapper {...desktopAttrs('performance-media')}>
     <g>
       <polygon class="cls-6" points="273.65 15.12 215.02 73.74 215.02 349.32 385.8 349.32 385.8 15.12 273.65 15.12"/>
       <text class="cls-10" text-anchor="middle"><tspan x="300.41" y="186.78">Performance</tspan><tspan x="300.41" y="219.85">Media</tspan></text>
     </g>
   </Wrapper>
-  <Wrapper {...wrapAttrs('authority-pr')}>
+  <Wrapper {...desktopAttrs('authority-pr')}>
     <g>
       <polygon class="cls-6" points="472.94 15.12 414.31 73.74 414.31 349.32 585.09 349.32 585.09 15.12 472.94 15.12"/>
       <text class="cls-10" text-anchor="middle"><tspan x="499.7" y="204.43">Digital PR</tspan></text>
     </g>
   </Wrapper>
-  <Wrapper {...wrapAttrs('content-copywriting')}>
+  <Wrapper {...desktopAttrs('content-copywriting')}>
     <g>
       <polygon class="cls-6" points="698.93 264.16 719.19 284.42 654.29 349.32 671.73 349.32 727.99 293.06 784.42 349.32 784.49 349.32 784.49 15.12 672.34 15.12 613.71 73.74 613.71 349.32 613.77 349.32 698.93 264.16"/>
       <polygon class="cls-6" points="746.72 349.32 729.15 331.91 711.75 349.32 746.72 349.32"/>
     </g>
     <text class="cls-10" text-anchor="middle"><tspan x="699.1" y="202.61">Content</tspan></text>
   </Wrapper>
-  <Wrapper {...wrapAttrs('data-web')}>
+  <Wrapper {...desktopAttrs('data-web')}>
     <g>
       <polygon class="cls-1" points="702.16 358.9 671.53 389.54 671.53 358.9 15.51 358.88 15.51 414.86 784.19 414.88 784.19 358.91 702.16 358.9"/>
       <text class="cls-10" text-anchor="middle"><tspan x="399.85" y="397.19">{labels.dataWeb}</tspan></text>
@@ -165,13 +210,13 @@ function wrapAttrs(id: string, suffix = '') {
       .cls-pf { fill: #fff; }
     </style>
   </defs>
-  <Wrapper {...wrapAttrs('search-ai-intelligence', '-m')}>
+  <Wrapper {...mobileAttrs('search-ai-intelligence')}>
     <g>
       <polygon class="cls-6" points="58.85 .29 .35 58.79 .35 333.77 141.75 333.77 141.75 .29 58.85 .29"/>
       <text class="cls-tm" text-anchor="middle"><tspan x="71.05" y="172.64">{labels.searchAi[0]}</tspan><tspan x="71.05" y="206.91">{labels.searchAi[1]}</tspan></text>
     </g>
   </Wrapper>
-  <Wrapper {...wrapAttrs('performance-media', '-m')}>
+  <Wrapper {...mobileAttrs('performance-media')}>
     <g>
       <polygon class="cls-6" points="212.06 .29 153.57 58.79 153.57 333.77 294.97 333.77 294.97 .29 212.06 .29"/>
       <g>
@@ -195,20 +240,20 @@ function wrapAttrs(id: string, suffix = '') {
       </g>
     </g>
   </Wrapper>
-  <Wrapper {...wrapAttrs('authority-pr', '-m')}>
+  <Wrapper {...mobileAttrs('authority-pr')}>
     <g>
       <polygon class="cls-6" points="364.62 .29 306.13 58.79 306.13 333.77 447.53 333.77 447.53 .29 364.62 .29"/>
       <text class="cls-tm" text-anchor="middle"><tspan x="376.83" y="172.95">Digital</tspan><tspan x="376.83" y="207.22">PR</tspan></text>
     </g>
   </Wrapper>
-  <Wrapper {...wrapAttrs('content-copywriting', '-m')}>
+  <Wrapper {...mobileAttrs('content-copywriting')}>
     <g>
       <polygon class="cls-6" points="599.78 .18 516.88 .18 458.38 58.68 458.38 256.25 458.39 256.25 458.39 333.98 458.86 333.98 528.93 261.91 545.6 278.58 492.2 333.98 506.55 333.98 552.84 285.69 599.28 333.98 599.83 333.98 599.83 256.25 599.78 256.25 599.78 .18"/>
       <polygon class="cls-6" points="539.48 333.98 568.26 333.98 553.8 319.66 539.48 333.98"/>
     </g>
     <text class="cls-tm" text-anchor="middle"><tspan x="529.1" y="185.95">Content</tspan></text>
   </Wrapper>
-  <Wrapper {...wrapAttrs('data-web', '-m')}>
+  <Wrapper {...mobileAttrs('data-web')}>
     <g>
       <polygon class="cls-1" points="530.34 344.83 506.42 370.04 506.42 344.83 .26 344.81 .26 420.05 599.83 420.07 599.83 344.83 530.34 344.83"/>
       <text class="cls-tm" text-anchor="middle"><tspan x="300.05" y="393.61">{labels.dataWeb}</tspan></text>
@@ -216,7 +261,29 @@ function wrapAttrs(id: string, suffix = '') {
   </Wrapper>
 </svg>
 
-{linked && (
+{accordion && (
+  <!-- Mobile-only info boxes; one expands when its block is tapped (see script). -->
+  <div class="md:hidden mt-5 space-y-3" data-bg-panels>
+    {panels!.map((p) => (
+      <div
+        id={`bg-panel-${p.id}`}
+        data-bg-panel={p.id}
+        hidden
+        class="rounded-lg border border-gray-light/40 bg-white p-5 shadow-sm"
+      >
+        <span class="block text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">{p.tagline}</span>
+        <h3 class="mt-1 text-lg font-headline font-black tracking-tight text-navy">{p.name}</h3>
+        <p class="mt-2 text-sm text-gray font-body leading-relaxed">{p.description}</p>
+        <a href={p.href} class="mt-3 inline-flex items-center text-sm font-label font-semibold uppercase tracking-wide text-blue">
+          {panelCta}
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </a>
+      </div>
+    ))}
+  </div>
+)}
+
+{(linked || accordion) && (
   <style>
     .bg-block {
       cursor: pointer;
@@ -240,18 +307,28 @@ function wrapAttrs(id: string, suffix = '') {
       outline-offset: 4px;
       border-radius: 4px;
     }
+    /* Open accordion block stays lifted/brightened so the active pillar is obvious. */
+    .bg-toggle[aria-expanded='true'] {
+      transform: translateY(-6px);
+    }
+    .bg-toggle[aria-expanded='true'] polygon {
+      filter: brightness(1.12);
+    }
     @media (prefers-reduced-motion: reduce) {
       .bg-block,
       .bg-block polygon {
         transition: none !important;
       }
       .bg-block:hover,
-      .bg-block:focus-visible {
+      .bg-block:focus-visible,
+      .bg-toggle[aria-expanded='true'] {
         transform: none !important;
       }
     }
   </style>
+)}
 
+{linked && (
   <script>
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     document.querySelectorAll<HTMLAnchorElement>('.bg-block').forEach((link) => {
@@ -262,6 +339,40 @@ function wrapAttrs(id: string, suffix = '') {
         if (!target) return;
         event.preventDefault();
         target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+      });
+    });
+  </script>
+)}
+
+{accordion && (
+  <script>
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const toggles = Array.from(document.querySelectorAll<SVGGElement>('[data-bg-toggle]'));
+    const panels = Array.from(document.querySelectorAll<HTMLElement>('[data-bg-panel]'));
+
+    function activate(toggle: SVGGElement) {
+      const id = toggle.getAttribute('data-bg-toggle');
+      if (!id) return;
+      const panel = document.getElementById(`bg-panel-${id}`);
+      if (!panel) return;
+      const willOpen = toggle.getAttribute('aria-expanded') !== 'true';
+      // Accordion: collapse everything, then open the tapped one (toggles off if re-tapped).
+      toggles.forEach((t) => t.setAttribute('aria-expanded', 'false'));
+      panels.forEach((p) => (p.hidden = true));
+      if (willOpen) {
+        toggle.setAttribute('aria-expanded', 'true');
+        panel.hidden = false;
+        panel.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+      }
+    }
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener('click', () => activate(toggle));
+      toggle.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          activate(toggle);
+        }
       });
     });
   </script>
