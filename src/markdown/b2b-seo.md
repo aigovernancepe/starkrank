@@ -41,10 +41,43 @@ Den größten Hebel hat im B2B oft die Dimension Authority, und sie entsteht au�
 
 Die Zusammenarbeit beginnt mit einer kostenlosen Ersteinschätzung und einem Audit, das die Ausgangslage über alle sechs Dimensionen vermisst. Darauf folgt ein laufendes Mandat mit festem Rhythmus: monatliche Umsetzungspakete, regelmäßige Abstimmung mit Ihrem Web-Team und ein Quartals-Review zur Nachsteuerung. So bleibt die Wirkung über den langen Verkaufszyklus planbar.
 
-1. **Erstgespräch & Ersteinschätzung**, Ziele, Zielgruppe und Wettbewerber klären.
-2. **Audit & AI Search Optimization Score**, Ausgangslage und größte Hebel offenlegen.
-3. **Umsetzung in Sprints**, priorisierte Maßnahmen für Technik, Content und Entity-Fundament.
-4. **Reporting & Review**, Ranking, KI-Zitierfähigkeit und Leadgenerierung als feste KPIs messen.
+<div class="not-prose mt-8 mb-6 space-y-3 max-w-xl">
+  <details class="group relative">
+    <span class="absolute left-5 top-10 -bottom-3 w-px -translate-x-1/2 bg-gray-light/60" aria-hidden="true"></span>
+    <summary class="flex items-center gap-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+      <span class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-blue/30 bg-white text-xs font-label font-bold text-blue transition-colors group-open:border-blue group-open:bg-blue group-open:text-white">01</span>
+      <span class="flex-1 text-base font-headline font-bold text-navy">Erstgespräch &amp; Ersteinschätzung</span>
+      <svg class="mr-1 w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+    </summary>
+    <p class="ml-14 mt-2 pb-1 text-sm font-body text-gray leading-relaxed">Ziele, Zielgruppe und Wettbewerber klären.</p>
+  </details>
+  <details class="group relative">
+    <span class="absolute left-5 top-10 -bottom-3 w-px -translate-x-1/2 bg-gray-light/60" aria-hidden="true"></span>
+    <summary class="flex items-center gap-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+      <span class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-blue/30 bg-white text-xs font-label font-bold text-blue transition-colors group-open:border-blue group-open:bg-blue group-open:text-white">02</span>
+      <span class="flex-1 text-base font-headline font-bold text-navy">Audit &amp; AI Search Optimization Score</span>
+      <svg class="mr-1 w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+    </summary>
+    <p class="ml-14 mt-2 pb-1 text-sm font-body text-gray leading-relaxed">Ausgangslage und größte Hebel offenlegen.</p>
+  </details>
+  <details class="group relative">
+    <span class="absolute left-5 top-10 -bottom-3 w-px -translate-x-1/2 bg-gray-light/60" aria-hidden="true"></span>
+    <summary class="flex items-center gap-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+      <span class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-blue/30 bg-white text-xs font-label font-bold text-blue transition-colors group-open:border-blue group-open:bg-blue group-open:text-white">03</span>
+      <span class="flex-1 text-base font-headline font-bold text-navy">Umsetzung in Sprints</span>
+      <svg class="mr-1 w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+    </summary>
+    <p class="ml-14 mt-2 pb-1 text-sm font-body text-gray leading-relaxed">Priorisierte Maßnahmen für Technik, Content und Entity-Fundament.</p>
+  </details>
+  <details class="group relative">
+    <summary class="flex items-center gap-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+      <span class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-blue/30 bg-white text-xs font-label font-bold text-blue transition-colors group-open:border-blue group-open:bg-blue group-open:text-white">04</span>
+      <span class="flex-1 text-base font-headline font-bold text-navy">Reporting &amp; Review</span>
+      <svg class="mr-1 w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+    </summary>
+    <p class="ml-14 mt-2 pb-1 text-sm font-body text-gray leading-relaxed">Ranking, KI-Zitierfähigkeit und Leadgenerierung als feste KPIs messen.</p>
+  </details>
+</div>
 
 Sie behalten die Kontrolle: Unsere SEO-Beratung liefert umsetzbare Empfehlungen für Ihr internes Team und übernimmt auf Wunsch die Umsetzung. Den Umfang bestimmen Sie, nicht ein festes Paket.
 
