@@ -391,7 +391,8 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         Vom Erstkontakt zur Mandatsentscheidung sind es fünf Schritte: gratis Erstberatung mit AI-Search-Quick-Check auf zwei Dimensionen, Diagnose-Tiefenphase über 1–2 Wochen mit Technical Audit und AI Search Optimization Score Baseline, Roadmap-Übergabe mit revDSG-, FMH- und HMG-Compliance-Check, Umsetzung im Retainer oder als Festpreis-Audit, anschliessend quartalsweises Re-Scoring. Vor jeder Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist.
       </p>
     </div>
-    <ol class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
+    {/* Desktop: 5-up step grid */}
+    <ol class="mt-8 hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl">
       {collaborationSteps.map((step) => (
         <li class="bg-white border border-gray-light/40 rounded-lg p-5">
           <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Schritt {step.num}</span>
@@ -400,6 +401,24 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
         </li>
       ))}
     </ol>
+    {/* Mobile: vertical timeline — numbered nodes on a connecting spine, tap a step to expand */}
+    <div class="md:hidden mt-8 space-y-3 max-w-md">
+      {collaborationSteps.map((step, idx) => (
+        <details class="group relative">
+          {idx < collaborationSteps.length - 1 && (
+            <span class="absolute left-5 top-10 -bottom-3 w-px -translate-x-1/2 bg-gray-light/60" aria-hidden="true"></span>
+          )}
+          <summary class="flex items-center gap-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+            <span class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-blue/30 bg-white text-xs font-label font-bold text-blue transition-colors group-open:border-blue group-open:bg-blue group-open:text-white">{step.num}</span>
+            <span class="flex-1 text-base font-headline font-bold text-navy">{step.title}</span>
+            <svg class="mr-1 w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </summary>
+          <p class="ml-14 mt-2 pb-1 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+        </details>
+      ))}
+    </div>
     <div class="mt-8 max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
         Skalierung erst nach Proof-Messung. Vor der Mandatsunterschrift wird kein Ergebnis versprochen, das nicht aus Diagnose-Daten ableitbar ist. Praxisinhaberinnen und Praxisinhaber, die das ausprobieren wollen, können uns direkt kontaktieren — wir antworten in der Regel innerhalb eines Werktages.
