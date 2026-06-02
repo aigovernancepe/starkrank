@@ -255,7 +255,24 @@ const faqSchema = {
   })),
 };
 
-const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
+// HowTo-Prozess-Schema aus den sichtbaren collaborationSteps (Single Source of
+// Truth). Google hat HowTo-Rich-Results 2023 abgeschaltet — dieser Knoten dient
+// als maschinenlesbares Prozess-/Entity-Signal für KI-Antwortmaschinen, analog
+// zur FAQPage-Beibehaltung.
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  '@id': 'https://starkrank.com/ch-de/seo-fuer-aerzte/#prozess',
+  name: 'SEO für eine Arztpraxis in der Schweiz — Ablauf der Zusammenarbeit',
+  step: collaborationSteps.map((s) => ({
+    '@type': 'HowToStep',
+    position: Number(s.num),
+    name: s.title,
+    text: s.body,
+  })),
+};
+
+const schemas = [breadcrumbSchema, serviceSchema, faqSchema, howToSchema];
 ---
 
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas} preloadImage="/images/aerzte-hero.webp">
