@@ -4,7 +4,7 @@ import HeroSection from '../../components/ui/HeroSection.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import PillarCard from '../../components/ui/PillarCard.astro';
-import BuildingGraphic from '../../components/ui/BuildingGraphic.astro';
+import BuildingGraphicStatic from '../../components/ui/BuildingGraphicStatic.astro';
 import Button from '../../components/ui/Button.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import { pillars } from '../../data/pillars';
@@ -106,7 +106,7 @@ const websiteSchema = {
       align="center"
     />
     <div class="hidden md:block">
-      <BuildingGraphic locale="en" />
+      <BuildingGraphicStatic locale="en" />
     </div>
 
     {/* Detailed pillar cards — on mobile these carry the whole metaphor (no SVG).
