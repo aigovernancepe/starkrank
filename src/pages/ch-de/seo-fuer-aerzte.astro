@@ -526,14 +526,21 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema];
   <Section bg="white">
     <div class="max-w-3xl">
       <SectionHeader label="Fragen & Antworten" title="Häufig gestellte Fragen" />
-      <dl class="mt-8 space-y-8">
+      <div class="mt-8 space-y-4">
         {faqs.map((f) => (
-          <div>
-            <dt class="text-lg font-headline font-bold text-navy">{f.q}</dt>
-            <dd class="mt-2 text-base font-body text-gray leading-relaxed">{f.a}</dd>
-          </div>
+          <details class="group bg-white border border-gray-light/40 rounded-lg">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer p-6 font-headline font-bold text-navy text-base md:text-lg select-none list-none [&::-webkit-details-marker]:hidden">
+              {f.q}
+              <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-base font-body text-gray leading-relaxed">
+              {f.a}
+            </div>
+          </details>
         ))}
-      </dl>
+      </div>
     </div>
   </Section>
 
