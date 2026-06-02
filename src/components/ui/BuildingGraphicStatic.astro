@@ -87,7 +87,10 @@ function wrapAttrs(id: string) {
       .cls-10 {
         fill: #fff;
         font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-        font-size: 27.56px;
+        /* Inter is wider than the old Inter Tight, so the longest label
+           ("Performance") overflowed its block at 27.56px. Dropped to ~16.5pt,
+           close to the design-delivered "Inter 18pt". */
+        font-size: 22px;
         font-weight: 700;
         letter-spacing: -.02em;
       }
