@@ -140,13 +140,30 @@ const faqSchema = {
     acceptedAnswer: { '@type': 'Answer', text: f.a },
   })),
 };
+
+// HowTo-Prozess-Schema aus den sichtbaren processSteps (Single Source of Truth).
+// Google hat HowTo-Rich-Results 2023 abgeschaltet — dieser Knoten dient als
+// maschinenlesbares Prozess-/Entity-Signal für KI-Antwortmaschinen, analog zur
+// FAQPage-Beibehaltung.
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  '@id': 'https://starkrank.com/#prozess',
+  name: 'StarkRank Arbeitsweise — der iterative Marketing-Prozess',
+  step: processSteps.map((s) => ({
+    '@type': 'HowToStep',
+    position: Number(s.num),
+    name: s.title,
+    text: s.body,
+  })),
+};
 ---
 
 <BaseLayout
   title="StarkRank — SEO & KI-Suchoptimierung für den Mittelstand"
   description="StarkRank unterstützt Unternehmen und den Mittelstand mit KI-Suchoptimierung, technischem SEO, Performance-Marketing und datengetriebenen Wachstumsstrategien — mit Sitz im Raum Hannover, aktiv im ganzen Nordwesten."
   locale="de"
-  schema={[orgSchema, websiteSchema, faqSchema]}
+  schema={[orgSchema, websiteSchema, faqSchema, howToSchema]}
 >
   <HeroSection
     eyebrow="Stark in Search. Stark in Data. Stark in Growth."

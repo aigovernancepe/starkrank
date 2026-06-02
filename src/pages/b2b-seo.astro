@@ -75,7 +75,32 @@ const faqSchema = {
   })),
 };
 
-const schemas = [serviceSchema, faqSchema];
+// Prozess-Schritte spiegeln die sichtbare Timeline in src/markdown/b2b-seo.md
+// 1:1 (Schema-Content-Parität, §5.5, wie faqItems oben) und speisen das HowTo.
+const processSteps = [
+  { num: '01', title: 'Erstgespräch & Ersteinschätzung', body: 'Ziele, Zielgruppe und Wettbewerber klären.' },
+  { num: '02', title: 'Audit & AI Search Optimization Score', body: 'Ausgangslage und größte Hebel offenlegen.' },
+  { num: '03', title: 'Umsetzung in Sprints', body: 'Priorisierte Maßnahmen für Technik, Content und Entity-Fundament.' },
+  { num: '04', title: 'Reporting & Review', body: 'Ranking, KI-Zitierfähigkeit und Leadgenerierung als feste KPIs messen.' },
+];
+
+// Google hat HowTo-Rich-Results 2023 abgeschaltet — dieser Knoten dient als
+// maschinenlesbares Prozess-/Entity-Signal für KI-Antwortmaschinen, analog zur
+// FAQPage-Beibehaltung.
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  '@id': `${pageUrl}#prozess`,
+  name: 'Zusammenarbeit mit StarkRank im B2B-SEO — Ablauf',
+  step: processSteps.map((s) => ({
+    '@type': 'HowToStep',
+    position: Number(s.num),
+    name: s.title,
+    text: s.body,
+  })),
+};
+
+const schemas = [serviceSchema, faqSchema, howToSchema];
 
 const breadcrumbs = [
   { label: 'Start', href: '/' },
