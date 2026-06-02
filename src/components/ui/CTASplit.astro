@@ -24,8 +24,8 @@ const { eyebrow, title, subtitle, image, imageAlt, imagePosition = 'center', cap
   <div class="pointer-events-none absolute -top-24 -right-24 w-[480px] h-[480px] rounded-full bg-blue/10 blur-3xl" aria-hidden="true"></div>
 
   <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
-    {/* Text column */}
-    <div>
+    {/* Text column — centered on mobile (stacked), left-aligned beside the photo on desktop */}
+    <div class="text-center md:text-left">
       {eyebrow && (
         <span class="block text-xs md:text-sm font-label font-semibold uppercase tracking-[0.2em] text-blue-light">
           {eyebrow}
@@ -39,7 +39,7 @@ const { eyebrow, title, subtitle, image, imageAlt, imagePosition = 'center', cap
           {subtitle}
         </p>
       )}
-      <div class="mt-8 flex flex-wrap gap-4">
+      <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
         <slot />
       </div>
     </div>
