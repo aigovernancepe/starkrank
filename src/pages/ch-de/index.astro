@@ -20,6 +20,15 @@ const pillarAnchorLinks: Record<string, string> = {
   'data-web': '/ch-de/services/#data-web',
 };
 
+// Info-box content for the mobile building graphic (tap a block → expand a panel).
+const buildingPanels = pillars.map((p) => ({
+  id: p.id,
+  name: p.name,
+  tagline: p.tagline,
+  description: p.description,
+  href: pillarAnchorLinks[p.id],
+}));
+
 const verticals = [
   {
     label: 'SEO für Ärzte',
@@ -170,7 +179,7 @@ const faqSchema = {
     <Button href="/ch-de/aiso-check/" variant="primary" size="lg">Kostenloser AI-Search-Check &rarr;</Button>
   </HeroSection>
 
-  {/* Building-graphic: interactive on desktop, hidden on mobile */}
+  {/* Building-graphic: decorative on desktop, tap-to-expand accordion on mobile. */}
   <Section bg="cream">
     <SectionHeader
       label="Unsere Dienstleistungen"
@@ -178,13 +187,12 @@ const faqSchema = {
       subtitle="Vier Disziplinen tragen das Wachstum Ihres Unternehmens — auf einem Fundament aus Daten und Web-Architektur."
       align="center"
     />
-    <div class="hidden md:block">
-      <BuildingGraphicStatic />
-    </div>
+    {/* Desktop SVG decorative; mobile SVG clickable with per-pillar info boxes. */}
+    <BuildingGraphicStatic locale="ch-de" panels={buildingPanels} />
 
-    {/* Detailed pillar cards — on mobile these carry the whole metaphor (no SVG).
-        Pillars in 2-col grid on md+, foundation (Daten & Web) spans full width. */}
-    <div class="mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+    {/* Detailed pillar cards — desktop only; on mobile the graphic's info boxes
+        carry the descriptions. 2-col grid on md+, foundation spans full width. */}
+    <div class="hidden md:grid mt-8 md:mt-16 md:grid-cols-2 gap-6">
       {pillars.filter((p) => p.id !== 'data-web').map((pillar) => (
         <div id={`card-${pillar.id}`} data-pillar-id={pillar.id} class="pillar-card-wrapper">
           <PillarCard pillar={pillar} locale="ch-de" href={pillarAnchorLinks[pillar.id]} />
