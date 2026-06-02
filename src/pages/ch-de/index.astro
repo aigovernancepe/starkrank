@@ -76,6 +76,33 @@ const processSteps = [
   },
 ];
 
+const faqs = [
+  {
+    q: 'Was bedeutet KI-Suchoptimierung für mein Unternehmen?',
+    a: 'Heute beginnt die Recherche oft nicht mehr bei Google, sondern direkt in Tools wie ChatGPT, Perplexity oder Copilot. KI-Suchoptimierung sorgt dafür, dass diese Systeme Ihre Inhalte korrekt erfassen und in ihren Antworten nennen — nicht nur, dass Sie in der klassischen Trefferliste auftauchen. Den Fortschritt halten wir in unserem proprietären AI Search Optimization Score fest.',
+  },
+  {
+    q: 'Mit welchen Kosten muss ich rechnen?',
+    a: 'Unsere Preise sind offen einsehbar, bevor Sie ein Gespräch buchen. Der Einstiegs-Retainer liegt bei 1\'190 CHF pro Monat, für wachstumsorientierte Firmen ab 3\'000 CHF pro Monat. Wer lieber einmalig startet, wählt ein Audit ab 1\'800 CHF — gestaffelt nach Umfang der Website. Keine Pauschalstunden, keine Überraschungen auf der Rechnung.',
+  },
+  {
+    q: 'Wie sieht die Zusammenarbeit konkret aus?',
+    a: 'In wiederkehrenden Runden statt als Einmalprojekt. Auf eine Bestandsaufnahme folgt eine priorisierte Roadmap, dann die laufende Umsetzung über SEO, Content und Performance Media. Monatlich schauen wir auf echte Zahlen, behalten was funktioniert und verwerfen was nicht trägt. So wird jede Runde präziser als die vorige — kein Report, der in der Schublade landet.',
+  },
+  {
+    q: 'Was bringt mir der kostenlose AI-Search-Check?',
+    a: 'Er gibt Ihnen kostenlos und unverbindlich einen ersten Eindruck, wo Ihre Marke in Google und in KI-Antworten steht und welcher Schritt am meisten bewegt. Das ist bewusst noch kein tiefes SEO-Audit — diese ausführliche Analyse über sechs Dimensionen ist kostenpflichtig — sondern eine Entscheidungshilfe, ob sich der nächste Schritt mit uns lohnt.',
+  },
+  {
+    q: 'Passt StarkRank zu meinem Unternehmen?',
+    a: 'Wenn Sie ein Schweizer KMU, ein Dienstleister oder ein gründergeführter Fachbetrieb sind und Suche als Umsatztreiber sehen — ja. Wir betreuen von Basel aus die ganze Deutschschweiz, inklusive regulierter Berufe mit strengen Werberegeln. Wer nur einen monatlichen Ranking-Report ohne Wirkung sucht, ist bei uns hingegen falsch.',
+  },
+  {
+    q: 'Binde ich mich langfristig?',
+    a: 'Sie wählen zwischen laufendem Retainer und einem fest umrissenen Projekt. Für Retainer raten wir zu mindestens sechs Monaten, da Suchmaschinen Änderungen erst mit Verzögerung in Rankings umsetzen. Ein häufiger Einstieg ist ein einmaliges Audit als Ausgangsbasis, aus dem später ein Retainer wird — der Audit-Preis wird dabei nicht verrechnet.',
+  },
+];
+
 const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -117,13 +144,23 @@ const websiteSchema = {
   url: 'https://starkrank.com',
   publisher: { '@id': 'https://starkrank.com/#organization' },
 };
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
 ---
 
 <BaseLayout
   title="StarkRank Schweiz — SEO & KI-Suchoptimierung für KMU"
   description="StarkRank ist eine Schweizer Digital-Marketing-Agentur mit Fokus auf KI-Suchoptimierung, technisches SEO und datengetriebene Wachstumsstrategien für Unternehmen in der Schweiz."
   locale="ch-de"
-  schema={[orgSchema, websiteSchema]}
+  schema={[orgSchema, websiteSchema, faqSchema]}
 >
   <HeroSection
     eyebrow="Stark in Search. Stark in Data. Stark in Growth."
@@ -244,6 +281,23 @@ const websiteSchema = {
         <Button href="/ch-de/services/" variant="outline" size="lg">Alle Services ansehen</Button>
       </div>
     </div>
+  </Section>
+
+  {/* FAQ / Capsule — top-of-funnel objection handling, feeds FAQPage schema */}
+  <Section bg="cream">
+    <SectionHeader
+      label="Fragen & Antworten"
+      title="Häufig gestellte Fragen"
+      align="center"
+    />
+    <dl class="mt-8 space-y-8 max-w-3xl mx-auto">
+      {faqs.map((f) => (
+        <div>
+          <dt class="text-lg font-headline font-bold text-navy">{f.q}</dt>
+          <dd class="mt-2 text-base font-body text-gray leading-relaxed">{f.a}</dd>
+        </div>
+      ))}
+    </dl>
   </Section>
 
   <CTASplit
