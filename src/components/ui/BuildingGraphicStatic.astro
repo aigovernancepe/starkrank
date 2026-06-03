@@ -197,13 +197,14 @@ function mobileAttrs(id: string) {
   <desc id="bg-desc-m">{a11y.desc}</desc>
   <defs>
     <style>
-      /* Mobile-only text fill. Font sizing lives on the <text> elements as
-         presentation attributes (font-size/-family/-weight in user units) — not in
-         this CSS class — because Android Chrome mis-scales CSS `font-size: 30px`
-         inside an SVG <text> (px treated against the screen, not the viewBox), which
-         shrank the live-text labels while the vector "Performance Media" stayed full
-         size. Presentation attributes are unitless user units and scale with the
-         viewBox on every engine, so all five labels match again. */
+      /* These two classes are a desktop/iOS convenience only — DO NOT rely on them for
+         Android. With two document-global SVG <style> blocks (desktop + this mobile one),
+         Android Chrome applies only the FIRST. .cls-1/.cls-6 survive because they're
+         duplicated in both blocks, but .cls-tm/.cls-pf live solely here, so Android dropped
+         them: the labels rendered with no fill (dark) and no font-size (tiny), while the
+         vector "Performance Media" was likewise unfilled. Every visual property the labels
+         need — fill, font-size/-family/-weight, letter-spacing — is therefore set as a
+         presentation attribute on the <text>/<g> elements (independent of these classes). */
       .cls-tm { fill: #fff; }
       .cls-pf { fill: #fff; }
     </style>
@@ -211,13 +212,13 @@ function mobileAttrs(id: string) {
   <Wrapper {...mobileAttrs('search-ai-intelligence')}>
     <g>
       <polygon class="cls-6" points="58.85 .29 .35 58.79 .35 333.77 141.75 333.77 141.75 .29 58.85 .29"/>
-      <text class="cls-tm" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="71.05" y="172.64">{labels.searchAi[0]}</tspan><tspan x="71.05" y="206.91">{labels.searchAi[1]}</tspan></text>
+      <text class="cls-tm" fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="71.05" y="172.64">{labels.searchAi[0]}</tspan><tspan x="71.05" y="206.91">{labels.searchAi[1]}</tspan></text>
     </g>
   </Wrapper>
   <Wrapper {...mobileAttrs('performance-media')}>
     <g>
       <polygon class="cls-6" points="212.06 .29 153.57 58.79 153.57 333.77 294.97 333.77 294.97 .29 212.06 .29"/>
-      <g>
+      <g fill="#fff">
         <path class="cls-pf" d="M177.11,153.76v-22h8.61c1.66,0,3.09.31,4.27.94s2.08,1.49,2.71,2.6c.62,1.11.94,2.39.94,3.85s-.32,2.74-.95,3.84c-.63,1.1-1.55,1.96-2.74,2.58s-2.63.93-4.31.93h-5.65v-3.68h5.05c.89,0,1.63-.16,2.22-.47.6-.31,1.04-.74,1.34-1.29.29-.55.44-1.19.44-1.92s-.15-1.38-.44-1.92c-.3-.54-.74-.96-1.34-1.27-.6-.3-1.34-.46-2.24-.46h-3.38v18.26h-4.52Z"/>
         <path class="cls-pf" d="M202.75,154.09c-1.66,0-3.1-.34-4.3-1.03s-2.14-1.66-2.79-2.92c-.65-1.26-.98-2.74-.98-4.44s.32-3.16.97-4.42,1.56-2.25,2.75-2.97c1.18-.71,2.56-1.07,4.15-1.07,1.09,0,2.11.18,3.04.53.94.35,1.75.88,2.46,1.57.71.69,1.25,1.56,1.64,2.6.39,1.04.58,2.24.58,3.59v1.23h-13.83v-2.78h11.69l-2.05.72c0-.85-.13-1.58-.4-2.2-.27-.62-.66-1.1-1.17-1.44-.52-.34-1.15-.51-1.91-.51s-1.4.17-1.93.52c-.53.34-.94.82-1.22,1.42-.28.6-.42,1.29-.42,2.07v1.95c0,.92.16,1.69.47,2.33s.76,1.12,1.34,1.45,1.25.49,2.02.49c.52,0,1-.08,1.42-.23.43-.15.79-.37,1.09-.66.3-.29.53-.65.69-1.07l4,.58c-.26.94-.72,1.77-1.38,2.47s-1.5,1.25-2.5,1.64c-1,.39-2.14.58-3.42.58Z"/>
         <path class="cls-pf" d="M212.38,153.76v-16.3h4.27v2.82h.15c.3-.99.79-1.74,1.48-2.25.69-.51,1.51-.76,2.45-.76.24,0,.48,0,.74.03.26.02.48.05.67.09v3.9c-.19-.06-.47-.11-.83-.14-.37-.03-.73-.05-1.07-.05-.65,0-1.24.14-1.76.43-.53.29-.94.69-1.23,1.21-.3.52-.44,1.14-.44,1.85v9.18h-4.4Z"/>
@@ -241,7 +242,7 @@ function mobileAttrs(id: string) {
   <Wrapper {...mobileAttrs('authority-pr')}>
     <g>
       <polygon class="cls-6" points="364.62 .29 306.13 58.79 306.13 333.77 447.53 333.77 447.53 .29 364.62 .29"/>
-      <text class="cls-tm" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="376.83" y="172.95">Digital</tspan><tspan x="376.83" y="207.22">PR</tspan></text>
+      <text class="cls-tm" fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="376.83" y="172.95">Digital</tspan><tspan x="376.83" y="207.22">PR</tspan></text>
     </g>
   </Wrapper>
   <Wrapper {...mobileAttrs('content-copywriting')}>
@@ -249,12 +250,12 @@ function mobileAttrs(id: string) {
       <polygon class="cls-6" points="599.78 .18 516.88 .18 458.38 58.68 458.38 256.25 458.39 256.25 458.39 333.98 458.86 333.98 528.93 261.91 545.6 278.58 492.2 333.98 506.55 333.98 552.84 285.69 599.28 333.98 599.83 333.98 599.83 256.25 599.78 256.25 599.78 .18"/>
       <polygon class="cls-6" points="539.48 333.98 568.26 333.98 553.8 319.66 539.48 333.98"/>
     </g>
-    <text class="cls-tm" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="529.1" y="185.95">Content</tspan></text>
+    <text class="cls-tm" fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="529.1" y="185.95">Content</tspan></text>
   </Wrapper>
   <Wrapper {...mobileAttrs('data-web')}>
     <g>
       <polygon class="cls-1" points="530.34 344.83 506.42 370.04 506.42 344.83 .26 344.81 .26 420.05 599.83 420.07 599.83 344.83 530.34 344.83"/>
-      <text class="cls-tm" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="300.05" y="393.61">{labels.dataWeb}</tspan></text>
+      <text class="cls-tm" fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="300.05" y="393.61">{labels.dataWeb}</tspan></text>
     </g>
   </Wrapper>
 </svg>
