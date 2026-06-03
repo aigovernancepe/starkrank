@@ -197,23 +197,21 @@ function mobileAttrs(id: string) {
   <desc id="bg-desc-m">{a11y.desc}</desc>
   <defs>
     <style>
-      /* Mobile-only text class — distinct name from the desktop .cls-10 because SVG
-         inline <style> is document-global, so a shared name would let one font-size
-         override the other. .cls-1/.cls-6 (the fills) are identical to desktop. */
-      .cls-tm {
-        fill: #fff;
-        font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-        font-size: 30px;
-        font-weight: 700;
-        letter-spacing: -.02em;
-      }
+      /* Mobile-only text fill. Font sizing lives on the <text> elements as
+         presentation attributes (font-size/-family/-weight in user units) — not in
+         this CSS class — because Android Chrome mis-scales CSS `font-size: 30px`
+         inside an SVG <text> (px treated against the screen, not the viewBox), which
+         shrank the live-text labels while the vector "Performance Media" stayed full
+         size. Presentation attributes are unitless user units and scale with the
+         viewBox on every engine, so all five labels match again. */
+      .cls-tm { fill: #fff; }
       .cls-pf { fill: #fff; }
     </style>
   </defs>
   <Wrapper {...mobileAttrs('search-ai-intelligence')}>
     <g>
       <polygon class="cls-6" points="58.85 .29 .35 58.79 .35 333.77 141.75 333.77 141.75 .29 58.85 .29"/>
-      <text class="cls-tm" text-anchor="middle"><tspan x="71.05" y="172.64">{labels.searchAi[0]}</tspan><tspan x="71.05" y="206.91">{labels.searchAi[1]}</tspan></text>
+      <text class="cls-tm" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="71.05" y="172.64">{labels.searchAi[0]}</tspan><tspan x="71.05" y="206.91">{labels.searchAi[1]}</tspan></text>
     </g>
   </Wrapper>
   <Wrapper {...mobileAttrs('performance-media')}>
@@ -243,7 +241,7 @@ function mobileAttrs(id: string) {
   <Wrapper {...mobileAttrs('authority-pr')}>
     <g>
       <polygon class="cls-6" points="364.62 .29 306.13 58.79 306.13 333.77 447.53 333.77 447.53 .29 364.62 .29"/>
-      <text class="cls-tm" text-anchor="middle"><tspan x="376.83" y="172.95">Digital</tspan><tspan x="376.83" y="207.22">PR</tspan></text>
+      <text class="cls-tm" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="376.83" y="172.95">Digital</tspan><tspan x="376.83" y="207.22">PR</tspan></text>
     </g>
   </Wrapper>
   <Wrapper {...mobileAttrs('content-copywriting')}>
@@ -251,12 +249,12 @@ function mobileAttrs(id: string) {
       <polygon class="cls-6" points="599.78 .18 516.88 .18 458.38 58.68 458.38 256.25 458.39 256.25 458.39 333.98 458.86 333.98 528.93 261.91 545.6 278.58 492.2 333.98 506.55 333.98 552.84 285.69 599.28 333.98 599.83 333.98 599.83 256.25 599.78 256.25 599.78 .18"/>
       <polygon class="cls-6" points="539.48 333.98 568.26 333.98 553.8 319.66 539.48 333.98"/>
     </g>
-    <text class="cls-tm" text-anchor="middle"><tspan x="529.1" y="185.95">Content</tspan></text>
+    <text class="cls-tm" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="529.1" y="185.95">Content</tspan></text>
   </Wrapper>
   <Wrapper {...mobileAttrs('data-web')}>
     <g>
       <polygon class="cls-1" points="530.34 344.83 506.42 370.04 506.42 344.83 .26 344.81 .26 420.05 599.83 420.07 599.83 344.83 530.34 344.83"/>
-      <text class="cls-tm" text-anchor="middle"><tspan x="300.05" y="393.61">{labels.dataWeb}</tspan></text>
+      <text class="cls-tm" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="300.05" y="393.61">{labels.dataWeb}</tspan></text>
     </g>
   </Wrapper>
 </svg>
@@ -290,6 +288,13 @@ function mobileAttrs(id: string) {
       transition: transform 220ms cubic-bezier(0.4, 0, 0.2, 1);
       transform-box: fill-box;
       transform-origin: center;
+      /* Kill the grey tap-flash + the dark default focus rectangle Android Chrome
+         draws on a tapped role=button/anchor (iOS Safari draws neither, which is why
+         the box only showed up on Android). The blue keyboard ring below stays. */
+      -webkit-tap-highlight-color: transparent;
+    }
+    .bg-block:focus:not(:focus-visible) {
+      outline: none;
     }
     .bg-block polygon {
       transition: filter 220ms ease;
