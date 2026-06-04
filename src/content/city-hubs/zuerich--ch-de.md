@@ -8,6 +8,7 @@ heroLede: "Lokale digitale Sichtbarkeit für Zürcher KMU — von Webagentur üb
 servicesTitle: "Dienstleistungen"
 servicesIntro: "Wir konzentrieren uns auf die Bereiche, in denen Zürcher Unternehmen die höchste Suchnachfrage und den klarsten Hebel haben — datenbasiert ausgewählt, nicht durch Template-Mirror entschieden."
 featuredServices:
+  - "technical-seo-audit"
   - "performance-web-development"
   - "technical-web-design"
   - "google-ads-management"
@@ -47,7 +48,7 @@ cta: "Kostenlose Erstberatung für Zürich anfordern"
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
-Eine SEO-Agentur in Zürich baut digitale Sichtbarkeit für Unternehmen mit regionalem oder schweizweitem Marktfokus auf — mit technischem Audit, Content-Strategie, Linkaufbau und lokaler Optimierung für Google Maps und KI-Antworten. StarkRank verbindet das mit einer Spezialisierung auf Finanzdienstleistungen, Versicherung, Tech und professionelle Beratungsdienste.
+Eine SEO-Agentur in Zürich baut digitale Sichtbarkeit für Unternehmen mit regionalem oder schweizweitem Marktfokus auf — mit [technischem SEO Audit](/ch-de/seo-audit-zuerich/), Content-Strategie, Linkaufbau und lokaler Optimierung für Google Maps und KI-Antworten. StarkRank verbindet das mit einer Spezialisierung auf Finanzdienstleistungen, Versicherung, Tech und professionelle Beratungsdienste.
 
 Konkret bedeutet das: Wir analysieren, wo Ihre Zürcher Zielgruppe heute sucht — Google, LinkedIn, branchenspezifische Plattformen, KI-Tools wie ChatGPT oder Perplexity. Daraus entsteht eine Roadmap mit klaren Meilensteinen, statt einer generischen Standard-Empfehlung. Banken brauchen FINMA-konforme Content-Pfade; Versicherer eine saubere Trennung von B2B- und B2C-Funnels; SaaS-Anbieter vor allem KI-Sichtbarkeit für die technische Vorrecherche; Beratungen Thought-Leadership-Sichtbarkeit, die zur tatsächlichen Expertise passt.
 
