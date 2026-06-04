@@ -62,6 +62,12 @@ StarkRank publiziert die Audit-Tarife transparent unter [/ch-de/preise/seo/](/ch
 
 Festpreis nach Briefing, keine T&M-Schätzung mit offenem Ausgang. Die Erstberatung ist kostenlos.
 
+## Lohnt sich ein SEO Audit auch für kleine Unternehmen und KMU?
+
+Ja — gerade für kleine Unternehmen und KMU, bei denen jeder Franken Marketingbudget zählt. Eine fokussierte Analyse verhindert, dass Budget in Massnahmen fliesst, die an einem technischen Blocker scheitern. Für eine kleine Site mit wenigen Hundert URLs reicht meist der Standard-SEO-Audit ab 1'800 CHF; wer nur eine erste Orientierung sucht, startet mit dem kostenlosen [AI Search Optimization Check](/ch-de/aiso-check/).
+
+Der wirtschaftliche Hebel ist bei KMU oft grösser als bei Konzernen: Wenige gezielte Fixes — KI-Crawler-Zugang, sauberes Schema, schnellere Ladezeiten — verschieben die Sichtbarkeit spürbar, weil das Wettbewerbsfeld lokal weniger optimiert ist. Ob Sie die Analyse von einem Freelancer oder einer spezialisierten Agentur durchführen lassen, hängt weniger am Preis als an der Methodik-Tiefe: Ein Freelancer liefert oft eine solide technische Stichprobe, eine Agentur ein reproduzierbares Bewertungsraster über klassische und KI-Suche samt revDSG-Schicht. Für brandneue Websites ohne Live-Traffic ist ein Audit allerdings verfrüht.
+
 ## Was prüft ein SEO Audit konkret?
 
 Die fünf Prüfbereiche bei StarkRank:
@@ -72,7 +78,33 @@ Die fünf Prüfbereiche bei StarkRank:
 - **Hreflang-Korrektheit** — DE/CH-DE/EN-Varianten, x-default-Fallbacks, Canonical-Konsistenz über Sprachen, Selbst-Referenzen-Symmetrie
 - **KI-Crawler-Zugang** — robots.txt-Richtlinien für GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot; WAF- und CDN-Regeln auf Crawler-Freundlichkeit geprüft
 
-Jeder Befund wird nach Schweregrad klassifiziert (Blocker, Hoch, Mittel, Niedrig) und bekommt eine umsetzbare Fix-Empfehlung mit Aufwandsschätzung.
+Jeder Befund wird nach Schweregrad klassifiziert (Blocker, Hoch, Mittel, Niedrig) und bekommt eine umsetzbare Fix-Empfehlung mit Aufwandsschätzung. Die Analyse deckt damit On-Page-Faktoren (Inhalte, Keywords, interne Verlinkung) und Off-Page-Signale gleichermassen ab.
+
+## Die sechs Dimensionen des AI Search Optimization Score
+
+Ein klassisches Audit liefert eine Checkliste, eine spezialisierte Analyse liefert ein gewichtetes Bewertungsraster. Der AI Search Optimization Score verteilt 100 Punkte auf sechs Dimensionen, dokumentiert jede pro URL und macht die Befunde zwischen zwei Audit-Runs reproduzierbar vergleichbar:
+
+| Dimension | Gewichtung | Was sie prüft |
+|-----------|------------|---------------|
+| Crawlability | 20 | robots.txt, Bot-Zugriffe, WAF-Regeln, expliziter Zugang für GPTBot, ClaudeBot, PerplexityBot |
+| Structure | 20 | Heading-Hierarchie, semantisches HTML, interne Verlinkung, Pagination, hreflang |
+| Citability | 20 | JSON-LD-Tiefe, sameAs zu Wikidata, Capsule-Format, AI-Overview-Eignung |
+| Measurability | 15 | GSC-Coverage, GA4-Integrität, Core Web Vitals auf echten Geräten, Conversion-Tracking |
+| Authority | 15 | E-E-A-T-Signale, Autorenschemata, Backlink-Profil, Markenerwähnungen in KI-Antworten |
+| Freshness | 10 | updated-Markup, Content-Halbwertszeit, Reindexierungs-Signale, llms.txt-Aktualität |
+
+Pro URL fällt der Score in eine von fünf Stufen — von Critical (Blocker, die jede weitere Optimierung wirkungslos machen) bis Excellent. So bekommt Ihr Entwicklungsteam einen Schwellenwert, ab dem ein Befund priorisiert werden muss, statt eines nebulösen «Empfehlung A vor Empfehlung B».
+
+## Welche Vorteile bringt ein SEO Audit für Ihr Unternehmen?
+
+Eine SEO-Analyse ist kein Selbstzweck — sie macht ungenutzte Potenziale sichtbar und übersetzt sie in eine priorisierte Reihenfolge. Der konkrete Nutzen für Schweizer Unternehmen:
+
+- **Mehr Sichtbarkeit in Google und KI-Antworten** — die Untersuchung zeigt, warum gute Inhalte nicht ranken, und welche gezielten Massnahmen die organische Sichtbarkeit nachhaltig steigern
+- **Höhere Relevanz für die richtige Zielgruppe** — statt breiter Keywords prüfen wir, ob Ihre Seiten zur tatsächlichen Suchintention Ihrer Kunden passen
+- **Planbare Investition statt Blindflug** — Sie erhalten fundierte Handlungsempfehlungen mit Aufwandsschätzung, kein 300-Zeilen-Report ohne Priorisierung
+- **Bessere Nutzererfahrung und Ladezeiten** — technische Schwachstellen, die Besucher und Suchmaschinen gleichermassen ausbremsen, werden benannt und nach Wirkung sortiert
+
+Der Hebel für bessere Rankings liegt selten in «mehr Content», sondern in der gezielten Behebung der Befunde, die heute Traffic und Positionen in den Suchergebnissen kosten.
 
 ## Welche Rolle spielt revDSG im SEO Audit für Schweizer Webseiten?
 
@@ -84,6 +116,32 @@ revDSG (revidiertes Datenschutzgesetz, in Kraft seit 1. September 2023) hat dire
 - **Berufsgeheimnis-Tauglichkeit** — für Anwälte, Treuhänder und Ärzte muss Schweizer Hosting (Cloudflare europe-west6 oder vergleichbar) zwingend sein; US-Edge-Routing ist faktisch Mandats-Disqualifikation
 
 StarkRank liefert die revDSG-Schicht als dokumentierte Compliance-Beilage zum Audit-Bericht.
+
+## Welcher Werkzeug-Stack und welche Datenquellen kommen zum Einsatz?
+
+Eine Analyse ist nur so präzise wie die Datenquellen darunter. StarkRank kombiniert für die sechs Dimensionen einen bewusst reduzierten, nachvollziehbaren Werkzeug-Stack:
+
+- **Screaming Frog** für den vollständigen Crawl und die JSON-LD-Validierung pro Template
+- **DataForSEO** für Core Web Vitals at scale — LCP, CLS und INP auf realen Mobile-Profilen statt Lighthouse-Idealwerten
+- **Google Search Console und GA4** als Wahrheitsquelle für Coverage, Klicks und Impressionen in den Suchergebnissen, nicht Drittanbieter-Schätzungen
+- **BigQuery** (`starkrank-ch-de-prod.searchconsole`) für historische GSC-Trends unterhalb der GSC-UI-Anzeige-Grenze
+- **Server-Log-Analyse** über ein 30-Tage-Sample, um echte Bot-Aktivität von vermuteter zu trennen
+- **Manuelle Expertenprüfung** für Muster, die Crawler übersehen: Cookie-Banner-Blocker im First Paint, Canonical-Logik über Template-Grenzen, Schema-Konsistenz
+
+Was bewusst fehlt: SaaS-Werkzeuge, die einen 100-Punkte-Score ohne offene Methodik vergeben. Der AI Search Optimization Score ist pro URL nachrechenbar — Sie können den Score nachvollziehen, statt einer Black Box zu vertrauen.
+
+## Welche Schwachstellen finden wir auf Schweizer Websites am häufigsten?
+
+Eine Analyse Schweizer KMU-Websites fördert wiederkehrende Schwachstellen zu Tage:
+
+- **KI-Crawler durch WAF oder CDN blockiert** — Cloudflare- und Akamai-Standardkonfigurationen blockieren häufig GPTBot, ClaudeBot oder PerplexityBot unter dem Label «Bot-Schutz», ohne dass es im CMS sichtbar wäre
+- **Consent-Banner blockieren das Rendering** — revDSG-strikt konfigurierte Cookie-Layer verhindern manchmal, dass Googlebot den Hauptinhalt überhaupt erreicht
+- **Mehrsprachigkeit mit hreflang-Chaos** — DE-, FR- und IT-Versionen ohne korrekte x-default-Fallbacks oder mit sich widersprechenden Canonicals, am Dreiländereck besonders häufig
+- **Dünne Kategorie- und Leistungsseiten** — Seiten, die nur aus einer Liste bestehen, ohne einführenden Text oder strukturierte Beschreibung, ranken weder klassisch noch werden sie in KI-Antworten zitiert
+- **Strukturierte Daten ohne [Entitätsanker](/ch-de/glossar/#entity-anchor)** — Organization-Schema ohne sameAs zu Wikidata, Zefix oder LinkedIn: KI-Systeme finden die Marke nicht als zitierbare Entität wieder
+- **Falsches Locale-Signal** — `og:locale: de_DE` und `lang="de"` auf einer Schweizer Seite, ungeprüft aus einem DE-Theme übernommen — sendet das falsche Markt-Signal an Suchmaschinen und LLMs
+
+Diese Muster sind nicht zufällig: Sie spiegeln die Kombination aus revDSG-Anforderungen, Bot-Schutz-Standards der CDN-Anbieter und fehlendem Bewusstsein für die KI-Crawler-Welle.
 
 ## Was unterscheidet einen SEO Audit von einem AI Search Optimization Audit?
 
@@ -109,6 +167,16 @@ Der Audit-Prozess in fünf Schritten über typischerweise zehn bis fünfzehn Arb
 5. **Optionale Umsetzungsbegleitung** — monatliches Review der Umsetzung, Re-Crawl nach priorisierten Fixes, enger Anschluss an [Webdesign Schweiz](/ch-de/services/webdesign-schweiz/) oder [AI Search Optimization Score](/ch-de/aiso-check/)
 
 Nach Schritt 4 sind Sie handlungsfähig — unabhängig davon, ob die Umsetzung intern, mit Ihrem bestehenden Partner oder mit uns im Retainer fortgeführt wird.
+
+## Welche Schritte folgen nach einem SEO Audit?
+
+Mit dem Audit-Bericht sind Sie handlungsfähig. Die priorisierte Roadmap ordnet jeden Befund nach Schweregrad, sodass Ihr Team die Massnahmen Stück für Stück abarbeiten kann — Blocker zuerst, Feinschliff zuletzt. Drei typische Wege:
+
+- **Umsetzung intern** — Ihr Entwicklungsteam arbeitet die Roadmap eigenständig ab; der Bericht ist so geschrieben, dass keine SEO-Fachsprache ohne Erklärung bleibt
+- **Umsetzung im Retainer** — wir begleiten die Umsetzung mit monatlichem Review und Re-Crawl nach den priorisierten Fixes, eng verzahnt mit [Webdesign Schweiz](/ch-de/services/webdesign-schweiz/) oder dem [AI Search Optimization Score](/ch-de/aiso-check/)
+- **Re-Audit nach der Fix-Phase** — ein erneuter Crawl misst, ob die Massnahmen gegriffen haben, und aktualisiert den Score pro URL
+
+Nachhaltige Wirkung entsteht nicht durch den Bericht allein, sondern durch die konsequente, priorisierte Abarbeitung der Befunde — gerade nach einem Relaunch.
 
 ## Wann ist der richtige Zeitpunkt für einen SEO Audit?
 
