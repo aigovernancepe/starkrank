@@ -64,6 +64,16 @@ Im Unterschied zu einem reinen SEO-Werkzeug oder einer Generalisten-Agentur arbe
 
 Die Relevanz eines Audits hat sich durch KI-Suche deutlich verschoben. Klassische Suche verzieh in den letzten Jahren vieles: blockierte JavaScript-Ressourcen, fehlende strukturierte Daten oder ineffiziente Canonical-Logik kosteten Traffic, blockierten aber selten komplett. KI-Suche ist strenger. GPTBot oder ClaudeBot scheitern bereits an einer falsch konfigurierten Web-Application-Firewall, bevor ein einziger Satz Ihres Contents überhaupt gecrawlt wurde. Sichtbarkeit in ChatGPT, Perplexity und Google AI Overviews wird so zu einer rein binären Frage: Entweder der Crawler kommt durch, oder er kommt nicht durch.
 
+## Was unterscheidet eine gute SEO Audit Agentur von einem Tool oder Freelancer?
+
+Ein SEO-Werkzeug wie Screaming Frog oder ein SE-Ranking-Crawl liefert eine Liste technischer Fehler — aber keine Priorisierung im Geschäftskontext. Eine gute SEO-Audit-Agentur unterscheidet sich an drei Punkten:
+
+- **Priorisierung statt Fehlerliste** — nicht jeder Befund ist gleich wichtig. Wir ordnen Schwachstellen nach Auswirkung auf Sichtbarkeit und Ranking und liefern konkrete Handlungsempfehlungen mit Aufwandsschätzung, statt 300 Zeilen Rohdaten
+- **Geschäfts- und Wettbewerbskontext** — eine gute Agentur prüft nicht nur Ihre Website, sondern ordnet Befunde im Verhältnis zu Mitbewerbern und Zielgruppe ein: welche Keywords relevant sind, wo Sie in den klassischen Suchmaschinen gegen den Wettbewerb verlieren, welche Ladezeiten Nutzererfahrung und Conversions kosten
+- **Reproduzierbare Methodik** — ein nachvollziehbares Bewertungsraster (bei StarkRank der AI Search Optimization Score) macht zwei Audit-Runs vergleichbar, statt eines subjektiven «Site Health 87/100» ohne offene Berechnung
+
+Der Unterschied zwischen Werkzeug und Agentur ist nicht die Datenerhebung — Crawler nutzen beide —, sondern die gezielte Übersetzung der Daten in eine priorisierte, umsetzbare Reihenfolge, die ungenutzte Potenziale sichtbar macht. Ein Freelancer liefert das oft für klar abgegrenzte Einzelprojekte; eine spezialisierte SEO-Audit-Agentur skaliert es über klassische Suche und KI-Suche samt dokumentierter Methodik.
+
 ## AI Search Optimization Score: die sechs Audit-Dimensionen mit Gewichtung
 
 Klassische SEO-Audits liefern Checklisten, eine SEO Audit Agentur sollte ein gewichtetes Bewertungsraster liefern. Der AI Search Optimization Score (AISO) verteilt 100 Punkte auf sechs Dimensionen, dokumentiert jede pro URL und macht Befunde damit zwischen Audit-Runs reproduzierbar vergleichbar. Diese sechs Dimensionen sind:
@@ -76,6 +86,8 @@ Klassische SEO-Audits liefern Checklisten, eine SEO Audit Agentur sollte ein gew
 | Measurability | 15 | GSC-Coverage, GA4-Integrität, Core Web Vitals auf echten Geräten, Conversion-Tracking |
 | Authority | 15 | E-E-A-T-Signale, Autorenschemata, Backlink-Profil, Brand-Erwähnungen in KI-Antworten |
 | Freshness | 10 | updated-Markup, Content-Halbwertszeit, Reindexierungs-Signale, llms.txt-Aktualität |
+
+### Die fünf Score-Stufen pro URL
 
 Pro URL fällt der Score in eine von fünf Stufen: 85–100 Punkte heißt **Excellent** (kein dringender Handlungsbedarf), 70–84 **Good** (Feinschliff), 50–69 **Fair** (gezielter Eingriff lohnt), 30–49 **Poor** (sichtbarer Sichtbarkeitsverlust wahrscheinlich), 0–29 **Critical** (Blocker, die andere Optimierungen wirkungslos machen). Diese Skalierung gibt Ihrem Entwicklungsteam einen Schwellenwert, ab dem ein Befund priorisiert werden muss, statt eines nebulösen "Empfehlung A vor Empfehlung B" eines klassischen Audit-Reports.
 
@@ -116,7 +128,7 @@ Der Check ist die richtige Wahl, wenn Sie eine erste Orientierung wollen, ob KI-
 
 ## Was kostet ein SEO Audit?
 
-Ein SEO Audit bei StarkRank ist als Festpreis-Triplet kalkuliert. Drei Bänder, gestaffelt nach Site-Größe und Stack-Komplexität:
+Ein SEO-Audit bei StarkRank ist als Festpreis-Triplet kalkuliert. Drei Bänder, gestaffelt nach Site-Größe und Stack-Komplexität:
 
 - **Standard — 1.500 € netto**: bis 1.000 URLs, bis zu zwei Sprachen, Single-CMS
 - **Mittelstand — 2.500 € netto**: 1.000–5.000 URLs, multi-CMS oder Headless-Stack, zwei bis drei Sprachen
@@ -135,7 +147,7 @@ Wir kalkulieren transparent und nennen vorab den festen Bandpreis, keine Schätz
 
 ## Wie läuft ein SEO Audit bei StarkRank ab?
 
-Ein SEO Audit läuft bei uns in fünf klar getrennten Schritten ab:
+Ein SEO-Audit läuft bei uns in fünf klar getrennten Schritten ab:
 
 1. **Kick-off und Scope-Definition** — 30-minütiger Call mit Ihrem Team zur Priorisierung (klassische Suche, KI-Suche oder beides), Tool-Zugang freischalten (Google Search Console / GSC, GA4, CMS, Server-Logs), Definition der kritischen Templates (Startseite, Kategorie-Seiten, Produktseiten, Landingpages) und Abstimmung des Zeitplans
 2. **Automatisierter Crawl und Log-Analyse** — paralleler Lauf von Screaming Frog, Sitebulb und Ahrefs-Site-Audit, Abgleich mit Google-Search-Console-Coverage und Bing Webmaster Tools, Auswertung eines Server-Log-Samples der letzten 30 Tage für echte Bot-Aktivität statt vermuteter
@@ -147,7 +159,7 @@ Nach Schritt 4 sind Sie handlungsfähig, unabhängig davon, ob Sie die Umsetzung
 
 ## Typische Fehlerklassen in deutschen B2B-Websites
 
-Ein SEO Audit bei deutschen B2B-Websites fördert erfahrungsgemäß wiederkehrende Fehlerklassen zu Tage:
+Ein SEO-Audit bei deutschen B2B-Websites fördert erfahrungsgemäß wiederkehrende Fehlerklassen zu Tage:
 
 - **KI-Crawler durch WAF oder CDN blockiert** — Cloudflare-, Akamai- und Fastly-Standardkonfigurationen blockieren häufig GPTBot, ClaudeBot oder PerplexityBot unter dem Label „Bot-Schutz", ohne dass es im CMS sichtbar wäre
 - **Cookie-Banner blockieren Rendering** — aggressive Consent-Management-Tools (CMPs) hinter vollflächigen Overlays verhindern manchmal, dass Googlebot den Hauptinhalt überhaupt erreicht, besonders bei DSGVO-strikter Konfiguration
@@ -160,7 +172,7 @@ Diese Muster sind nicht zufällig. Sie spiegeln die spezifische Kombination aus 
 
 ## Wann lohnt sich ein SEO Audit?
 
-Ein SEO Audit lohnt sich vor allem in diesen Situationen:
+Ein SEO-Audit lohnt sich vor allem in diesen Situationen:
 
 - **Vor einer Website-Migration oder einem Relaunch** — technische Fehler vor dem Umzug identifizieren, statt hinterher Rankings und Traffic zu verlieren
 - **Nach einem sichtbaren Ranking-Einbruch** ohne offensichtlichen Content- oder Link-Grund — oft liegt die Ursache in Rendering oder Indexierung
