@@ -38,7 +38,18 @@ const showCompanyAndPhone = formType === 'kontakt';
 const inputClass =
   'w-full rounded-md border border-gray-light/60 bg-white px-4 py-3 font-body text-base text-dark placeholder:text-gray-light focus:border-blue focus:outline-none focus:ring-2 focus:ring-blue/20 transition-colors';
 const labelClass = 'block text-sm font-label font-semibold text-navy mb-1';
-const errorParam = Astro.url.searchParams.get('error');
+
+// Error-Banner-Texte werden als data-Attribute vorgerendert und client-seitig per
+// ?error-Code eingeblendet. NICHT Astro.url.searchParams nutzen: die Formularseiten sind
+// output:'static' → Frontmatter läuft zur Build-Zeit, nicht pro Besucher (errorParam wäre
+// immer null). Codes spiegeln functions/api/lead.ts.
+const errorMessages: Record<string, string> = {
+  'missing-fields': t('leadForm.error.missing', locale),
+  'invalid-email': t('leadForm.error.invalidEmail', locale),
+  'turnstile-missing': t('leadForm.error.turnstile', locale),
+  'turnstile-failed': t('leadForm.error.turnstile', locale),
+  'sheet-failed': t('leadForm.error.sheet', locale),
+};
 ---
 
 <form method="POST" action="/api/lead" class="space-y-5" data-lead-form>
@@ -53,14 +64,19 @@ const errorParam = Astro.url.searchParams.get('error');
     </label>
   </div>
 
-  {errorParam && (
-    <div class="rounded-md border border-red-300 bg-red-50 px-4 py-3 text-sm font-body text-red-800">
-      {errorParam === 'missing-fields' && t('leadForm.error.missing', locale)}
-      {errorParam === 'invalid-email' && t('leadForm.error.invalidEmail', locale)}
-      {(errorParam === 'turnstile-missing' || errorParam === 'turnstile-failed') && t('leadForm.error.turnstile', locale)}
-      {errorParam === 'sheet-failed' && t('leadForm.error.sheet', locale)}
-    </div>
-  )}
+  <div
+    data-error-banner
+    hidden
+    data-msg-missing-fields={errorMessages['missing-fields']}
+    data-msg-invalid-email={errorMessages['invalid-email']}
+    data-msg-turnstile-missing={errorMessages['turnstile-missing']}
+    data-msg-turnstile-failed={errorMessages['turnstile-failed']}
+    data-msg-sheet-failed={errorMessages['sheet-failed']}
+    class="rounded-md border border-red-300 bg-red-50 px-4 py-3 text-sm font-body text-red-800"
+    role="alert"
+  >
+    <span data-error-text></span>
+  </div>
 
   <div>
     <label for="lf-name" class={labelClass}>
@@ -189,6 +205,22 @@ const errorParam = Astro.url.searchParams.get('error');
     {t(buttonKey, locale)}
   </button>
 </form>
+
+<script is:inline>
+  // Fehler-Banner client-seitig einblenden (Seite ist static pre-rendered, daher kein
+  // Frontmatter-Gating möglich). Liest ?error und zeigt den passenden vorgerenderten Text.
+  (function () {
+    var code = new URLSearchParams(window.location.search).get('error');
+    if (!code) return;
+    document.querySelectorAll('[data-error-banner]').forEach(function (banner) {
+      var msg = banner.getAttribute('data-msg-' + code);
+      if (!msg) return;
+      var target = banner.querySelector('[data-error-text]');
+      if (target) target.textContent = msg;
+      banner.hidden = false;
+    });
+  })();
+</script>
 
 <script
   is:inline
