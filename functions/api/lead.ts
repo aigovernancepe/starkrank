@@ -42,11 +42,15 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   const get = (key: string) => (formData.get(key) ?? '').toString().trim();
 
+  const leadSourcePage = get('lead_source_page') || '/';
+
   const honeypot = get('website');
   if (honeypot) {
+    // Bot landet ohne ?error auf der Danke-Seite (tippt ihn nicht ab) — aber mit ?lead=hp,
+    // damit das Conversion-Script auf der Danke-Seite Honeypot-Treffer ausschliesst.
     return wantsJson
       ? jsonResponse({ ok: true }, 200)
-      : Response.redirect(redirectURL(get('locale'), request), 303);
+      : Response.redirect(redirectURL(get('locale'), request, 'hp'), 303);
   }
 
   const formType = normalizeFormType(get('form_type'));
@@ -57,25 +61,24 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const consent = get('consent');
 
   if (!name || !email || !message || consent !== 'true') {
-    return errorResponse(locale, 'missing-fields', request, wantsJson);
+    return errorResponse(leadSourcePage, 'missing-fields', request, wantsJson);
   }
   if (!isValidEmail(email)) {
-    return errorResponse(locale, 'invalid-email', request, wantsJson);
+    return errorResponse(leadSourcePage, 'invalid-email', request, wantsJson);
   }
 
   // Service Finder skips Turnstile — multi-step wizard provides its own friction layer.
   if (formType !== 'service-finder') {
     const turnstileToken = get('cf-turnstile-response');
     if (!turnstileToken) {
-      return errorResponse(locale, 'turnstile-missing', request, wantsJson);
+      return errorResponse(leadSourcePage, 'turnstile-missing', request, wantsJson);
     }
     const turnstilePass = await verifyTurnstile(turnstileToken, env.TURNSTILE_SECRET_KEY, request);
     if (!turnstilePass) {
-      return errorResponse(locale, 'turnstile-failed', request, wantsJson);
+      return errorResponse(leadSourcePage, 'turnstile-failed', request, wantsJson);
     }
   }
 
-  const leadSourcePage = get('lead_source_page') || '/';
   const userAgent = request.headers.get('user-agent') ?? '';
   const ipCountry = request.headers.get('cf-ipcountry') ?? '';
 
@@ -100,7 +103,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   const sheetOk = await appendToSheet(env.APPS_SCRIPT_URL, payload);
   if (!sheetOk) {
-    return errorResponse(locale, 'sheet-failed', request, wantsJson);
+    return errorResponse(leadSourcePage, 'sheet-failed', request, wantsJson);
   }
 
   await sendNotification(env.RESEND_API_KEY, env.LEAD_NOTIFY_EMAIL, payload).catch(() => {
@@ -109,7 +112,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   return wantsJson
     ? jsonResponse({ ok: true }, 200)
-    : Response.redirect(redirectURL(locale, request), 303);
+    : Response.redirect(redirectURL(locale, request, formType), 303);
 };
 
 function jsonResponse(body: unknown, status: number): Response {
@@ -131,18 +134,27 @@ function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-function redirectURL(locale: string, request: Request): string {
+function redirectURL(locale: string, request: Request, formType?: string): string {
   const safeLocale = normalizeLocale(locale);
   const origin = new URL(request.url).origin || SITE_ORIGIN;
-  return `${origin}${THANK_YOU_PATH[safeLocale]}`;
+  // Segments conversions in Ads/GA4 (kontakt vs. aiso vs. google-ads etc.) without
+  // exposing the ?error gate — a successful lead never carries ?error.
+  const query = formType ? `?lead=${encodeURIComponent(formType)}` : '';
+  return `${origin}${THANK_YOU_PATH[safeLocale]}${query}`;
 }
 
-function errorResponse(locale: Locale, code: string, request: Request, wantsJson = false): Response {
+// Errors redirect back to the originating page (which renders LeadForm + its ?error
+// banner), NOT the thank-you page — the thank-you page has no form and would falsely
+// read as "success". This also keeps the conversion gate honest: only a real success
+// ever lands on a thank-you URL without ?error.
+function errorResponse(sourcePage: string, code: string, request: Request, wantsJson = false): Response {
   if (wantsJson) {
     return jsonResponse({ ok: false, error: code }, 400);
   }
   const origin = new URL(request.url).origin || SITE_ORIGIN;
-  const target = `${origin}${THANK_YOU_PATH[locale]}?error=${encodeURIComponent(code)}`;
+  const safePath = sourcePage.startsWith('/') ? sourcePage : '/';
+  const separator = safePath.includes('?') ? '&' : '?';
+  const target = `${origin}${safePath}${separator}error=${encodeURIComponent(code)}`;
   return Response.redirect(target, 303);
 }
 
