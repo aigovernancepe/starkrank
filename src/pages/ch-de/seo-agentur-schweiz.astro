@@ -68,24 +68,51 @@ const swissSpecifics = [
   },
 ];
 
-const verticals = [
+const verticalGroups = [
   {
-    label: 'SEO für Ärzte',
-    href: '/ch-de/seo-fuer-aerzte/',
-    description:
-      'Spezialkliniken und Facharzt-Praxen mit Selbstzahler- oder Zuweiser-Funnel — revDSG-konform, FMH-Werberecht-bewusst, mit lebender Fallstudie Handzentrum Ost.',
+    group: 'Medizin',
+    items: [
+      {
+        label: 'SEO für Ärzte',
+        href: '/ch-de/seo-fuer-aerzte/',
+        description:
+          'Spezialkliniken und Facharzt-Praxen mit Selbstzahler- oder Zuweiser-Funnel — revDSG-konform, FMH-Werberecht-bewusst, mit lebender Fallstudie Handzentrum Ost.',
+      },
+      {
+        label: 'SEO für Zahnärzte',
+        href: '/ch-de/seo-fuer-zahnaerzte/',
+        description:
+          'Aesthetic- und Implantat-Zahnarztpraxen mit Selbstzahler-Anteil — revDSG-konform, SSO-Standesordnung-bewusst, mit anonymisierter Phase-0-Beispiel-Diagnose statt Mandats-Versprechen.',
+      },
+    ],
   },
   {
-    label: 'SEO für Zahnärzte',
-    href: '/ch-de/seo-fuer-zahnaerzte/',
-    description:
-      'Aesthetic- und Implantat-Zahnarztpraxen mit Selbstzahler-Anteil — revDSG-konform, SSO-Standesordnung-bewusst, mit anonymisierter Phase-0-Beispiel-Diagnose statt Mandats-Versprechen.',
+    group: 'Recht',
+    items: [
+      {
+        label: 'SEO für Anwälte',
+        href: '/ch-de/seo-fuer-anwaelte/',
+        description:
+          'Schweizer Anwaltskanzleien mit Mandats-Funnel — revDSG-konform, BGFA-Standesregeln-bewusst, UWG-Impressum-geprüft, mit strukturierten LegalService-Daten.',
+      },
+      {
+        label: 'SEO für Notare',
+        href: '/ch-de/seo-fuer-notare/',
+        description:
+          'Schweizer Notariate mit lokalem Mandanten-Funnel — revDSG- und Art. 321 StGB-bewusst, kantonales Notariatsgesetz- und SBN-Standesordnung-respektierend, mit strukturierten LegalService- und LocalBusiness-Daten.',
+      },
+    ],
   },
   {
-    label: 'SEO für Vermögensverwalter',
-    href: '/ch-de/seo-fuer-vermoegensverwalter/',
-    description:
-      'FINMA-bewilligte unabhängige Vermögensverwalter mit Spezialisierungs-Funnel — FINIG-/FIDLEG-konform, VSV-Standesregeln-respektierend, FinancialService-Schema-strukturiert.',
+    group: 'Finanz',
+    items: [
+      {
+        label: 'SEO für Vermögensverwalter',
+        href: '/ch-de/seo-fuer-vermoegensverwalter/',
+        description:
+          'FINMA-bewilligte unabhängige Vermögensverwalter mit Spezialisierungs-Funnel — FINIG-/FIDLEG-konform, VSV-Standesregeln-respektierend, FinancialService-Schema-strukturiert.',
+      },
+    ],
   },
 ];
 
@@ -224,13 +251,20 @@ const schemas = [serviceSchema, breadcrumbSchema, faqSchema];
 
     <div class="mt-12 pt-10 border-t border-gray-light/40">
       <h3 class="text-xs font-label font-bold uppercase tracking-[0.2em] text-blue mb-2">Spezialisierungen</h3>
-      <p class="text-sm font-body text-gray leading-relaxed mb-6 max-w-2xl">Vertikale Hub-Seiten für Branchen mit eigener Compliance- und Suchlandschaft — ergänzend zu den horizontalen Kompetenzbereichen oben.</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {verticals.map((v) => (
-          <Card href={v.href}>
-            <h4 class="text-lg font-headline font-bold text-navy">{v.label}</h4>
-            <p class="mt-3 text-sm font-body text-gray leading-relaxed">{v.description}</p>
-          </Card>
+      <p class="text-sm font-body text-gray leading-relaxed mb-8 max-w-2xl">Vertikale Hub-Seiten für Branchen mit eigener Compliance- und Suchlandschaft — ergänzend zu den horizontalen Kompetenzbereichen oben.</p>
+      <div class="space-y-10">
+        {verticalGroups.map((grp) => (
+          <div>
+            <h4 class="text-xs font-label font-bold uppercase tracking-[0.15em] text-navy mb-4">{grp.group}</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {grp.items.map((v) => (
+                <Card href={v.href}>
+                  <h5 class="text-lg font-headline font-bold text-navy">{v.label}</h5>
+                  <p class="mt-3 text-sm font-body text-gray leading-relaxed">{v.description}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </div>
