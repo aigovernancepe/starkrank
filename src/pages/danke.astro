@@ -26,6 +26,7 @@ import { t } from '../utils/i18n';
     (function () {
       var params = new URLSearchParams(window.location.search);
       if (params.has('error')) return;
+      if (params.get('lead') === 'hp') return;
       var formType = params.get('lead') || undefined;
       if (typeof window.gtag === 'function') {
         window.gtag('event', 'conversion', { send_to: 'AW-XXXXXXXXXX/XXXXXXXXXXXXXXX' });

@@ -46,9 +46,11 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   const honeypot = get('website');
   if (honeypot) {
+    // Bot landet ohne ?error auf der Danke-Seite (tippt ihn nicht ab) — aber mit ?lead=hp,
+    // damit das Conversion-Script auf der Danke-Seite Honeypot-Treffer ausschliesst.
     return wantsJson
       ? jsonResponse({ ok: true }, 200)
-      : Response.redirect(redirectURL(get('locale'), request), 303);
+      : Response.redirect(redirectURL(get('locale'), request, 'hp'), 303);
   }
 
   const formType = normalizeFormType(get('form_type'));
