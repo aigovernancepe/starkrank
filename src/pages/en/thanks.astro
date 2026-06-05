@@ -18,4 +18,20 @@ import { t } from '../../utils/i18n';
   >
     <Button href="/en/" variant="primary" size="lg">{t('thanks.cta', 'en')}</Button>
   </HeroSection>
+
+  {/* Google Ads conversion: fires ONLY on a real lead (no ?error). Gated client-side
+      because this page is statically pre-rendered (frontmatter runs at build time).
+      TODO: replace the send_to placeholder once the conversion action exists in Ads. */}
+  <script is:inline>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      if (params.has('error')) return;
+      var formType = params.get('lead') || undefined;
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', { send_to: 'AW-XXXXXXXXXX/XXXXXXXXXXXXXXX' });
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'generate_lead', form_type: formType });
+    })();
+  </script>
 </BaseLayout>
