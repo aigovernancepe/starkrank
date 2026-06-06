@@ -11,7 +11,7 @@ related:
   - "llm"
 sources:
   - label: "Google Blog — AI Overviews launch (Mai 2024)"
-    url: "https://blog.google/products/search/generative-ai-google-search-may-2024/"
+    url: "https://blog.google/products-and-platforms/products/search/generative-ai-google-search-may-2024/"
 ---
 
 Die **KI-Suche** ist die nutzerseitige Erfahrung, bei der die Suchmaschinen-Antwort von einem Large-Language-Model generiert wird, statt nur eine Liste von Links zu zeigen. Beispiele: Google AI Overviews, ChatGPT Search, Perplexity, Gemini, Microsoft Copilot Search.

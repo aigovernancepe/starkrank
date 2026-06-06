@@ -9,7 +9,6 @@ const enSlugs: SlugMap = {
   'ai-search-optimization': 'ai-search',
   'technical-seo-audit': 'seo-audit',
   'local-seo-consulting': 'seo',
-  'performance-ads-management': 'ads-management',
   'google-ads-management': 'google-ads',
   'google-ads-audit': 'ads-audit',
   'paid-social-strategy': 'paid-social',
@@ -21,14 +20,12 @@ const enSlugs: SlugMap = {
   'technical-web-design': 'web-design',
   'google-analytics-consultancy': 'analytics',
   'performance-web-development': 'web-dev',
-  'roi-reporting-transparency': 'roi-reporting',
 };
 
 const peSlugs: SlugMap = {
   'ai-search-optimization': 'busqueda-ia',
   'technical-seo-audit': 'auditoria-seo',
   'local-seo-consulting': 'seo-local',
-  'performance-ads-management': 'gestion-anuncios',
   'google-ads-management': 'google-ads',
   'google-ads-audit': 'auditoria-google-ads',
   'paid-social-strategy': 'redes-sociales',
@@ -40,14 +37,12 @@ const peSlugs: SlugMap = {
   'technical-web-design': 'diseno-web',
   'google-analytics-consultancy': 'consultoria-analytics',
   'performance-web-development': 'desarrollo-web',
-  'roi-reporting-transparency': 'reportes-roi',
 };
 
 const deSlugs: SlugMap = {
   'ai-search-optimization': 'ki-suchoptimierung',
   'technical-seo-audit': 'seo-audit',
   'local-seo-consulting': 'lokale-seo-beratung',
-  'performance-ads-management': 'ads-management',
   'google-ads-management': 'google-ads',
   'google-ads-audit': 'google-ads-audit',
   'paid-social-strategy': 'paid-social',
@@ -59,7 +54,6 @@ const deSlugs: SlugMap = {
   'technical-web-design': 'webdesign',
   'google-analytics-consultancy': 'analytics-beratung',
   'performance-web-development': 'webagentur',
-  'roi-reporting-transparency': 'roi-reporting',
 };
 
 const chDeSlugs: SlugMap = { ...deSlugs };

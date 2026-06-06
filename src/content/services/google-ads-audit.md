@@ -14,8 +14,6 @@ features:
   - "Prioritised action plan with estimated impact"
 relatedServices:
   - "google-ads-management"
-  - "performance-ads-management"
-  - "roi-reporting-transparency"
 ---
 
 Most Google Ads (PPC) accounts leak budget. Irrelevant search terms trigger your ads. Conversion tracking is misconfigured or missing entirely. Bid strategies fight against poorly structured campaigns. The result: higher CPC (cost per click), lower CTR (click-through rate), and rising CPA (cost per acquisition) — you spend more and get less.

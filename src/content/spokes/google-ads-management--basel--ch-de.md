@@ -51,4 +51,4 @@ Effektives Google Ads Management in Basel erfordert eine Kampagnenarchitektur, d
 
 Pharma-Zulieferer und Life-Sciences-Dienstleister in Basel stehen vor einer besonderen Herausforderung: Die Keywords sind hochspezifisch, die Zielgruppe international und der Wettbewerb um Suchbegriffe wie «CRO Basel» oder «Pharma Lohnfertigung Schweiz» intensiv. Wir entwickeln Kampagnenstrukturen mit technischem Keyword-Mapping, das Fachbegriffe in drei Sprachen abdeckt.
 
-Für Unternehmen, die neben Google Ads auch auf Social-Media-Werbung setzen, koordinieren wir die Strategie mit unserem [kanalübergreifenden Ads Management](/ch-de/ads-management-basel/) — so wird das Gesamtbudget optimal auf die leistungsstärksten Kanäle verteilt.
+Für Unternehmen, die neben Google Ads auch auf Social-Media-Werbung setzen, stimmen wir Such- und Social-Kampagnen in einer gemeinsamen [Paid-Social-Strategie](/ch-de/paid-social-basel/) ab — so wird das Gesamtbudget optimal auf die leistungsstärksten Kanäle verteilt.

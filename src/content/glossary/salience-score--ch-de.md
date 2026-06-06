@@ -10,7 +10,7 @@ related:
   - "5-element-methodologie"
 sources:
   - label: "Google Cloud — Natural Language API: Analyzing Entities"
-    url: "https://cloud.google.com/natural-language/docs/analyzing-entities"
+    url: "https://docs.cloud.google.com/natural-language/docs/analyzing-entities"
 ---
 
 Der **Salience-Score** ist eine Zahl zwischen 0 und 1, die die Google Cloud Natural Language API jedem in einem Text erkannten Entitäts-Vorkommen zuweist — sie misst, wie zentral die Entität für den Text als Ganzes ist.

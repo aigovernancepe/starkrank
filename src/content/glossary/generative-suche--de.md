@@ -13,7 +13,7 @@ related:
   - "query-fan-out"
 sources:
   - label: "Google Blog — AI Overviews launch (Mai 2024)"
-    url: "https://blog.google/products/search/generative-ai-google-search-may-2024/"
+    url: "https://blog.google/products-and-platforms/products/search/generative-ai-google-search-may-2024/"
 ---
 
 Die **Generative Suche** ist die Technologie hinter der KI-Suche: eine Suchmaschinen-Pipeline, in der ein Large-Language-Model die Suchanfrage interpretiert, in mehrere Sub-Anfragen zerlegt, pro Sub-Anfrage Quellen aus dem klassischen Index abruft, deren Inhalte synthetisiert und eine Antwort generiert.

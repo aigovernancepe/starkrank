@@ -49,7 +49,7 @@ Meta (Facebook und Instagram) wird im B2B oft unterschätzt — zu Unrecht. Zwei
 
 Der Fachkräftemangel trifft Hannover hart — von IT-Spezialisten über Ingenieure bis zu Logistikfachkräften. Meta Ads erreichen potenzielle Bewerber in ihrem privaten Umfeld mit Einblicken in Unternehmenskultur, Mitarbeiter-Stories und Karriereangeboten. Gleichzeitig eignet sich Meta hervorragend für Retargeting: Besucher Ihrer Website oder LinkedIn-Interaktionen werden über Meta erneut angesprochen und durch den Funnel geführt.
 
-Für die kanalübergreifende Steuerung von Google, LinkedIn und Meta empfehlen wir unser [Performance Ads Management](/de/ads-management-hannover/). Wenn Google Ads ein zentraler Kanal ist, ergänzt unser [Google Ads Management](/de/google-ads-hannover/) die Social-Strategie mit Suchkampagnen.
+Wenn Google Ads ein zentraler Kanal ist, ergänzt unser [Google Ads Management](/google-ads-hannover/) die Social-Strategie mit Suchkampagnen — so greifen Demand-Generation über Social und Demand-Capture über die Suche ineinander.
 
 ## Wie stellen wir DSGVO-Konformität bei Social Ads sicher?
 

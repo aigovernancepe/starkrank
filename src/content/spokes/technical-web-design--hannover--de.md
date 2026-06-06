@@ -48,7 +48,7 @@ Viele Hannoveraner Unternehmen arbeiten noch mit veralteten Typo3- oder WordPres
 
 Technisches Webdesign beginnt nicht mit Farben und Schriften, sondern mit Architektur. Wir analysieren Ihre Zielgruppen, Ihre bestehende Infrastruktur und Ihre Geschäftsziele. Daraus entsteht ein Designsystem, das auf Performance, Barrierefreiheit und DSGVO-Konformität ausgelegt ist — und gleichzeitig Ihre Marke professionell repräsentiert.
 
-Für die [Webentwicklung](/de/webentwicklung-hannover/) arbeiten wir eng mit unserem Development-Team zusammen, und für die datengetriebene Optimierung nach Launch greifen unsere [Analytics-Beratung](/de/analytics-beratung-hannover/) und das [ROI-Reporting](/de/roi-reporting-hannover/).
+Für die [Webentwicklung](/webagentur-hannover/) arbeiten wir eng mit unserem Development-Team zusammen, und für die datengetriebene Optimierung nach Launch greift unsere [Analytics-Beratung](/analytics-beratung-hannover/).
 
 ## Hannover Messe: Ihre digitale Messepräsenz
 

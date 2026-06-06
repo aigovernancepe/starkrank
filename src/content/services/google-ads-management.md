@@ -13,9 +13,7 @@ features:
   - "Conversion tracking and attribution setup"
   - "Weekly performance reporting with optimisation log and next-steps"
 relatedServices:
-  - "performance-ads-management"
   - "google-ads-audit"
-  - "roi-reporting-transparency"
 ---
 
 Google Ads — also known as PPC (pay-per-click) or paid search — puts your business in front of people actively searching for what you offer. You pay only when someone clicks your ad, which makes it one of the most measurable marketing channels available. But the difference between a profitable PPC account and a money pit is how it is built, targeted, and optimised. StarkRank manages the full lifecycle of your Google Ads account — from keyword research and campaign structure through to bid management, creative testing, and performance reporting.
@@ -90,7 +88,7 @@ We report weekly, not monthly — because a month of unmonitored spend is a mont
 - **Competitive context** — Auction insights showing how your impression share, average position, and overlap rate compare to key competitors
 - **Next steps** — What we plan to test, change, or scale in the coming week
 
-Reports are delivered in a live dashboard with commentary, not a static PDF. For full-funnel attribution that connects ad clicks to actual revenue, we integrate with our [ROI Reporting & Transparency](/services/roi-reporting-transparency/) service.
+Reports are delivered in a live dashboard with commentary, not a static PDF. For full-funnel attribution that connects ad clicks to actual revenue, we integrate conversion tracking across your analytics and CRM so spend maps to pipeline, not just clicks.
 
 ## Not sure where your current account stands?
 

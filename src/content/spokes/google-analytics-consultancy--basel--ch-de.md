@@ -48,4 +48,4 @@ Hinzu kommt das revDSG, das strengere Anforderungen an die Datenverarbeitung ste
 
 Unser Ansatz beginnt mit einer detaillierten Analyse Ihrer Geschäftsziele pro Markt. Welche Conversions sind in der Schweiz, Deutschland und Frankreich jeweils relevant? Wie unterscheiden sich die Nutzererwartungen je nach Sprache? Diese Erkenntnisse fliessen in einen massgeschneiderten Tracking-Plan ein, der sprachübergreifende Vergleiche ermöglicht.
 
-Die technische Umsetzung erfolgt über Server-Side Tagging, das die volle Kontrolle über ausgehende Daten gewährleistet. Für die Darstellung der Ergebnisse arbeiten wir mit unserem [ROI-Reporting-Service](/ch-de/roi-reporting-basel/) zusammen, und die technische Website-Grundlage optimieren wir in Abstimmung mit unserem [Webdesign-Team](/ch-de/webdesign-basel/).
+Die technische Umsetzung erfolgt über Server-Side Tagging, das die volle Kontrolle über ausgehende Daten gewährleistet. Die Ergebnisse bereiten wir in massgeschneiderten Dashboards auf, die GA4-Daten mit Ihren Geschäftszielen verknüpfen, und die technische Website-Grundlage optimieren wir in Abstimmung mit unserem [Webdesign-Team](/ch-de/webdesign-basel/).

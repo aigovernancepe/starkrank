@@ -47,4 +47,4 @@ Standard-Audits bewerten Konten nach generischen Best Practices — Qualitätsfa
 
 Gerade für Reedereien und Hightech-Anbieter mit komplexen Produkten und langen Zyklen sowie für Versandhandels-Marken mit datenintensiven Sortimentsentscheidungen ist diese Differenzierung erfolgskritisch. Ein Konto kann nach Standard-Metriken solide aussehen und trotzdem die falschen Kunden gewinnen.
 
-Nach dem Audit empfehlen wir bei Bedarf die Umsetzung über unser [Google Ads Management](/google-ads-hamburg/) oder — wenn mehrere Kanäle koordiniert werden sollen — unser [Performance Ads Management](/ads-management-hamburg/) für die kanalübergreifende Steuerung.
+Nach dem Audit empfehlen wir bei Bedarf die Umsetzung über unser [Google Ads Management](/google-ads-hamburg/) — von der Konten-Restrukturierung bis zur laufenden Gebots- und Kampagnensteuerung.

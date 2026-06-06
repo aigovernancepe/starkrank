@@ -48,7 +48,7 @@ Viele Hamburger Unternehmen arbeiten noch mit veralteten TYPO3- oder WordPress-I
 
 Technisches Webdesign beginnt nicht mit Farben und Schriften, sondern mit Architektur. Wir analysieren Ihre Zielgruppen, Ihre bestehende Infrastruktur und Ihre Geschäftsziele. Daraus entsteht ein Designsystem, das auf Performance, Barrierefreiheit und DSGVO-Konformität ausgelegt ist — und gleichzeitig Ihre Marke professionell repräsentiert.
 
-Für die [Webentwicklung](/webentwicklung-hamburg/) arbeiten wir eng mit unserem Development-Team zusammen, und für die datengetriebene Optimierung nach Launch greifen unsere [Analytics-Beratung](/analytics-beratung-hamburg/) und das [ROI-Reporting](/roi-reporting-hamburg/).
+Für die [Webentwicklung](/webagentur-hamburg/) arbeiten wir eng mit unserem Development-Team zusammen, und für die datengetriebene Optimierung nach Launch greift unsere [Analytics-Beratung](/analytics-beratung-hamburg/).
 
 ## OMR, SMM, Hamburg Open: Ihre digitale Event-Präsenz
 

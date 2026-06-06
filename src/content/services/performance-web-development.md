@@ -67,7 +67,7 @@ We build consent and privacy into the site's technical foundation:
 
 For mid-market companies in regulated industries — financial services, healthcare, food, logistics — we deliver a documented compliance package alongside the site, including data-flow diagrams, processor agreements review, and recommendations for the records of processing activities (Verarbeitungsverzeichnis). The site is the technical layer; compliance is a documented, reviewable artifact.
 
-For full analytics implementation, see our [Google Analytics Consultancy](/services/google-analytics-consultancy/) service. For connecting measurement to business outcomes, see [ROI Reporting & Transparency](/services/roi-reporting-transparency/).
+For full analytics implementation that connects measurement to business outcomes, see our [Google Analytics Consultancy](/services/google-analytics-consultancy/) service.
 
 ## What's the typical project timeline?
 

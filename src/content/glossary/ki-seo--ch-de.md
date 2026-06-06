@@ -17,7 +17,7 @@ related:
   - "5-element-methodologie"
 sources:
   - label: "Google Blog — AI Overviews launch (May 2024)"
-    url: "https://blog.google/products/search/generative-ai-google-search-may-2024/"
+    url: "https://blog.google/products-and-platforms/products/search/generative-ai-google-search-may-2024/"
 ---
 
 **KI SEO**, **KI-Suchoptimierung** und **AI Search Optimization** (intern AISO) bezeichnen dieselbe Disziplin: Inhalte so aufbauen, dass sie von generativen Suchmaschinen — Google AI Overviews, ChatGPT Search, Perplexity, Gemini — als Antwortquelle herangezogen werden.
