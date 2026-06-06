@@ -1,5 +1,5 @@
 ---
-title: "Beste SEO-Agentur Schweiz finden: Checkliste & Leitfaden 2026"
+title: "SEO-Agentur Schweiz finden: Checkliste"
 description: "SEO-Agentur in der Schweiz auswählen — 8 Prüfkriterien, revDSG-Kompetenz, Mehrsprachigkeit und persönliche Betreuung. Checkliste 2026 von StarkRank."
 pubDate: 2026-03-05
 updatedDate: 2026-05-26
