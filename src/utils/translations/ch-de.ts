@@ -68,7 +68,7 @@ export const chde: Record<string, string> = {
   // City Spoke Pages
   'spoke.in': 'in',
   'spoke.servicesIn': 'Dienstleistungen in',
-  'spoke.description': '{service}-Dienstleistungen in {city}, {country}. StarkRank liefert datengetriebene digitale Marketinglösungen, massgeschneidert für den Markt in {city}.',
+  'spoke.description': '{service} in {city}, {country} — datengetriebene Marketinglösungen von StarkRank, zugeschnitten auf Ihren lokalen Markt.',
   'spoke.whyCity': 'Warum {city}?',
   'spoke.whyCityText': 'Der Markt in {city} verlangt einen Partner, der lokales Suchverhalten und globale Best Practices versteht. StarkRank verbindet tiefgehende technische Expertise mit lokalem Marktwissen, um messbare Ergebnisse zu liefern.',
   'spoke.approach': 'Unser Ansatz',
