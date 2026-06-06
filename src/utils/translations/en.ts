@@ -74,7 +74,7 @@ export const en: Record<string, string> = {
   // City Spoke Pages
   'spoke.in': 'in',
   'spoke.servicesIn': 'services in',
-  'spoke.description': '{service} services in {city}, {country}. StarkRank delivers data-driven digital marketing solutions tailored to the {city} market.',
+  'spoke.description': '{service} in {city}, {country} — data-driven marketing solutions from StarkRank, tailored to your local market.',
   'spoke.whyCity': 'Why {city}?',
   'spoke.whyCityText': 'The {city} market demands a partner who understands local search behaviour and global best practices. StarkRank combines deep technical expertise with on-the-ground market knowledge to deliver measurable results.',
   'spoke.approach': 'Our Approach',
