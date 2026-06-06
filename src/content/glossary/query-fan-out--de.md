@@ -12,7 +12,7 @@ related:
   - "generative-suche"
 sources:
   - label: "Google Blog — MUM (Multitask Unified Model)"
-    url: "https://blog.google/products/search/introducing-mum/"
+    url: "https://blog.google/products-and-platforms/products/search/introducing-mum/"
 ---
 
 **Query Fan-Out** (Anfragenfächerung) ist Element 5 der [5-Element-Methodologie](#5-element-methodologie): pro Inhalt werden alle erwartbaren Folge- und Nebenfragen abgedeckt, die ein Nutzer zur Hauptanfrage stellen würde — nicht nur die Hauptanfrage selbst.

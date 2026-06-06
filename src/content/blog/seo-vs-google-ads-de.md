@@ -117,7 +117,7 @@ Die optimale Aufteilung hängt von Ihrer Situation ab:
 - 70–80 % SEO, 20–30 % Google Ads
 - Ads nur noch für hochkompetitive Keywords, neue Services und saisonale Spitzen.
 
-**Der Kannibalisierungs-Check**: Wenn Sie Ads für Keywords schalten, bei denen Sie bereits Position 1–3 organisch ranken, bezahlen Sie für Klicks, die Sie kostenlos bekämen. Wir prüfen dies in jedem [Google Ads Audit](/de/google-ads-audit/) — es ist einer der häufigsten Budget-Verluste, die wir finden.
+**Der Kannibalisierungs-Check**: Wenn Sie Ads für Keywords schalten, bei denen Sie bereits Position 1–3 organisch ranken, bezahlen Sie für Klicks, die Sie kostenlos bekämen. Wir prüfen dies in jedem [Google Ads Audit](/services/google-ads-audit/) — es ist einer der häufigsten Budget-Verluste, die wir finden.
 
 ---
 
@@ -127,5 +127,5 @@ Google Ads steht vor einer strukturellen Herausforderung. Während AI Overviews 
 
 Das bedeutet nicht, dass Google Ads stirbt — es ist weiterhin der schnellste Weg zur Suchsichtbarkeit. Aber die langfristige Investitionslogik für SEO wird stärker.
 
-[Kostenloses Google Ads Audit →](/de/google-ads-audit/)
+[Kostenloses Google Ads Audit →](/services/google-ads-audit/)
 [Was kostet SEO? Preisleitfaden 2026 →](/de/blog/seo-kosten/)

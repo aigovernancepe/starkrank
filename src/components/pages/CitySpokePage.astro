@@ -40,7 +40,9 @@ const serviceData = service.data ?? service;
 
 // Pillar grouping for service sections
 const pillar = serviceData.pillar ? getPillarById(serviceData.pillar) : null;
-const pillarServices = pillar ? pillar.services.filter((s: string) => s !== serviceData.slug) : [];
+// Only link pillar siblings the city actually offers — otherwise we point at spokes
+// that were never generated (city.services drives spoke generation in [citySlug].astro).
+const pillarServices = pillar ? pillar.services.filter((s: string) => s !== serviceData.slug && city.services.includes(s)) : [];
 const otherServices = city.services.filter((s: string) => s !== serviceData.slug && !pillarServices.includes(s));
 const localPillarName = pillar ? t(`pillar.${pillar.id}`, locale) : '';
 
@@ -53,11 +55,12 @@ const siblingSpokeEntries = await getCollection('spokes', (s) =>
 const siblingSpokes = siblingSpokeEntries.map((s) => ({
   title: s.data.title,
   description: s.data.description,
-  href: `${locale === 'en' ? '' : `/${locale}`}/${getSpokePath(s.data.serviceSlug, s.data.citySlug, locale)}/`,
+  href: `${locale === 'en' || locale === 'de' ? '' : `/${locale}`}/${getSpokePath(s.data.serviceSlug, s.data.citySlug, locale)}/`,
 }));
 
 const site = Astro.site?.origin ?? 'https://starkrank.com';
-const localePath = locale === 'en' ? '' : `/${locale}`;
+// DE is served at root (no /de/ prefix); EN at root with /services/ links; CH-DE at /ch-de/*.
+const localePath = locale === 'en' || locale === 'de' ? '' : `/${locale}`;
 const pageUrl = `${localePath}/${spokeSlug}/`;
 
 const localServiceTitle = t(`service.${serviceData.slug}`, locale);

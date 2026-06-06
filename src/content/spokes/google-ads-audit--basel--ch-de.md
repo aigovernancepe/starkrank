@@ -47,4 +47,4 @@ Besonders kritisch: Seit Inkrafttreten des revDSG müssen Tracking-Implementieru
 
 Unser Audit analysiert jede Kampagne, Anzeigengruppe und jedes Keyword auf Effizienz. Für den Basler Markt prüfen wir zusätzlich die mehrsprachige Abdeckung: Werden deutsche, französische und englische Suchanfragen separat bedient? Sind Geo-Targeting-Einstellungen für das Dreiländereck korrekt konfiguriert? Nutzen Sie den vollen Impression Share in Ihren Kernmärkten?
 
-Die Ergebnisse fliessen direkt in eine umsetzbare Roadmap. Für die anschliessende Optimierung empfehlen wir unser [Google Ads Management](/ch-de/google-ads-basel/) — oder eine Einbettung in die [kanalübergreifende Ads-Strategie](/ch-de/ads-management-basel/) für maximalen ROI über alle Plattformen.
+Die Ergebnisse fliessen direkt in eine umsetzbare Roadmap. Für die anschliessende Optimierung empfehlen wir unser [Google Ads Management](/ch-de/google-ads-basel/) — von der Konten-Restrukturierung bis zur laufenden Gebots- und Kampagnensteuerung.

@@ -48,4 +48,4 @@ Standard-Audits bewerten Konten nach generischen Best Practices — Qualitätsfa
 
 Besonders für Mittelständler mit komplexen Produkten und langen Verkaufszyklen ist diese Unterscheidung entscheidend. Ein Konto kann nach Standard-Metriken gut aussehen und trotzdem die falschen Leads generieren.
 
-Nach dem Audit empfehlen wir bei Bedarf die Umsetzung über unser [Google Ads Management](/de/google-ads-hannover/) oder — wenn mehrere Kanäle im Spiel sind — unser [Performance Ads Management](/de/ads-management-hannover/) für die kanalübergreifende Steuerung.
+Nach dem Audit empfehlen wir bei Bedarf die Umsetzung über unser [Google Ads Management](/google-ads-hannover/) — von der Konten-Restrukturierung bis zur laufenden Gebots- und Kampagnensteuerung.

@@ -16,7 +16,6 @@ features:
   - "AI referral traffic tracking and segmentation"
   - "GA4 training and knowledge transfer"
 relatedServices:
-  - "roi-reporting-transparency"
   - "technical-web-design"
   - "ai-search-optimization"
 ---
@@ -80,7 +79,7 @@ We set up and maintain this integration:
 - **Cross-platform data joins** — Combine GA4 data with CRM data, advertising platform data, or offline sales data for unified reporting that shows the full customer journey.
 - **AI-ready data structures** — Organised, queryable data that can feed machine learning models, automated reporting, and predictive analytics as your data maturity grows.
 
-For dashboards and reporting built on this data, see our [ROI Reporting & Transparency](/services/roi-reporting-transparency/) service.
+On top of this data we build live Looker Studio dashboards with commentary that ties your metrics to business outcomes — so reporting drives decisions, not just charts.
 
 ## What does GA4 training include?
 

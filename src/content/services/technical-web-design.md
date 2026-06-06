@@ -16,7 +16,6 @@ features:
 relatedServices:
   - "performance-web-development"
   - "google-analytics-consultancy"
-  - "roi-reporting-transparency"
 faq:
   - question: "Which CMS should I choose for SEO and AI visibility?"
     answer: "It depends on your requirements. WordPress with a headless or lightweight theme setup remains the most flexible option for content-heavy sites. Shopify suits e-commerce with its built-in structured data. For maximum speed and AI-readiness, static site generators (Astro, Next.js, Nuxt) offer pre-rendered HTML that search engines and AI crawlers can parse instantly. We evaluate your content workflow, team capabilities, integration needs, and growth plans — then recommend the CMS that balances performance, usability, and long-term maintainability."

@@ -48,7 +48,7 @@ Meta (Facebook und Instagram) wird im B2B oft unterschätzt — zu Unrecht. Drei
 
 Im Versandhandels-Cluster ist Meta ein zentraler Umsatzkanal mit Catalog Ads, Advantage+ und strukturiertem Retargeting. Im B2B-Umfeld trifft der Hamburger Fachkräftemangel besonders Maritime, Hightech und IT — Meta Ads erreichen potenzielle Bewerber*innen im privaten Umfeld mit Einblicken in Kultur und Karriere. Und plattformübergreifend eignet sich Meta hervorragend für Retargeting: Website-Besucher und LinkedIn-Interaktionen werden über Meta erneut angesprochen und durch den Funnel geführt.
 
-Für die kanalübergreifende Steuerung von Google, LinkedIn und Meta empfehlen wir unser [Performance Ads Management](/ads-management-hamburg/). Wenn Google Ads zentral ist, ergänzt unser [Google Ads Management](/google-ads-hamburg/) die Social-Strategie mit Suchkampagnen.
+Wenn Google Ads ein zentraler Kanal ist, ergänzt unser [Google Ads Management](/google-ads-hamburg/) die Social-Strategie mit Suchkampagnen — so greifen Demand-Generation über Social und Demand-Capture über die Suche ineinander.
 
 ## Wie stellen wir DSGVO-Konformität bei Social Ads sicher?
 

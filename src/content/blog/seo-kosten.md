@@ -136,5 +136,5 @@ KI-Suchoptimierung ist ein neuer Posten, der vor zwei Jahren nicht existierte:
 
 Agenturen, die keinerlei KI-Suchoptimierung anbieten, verlieren den Anschluss. Bis 2027 wird dies kein Zusatzservice mehr sein — es wird Standard.
 
-[Kostenloser AI-Search-Check →](/de/aiso-check/)
+[Kostenloser AI-Search-Check →](/aiso-check/)
 [SEO-Agentur auswählen: Worauf achten? →](/de/blog/seo-agentur-auswaehlen/)

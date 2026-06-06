@@ -126,5 +126,5 @@ Der beste Indikator für eine gute Agenturbeziehung ist Transparenz vor dem Verk
 
 Nutzen Sie diese 8 Prüfkriterien. Stellen Sie jede Frage. Fordern Sie konkrete Antworten. Und wenn sich etwas falsch anfühlt — vertrauen Sie dem Gefühl. Sie wissen, wie Ausweichen klingt.
 
-[Kostenloser AI-Search-Check →](/de/aiso-check/)
+[Kostenloser AI-Search-Check →](/aiso-check/)
 [Was kostet SEO? Preisleitfaden 2026 →](/de/blog/seo-kosten/)

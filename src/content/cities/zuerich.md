@@ -7,7 +7,6 @@ services:
   - "ai-search-optimization"
   - "technical-seo-audit"
   - "local-seo-consulting"
-  - "performance-ads-management"
   - "google-ads-management"
   - "google-ads-audit"
   - "paid-social-strategy"
@@ -17,7 +16,6 @@ services:
   - "technical-web-design"
   - "google-analytics-consultancy"
   - "performance-web-development"
-  - "roi-reporting-transparency"
 coordinates:
   lat: 47.3769
   lng: 8.5417

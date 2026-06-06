@@ -9,6 +9,7 @@ import CTABanner from '../../../components/ui/CTABanner.astro';
 import { getCollection, render } from 'astro:content';
 import { getPillarById, getLocalizedPillars } from '../../../data/pillars';
 import { getSpokePath } from '../../../data/service-slugs';
+import { getLocalizedNavHref } from '../../../data/navigation';
 import { getEffectiveUpdatedDate } from '../../../utils/getLastModified';
 import { t } from '../../../utils/i18n';
 
@@ -55,7 +56,7 @@ const chCities = allCities
   .filter((c) => c.data.locale === 'ch-de' && c.data.services.includes(service.data.slug))
   .map((c) => ({
     city: c.data.city,
-    href: `/${getSpokePath(service.data.slug, c.data.citySlug, 'ch-de')}/`,
+    href: `/ch-de/${getSpokePath(service.data.slug, c.data.citySlug, 'ch-de')}/`,
   }));
 
 // CH-DE vertical landings (audience-cut, not service-cut). Hardcoded list:
@@ -265,7 +266,7 @@ const hreflangAlternates = [
               <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Verwandte Dienstleistungen</h3>
               <div class="space-y-3">
                 {relatedServices.map((r) => (
-                  <Card href={`/ch-de/services/${r.slug}/`}>
+                  <Card href={getLocalizedNavHref(`/services/${r.slug}/`, 'ch-de')}>
                     <h4 class="text-sm font-headline font-bold text-navy">{r.title}</h4>
                   </Card>
                 ))}
