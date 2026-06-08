@@ -321,7 +321,19 @@ const breadcrumbSchema = isAISO ? {
   ],
 } : null;
 
+// dateModified only when a spoke content entry exists (template-only spokes
+// have no source file to date — mirrors the visible "last updated" gating).
+const spokeEffectiveDate = spoke ? getEffectiveUpdatedDate(spoke.filePath, spoke.data.updatedDate) : null;
+const webPageSchema = spokeEffectiveDate ? {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: `${site}${pageUrl}`,
+  name: title,
+  dateModified: spokeEffectiveDate.toISOString(),
+} : null;
+
 const allSchemas = [
+  ...(webPageSchema ? [webPageSchema] : []),
   localBusinessSchema,
   ...(faqSchema ? [faqSchema] : []),
   ...(serviceSchema ? [serviceSchema] : []),

@@ -126,9 +126,17 @@ const faqSchema = faq.length > 0 ? {
   })),
 } : null;
 
-const pageSchemas = [localBusinessSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])];
-
 const effectiveUpdatedDate = await getEffectiveUpdatedDate(cityHub.filePath ?? '', cityHubData.updatedDate);
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: `${site}${pageUrl}`,
+  name: title,
+  dateModified: effectiveUpdatedDate.toISOString(),
+};
+
+const pageSchemas = [webPageSchema, localBusinessSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])];
 const ctaText = cityHubData.cta ?? `Kostenlose Erstberatung für ${cityData.city} anfordern`;
 const ctaHref = locale === 'de' ? '/kontakt/' : `/${locale}/kontakt/`;
 ---
