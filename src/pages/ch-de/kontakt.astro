@@ -4,9 +4,19 @@ import SplitHero from '../../components/ui/SplitHero.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import LeadForm from '../../components/ui/LeadForm.astro';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://starkrank.com/ch-de/' },
+    { '@type': 'ListItem', position: 2, name: 'Kontakt', item: 'https://starkrank.com/ch-de/kontakt/' },
+  ],
+};
 ---
 
 <BaseLayout
+  schema={[breadcrumbSchema]}
   title="Kontakt — StarkRank Schweiz"
   description="Kostenlose 15–20-minütige Erstberatung zu KI-Suchoptimierung, SEO, PPC und digitalen Marketingdienstleistungen — wir klären Scope und Budget vor dem Auftrag."
   locale="ch-de"

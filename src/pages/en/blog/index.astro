@@ -8,9 +8,19 @@ import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog'))
   .filter((p) => p.data.locale === 'en')
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://starkrank.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://starkrank.com/en/blog/' },
+  ],
+};
 ---
 
 <BaseLayout
+  schema={[breadcrumbSchema]}
   title="Blog — StarkRank Insights"
   description="Expert perspectives on AI search optimisation, technical SEO, performance media, and digital growth strategies."
 >
