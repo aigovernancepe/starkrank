@@ -53,7 +53,9 @@ export default defineConfig({
   },
   integrations: [
     react(),
-    sitemap(),
+    // Exclude the build-time lastmod manifest endpoint from the sitemap itself;
+    // it is consumed + deleted by scripts/inject-sitemap-lastmod.mjs post-build.
+    sitemap({ filter: (page) => !page.includes('/sitemap-lastmod.json') }),
   ],
   markdown: {
     // Keep apostrophes and quotes straight across all locales. Swiss number
