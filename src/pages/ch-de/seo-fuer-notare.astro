@@ -7,12 +7,13 @@ import SectionHeader from '../../components/ui/SectionHeader.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import Button from '../../components/ui/Button.astro';
 import LastUpdated from '../../components/seo/LastUpdated.astro';
+import { getSelfLastModified } from '../../utils/getLastModified';
 
 const title = 'SEO für Notare in der Schweiz — revDSG-konform | StarkRank';
 const description = 'SEO für Schweizer Notariate: revDSG-konform, kantonal NotG-bewusst, LegalService-Schema-strukturiert. Erstberatung gratis.';
 
 const datePublished = '2026-05-21';
-const dateModified = '2026-05-22';
+const dateModified = getSelfLastModified(import.meta.url).toISOString().split('T')[0];
 
 const pricingTiers = [
   { tier: 'Solo-Notar / Boutique-Notariat', price: '1\'190 CHF', profile: 'Solo-Notar, ein Spezialisierungs-Funnel (z.B. Erbverträge oder Immobilien-Beurkundungen)' },
@@ -209,8 +210,6 @@ const serviceSchema = {
   '@id': 'https://starkrank.com/ch-de/seo-fuer-notare/#service',
   name: 'SEO für Notare',
   serviceType: 'Search Engine Optimization',
-  datePublished,
-  dateModified,
   description:
     'SEO für Schweizer Notariate — Auffindbarkeit, strukturierte LegalService- und LocalBusiness-Daten, revDSG-Konformität plus Art. 321 StGB Berufsgeheimnis, kantonales-Notariatsgesetz- und SBN-Standesordnung-Bewusstsein, UWG-Impressum-Compliance und Sichtbarkeit in KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot.',
   url: 'https://starkrank.com/ch-de/seo-fuer-notare/',
@@ -321,7 +320,16 @@ const howToSchema = {
   })),
 };
 
-const schemas = [serviceSchema, faqSchema, howToSchema];
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: 'https://starkrank.com/ch-de/seo-fuer-notare/',
+  name: title,
+  datePublished,
+  dateModified,
+};
+
+const schemas = [webPageSchema, serviceSchema, faqSchema, howToSchema];
 ---
 
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas} preloadImage="/images/notare-hero.webp">

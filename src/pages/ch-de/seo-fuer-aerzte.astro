@@ -7,12 +7,13 @@ import SectionHeader from '../../components/ui/SectionHeader.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import Button from '../../components/ui/Button.astro';
 import LastUpdated from '../../components/seo/LastUpdated.astro';
+import { getSelfLastModified } from '../../utils/getLastModified';
 
 const title = 'SEO für Ärzte in der Schweiz — revDSG-konform | StarkRank';
 const description = 'SEO für Schweizer Facharzt-Praxen: revDSG-konform, FMH-Werberecht-bewusst, AI-Search-messbar. Lebende Fallstudie Handzentrum Ost. Erstberatung gratis.';
 
 const datePublished = '2026-04-29';
-const dateModified = '2026-05-12';
+const dateModified = getSelfLastModified(import.meta.url).toISOString().split('T')[0];
 
 const pricingTiers = [
   { tier: 'Einzelpraxis / KMU', price: '1\'190 CHF', profile: 'Einzelner Standort, klares Spezialgebiet' },
@@ -178,8 +179,6 @@ const serviceSchema = {
   '@id': 'https://starkrank.com/ch-de/seo-fuer-aerzte/#service',
   name: 'SEO für Ärzte',
   serviceType: 'Search Engine Optimization',
-  datePublished,
-  dateModified,
   description:
     'SEO für Schweizer Facharzt-Praxen und Spezialkliniken — Indexierbarkeit, Schema-Knotengraph, revDSG-Konformität, FMH-Werberecht-Bewusstsein und AI-Citability auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot.',
   url: 'https://starkrank.com/ch-de/seo-fuer-aerzte/',
@@ -269,7 +268,16 @@ const howToSchema = {
   })),
 };
 
-const schemas = [serviceSchema, faqSchema, howToSchema];
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: 'https://starkrank.com/ch-de/seo-fuer-aerzte/',
+  name: title,
+  datePublished,
+  dateModified,
+};
+
+const schemas = [webPageSchema, serviceSchema, faqSchema, howToSchema];
 ---
 
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas} preloadImage="/images/aerzte-hero.webp">
