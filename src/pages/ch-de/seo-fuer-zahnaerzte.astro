@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
 import HeroSection from '../../components/ui/HeroSection.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
@@ -166,15 +167,10 @@ const faqs = [
   },
 ];
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://starkrank.com/ch-de/' },
-    { '@type': 'ListItem', position: 2, name: 'SEO für Ärzte', item: 'https://starkrank.com/ch-de/seo-fuer-aerzte/' },
-    { '@type': 'ListItem', position: 3, name: 'SEO für Zahnärzte', item: 'https://starkrank.com/ch-de/seo-fuer-zahnaerzte/' },
-  ],
-};
+const breadcrumbs = [
+  { label: 'Start', href: '/ch-de/' },
+  { label: 'SEO für Zahnärzte', href: '/ch-de/seo-fuer-zahnaerzte/' },
+];
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -280,7 +276,7 @@ const howToSchema = {
   })),
 };
 
-const schemas = [breadcrumbSchema, serviceSchema, faqSchema, howToSchema];
+const schemas = [serviceSchema, faqSchema, howToSchema];
 ---
 
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas} preloadImage="/images/zahnaerzte-hero.webp">
@@ -293,6 +289,12 @@ const schemas = [breadcrumbSchema, serviceSchema, faqSchema, howToSchema];
     <Button href="/ch-de/kontakt/" variant="primary">Erstberatung anfragen</Button>
     <Button href="#beispiel-diagnose" variant="secondary">Beispiel-Diagnose ansehen</Button>
   </HeroSection>
+
+  <div class="bg-white border-b border-gray-light/30">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <Breadcrumbs items={breadcrumbs} />
+    </div>
+  </div>
 
   <LastUpdated date={dateModified} />
 
