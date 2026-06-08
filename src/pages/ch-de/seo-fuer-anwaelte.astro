@@ -7,12 +7,13 @@ import SectionHeader from '../../components/ui/SectionHeader.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import Button from '../../components/ui/Button.astro';
 import LastUpdated from '../../components/seo/LastUpdated.astro';
+import { getSelfLastModified } from '../../utils/getLastModified';
 
 const title = 'SEO für Anwälte in der Schweiz — revDSG-konform | StarkRank';
 const description = 'SEO für Schweizer Anwaltskanzleien: revDSG-konform, BGFA-Standesregeln-bewusst, LegalService-Schema-strukturiert. Erstberatung gratis.';
 
 const datePublished = '2026-05-21';
-const dateModified = '2026-05-21';
+const dateModified = getSelfLastModified(import.meta.url).toISOString().split('T')[0];
 
 const pricingTiers = [
   { tier: 'Einzelanwalt / Kleinkanzlei', price: '1\'190 CHF', profile: 'Solo bis 2 Anwälte, ein Rechtsgebiet im Funnel' },
@@ -182,8 +183,6 @@ const serviceSchema = {
   '@id': 'https://starkrank.com/ch-de/seo-fuer-anwaelte/#service',
   name: 'SEO für Anwälte',
   serviceType: 'Search Engine Optimization',
-  datePublished,
-  dateModified,
   description:
     'SEO für Schweizer Anwaltskanzleien — Auffindbarkeit, strukturierte LegalService-Daten, revDSG-Konformität, BGFA-Standesregeln-Bewusstsein, UWG-Impressum-Compliance und Sichtbarkeit in KI-Antwortmaschinen wie ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot.',
   url: 'https://starkrank.com/ch-de/seo-fuer-anwaelte/',
@@ -294,7 +293,16 @@ const howToSchema = {
   })),
 };
 
-const schemas = [serviceSchema, faqSchema, howToSchema];
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: 'https://starkrank.com/ch-de/seo-fuer-anwaelte/',
+  name: title,
+  datePublished,
+  dateModified,
+};
+
+const schemas = [webPageSchema, serviceSchema, faqSchema, howToSchema];
 ---
 
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas} preloadImage="/images/anwaelte-hero.webp">

@@ -7,12 +7,13 @@ import SectionHeader from '../../components/ui/SectionHeader.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import Button from '../../components/ui/Button.astro';
 import LastUpdated from '../../components/seo/LastUpdated.astro';
+import { getSelfLastModified } from '../../utils/getLastModified';
 
 const title = 'SEO für Praxisgründer in der Schweiz — Festpreis | StarkRank';
 const description = 'Festpreis-Pakete für die ersten drei Praxisjahre: AI-Search-Startpaket, Technisches Webdesign, Komplettpaket. CHF-Pricing transparent, kein Retainer.';
 
 const datePublished = '2026-05-12';
-const dateModified = '2026-05-12';
+const dateModified = getSelfLastModified(import.meta.url).toISOString().split('T')[0];
 
 const pricingTiers = [
   {
@@ -116,8 +117,6 @@ const serviceSchema = {
   '@id': 'https://starkrank.com/ch-de/seo-fuer-praxisgruender/#service',
   name: 'SEO für Praxisgründer',
   serviceType: 'Search Engine Optimization',
-  datePublished,
-  dateModified,
   description:
     'Festpreis-Pakete für Ärzte und Zahnärzte in den ersten drei Praxisjahre: AI Search Optimization Audit, Schema-Implementation, Google-Unternehmensprofil-Aufsetzung, optional komplette Website-Erstellung. Kein laufender Retainer, AI-Search-First von Tag 1.',
   url: 'https://starkrank.com/ch-de/seo-fuer-praxisgruender/',
@@ -187,7 +186,16 @@ const howToSchema = {
   })),
 };
 
-const schemas = [serviceSchema, faqSchema, howToSchema];
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: 'https://starkrank.com/ch-de/seo-fuer-praxisgruender/',
+  name: title,
+  datePublished,
+  dateModified,
+};
+
+const schemas = [webPageSchema, serviceSchema, faqSchema, howToSchema];
 ---
 
 <BaseLayout title={title} description={description} locale="ch-de" schema={schemas}>
