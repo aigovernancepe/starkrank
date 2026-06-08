@@ -1,5 +1,5 @@
 ---
-title: "How to Choose an SEO Agency After Being Burned"
+title: "Choosing an SEO Agency After Being Burned"
 description: "Burned by a bad SEO agency? Here's a 10-point framework to vet your next one — what to ask, what to demand, and the red flags that mean run."
 pubDate: 2026-04-01
 updatedDate: 2026-04-01

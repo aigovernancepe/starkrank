@@ -1,5 +1,5 @@
 ---
-title: "SEO vs Social Media: Which Drives More Revenue?"
+title: "SEO vs Social Media: Which Drives Revenue?"
 description: "SEO builds compounding organic traffic. Social media rents attention. Here's a data-backed comparison to help you decide where to invest your marketing budget."
 pubDate: 2026-01-15
 updatedDate: 2026-01-15
