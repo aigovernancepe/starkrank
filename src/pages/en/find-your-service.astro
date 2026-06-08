@@ -5,16 +5,13 @@ import { en } from '../../data/service-finder/locales/en';
 
 const webAppSchema = {
   '@context': 'https://schema.org',
-  '@type': 'WebApplication',
+  '@type': 'WebPage',
   name: 'Find Your Service',
   alternateName: ['Service Schnellcheck'],
   description: 'Find out which digital marketing services your business needs — in 60 seconds.',
   url: 'https://starkrank.com/en/find-your-service/',
-  applicationCategory: 'BusinessApplication',
-  operatingSystem: 'Web',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
-  provider: { '@type': 'Organization', name: 'Datanalytico Feye', url: 'https://starkrank.com' },
   inLanguage: ['en', 'de'],
+  isPartOf: { '@type': 'WebSite', name: 'StarkRank', url: 'https://starkrank.com' },
 };
 
 const faqSchema = {
