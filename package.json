@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "(git rev-parse --is-shallow-repository 2>/dev/null | grep -q true && git fetch --unshallow 2>/dev/null) || true && astro build",
+    "build": "(git rev-parse --is-shallow-repository 2>/dev/null | grep -q true && git fetch --unshallow 2>/dev/null) || true && astro build && node scripts/inject-sitemap-lastmod.mjs",
     "preview": "astro preview",
     "salience": "node scripts/salience-verify.mjs"
   },
