@@ -66,7 +66,16 @@ const faqSchema = faq.length > 0 ? {
   })),
 } : null;
 
-const schemas = [serviceSchema, ...(faqSchema ? [faqSchema] : [])];
+const effectiveDate = getEffectiveUpdatedDate(service.filePath, service.data.updatedDate);
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: `https://starkrank.com/en/services/${service.data.slug}/`,
+  name: `${service.data.title} — StarkRank`,
+  dateModified: effectiveDate.toISOString(),
+};
+
+const schemas = [webPageSchema, serviceSchema, ...(faqSchema ? [faqSchema] : [])];
 
 const isAISO = service.data.slug === 'ai-search-optimization';
 

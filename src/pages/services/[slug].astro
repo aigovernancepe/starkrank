@@ -131,7 +131,16 @@ const howToSchema = hub.data.processSteps && hub.data.processSteps.length > 0 ? 
   })),
 } : null;
 
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: pageUrl,
+  name: `${localizedTitle} — StarkRank`,
+  dateModified: effectiveDate.toISOString(),
+};
+
 const schemas = [
+  webPageSchema,
   serviceSchema,
   breadcrumbSchema,
   ...(faqSchema ? [faqSchema] : []),
