@@ -76,7 +76,7 @@ Ad copy is not an afterthought — it is the first thing a potential customer se
 - **Responsive search ads** — We provide Google with a range of tested headline and description combinations, then monitor which auto-generated combinations perform best
 - **Landing page alignment** — Ad copy promises are matched to landing page content so users find exactly what they expected. Misalignment is one of the most common causes of poor Quality Scores and high bounce rates
 
-For businesses that need broader content support, our [SEO Copywriting](/services/seo-copywriting/) service covers website copy, landing pages, and editorial content.
+For businesses that need broader content support, our [SEO Copywriting](/services/seo-texterstellung/) service covers website copy, landing pages, and editorial content.
 
 ## What does reporting look like?
 

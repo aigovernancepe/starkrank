@@ -1,5 +1,6 @@
 ---
 serviceSlug: "seo-copywriting"
+urlSlug: "seo-texterstellung"
 locale: "de"
 title: "SEO-Texterstellung"
 description: "SEO-Texterstellung mit Capsule Content Technique. Rankings und KI-Zitate. Festpreis pro Text oder im Retainer. Kostenlose Erstberatung."

@@ -123,7 +123,7 @@ const deServiceHubSlugMap = new Map<string, string>([
   ['google-ads-audit', 'google-ads-audit'],
   ['paid-social-strategy', 'paid-social-strategy'],
   ['content-marketing', 'content-marketing-agentur'],
-  ['seo-copywriting', 'seo-copywriting'],
+  ['seo-copywriting', 'seo-texterstellung'],
   ['copywriting-audit', 'copywriting-audit'],
   ['audience-persona-mapping', 'zielgruppenanalyse'],
   ['google-analytics-consultancy', 'google-analytics-consultancy'],

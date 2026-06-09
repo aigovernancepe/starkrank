@@ -50,7 +50,7 @@ One detailed brief per article: target keyword, search intent, question structur
 
 ### Content production
 
-We write ourselves — with technical depth and verifiable research — or we deliver briefs to your in-house team or freelancers and take on quality assurance. Production follows our documented [SEO copywriting methodology](/services/seo-copywriting/) with capsule structure, embedded Information Gain hypotheses, and an anti-AI writing check before every sign-off.
+We write ourselves — with technical depth and verifiable research — or we deliver briefs to your in-house team or freelancers and take on quality assurance. Production follows our documented [SEO copywriting methodology](/services/seo-texterstellung/) with capsule structure, embedded Information Gain hypotheses, and an anti-AI writing check before every sign-off.
 
 ### E-E-A-T-compliant editorial + structured data markup
 
