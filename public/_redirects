@@ -198,6 +198,8 @@
 # hub moved from EN-canonical slug (0/mo) to Zielgruppenanalyse (1'600/mo DE).
 /services/audience-persona-mapping/  /services/zielgruppenanalyse/               301
 
-# Retired markets (/pe/*, /peru/*, /miami/*, /fort-lauderdale/*) return 404
-# via src/pages/404.astro — Cloudflare Pages does not support 410 in _redirects,
+# Retired US markets (/miami/*, /fort-lauderdale/*) return 404 via
+# src/pages/404.astro — Cloudflare Pages does not support 410 in _redirects,
 # so we rely on the Astro-generated 404.html for "page gone" semantics.
+# NB: the Peru market (/pe/*) was reinstated — /peru/ → /pe/ 301 lives in
+# astro.config.mjs and the /pe/* pages are served from src/pages/pe/.

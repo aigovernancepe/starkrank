@@ -17,13 +17,14 @@ interface PagesFunction<E = Record<string, unknown>> {
 const FORM_TYPES = ['kontakt', 'aiso', 'copywriting', 'google-ads', 'service-finder'] as const;
 type FormType = (typeof FORM_TYPES)[number];
 
-const LOCALES = ['de', 'ch-de', 'en'] as const;
+const LOCALES = ['de', 'ch-de', 'en', 'pe'] as const;
 type Locale = (typeof LOCALES)[number];
 
 const THANK_YOU_PATH: Record<Locale, string> = {
   'de': '/danke/',
   'ch-de': '/ch-de/danke/',
   'en': '/en/thanks/',
+  'pe': '/pe/gracias/',
 };
 
 const SITE_ORIGIN = 'https://starkrank.com';

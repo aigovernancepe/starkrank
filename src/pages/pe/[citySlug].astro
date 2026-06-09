@@ -1,0 +1,37 @@
+---
+import CitySpokePage from '../../components/pages/CitySpokePage.astro';
+import { getCollection } from 'astro:content';
+import { getSpokePath } from '../../data/service-slugs';
+
+export async function getStaticPaths() {
+  const cities = await getCollection('cities');
+  const services = await getCollection('services');
+  const spokeEntries = await getCollection('spokes');
+  const peCities = cities.filter((c) => c.data.locale === 'pe');
+
+  const paths: Array<{ params: { citySlug: string }; props: Record<string, unknown> }> = [];
+
+  for (const city of peCities) {
+    for (const serviceSlug of city.data.services) {
+      const service = services.find((s) => s.data.slug === serviceSlug);
+      if (!service) continue;
+
+      const spokeSlug = getSpokePath(serviceSlug, city.data.citySlug, 'pe');
+      const spoke = spokeEntries.find(
+        (s) => s.data.serviceSlug === serviceSlug && s.data.citySlug === city.data.citySlug && s.data.locale === 'pe'
+      ) ?? null;
+
+      paths.push({
+        params: { citySlug: spokeSlug },
+        props: { city: city.data, service, spokeSlug, spoke },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { city, service, spokeSlug, spoke } = Astro.props;
+---
+
+<CitySpokePage city={city} service={service} locale="pe" spokeSlug={spokeSlug} spoke={spoke} />

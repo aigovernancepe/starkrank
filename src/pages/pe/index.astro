@@ -1,0 +1,90 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import PillarCard from '../../components/ui/PillarCard.astro';
+import Button from '../../components/ui/Button.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import { getLocalizedPillars } from '../../data/pillars';
+import { getSpokePath } from '../../data/service-slugs';
+
+const pillars = getLocalizedPillars('pe');
+
+const pillarCityLinks: Record<string, string> = {
+  'search-ai-intelligence': `/pe/${getSpokePath('ai-search-optimization', 'lima', 'pe')}/`,
+  'performance-media': `/pe/${getSpokePath('google-ads-management', 'lima', 'pe')}/`,
+  'authority-pr': `/pe/${getSpokePath('reactive-pr', 'lima', 'pe')}/`,
+  'content-copywriting': `/pe/${getSpokePath('seo-copywriting', 'lima', 'pe')}/`,
+  'data-web': `/pe/${getSpokePath('google-analytics-consultancy', 'lima', 'pe')}/`,
+};
+
+const allSpokes = await getCollection('spokes', (s) => s.data.locale === 'pe');
+const spokesByPillar = pillars.map((pillar) => ({
+  pillar,
+  spokes: pillar.services
+    .flatMap((serviceSlug) => allSpokes.filter((s) => s.data.serviceSlug === serviceSlug))
+    .map((s) => ({
+      title: s.data.title,
+      description: s.data.description,
+      href: `/pe/${getSpokePath(s.data.serviceSlug, s.data.citySlug, 'pe')}/`,
+    })),
+}));
+---
+
+<BaseLayout
+  title="StarkRank Perú — Marketing Digital Basado en Datos"
+  description="StarkRank acompaña a empresas peruanas — fintech, e-commerce y servicios profesionales — con optimización de búsqueda IA, SEO técnico y estrategias de crecimiento basadas en datos, desde Lima para todo el mercado peruano."
+  locale="pe"
+>
+  <HeroSection
+    headline="Crecimiento Basado en Datos para la **Era de la IA**"
+    subheadline="StarkRank posiciona a empresas peruanas en buscadores, plataformas de IA y frente a las personas detrás de ambos — desde Lima, para todo el Perú."
+  >
+    <Button href="/pe/apareces-en-google/" variant="primary" size="lg">Revisa Gratis &rarr;</Button>
+  </HeroSection>
+
+  <Section bg="cream">
+    <SectionHeader label="Nuestros Servicios" title="Cinco Pilares del Crecimiento Digital" align="center" />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {pillars.map((pillar) => <PillarCard pillar={pillar} locale="pe" href={pillarCityLinks[pillar.id]} />)}
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <SectionHeader
+      label="Servicios en el Perú"
+      title="Todos los Servicios"
+      subtitle="Servicios completos de marketing digital — con base en Lima, para empresas de todo el Perú."
+      align="center"
+    />
+    <div class="space-y-12">
+      {spokesByPillar.map(({ pillar, spokes }) => spokes.length > 0 && (
+        <div>
+          <h3 class="text-sm font-label font-bold uppercase tracking-[0.2em] text-blue mb-4">{pillar.name}</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {spokes.map((spoke) => (
+              <a
+                href={spoke.href}
+                class="group block bg-cream/40 border border-gray-light/40 rounded-lg p-5 transition-all hover:shadow-md hover:border-blue/30"
+              >
+                <h4 class="text-base font-headline font-black text-navy group-hover:text-blue transition-colors leading-snug">
+                  {spoke.title}
+                </h4>
+                <p class="mt-2 text-sm font-body text-gray leading-relaxed line-clamp-2">
+                  {spoke.description}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <CTABanner bg="navy" title="¿Tu negocio aparece en Google?" subtitle="Descúbrelo gratis en 2 minutos. Resultado por WhatsApp en 24h.">
+    <Button href="/pe/apareces-en-google/" variant="primary" size="lg">Revisa Gratis &rarr;</Button>
+    <Button href="/pe/contacto/" variant="secondary" size="lg">Contacto</Button>
+  </CTABanner>
+</BaseLayout>

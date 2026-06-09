@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import Card from '../../components/ui/Card.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+
+const title = 'SME Expertise Library — Conocimiento Experto a Contenido | StarkRank';
+const description = 'Los casos, posiciones contrarias, fracasos y frameworks de su fundador merecen una biblioteca estructurada. Desde S/ 2,100.';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'SME Expertise Library',
+  description: 'Biblioteca de conocimiento estructurada que captura los casos de estudio, visiones contrarias, historias de fracaso, frameworks, conocimiento de insider y material citable de un fundador a lo largo de 10 secciones. Construida a través de entrevista en vivo y entregada como archivo markdown canónico.',
+  url: 'https://starkrank.com/pe/biblioteca-experto/',
+  provider: { '@type': 'Organization', name: 'StarkRank', url: 'https://starkrank.com' },
+  areaServed: [{ '@type': 'Country', name: 'Peru' }],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'SME Expertise Library Tiers',
+    itemListElement: [
+      { '@type': 'Offer', name: 'Single-Service', description: 'Práctica de un solo rubro. Entrevista de 2 horas, 3 casos de estudio, archivo canónico.', price: '2100', priceCurrency: 'PEN' },
+      { '@type': 'Offer', name: 'Multi-Service', description: 'Firma multi-servicio con 3+ líneas. Entrevista de 3 horas, 5 casos de estudio.', price: '3400', priceCurrency: 'PEN' },
+      { '@type': 'Offer', name: 'Actualización anual', description: 'Sesión anual de actualización con nuevos casos. Incluida en retainer Content Marketing.', price: '700', priceCurrency: 'PEN' },
+    ],
+  },
+};
+
+const faqItems = [
+  { question: '¿En qué se diferencia esto del servicio Expert Interview?', answer: 'Expert Interview tiene alcance de tema: un procedimiento, un área de servicio, un archivo por tema. La SME Library tiene alcance de persona: el cuerpo completo de conocimiento de su fundador en toda su práctica, construida una vez en el onboarding. Las dos coexisten: la biblioteca es el respaldo; las entrevistas temáticas son la profundización.' },
+  { question: '¿Para quién NO es la SME Expertise Library?', answer: 'Clientes donde ningún SME único ancla la marca: franquicias multi-locación, agencias generalistas, tiendas de e-commerce y marcas puramente de categoría o producto. También clientes en etapas tempranas que aún no tienen contenido que genere ingresos.' },
+  { question: '¿Qué pasa si mi fundador tiene tiempo limitado para una entrevista?', answer: 'Dividimos la entrevista de 2-3 horas en 2 o 3 sesiones de 45-60 minutos cada una. También aceptamos transcripciones de material existente (grabaciones de podcasts, charlas de conferencia, videos de capacitación interna) como input, lo que reduce significativamente el tiempo en vivo.' },
+  { question: '¿Trabajan con nuestro equipo de contenido actual o lo reemplazan?', answer: 'Trabajamos al lado. La biblioteca se construye para alimentar a cualquier equipo de contenido, sea in-house, ghostwriter o nuestro retainer de Content Marketing. El registro de uso rastrea qué material ya se ha tomado, para que su equipo no use el mismo caso de estudio en tres posts distintos.' },
+  { question: '¿Cada cuánto se actualiza la biblioteca?', answer: 'Mensualmente para agregar nuevos casos (10 minutos). Trimestralmente para revisar las secciones de Creencias Contrarias y Visión Actual (30 minutos). Anualmente para una re-auditoría completa (2 horas, S/ 700 fuera de retainer).' },
+  { question: '¿La biblioteca puede usarse con herramientas de AI que ya tenemos licenciadas?', answer: 'Sí. La biblioteca es un archivo markdown estructurado, así que cualquier herramienta de contenido que acepte contexto markdown (Claude, ChatGPT, Jasper, Writer, pipelines custom) puede cargarla. Proveemos un template corto de prompt para inyectar secciones en flujos de generación.' },
+  { question: '¿Qué pasa si nuestro fundador se va o cambia de rol?', answer: 'La biblioteca es el activo; la salida de su fundador no la borra. Los casos de estudio, frameworks y posiciones contrarias previas siguen siendo vigentes (con atribución preservada según las decisiones de consentimiento originales) mientras sigan siendo precisos.' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const schemas = [serviceSchema, faqSchema];
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/pe/' },
+  { label: 'SME Expertise Library', href: '/pe/biblioteca-experto/' },
+];
+
+const sections = [
+  { num: 1, name: 'Experticia Central y Credenciales', what: 'Años en el rubro, ventaja de nicho, qué sabe el SME mejor que el 95% de sus pares' },
+  { num: 2, name: 'Creencias Contrarias', what: '2-4 posiciones que el SME sostiene y con las que la mayoría de pares discrepan, más la evidencia de cada una' },
+  { num: 3, name: 'Casos de Estudio', what: '3-5 proyectos específicos con antes/después, decisiones clave, cifras de resultado, lecciones aprendidas' },
+  { num: 4, name: 'Testimonios y Citas Directas', what: 'Citas textuales de clientes con fuente, el mejor feedback recibido, el agradecimiento más común' },
+  { num: 5, name: 'Fracasos y Lecciones Aprendidas', what: 'Proyectos que el SME lamenta, causas de raíz, qué haría diferente (contenido que genera confianza)' },
+  { num: 6, name: 'Frameworks y Metodologías con Nombre Propio', what: 'Metodologías formales o informales que el SME usa en cada engagement' },
+  { num: 7, name: 'Conocimiento de Insider', what: 'Verdades de la industria que no están en los libros, patrones que los pares no ven, herramientas que pocos conocen' },
+  { num: 8, name: 'Visión Actual de la Industria', what: 'Tendencias sobrevaloradas vs subvaloradas, qué está siguiendo el SME ahora mismo' },
+  { num: 9, name: 'Frases Citables y Mantras', what: 'Frases que el SME repite en cada consulta, lema personal para su trabajo' },
+  { num: 10, name: 'Pruebas y Data que el SME Puede Citar', what: 'Dashboards internos, cifras específicas que compartirá públicamente, referencias antes/después' },
+];
+
+const processSteps = [
+  { num: 1, title: 'Preparación (Día 1-2)', body: 'Leemos su material público existente (posts largos de LinkedIn, podcasts, charlas, artículos como invitado) y preparamos la entrevista para evitar preguntar lo que ya está registrado.' },
+  { num: 2, title: 'Entrevista en vivo (Día 3-5)', body: '2 a 3 horas con el SME en 1 o 2 sesiones. Hacemos una pregunta a la vez, cuestionamos respuestas vagas y cubrimos las 10 secciones.' },
+  { num: 3, title: 'Pase de cumplimiento YMYL (Día 6)', body: 'Para rubros regulados, marcamos afirmaciones como "garantizado", "especialista" sin board-cert o afirmaciones de resultado sin descargo.' },
+  { num: 4, title: 'Síntesis + borrador (Día 7-8)', body: '10 secciones compiladas en el archivo canónico. Decisiones de atribución registradas por cita y por caso.' },
+  { num: 5, title: 'Ciclo de revisión del SME (Día 9-10)', body: 'Resumimos los 8-12 puntos más importantes al SME para aprobación. Correcciones hechas, atribución confirmada.' },
+  { num: 6, title: 'Entrega (Día 11-14)', body: 'Archivo guardado. Walkthrough de 30 minutos con su equipo de contenido sobre cómo referenciar la biblioteca desde los briefs.' },
+];
+
+const relatedLinks = [
+  { title: 'Expert Interview', href: '/pe/entrevista-experto/' },
+  { title: 'Content Marketing', href: '/pe/marketing-contenidos-lima/' },
+  { title: 'Optimización para IA', href: '/pe/busqueda-ia-lima/' },
+  { title: '¿Aparece en Google?', href: '/pe/apareces-en-google/' },
+];
+---
+
+<BaseLayout title={title} description={description} locale="pe" schema={schemas}>
+  <Fragment slot="head">
+    <link rel="alternate" hreflang="en" href="https://starkrank.com/services/sme-expertise-library/" />
+    <link rel="alternate" hreflang="de" href="https://starkrank.com/de/sme-expertise-library/" />
+    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/sme-expertise-library/" />
+    <link rel="alternate" hreflang="es-PE" href="https://starkrank.com/pe/biblioteca-experto/" />
+    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/services/sme-expertise-library/" />
+  </Fragment>
+
+  <!-- Hero -->
+  <Section bg="cream">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+      Content &amp; Copywriting
+    </span>
+    <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+      SME Expertise Library — Convierta el Conocimiento de Su Fundador en un Activo Citable
+    </h1>
+    <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-3xl">
+      El contenido más difícil de producir en 2026 es el que la AI no puede generar: historias de fracasos, resultados con cifras específicas, posiciones contrarias respaldadas por 20 años de trabajo en campo, y frameworks con nombre propio que su equipo usa todos los días. Todo eso vive en la cabeza de su fundador y aparece en reuniones con clientes, pero nunca en su contenido. La SME Expertise Library captura ese conocimiento una sola vez, lo estructura en 10 secciones y se vuelve la fuente de la que su equipo toma material en cada brief.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <Button href="/pe/contacto/" variant="primary" size="lg">Reserve Su SME Library</Button>
+      <Button href="#sections" variant="ghost" size="lg">Las 10 Secciones</Button>
+    </div>
+
+    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+      <span>Última actualización: <time datetime="2026-04-19">abril 2026</time></span>
+      <span>Por <a href="/about/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank</span>
+    </div>
+  </Section>
+
+  <!-- Main + sidebar -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2 space-y-0">
+
+          <div class="pb-14">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              ¿Por qué el conocimiento del fundador debe vivir en una biblioteca estructurada?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Su fundador sabe cosas que ningún modelo de AI puede inferir de su data de entrenamiento: cifras de casos de 15 años de práctica, la posición contraria que gana reuniones con clientes, el fracaso que cambió cada engagement desde entonces.</p>
+              <p>Sin una biblioteca, ese conocimiento se queda en su cabeza. La biblioteca convierte la experticia de una persona en un activo del equipo.</p>
+            </div>
+          </div>
+
+          <div id="sections" class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-4">
+              ¿Qué cubre la SME Expertise Library?
+            </h2>
+            <p class="text-base font-body text-gray leading-relaxed mb-8">
+              La biblioteca estructura el conocimiento de su fundador en 10 secciones dentro de un solo archivo canónico, construido a través de una entrevista estructurada de 2 a 3 horas con importación opcional de transcripciones de podcasts, charlas o posts largos de LinkedIn.
+            </p>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm font-body border-collapse">
+                <thead>
+                  <tr class="border-b-2 border-navy/20">
+                    <th class="text-left py-3 pr-4 font-headline font-bold text-navy">#</th>
+                    <th class="text-left py-3 pr-4 font-headline font-bold text-navy">Sección</th>
+                    <th class="text-left py-3 font-headline font-bold text-navy">Qué se captura</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sections.map((s) => (
+                    <tr class="border-b border-gray-light/40">
+                      <td class="py-3 pr-4 text-blue font-bold align-top">{s.num}</td>
+                      <td class="py-3 pr-4 font-semibold text-dark align-top">{s.name}</td>
+                      <td class="py-3 text-gray leading-relaxed align-top">{s.what}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              ¿En qué se diferencia la biblioteca de un blog o una página de bio?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Una página de bio declara experticia; un blog la publica un artículo a la vez. La biblioteca es la materia prima debajo de ambos. No está orientada al cliente final, no está estructurada para SEO y no es prosa: es un archivo estructurado con 10 secciones, un registro de uso que rastrea qué contenido ya ha tomado material de ella, y referencias cruzadas a entrevistas temáticas específicas.</p>
+            </div>
+          </div>
+
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              ¿Por qué construir una biblioteca en vez de solo entrevistas temáticas?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Ambas son útiles y muchas veces recomendamos las dos. Las entrevistas temáticas profundizan en 1 línea de servicio o procedimiento; la biblioteca es el cuerpo completo de conocimiento del fundador en toda su práctica. Los equipos que empiezan con entrevistas temáticas terminan re-entrevistando al SME cada vez que sale un tema nuevo. Los equipos que empiezan con la biblioteca tienen la amplitud cubierta y luego hacen entrevistas temáticas para profundidad.</p>
+            </div>
+          </div>
+
+          <div class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              ¿Cuáles son los límites del servicio SME Library?
+            </h2>
+            <div class="space-y-4 text-base font-body text-gray leading-relaxed">
+              <p>Tres límites antes del engagement:</p>
+              <ul class="space-y-3 list-none pl-0">
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span>La biblioteca requiere entrevista en vivo (2-3 horas totales); no podemos construirla solo con material público porque el contenido de mayor valor no está publicado.</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span>1 SME ancla por biblioteca; equipos con varios SMEs compran 1 biblioteca por experto a tarifa estándar.</span></li>
+                <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span>Los rubros YMYL necesitan aprobación humana sobre la atribución.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="deliverables" class="pt-14 pb-14 border-t border-gray-light/30">
+            <h2 class="text-2xl md:text-3xl font-headline font-black text-navy tracking-tight mb-6">
+              ¿Qué recibe con el engagement?
+            </h2>
+            <ul class="space-y-3 list-none pl-0 text-base font-body text-gray leading-relaxed">
+              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Archivo canónico de biblioteca</strong> — fuente única de verdad, 10 secciones, estructura consistente entre clientes</span></li>
+              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Tabla de flags de cumplimiento YMYL</strong> — regulaciones aplicables mapeadas a patrones de afirmación con reformulación compliant sugerida</span></li>
+              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Índice de referencias cruzadas</strong> — punteros a cualquier archivo de entrevista temática existente para material de profundidad</span></li>
+              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Decisiones de atribución</strong> — registro de consentimiento por cita y por caso de estudio (nombrado, anonimizado o solo interno)</span></li>
+              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Registro de uso</strong> — tabla vacía que se llena con el tiempo conforme los briefs toman material de la biblioteca</span></li>
+              <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-blue mt-2 shrink-0"></span><span><strong class="text-dark">Actualización anual</strong> — sesión opcional de S/ 700 al año para añadir nuevos casos, actualizar Creencias Contrarias y refrescar la Visión Actual</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-1">
+          <div class="lg:sticky lg:top-8 space-y-6">
+            <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+              <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Ideal para</p>
+              <div class="space-y-2 text-sm font-body text-gray">
+                <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0"></span><span>Prácticas lideradas por el fundador</span></div>
+                <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0"></span><span>Consultores independientes</span></div>
+                <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0"></span><span>Empresas B2B con experto anclaje</span></div>
+                <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue shrink-0"></span><span>Directores clínicos de firmas pyme</span></div>
+              </div>
+            </div>
+
+            <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+              <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-2">Formato</p>
+              <p class="text-sm font-body text-gray">1 archivo canónico por cliente · 10 secciones estructuradas · Actualización anual opcional · Alimenta toda habilidad de contenido</p>
+            </div>
+
+            <div>
+              <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Servicios relacionados</h3>
+              <div class="space-y-3">
+                {relatedLinks.map((r) => (
+                  <Card href={r.href}>
+                    <h4 class="text-sm font-headline font-bold text-navy">{r.title}</h4>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <Section bg="cream">
+    <SectionHeader label="Precios" title="¿Cuánto cuesta la SME Expertise Library?" />
+    <p class="text-base font-body text-gray leading-relaxed max-w-3xl mb-10">
+      Los precios escalan por alcance. Los clientes del retainer de contenido cuya marca está anclada en un SME clave reciben la biblioteca incluida en el onboarding sin cargo adicional.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white border border-gray-light/40 rounded-lg p-6 flex flex-col">
+        <h3 class="text-lg font-headline font-black text-navy mb-2">Single-Service</h3>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">Práctica de un solo rubro</p>
+        <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> 2 horas de entrevista</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> 3 casos de estudio capturados</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Revisión de cumplimiento</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Archivo canónico</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Actualización anual: S/ 700 adicional</li>
+        </ul>
+        <p class="text-2xl font-headline font-black text-navy mb-4">S/ 2,100</p>
+        <Button href="/pe/contacto/" variant="primary" size="md">Reservar Single-Service</Button>
+      </div>
+
+      <div class="bg-white border-2 border-blue rounded-lg p-6 flex flex-col">
+        <h3 class="text-lg font-headline font-black text-navy mb-2">Multi-Service</h3>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">3+ líneas de servicio</p>
+        <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> 3 horas de entrevista</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> 5 casos de estudio capturados</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Revisión de cumplimiento</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Archivo canónico</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Actualización anual: S/ 700 adicional</li>
+        </ul>
+        <p class="text-2xl font-headline font-black text-navy mb-4">S/ 3,400</p>
+        <Button href="/pe/contacto/" variant="primary" size="md">Reservar Multi-Service</Button>
+      </div>
+
+      <div class="bg-white border border-gray-light/40 rounded-lg p-6 flex flex-col">
+        <h3 class="text-lg font-headline font-black text-navy mb-2">Retainer</h3>
+        <p class="text-xs font-label font-semibold uppercase tracking-widest text-blue mb-4">Clientes Content Marketing</p>
+        <ul class="space-y-2 text-sm font-body text-gray mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> 2-3 horas de entrevista</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> 3-5 casos de estudio</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Revisión de cumplimiento</li>
+          <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">·</span> Actualización anual incluida</li>
+        </ul>
+        <p class="text-2xl font-headline font-black text-navy mb-4">En retainer</p>
+        <Button href="/pe/contacto/" variant="primary" size="md">Consultar por Retainer</Button>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Process -->
+  <Section bg="white">
+    <SectionHeader label="Proceso" title="¿Cómo funciona el engagement?" />
+    <p class="text-base font-body text-gray leading-relaxed max-w-3xl mb-10">
+      El engagement se ejecuta en 14 días hábiles y seis fases. La disciplina de la entrevista en el día 3 es decisiva para la calidad del resultado final.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {processSteps.map((step) => (
+        <div class="bg-cream border border-gray-light/40 rounded-lg p-6">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue text-white font-headline font-bold mb-4">{step.num}</div>
+          <h3 class="text-base font-headline font-bold text-navy mb-2">{step.title}</h3>
+          <p class="text-sm font-body text-gray leading-relaxed">{step.body}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- FAQ -->
+  <Section bg="cream">
+    <SectionHeader label="FAQ" title="¿Qué preguntan los clientes con más frecuencia?" />
+    <div class="max-w-3xl space-y-6">
+      {faqItems.map((item) => (
+        <details class="group bg-white border border-gray-light/40 rounded-lg">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer p-6 font-headline font-bold text-navy text-base md:text-lg select-none">
+            {item.question}
+            <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm font-body text-gray leading-relaxed">
+            {item.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <CTABanner bg="navy" title="¿Listo para convertir el conocimiento del fundador en un activo del equipo?" subtitle="Toda práctica liderada por su fundador tiene más experticia que contenido. La SME Library la captura una vez en un archivo estructurado del que su equipo puede tomar material en cada brief. S/ 2,100 single-service, S/ 3,400 multi-service, incluida en retainer Content Marketing.">
+    <Button href="/pe/contacto/" variant="primary" size="lg">Reserve Su SME Library</Button>
+    <Button href="/pe/marketing-contenidos-lima/" variant="secondary" size="lg">Consultar por Retainer</Button>
+  </CTABanner>
+</BaseLayout>

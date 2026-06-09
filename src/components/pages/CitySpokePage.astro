@@ -350,11 +350,24 @@ const allSchemas = [
     backgroundImageAlt={`${city.city} cityscape`}
   >
     <Button href={ctaHref} variant="primary" size="lg">{
-      (locale === 'de' || locale === 'ch-de') && isAISO ? 'Kostenlose Erstbewertung →'
+      locale === 'pe' ? 'Revisa Gratis →'
+      : (locale === 'de' || locale === 'ch-de') && isAISO ? 'Kostenlose Erstbewertung →'
       : isAISO ? ctaTitle
       : tf('spoke.contactIn', vars, locale)
     }</Button>
   </HeroSection>
+
+  {/* PE CTA banner — all PE spoke pages */}
+  {locale === 'pe' && (
+    <div class="bg-blue text-white">
+      <div class="max-w-7xl mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-4">
+        <span class="text-sm font-body font-semibold">¿Tu negocio aparece en Google? Revísalo gratis &rarr;</span>
+        <a href="/pe/apareces-en-google/" class="text-xs font-label font-semibold uppercase tracking-wide bg-white text-blue hover:bg-cream rounded-md px-4 py-2 transition-colors">
+          Revisa Gratis
+        </a>
+      </div>
+    </div>
+  )}
 
   {/* DE/CH-DE CTA banner — all DE/CH spoke pages */}
   {(locale === 'de' || locale === 'ch-de') && (
@@ -392,7 +405,7 @@ const allSchemas = [
             <div class="mb-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
               <span>
                 {t('spoke.lastUpdated', locale)}: <time datetime={effectiveDate.toISOString().split('T')[0]}>
-                  {effectiveDate.toLocaleDateString(locale === 'de' || locale === 'ch-de' ? 'de-CH' : 'en-US', { month: 'long', year: 'numeric' })}
+                  {effectiveDate.toLocaleDateString(locale === 'pe' ? 'es-PE' : locale === 'de' || locale === 'ch-de' ? 'de-CH' : 'en-US', { month: 'long', year: 'numeric' })}
                 </time>
               </span>
               <span>
@@ -479,7 +492,7 @@ const allSchemas = [
                     </tr>
                   ))}
                   <tr class="border-t-2 border-navy/20">
-                    <td class="py-3 pr-4 font-headline font-bold text-navy">{locale === 'en' ? 'Price' : 'Preis'}</td>
+                    <td class="py-3 pr-4 font-headline font-bold text-navy">{locale === 'pe' ? 'Precio' : locale === 'en' ? 'Price' : 'Preis'}</td>
                     <td class="py-3 px-4 text-center font-headline font-bold text-navy">{tier.freePrice}</td>
                     <td class="py-3 px-4 text-center font-headline font-bold text-navy">{tier.auditPrice}</td>
                   </tr>

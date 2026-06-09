@@ -23,6 +23,14 @@ export const localeConfig = {
     flag: 'US',
     dir: 'ltr',
   },
+  pe: {
+    label: 'Perú',
+    lang: 'es-PE',
+    hreflang: 'es-PE',
+    currency: 'PEN',
+    flag: 'PE',
+    dir: 'ltr',
+  },
 } as const;
 
 export type Locale = keyof typeof localeConfig;
@@ -32,6 +40,7 @@ export const locales = Object.keys(localeConfig) as Locale[];
 /** The primary city slug used for spoke page links per locale. */
 export const defaultCity: Record<Locale, string> = {
   en: 'basel',
+  pe: 'lima',
   de: 'hannover',
   'ch-de': 'basel',
 };

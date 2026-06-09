@@ -57,12 +57,14 @@ export const footerNav = {
 /** Locale-specific overrides for non-service navigation paths. */
 const contactPaths: Record<Locale, string> = {
   en: '/en/contact/',
+  pe: '/pe/contacto/',
   de: '/kontakt/',
   'ch-de': '/ch-de/kontakt/',
 };
 
 const privacyPaths: Record<Locale, string> = {
   en: '/en/privacy/',
+  pe: '/pe/privacidad/',
   de: '/datenschutz/',
   'ch-de': '/ch-de/datenschutz/',
 };
@@ -75,6 +77,7 @@ const impressumPaths: Record<string, string> = {
 
 const aboutPaths: Record<Locale, string> = {
   en: '/en/about/',
+  pe: '/pe/',
   de: '/ueber-uns/',
   'ch-de': '/ch-de/ueber-uns/',
 };
@@ -85,6 +88,9 @@ const auditPaths: Record<Locale, NavItem[]> = {
     { label: 'Free AI Search Optimization Score', href: '/en/aiso-score/' },
     { label: 'Free Google Ads Audit', href: '/en/free-google-ads-audit/' },
     { label: 'Free Copywriting Audit', href: '/en/free-copywriting-audit/' },
+  ],
+  pe: [
+    { label: '¿Apareces en Google?', href: '/pe/apareces-en-google/' },
   ],
   de: [
     { label: 'Kostenloser AI Search Optimization Check', href: '/aiso-check/' },
