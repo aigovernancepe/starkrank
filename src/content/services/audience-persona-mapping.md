@@ -59,7 +59,7 @@ Most clients receive 3–5 personas covering their primary customer segments.
 Personas are the foundation that makes everything else sharper:
 
 - **[Content Marketing](/services/content-marketing-agentur/)** — Editorial strategy and topic selection tailored to what each persona actually searches for
-- **[SEO Copywriting](/services/seo-copywriting/)** — Page copy and blog content written in the language and structure each persona responds to
+- **[SEO Copywriting](/services/seo-texterstellung/)** — Page copy and blog content written in the language and structure each persona responds to
 - **[Paid Social Strategy](/services/paid-social-strategy/)** — Audience targeting built from persona-specific demographics, interests, and behaviours
 - **[AI Search Optimization](/services/ai-search-optimization/)** — Entity and content strategy aligned to the specific prompts your personas use when querying AI platforms
 

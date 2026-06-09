@@ -28,7 +28,7 @@ processSteps:
     description: "Befundreport pro Seite mit konkreten Rewrite-Empfehlungen, priorisierte Liste nach Conversion- und AI-Impact, Beispiel-Rewrites für zwei bis drei besonders kritische Passagen als Tonalitäts-Template."
 faq:
   - question: "Schreiben Sie die Texte auch selbst um?"
-    answer: "Das Audit liefert Befunde und Rewrite-Empfehlungen pro Seite plus Beispiel-Rewrites für zwei bis drei Passagen als Tonalitäts-Template. Die vollständige Umsetzung ist separat buchbar — entweder als Einmal-Projekt oder im Retainer mit unserer [SEO-Texterstellung](/services/seo-copywriting/)."
+    answer: "Das Audit liefert Befunde und Rewrite-Empfehlungen pro Seite plus Beispiel-Rewrites für zwei bis drei Passagen als Tonalitäts-Template. Die vollständige Umsetzung ist separat buchbar — entweder als Einmal-Projekt oder im Retainer mit unserer [SEO-Texterstellung](/services/seo-texterstellung/)."
   - question: "Wie unterscheidet sich das Audit vom kostenlosen Copywriting-Check?"
     answer: "Der [kostenlose Copywriting-Check](/kostenloser-copywriting-check/) bewertet eine einzelne Seite an drei oberflächlichen Dimensionen in 15 Minuten — positioniert als Lead-Magnet. Das bezahlte Audit deckt zehn bis zwanzig Seiten ab, analysiert Conversion, Klarheit und AI-Zitationsfähigkeit im Detail und liefert priorisierte Rewrite-Empfehlungen je Seite."
   - question: "Welche Seiten sollten wir auditieren lassen?"
@@ -104,4 +104,4 @@ Für brandneue Sites ohne bestehenden Content-Bestand lohnt sich kein Audit — 
 
 Am Ende des Copywriting-Audits erhalten Sie einen Befundreport pro Seite mit Conversion-, Klarheits- und AI-Zitationsfähigkeits-Bewertung, eine priorisierte Rewrite-Roadmap sortiert nach Impact, zwei bis drei Beispiel-Rewrites kritischer Passagen als Tonalitäts-Template und einen 60-minütigen Walkthrough mit Ihrem Content-Team.
 
-Der Report ist so strukturiert, dass Ihr Content-Lead ihn direkt an externe Texter, Agenturen oder interne Redakteure weitergeben kann — jeder Befund hat Kontext, Beispiel und konkreten Fix. Für Unternehmen ohne eigene Content-Kapazität übernimmt die Umsetzung unsere [SEO-Texterstellung](/services/seo-copywriting/) im Retainer; für einmalige Rewrites im Scope des Audits liefern wir ein Festpreis-Angebot.
+Der Report ist so strukturiert, dass Ihr Content-Lead ihn direkt an externe Texter, Agenturen oder interne Redakteure weitergeben kann — jeder Befund hat Kontext, Beispiel und konkreten Fix. Für Unternehmen ohne eigene Content-Kapazität übernimmt die Umsetzung unsere [SEO-Texterstellung](/services/seo-texterstellung/) im Retainer; für einmalige Rewrites im Scope des Audits liefern wir ein Festpreis-Angebot.

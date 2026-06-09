@@ -26,7 +26,7 @@ faq:
   - question: "Schreiben Sie die Texte selbst oder briefen Sie unser internes Team?"
     answer: "Beides möglich. Wir schreiben selbst (mit fachlich dichter Inhaltsebene), oder wir liefern die Briefs und Ihr internes Team oder Freelancer produzieren — wir übernehmen in dem Fall die Qualitätssicherung gegen unsere Anti-AI-Schreibregeln. Manche Unternehmen bevorzugen hybrid: Hero-Content durch uns, Support-Content intern."
   - question: "Wie unterscheidet sich Content Marketing von SEO-Texterstellung?"
-    answer: "Content Marketing ist die strategische Ebene: Editorial-Kalender, Themen-Recherche, Information-Gain-Hypothesen, Distribution. [SEO-Texterstellung](/services/seo-copywriting/) ist die operative Ausführungsebene: einzelne Texte sauber schreiben. Ein Content-Marketing-Retainer enthält Texterstellung; ein reiner SEO-Texterstellungs-Auftrag enthält keine strategische Kalenderplanung."
+    answer: "Content Marketing ist die strategische Ebene: Editorial-Kalender, Themen-Recherche, Information-Gain-Hypothesen, Distribution. [SEO-Texterstellung](/services/seo-texterstellung/) ist die operative Ausführungsebene: einzelne Texte sauber schreiben. Ein Content-Marketing-Retainer enthält Texterstellung; ein reiner SEO-Texterstellungs-Auftrag enthält keine strategische Kalenderplanung."
   - question: "Wie viele Artikel pro Monat produzieren Sie im Retainer?"
     answer: "Je nach Band: im Einzelunternehmen-Band typisch zwei substanzielle Artikel pro Monat (jeweils 1.500 bis 2.500 Wörter mit Capsule-Struktur und Schema-Markup); im Mittelstand-Band vier bis acht. Der Band-Einstieg hängt weniger an Artikelzahl und mehr an der Komplexität: Recherche-Tiefe, Zielmarkt-Breite, Reviewschleifen, Mehrsprachigkeit."
   - question: "Können Sie auch Experteninhalte mit unserem Gründer oder Team produzieren?"
@@ -51,7 +51,7 @@ Pro Artikel ein detailliertes Briefing: Zielkeyword, [Suchabsicht](/glossar/#suc
 
 ### Texterstellung
 
-Wir schreiben selbst — mit fachlicher Tiefe und nachweisbarer Recherche — oder wir liefern Briefings an Ihr internes Team beziehungsweise an Ihre Freelancer und übernehmen die Qualitätsprüfung. Die Texterstellung folgt unserer dokumentierten [SEO-Copywriting-Methode](/services/seo-copywriting/) mit Capsule-Struktur, fest verankerten Information-Gain-Hypothesen und einer Anti-AI-Schreibprüfung vor jeder Abnahme.
+Wir schreiben selbst — mit fachlicher Tiefe und nachweisbarer Recherche — oder wir liefern Briefings an Ihr internes Team beziehungsweise an Ihre Freelancer und übernehmen die Qualitätsprüfung. Die Texterstellung folgt unserer dokumentierten [SEO-Copywriting-Methode](/services/seo-texterstellung/) mit Capsule-Struktur, fest verankerten Information-Gain-Hypothesen und einer Anti-AI-Schreibprüfung vor jeder Abnahme.
 
 ### E-E-A-T-konforme Redaktion + Schema-Markup
 
