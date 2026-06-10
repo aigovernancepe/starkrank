@@ -140,6 +140,10 @@ const chDeServiceHubSlugMap = new Map<string, string>([
   ['technical-seo-audit', 'seo-audit-schweiz'],
   ['google-ads-management', 'google-ads-schweiz'],
   ['local-seo-consulting', 'lokale-seo-schweiz'],
+  // Audit pillar (brief 2026-06-10): urlSlug equals serviceSlug. Registering it
+  // here both makes /ch-de/services/google-ads-audit/ resolvable AND redirects
+  // the hub Performance-Media card off the Basel spoke onto the pillar (§10).
+  ['google-ads-audit', 'google-ads-audit'],
 ]);
 
 /**

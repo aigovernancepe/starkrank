@@ -84,6 +84,10 @@ const serviceHubs = defineCollection({
     urlSlug: z.string().optional(),
     locale: z.enum(['de', 'ch-de']),
     title: z.string().optional(),
+    // Optional SERP <title> override. Falls back to `{title} — StarkRank`.
+    // Use for benefit-driven titles where the H1 stays the plain service name
+    // (e.g. google-ads-audit CH pillar, brief 2026-06-10 N1).
+    metaTitle: z.string().optional(),
     description: metaDescription,
     heroLede: z.string().optional(),
     faq: z.array(faqItem).optional(),

@@ -45,7 +45,7 @@ Das Audit ist kein Ersatz für laufendes Kampagnen-Management — es ist der Ges
 
 ## Was umfasst ein Google Ads Audit bei StarkRank?
 
-Das Google Ads Audit deckt sieben Prüfbereiche mit quantifiziertem Output pro Bereich ab:
+Das Google Ads Audit deckt neun Prüfbereiche mit quantifiziertem Output pro Bereich ab:
 
 - **Konto-Struktur** — Kampagnen-Architektur (Search / Performance Max / Shopping / Display), Ad-Group-Granularität, Keyword-Organisation, Match-Type-Strategie und Negative-Keyword-Hygiene
 - **Such-Query-Waste** — Analyse aller tatsächlichen Suchanfragen der letzten 90 Tage, Identifikation nicht-konvertierender Queries mit Euro-genauer Waste-Berechnung, Empfehlung konkreter negativer Keywords und Match-Type-Adjustments
@@ -53,6 +53,8 @@ Das Google Ads Audit deckt sieben Prüfbereiche mit quantifiziertem Output pro B
 - **Landingpage-Match** — Qualität der Zielseiten je Kampagne und Keyword-Cluster, [Core Web Vitals](/glossar/#core-web-vitals), mobile Usability, Formular-Conversion-Rate, Angebots-Kommunikation oberhalb der Falzlinie
 - **Audience- und Signals-Layer** — Customer-Match-Listen, Similar-Audiences, In-Market-Segmente, Remarketing-Konfiguration, First-Party-Daten-Integration
 - **Quality Score und Auktions-Performance** — Verteilung der Quality Scores, Impression-Share-Lost nach Budget/Rank/Auktion, Ad-Rank-Analyse, Suchanzeige-Bewertung
+- **Gebotsstrategien und Automatisierung** — Abgleich der Smart-Bidding-Strategie mit Konto-Reife und Datenvolumen, Performance-Max-Governance (Asset-Group-Struktur, Audience-Signale, Brand-Exclusion), manuell vs. automatisiert vs. Portfolio
+- **Anzeigenerweiterungen und Assets** — Ausschöpfung von Sitelinks, Anruf-, Standort- und Snippet-Erweiterungen sowie Asset-Qualität, die Klickrate und Sichtbarkeit ohne Mehrkosten heben
 - **Budget-Allokation und Pacing** — Verteilung zwischen Kampagnen-Typen, saisonale Anpassung, Budget-Caps vs. tatsächlichem Ausgabenverhalten, ROAS pro Euro pro Kampagne
 
 Jeder Befund bekommt eine Schweregrad-Einstufung, eine konkrete Fix-Empfehlung und eine Schätzung des erwarteten Effekts (in Euro Waste-Reduktion oder Prozent-Uplift auf Conversions).
