@@ -122,7 +122,7 @@ const localBusinessSchema = {
 
 // AISO detection — must be before breadcrumbs
 const isAISO = serviceData.slug === 'ai-search-optimization';
-const isGoogleAds = serviceData.slug === 'google-ads-audit';
+const isGoogleAds = serviceData.slug === 'google-ads-audit' || serviceData.slug === 'google-ads-management';
 
 const homeHref = locale === 'en' ? '/' : `/${locale}/`;
 const breadcrumbs = isAISO
