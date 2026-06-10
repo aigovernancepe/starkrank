@@ -123,6 +123,27 @@ const localBusinessSchema = {
 // AISO detection — must be before breadcrumbs
 const isAISO = serviceData.slug === 'ai-search-optimization';
 const isGoogleAds = serviceData.slug === 'google-ads-audit' || serviceData.slug === 'google-ads-management';
+const isPaidSocial = serviceData.slug === 'paid-social-strategy';
+
+// DE/CH-DE CTA-Banner unter dem Hero — Ziel je nach Service:
+// Google-Ads → gratis Google-Ads-Check, Paid Social → Erstgespräch, sonst → AISO-Check
+const spokeCtaBanner = isGoogleAds
+  ? {
+      text: 'Wo verpufft Ihr Google-Ads-Budget? Kostenlosen Check anfordern →',
+      href: locale === 'de' ? '/kostenloser-google-ads-check/' : '/ch-de/kostenloser-google-ads-check/',
+      label: 'Google-Ads-Check anfordern',
+    }
+  : isPaidSocial
+  ? {
+      text: 'Paid-Social-Budget unklar? Kostenloses Erstgespräch →',
+      href: getLocalizedNavHref('/contact/', locale),
+      label: 'Erstgespräch anfragen',
+    }
+  : {
+      text: 'Wie KI-ready ist Ihre Website? Kostenlose Erstbewertung anfordern →',
+      href: locale === 'de' ? '/aiso-check/' : '/ch-de/aiso-check/',
+      label: 'Erstbewertung anfordern',
+    };
 
 const homeHref = locale === 'en' ? '/' : `/${locale}/`;
 const breadcrumbs = isAISO
@@ -357,22 +378,16 @@ const allSchemas = [
     }</Button>
   </HeroSection>
 
-  {/* DE/CH-DE CTA banner — all DE/CH spoke pages; Google-Ads-Audit-Spokes verlinken den gratis Google-Ads-Check statt AISO */}
+  {/* DE/CH-DE CTA banner — all DE/CH spoke pages; Ziel je nach Service (siehe spokeCtaBanner) */}
   {(locale === 'de' || locale === 'ch-de') && (
     <div class="bg-blue text-white">
       <div class="max-w-7xl mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-4">
-        <span class="text-sm font-body font-semibold">{
-          isGoogleAds
-            ? 'Wo verpufft Ihr Google-Ads-Budget? Kostenlosen Check anfordern →'
-            : 'Wie KI-ready ist Ihre Website? Kostenlose Erstbewertung anfordern →'
-        }</span>
+        <span class="text-sm font-body font-semibold">{spokeCtaBanner.text}</span>
         <a
-          href={isGoogleAds
-            ? (locale === 'de' ? '/kostenloser-google-ads-check/' : '/ch-de/kostenloser-google-ads-check/')
-            : (locale === 'de' ? '/aiso-check/' : '/ch-de/aiso-check/')}
+          href={spokeCtaBanner.href}
           class="text-xs font-label font-semibold uppercase tracking-wide bg-white text-blue hover:bg-cream rounded-md px-4 py-2 transition-colors"
         >
-          {isGoogleAds ? 'Google-Ads-Check anfordern' : 'Erstbewertung anfordern'}
+          {spokeCtaBanner.label}
         </a>
       </div>
     </div>
