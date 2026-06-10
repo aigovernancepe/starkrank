@@ -37,14 +37,12 @@ deliverables:
   - "Konkrete Handlungsempfehlungen mit geschätztem ROI-Potenzial pro Massnahme"
 ---
 
-## Warum ist ein Google-Ads-Audit im Zürcher Markt unverzichtbar?
+## Warum sind Zürcher Finanz-CPCs so hoch — und was prüft ein Audit dort zuerst?
 
-Der Zürcher Paid-Search-Markt gehört zu den teuersten in Europa. In Finanz-, Versicherungs- und Consulting-Keywords zahlen Werbetreibende erfahrungsgemäss zweistellige bis niedrig dreistellige CPCs (Cost per Click — Kosten pro Klick). Jede PPC-Ineffizienz (Pay-per-Click — Bezahlung pro Klick) — falsche Match Types, fehlende Negativ-Keywords, intransparente PMax-Kampagnen, lückenhaftes Conversion-Tracking — schlägt in diesem Umfeld direkt auf den ROI durch.
+In Zürcher Finanz-Keywords gehören die Klickpreise zu den höchsten der Schweiz. Belegte Werte (DataForSEO CH, Juni 2026): Vermögensverwaltung 15.29 CHF, Steuerberatung Zürich 14.53 CHF, Treuhand Zürich 11.26 CHF pro Klick. Bei diesen Preisen entscheiden die Disziplin bei Negativ-Keywords und der Qualitätsfaktor über die Rentabilität — ein einziger teurer Fehlbegriff frisst das Budget mehrerer guter Klicks. Das Audit prüft hier zuerst, wohin das Geld in der Auktion wirklich fliesst.
 
-Besonders kritisch: Seit Inkrafttreten des revidierten Schweizer Datenschutzgesetzes (revDSG) müssen Tracking-Implementierungen den Schweizer Datenschutzanforderungen entsprechen. Falsch konfigurierter Consent Mode führt zu lückenhaften Conversion-Daten und damit zu fehlerhafter Kampagnenoptimierung — der Algorithmus optimiert auf das, was er sieht, nicht auf das, was tatsächlich passiert. Starten Sie mit unserem [kostenlosen Google Ads Check](/kostenloser-google-ads-check/) für eine erste Einschätzung.
+Das vollständige Verfahren mit allen neun Prüfbereichen finden Sie auf der Pillar [Google Ads Audit Schweiz](/ch-de/services/google-ads-audit/) — diese Seite konzentriert sich auf den Zürcher Finanz-, Versicherungs- und Tech-Markt.
 
 ## Wie identifizieren wir Einsparpotenziale für Zürcher Unternehmen?
 
-Unser Audit analysiert jede Kampagne, Anzeigengruppe und jedes Keyword auf Effizienz. Für den Zürcher Markt prüfen wir zusätzlich, ob die Kampagnenstruktur zur tatsächlichen Entscheidungsreise in Ihrer Branche passt: Ein Private-Banking-Anbieter braucht Offline-Conversion-Integration, damit der Algorithmus auf Mandatsabschlüsse statt auf Formular-Einsendungen optimiert. Ein SaaS-Unternehmen braucht Audience-Exclusions, damit Brand-Suchende nicht in teuren Non-Brand-Auktionen landen.
-
-Die Ergebnisse fliessen direkt in eine umsetzbare Roadmap. Für die anschliessende Optimierung empfehlen wir unser [Google Ads Management](/ch-de/google-ads-zuerich/).
+Für den Zürcher Markt prüfen wir zusätzlich, ob die Kampagnenstruktur zur tatsächlichen Entscheidungsreise in Ihrer Branche passt: Ein Private-Banking-Anbieter braucht Offline-Conversion-Integration, damit der Algorithmus auf Mandatsabschlüsse statt auf Formular-Einsendungen optimiert. Ein SaaS-Unternehmen braucht Audience-Exclusions, damit Brand-Suchende nicht in teuren Non-Brand-Auktionen landen. Starten Sie mit unserem [kostenlosen Google Ads Check](/ch-de/kostenloser-google-ads-check/) für eine erste Einschätzung. Für die anschliessende Optimierung empfehlen wir unser [Google Ads Management in Zürich](/ch-de/google-ads-zuerich/).

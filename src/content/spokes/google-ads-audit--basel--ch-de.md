@@ -37,14 +37,12 @@ deliverables:
   - "Konkrete Handlungsempfehlungen mit geschätztem ROI-Potenzial"
 ---
 
-## Warum ist ein Google Ads Audit im Schweizer Markt unverzichtbar?
+## Was prüft ein Audit bei mehrsprachigen Basler Konten?
 
-Die Schweiz gehört zu den teuersten Google-Ads-Märkten weltweit. Basler Unternehmen in Pharma, Finanzen und Chemie zahlen CPCs (Cost per Click — Kosten pro Klick), bei denen jede PPC-Ineffizienz (Pay-per-Click — Bezahlung pro Klick) direkt auf den ROI durchschlägt. Ein professionelles Audit identifiziert systematisch, wo Budget verschwendet wird — durch falsche Match Types, fehlende Negativ-Keywords, suboptimale Gebotsstrategien oder unvollständiges Conversion-Tracking.
+Bei Basler Unternehmen liegt der Schmerzpunkt selten beim Klickpreis — Medizintechnik etwa kostet mit rund 2.35 CHF pro Klick wenig. Teuer wird die Komplexität: Werden deutsche, französische und englische Suchanfragen am Dreiländereck sauber getrennt bedient, ist das Conversion-Tracking über die Ländergrenzen korrekt aufgesetzt, und misst es revDSG-konform? Genau hier setzt das Audit zuerst an.
 
-Besonders kritisch: Seit Inkrafttreten des revDSG müssen Tracking-Implementierungen in der Schweiz den Datenschutzanforderungen entsprechen. Falsch konfigurierter Consent Mode führt zu lückenhaften Conversion-Daten und damit zu fehlerhafter Kampagnenoptimierung. Starten Sie mit unserem [kostenlosen Google Ads Check](/free-google-ads-audit/) für eine erste Einschätzung.
+Das vollständige Verfahren mit allen neun Prüfbereichen beschreibt die Pillar [Google Ads Audit Schweiz](/ch-de/services/google-ads-audit/) — diese Seite konzentriert sich auf den Basler Markt mit seinen mehrsprachigen Konten und langen B2B-Funnels in Pharma, Medizintechnik und Life Sciences.
 
 ## Wie identifizieren wir Einsparpotenziale für Basler Unternehmen?
 
-Unser Audit analysiert jede Kampagne, Anzeigengruppe und jedes Keyword auf Effizienz. Für den Basler Markt prüfen wir zusätzlich die mehrsprachige Abdeckung: Werden deutsche, französische und englische Suchanfragen separat bedient? Sind Geo-Targeting-Einstellungen für das Dreiländereck korrekt konfiguriert? Nutzen Sie den vollen Impression Share in Ihren Kernmärkten?
-
-Die Ergebnisse fliessen direkt in eine umsetzbare Roadmap. Für die anschliessende Optimierung empfehlen wir unser [Google Ads Management](/ch-de/google-ads-basel/) — von der Konten-Restrukturierung bis zur laufenden Gebots- und Kampagnensteuerung.
+Wir prüfen für den Basler Markt vor allem die mehrsprachige Abdeckung: Werden deutsche, französische und englische Suchanfragen separat bedient, und sind die Geo-Targeting-Einstellungen für das Dreiländereck korrekt konfiguriert? Starten Sie mit unserem [kostenlosen Google Ads Check](/ch-de/kostenloser-google-ads-check/) für eine erste Einschätzung. Für die anschliessende Steuerung empfehlen wir unser [Google Ads Management in Basel](/ch-de/google-ads-basel/) — von der Konten-Restrukturierung bis zur laufenden Kampagnensteuerung.
