@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import { getSelfLastModified } from '../../utils/getLastModified';
+
+const title = 'Diseño de Páginas Web en Lima | StarkRank Perú';
+const description = 'Diseño de páginas web en Lima pensado para vender: sitios rápidos, listos para Google y administrables. Revisa tu web gratis en 24h.';
+
+const site = Astro.site?.origin ?? 'https://starkrank.com';
+const pageUrl = `${site}/pe/diseno-de-paginas-web-lima/`;
+const effectiveDate = getSelfLastModified(import.meta.url, new Date('2026-06-11'));
+
+// FAQ mirrors the visible H2 capsules below (Schema-Content-Parität §5.5 —
+// every Question has its answer visible on the page).
+const faq = [
+  {
+    question: '¿Qué incluye el diseño de una página web profesional en Lima?',
+    answer: 'Incluye diseño a medida y responsive, alojamiento web (hosting) y dominio configurados, SEO base con estructura indexable, una web administrable (CMS) para que actualices el contenido tú mismo, textos orientados a convertir y medición de conversiones desde el primer día.',
+  },
+  {
+    question: '¿Cuánto cuesta una página web en Lima?',
+    answer: 'No publicamos un precio fijo porque el costo depende del número de páginas, las funcionalidades y si necesitas textos e imágenes nuevos. Te enviamos una propuesta a medida tras una conversación breve y sin compromiso. En nuestra guía de precios explicamos cómo se forma cada nivel de inversión.',
+  },
+  {
+    question: '¿Cuánto tiempo toma desarrollar tu página web?',
+    answer: 'Un proyecto estándar toma alrededor de seis semanas: descubrimiento y contenido en la semana 1, diseño en las semanas 2 y 3, desarrollo en las semanas 4 y 5, y QA con un Pre-Deploy SEO Check en la semana 6 antes del go-live.',
+  },
+  {
+    question: '¿Qué hace que tu página web aparezca en Google?',
+    answer: 'Aparecer en Google empieza en el código: una estructura indexable, carga rápida y datos estructurados que envían señales claras a los buscadores. Por eso construimos cada sitio sobre una base correcta, lista para el posicionamiento web desde el primer día.',
+  },
+  {
+    question: '¿Qué tecnología usa StarkRank para webs rápidas y administrables?',
+    answer: 'Diseñamos sobre Astro, un generador de sitios estáticos servido desde la red global de Cloudflare, y optimizamos para los Core Web Vitals (LCP por debajo de 2.5 segundos). El resultado es una web administrable: rápida para tu cliente y fácil de actualizar para ti, sin la lentitud típica de WordPress.',
+  },
+  {
+    question: '¿Necesito también una tienda virtual?',
+    answer: 'Depende de tu modelo de negocio. Si vendes productos en línea, una tienda virtual tiene sentido; si tu objetivo es generar consultas, una web orientada a conversión suele rendir más. No empujamos un comercio electrónico que no necesitas: evaluamos tu caso con honestidad.',
+  },
+  {
+    question: '¿Cómo elegir una empresa de diseño web en Lima?',
+    answer: 'Confirma que serás dueño de tu web (dominio, hosting y código), pide ver la velocidad real en el celular, exige que nazca optimizada para Google, asegúrate de tener soporte después del lanzamiento y evita el lock-in con un proveedor del que no puedas mudarte.',
+  },
+  {
+    question: '¿Ofrecen soporte y mantenimiento después del lanzamiento?',
+    answer: 'Sí. Lanzar es el comienzo, no el final. Una página web necesita actualizaciones, mejoras de velocidad y ajustes a medida que crece tu negocio. Te entregamos un sitio que administras tú mismo y acompañamos su evolución.',
+  },
+];
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${site}/#organization`,
+  name: 'StarkRank',
+  url: site,
+  logo: `${site}/SR-Logo-standard_high-res.png`,
+  areaServed: { '@type': 'City', name: 'Lima' },
+  knowsLanguage: ['es', 'en'],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Diseño de Páginas Web en Lima',
+  serviceType: 'Diseño Web',
+  description,
+  provider: { '@id': `${site}/#organization` },
+  areaServed: [
+    { '@type': 'City', name: 'Lima' },
+    { '@type': 'Country', name: 'Perú' },
+  ],
+  url: pageUrl,
+  mainEntityOfPage: pageUrl,
+  about: [
+    { '@type': 'Thing', name: 'Diseño web' },
+    { '@type': 'Thing', name: 'Página web' },
+    { '@type': 'Thing', name: 'Lima' },
+    { '@type': 'Thing', name: 'Perú' },
+  ],
+  mentions: [
+    { '@type': 'Thing', name: 'Google' },
+    { '@type': 'Thing', name: 'WordPress' },
+    { '@type': 'Thing', name: 'Astro' },
+    { '@type': 'Thing', name: 'Cloudflare' },
+    { '@type': 'Thing', name: 'Core Web Vitals' },
+    { '@type': 'Thing', name: 'Alojamiento web' },
+    { '@type': 'Thing', name: 'Sistema de gestión de contenidos' },
+    { '@type': 'Thing', name: 'Posicionamiento en buscadores' },
+    { '@type': 'Thing', name: 'Comercio electrónico' },
+  ],
+};
+
+// BreadcrumbList JSON-LD is emitted by the <Breadcrumbs> component from the
+// same items below — no manual node needed (avoids a duplicate BreadcrumbList).
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: pageUrl,
+  name: title,
+  dateModified: effectiveDate.toISOString(),
+};
+
+const schemas = [webPageSchema, orgSchema, serviceSchema, faqSchema];
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/pe/' },
+  { label: 'Servicios', href: '/pe/servicios/' },
+  { label: 'Diseño de Páginas Web en Lima', href: '/pe/diseno-de-paginas-web-lima/' },
+];
+
+const relatedServices = [
+  { title: 'Posicionamiento Web en Lima', description: 'Aparece en Google cuando tus clientes buscan tu servicio.', href: '/pe/posicionamiento-web-lima/' },
+  { title: 'Publicidad en Lima', description: 'Campañas en Google, Facebook e Instagram medidas por resultados.', href: '/pe/agencia-de-publicidad-lima/' },
+  { title: 'Agencia de Marketing Digital en Lima', description: 'La mirada integral: estrategia, ejecución y medición.', href: '/pe/agencia-de-marketing-digital-lima/' },
+];
+---
+
+<BaseLayout title={title} description={description} locale="pe" schema={schemas}>
+  <Section bg="cream">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+      Diseño Web · Lima, Perú
+    </span>
+    <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+      Diseño de Páginas Web en Lima
+    </h1>
+    <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-2xl">
+      Una página web bonita no basta: tiene que vender y nacer lista para Google. En StarkRank diseñamos sitios web en Lima sobre una base técnica sólida, rápidos y fáciles de administrar, para que cada visita pueda convertirse en cliente.
+    </p>
+
+    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+      <span>
+        Última actualización: <time datetime={effectiveDate.toISOString().split('T')[0]}>
+          {effectiveDate.toLocaleDateString('es-PE', { month: 'long', year: 'numeric' })}
+        </time>
+      </span>
+      <span>
+        Por <a href="/pe/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
+      </span>
+    </div>
+
+    <div class="mt-8 prose prose-lg max-w-none font-body text-dark prose-numbered-cards prose-branded-bullets
+      [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:font-headline [&>h2]:font-black [&>h2]:text-navy [&>h2]:tracking-tight [&>h2]:mt-14 [&>h2]:mb-4 [&>h2]:pt-6 [&>h2]:border-t [&>h2]:border-gray-light/30
+      [&>p]:leading-relaxed [&>p]:text-gray [&>p]:mb-6
+      [&_strong]:text-dark
+      [&_a]:text-blue [&_a]:font-semibold [&_a:hover]:text-blue-light
+      first:[&>h2]:mt-0 first:[&>h2]:pt-0 first:[&>h2]:border-t-0
+      [&>ol]:space-y-4
+      [&>ol>li]:bg-white [&>ol>li]:border [&>ol>li]:border-gray-light/40 [&>ol>li]:rounded-lg [&>ol>li]:p-5 [&>ol>li]:text-gray [&>ol>li]:text-base [&>ol>li]:leading-relaxed
+      [&>ul]:space-y-3
+      [&>ul>li]:text-gray [&>ul>li]:text-base [&>ul>li]:leading-relaxed">
+
+      <h2>¿Qué incluye el diseño de una página web profesional en Lima?</h2>
+      <p>Un proyecto de diseño web serio es más que el aspecto visual. Cuando diseñamos tu web, incluimos:</p>
+      <ul>
+        <li><strong>Diseño a medida y responsive,</strong> pensado primero para el celular.</li>
+        <li><strong>Alojamiento web (hosting) y dominio</strong> configurados y listos.</li>
+        <li><strong>SEO base:</strong> estructura indexable para que Google te encuentre.</li>
+        <li><strong>Web administrable (CMS):</strong> actualiza textos e imágenes sin depender de nadie.</li>
+        <li><strong>Textos y estructura orientados a convertir</strong> la visita en consulta.</li>
+        <li><strong>Medición de conversiones</strong> desde el primer día.</li>
+      </ul>
+
+      <h2>¿Cuánto cuesta una página web en Lima? Precios y planes</h2>
+      <p>No publicamos un precio fijo porque el costo de diseñar una página web depende del número de páginas, las funcionalidades y si necesitas textos e imágenes nuevos. En lugar de un paquete cerrado, te enviamos una propuesta a medida tras una conversación breve y sin compromiso sobre tu proyecto.</p>
+      <p>Como referencia del mercado (no como tarifa de StarkRank), una página web profesional en Lima va desde un sitio de pocas páginas para emprendedores hasta proyectos más amplios para empresas con varias líneas de negocio. Para entender cómo se forma cada nivel de inversión, revisa nuestra <a href="/pe/blog/precios-seo-peru/">guía de precios</a>.</p>
+
+      <h2>¿Cuánto tiempo toma desarrollar tu página web?</h2>
+      <p>Una web a medida no se improvisa, pero tampoco tiene que tardar meses. Un proyecto estándar sigue estas fases:</p>
+      <ol>
+        <li><strong>Semana 1 — Descubrimiento y contenido:</strong> objetivos, estructura y textos.</li>
+        <li><strong>Semanas 2 y 3 — Diseño:</strong> diseñamos las pantallas clave y las validamos contigo.</li>
+        <li><strong>Semanas 4 y 5 — Desarrollo:</strong> construimos el sitio web sobre la base técnica.</li>
+        <li><strong>Semana 6 — QA y Pre-Deploy SEO Check:</strong> revisamos velocidad, estructura y medición antes de publicar.</li>
+        <li><strong>Go-Live:</strong> tu web queda en línea y lista para recibir visitas.</li>
+      </ol>
+
+      <h2>¿Qué hace que tu página web aparezca en Google?</h2>
+      <p>Aparecer en Google empieza en el código, no después. Tu sitio aparece cuando su estructura es indexable, carga rápido y envía señales claras a los buscadores con datos estructurados. Por eso diseñamos cada sitio web sobre una base correcta, de modo que tu inversión en posicionar tu web construya sobre cimientos sólidos en lugar de pelear contra ellos. Si quieres profundizar, así trabajamos el <a href="/pe/posicionamiento-web-lima/">posicionamiento web en Lima</a>.</p>
+
+      <h2>¿Qué tecnología usa StarkRank para webs rápidas y administrables?</h2>
+      <p>La mayoría de webs en Lima se construyen sobre WordPress y heredan su lentitud. Nosotros diseñamos sobre Astro, un generador de sitios estáticos que servimos desde la red global de Cloudflare, por lo que tu página carga en milisegundos. Optimizamos para los Core Web Vitals (LCP por debajo de 2.5 segundos) y entregamos una web administrable: rápida para tu cliente y fácil de actualizar para ti.</p>
+
+      <h2>¿Necesito también una tienda virtual?</h2>
+      <p>Depende de tu modelo de negocio. Si vendes productos en línea, una tienda virtual tiene sentido; si tu objetivo es generar consultas y captar clientes, una web orientada a conversión suele rendir más. No empujamos un comercio electrónico que no necesitas: evaluamos tu caso y te decimos con honestidad qué conviene.</p>
+
+      <h2>¿Cómo elegir una empresa de diseño web en Lima?</h2>
+      <p>Antes de contratar a quien va a diseñar tu web, revisa estos puntos:</p>
+      <ul>
+        <li><strong>¿Serás dueño de tu web?</strong> Exige acceso al dominio, al hosting y al código.</li>
+        <li><strong>Velocidad real:</strong> pide que te muestren cómo carga en el celular.</li>
+        <li><strong>Optimizada para Google:</strong> que nazca lista para posicionar, no que haya que rehacerla.</li>
+        <li><strong>Soporte después del lanzamiento,</strong> no solo hasta el go-live.</li>
+        <li><strong>Sin lock-in:</strong> que puedas mudarte de proveedor sin perder tu sitio web.</li>
+      </ul>
+
+      <h2>¿Ofrecen soporte y mantenimiento después del lanzamiento?</h2>
+      <p>Sí. Lanzar es el comienzo, no el final. Una web es un activo vivo: necesita actualizaciones, mejoras de velocidad y ajustes a medida que crece tu negocio. Te entregamos un sitio que puedes administrar tú mismo y acompañamos su evolución, para que tu web siga rápida, segura y lista para Google con el tiempo.</p>
+
+      <p>Una buena página web es la base de todo lo demás. Cuando quieras atraer más visitas, la combinamos con <a href="/pe/posicionamiento-web-lima/">posicionamiento web</a> y <a href="/pe/agencia-de-publicidad-lima/">publicidad en Lima</a>; y si buscas una mirada integral, conoce nuestra <a href="/pe/agencia-de-marketing-digital-lima/">agencia de marketing digital en Lima</a>. El diseño de páginas web es donde empieza el crecimiento.</p>
+    </div>
+
+    <div class="mt-12 flex flex-wrap gap-4">
+      <Button href="/pe/contacto/" variant="primary" size="lg">Solicita una propuesta &rarr;</Button>
+      <Button href="/pe/apareces-en-google/" variant="secondary" size="lg">Revisa tu web gratis</Button>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Servicios en Lima</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {relatedServices.map((s) => (
+        <a href={s.href} class="group block bg-white border border-gray-light/40 rounded-lg p-6 transition-all hover:shadow-lg hover:border-blue/30 hover:-translate-y-0.5">
+          <h3 class="text-base font-headline font-black text-navy group-hover:text-blue transition-colors leading-snug">{s.title}</h3>
+          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{s.description}</p>
+          <span class="mt-3 inline-block text-xs font-label font-semibold uppercase tracking-wide text-blue">Ver más &rarr;</span>
+        </a>
+      ))}
+    </div>
+  </Section>
+
+  <CTABanner bg="navy" title="¿Listo para una web que venda?" subtitle="Solicita una propuesta a medida o revisa gratis cómo está tu web hoy.">
+    <Button href="/pe/contacto/" variant="primary" size="lg">Solicita una propuesta &rarr;</Button>
+    <Button href="/pe/apareces-en-google/" variant="secondary" size="lg">Revisa Gratis</Button>
+  </CTABanner>
+</BaseLayout>

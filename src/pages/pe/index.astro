@@ -1,22 +1,38 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/ui/HeroSection.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import Button from '../../components/ui/Button.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
-import { getSpokePath } from '../../data/service-slugs';
 
-// The /pe/ home IS the Lima agency hub — it carries the strongest validated geo-buyer
-// term "agencia de marketing digital en lima" (DataForSEO 2026-06-11). The three
-// demand-validated Lima services are surfaced as cards from the spokes collection.
-const limaSpokes = await getCollection('spokes', (s) => s.data.locale === 'pe' && s.data.citySlug === 'lima');
-const services = limaSpokes.map((s) => ({
-  title: s.data.title,
-  description: s.data.description,
-  href: `/pe/${getSpokePath(s.data.serviceSlug, s.data.citySlug, 'pe')}/`,
-}));
+// The /pe/ home is the Lima hub / brand overview. The exact head term
+// "agencia de marketing digital en lima" is targeted by its own deep page
+// (/pe/agencia-de-marketing-digital-lima/) to avoid cannibalizing it from the
+// home; the home uses a broader benefit framing and surfaces the four
+// demand-validated Lima service pages as cards (DataForSEO 2026-06-11).
+const services = [
+  {
+    title: 'Agencia de Marketing Digital en Lima',
+    description: 'La mirada integral: estrategia, ejecución y medición sobre cinco bloques de crecimiento.',
+    href: '/pe/agencia-de-marketing-digital-lima/',
+  },
+  {
+    title: 'Posicionamiento Web en Lima',
+    description: 'Aparece en Google cuando tus clientes buscan tu servicio en Lima.',
+    href: '/pe/posicionamiento-web-lima/',
+  },
+  {
+    title: 'Diseño de Páginas Web en Lima',
+    description: 'Sitios rápidos, listos para Google y fáciles de administrar.',
+    href: '/pe/diseno-de-paginas-web-lima/',
+  },
+  {
+    title: 'Publicidad en Lima',
+    description: 'Campañas en Google, Facebook e Instagram medidas por resultados.',
+    href: '/pe/agencia-de-publicidad-lima/',
+  },
+];
 
 const site = Astro.site?.origin ?? 'https://starkrank.com';
 const orgSchema = {
@@ -24,7 +40,7 @@ const orgSchema = {
   '@type': 'ProfessionalService',
   '@id': `${site}/pe/#business`,
   name: 'StarkRank Perú',
-  description: 'Agencia de marketing digital en Lima: posicionamiento web, diseño de páginas web y publicidad en Google y redes sociales.',
+  description: 'Marketing digital medible en Lima: posicionamiento web, diseño de páginas web y publicidad en Google y redes sociales.',
   url: `${site}/pe/`,
   areaServed: { '@type': 'City', name: 'Lima' },
   knowsLanguage: ['es', 'en'],
@@ -32,14 +48,14 @@ const orgSchema = {
 ---
 
 <BaseLayout
-  title="Agencia de Marketing Digital en Lima | StarkRank Perú"
-  description="Agencia de marketing digital en Lima basada en datos: posicionamiento web, diseño de páginas web y publicidad en Google, Facebook e Instagram. Revisa gratis tu presencia en Google."
+  title="StarkRank Perú | Marketing Digital Medible en Lima"
+  description="Marketing digital medible en Lima: posicionamiento web, diseño de páginas web y publicidad en Google, Facebook e Instagram. Revisa gratis tu presencia en Google."
   locale="pe"
   schema={[orgSchema]}
 >
   <HeroSection
-    headline="Agencia de Marketing Digital en **Lima**"
-    subheadline="Ayudamos a empresas en Lima a aparecer en Google, atraer clientes y crecer con datos — no con promesas. Posicionamiento web, diseño de páginas web y publicidad digital, todo medible."
+    headline="Crecimiento digital medible para empresas en **Lima**"
+    subheadline="Ayudamos a empresas en Lima a aparecer en Google, atraer clientes y crecer con datos. Posicionamiento web, diseño de páginas web y publicidad digital, todo medible."
   >
     <Button href="/pe/apareces-en-google/" variant="primary" size="lg">Revisa Gratis &rarr;</Button>
     <Button href="/pe/contacto/" variant="secondary" size="lg">Conversemos</Button>
@@ -48,11 +64,11 @@ const orgSchema = {
   <Section bg="cream">
     <SectionHeader
       label="Servicios en Lima"
-      title="Tres formas de hacer crecer tu negocio"
-      subtitle="Empezamos por lo que mueve la aguja para tu negocio en Lima — y lo medimos."
+      title="Cómo hacemos crecer tu negocio"
+      subtitle="Empezamos por lo que mueve la aguja para tu negocio en Lima, y lo medimos."
       align="center"
     />
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {services.map((s) => (
         <a
           href={s.href}
