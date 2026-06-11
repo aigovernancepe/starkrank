@@ -86,12 +86,10 @@ const flatLocaleSlugs: Record<string, Partial<Record<string, string>>> = {
   'sme-expertise-library': {
     de: 'expertenbibliothek',
     'ch-de': 'expertenbibliothek',
-    pe: 'biblioteca-experto',
   },
   'expert-interview': {
     de: 'experteninterview',
     'ch-de': 'experteninterview',
-    pe: 'entrevista-experto',
   },
 };
 
