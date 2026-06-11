@@ -1,0 +1,93 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Button from '../../components/ui/Button.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import { getSpokePath } from '../../data/service-slugs';
+
+// The /pe/ home IS the Lima agency hub — it carries the strongest validated geo-buyer
+// term "agencia de marketing digital en lima" (DataForSEO 2026-06-11). The three
+// demand-validated Lima services are surfaced as cards from the spokes collection.
+const limaSpokes = await getCollection('spokes', (s) => s.data.locale === 'pe' && s.data.citySlug === 'lima');
+const services = limaSpokes.map((s) => ({
+  title: s.data.title,
+  description: s.data.description,
+  href: `/pe/${getSpokePath(s.data.serviceSlug, s.data.citySlug, 'pe')}/`,
+}));
+
+const site = Astro.site?.origin ?? 'https://starkrank.com';
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': `${site}/pe/#business`,
+  name: 'StarkRank Perú',
+  description: 'Agencia de marketing digital en Lima: posicionamiento web, diseño de páginas web y publicidad en Google y redes sociales.',
+  url: `${site}/pe/`,
+  areaServed: { '@type': 'City', name: 'Lima' },
+  knowsLanguage: ['es', 'en'],
+};
+---
+
+<BaseLayout
+  title="Agencia de Marketing Digital en Lima | StarkRank Perú"
+  description="Agencia de marketing digital en Lima basada en datos: posicionamiento web, diseño de páginas web y publicidad en Google, Facebook e Instagram. Revisa gratis tu presencia en Google."
+  locale="pe"
+  schema={[orgSchema]}
+>
+  <HeroSection
+    headline="Agencia de Marketing Digital en **Lima**"
+    subheadline="Ayudamos a empresas en Lima a aparecer en Google, atraer clientes y crecer con datos — no con promesas. Posicionamiento web, diseño de páginas web y publicidad digital, todo medible."
+  >
+    <Button href="/pe/apareces-en-google/" variant="primary" size="lg">Revisa Gratis &rarr;</Button>
+    <Button href="/pe/contacto/" variant="secondary" size="lg">Conversemos</Button>
+  </HeroSection>
+
+  <Section bg="cream">
+    <SectionHeader
+      label="Servicios en Lima"
+      title="Tres formas de hacer crecer tu negocio"
+      subtitle="Empezamos por lo que mueve la aguja para tu negocio en Lima — y lo medimos."
+      align="center"
+    />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {services.map((s) => (
+        <a
+          href={s.href}
+          class="group block bg-white border border-gray-light/40 rounded-lg p-6 transition-all hover:shadow-lg hover:border-blue/30 hover:-translate-y-0.5"
+        >
+          <h3 class="text-lg font-headline font-black text-navy group-hover:text-blue transition-colors leading-snug">
+            {s.title}
+          </h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">
+            {s.description}
+          </p>
+          <span class="mt-4 inline-block text-xs font-label font-semibold uppercase tracking-wide text-blue">Ver más &rarr;</span>
+        </a>
+      ))}
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <div class="max-w-3xl mx-auto text-center">
+      <SectionHeader
+        label="Cómo trabajamos"
+        title="Marketing digital con método, no con humo"
+        align="center"
+      />
+      <p class="text-base font-body text-gray leading-relaxed">
+        StarkRank trabaja sobre cinco bloques — búsqueda e inteligencia artificial, medios de rendimiento, autoridad, contenido, y datos y web. No vendemos paquetes cerrados: partimos de datos de búsqueda reales de Lima y construimos solo lo que tu negocio necesita para crecer.
+      </p>
+      <div class="mt-8">
+        <Button href="/pe/servicios/" variant="secondary" size="lg">Conoce nuestro método &rarr;</Button>
+      </div>
+    </div>
+  </Section>
+
+  <CTABanner bg="navy" title="¿Tu negocio aparece en Google?" subtitle="Descúbrelo gratis en 2 minutos. Te enviamos el resultado por WhatsApp en 24 horas.">
+    <Button href="/pe/apareces-en-google/" variant="primary" size="lg">Revisa Gratis &rarr;</Button>
+    <Button href="/pe/contacto/" variant="secondary" size="lg">Contacto</Button>
+  </CTABanner>
+</BaseLayout>

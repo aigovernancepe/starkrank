@@ -124,6 +124,33 @@ const pillarTranslations: Record<string, Record<string, { name: string; tagline:
       description: 'Bauen und messen Sie die Engine mit performantem Webdesign und Analytics-Beratung.',
     },
   },
+  pe: {
+    'search-ai-intelligence': {
+      name: 'Búsqueda e Inteligencia IA',
+      tagline: 'El Motor de Visibilidad',
+      description: 'Visibilidad a prueba de futuro mediante posicionamiento web, SEO técnico y búsqueda con inteligencia artificial.',
+    },
+    'performance-media': {
+      name: 'Medios de Rendimiento',
+      tagline: 'El Motor de Escala',
+      description: 'Crecimiento con precisión mediante publicidad en Google, Facebook e Instagram.',
+    },
+    'authority-pr': {
+      name: 'Autoridad y PR',
+      tagline: 'El Motor de Reputación',
+      description: 'Convierte tu marca en una fuente confiable mediante autoridad digital y señales de credibilidad.',
+    },
+    'content-copywriting': {
+      name: 'Contenido',
+      tagline: 'El Motor de Conexión',
+      description: 'Contenido que conecta con las personas y posiciona en buscadores — redacción estratégica con foco en conversión.',
+    },
+    'data-web': {
+      name: 'Datos y Web',
+      tagline: 'El Cerebro',
+      description: 'Construye y mide el motor con diseño de páginas web de alto rendimiento y analítica.',
+    },
+  },
 };
 
 export function getPillarById(id: string): Pillar | undefined {

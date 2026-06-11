@@ -22,21 +22,16 @@ const enSlugs: SlugMap = {
   'performance-web-development': 'web-dev',
 };
 
+// PE/Lima spokes are demand-validated (DataForSEO 2026-06-11), not catalog mirrors.
+// Only three services earn a Lima spoke; their slugs use the native LatAm buyer-terms
+// (posicionamiento web, diseño de páginas web, agencia de publicidad) that out-pull the
+// literal DACH translations. The umbrella term "agencia de marketing digital (en) lima"
+// is carried by the /pe/ Lima hub home, not a spoke. Services not listed in lima.md
+// never render a spoke, so the remaining entries are inert references only.
 const peSlugs: SlugMap = {
-  'ai-search-optimization': 'busqueda-ia',
-  'technical-seo-audit': 'auditoria-seo',
-  'local-seo-consulting': 'seo-local',
-  'google-ads-management': 'google-ads',
-  'google-ads-audit': 'auditoria-google-ads',
-  'paid-social-strategy': 'redes-sociales',
-  'authority-link-building': 'link-building',
-  'content-marketing': 'marketing-contenidos',
-  'seo-copywriting': 'redaccion-seo',
-  'copywriting-audit': 'auditoria-redaccion',
-  'audience-persona-mapping': 'analisis-audiencia',
-  'technical-web-design': 'diseno-web',
-  'google-analytics-consultancy': 'consultoria-analytics',
-  'performance-web-development': 'desarrollo-web',
+  'local-seo-consulting': 'posicionamiento-web',
+  'technical-web-design': 'diseno-de-paginas-web',
+  'google-ads-management': 'agencia-de-publicidad',
 };
 
 const deSlugs: SlugMap = {
@@ -91,12 +86,10 @@ const flatLocaleSlugs: Record<string, Partial<Record<string, string>>> = {
   'sme-expertise-library': {
     de: 'expertenbibliothek',
     'ch-de': 'expertenbibliothek',
-    pe: 'biblioteca-experto',
   },
   'expert-interview': {
     de: 'experteninterview',
     'ch-de': 'experteninterview',
-    pe: 'entrevista-experto',
   },
 };
 

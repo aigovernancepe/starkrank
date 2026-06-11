@@ -35,16 +35,18 @@ export default defineConfig({
   output: 'static',
   i18n: {
     defaultLocale: 'de',
-    locales: ['de', 'en', { path: 'ch-de', codes: ['ch-de'] }],
+    locales: ['de', 'en', 'pe', { path: 'ch-de', codes: ['ch-de'] }],
     routing: {
       prefixDefaultLocale: false,
     },
     fallback: {
+      pe: 'en',
       'ch-de': 'de',
     },
   },
   redirects: {
     '/schweiz/': '/ch-de/',
+    '/peru/': '/pe/',
     '/deutschland/': '/',
     '/free-aiso-score/': '/en/aiso-score/',
     '/audits/free-google-ads-check/': '/kostenloser-google-ads-check/',

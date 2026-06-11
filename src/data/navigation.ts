@@ -57,12 +57,14 @@ export const footerNav = {
 /** Locale-specific overrides for non-service navigation paths. */
 const contactPaths: Record<Locale, string> = {
   en: '/en/contact/',
+  pe: '/pe/contacto/',
   de: '/kontakt/',
   'ch-de': '/ch-de/kontakt/',
 };
 
 const privacyPaths: Record<Locale, string> = {
   en: '/en/privacy/',
+  pe: '/pe/privacidad/',
   de: '/datenschutz/',
   'ch-de': '/ch-de/datenschutz/',
 };
@@ -75,6 +77,7 @@ const impressumPaths: Record<string, string> = {
 
 const aboutPaths: Record<Locale, string> = {
   en: '/en/about/',
+  pe: '/pe/',
   de: '/ueber-uns/',
   'ch-de': '/ch-de/ueber-uns/',
 };
@@ -85,6 +88,9 @@ const auditPaths: Record<Locale, NavItem[]> = {
     { label: 'Free AI Search Optimization Score', href: '/en/aiso-score/' },
     { label: 'Free Google Ads Audit', href: '/en/free-google-ads-audit/' },
     { label: 'Free Copywriting Audit', href: '/en/free-copywriting-audit/' },
+  ],
+  pe: [
+    { label: '¿Apareces en Google?', href: '/pe/apareces-en-google/' },
   ],
   de: [
     { label: 'Kostenloser AI Search Optimization Check', href: '/aiso-check/' },
@@ -123,7 +129,7 @@ const deServiceHubSlugMap = new Map<string, string>([
   ['google-ads-audit', 'google-ads-audit'],
   ['paid-social-strategy', 'paid-social-strategy'],
   ['content-marketing', 'content-marketing-agentur'],
-  ['seo-copywriting', 'seo-texterstellung'],
+  ['seo-copywriting', 'seo-copywriting'],
   ['copywriting-audit', 'copywriting-audit'],
   ['audience-persona-mapping', 'zielgruppenanalyse'],
   ['google-analytics-consultancy', 'google-analytics-consultancy'],
@@ -140,10 +146,6 @@ const chDeServiceHubSlugMap = new Map<string, string>([
   ['technical-seo-audit', 'seo-audit-schweiz'],
   ['google-ads-management', 'google-ads-schweiz'],
   ['local-seo-consulting', 'lokale-seo-schweiz'],
-  // Audit pillar (brief 2026-06-10): urlSlug equals serviceSlug. Registering it
-  // here both makes /ch-de/services/google-ads-audit/ resolvable AND redirects
-  // the hub Performance-Media card off the Basel spoke onto the pillar (§10).
-  ['google-ads-audit', 'google-ads-audit'],
 ]);
 
 /**
@@ -183,11 +185,12 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
     return locale === 'ch-de' ? '/ch-de/preise/seo/' : '/preise/seo/';
   }
 
-  // Services hub
-  if (href === '/services/') return `${prefix}/services/`;
+  // Services hub — PE uses the Spanish slug /pe/servicios/ (the 5-Bausteine hub).
+  if (href === '/services/') return locale === 'pe' ? '/pe/servicios/' : `${prefix}/services/`;
 
   // Services hub anchor links (pillar headers in mega-menu)
   if (href.startsWith('/services/#')) {
+    if (locale === 'pe') return `/pe/servicios/${href.slice('/services/'.length)}`;
     return `${prefix}${href}`;
   }
 

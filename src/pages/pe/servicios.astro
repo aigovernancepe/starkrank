@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionHeader from '../../components/ui/SectionHeader.astro';
+import Button from '../../components/ui/Button.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import { getLocalizedPillars } from '../../data/pillars';
+
+const pillars = getLocalizedPillars('pe');
+
+// Lima only has three demand-validated spokes; the other pillars route to contact.
+// (Authority/PR and standalone Content had no Lima search demand — DataForSEO 2026-06-11.)
+const pillarLink: Record<string, { href: string; label: string }> = {
+  'search-ai-intelligence': { href: '/pe/posicionamiento-web-lima/', label: 'Ver Posicionamiento Web en Lima →' },
+  'performance-media': { href: '/pe/agencia-de-publicidad-lima/', label: 'Ver Publicidad en Lima →' },
+  'data-web': { href: '/pe/diseno-de-paginas-web-lima/', label: 'Ver Diseño de Páginas Web en Lima →' },
+  'authority-pr': { href: '/pe/contacto/', label: 'Conversemos →' },
+  'content-copywriting': { href: '/pe/posicionamiento-web-lima/', label: 'Ver cómo trabajamos el contenido →' },
+};
+
+const site = Astro.site?.origin ?? 'https://starkrank.com';
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${site}/pe/` },
+    { '@type': 'ListItem', position: 2, name: 'Servicios', item: `${site}/pe/servicios/` },
+  ],
+};
+---
+
+<BaseLayout
+  title="Servicios de Marketing Digital — StarkRank Perú"
+  description="Cómo trabajamos en StarkRank: cinco bloques de crecimiento digital — búsqueda e IA, medios de rendimiento, autoridad, contenido, y datos y web — adaptados a tu negocio en Lima."
+  locale="pe"
+  schema={[breadcrumbSchema]}
+>
+  <HeroSection
+    headline="Nuestros **Servicios**"
+    subheadline="Trabajamos sobre cinco bloques de crecimiento digital. No vendemos paquetes cerrados: partimos de datos de búsqueda reales de Lima y construimos solo lo que tu negocio necesita."
+  >
+    <Button href="/pe/apareces-en-google/" variant="primary" size="lg">Revisa Gratis &rarr;</Button>
+  </HeroSection>
+
+  <Section bg="white">
+    <SectionHeader
+      label="Visión general"
+      title="Cinco bloques del crecimiento digital"
+      subtitle="Cuatro bloques del marketing digital se apoyan sobre el fundamento de Datos y Web."
+      align="center"
+    />
+  </Section>
+
+  {pillars.map((pillar, idx) => (
+    <Section bg={idx % 2 === 0 ? 'cream' : 'white'} id={pillar.id} class="scroll-mt-20">
+      <div class="max-w-3xl mx-auto text-center">
+        <SectionHeader
+          label={pillar.tagline}
+          title={pillar.name}
+          subtitle={pillar.description}
+          align="center"
+        />
+        <div class="mt-6">
+          <a href={pillarLink[pillar.id].href} class="text-sm font-label font-semibold uppercase tracking-wide text-blue hover:text-blue-light transition-colors">
+            {pillarLink[pillar.id].label}
+          </a>
+        </div>
+      </div>
+    </Section>
+  ))}
+
+  <CTABanner bg="navy" title="¿Listo para crecer?" subtitle="Empieza con una revisión gratuita de tu presencia en Google.">
+    <Button href="/pe/apareces-en-google/" variant="primary" size="lg">Revisa Gratis &rarr;</Button>
+    <Button href="/pe/contacto/" variant="secondary" size="lg">Contacto</Button>
+  </CTABanner>
+</BaseLayout>

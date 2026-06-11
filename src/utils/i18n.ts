@@ -1,11 +1,13 @@
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { localeConfig, defaultLocale, type Locale } from '../data/locales';
 import { en } from './translations/en';
+import { pe } from './translations/pe';
 import { de } from './translations/de';
 import { chde } from './translations/ch-de';
 
 const translations: Record<Locale, Record<string, string>> = {
   en,
+  pe,
   de,
   'ch-de': chde,
 };
@@ -13,12 +15,14 @@ const translations: Record<Locale, Record<string, string>> = {
 /**
  * Extract the current locale from a URL pathname.
  * Post-Phase-2b: DE lives at root, EN at /en/*, CH-DE at /ch-de/*.
- * /de/blog/ is intentionally retained as DE (localized blog index tree).
+ * PE (es-PE) lives at /pe/*. /de/blog/ is intentionally retained as DE
+ * (localized blog index tree).
  */
 export function getCurrentLocale(url: URL): Locale {
   const path = url.pathname;
   if (path.startsWith('/ch-de/') || path === '/ch-de') return 'ch-de';
   if (path.startsWith('/en/') || path === '/en') return 'en';
+  if (path.startsWith('/pe/') || path === '/pe') return 'pe';
   return 'de';
 }
 
@@ -74,5 +78,6 @@ export function getHreflangAlternates(
 function getCurrentLocaleFromPath(path: string): Locale {
   if (path.startsWith('/ch-de/')) return 'ch-de';
   if (path.startsWith('/en/')) return 'en';
+  if (path.startsWith('/pe/')) return 'pe';
   return 'de';
 }
