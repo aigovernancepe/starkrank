@@ -152,6 +152,12 @@ const breadcrumbs = isAISO
       { label: localServiceTitle, href: locale === 'en' ? `/services/${serviceData.slug}/` : `${localePath}/` },
       { label: city.city, href: pageUrl },
     ]
+  : locale === 'pe'
+  ? [
+      { label: t('spoke.home', locale), href: homeHref },
+      { label: 'Servicios', href: '/pe/servicios/' },
+      { label: `${localServiceTitle} ${inWord} ${city.city}`, href: pageUrl },
+    ]
   : [
       { label: t('spoke.home', locale), href: homeHref },
       { label: `${localServiceTitle} ${inWord} ${city.city}`, href: pageUrl },

@@ -178,11 +178,15 @@ export function getLocalizedNavHref(href: string, locale: Locale): string {
   // _redirects 301s to /en/blog/.
   if (href === '/blog/') return locale === 'de' ? '/de/blog/' : `${prefix}/blog/`;
 
-// Pricing — DE + CH-DE only; hidden in EN nav via hiddenInLocales.
+// Pricing — DE + CH-DE keep the /preise/seo/ page; hidden in EN nav via
+  // hiddenInLocales. PE has no fixed-price page (consultative pricing) — point
+  // it at the Spanish pricing guide instead of leaking the German /preise/ URL.
   // Currently a single entry pointing at /preise/seo/; will restructure
   // to a dropdown when /preise/google-ads/ unparks.
   if (href === '/preise/seo/') {
-    return locale === 'ch-de' ? '/ch-de/preise/seo/' : '/preise/seo/';
+    if (locale === 'ch-de') return '/ch-de/preise/seo/';
+    if (locale === 'pe') return '/pe/blog/precios-seo-peru/';
+    return '/preise/seo/';
   }
 
   // Services hub — PE uses the Spanish slug /pe/servicios/ (the 5-Bausteine hub).
