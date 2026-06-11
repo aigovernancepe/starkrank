@@ -25,9 +25,9 @@ export const GET: APIRoute = async () => {
     map[`${SITE}${path}`] = iso(getGitLastModified(file));
   };
 
-  // Blog posts: /{de|ch-de|en}/blog/{id}/
+  // Blog posts: /{de|ch-de|en|pe}/blog/{id}/
   for (const post of await getCollection('blog')) {
-    const prefix = post.data.locale === 'de' ? '/de' : post.data.locale === 'ch-de' ? '/ch-de' : '/en';
+    const prefix = post.data.locale === 'de' ? '/de' : post.data.locale === 'ch-de' ? '/ch-de' : post.data.locale === 'pe' ? '/pe' : '/en';
     add(`${prefix}/blog/${post.id}/`, getEntryFilepath(post));
   }
 
@@ -54,13 +54,13 @@ export const GET: APIRoute = async () => {
     add(`${prefix}/agentur-${hub.data.citySlug}/`, getEntryFilepath(hub));
   }
 
-  // City spokes (de, ch-de): generated from cities × city.services, slug via getSpokePath.
+  // City spokes (de, ch-de, pe): generated from cities × city.services, slug via getSpokePath.
   // Date prefers the spoke entry; falls back to the city config that drives the page.
   const spokes = await getCollection('spokes');
   for (const city of await getCollection('cities')) {
     const loc = city.data.locale;
-    if (loc !== 'de' && loc !== 'ch-de') continue;
-    const prefix = loc === 'de' ? '' : '/ch-de';
+    if (loc !== 'de' && loc !== 'ch-de' && loc !== 'pe') continue;
+    const prefix = loc === 'de' ? '' : `/${loc}`;
     for (const serviceSlug of city.data.services) {
       const spokeSlug = getSpokePath(serviceSlug, city.data.citySlug, loc);
       const spoke = spokes.find(
