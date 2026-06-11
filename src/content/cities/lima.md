@@ -5,7 +5,6 @@ country: "Perú"
 locale: "pe"
 services:
   - "local-seo-consulting"
-  - "technical-web-design"
   - "google-ads-management"
 coordinates:
   lat: -12.0464

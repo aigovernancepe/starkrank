@@ -1,0 +1,243 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import Button from '../../components/ui/Button.astro';
+import CTABanner from '../../components/ui/CTABanner.astro';
+import { getSelfLastModified } from '../../utils/getLastModified';
+
+const title = 'Agencia de Marketing Digital en Lima | StarkRank Perú';
+const description = 'Agencia de marketing digital en Lima con foco en resultados medibles: SEO, publicidad y diseño web. Revisa tu visibilidad gratis en 24h.';
+
+const site = Astro.site?.origin ?? 'https://starkrank.com';
+const pageUrl = `${site}/pe/agencia-de-marketing-digital-lima/`;
+const effectiveDate = getSelfLastModified(import.meta.url, new Date('2026-06-11'));
+
+// FAQ mirrors the visible H2 capsules below (Schema-Content-Parität §5.5 —
+// every Question has its answer visible on the page).
+const faq = [
+  {
+    question: '¿Qué hace una agencia de marketing digital?',
+    answer: 'Reúne estrategia, ejecución y medición para hacer crecer un negocio en internet. En StarkRank trabajamos sobre cinco bloques (búsqueda e inteligencia artificial, medios de rendimiento, autoridad, contenido, y datos y web) y partimos de datos de búsqueda reales de Lima, no de paquetes cerrados.',
+  },
+  {
+    question: '¿Cuánto cobra una agencia de marketing digital en Lima?',
+    answer: 'No hay una tarifa única: el precio depende de tu sector, tu competencia y del estado actual de tu presencia digital. En lugar de un paquete cerrado, partimos de una propuesta a medida tras una conversación breve y sin compromiso. Como referencia del mercado, la mayoría de empresas en Lima invierten entre S/ 1,500 y S/ 5,000 al mes.',
+  },
+  {
+    question: '¿Cómo elegir una agencia de marketing digital?',
+    answer: 'Busca transparencia con los datos, KPIs medibles definidos antes de empezar, propiedad de tus cuentas sin lock-in, conocimiento del mercado limeño y acceso a tu reporte cada mes. No se trata de quién promete más, sino de quién muestra cómo llega a los resultados.',
+  },
+  {
+    question: '¿Cuánto tiempo tarda el marketing digital en mostrar resultados?',
+    answer: 'Un proceso serio sigue fases: el mes 1 es configuración y datos, los meses 2 y 3 traen las primeras señales, y entre el mes 4 y el 6 llega la tracción medible. Nadie puede garantizar el primer lugar en Google en 30 días.',
+  },
+  {
+    question: '¿Cómo se miden los resultados de marketing digital?',
+    answer: 'Con indicadores conectados a tu negocio: leads y consultas, posicionamiento orgánico, tráfico orgánico, visibilidad en respuestas con inteligencia artificial y ROAS de la publicidad. Todo se apoya en el análisis de datos para mostrar el retorno de tu inversión.',
+  },
+  {
+    question: '¿Con qué tipo de empresas trabaja StarkRank en Lima?',
+    answer: 'Con empresas que viven de ser encontradas por clientes nuevos: pymes limeñas, clínicas y consultorios, servicios profesionales, startups y negocios con varios locales. También acompañamos a empresas B2B y, puntualmente, proyectos de comercio electrónico con tracción.',
+  },
+  {
+    question: '¿Qué es el posicionamiento GEO y por qué importa para negocios en Lima?',
+    answer: 'El posicionamiento GEO busca que tu negocio aparezca dentro de las respuestas de la inteligencia artificial (ChatGPT, Perplexity y las vistas generales de Google), no solo en los enlaces azules. En Perú aún es un terreno nuevo, así que hoy es una ventaja temprana más que una necesidad urgente.',
+  },
+];
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${site}/#organization`,
+  name: 'StarkRank',
+  url: site,
+  logo: `${site}/SR-Logo-standard_high-res.png`,
+  areaServed: { '@type': 'City', name: 'Lima' },
+  knowsLanguage: ['es', 'en'],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Agencia de Marketing Digital en Lima',
+  serviceType: 'Marketing Digital',
+  description,
+  provider: { '@id': `${site}/#organization` },
+  areaServed: [
+    { '@type': 'City', name: 'Lima' },
+    { '@type': 'Country', name: 'Perú' },
+  ],
+  url: pageUrl,
+  mainEntityOfPage: pageUrl,
+  about: [
+    { '@type': 'Thing', name: 'Marketing digital' },
+    { '@type': 'Thing', name: 'Lima' },
+    { '@type': 'Thing', name: 'Perú' },
+  ],
+  mentions: [
+    { '@type': 'Thing', name: 'Google' },
+    { '@type': 'Thing', name: 'Inteligencia artificial' },
+    { '@type': 'Thing', name: 'Motor de búsqueda' },
+    { '@type': 'Thing', name: 'Posicionamiento en buscadores' },
+    { '@type': 'Thing', name: 'Mercadotecnia en motores de búsqueda' },
+    { '@type': 'Thing', name: 'Publicidad' },
+    { '@type': 'Thing', name: 'Análisis de datos' },
+    { '@type': 'Thing', name: 'Retorno de la inversión' },
+    { '@type': 'Thing', name: 'ChatGPT' },
+    { '@type': 'Thing', name: 'Perplexity' },
+  ],
+};
+
+// BreadcrumbList JSON-LD is emitted by the <Breadcrumbs> component from the
+// same items below — no manual node needed (avoids a duplicate BreadcrumbList).
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: pageUrl,
+  name: title,
+  dateModified: effectiveDate.toISOString(),
+};
+
+const schemas = [webPageSchema, orgSchema, serviceSchema, faqSchema];
+
+const breadcrumbs = [
+  { label: 'Inicio', href: '/pe/' },
+  { label: 'Servicios', href: '/pe/servicios/' },
+  { label: 'Agencia de Marketing Digital en Lima', href: '/pe/agencia-de-marketing-digital-lima/' },
+];
+
+// Other demand-validated Lima surfaces — internal linking mesh.
+const relatedServices = [
+  { title: 'Diseño de Páginas Web en Lima', description: 'Sitios rápidos, listos para Google y administrables.', href: '/pe/diseno-de-paginas-web-lima/' },
+  { title: 'Posicionamiento Web en Lima', description: 'Aparece en Google cuando tus clientes buscan tu servicio.', href: '/pe/posicionamiento-web-lima/' },
+  { title: 'Publicidad en Lima', description: 'Campañas en Google, Facebook e Instagram medidas por resultados.', href: '/pe/agencia-de-publicidad-lima/' },
+];
+---
+
+<BaseLayout title={title} description={description} locale="pe" schema={schemas}>
+  <Section bg="cream">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
+      Marketing Digital · Lima, Perú
+    </span>
+    <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
+      Agencia de Marketing Digital en Lima
+    </h1>
+    <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-2xl">
+      StarkRank es una agencia de marketing digital en Lima enfocada en una sola cosa: resultados que puedes medir. Ayudamos a empresas peruanas a aparecer en Google, atraer clientes y crecer con decisiones basadas en datos.
+    </p>
+
+    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+      <span>
+        Última actualización: <time datetime={effectiveDate.toISOString().split('T')[0]}>
+          {effectiveDate.toLocaleDateString('es-PE', { month: 'long', year: 'numeric' })}
+        </time>
+      </span>
+      <span>
+        Por <a href="/pe/" class="text-blue hover:text-blue-light font-semibold">Wilko Feye</a>, StarkRank
+      </span>
+    </div>
+
+    <div class="mt-8 prose prose-lg max-w-none font-body text-dark prose-numbered-cards prose-branded-bullets
+      [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:font-headline [&>h2]:font-black [&>h2]:text-navy [&>h2]:tracking-tight [&>h2]:mt-14 [&>h2]:mb-4 [&>h2]:pt-6 [&>h2]:border-t [&>h2]:border-gray-light/30
+      [&>p]:leading-relaxed [&>p]:text-gray [&>p]:mb-6
+      [&_strong]:text-dark
+      [&_a]:text-blue [&_a]:font-semibold [&_a:hover]:text-blue-light
+      first:[&>h2]:mt-0 first:[&>h2]:pt-0 first:[&>h2]:border-t-0
+      [&>ol]:space-y-4
+      [&>ol>li]:bg-white [&>ol>li]:border [&>ol>li]:border-gray-light/40 [&>ol>li]:rounded-lg [&>ol>li]:p-5 [&>ol>li]:text-gray [&>ol>li]:text-base [&>ol>li]:leading-relaxed
+      [&>ul]:space-y-3
+      [&>ul>li]:text-gray [&>ul>li]:text-base [&>ul>li]:leading-relaxed">
+
+      <h2>¿Qué hace una agencia de marketing digital?</h2>
+      <p>Una agencia de marketing digital reúne estrategia, ejecución y medición para hacer crecer un negocio en internet. En StarkRank trabajamos sobre cinco bloques (búsqueda e inteligencia artificial, medios de rendimiento, autoridad, contenido, y datos y web). No vendemos paquetes cerrados: partimos de datos de búsqueda reales de Lima y construimos solo lo que tu empresa necesita.</p>
+      <p>En la práctica, eso significa una estrategia de mercadotecnia conectada a tus objetivos: más consultas, más ventas y una marca más reconocible. Cada acción tiene un porqué medible detrás, no una corazonada.</p>
+
+      <h2>¿Cuánto cobra una agencia de marketing digital en Lima?</h2>
+      <p>No publicamos una tarifa única porque el marketing digital no es un solo producto: el precio depende de tu sector, tu competencia y del estado actual de tu presencia digital. En lugar de un paquete cerrado, partimos de una propuesta de valor a medida tras una conversación breve y sin compromiso sobre tus objetivos.</p>
+      <p>Como referencia del mercado (no como tarifa de StarkRank), la mayoría de empresas en Lima invierten entre S/ 1,500 y S/ 5,000 al mes en marketing digital; la inversión real depende del alcance. Explicamos cómo se forma cada nivel en nuestra <a href="/pe/blog/precios-seo-peru/">guía de precios de SEO en Perú</a>.</p>
+
+      <h2>¿Cómo elegir una agencia de marketing digital?</h2>
+      <p>No se trata de quién promete más, sino de quién puede mostrar cómo llega a los resultados. Antes de firmar, revisa estos criterios:</p>
+      <ul>
+        <li><strong>Transparencia con los datos:</strong> que te muestren de dónde salen las decisiones, no solo reportes vistosos.</li>
+        <li><strong>KPIs medibles:</strong> que definan qué se va a medir (leads, llamadas, rankings) antes de empezar.</li>
+        <li><strong>Sin lock-in:</strong> que seas dueño de tus cuentas de Google (Search Console, Analytics, Google Ads) y de tu dominio, y puedas irte cuando quieras.</li>
+        <li><strong>Conocimiento del mercado limeño:</strong> que entiendan cómo busca tu cliente en Lima, sin plantillas genéricas.</li>
+        <li><strong>Acceso a tu reporte:</strong> que tengas visibilidad de lo que se hace cada mes, sin cajas negras.</li>
+      </ul>
+
+      <h2>¿Cuánto tiempo tarda el marketing digital en mostrar resultados?</h2>
+      <p>Depende del punto de partida y de la competencia, pero un proceso serio sigue fases claras. Nadie puede garantizar el primer lugar en Google en 30 días; quien lo promete, miente o arriesga tu sitio.</p>
+      <ol>
+        <li><strong>Mes 1 — Configuración y datos:</strong> auditoría inicial, acceso a herramientas, línea base y plan de trabajo.</li>
+        <li><strong>Meses 2 y 3 — Primeras señales:</strong> mejoras técnicas publicadas, contenido inicial y primeros movimientos en posiciones.</li>
+        <li><strong>Meses 4 a 6 — Tracción:</strong> crecimiento medible en tráfico orgánico, consultas y visibilidad.</li>
+      </ol>
+
+      <h2>¿Cómo se miden los resultados de marketing digital?</h2>
+      <p>Medir es la diferencia entre invertir y apostar. Estos son los indicadores que seguimos, conectados a tu negocio y no a métricas de vanidad:</p>
+      <ul>
+        <li><strong>Leads y consultas:</strong> llamadas, formularios y mensajes que llegan de verdad.</li>
+        <li><strong>Rankings orgánicos:</strong> en qué posición apareces para las búsquedas que importan.</li>
+        <li><strong>Tráfico orgánico:</strong> cuántas personas llegan desde Google sin pagar por cada clic.</li>
+        <li><strong>Visibilidad en respuestas con inteligencia artificial:</strong> si te citan ChatGPT, Perplexity o las vistas generales de Google.</li>
+        <li><strong>ROAS de la publicidad:</strong> cuánto retorna cada sol invertido en anuncios.</li>
+      </ul>
+      <p>Todo se apoya en el análisis de datos: conectamos Google Analytics y, cuando aplica, tu CRM, para que cada dato cuente una historia clara sobre el retorno de tu inversión (ROI).</p>
+
+      <h2>¿Con qué tipo de empresas trabaja StarkRank en Lima?</h2>
+      <p>Trabajamos con empresas que viven de ser encontradas por clientes nuevos. En Lima, eso suele significar:</p>
+      <ul>
+        <li>Pymes limeñas que pasan del boca a boca a la búsqueda digital.</li>
+        <li>Clínicas y consultorios que necesitan agenda llena y confianza en línea.</li>
+        <li>Servicios profesionales (estudios, consultoras, despachos) con ciclos de venta largos.</li>
+        <li>Startups que necesitan tracción medible para crecer o levantar capital.</li>
+        <li>Negocios con varios locales que compiten por la búsqueda local en cada distrito.</li>
+      </ul>
+      <p>También acompañamos a empresas B2B y, puntualmente, a proyectos de comercio electrónico que ya tienen tracción.</p>
+
+      <h2>¿Qué es el posicionamiento GEO y por qué importa para negocios en Lima?</h2>
+      <p>Se trata de la optimización para los motores generativos: busca que tu negocio aparezca dentro de las respuestas de la inteligencia artificial (ChatGPT, Perplexity y las vistas generales de Google), y no solo en los enlaces azules. En Perú aún es un terreno nuevo, así que hoy es una ventaja temprana más que una necesidad urgente.</p>
+      <p>Aparecer en un motor de búsqueda tradicional sigue siendo lo esencial: el posicionamiento en buscadores y la mercadotecnia en motores de búsqueda (SEM) son la base. La búsqueda con inteligencia artificial es el siguiente paso, y lo preparamos hoy para que no te tome por sorpresa mañana.</p>
+
+      <p>El marketing digital funciona cuando los bloques trabajan juntos: una <a href="/pe/diseno-de-paginas-web-lima/">página web rápida y lista para Google</a>, <a href="/pe/posicionamiento-web-lima/">posicionamiento web</a> que atrae demanda y <a href="/pe/agencia-de-publicidad-lima/">publicidad en Lima</a> que acelera los resultados. Empieza por saber dónde estás hoy.</p>
+    </div>
+
+    <div class="mt-12 flex flex-wrap gap-4">
+      <Button href="/pe/apareces-en-google/" variant="primary" size="lg">Revisa Gratis &rarr;</Button>
+      <Button href="/pe/contacto/" variant="secondary" size="lg">Conversemos</Button>
+    </div>
+  </Section>
+
+  <Section bg="white">
+    <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Servicios en Lima</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {relatedServices.map((s) => (
+        <a href={s.href} class="group block bg-white border border-gray-light/40 rounded-lg p-6 transition-all hover:shadow-lg hover:border-blue/30 hover:-translate-y-0.5">
+          <h3 class="text-base font-headline font-black text-navy group-hover:text-blue transition-colors leading-snug">{s.title}</h3>
+          <p class="mt-2 text-sm font-body text-gray leading-relaxed">{s.description}</p>
+          <span class="mt-3 inline-block text-xs font-label font-semibold uppercase tracking-wide text-blue">Ver más &rarr;</span>
+        </a>
+      ))}
+    </div>
+  </Section>
+
+  <CTABanner bg="navy" title="¿Tu negocio aparece en Google?" subtitle="Descúbrelo gratis en 2 minutos. Te enviamos el resultado por WhatsApp en 24 horas.">
+    <Button href="/pe/apareces-en-google/" variant="primary" size="lg">Revisa Gratis &rarr;</Button>
+    <Button href="/pe/contacto/" variant="secondary" size="lg">Contacto</Button>
+  </CTABanner>
+</BaseLayout>
