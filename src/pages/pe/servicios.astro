@@ -5,6 +5,7 @@ import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import Button from '../../components/ui/Button.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
+import BuildingGraphicStatic from '../../components/ui/BuildingGraphicStatic.astro';
 import { getLocalizedPillars } from '../../data/pillars';
 
 const pillars = getLocalizedPillars('pe');
@@ -50,6 +51,7 @@ const breadcrumbSchema = {
       subtitle="Cuatro bloques del marketing digital se apoyan sobre el fundamento de Datos y Web."
       align="center"
     />
+    <BuildingGraphicStatic locale="pe" linked />
   </Section>
 
   {pillars.map((pillar, idx) => (

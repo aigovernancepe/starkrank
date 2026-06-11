@@ -35,14 +35,18 @@ interface PanelItem {
 interface Props {
   /** When true, each block links to its pillar section and gains hover/scroll behaviour. */
   linked?: boolean;
-  /** Locale — switches the two language-dependent labels and a11y strings. Default 'de'. */
-  locale?: 'de' | 'ch-de' | 'en';
+  /** Locale — switches the language-dependent labels and a11y strings. Default 'de'. */
+  locale?: 'de' | 'ch-de' | 'en' | 'pe';
   /** When provided (and not `linked`), mobile blocks toggle an info box per pillar. */
   panels?: PanelItem[];
 }
 
 const { linked = false, locale = 'de', panels } = Astro.props;
 const isEn = locale === 'en';
+const isPe = locale === 'pe';
+// One uniform mobile label size per locale. PE drops to 22px so the longest Spanish
+// word ("Rendimiento") fits the narrow mobile blocks; every PE label uses the same size.
+const mobileFontSize = isPe ? '22' : '30';
 
 // Mobile accordion: only when panels are passed and we're not in linked mode.
 const accordion = !linked && Array.isArray(panels) && panels.length > 0;
@@ -52,35 +56,90 @@ const panelCta = t('cta.learnMore', locale);
 // accordion turns the <g> into a button via role/tabindex attrs, not a tag swap).
 const Wrapper = linked ? 'a' : 'g';
 
-// Only "Suche & KI" / "Daten & Web" differ by language; rest are identical EN/DE.
-const labels = {
-  searchAi: isEn ? ['Search', '& AI'] : ['Suche', '& KI'],
-  dataWeb: isEn ? 'Data & Web' : 'Daten & Web',
+// Per-locale block labels. EN/DE only differ on Suche & KI / Daten & Web (the design-
+// delivered original). Spanish (pe) translates every label; "Performance Media" becomes
+// "Medios de Rendimiento" and "Digital PR" → "Autoridad y PR". `digitalPrDesktop` is one
+// line for de/ch-de/en and two for the longer Spanish wording; mobile is always two lines.
+const labelSets: Record<string, {
+  searchAi: string[];
+  performance: string[];
+  digitalPrDesktop: string[];
+  digitalPrMobile: string[];
+  content: string;
+  dataWeb: string;
+}> = {
+  de: {
+    searchAi: ['Suche', '& KI'],
+    performance: ['Performance', 'Media'],
+    digitalPrDesktop: ['Digital PR'],
+    digitalPrMobile: ['Digital', 'PR'],
+    content: 'Content',
+    dataWeb: 'Daten & Web',
+  },
+  'ch-de': {
+    searchAi: ['Suche', '& KI'],
+    performance: ['Performance', 'Media'],
+    digitalPrDesktop: ['Digital PR'],
+    digitalPrMobile: ['Digital', 'PR'],
+    content: 'Content',
+    dataWeb: 'Daten & Web',
+  },
+  en: {
+    searchAi: ['Search', '& AI'],
+    performance: ['Performance', 'Media'],
+    digitalPrDesktop: ['Digital PR'],
+    digitalPrMobile: ['Digital', 'PR'],
+    content: 'Content',
+    dataWeb: 'Data & Web',
+  },
+  pe: {
+    searchAi: ['Búsqueda', 'e IA'],
+    performance: ['Medios de', 'Rendimiento'],
+    digitalPrDesktop: ['Autoridad', 'y PR'],
+    digitalPrMobile: ['Autoridad', 'y PR'],
+    content: 'Contenido',
+    dataWeb: 'Datos y Web',
+  },
 };
+const L = labelSets[locale] ?? labelSets.de;
 
-const a11y = isEn
-  ? {
-      title: 'Five Building Blocks of Digital Growth',
-      desc: 'Four building blocks of digital marketing — Search & AI, Performance Media, Digital PR and Content — rest on the fifth block: Data & Web.',
-      blockAria: {
-        'search-ai-intelligence': 'Jump to the Search & AI services',
-        'performance-media': 'Jump to the Performance Media services',
-        'authority-pr': 'Jump to the Digital PR services',
-        'content-copywriting': 'Jump to the Content services',
-        'data-web': 'Jump to the Data & Web services',
-      } as Record<string, string>,
-    }
-  : {
-      title: 'Fünf Bausteine des digitalen Wachstums',
-      desc: 'Vier Bausteine des digitalen Marketings — Suche & KI, Performance Media, Digital PR und Content — stehen auf dem fünften Baustein: Daten & Web.',
-      blockAria: {
-        'search-ai-intelligence': 'Zum Leistungsbereich Suche & KI scrollen',
-        'performance-media': 'Zum Leistungsbereich Performance Media scrollen',
-        'authority-pr': 'Zum Leistungsbereich Digital PR scrollen',
-        'content-copywriting': 'Zum Leistungsbereich Content scrollen',
-        'data-web': 'Zum Leistungsbereich Daten & Web scrollen',
-      } as Record<string, string>,
-    };
+const a11ySets: Record<string, { title: string; desc: string; blockAria: Record<string, string> }> = {
+  en: {
+    title: 'Five Building Blocks of Digital Growth',
+    desc: 'Four building blocks of digital marketing — Search & AI, Performance Media, Digital PR and Content — rest on the fifth block: Data & Web.',
+    blockAria: {
+      'search-ai-intelligence': 'Jump to the Search & AI services',
+      'performance-media': 'Jump to the Performance Media services',
+      'authority-pr': 'Jump to the Digital PR services',
+      'content-copywriting': 'Jump to the Content services',
+      'data-web': 'Jump to the Data & Web services',
+    },
+  },
+  de: {
+    title: 'Fünf Bausteine des digitalen Wachstums',
+    desc: 'Vier Bausteine des digitalen Marketings — Suche & KI, Performance Media, Digital PR und Content — stehen auf dem fünften Baustein: Daten & Web.',
+    blockAria: {
+      'search-ai-intelligence': 'Zum Leistungsbereich Suche & KI scrollen',
+      'performance-media': 'Zum Leistungsbereich Performance Media scrollen',
+      'authority-pr': 'Zum Leistungsbereich Digital PR scrollen',
+      'content-copywriting': 'Zum Leistungsbereich Content scrollen',
+      'data-web': 'Zum Leistungsbereich Daten & Web scrollen',
+    },
+  },
+  pe: {
+    title: 'Cinco bloques del crecimiento digital',
+    desc: 'Cuatro bloques del marketing digital — Búsqueda e IA, Medios de Rendimiento, Autoridad y PR y Contenido — se apoyan sobre el quinto bloque: Datos y Web.',
+    blockAria: {
+      'search-ai-intelligence': 'Ir a los servicios de Búsqueda e IA',
+      'performance-media': 'Ir a los servicios de Medios de Rendimiento',
+      'authority-pr': 'Ir a los servicios de Autoridad y PR',
+      'content-copywriting': 'Ir a los servicios de Contenido',
+      'data-web': 'Ir a los servicios de Datos y Web',
+    },
+  },
+};
+// ch-de shares the German strings.
+const a11y = a11ySets[locale] ?? a11ySets.de;
 
 const blockAria = a11y.blockAria;
 const panelById: Record<string, PanelItem> = accordion
@@ -148,19 +207,19 @@ function mobileAttrs(id: string) {
   <Wrapper {...desktopAttrs('search-ai-intelligence')}>
     <g>
       <polygon class="cls-6" points="74.14 15.12 15.51 73.74 15.51 349.32 186.29 349.32 186.29 15.12 74.14 15.12"/>
-      <text class="cls-10" text-anchor="middle"><tspan x="100.9" y="185.84">{labels.searchAi[0]}</tspan><tspan x="100.9" y="218.91">{labels.searchAi[1]}</tspan></text>
+      <text class="cls-10" text-anchor="middle"><tspan x="100.9" y="185.84">{L.searchAi[0]}</tspan><tspan x="100.9" y="218.91">{L.searchAi[1]}</tspan></text>
     </g>
   </Wrapper>
   <Wrapper {...desktopAttrs('performance-media')}>
     <g>
       <polygon class="cls-6" points="273.65 15.12 215.02 73.74 215.02 349.32 385.8 349.32 385.8 15.12 273.65 15.12"/>
-      <text class="cls-10" text-anchor="middle"><tspan x="300.41" y="186.78">Performance</tspan><tspan x="300.41" y="219.85">Media</tspan></text>
+      <text class="cls-10" text-anchor="middle"><tspan x="300.41" y="186.78">{L.performance[0]}</tspan><tspan x="300.41" y="219.85">{L.performance[1]}</tspan></text>
     </g>
   </Wrapper>
   <Wrapper {...desktopAttrs('authority-pr')}>
     <g>
       <polygon class="cls-6" points="472.94 15.12 414.31 73.74 414.31 349.32 585.09 349.32 585.09 15.12 472.94 15.12"/>
-      <text class="cls-10" text-anchor="middle"><tspan x="499.7" y="204.43">Digital PR</tspan></text>
+      <text class="cls-10" text-anchor="middle">{L.digitalPrDesktop.length === 1 ? (<tspan x="499.7" y="204.43">{L.digitalPrDesktop[0]}</tspan>) : (<Fragment><tspan x="499.7" y="186.78">{L.digitalPrDesktop[0]}</tspan><tspan x="499.7" y="219.85">{L.digitalPrDesktop[1]}</tspan></Fragment>)}</text>
     </g>
   </Wrapper>
   <Wrapper {...desktopAttrs('content-copywriting')}>
@@ -168,12 +227,12 @@ function mobileAttrs(id: string) {
       <polygon class="cls-6" points="698.93 264.16 719.19 284.42 654.29 349.32 671.73 349.32 727.99 293.06 784.42 349.32 784.49 349.32 784.49 15.12 672.34 15.12 613.71 73.74 613.71 349.32 613.77 349.32 698.93 264.16"/>
       <polygon class="cls-6" points="746.72 349.32 729.15 331.91 711.75 349.32 746.72 349.32"/>
     </g>
-    <text class="cls-10" text-anchor="middle"><tspan x="699.1" y="202.61">Content</tspan></text>
+    <text class="cls-10" text-anchor="middle"><tspan x="699.1" y="202.61">{L.content}</tspan></text>
   </Wrapper>
   <Wrapper {...desktopAttrs('data-web')}>
     <g>
       <polygon class="cls-1" points="702.16 358.9 671.53 389.54 671.53 358.9 15.51 358.88 15.51 414.86 784.19 414.88 784.19 358.91 702.16 358.9"/>
-      <text class="cls-10" text-anchor="middle"><tspan x="399.85" y="397.19">{labels.dataWeb}</tspan></text>
+      <text class="cls-10" text-anchor="middle"><tspan x="399.85" y="397.19">{L.dataWeb}</tspan></text>
     </g>
   </Wrapper>
 </svg>
@@ -212,12 +271,15 @@ function mobileAttrs(id: string) {
   <Wrapper {...mobileAttrs('search-ai-intelligence')}>
     <g>
       <polygon class="cls-6" points="58.85 .29 .35 58.79 .35 333.77 141.75 333.77 141.75 .29 58.85 .29"/>
-      <text class="cls-tm" fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="71.05" y="172.64">{labels.searchAi[0]}</tspan><tspan x="71.05" y="206.91">{labels.searchAi[1]}</tspan></text>
+      <text class="cls-tm" fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size={mobileFontSize} font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="71.05" y="172.64">{L.searchAi[0]}</tspan><tspan x="71.05" y="206.91">{L.searchAi[1]}</tspan></text>
     </g>
   </Wrapper>
   <Wrapper {...mobileAttrs('performance-media')}>
     <g>
       <polygon class="cls-6" points="212.06 .29 153.57 58.79 153.57 333.77 294.97 333.77 294.97 .29 212.06 .29"/>
+      {isPe ? (
+        <text fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size={mobileFontSize} font-weight="700" letter-spacing="-0.4" text-anchor="middle"><tspan x="224.27" y="172">{L.performance[0]}</tspan><tspan x="224.27" y="202">{L.performance[1]}</tspan></text>
+      ) : (
       <g fill="#fff">
         <path class="cls-pf" d="M177.11,153.76v-22h8.61c1.66,0,3.09.31,4.27.94s2.08,1.49,2.71,2.6c.62,1.11.94,2.39.94,3.85s-.32,2.74-.95,3.84c-.63,1.1-1.55,1.96-2.74,2.58s-2.63.93-4.31.93h-5.65v-3.68h5.05c.89,0,1.63-.16,2.22-.47.6-.31,1.04-.74,1.34-1.29.29-.55.44-1.19.44-1.92s-.15-1.38-.44-1.92c-.3-.54-.74-.96-1.34-1.27-.6-.3-1.34-.46-2.24-.46h-3.38v18.26h-4.52Z"/>
         <path class="cls-pf" d="M202.75,154.09c-1.66,0-3.1-.34-4.3-1.03s-2.14-1.66-2.79-2.92c-.65-1.26-.98-2.74-.98-4.44s.32-3.16.97-4.42,1.56-2.25,2.75-2.97c1.18-.71,2.56-1.07,4.15-1.07,1.09,0,2.11.18,3.04.53.94.35,1.75.88,2.46,1.57.71.69,1.25,1.56,1.64,2.6.39,1.04.58,2.24.58,3.59v1.23h-13.83v-2.78h11.69l-2.05.72c0-.85-.13-1.58-.4-2.2-.27-.62-.66-1.1-1.17-1.44-.52-.34-1.15-.51-1.91-.51s-1.4.17-1.93.52c-.53.34-.94.82-1.22,1.42-.28.6-.42,1.29-.42,2.07v1.95c0,.92.16,1.69.47,2.33s.76,1.12,1.34,1.45,1.25.49,2.02.49c.52,0,1-.08,1.42-.23.43-.15.79-.37,1.09-.66.3-.29.53-.65.69-1.07l4,.58c-.26.94-.72,1.77-1.38,2.47s-1.5,1.25-2.5,1.64c-1,.39-2.14.58-3.42.58Z"/>
@@ -237,12 +299,13 @@ function mobileAttrs(id: string) {
         <path class="cls-pf" d="M249.14,203.88c-.68,0-1.26-.22-1.73-.66-.48-.44-.72-.98-.72-1.62s.24-1.18.72-1.62c.48-.44,1.05-.66,1.73-.66s1.25.22,1.73.66c.47.44.71.98.71,1.62s-.24,1.18-.71,1.62c-.47.44-1.05.66-1.73.66ZM246.94,222.29v-16.3h4.4v16.3h-4.4Z"/>
         <path class="cls-pf" d="M259.61,222.6c-1.04,0-1.98-.18-2.8-.55-.83-.36-1.48-.91-1.95-1.63-.47-.72-.71-1.62-.71-2.69,0-.92.17-1.68.5-2.29.33-.61.79-1.1,1.37-1.48.58-.37,1.24-.66,1.99-.85s1.52-.33,2.34-.41c.95-.1,1.72-.19,2.3-.27s1-.21,1.27-.39.4-.44.4-.8v-.07c0-.45-.1-.84-.3-1.16-.2-.32-.49-.57-.88-.74-.38-.17-.85-.26-1.4-.26s-1.05.09-1.47.26c-.42.17-.76.4-1.02.69-.26.29-.45.62-.55.98l-4.06-.52c.23-.98.66-1.83,1.3-2.52.64-.7,1.46-1.23,2.45-1.6s2.13-.55,3.4-.55c.92,0,1.8.11,2.64.32.83.22,1.57.55,2.22,1,.65.45,1.16,1.03,1.53,1.72s.55,1.52.55,2.49v11h-4.21v-2.27h-.13c-.27.51-.62.96-1.06,1.35-.44.39-.96.69-1.57.91s-1.32.32-2.14.32ZM260.85,219.52c.7,0,1.31-.14,1.83-.41.52-.28.93-.64,1.23-1.11.29-.46.44-.98.44-1.56v-1.73c-.14.08-.33.16-.58.24s-.53.15-.84.21c-.31.06-.63.11-.95.16-.32.05-.61.09-.88.13-.53.08-1,.2-1.42.38-.41.17-.73.4-.96.69-.23.29-.34.65-.34,1.09s.11.76.32,1.05c.21.29.5.5.87.65.37.15.79.22,1.28.22Z"/>
       </g>
+      )}
     </g>
   </Wrapper>
   <Wrapper {...mobileAttrs('authority-pr')}>
     <g>
       <polygon class="cls-6" points="364.62 .29 306.13 58.79 306.13 333.77 447.53 333.77 447.53 .29 364.62 .29"/>
-      <text class="cls-tm" fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="376.83" y="172.95">Digital</tspan><tspan x="376.83" y="207.22">PR</tspan></text>
+      <text class="cls-tm" fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size={mobileFontSize} font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="376.83" y="172.95">{L.digitalPrMobile[0]}</tspan><tspan x="376.83" y="207.22">{L.digitalPrMobile[1]}</tspan></text>
     </g>
   </Wrapper>
   <Wrapper {...mobileAttrs('content-copywriting')}>
@@ -250,12 +313,12 @@ function mobileAttrs(id: string) {
       <polygon class="cls-6" points="599.78 .18 516.88 .18 458.38 58.68 458.38 256.25 458.39 256.25 458.39 333.98 458.86 333.98 528.93 261.91 545.6 278.58 492.2 333.98 506.55 333.98 552.84 285.69 599.28 333.98 599.83 333.98 599.83 256.25 599.78 256.25 599.78 .18"/>
       <polygon class="cls-6" points="539.48 333.98 568.26 333.98 553.8 319.66 539.48 333.98"/>
     </g>
-    <text class="cls-tm" fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="529.1" y="185.95">Content</tspan></text>
+    <text class="cls-tm" fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size={mobileFontSize} font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="529.1" y="185.95">{L.content}</tspan></text>
   </Wrapper>
   <Wrapper {...mobileAttrs('data-web')}>
     <g>
       <polygon class="cls-1" points="530.34 344.83 506.42 370.04 506.42 344.83 .26 344.81 .26 420.05 599.83 420.07 599.83 344.83 530.34 344.83"/>
-      <text class="cls-tm" fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="300.05" y="393.61">{labels.dataWeb}</tspan></text>
+      <text class="cls-tm" fill="#fff" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size={mobileFontSize} font-weight="700" letter-spacing="-0.6" text-anchor="middle"><tspan x="300.05" y="393.61">{L.dataWeb}</tspan></text>
     </g>
   </Wrapper>
 </svg>
