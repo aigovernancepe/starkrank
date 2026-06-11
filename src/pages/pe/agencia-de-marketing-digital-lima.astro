@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Section from '../../components/ui/Section.astro';
+import HeroSection from '../../components/ui/HeroSection.astro';
 import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
 import Button from '../../components/ui/Button.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
@@ -126,21 +127,36 @@ const relatedServices = [
 ];
 ---
 
-<BaseLayout title={title} description={description} locale="pe" schema={schemas}>
+<BaseLayout title={title} description={description} locale="pe" schema={schemas} preloadImage="/images/cities/lima.webp">
+  <HeroSection
+    eyebrow="Marketing Digital · Lima, Perú"
+    headline="Agencia de Marketing Digital en **Lima**"
+    subheadline="StarkRank es una agencia de marketing digital en Lima enfocada en una sola cosa: resultados que puedes medir. Ayudamos a empresas peruanas a aparecer en Google, atraer clientes y crecer con decisiones basadas en datos."
+    align="left"
+    backgroundImage="/images/cities/lima.webp"
+    backgroundImageAlt="Vista panorámica de Lima, Perú"
+  >
+    <Button href="/pe/apareces-en-google/" variant="primary" size="lg">Revisa Gratis &rarr;</Button>
+    <Button href="/pe/contacto/" variant="secondary" size="lg">Conversemos</Button>
+  </HeroSection>
+
+  {/* PE CTA banner — kostenloser Google-Sichtbarkeits-Check (wie Spoke-Seiten) */}
+  <div class="bg-blue text-white">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-4">
+      <span class="text-sm font-body font-semibold">¿Tu negocio aparece en Google? Revísalo gratis &rarr;</span>
+      <a
+        href="/pe/apareces-en-google/"
+        class="text-xs font-label font-semibold uppercase tracking-wide bg-white text-blue hover:bg-cream rounded-md px-4 py-2 transition-colors"
+      >
+        Revisa Gratis
+      </a>
+    </div>
+  </div>
+
   <Section bg="cream">
     <Breadcrumbs items={breadcrumbs} />
 
-    <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue mb-3 block">
-      Marketing Digital · Lima, Perú
-    </span>
-    <h1 class="text-4xl md:text-5xl font-headline font-black tracking-tight text-navy">
-      Agencia de Marketing Digital en Lima
-    </h1>
-    <p class="mt-4 text-lg text-gray font-body leading-relaxed max-w-2xl">
-      StarkRank es una agencia de marketing digital en Lima enfocada en una sola cosa: resultados que puedes medir. Ayudamos a empresas peruanas a aparecer en Google, atraer clientes y crecer con decisiones basadas en datos.
-    </p>
-
-    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-body text-gray">
       <span>
         Última actualización: <time datetime={effectiveDate.toISOString().split('T')[0]}>
           {effectiveDate.toLocaleDateString('es-PE', { month: 'long', year: 'numeric' })}
@@ -215,11 +231,6 @@ const relatedServices = [
       <p>Aparecer en un motor de búsqueda tradicional sigue siendo lo esencial: el posicionamiento en buscadores y la mercadotecnia en motores de búsqueda (SEM) son la base. La búsqueda con inteligencia artificial es el siguiente paso, y lo preparamos hoy para que no te tome por sorpresa mañana.</p>
 
       <p>El marketing digital funciona cuando los bloques trabajan juntos: una <a href="/pe/diseno-de-paginas-web-lima/">página web rápida y lista para Google</a>, <a href="/pe/posicionamiento-web-lima/">posicionamiento web</a> que atrae demanda y <a href="/pe/agencia-de-publicidad-lima/">publicidad en Lima</a> que acelera los resultados. Empieza por saber dónde estás hoy.</p>
-    </div>
-
-    <div class="mt-12 flex flex-wrap gap-4">
-      <Button href="/pe/apareces-en-google/" variant="primary" size="lg">Revisa Gratis &rarr;</Button>
-      <Button href="/pe/contacto/" variant="outline" size="lg">Conversemos</Button>
     </div>
   </Section>
 
