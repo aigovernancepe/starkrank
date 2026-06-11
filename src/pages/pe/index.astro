@@ -4,7 +4,9 @@ import HeroSection from '../../components/ui/HeroSection.astro';
 import Section from '../../components/ui/Section.astro';
 import SectionHeader from '../../components/ui/SectionHeader.astro';
 import Button from '../../components/ui/Button.astro';
-import CTABanner from '../../components/ui/CTABanner.astro';
+import BuildingGraphicStatic from '../../components/ui/BuildingGraphicStatic.astro';
+import CTASplit from '../../components/ui/CTASplit.astro';
+import { getLocalizedPillars } from '../../data/pillars';
 
 // The /pe/ home is the Lima hub / brand overview. The exact head term
 // "agencia de marketing digital en lima" is targeted by its own deep page
@@ -34,6 +36,68 @@ const services = [
   },
 ];
 
+// Five-block graphic. Desktop = decorative; mobile = tap-to-expand accordion.
+// Panels link into the matching pillar section on /pe/servicios/.
+const pillars = getLocalizedPillars('pe');
+const buildingPanels = pillars.map((p) => ({
+  id: p.id,
+  name: p.name,
+  tagline: p.tagline,
+  description: p.description,
+  href: `/pe/servicios/#${p.id}`,
+}));
+
+// Iterative process — same four-step cycle as the DACH homes, in Spanish.
+const processSteps = [
+  {
+    num: '01',
+    title: 'Análisis',
+    body: 'Revisamos tu presencia en Google y en respuestas de inteligencia artificial, mapeamos palabras clave y te comparamos con tu competencia en Lima. ¿Dónde estás hoy y qué te está frenando?',
+  },
+  {
+    num: '02',
+    title: 'Estrategia',
+    body: 'Una hoja de ruta priorizada con metas medibles, presupuesto y plazos. ¿Qué acciones mueven la aguja de tu negocio en los próximos 90 días?',
+  },
+  {
+    num: '03',
+    title: 'Ejecución',
+    body: 'SEO, Google Ads, contenido y diseño web — de forma continua o por proyecto. Sin caja negra: cada acción con un porqué claro que puedes seguir.',
+  },
+  {
+    num: '04',
+    title: 'Medición y ajuste',
+    body: 'Datos cada mes y revisión trimestral. Lo que funciona se escala; lo que no, se descarta. Volvemos al paso 01 con información nueva.',
+  },
+];
+
+const faqs = [
+  {
+    q: '¿Qué hace StarkRank exactamente?',
+    a: 'Ayudamos a empresas en Lima a crecer con marketing digital medible: posicionamiento en Google (SEO), diseño de páginas web rápidas y publicidad en Google, Facebook e Instagram. Trabajamos sobre cinco bloques de crecimiento y partimos siempre de datos reales de búsqueda de Lima, no de paquetes cerrados.',
+  },
+  {
+    q: '¿Cuánto cuesta trabajar con StarkRank?',
+    a: 'Depende de tu negocio y tus objetivos, pero somos transparentes: publicamos los rangos reales de inversión en SEO para el Perú en nuestra guía de precios — entre S/ 800 y S/ 5,000 al mes según el alcance. Antes de cualquier propuesta sabrás qué incluye cada rango y dónde está tu punto de equilibrio.',
+  },
+  {
+    q: '¿En cuánto tiempo veré resultados en Google?',
+    a: 'El SEO es una inversión a mediano plazo. Las campañas de publicidad pueden traer clientes en días; el posicionamiento orgánico suele mostrar avances claros entre el mes 3 y el 6, y el retorno se nota con más fuerza hacia el mes 6 al 9. Te entregamos datos cada mes para que veas el avance — no promesas.',
+  },
+  {
+    q: '¿Qué es la revisión gratis?',
+    a: 'Es una primera evaluación sin costo: revisamos qué tan visible está hoy tu negocio en Google y en respuestas de inteligencia artificial, y dónde está tu mayor potencial. Te enviamos el resultado por WhatsApp en 24 horas. No reemplaza una auditoría completa — ese es el análisis pagado y profundo — pero te ayuda a decidir si vale la pena conversar.',
+  },
+  {
+    q: '¿Para qué tipo de negocios en Lima trabajan?',
+    a: 'Para pequeñas y medianas empresas de Lima que quieren usar la búsqueda como un canal real de crecimiento — no para reportes de rankings sin impacto. Trabajamos especialmente bien con negocios de servicios y comercios que dependen de que sus clientes los encuentren en Google.',
+  },
+  {
+    q: '¿Trabajan con contrato fijo o de forma mensual?',
+    a: 'Ambas opciones — trabajo mensual continuo o un proyecto puntual con alcance definido. Para el trabajo mensual recomendamos al menos seis meses, porque los efectos del SEO necesitan tiempo para reflejarse en Google. Muchos clientes empiezan con una auditoría como punto de partida y luego continúan mes a mes.',
+  },
+];
+
 const site = Astro.site?.origin ?? 'https://starkrank.com';
 const orgSchema = {
   '@context': 'https://schema.org',
@@ -45,15 +109,41 @@ const orgSchema = {
   areaServed: { '@type': 'City', name: 'Lima' },
   knowsLanguage: ['es', 'en'],
 };
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+// HowTo process node — machine-readable process/entity signal for AI answer
+// engines (Google retired HowTo rich results in 2023), mirrors the DE home.
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  '@id': `${site}/pe/#proceso`,
+  name: 'Cómo trabaja StarkRank — el proceso de marketing iterativo',
+  step: processSteps.map((s) => ({
+    '@type': 'HowToStep',
+    position: Number(s.num),
+    name: s.title,
+    text: s.body,
+  })),
+};
 ---
 
 <BaseLayout
   title="StarkRank Perú | Marketing Digital Medible en Lima"
   description="Marketing digital medible en Lima: posicionamiento web, diseño de páginas web y publicidad en Google, Facebook e Instagram. Revisa gratis tu presencia en Google."
   locale="pe"
-  schema={[orgSchema]}
+  schema={[orgSchema, faqSchema, howToSchema]}
 >
   <HeroSection
+    eyebrow="Fuerte en búsqueda. Fuerte en datos. Fuerte en crecimiento."
     headline="Crecimiento digital medible para empresas en **Lima**"
     subheadline="Ayudamos a empresas en Lima a aparecer en Google, atraer clientes y crecer con datos. Posicionamiento web, diseño de páginas web y publicidad digital, todo medible."
   >
@@ -86,24 +176,115 @@ const orgSchema = {
     </div>
   </Section>
 
+  {/* Five-block method — decorative graphic on desktop, tap-to-expand on mobile */}
+  <Section bg="white">
+    <SectionHeader
+      label="Cómo trabajamos"
+      title="Marketing digital con método, no con humo"
+      subtitle="Trabajamos sobre cinco bloques — búsqueda e inteligencia artificial, medios de rendimiento, autoridad, contenido, y datos y web. No vendemos paquetes cerrados: partimos de datos reales de Lima y construimos solo lo que tu negocio necesita para crecer."
+      align="center"
+    />
+    <BuildingGraphicStatic locale="pe" panels={buildingPanels} />
+    <div class="mt-8 md:mt-12 text-center">
+      <Button href="/pe/servicios/" variant="secondary" size="lg">Conoce nuestro método &rarr;</Button>
+    </div>
+  </Section>
+
+  {/* Iterative process — circular feedback loop */}
+  <Section bg="cream">
+    <SectionHeader
+      label="Cómo trabajamos"
+      title="Un ciclo, no un proyecto"
+      subtitle="El marketing digital no es un relanzamiento de una sola vez. Es un proceso iterativo de análisis, estrategia, ejecución y medición — con ajustes basados en datos reales."
+      align="center"
+    />
+    {/* Desktop: 4-up grid with arrow connectors */}
+    <div class="hidden md:grid mt-10 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+      {processSteps.map((step, idx) => (
+        <div class="bg-white border border-gray-light/40 rounded-lg p-6 relative">
+          <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Paso {step.num}</span>
+          <h3 class="mt-2 text-lg font-headline font-bold text-navy">{step.title}</h3>
+          <p class="mt-3 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+          {idx < processSteps.length - 1 && (
+            <svg class="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          )}
+        </div>
+      ))}
+    </div>
+    {/* Mobile: vertical timeline — numbered nodes on a spine, tap a step to expand */}
+    <div class="md:hidden mt-8 space-y-3 max-w-md mx-auto">
+      {processSteps.map((step, idx) => (
+        <details class="group relative">
+          {idx < processSteps.length - 1 && (
+            <span class="absolute left-5 top-10 -bottom-3 w-px -translate-x-1/2 bg-gray-light/60" aria-hidden="true"></span>
+          )}
+          <summary class="flex items-center gap-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+            <span class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-blue/30 bg-white text-xs font-label font-bold text-blue transition-colors group-open:border-blue group-open:bg-blue group-open:text-white">{step.num}</span>
+            <span class="flex-1 text-base font-headline font-bold text-navy">{step.title}</span>
+            <svg class="mr-1 w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </summary>
+          <p class="ml-14 mt-2 pb-1 text-sm font-body text-gray leading-relaxed">{step.body}</p>
+        </details>
+      ))}
+    </div>
+    <div class="mt-8 flex items-center justify-center gap-3 text-center text-sm font-label font-semibold uppercase tracking-wide text-blue">
+      <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v6h6M20 20v-6h-6M4 10a8 8 0 0114-4M20 14a8 8 0 01-14 4" />
+      </svg>
+      <span>Los datos del paso 04 vuelven al paso 01 — cada ciclo es más preciso.</span>
+    </div>
+  </Section>
+
+  {/* Pricing-transparency callout — links to the PE pricing guide on the blog */}
   <Section bg="white">
     <div class="max-w-3xl mx-auto text-center">
-      <SectionHeader
-        label="Cómo trabajamos"
-        title="Marketing digital con método, no con humo"
-        align="center"
-      />
-      <p class="text-base font-body text-gray leading-relaxed">
-        StarkRank trabaja sobre cinco bloques — búsqueda e inteligencia artificial, medios de rendimiento, autoridad, contenido, y datos y web. No vendemos paquetes cerrados: partimos de datos de búsqueda reales de Lima y construimos solo lo que tu negocio necesita para crecer.
-      </p>
-      <div class="mt-8">
-        <Button href="/pe/servicios/" variant="secondary" size="lg">Conoce nuestro método &rarr;</Button>
+      <span class="text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">Precios transparentes</span>
+      <h2 class="mt-3 text-2xl md:text-3xl font-headline font-black text-navy">Conoce los precios antes de conversar</h2>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">Publicamos los rangos reales de inversión en SEO para Lima — sin sorpresas ni horas ocultas. Lee la guía antes de agendar una primera conversación.</p>
+      <div class="mt-8 flex flex-wrap gap-4 justify-center">
+        <Button href="/pe/blog/precios-seo-peru/" variant="primary" size="lg">Ver guía de precios &rarr;</Button>
+        <Button href="/pe/servicios/" variant="outline" size="lg">Ver todos los servicios</Button>
       </div>
     </div>
   </Section>
 
-  <CTABanner bg="navy" title="¿Tu negocio aparece en Google?" subtitle="Descúbrelo gratis en 2 minutos. Te enviamos el resultado por WhatsApp en 24 horas.">
+  {/* FAQ — top-of-funnel objection handling, feeds FAQPage schema */}
+  <Section bg="cream">
+    <SectionHeader
+      label="Preguntas frecuentes"
+      title="Lo que más nos preguntan"
+      align="center"
+    />
+    <div class="mt-8 space-y-4 max-w-3xl mx-auto">
+      {faqs.map((f) => (
+        <details class="group bg-white border border-gray-light/40 rounded-lg">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer p-6 font-headline font-bold text-navy text-base md:text-lg select-none list-none [&::-webkit-details-marker]:hidden">
+            {f.q}
+            <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-base font-body text-gray leading-relaxed">
+            {f.a}
+          </div>
+        </details>
+      ))}
+    </div>
+  </Section>
+
+  <CTASplit
+    eyebrow="Empieza hoy"
+    title="¿Listo para crecer en Lima?"
+    subtitle="Pide tu revisión gratis y te enviamos el resultado por WhatsApp en 24 horas — o agenda una asesoría sin compromiso. Primero escuchamos, luego proponemos."
+    image="/images/pe/home-cta.webp"
+    imageAlt="Asesor de StarkRank conversando con el dueño de un negocio en una oficina en Lima."
+    imagePosition="center top"
+  >
     <Button href="/pe/apareces-en-google/" variant="primary" size="lg">Revisa Gratis &rarr;</Button>
-    <Button href="/pe/contacto/" variant="secondary" size="lg">Contacto</Button>
-  </CTABanner>
+    <Button href="/pe/contacto/" variant="secondary" size="lg">Conversemos</Button>
+  </CTASplit>
 </BaseLayout>
