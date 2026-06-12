@@ -189,3 +189,10 @@ Fünf Situationen, in denen ein Audit sich typischerweise lohnt:
 - **Alle 12-18 Monate als Routine-Health-Check** — für etablierte Schweizer Sites mit kontinuierlichen Optimierungen
 
 Für brandneue Sites ohne Live-Traffic ist ein Audit verfrüht — dort ist [Webdesign Schweiz](/ch-de/services/webdesign-schweiz/) mit eingebautem Pre-Deploy SEO Check die sinnvollere Reihenfolge.
+
+## SEO Audit nach Standort
+
+Der Kriterienkatalog ist schweizweit identisch — die regionalen Seiten gehen zusätzlich auf die standortspezifischen Befunde ein (mehrsprachige Architektur im Dreiländereck, branchenübliche Compliance-Anforderungen vor Ort):
+
+- **[SEO Audit Basel](/ch-de/seo-audit-basel/)** — Dreiländereck-hreflang (DE/FR/EN), Pharma-, Life-Sciences- und Finanz-Compliance
+- **[SEO Audit Zürich](/ch-de/seo-audit-zuerich/)** — Finanz- und Versicherungssektor, internationale Multi-Domain-Setups

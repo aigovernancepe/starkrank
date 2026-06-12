@@ -45,4 +45,4 @@ Die Besonderheit: Lokale Sichtbarkeit muss in drei Ländern und potenziell drei 
 
 Schweizer Nummern (+41), deutsche Nummern (+49) und französische Nummern (+33) müssen für jedes Einzugsgebiet korrekt hinterlegt sein. Schweizer PLZ (4-stellig), deutsche PLZ (5-stellig) und französische Codes Postaux folgen unterschiedlichen Konventionen. Neben Google sind Einträge auf local.ch, search.ch, Gelbe Seiten (DE) und PagesJaunes (FR) relevant. Und der Eintrag im Basler Handelsregister und bei der Handelskammer beider Basel ist ein starkes Vertrauenssignal für KI-Modelle.
 
-Das Strukturierte-Daten-Werk verbindet sich mit der Markup-Strategie unseres [SEO Audits in Basel](/ch-de/seo-audit-basel/) und der Entitätsstrategie unserer [KI-Suchoptimierung](/ch-de/ki-suchoptimierung-basel/).
+Das Strukturierte-Daten-Werk verbindet sich mit der Markup-Strategie aus unserem [SEO Audit Basel](/ch-de/seo-audit-basel/) und der Entitätsstrategie unserer [KI-Suchoptimierung](/ch-de/ki-suchoptimierung-basel/).
