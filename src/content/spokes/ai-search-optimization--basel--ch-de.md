@@ -64,4 +64,4 @@ Für Basler Unternehmen bedeutet das eine besondere Chance: Der Markt ist intern
 
 Unser AI Search Optimization Score Framework (AISO) bewertet Ihre KI-Suchbereitschaft anhand von sechs Dimensionen. Für den Standort Basel berücksichtigen wir zusätzlich revDSG-konforme Umsetzung und grenzüberschreitende Sichtbarkeit im DACH-Raum — der deutschsprachige Kern deckt die kommerziell relevanten Zielgruppen ab.
 
-Das Ergebnis ist eine priorisierte Roadmap für Ihre Wettbewerbsposition in Basel. Für die technische Umsetzung arbeiten wir mit unserem [SEO Audit in Basel](/ch-de/seo-audit-basel/) zusammen, und für lokale Sichtbarkeit mit unserem [Lokalen SEO-Service](/ch-de/lokale-seo-beratung-basel/).
+Das Ergebnis ist eine priorisierte Roadmap für Ihre Wettbewerbsposition in Basel. Für die technische Umsetzung arbeiten wir mit unserem [SEO Audit Basel](/ch-de/seo-audit-basel/) zusammen, und für lokale Sichtbarkeit mit unserem [Lokalen SEO-Service](/ch-de/lokale-seo-beratung-basel/).

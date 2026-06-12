@@ -48,7 +48,7 @@ cta: "Kostenlose Erstberatung für Basel anfordern"
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
-Eine SEO-Agentur in Basel baut digitale Sichtbarkeit für Unternehmen mit regionalem oder trinationalem Marktfokus auf — mit [technischem SEO Audit](/ch-de/seo-audit-basel/), Content-Strategie, Linkaufbau und lokaler Optimierung für Google Maps, Bing Maps und KI-Antworten. StarkRank verbindet das mit einer Spezialisierung auf B2B-Mittelstand, Pharma, Logistik und industrielle Hightech.
+Eine SEO-Agentur in Basel baut digitale Sichtbarkeit für Unternehmen mit regionalem oder trinationalem Marktfokus auf — vom [SEO Audit Basel](/ch-de/seo-audit-basel/) über Content-Strategie und Linkaufbau bis zur lokalen Optimierung für Google Maps, Bing Maps und KI-Antworten. StarkRank verbindet das mit einer Spezialisierung auf B2B-Mittelstand, Pharma, Logistik und industrielle Hightech.
 
 Konkret bedeutet das: Wir analysieren, wo Ihre Basler Zielgruppe heute sucht — Google, LinkedIn, branchenspezifische Plattformen, KI-Tools wie ChatGPT oder Perplexity. Daraus entsteht eine Roadmap mit klaren Meilensteinen, statt einer generischen Standard-Empfehlung. Pharma-Anbieter brauchen regulatorisch validierte Content-Pfade und mehrsprachige Pflichtangabenlogik; Speditionen eine grenzüberschreitende Long-Tail-Optimierung; Hidden Champions vor allem Sichtbarkeitsaufbau, der zur tatsächlichen technischen Marktposition passt.
 
