@@ -28,7 +28,7 @@ faq:
 
 Schweizer Unternehmen investieren typischerweise zwischen 3'000 und 8'000 CHF pro Monat in professionelle Suchmaschinenoptimierung. Die Spanne ist breit — der Schweizer Markt hat höhere Qualitätserwartungen, strengere Datenschutzanforderungen ([revDSG](/ch-de/glossar/#revdsg)) und oft mehrsprachige Anforderungen (DE/FR/IT). Was Sie konkret benötigen, hängt von Ihrer Branche, der Wettbewerbsintensität in Ihrem Kanton und Ihrer digitalen Ausgangssituation ab.
 
-Dieser Leitfaden zeigt Ihnen ehrlich, was jede Preisstufe beinhaltet, welche verschiedenen Faktoren die SEO Kosten in der Schweiz beeinflussen und wo Schweizer Unternehmen regelmässig Geld verbrennen oder zu wenig investieren. Unsere eigenen Retainer-Bänder sind auf der [Preisseite](/ch-de/preise/seo/) transparent aufgelistet — ab CHF 1'190 pro Monat für Solo- und Kleinunternehmen bis ab 6'000 CHF pro Monat für Enterprise- und Multi-Standort-Mandate.
+Dieser Leitfaden zeigt Ihnen ehrlich, was jede Preisstufe beinhaltet, welche verschiedenen Faktoren die SEO Kosten in der Schweiz beeinflussen und wo Schweizer Unternehmen regelmässig Geld verbrennen oder zu wenig investieren. Die eigenen Retainer-Bänder von StarkRank sind auf der [Preisseite](/ch-de/preise/seo/) transparent aufgelistet — ab CHF 1'190 pro Monat für Solo- und Kleinunternehmen bis ab 6'000 CHF pro Monat für Enterprise- und Multi-Standort-Mandate.
 
 ---
 
@@ -298,7 +298,7 @@ Nicht jedes Unternehmen braucht monatlich neue Inhalte und Linkaufbau. Eine quar
 
 [KI-Suchoptimierung](/ch-de/glossar/#ki-seo) ist auch in der Schweiz relevant — möglicherweise sogar mehr als im deutschen Markt, da Schweizer Early Adopter bei Technologietrends sind. Bis 2027 wird KI-SEO kein Zusatzservice mehr sein, sondern Standard. Mit unserem [kostenlosen AI Search Optimization Check](/ch-de/aiso-check/) können Sie Ihre aktuelle KI-Suchbereitschaft einschätzen, bevor Sie in eine Optimierung investieren:
 
-- **AI Search Optimization Score-Bewertung** — Messung der KI-Suchbereitschaft über 6 Dimensionen. Im Erstaudit enthalten oder als eigenständige Bewertung.
+- **AI Search Optimization Score** — StarkRank misst die KI-Suchbereitschaft über sechs Dimensionen. Im Erstaudit enthalten oder als eigenständige Bewertung.
 - **Entity-Aufbau** — Strukturierte Daten, Knowledge-Graph-Signale. Zusätzlich CHF 800–2'000 pro Monat.
 - **Content für KI-Zitation** — Bestehende Inhalte in ein KI-extrahierbares Format umwandeln. Einmaliges Projekt: CHF 5'000–10'000.
 - **KI-Sichtbarkeitsmessung** — Tracking der Markenzitationen in KI-Antworten. Betreuung ab CHF 800–1'500 pro Monat.

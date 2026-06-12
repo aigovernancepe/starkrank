@@ -129,12 +129,15 @@ Vermeiden Sie Agenturen, die diese Leistungen als eigenständige Services verkau
 
 KI-Suchoptimierung ist ein neuer Posten, der vor zwei Jahren nicht existierte:
 
-- **AI Search Optimization Score-Bewertung** — Messung Ihrer KI-Suchbereitschaft über 6 Dimensionen (Crawlbarkeit, Struktur, Autorität, Zitierbarkeit, Aktualität, Messbarkeit). Üblicherweise in der Erstanalyse enthalten.
+- **AI Search Optimization Score** — StarkRank misst die KI-Suchbereitschaft über sechs Dimensionen (Crawlbarkeit, Struktur, Autorität, Zitierbarkeit, Aktualität, Messbarkeit). Üblicherweise in der Erstanalyse enthalten.
 - **Entity-Aufbau** — Strukturierte Daten, Knowledge-Graph-Signale, sameAs-Verlinkungen, Autorenattribution. Zusätzlich 500–1.500 €/Monat.
 - **Content-Umstrukturierung für KI-Zitation** — Bestehende Inhalte in ein Format umwandeln, das KI-Plattformen extrahieren und zuordnen können. Einmaliges Projekt: 3.000–8.000 €.
 - **KI-Sichtbarkeitsmessung** — Tracking, wie oft Ihre Marke im Vergleich zu Wettbewerbern in KI-Antworten zitiert wird. 500–1.000 €/Monat.
 
 Agenturen, die keinerlei KI-Suchoptimierung anbieten, verlieren den Anschluss. Bis 2027 wird dies kein Zusatzservice mehr sein — es wird Standard.
 
+StarkRank veröffentlicht die eigenen SEO-Preise transparent und nach Mandatsgröße gestaffelt — die vollständigen Bänder finden Sie auf der Preisübersicht.
+
+[SEO-Preise ansehen →](/preise/seo/)
 [Kostenloser AI-Search-Check →](/aiso-check/)
 [SEO-Agentur auswählen: Worauf achten? →](/de/blog/seo-agentur-auswaehlen/)
