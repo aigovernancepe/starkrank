@@ -60,7 +60,7 @@ Eine SEO-Agentur übernimmt für ein Schweizer KMU vier wiederkehrende Arbeitsfe
 
 ## Was kostet eine SEO-Agentur in der Schweiz?
 
-Eine seriöse SEO-Agentur in der Schweiz arbeitet im monatlichen Retainer-Modell zwischen 1'190 CHF (Einzelunternehmen, lokaler Fokus) und 6'000 CHF (Mittelstand, multi-channel). Einmal-Audits liegen zwischen 990 CHF (Technical SEO Audit) und 4'000 CHF (E-Commerce SEO Audit, drei Sprachen). Preise unter 800 CHF im Monat decken in der Schweiz keinen professionellen Lieferumfang ab — bei Schweizer Lohn-Niveau entspricht das maximal 4–5 produktiven Stunden.
+Eine seriöse SEO-Agentur in der Schweiz arbeitet im monatlichen Retainer-Modell zwischen 1'190 CHF (Einzelunternehmen, lokaler Fokus) und 6'000 CHF (Mittelstand, multi-channel). Einmal-Audits liegen zwischen 1'800 CHF (SEO Audit, Standard) und 4'000 CHF (E-Commerce SEO Audit, drei Sprachen). Preise unter 800 CHF im Monat decken in der Schweiz keinen professionellen Lieferumfang ab — bei Schweizer Lohn-Niveau entspricht das maximal 4–5 produktiven Stunden.
 
 Die drei Retainer-Bänder im Detail:
 
@@ -73,6 +73,7 @@ Die drei Retainer-Bänder im Detail:
 Vorsicht bei Pauschal-Angeboten unter 800 CHF: Sie zahlen meist für automatisierte Tool-Reports, nicht für strategische Arbeit. Die Differenz wird über Set-and-Forget kompensiert, die Sichtbarkeit folgt nicht.
 
 [Detail-Aufschlüsselung: Was kostet SEO in der Schweiz? →](/ch-de/blog/seo-kosten-schweiz/)
+[StarkRank Preise — alle Bänder transparent →](/ch-de/preise/seo/)
 
 ### SEO Beratung vs. Retainer: Welches Budget passt?
 
