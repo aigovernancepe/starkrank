@@ -186,8 +186,11 @@ const defaultCtaSubtitleMap: Record<string, string> = { en: 'Get a clear picture
     </div>
   </section>
 
-  <!-- Service Finder CTA -->
-  <ServiceFinderCta locale={locale} />
+  <!-- Service Finder CTA — generic SEO-pricing nudge.
+       Suppressed on AI Search Optimization posts: those already carry an on-topic
+       in-body bridge to /services/ai-seo/ plus the closing AI-Search-Check CTABanner,
+       so the generic SEO-Preise banner would be an off-key third CTA. -->
+  {post.data.category !== 'AI Search Optimization' && <ServiceFinderCta locale={locale} />}
 
   <!-- FAQ -->
   {post.data.faq && post.data.faq.length > 0 && (
