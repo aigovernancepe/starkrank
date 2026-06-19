@@ -19,7 +19,7 @@ faq:
   - question: "Is AI search optimization different from SEO?"
     answer: "Yes. SEO focuses on ranking in search engine results pages. AI search optimization focuses on being cited in AI-generated answers. The technical foundations overlap — crawlability, structured data, quality content — but AI search requires additional strategies: entity optimization, answer-first content structure, AI crawler access, and citation-specific monitoring. We layer AI Search Optimization on top of your existing SEO, not instead of it."
   - question: "Which AI search platforms matter most?"
-    answer: "The primary platforms are Google AI Overviews, ChatGPT (with browsing), Perplexity, and Bing Copilot. Their combined query volume is growing rapidly, and each uses slightly different retrieval methods. A strategy that covers all four is the right framing — we track citations across all platforms through our AI Share of Voice analysis."
+    answer: "The primary platforms are Google AI Overviews, ChatGPT (with browsing), Perplexity, and Bing Copilot, and their combined query volume is growing rapidly. We don't claim uniform tracking across all of them — we report what each platform actually exposes: aggregated AI Share of Voice for Google AI Overviews and ChatGPT, Bing Copilot via Bing Webmaster Tools where you grant account access, and structured spot-checks for Perplexity and Gemini."
   - question: "How long before we see results?"
     answer: "Technical foundations (crawler access, structured data, content restructuring) can be implemented in 4-8 weeks. Brand entity and citation building take 3-6 months to mature. AI search monitoring shows measurable changes within the first month of tracking. Most clients see their AI Search Optimization Score improve by 15-25 points in the first 90 days."
   - question: "Do we need to change our existing website?"
@@ -94,7 +94,7 @@ We help clients identify and publish original data assets: industry benchmarks, 
 Traditional analytics miss most AI search impact. A user who gets your information via ChatGPT may never click through to your site — but your brand was cited. We implement a measurement stack that captures what standard SEO tools cannot:
 
 - **AI referral tracking** in GA4 (segmenting traffic from chatgpt.com, perplexity.ai, gemini.google.com)
-- **Brand mention monitoring** across AI platforms — how often and in what context you are cited
+- **Brand mention monitoring** — how often and in what context you are cited, per platform (aggregated where the platform exposes data, sampled otherwise)
 - **AI Share of Voice** — your citation frequency versus competitors for target queries
 - **Sentiment analysis** — whether AI models describe your brand positively, neutrally, or critically
 
