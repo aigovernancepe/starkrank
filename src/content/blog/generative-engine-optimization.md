@@ -1,8 +1,8 @@
 ---
 title: "Generative Engine Optimization (GEO): gefunden werden reicht nicht"
 description: "Was GEO ist, wie es sich von SEO unterscheidet und warum die Lücke zwischen Auffindbarkeit und Zitierung über Ihre KI-Sichtbarkeit entscheidet."
-pubDate: 2026-06-19
-updatedDate: 2026-06-19
+pubDate: 2026-05-28
+updatedDate: 2026-05-28
 author: "StarkRank"
 tags: ["generative engine optimization", "geo", "ai seo", "ki sichtbarkeit", "ai overviews"]
 locale: "de"
