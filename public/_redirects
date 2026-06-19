@@ -147,10 +147,12 @@
 
 # Phase 3c Part 1 (2026-04-24): 12 DE service hubs now serve at /services/<slug>/.
 # The old catch-all /services/:slug/ → /en/services/:slug/ from Phase 2b has been
-# removed — it hijacked the new DE hubs. Two services WITHOUT a DE hub get explicit
-# rules below so direct hits and legacy links still reach their EN bespoke page.
-/services/ai-search-optimization/    /en/services/ai-search-optimization/        301
-/services/ai-search-optimization     /en/services/ai-search-optimization/        301
+# removed — it hijacked the new DE hubs. AI Search Optimization now HAS a DE hub
+# at /services/ai-seo/ (buyer head term, DataForSEO 2026-06-19) — its old slug
+# redirects there, matching the Phase-3d keyword-URL pattern below. multi-location-seo
+# still has no DE hub, so its rule reaches the EN bespoke page.
+/services/ai-search-optimization/    /services/ai-seo/                            301
+/services/ai-search-optimization     /services/ai-seo/                            301
 /services/multi-location-seo/        /en/services/multi-location-seo/            301
 /services/multi-location-seo         /en/services/multi-location-seo/            301
 

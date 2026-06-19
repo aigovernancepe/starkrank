@@ -125,6 +125,11 @@ const deServiceHubSlugMap = new Map<string, string>([
   ['google-ads-management', 'google-ads-betreuung'],
   ['local-seo-consulting', 'local-seo-agentur'],
   ['authority-link-building', 'linkaufbau-agentur'],
+  // Pillar hub: AI Search Optimization → buyer/commercial head term "ai-seo"
+  // (DE 880/mo, highest CPC; DataForSEO pull 2026-06-19). The dead literal
+  // "ki-suchoptimierung" (10/mo) is deliberately NOT the slug. See
+  // project_saas_slug_reservation update — "AI SEO" un-reserved from .ai.
+  ['ai-search-optimization', 'ai-seo'],
   // Other DE hubs: urlSlug equals serviceSlug (no keyword migration warranted)
   ['google-ads-audit', 'google-ads-audit'],
   ['paid-social-strategy', 'paid-social-strategy'],
