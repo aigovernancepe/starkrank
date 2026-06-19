@@ -1,11 +1,11 @@
 ---
 title: "Google AI Overviews: wie Sie als Quelle in der KI-Antwort erscheinen"
 description: "Wie Google AI Overviews (KI-Übersichten) Quellen auswählen, was sie mit Ihrem SEO und Traffic machen und wie Sie Ihre Präsenz in den KI-Antworten messbar verbessern."
-pubDate: 2026-06-19
-updatedDate: 2026-06-19
+pubDate: 2026-06-16
+updatedDate: 2026-06-16
 author: "StarkRank"
 tags: ["google ai overviews", "ai overviews", "ki-übersicht", "ai seo", "generative engine optimization"]
-locale: "de"
+locale: "ch-de"
 category: "AI Search Optimization"
 faq:
   - question: "Was sind Google AI Overviews?"
@@ -17,12 +17,12 @@ faq:
   - question: "Was ist der Unterschied zwischen AI Overviews und Google AI Mode?"
     answer: "AI Overviews sind die KI-Antwort über den normalen Suchergebnissen — die klassische Ergebnisliste bleibt darunter erhalten. Der Google AI Mode ist dagegen ein eigener, vollständig KI-geführter Suchmodus, in dem ein Dialog an die Stelle der Ergebnisliste tritt. Für die Optimierung gelten dieselben Grundlagen; AI Mode verstärkt den Trend nur."
   - question: "Kann ich verhindern, dass meine Inhalte in AI Overviews erscheinen?"
-    answer: "Technisch ja: Mit dem nosnippet- oder data-nosnippet-Tag schließen Sie Inhalte von der Verwendung in AI Overviews aus. Der Preis ist allerdings, dass dieselben Inhalte dann auch in den klassischen Snippets weniger sichtbar sind. Für die meisten Unternehmen ist der bessere Weg nicht das Blockieren, sondern das gezielte Optimieren auf Zitierung."
+    answer: "Technisch ja: Mit dem nosnippet- oder data-nosnippet-Tag schliessen Sie Inhalte von der Verwendung in AI Overviews aus. Der Preis ist allerdings, dass dieselben Inhalte dann auch in den klassischen Snippets weniger sichtbar sind. Für die meisten Unternehmen ist der bessere Weg nicht das Blockieren, sondern das gezielte Optimieren auf Zitierung."
 ---
 
 Google AI Overviews — auf Deutsch **KI-Übersichten** oder „Übersicht mit KI" — beantworten Suchanfragen direkt über den klassischen Suchergebnissen und zitieren dabei einzelne Quellen. Wer dort als Quelle erscheint, gewinnt Sichtbarkeit an der prominentesten Stelle der Google-Suche.
 
-Für Ihr SEO heißt das: Platz eins reicht nicht mehr, wenn die KI-Antwort darüber jemand anderen zitiert. Dieser Beitrag erklärt, wie AI Overviews funktionieren, wie Google die Quellen auswählt und wie Sie Ihre Präsenz messbar verbessern.
+Für Ihr SEO heisst das: Platz eins reicht nicht mehr, wenn die KI-Antwort darüber jemand anderen zitiert. Dieser Beitrag erklärt, wie AI Overviews funktionieren, wie Google die Quellen auswählt und wie Sie Ihre Präsenz messbar verbessern.
 
 ## Was sind Google AI Overviews?
 
@@ -30,7 +30,7 @@ Google AI Overviews sind KI-generierte Zusammenfassungen, die Google oberhalb de
 
 ## Wie funktionieren Google AI Overviews?
 
-Eine AI Overview entsteht nicht aus einer einzigen Seite. Google zerlegt die Suchanfrage in mehrere Unterabfragen, ruft dazu Suchergebnisse ab und fasst Informationen aus verschiedenen Quellen zu einer Antwort zusammen — dasselbe Fan-out-Prinzip, das auch [generative KI](/de/blog/generative-engine-optimization/) wie ChatGPT nutzt.
+Eine AI Overview entsteht nicht aus einer einzigen Seite. Google zerlegt die Suchanfrage in mehrere Unterabfragen, ruft dazu Suchergebnisse ab und fasst Informationen aus verschiedenen Quellen zu einer Antwort zusammen — dasselbe Fan-out-Prinzip, das auch [generative KI](/ch-de/blog/generative-engine-optimization-ch/) wie ChatGPT nutzt.
 
 Angezeigt wird eine KI-Übersicht vor allem bei informationsorientierten Suchanfragen, bei denen mehrere Aspekte zusammenkommen. Bei einfachen Navigations- oder reinen Transaktionssuchen bleibt sie oft aus — dort genügen Google die klassischen Suchergebnisse.
 
@@ -48,7 +48,7 @@ Für Google AI Overviews gelten dieselben Prinzipien. Eine Seite wird eher als Q
 
 Die häufigste Sorge ist der Zero-Click-Effekt: Wenn die Antwort schon in der KI-Übersicht steht, klickt ein Teil der Nutzer nicht weiter, und der organische Traffic auf klassische Rankings kann sinken. Das ist real — aber die falsche Kennzahl, um darauf zu starren.
 
-Für Ihr SEO verschiebt sich die Zielgröße. Eine Nennung als zitierte Quelle in der AI Overview ist eine Vertrauensposition, die eine reine Ranking-Position nicht bietet. Die strategische Frage lautet deshalb nicht „Wie verhindere ich AI Overviews?", sondern „Wie sorge ich dafür, dass *ich* die zitierte Quelle bin statt meiner Konkurrenz?". Wer das ernst nimmt, optimiert nicht mehr nur auf Keywords und Rankings, sondern auf Zitierfähigkeit.
+Für Ihr SEO verschiebt sich die Zielgrösse. Eine Nennung als zitierte Quelle in der AI Overview ist eine Vertrauensposition, die eine reine Ranking-Position nicht bietet. Die strategische Frage lautet deshalb nicht „Wie verhindere ich AI Overviews?", sondern „Wie sorge ich dafür, dass *ich* die zitierte Quelle bin statt meiner Konkurrenz?". Wer das ernst nimmt, optimiert nicht mehr nur auf Keywords und Rankings, sondern auf Zitierfähigkeit.
 
 ## Wie optimieren Sie Ihre Inhalte für Google AI Overviews?
 
@@ -67,12 +67,12 @@ AI Overviews sind die KI-Antwort *über* den normalen Suchergebnissen — die kl
 
 ## Kann ich verhindern, dass meine Inhalte in AI Overviews erscheinen?
 
-Technisch ja: Mit dem `nosnippet`- oder `data-nosnippet`-Tag schließen Sie einzelne Inhalte von der Verwendung in den KI-Übersichten aus. Der Haken: Dieselben Tags reduzieren auch Ihre Sichtbarkeit in den klassischen Snippets der Google-Suche. Für die meisten Unternehmen ist das Blockieren deshalb der falsche Hebel — der bessere Weg ist, gezielt auf Zitierung zu optimieren, statt sich aus der Antwort herauszunehmen, in der die Konkurrenz dann allein steht.
+Technisch ja: Mit dem `nosnippet`- oder `data-nosnippet`-Tag schliessen Sie einzelne Inhalte von der Verwendung in den KI-Übersichten aus. Der Haken: Dieselben Tags reduzieren auch Ihre Sichtbarkeit in den klassischen Snippets der Google-Suche. Für die meisten Unternehmen ist das Blockieren deshalb der falsche Hebel — der bessere Weg ist, gezielt auf Zitierung zu optimieren, statt sich aus der Antwort herauszunehmen, in der die Konkurrenz dann allein steht.
 
 ## Wie messen und verbessern Sie Ihre Präsenz?
 
-Sichtbarkeit in AI Overviews lässt sich überwachen — anders als bei ChatGPT, wo belastbare aggregierte Daten im deutschsprachigen Raum noch dünn sind. Genau hier setzt die **Monitor**-Stufe unseres [AI-SEO-Service](/services/ai-seo/) an: Wir verfolgen monatlich Ihr Share of Voice in den KI-Übersichten, vergleichen es mit dem Wettbewerb und zeigen, welche Quellen statt Ihrer zitiert werden. Aus diesem Befund wird die priorisierte Optimierung.
+Sichtbarkeit in AI Overviews lässt sich überwachen — anders als bei ChatGPT, wo belastbare aggregierte Daten im deutschsprachigen Raum noch dünn sind. Genau hier setzt die **Monitor**-Stufe unseres [AI-SEO-Service für die Deutschschweiz](/ch-de/services/ai-seo-schweiz/) an: Wir verfolgen monatlich Ihr Share of Voice in den KI-Übersichten, vergleichen es mit dem Wettbewerb und zeigen, welche Quellen statt Ihrer zitiert werden — revDSG-konform und mit Blick darauf, dass KI-Antworten in der Deutschschweiz oft Schweizer Quellen bevorzugen. Aus diesem Befund wird die priorisierte Optimierung.
 
-Der ganze Weg ist eine Kette — **Score → Monitor → Optimize**: erst messen, wie KI-sichtbar Sie heute sind, dann laufend überwachen, dann die Lücken schließen. Den Einstieg macht ein [kostenloser AI Search Optimization Check](/aiso-check/). Die übergeordnete Disziplin dahinter erklärt der Beitrag zu [Generative Engine Optimization](/de/blog/generative-engine-optimization/).
+Der ganze Weg ist eine Kette — **Score → Monitor → Optimize**: erst messen, wie KI-sichtbar Sie heute sind, dann laufend überwachen, dann die Lücken schliessen. Den Einstieg macht ein [kostenloser AI Search Optimization Check](/ch-de/aiso-check/). Die übergeordnete Disziplin dahinter erklärt der Beitrag zu [Generative Engine Optimization](/ch-de/blog/generative-engine-optimization-ch/).
 
-[Ihre Sichtbarkeit in KI-Antworten prüfen lassen →](/services/ai-seo/)
+[Ihre Sichtbarkeit in KI-Antworten prüfen lassen →](/ch-de/services/ai-seo-schweiz/)
