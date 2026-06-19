@@ -24,7 +24,7 @@ Google AI Overviews sind KI-generierte Zusammenfassungen, die Google oberhalb de
 
 ## Wie wählt Google die Quellen aus?
 
-KI-Systeme trennen zwei Schritte: Sie *recherchieren* zunächst breit und *zitieren* dann schmal. Eine DataForSEO-Analyse von 100.000 ChatGPT-Prompts zeigt dieses Muster deutlich — Modelle finden viele Quellen, übernehmen aber nur einen kleinen, konzentrierten Teil in die sichtbare Antwort. Zitiert wird, was knapp, faktisch und extrahierbar ist: strukturierte, autoritative Inhalte mit klaren Vertrauenssignalen werden bevorzugt, während breit gefundene, aber unstrukturierte oder rein transaktionale Seiten in der Recherche hängenbleiben.
+KI-Systeme trennen zwei Schritte: Sie *recherchieren* zunächst breit und *zitieren* dann schmal. Eine [DataForSEO-Analyse](https://dataforseo.com/whitepapers/llm-fan-out-queries-research-2026) von 100.000 ChatGPT-Prompts zeigt dieses Muster deutlich — Modelle finden viele Quellen, übernehmen aber nur einen kleinen, konzentrierten Teil in die sichtbare Antwort. Zitiert wird, was knapp, faktisch und extrahierbar ist: strukturierte, autoritative Inhalte mit klaren Vertrauenssignalen werden bevorzugt, während breit gefundene, aber unstrukturierte oder rein transaktionale Seiten in der Recherche hängenbleiben.
 
 Für Google AI Overviews gelten dieselben Prinzipien. Eine Seite wird eher als Quelle ausgewählt, wenn sie
 
