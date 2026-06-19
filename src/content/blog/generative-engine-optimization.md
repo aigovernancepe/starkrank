@@ -20,7 +20,7 @@ faq:
     answer: "Nein. KI-Systeme finden bei ihrer Recherche viele Quellen, zitieren aber nur einen kleinen Teil davon sichtbar. Nur die zitierten Quellen sieht der Nutzer in der Antwort. Gefunden zu werden ist die Voraussetzung — zitiert zu werden ist das eigentliche Ziel von GEO."
 ---
 
-Von einer KI *gefunden* zu werden ist nicht dasselbe, wie in ihrer Antwort *zitiert* zu werden — und nur das Zitat sieht Ihr Kunde am Ende. Genau diese Lücke ist der Kern von Generative Engine Optimization (GEO): der Disziplin, mit der Ihre Marke in KI-Antworten als Quelle auftaucht, statt im Hintergrund der Recherche zu verschwinden.
+Von einer KI **gefunden** zu werden ist nicht dasselbe, wie in ihrer Antwort **zitiert** zu werden — und nur das Zitat sieht Ihr Kunde. Genau diese Lücke entscheidet über Ihre KI-Sichtbarkeit, und sie zu schließen ist die Aufgabe von Generative Engine Optimization (GEO).
 
 ## Was ist Generative Engine Optimization?
 
