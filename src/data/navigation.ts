@@ -151,6 +151,10 @@ const chDeServiceHubSlugMap = new Map<string, string>([
   ['technical-seo-audit', 'seo-audit-schweiz'],
   ['google-ads-management', 'google-ads-schweiz'],
   ['local-seo-consulting', 'lokale-seo-schweiz'],
+  // Pillar hub: AI Search Optimization → "ai-seo-schweiz" (CH "ai seo" 260/mo +
+  // GEO 260/mo, DataForSEO 2026-06-19). Follows the -schweiz CH convention; the
+  // DE side uses bare "ai-seo" only because the (now-moot) .ai reservation sat there.
+  ['ai-search-optimization', 'ai-seo-schweiz'],
 ]);
 
 /**
