@@ -59,9 +59,9 @@ AI-gestützte Suche — ChatGPT, Google AI Overviews, Perplexity — beantwortet
 
 StarkRank schließt diese Lücke mit **AI Search Optimization**: Wir prüfen, überwachen und verbessern Ihre digitale Präsenz so, dass KI-Plattformen Sie als vertrauenswürdige Quelle zitieren statt Ihrer Konkurrenz. Statt eines einmaligen Audits, das in der Schublade landet, arbeiten wir in einer Kette, die sich selbst belegt: **Score → Monitor → Optimize**.
 
-## Was ist AI Search Optimization?
+## Was ist AI SEO?
 
-AI Search Optimization ist die Disziplin, in den Antworten von KI-Systemen gefunden und zitiert zu werden. Im Markt heißt dasselbe auch AI SEO oder Generative Engine Optimization (GEO). Während klassisches SEO um Ranking-Plätze kämpft, geht es hier um Ihre **KI-Sichtbarkeit** — also wie oft und wie vertrauenswürdig KI-Modelle Ihre Marke in generierten Antworten nennen.
+AI SEO ist die Disziplin, in den Antworten von KI-Systemen wie ChatGPT und Google AI Overviews gefunden und zitiert zu werden — wir nennen sie AI Search Optimization, im Markt heißt sie auch Generative Engine Optimization (GEO). Während klassisches SEO um Ranking-Plätze kämpft, geht es hier um Ihre **KI-Sichtbarkeit**: wie oft und wie vertrauenswürdig künstliche Intelligenz Ihre Marke in generierten Antworten nennt.
 
 ## KI-Sichtbarkeit & Mentions: Score → Monitor → Optimize
 
@@ -83,7 +83,7 @@ Sichtbarkeit ohne Messung ist Glücksspiel. **Monitor** verfolgt monatlich, wie 
 
 ### Optimize — die Lücken schließen
 
-**Optimize** ist die Umsetzung. Wir konfigurieren KI-Crawler-Zugang, ergänzen strukturierte Daten, strukturieren Inhalte antwortorientiert um und stärken Ihre Entitäts- und Vertrauenssignale — priorisiert nach dem, was im Score den größten Hebel hatte. Anschließend erheben wir den Score erneut und belegen die Veränderung Vorher/Nachher.
+**Optimize** ist die Umsetzung. Wir konfigurieren KI-Crawler-Zugang, ergänzen strukturierte Daten, strukturieren Inhalte antwortorientiert um und stärken Ihre Entitäts- und Vertrauenssignale, von der nachweisbaren Autoren-Expertise bis zur konsistenten Marken-Entität — priorisiert nach dem, was im Score den größten Hebel hatte. Anschließend erheben wir den Score erneut und belegen die Veränderung Vorher/Nachher.
 
 ## Welche KI-Plattformen überwachen wir?
 
@@ -91,6 +91,6 @@ Ehrlichkeit vor Reichweite: Aggregierte Daten liefern wir für **Google AI Overv
 
 ## Wie unterscheidet sich AI SEO von klassischem SEO?
 
-Klassische Suchmaschinen ranken Seiten nach Links und Relevanzsignalen. KI-Systeme rufen stattdessen Inhalts-Chunks über semantische Embeddings ab und erzeugen daraus Antworten mit Quellenangabe. Eine Seite, die bei Google gut rankt, kann in einer KI-Antwort nie auftauchen, wenn ihr klare Struktur, Entitäts-Signale oder Crawler-Zugang fehlen. Die technische Grundlage dafür — Crawl-Zugang, Rendering, strukturierte Daten — deckt unser [SEO Audit](/services/seo-audit-agentur/) ab; AI Search Optimization legt die KI-spezifische Schicht darüber.
+Klassische Suchmaschinen ranken Seiten nach Backlinks und Relevanzsignalen. Große Sprachmodelle (Large Language Models) rufen stattdessen Inhalts-Chunks über semantische Embeddings ab und erzeugen daraus Antworten mit Quellenangabe. Eine Seite, die bei Google gut rankt, kann in einer KI-Antwort nie auftauchen, wenn ihr klare Struktur, Entitäts-Signale oder Crawler-Zugang fehlen — oft blockiert schon eine zu strenge robots.txt die KI-Crawler. Die technische Grundlage — Crawl-Zugang, Rendering, strukturierte Daten — deckt unser [SEO Audit](/services/seo-audit-agentur/) ab; AI Search Optimization legt die KI-spezifische Schicht darüber.
 
 Der Einstieg ist der Score als Audit, die laufende Optimierung läuft im Retainer ab 990 €/Monat. Alle Bänder stehen transparent unter [Preise](/preise/seo/) — und im [kostenlosen Erstgespräch](/kontakt/) sagen wir Ihnen direkt, ob ein Audit oder ein Retainer der bessere Einstieg für Ihren aktuellen Stand ist.
