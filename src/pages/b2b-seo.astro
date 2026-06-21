@@ -40,9 +40,9 @@ const faqItems = [
   },
 ];
 
-// provider bound by @id to the canonical Organization node (defined in
-// SchemaOrg.astro + emitted on the homepage). Same convention as the
-// /services/[slug] hubs — cross-page @id reference, not a re-declared node.
+// provider bound by @id to the canonical Organization node (emitted inline on
+// the homepage). Same convention as the /services/[slug] hubs — cross-page
+// @id reference, not a re-declared node.
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
