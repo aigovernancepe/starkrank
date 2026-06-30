@@ -64,7 +64,7 @@ Each dimension is scored and benchmarked against industry peers. The result is a
 
 Google and Bing have crawled the web for decades. AI platforms like OpenAI (GPTBot), Anthropic (ClaudeBot), and Perplexity (PerplexityBot) operate their own crawlers with distinct user-agent strings. Many websites inadvertently block these bots through restrictive robots.txt rules, JavaScript-heavy rendering, or CDN-level firewall settings.
 
-We audit your server logs for AI bot activity, verify that your robots.txt explicitly permits AI crawlers, and recommend implementing an llms.txt file — a markdown-formatted site summary designed specifically for AI ingestion. For the technical implementation of crawl access, rendering, and structured data, our [Technical SEO Audit](/services/technical-seo-audit/) covers the full infrastructure layer.
+We audit your server logs for AI bot activity, verify that your robots.txt explicitly permits AI crawlers, and recommend implementing an llms.txt file — a markdown-formatted site summary designed specifically for AI ingestion. For the technical implementation of crawl access, rendering, and structured data, our [Technical SEO Audit](/en/services/technical-seo-audit/) covers the full infrastructure layer.
 
 ## Why does content structure matter more for AI search?
 
@@ -75,13 +75,13 @@ RAG systems extract information in chunks — typically the opening sentences of
 - **Comparison tables** and numbered lists that AI models extract verbatim
 - **FAQ sections** with schema markup for direct question-answer mapping
 
-This is not just formatting — it determines whether your content gets cited or ignored. For content creation and copywriting support, our [Content Marketing](/services/content-marketing-agentur/) team works alongside AI Search Optimization strategy.
+This is not just formatting — it determines whether your content gets cited or ignored. For content creation and copywriting support, our [Content Marketing](/en/services/content-marketing/) team works alongside AI Search Optimization strategy.
 
 ## How do brand entity and trust signals affect AI citations?
 
 AI models do not just read your website. They cross-reference your brand against knowledge graphs, Wikipedia, Wikidata, review platforms, and third-party mentions. A brand with a clear, consistent entity — same name, same description, same credentials everywhere — is treated as trustworthy. Inconsistencies trigger doubt.
 
-We build and verify your entity profile: Organization schema with sameAs links, author bios that AI can cross-reference against LinkedIn and publications, and a consistent NAP+W (Name, Address, Phone, Website) across all platforms. For location-specific entity work, see our [Local SEO Consulting](/services/local-seo-consulting/) service.
+We build and verify your entity profile: Organization schema with sameAs links, author bios that AI can cross-reference against LinkedIn and publications, and a consistent NAP+W (Name, Address, Phone, Website) across all platforms. For location-specific entity work, see our [Local SEO Consulting](/en/services/local-seo-consulting/) service.
 
 ## What original content earns AI citations?
 

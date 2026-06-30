@@ -50,7 +50,7 @@ Links are not just about PageRank anymore. In the context of AI search:
 - **Knowledge graph reinforcement** — Links from Wikipedia, industry directories, and institutional sites strengthen your entity profile in Google's Knowledge Graph and Wikidata — the reference databases AI platforms query
 - **Citation chain building** — AI models follow citation chains: if a trusted publication links to your research, and another publication cites that first publication, your content gains multi-hop authority
 
-This is why we pair link building with content-driven studies — original data assets generate the editorial coverage, and link building ensures the resulting links flow to the right pages with the right context. For the on-site technical foundation, see our [Technical SEO Audit](/services/technical-seo-audit/).
+This is why we pair link building with content-driven studies — original data assets generate the editorial coverage, and link building ensures the resulting links flow to the right pages with the right context. For the on-site technical foundation, see our [Technical SEO Audit](/en/services/technical-seo-audit/).
 
 ## What do you deliver?
 

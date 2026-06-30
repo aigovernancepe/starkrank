@@ -43,7 +43,7 @@ const breadcrumbSchema = {
         />
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {pillarServices.map((service) => (
-            <Card href={getLocalizedNavHref(`/services/${service.data.slug}/`, 'de')}>
+            <Card href={getLocalizedNavHref(`/services/${service.data.slug}/`, 'en')}>
               <h3 class="text-lg font-headline font-bold text-navy">{service.data.title}</h3>
               <p class="mt-2 text-sm font-body text-gray leading-relaxed">{service.data.description}</p>
             </Card>

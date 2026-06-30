@@ -41,7 +41,7 @@ The audit produces a documented report with every finding categorised by impact 
 - A prioritised list of issues ranked by estimated budget impact
 - Specific recommendations for each finding (not generic best practices)
 - Benchmark data showing how your metrics compare to industry standards
-- A 30/60/90-day action plan you can implement yourself or hand to our [Google Ads Management](/services/google-ads-management/) team
+- A 30/60/90-day action plan you can implement yourself or hand to our [Google Ads Management](/en/services/google-ads-management/) team
 
 We also walk you through the findings in a live call, so you can ask questions and understand the reasoning behind each recommendation.
 

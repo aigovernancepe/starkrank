@@ -51,7 +51,7 @@ We implement and validate LocalBusiness schema for every location, including:
 - Price range indicators
 - Aggregate ratings (linked to your review platforms)
 
-For multi-location businesses, each location gets its own page with dedicated schema. This structured data work connects directly to the broader markup strategy covered in our [Technical SEO Audit](/services/technical-seo-audit/). For understanding how local entity data feeds into AI citation decisions, see [AI Search Optimisation](/services/ai-search-optimization/).
+For multi-location businesses, each location gets its own page with dedicated schema. This structured data work connects directly to the broader markup strategy covered in our [Technical SEO Audit](/en/services/technical-seo-audit/). For understanding how local entity data feeds into AI citation decisions, see [AI Search Optimisation](/en/services/ai-search-optimization/).
 
 ## How do reviews affect local AI visibility?
 
