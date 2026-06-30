@@ -41,7 +41,7 @@ The audit report includes:
 - An entity gap analysis showing which topics and subtopics your competitors cover that you do not
 - An AI citability assessment showing which pages are structured for AI extraction and which are not
 - A prioritised rewrite roadmap: which pages to fix first based on traffic potential, conversion impact, and effort required
-- Recommended content briefs for the top-priority pages, ready for your team or our [SEO Copywriting](/services/seo-texterstellung/) service to execute
+- Recommended content briefs for the top-priority pages, ready for your team or our [SEO Copywriting](/en/services/seo-copywriting/) service to execute
 
 ## How is this different from the free assessment?
 

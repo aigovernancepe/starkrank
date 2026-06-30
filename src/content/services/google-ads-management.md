@@ -47,7 +47,7 @@ We do not set up campaigns and check in monthly. Our optimisation cycle runs wee
 - **Bid adjustments** — Based on device, location, time of day, and audience performance data
 - **Search term mining** — Weekly review of actual search queries to add high-performing terms and negative keywords
 - **Ad copy testing** — Continuous A/B tests on headlines, descriptions, and call-to-action variations to improve CTR (click-through rate) and conversion rates
-- **Landing page alignment** — Ensuring the post-click experience matches the ad promise (coordinated with our [Technical Web Design](/services/technical-web-design/) team when needed)
+- **Landing page alignment** — Ensuring the post-click experience matches the ad promise (coordinated with our [Technical Web Design](/en/services/technical-web-design/) team when needed)
 - **Budget reallocation** — Shifting spend from underperforming campaigns to those generating results
 
 ## How do you track conversions and attribute revenue?
@@ -59,7 +59,7 @@ Accurate conversion tracking is non-negotiable. We audit and configure:
 - Google Analytics 4 integration for full-funnel visibility
 - Offline conversion imports for businesses with long sales cycles (connecting ad clicks to CRM outcomes)
 
-Without this foundation, every optimisation decision is guesswork. If your current tracking is incomplete, we fix it before making any campaign changes. For a comprehensive tracking review, see our [Google Analytics Consultancy](/services/google-analytics-consultancy/) service.
+Without this foundation, every optimisation decision is guesswork. If your current tracking is incomplete, we fix it before making any campaign changes. For a comprehensive tracking review, see our [Google Analytics Consultancy](/en/services/google-analytics-consultancy/) service.
 
 ## Do you manage Microsoft Ads (Bing) as well?
 
@@ -76,7 +76,7 @@ Ad copy is not an afterthought — it is the first thing a potential customer se
 - **Responsive search ads** — We provide Google with a range of tested headline and description combinations, then monitor which auto-generated combinations perform best
 - **Landing page alignment** — Ad copy promises are matched to landing page content so users find exactly what they expected. Misalignment is one of the most common causes of poor Quality Scores and high bounce rates
 
-For businesses that need broader content support, our [SEO Copywriting](/services/seo-texterstellung/) service covers website copy, landing pages, and editorial content.
+For businesses that need broader content support, our [SEO Copywriting](/en/services/seo-copywriting/) service covers website copy, landing pages, and editorial content.
 
 ## What does reporting look like?
 

@@ -52,7 +52,7 @@ Design choices that set the performance ceiling:
 - **Interaction patterns** — Designs that rely on heavy client-side state (animated transitions, complex filters, drag-and-drop) push INP up. Choosing static page transitions and server-rendered filters where possible keeps interactivity within budget.
 - **Layout reservations** — Embeds, ads, dynamic content, and async-loaded components need their layout space reserved at design time. CLS regressions are usually traceable to a designsystem that didn't budget space for variable content.
 
-Implementation — performance budgets, build pipelines, monitoring — is covered in our [Performance Web Development](/services/performance-web-development/) service.
+Implementation — performance budgets, build pipelines, monitoring — is covered in our [Performance Web Development](/en/services/performance-web-development/) service.
 
 ## What role does accessibility play in technical web design?
 
@@ -81,7 +81,7 @@ We map structured data to page templates during the design phase:
 - **BreadcrumbList schema** — Navigation hierarchy that helps both users and AI models understand page context
 - **Product and Offer schema** — For e-commerce: pricing, availability, reviews, and specifications
 
-The actual JSON-LD generation, validation, and Rich Results testing happens during build — see our [Performance Web Development](/services/performance-web-development/) service.
+The actual JSON-LD generation, validation, and Rich Results testing happens during build — see our [Performance Web Development](/en/services/performance-web-development/) service.
 
 ## What does the design and build process look like?
 
@@ -89,4 +89,4 @@ The actual JSON-LD generation, validation, and Rich Results testing happens duri
 2. **Architecture and wireframes** — Information architecture, URL structure, internal linking plan, and page wireframes. This phase defines how the site is organised — the foundation everything else builds on.
 3. **Visual design** — Brand-aligned design concepts for key page templates. We design in the browser where possible, testing real performance as we go rather than handing off static mockups.
 
-After design sign-off, the build phase — development, content integration, QA, launch, and post-launch monitoring — is delivered through our [Performance Web Development](/services/performance-web-development/) service. The two phases are typically scoped together so the architectural decisions made during design carry directly into implementation.
+After design sign-off, the build phase — development, content integration, QA, launch, and post-launch monitoring — is delivered through our [Performance Web Development](/en/services/performance-web-development/) service. The two phases are typically scoped together so the architectural decisions made during design carry directly into implementation.

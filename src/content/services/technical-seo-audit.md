@@ -28,7 +28,7 @@ We examine every layer between your server and the search engine's index. The au
 
 Search engine crawlers (Googlebot, Bingbot) and AI crawlers (GPTBot, ClaudeBot, PerplexityBot) must reach your pages before anything else matters. We audit your robots.txt for unintentional blocks, verify XML sitemaps, check internal link architecture for orphaned pages, and analyse server logs to confirm which bots are actually reaching your content.
 
-AI crawlers have distinct user-agent strings and crawl behaviours. Many sites inadvertently block them through overly restrictive robots.txt rules or CDN firewall settings. We identify and resolve these gaps so your content is eligible for both traditional search results and AI-generated answers. For the broader AI search strategy that builds on this technical foundation, see [AI Search Optimisation](/services/ai-search-optimization/).
+AI crawlers have distinct user-agent strings and crawl behaviours. Many sites inadvertently block them through overly restrictive robots.txt rules or CDN firewall settings. We identify and resolve these gaps so your content is eligible for both traditional search results and AI-generated answers. For the broader AI search strategy that builds on this technical foundation, see [AI Search Optimisation](/en/services/ai-search-optimization/).
 
 ## Why does rendering matter for search engines?
 
@@ -56,7 +56,7 @@ The schema types we assess and implement depend on your business:
 - **Service businesses**: Service, FAQPage, HowTo
 - **E-commerce**: Product, Offer, AggregateRating, Review
 - **Publishers**: Article, Author (Person), Speakable
-- **Local businesses**: LocalBusiness with geo-coordinates (covered in depth in our [Local SEO Consulting](/services/local-seo-consulting/) service)
+- **Local businesses**: LocalBusiness with geo-coordinates (covered in depth in our [Local SEO Consulting](/en/services/local-seo-consulting/) service)
 
 Correctly implemented structured data increases your chances of rich snippets in traditional search and direct citation in AI-generated answers. Inconsistencies between visible content and JSON-LD markup can trigger penalties, so accuracy is critical.
 

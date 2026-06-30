@@ -113,5 +113,5 @@ Social media content does not appear in AI search answers. Instagram posts, Face
 
 This is the strongest argument for prioritizing SEO: it's the only marketing channel that serves both traditional Google search AND the emerging AI search ecosystem.
 
-[Read: AI Search Optimization — How It Works →](/services/ai-search-optimization/)
+[Read: AI Search Optimization — How It Works →](/en/services/ai-search-optimization/)
 [Get Your Free AI Search Score →](/aiso-score/)

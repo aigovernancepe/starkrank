@@ -128,9 +128,9 @@ const faqSchema = {
 const schemas = [serviceSchema, faqSchema];
 
 const breadcrumbs = [
-  { label: 'Home', href: '/' },
-  { label: 'Services', href: '/services/' },
-  { label: 'Multi-Location SEO', href: '/services/multi-location-seo/' },
+  { label: 'Home', href: '/en/' },
+  { label: 'Services', href: '/en/services/' },
+  { label: 'Multi-Location SEO', href: '/en/services/multi-location-seo/' },
 ];
 
 const comparisonRows = [
@@ -323,7 +323,7 @@ const comparisonRows = [
                 <h3 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">Related Services</h3>
                 <div class="space-y-3">
                   {relatedServices.map((related) => (
-                    <Card href={`/services/${related.data.slug}/`}>
+                    <Card href={`/en/services/${related.data.slug}/`}>
                       <h4 class="text-sm font-headline font-bold text-navy">{related.data.title}</h4>
                     </Card>
                   ))}

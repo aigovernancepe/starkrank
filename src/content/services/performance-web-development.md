@@ -22,7 +22,7 @@ faq:
   - question: "How do you handle migration from a legacy stack without losing SEO?"
     answer: "We deliver a documented URL migration with a redirect map (old URL → new URL per page), schema continuity (structured data stays consistent), a content audit (what carries over, what merges, what gets dropped), and a roll-forward plan with clear fallback points. Migrations are scoped during discovery so the SEO impact is predictable, not discovered post-launch."
   - question: "What's the difference between web development and web design?"
-    answer: "Web design ([Technical Web Design](/services/technical-web-design/)) decides what gets built — information architecture, URL structure, designsystem, wireframes, accessibility patterns, and the schema strategy. Web development (this service) builds it — frontend code, CMS configuration, performance budgets in CI, DSGVO and consent architecture, structured data implementation, migrations, hosting, and deployment. The two phases are typically scoped together, but each can be engaged independently if you already have one half handled."
+    answer: "Web design ([Technical Web Design](/en/services/technical-web-design/)) decides what gets built — information architecture, URL structure, designsystem, wireframes, accessibility patterns, and the schema strategy. Web development (this service) builds it — frontend code, CMS configuration, performance budgets in CI, DSGVO and consent architecture, structured data implementation, migrations, hosting, and deployment. The two phases are typically scoped together, but each can be engaged independently if you already have one half handled."
   - question: "Do you build e-commerce stores?"
     answer: "Yes. We work primarily with Spryker (for catalogs in the five-figure SKU range, B2B functionality, international rollouts) and Shopware (for mid-size catalogs with DACH focus, faster time-to-market). For headless commerce setups, we integrate Spryker, commercetools, or Shopify Plus with custom Astro or Next.js frontends. Pair with our [E-Commerce SEO Audit](/ecommerce-seo-audit/) to validate catalog hygiene before launch."
   - question: "How do you keep performance high after launch?"
@@ -51,7 +51,7 @@ The result: LCP under 2.5 seconds, CLS under 0.1, INP under 200 milliseconds —
 
 Migration is the right answer when the existing platform creates more cost than value — when updates take weeks instead of days, when new features require disproportionate risk acceptance, when performance issues are baked into platform architecture and cannot be fixed without replacing the foundation. For mid-market companies with ten-year-old TYPO3 or WordPress installs, the trigger is usually new business requirements (e-commerce, configurator, international expansion) hitting the limits of the current platform.
 
-Incremental optimization is the right answer when architecture is sound but execution is lacking — slow images, blocking third-party scripts, missing schema markup, accessibility gaps. We recommend a [Technical SEO Audit](/services/technical-seo-audit/) to make this call honestly: not every slow site needs a rebuild, and not every rebuild fixes the underlying issues.
+Incremental optimization is the right answer when architecture is sound but execution is lacking — slow images, blocking third-party scripts, missing schema markup, accessibility gaps. We recommend a [Technical SEO Audit](/en/services/technical-seo-audit/) to make this call honestly: not every slow site needs a rebuild, and not every rebuild fixes the underlying issues.
 
 ## How do you handle DSGVO compliance and consent architecture?
 
@@ -67,10 +67,10 @@ We build consent and privacy into the site's technical foundation:
 
 For mid-market companies in regulated industries — financial services, healthcare, food, logistics — we deliver a documented compliance package alongside the site, including data-flow diagrams, processor agreements review, and recommendations for the records of processing activities (Verarbeitungsverzeichnis). The site is the technical layer; compliance is a documented, reviewable artifact.
 
-For full analytics implementation that connects measurement to business outcomes, see our [Google Analytics Consultancy](/services/google-analytics-consultancy/) service.
+For full analytics implementation that connects measurement to business outcomes, see our [Google Analytics Consultancy](/en/services/google-analytics-consultancy/) service.
 
 ## What's the typical project timeline?
 
-Discovery and architecture decisions: 2–3 weeks. Designsystem and wireframes (paired with our [Technical Web Design](/services/technical-web-design/) service if not done separately): 3–5 weeks. Implementation: 6–12 weeks depending on scope and integrations. Content integration, testing, and QA: 2–3 weeks. Launch with monitoring setup: 1 week. Total: typically 14–24 weeks from discovery to live.
+Discovery and architecture decisions: 2–3 weeks. Designsystem and wireframes (paired with our [Technical Web Design](/en/services/technical-web-design/) service if not done separately): 3–5 weeks. Implementation: 6–12 weeks depending on scope and integrations. Content integration, testing, and QA: 2–3 weeks. Launch with monitoring setup: 1 week. Total: typically 14–24 weeks from discovery to live.
 
 E-commerce projects with custom integrations or B2B functionality run longer (16–32 weeks). Marketing site rebuilds with limited custom logic land at the shorter end. We provide a detailed milestone plan during discovery, with clear gates for design approval, dev sprints, content integration, testing, and launch readiness.

@@ -43,7 +43,7 @@ Privacy regulations (GDPR, revDSG, ePrivacy) are not optional, and they directly
 - **Server-side tagging** — We deploy Google Tag Manager server-side containers that move data collection from the user's browser to your own server infrastructure. This reduces third-party cookie dependency, improves data accuracy (ad blockers cannot block first-party server requests), and gives you full control over what data leaves your domain.
 - **Data retention and anonymisation** — Configured to meet your regulatory requirements, with IP anonymisation, data retention periods, and user deletion workflows properly set up.
 
-Your analytics must work within the consent framework your site uses. For consent architecture built into your site from the ground up, see our [Technical Web Design](/services/technical-web-design/) service.
+Your analytics must work within the consent framework your site uses. For consent architecture built into your site from the ground up, see our [Technical Web Design](/en/services/technical-web-design/) service.
 
 ## How do you configure Google Tag Manager for reliable tracking?
 
@@ -66,7 +66,7 @@ We build custom tracking to identify and measure AI traffic:
 - **AI Overviews attribution** — Where possible, we segment clicks that originate from Google's AI Overview results versus traditional organic listings.
 - **AI-specific landing page analysis** — Which of your pages are receiving AI-referred traffic? This reveals which content AI platforms are citing and helps prioritise your content strategy.
 
-This data feeds directly into the measurability dimension of your AI Search Optimization Score. For a full AI visibility strategy, see our [AI Search Optimisation](/services/ai-search-optimization/) service.
+This data feeds directly into the measurability dimension of your AI Search Optimization Score. For a full AI visibility strategy, see our [AI Search Optimisation](/en/services/ai-search-optimization/) service.
 
 ## What is BigQuery integration and why does it matter?
 
@@ -100,4 +100,4 @@ Training is delivered live, recorded for reference, and tailored to your team's 
 - You cannot see how much traffic comes from AI platforms versus traditional search
 - Your marketing team makes decisions based on gut instinct because they do not trust the analytics
 - You need to connect analytics data with CRM or advertising data for unified reporting
-- You are launching a new website and want measurement configured correctly from day one — alongside your [Technical Web Design](/services/technical-web-design/) build
+- You are launching a new website and want measurement configured correctly from day one — alongside your [Technical Web Design](/en/services/technical-web-design/) build
