@@ -94,7 +94,7 @@ Was Sie nicht erwarten sollten: Top-Rankings in den ersten 30 Tagen — neue Inh
 
 Ein Content-Marketing-Retainer lohnt sich typischerweise für:
 
-- **B2B-Unternehmen mit langen Verkaufszyklen und erklärungsbedürftigen Produkten.** Content begleitet den Kaufentscheider über Wochen oder Monate — von der ersten Recherche bis zum Vertriebsgespräch.
+- **[B2B-Unternehmen](/b2b-seo/) mit langen Verkaufszyklen und erklärungsbedürftigen Produkten.** Content begleitet den Kaufentscheider über Wochen oder Monate — von der ersten Recherche bis zum Vertriebsgespräch.
 - **Dienstleister in wettbewerbsintensiven Märkten.** Organische Sichtbarkeit entscheidet, ob Sie als austauschbarer Anbieter oder als erste zitierte Quelle in einer KI-Antwort auftauchen.
 - **Unternehmen, die mit Paid-Kanälen an die Wachstumsgrenze stossen.** Wenn Google Ads und LinkedIn Ads nicht mehr skalieren, soll organische Sichtbarkeit plus KI-Suche die nächste Wachstumsphase tragen.
 - **Unternehmen mit echten Experten im Haus, deren Wissen bisher nicht systematisch verschriftlicht wurde.** Die Kombination aus [Expertenbibliothek](/expertenbibliothek/) und Content-Marketing-Retainer ist hier der grösste Hebel.
