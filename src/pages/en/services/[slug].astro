@@ -77,8 +77,6 @@ const webPageSchema = {
 
 const schemas = [webPageSchema, serviceSchema, ...(faqSchema ? [faqSchema] : [])];
 
-const isAISO = service.data.slug === 'ai-search-optimization';
-
 const breadcrumbs = [
   { label: 'Home', href: '/en/' },
   { label: 'Services', href: '/en/services/' },
@@ -148,7 +146,7 @@ const breadcrumbs = [
         )}
 
         <div class="mt-12">
-          <Button href="/en/contact/" variant="primary" size="lg">{isAISO ? 'Request Your Free AI Visibility Assessment' : 'Book an intro call with StarkRank'}</Button>
+          <Button href="/en/contact/" variant="primary" size="lg">Book an intro call with StarkRank</Button>
         </div>
       </div>
 
@@ -206,13 +204,7 @@ const breadcrumbs = [
     </Section>
   )}
 
-  {isAISO ? (
-    <CTABanner bg="navy" title="How AI-Ready Is Your Website?" subtitle="Request a free initial assessment and find out where you stand — before your competitors do. For a full six-dimension AI Search Optimization Score audit, ask about our diagnostic.">
-      <Button href="/en/contact/" variant="primary" size="lg">Request Your Free Assessment</Button>
-    </CTABanner>
-  ) : (
-    <CTABanner bg="navy" title="Ready to Grow?" subtitle="Book a free consultation to discuss your digital strategy.">
-      <Button href="/en/contact/" variant="primary" size="lg">Contact Us</Button>
-    </CTABanner>
-  )}
+  <CTABanner bg="navy" title="Ready to Grow?" subtitle="Book a free consultation to discuss your digital strategy.">
+    <Button href="/en/contact/" variant="primary" size="lg">Contact Us</Button>
+  </CTABanner>
 </BaseLayout>
