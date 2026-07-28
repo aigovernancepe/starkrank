@@ -39,6 +39,10 @@ schemaMentions:
   - "Gebotsstrategien"
   - "Consent Mode v2"
   - "Server-Side-Tagging"
+  - "Kontostruktur"
+  - "Impression Share"
+  - "Customer Match"
+  - "Anzeigenerweiterungen"
 faq:
   - question: "Was kostet ein Google Ads Audit in der Schweiz?"
     answer: "Der Erst-Check Ihres Kontos ist kostenlos und zeigt die grössten Budgetlecks. Das vollständige Audit mit umsetzbarem Massnahmenplan ist eine bezahlte Leistung; den Preis nennen wir nach dem Erst-Check, weil er von Kontogrösse und Kampagnenzahl abhängt. Kein Preis als Verkaufshürde — Sie wissen vorher, was Sie bekommen."
@@ -58,21 +62,21 @@ Ein Google Ads Audit prüft Ihr Werbekonto systematisch darauf, wo Budget verlor
 
 StarkRank arbeitet nach einem offen dokumentierten Verfahren statt nach einem Blackbox-Report. Den kostenlosen [Erst-Check](/ch-de/kostenloser-google-ads-check/) führen wir auf Wunsch auch ohne Zugang zu Ihrem Konto durch — über öffentliche Wettbewerbs- und Marktdaten. So beantworten wir auch die Vorfrage, ob sich Google Ads für Sie überhaupt lohnt, bevor Sie ein erstes Budget einsetzen.
 
-## Was umfasst ein Google Ads Audit bei StarkRank?
+## Welche Bereiche prüft ein Google Ads Audit?
 
-Ein Google Ads Audit prüft Ihr Konto in neun Bereichen und zeigt, wo Werbebudget verloren geht. StarkRank arbeitet nach einem offen dokumentierten Verfahren — kein Blackbox-Report, sondern eine nachvollziehbare Methode, die Sie vor und nach der Buchung einsehen können.
+Ein Google Ads Audit prüft ein Werbekonto in neun Bereichen und zeigt, wo Werbebudget verloren geht.
 
-- **Sauber getrennte Kampagnen** — sind Kampagnen und Anzeigengruppen klar getrennt, oder konkurrieren sie um dasselbe Budget?
-- **Wofür Ihr Geld wirklich ausgegeben wird** — zahlen Sie für irrelevante Klicks, weil teure Fehlbegriffe nicht als Negativ-Keywords ausgeschlossen sind?
-- **Werden Anfragen korrekt und rechtssicher gezählt?** — misst Ihr Konto Conversions überhaupt richtig, und revDSG-konform?
-- **Bestehende Kundendaten nutzen** — setzen Sie vorhandene Kundendaten (CRM) ein, um Streuverluste zu senken?
-- **Zahlen Sie pro Klick einen Aufpreis?** — passt die Anzeige zur Suche, oder belastet ein tiefer Qualitätsfaktor jeden Klick?
-- **Kostenlose Zusatz-Sichtbarkeit** — schöpfen Sie gratis Anzeigenflächen (Sitelinks, Anruf, Standort) aus?
-- **Führen die Zielseiten zur Anfrage?** — laden die Landingpages schnell und mobil stabil, und konvertieren sie?
-- **Fliesst Budget in die richtigen Kampagnen?** — geht Geld in Kampagnen, die ihr Ziel verfehlen, statt in die, die liefern?
-- **Strategie statt Blackbox** — laufen Smart Bidding und Performance Max gesteuert, oder ungeprüft automatisch?
+- **Kontostruktur** — Prüfung, ob Kampagnen und Anzeigengruppen sauber getrennt sind und nicht um dasselbe Budget bieten. Konkurrieren Ihre eigenen Kampagnen gegeneinander?
+- **Suchbegriffe und Negativ-Keywords** — Auswertung der tatsächlichen Suchanfragen und der Negativ-Keyword-Basis auf teure Fehlbegriffe. Wofür wird Ihr Geld wirklich ausgegeben?
+- **Conversion-Tracking** — Überprüfung der Anfrage-Messung auf Vollständigkeit und revDSG-Konformität. Werden Ihre Anfragen korrekt und rechtssicher gezählt?
+- **Zielgruppendaten (Customer Match)** — Analyse, ob vorhandene Kundendaten aus dem CRM zur Senkung von Streuverlusten eingesetzt werden. Nutzen Sie, was Sie über Ihre Kunden längst wissen?
+- **Qualitätsfaktor** — Bewertung der Übereinstimmung von Keyword, Anzeigentext und Zielseite. Zahlen Sie pro Klick einen Aufpreis, weil die Anzeige nicht zur Suche passt?
+- **Anzeigenerweiterungen** — Prüfung der Ausschöpfung kostenloser Anzeigenfläche über Sitelinks, Anruf- und Standort-Erweiterungen. Verschenken Sie Sichtbarkeit, die nichts kostet?
+- **Landingpage-Qualität** — Messung von Ladezeit, Mobil-Stabilität und Conversion-Pfad der Zielseiten. Führen Ihre Zielseiten überhaupt zur Anfrage?
+- **Budget-Allokation und Impression Share** — Analyse der Budgetverteilung sowie der Anteilsverluste durch Budget, Rang und Auktion. Fliesst Geld in Kampagnen, die ihr Ziel verfehlen?
+- **Gebotsstrategie und Performance Max** — Beurteilung, ob Smart Bidding und automatisierte Kampagnen gesteuert laufen oder ungeprüft. Läuft die Automatisierung für Sie oder an Ihnen vorbei?
 
-Jeder Befund bekommt eine Einstufung nach Schweregrad, eine konkrete Fix-Empfehlung und eine Schätzung des erwarteten Effekts. Die topische Vollständigkeit über Gebotsstrategien, Anzeigengruppen und Conversion-Tracking bleibt erhalten, ohne dass Sie für jeden Begriff ein Fachwörterbuch brauchen.
+StarkRank arbeitet diese neun Bereiche nach einem offen dokumentierten Verfahren ab — kein Blackbox-Report, sondern eine Methode, die Sie vor und nach der Buchung einsehen können. Jeder Befund bekommt eine Einstufung nach Schweregrad, eine konkrete Fix-Empfehlung und eine Schätzung des erwarteten Effekts. Die Fachbegriffe stehen dabei bewusst dort, wo sie hingehören: Sie sollen nachvollziehen können, was geprüft wurde, ohne sich durch einen Report zu kämpfen, der Fachsprache als Beleg für Aufwand einsetzt.
 
 ## Wie läuft ein Google Ads Audit bei StarkRank ab?
 
