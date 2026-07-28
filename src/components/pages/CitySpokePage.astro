@@ -781,6 +781,10 @@ const allSchemas = [
   )}
 
   <CTABanner bg="navy" title={ctaTitle} subtitle={t('spoke.bookConsultation', locale)}>
-    <Button href={ctaHref} variant="primary" size="lg">{t('spoke.getStarted', locale)}</Button>
+    {/* Label muss zum Ziel passen: AISO-Spokes führen auf den AI-Search-Check,
+        alle anderen auf das Kontaktformular. */}
+    <Button href={ctaHref} variant="primary" size="lg">
+      {t(isAISO ? 'spoke.getStartedCheck' : 'spoke.getStarted', locale)}
+    </Button>
   </CTABanner>
 </BaseLayout>
