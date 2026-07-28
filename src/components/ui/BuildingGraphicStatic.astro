@@ -51,6 +51,12 @@ const mobileFontSize = isPe ? '22' : '30';
 // Mobile accordion: only when panels are passed and we're not in linked mode.
 const accordion = !linked && Array.isArray(panels) && panels.length > 0;
 const panelCta = t('cta.learnMore', locale);
+// Sichtbar bleibt "Mehr erfahren"; der Accessible Name trägt den Baustein, damit
+// die fünf Panel-Links im Accessibility Tree unterscheidbar sind.
+const panelCtaAria = (name: string) =>
+  isEn ? `Learn more about ${name}`
+  : isPe ? `Más información sobre ${name}`
+  : `Mehr über ${name} erfahren`;
 
 // Wrapper element per block: clickable <a> when linked, plain <g> otherwise (the
 // accordion turns the <g> into a button via role/tabindex attrs, not a tag swap).
@@ -336,7 +342,7 @@ function mobileAttrs(id: string) {
         <span class="block text-xs font-label font-semibold uppercase tracking-[0.2em] text-blue">{p.tagline}</span>
         <h3 class="mt-1 text-lg font-headline font-black tracking-tight text-navy">{p.name}</h3>
         <p class="mt-2 text-sm text-gray font-body leading-relaxed">{p.description}</p>
-        <a href={p.href} class="mt-3 inline-flex items-center text-sm font-label font-semibold uppercase tracking-wide text-blue">
+        <a href={p.href} aria-label={panelCtaAria(p.name)} class="mt-3 inline-flex items-center text-sm font-label font-semibold uppercase tracking-wide text-blue">
           {panelCta}
           <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
         </a>

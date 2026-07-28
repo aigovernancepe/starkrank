@@ -81,7 +81,8 @@ export const chde: Record<string, string> = {
   'spoke.contactIn': 'Kontaktieren Sie uns in {city}',
   'spoke.growBusiness': 'Wachsen Sie in {city}',
   'spoke.bookConsultation': 'Buchen Sie eine kostenlose Erstberatung mit unserem lokalen Team.',
-  'spoke.getStarted': 'Jetzt starten',
+  'spoke.getStarted': 'Erstgespräch mit StarkRank vereinbaren',
+  'spoke.getStartedCheck': 'Kostenlosen AI-Search-Check anfordern',
   'spoke.home': 'Startseite',
 
   // Cookie Consent

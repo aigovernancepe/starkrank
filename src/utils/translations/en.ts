@@ -87,7 +87,8 @@ export const en: Record<string, string> = {
   'spoke.contactIn': 'Contact Us in {city}',
   'spoke.growBusiness': 'Grow Your {city} Business',
   'spoke.bookConsultation': 'Book a free consultation with our local team.',
-  'spoke.getStarted': 'Get Started',
+  'spoke.getStarted': 'Book an intro call with StarkRank',
+  'spoke.getStartedCheck': 'Request your free AI Search check',
   'spoke.home': 'Home',
 
   // Cookie Consent

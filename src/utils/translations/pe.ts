@@ -81,7 +81,8 @@ export const pe: Record<string, string> = {
   'spoke.contactIn': 'Contáctanos en {city}',
   'spoke.growBusiness': 'Haz Crecer tu Negocio en {city}',
   'spoke.bookConsultation': 'Agenda una consulta gratuita con nuestro equipo local.',
-  'spoke.getStarted': 'Empezar',
+  'spoke.getStarted': 'Agenda una primera reunión con StarkRank',
+  'spoke.getStartedCheck': 'Solicita tu chequeo de búsqueda IA gratuito',
   'spoke.home': 'Inicio',
 
   // Cookie Consent
