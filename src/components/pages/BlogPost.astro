@@ -168,13 +168,13 @@ const defaultCtaSubtitleMap: Record<string, string> = { en: 'Get a clear picture
 
             {relatedPosts.length > 0 && (
               <div>
-                <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">
+                <h2 class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">
                   {relatedLabelMap[locale]}
-                </p>
+                </h2>
                 <div class="space-y-3">
                   {relatedPosts.map((related) => (
                     <Card href={`${blogBasePath}/${related.id}/`}>
-                      <h4 class="text-sm font-headline font-bold text-navy">{related.data.title}</h4>
+                      <h3 class="text-sm font-headline font-bold text-navy">{related.data.title}</h3>
                     </Card>
                   ))}
                 </div>
