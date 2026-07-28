@@ -4,9 +4,11 @@ interface Props {
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   class?: string;
+  // Alles Weitere (aria-label, target, rel, data-*) wird durchgereicht.
+  [key: string]: unknown;
 }
 
-const { href, variant = 'primary', size = 'md', class: className = '' } = Astro.props;
+const { href, variant = 'primary', size = 'md', class: className = '', ...rest } = Astro.props;
 
 const base = 'inline-flex items-center justify-center font-label font-semibold uppercase tracking-wide transition-all rounded-md';
 
@@ -27,6 +29,6 @@ const classes = [base, variants[variant], sizes[size], className];
 const Tag = href ? 'a' : 'button';
 ---
 
-<Tag href={href} class:list={classes}>
+<Tag href={href} class:list={classes} {...rest}>
   <slot />
 </Tag>
