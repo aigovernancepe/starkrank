@@ -58,21 +58,51 @@ export function getLangAttribute(locale: Locale): string {
   return localeConfig[locale].lang;
 }
 
+/** The one page per locale that is a genuine translation of the others. */
+const localeRoots: Record<Locale, string> = {
+  de: '/',
+  'ch-de': '/ch-de/',
+  en: '/en/',
+  pe: '/pe/',
+};
+
+/** Global fallback for unmatched languages. DE-first, see the de-first pivot. */
+const xDefaultPath = localeRoots.de;
+
 /**
  * Get hreflang alternates for a given pathname.
- * Only returns alternates for pages that exist (based on locale-specific logic).
+ *
+ * Only the four locale roots form a real cross-locale cluster — they get the
+ * full set plus x-default. Every other page emits a self-reference only.
+ *
+ * x-default deliberately does NOT appear outside that cluster: most pages have
+ * no equivalent in another locale (EN runs in caretaker mode, not parity), and
+ * a self-referential x-default would make every page claim the global-fallback
+ * role at once, which is how this previously produced 179 competing
+ * declarations and no usable cluster anywhere.
  */
 export function getHreflangAlternates(
   pathname: string,
   site: string
 ): Array<{ hreflang: string; href: string }> {
-  const currentLocale = getCurrentLocaleFromPath(pathname);
-  const config = localeConfig[currentLocale];
-  const alternates: Array<{ hreflang: string; href: string }> = [
-    { hreflang: config.hreflang, href: `${site}${pathname}` },
-    { hreflang: 'x-default', href: `${site}${pathname}` },
-  ];
-  return alternates;
+  // The error page is not a locale variant of anything.
+  if (pathname === '/404/' || pathname === '/404') return [];
+
+  const rootEntries = Object.entries(localeRoots) as Array<[Locale, string]>;
+  const isLocaleRoot = rootEntries.some(([, path]) => path === pathname);
+
+  if (isLocaleRoot) {
+    return [
+      ...rootEntries.map(([locale, path]) => ({
+        hreflang: localeConfig[locale].hreflang,
+        href: `${site}${path}`,
+      })),
+      { hreflang: 'x-default', href: `${site}${xDefaultPath}` },
+    ];
+  }
+
+  const config = localeConfig[getCurrentLocaleFromPath(pathname)];
+  return [{ hreflang: config.hreflang, href: `${site}${pathname}` }];
 }
 
 function getCurrentLocaleFromPath(path: string): Locale {

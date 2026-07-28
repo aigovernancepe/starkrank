@@ -119,6 +119,14 @@
 /free-google-ads-audit/              /en/free-google-ads-audit/                  301
 /free-copywriting-audit/             /en/free-copywriting-audit/                 301
 /blog/                               /en/blog/                                   301
+# German articles live under /de/blog/ — these MUST sit above the /blog/*
+# wildcard, which would otherwise send them to a non-existent /en/blog/ path.
+/blog/seo-kosten/                    /de/blog/seo-kosten/                        301
+/blog/seo-vs-google-ads-de/          /de/blog/seo-vs-google-ads-de/              301
+/blog/seo-agentur-auswaehlen/        /de/blog/seo-agentur-auswaehlen/            301
+/blog/b2b-ki-sichtbarkeit/           /de/blog/b2b-ki-sichtbarkeit/               301
+/blog/google-ai-overviews/           /de/blog/google-ai-overviews/               301
+/blog/generative-engine-optimization/ /de/blog/generative-engine-optimization/   301
 /blog/*                              /en/blog/:splat                             301
 
 # Specific /services/* rewrites MUST sit above the /services/* wildcard

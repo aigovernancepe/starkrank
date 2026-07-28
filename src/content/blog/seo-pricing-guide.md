@@ -155,5 +155,5 @@ AI search optimization is a new line item that didn't exist two years ago. Here'
 
 Agencies that don't offer any AI search optimization are pricing themselves out of relevance. By 2027, this won't be a separate line item — it'll be table stakes.
 
-[Read: How to Choose an SEO Agency →](/blog/how-to-choose-seo-agency/)
+[Read: How to Choose an SEO Agency →](/en/blog/how-to-choose-seo-agency/)
 [Get Your Free AI Search Score →](/aiso-score/)
