@@ -371,7 +371,7 @@ const comparisonRows = [
           <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Shared account manager</li>
         </ul>
         <p class="text-2xl font-headline font-black text-navy mb-4">$1,500/location/mo</p>
-        <Button href="/en/contact/" variant="primary" size="md">Get Started</Button>
+        <Button href="/en/contact/" variant="primary" size="md">Get started with Growth</Button>
       </div>
 
       <!-- Enterprise -->
@@ -391,7 +391,7 @@ const comparisonRows = [
           <li class="flex items-start gap-2"><span class="text-blue font-bold shrink-0">-</span> Dedicated account manager</li>
         </ul>
         <p class="text-2xl font-headline font-black text-navy mb-4">$500-1,000/location/mo</p>
-        <Button href="/en/contact/" variant="primary" size="md">Let's Talk</Button>
+        <Button href="/en/contact/" variant="primary" size="md">Let's talk about Enterprise</Button>
       </div>
     </div>
 
@@ -426,8 +426,10 @@ const comparisonRows = [
           </tr>
           <tr>
             <td></td>
-            <td class="py-3 px-4 text-center"><Button href="/en/contact/" variant="ghost" size="sm">Get Started</Button></td>
-            <td class="py-3 px-4 text-center"><Button href="/en/contact/" variant="ghost" size="sm">Let's Talk</Button></td>
+            {/* Zellen sind zu schmal für ausgeschriebene Labels — der Plan steckt
+                deshalb im aria-label, sichtbar bleibt der kurze Text. */}
+            <td class="py-3 px-4 text-center"><Button href="/en/contact/" variant="ghost" size="sm" aria-label="Get started with the Growth plan">Get Started</Button></td>
+            <td class="py-3 px-4 text-center"><Button href="/en/contact/" variant="ghost" size="sm" aria-label="Talk to us about the Enterprise plan">Let's Talk</Button></td>
           </tr>
         </tbody>
       </table>
