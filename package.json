@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "(git rev-parse --is-shallow-repository 2>/dev/null | grep -q true && git fetch --unshallow 2>/dev/null) || true && astro build && node scripts/inject-sitemap-lastmod.mjs",
     "preview": "astro preview",
-    "salience": "node scripts/salience-verify.mjs"
+    "salience": "node scripts/salience-verify.mjs",
+    "a11y": "node scripts/a11y-audit.mjs"
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,8 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "parse5": "^7.3.0"
   }
 }
