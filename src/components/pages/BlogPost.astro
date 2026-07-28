@@ -140,7 +140,7 @@ const defaultCtaSubtitleMap: Record<string, string> = { en: 'Get a clear picture
         <aside class="lg:col-span-1">
           <div class="lg:sticky lg:top-8 space-y-6">
             {tocHeadings.length > 0 && (
-              <nav class="bg-cream border border-gray-light/40 rounded-lg p-6">
+              <nav aria-label={tocLabelMap[locale]} class="bg-cream border border-gray-light/40 rounded-lg p-6">
                 <p class="text-xs font-label font-bold uppercase tracking-widest text-blue mb-4">
                   {tocLabelMap[locale]}
                 </p>
