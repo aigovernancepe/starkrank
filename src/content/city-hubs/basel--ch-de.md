@@ -4,9 +4,9 @@ locale: "ch-de"
 title: "SEO & Online Marketing Agentur in Basel"
 description: "SEO- und Marketing-Agentur für Basler Unternehmen — Webdesign, Webagentur, Lokale SEO, Google Ads. Trinational, revDSG-konform. Kostenlose Erstberatung."
 heroHeadline: "SEO & Online Marketing **Agentur in Basel**"
-heroLede: "Lokale digitale Sichtbarkeit für Basler KMU — von Webdesign über Webagentur bis Google Ads."
+heroLede: "Digitale Sichtbarkeit für Basler Pharma-, Logistik- und Industriebetriebe — auch über die Landesgrenze hinweg, revDSG-konform."
 servicesTitle: "Dienstleistungen"
-servicesIntro: "Wir konzentrieren uns auf die Bereiche, in denen Basler Unternehmen die höchste Suchnachfrage und den klarsten Hebel haben — datenbasiert ausgewählt, nicht durch Template-Mirror entschieden."
+servicesIntro: "Diese Bereiche haben in Basel die höchste Suchnachfrage. Weitere Leistungen — KI-Suchoptimierung, Content-Marketing, strategischer Linkaufbau — übernehmen wir für Basler Mandate ebenfalls, nur ohne eigene Landingpage dafür."
 featuredServices:
   - "technical-seo-audit"
   - "technical-web-design"
@@ -30,7 +30,7 @@ whyParagraphs:
   - "Als Spezialagentur für klassische und KI-gestützte Suche bauen wir Ihre Marke parallel in Google-Trefferlisten und in den generierten Antworten von ChatGPT, Perplexity und Google AI Overviews auf. Das ist der Suchkanal, der die nächste Welle der B2B-Beschaffungs-Recherche definiert — und der Hebel, in dem Basler Unternehmen noch fast vollständig blind sind."
 faq:
   - question: "Was kostet SEO und Online-Marketing in Basel?"
-    answer: "Die kostenlose Erstberatung ist unverbindlich. Das SEO Audit startet bei 1'800 CHF (Standard, bis 1'000 URLs), Mittelstand 3'000 CHF, Enterprise ab 5'000 CHF. Ein E-E-A-T Audit liegt bei 1'500 CHF, spezialisierte E-Commerce-SEO-Audits zwischen 2'500 und 4'000 CHF. Laufende Betreuung im Retainer-Modell startet bei 1'190 CHF/Monat (Einzelunternehmen und KMU), Mittelstandsband 3'000–5'000 CHF/Monat, Enterprise ab 6'000 CHF/Monat. Vollständige Bänder transparent unter /ch-de/preise/seo/."
+    answer: "Das SEO Audit kostet 1'800 CHF als Festpreis, ein E-E-A-T Audit 1'500 CHF. Laufende Betreuung startet bei 1'190 CHF/Monat, Basler Mandate liegen meist im Mittelstandsband von 3'000–5'000 CHF/Monat. Mehrsprachige Setups für den deutschen und französischen Markt liegen darüber. Alle Bänder unter /ch-de/preise/seo/."
   - question: "Arbeitet StarkRank mit Basler Pharma- und Life-Sciences-Unternehmen?"
     answer: "Ja, mit den Einschränkungen, die der Sektor erfordert. Wir betreuen Pharma- und Life-Sciences-Anbieter in Compliance-konformen Strukturen — keine Heilversprechen, klare Trennung von Fach- und Laienkommunikation, regulatorisch validierte Inhaltspfade. Reine Heilmittelwerbung mit OTC-Fokus ist nicht unser Kernsegment; B2B-Pharma, Forschungsdienstleister und Zulieferer sehr wohl."
   - question: "Hat StarkRank ein Büro in Basel?"
@@ -50,7 +50,7 @@ cta: "Kostenlose Erstberatung für Basel anfordern"
 
 Eine SEO-Agentur in Basel baut digitale Sichtbarkeit für Unternehmen mit regionalem oder trinationalem Marktfokus auf — vom [SEO Audit Basel](/ch-de/seo-audit-basel/) über Content-Strategie und Linkaufbau bis zur lokalen Optimierung für Google Maps, Bing Maps und KI-Antworten. StarkRank verbindet das mit einer Spezialisierung auf B2B-Mittelstand, Pharma, Logistik und industrielle Hightech.
 
-Konkret bedeutet das: Wir analysieren, wo Ihre Basler Zielgruppe heute sucht — Google, LinkedIn, branchenspezifische Plattformen, KI-Tools wie ChatGPT oder Perplexity. Daraus entsteht eine Roadmap mit klaren Meilensteinen, statt einer generischen Standard-Empfehlung. Pharma-Anbieter brauchen regulatorisch validierte Content-Pfade und mehrsprachige Pflichtangabenlogik; Speditionen eine grenzüberschreitende Long-Tail-Optimierung; Hidden Champions vor allem Sichtbarkeitsaufbau, der zur tatsächlichen technischen Marktposition passt.
+Der Einstieg ist immer dieselbe Frage: Wo sucht Ihre Basler Zielgruppe heute tatsächlich — und in welchem Länder-Index landet sie dabei? Daraus ergibt sich, welche Sprachversion welche Arbeit zuerst braucht. Pharma-Anbieter brauchen regulatorisch validierte Content-Pfade und mehrsprachige Pflichtangabenlogik; Speditionen eine grenzüberschreitende Long-Tail-Optimierung; Hidden Champions vor allem Sichtbarkeitsaufbau, der zur tatsächlichen technischen Marktposition passt.
 
 </details>
 
@@ -60,11 +60,11 @@ Konkret bedeutet das: Wir analysieren, wo Ihre Basler Zielgruppe heute sucht —
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
-Basler B2B-Entscheider verwenden drei Kanäle parallel — Google für die Long List ("Webdesign Basel", "SEO Agentur Basel"), LinkedIn für die Verifikation des Anbieter-Profils, und zunehmend KI-Tools wie ChatGPT oder Perplexity für die Vorrecherche. Die Reihenfolge hängt von der Anschaffungsgrösse ab.
+Basler B2B-Entscheider verwenden drei Kanäle parallel — Google für die Long List ("Webdesign Basel", "SEO Agentur Basel"), LinkedIn für die Verifikation des Anbieter-Profils, und zunehmend KI-Tools wie ChatGPT oder Perplexity für die Vorrecherche. Im Dreiländereck kommt erschwerend dazu, dass dieselbe Recherche je nach Standort des Suchenden auf google.ch, google.de oder google.fr läuft und dort unterschiedliche Ergebnisse liefert.
 
-Bei Aufträgen unter 10'000 CHF landet die Mehrheit direkt bei Google-Suchen mit Stadt-Bezug. Bei grösseren Mandaten kommt ein zusätzlicher Schritt dazu: eine erste Vorauswahl über KI-Tools, gefolgt von gezielter LinkedIn-Recherche zur Validierung der Anbieter — und erst danach der Direktkontakt. Wer in keiner dieser drei Schichten sichtbar ist, kommt erst gar nicht in den Auswahl-Trichter.
+Bei kleineren Aufträgen genügt der Stadt-Bezug in der Suche. Grössere Mandate durchlaufen zusätzlich eine KI-gestützte Vorauswahl und eine Profilprüfung auf LinkedIn. Für Basler Anbieter mit deutschen oder französischen Kunden heisst das: Diese Kette muss in jedem der drei Länder-Indizes funktionieren, nicht nur im Schweizer.
 
-Für Basler Pharma- und Life-Sciences-Unternehmen kommt eine vierte Schicht dazu: spezialisierte Branchen- und Beschaffungs-Plattformen sowie internationale Forschungs-Verzeichnisse, in denen Sichtbarkeit oft mehr zählt als das Google-Ranking. Wir bauen Präsenz in allen vier Schichten auf, weil die Conversion erst entsteht, wenn alle Touchpoints konsistent sind.
+Für Basler Pharma- und Life-Sciences-Unternehmen kommt eine vierte Schicht dazu: spezialisierte Branchen- und Beschaffungs-Plattformen sowie internationale Forschungs-Verzeichnisse, in denen Sichtbarkeit oft mehr zählt als das Google-Ranking. Gerade bei internationalen Einkäufern ist das häufig der erste Kontaktpunkt überhaupt — noch vor der Website.
 
 </details>
 
@@ -74,10 +74,8 @@ Für Basler Pharma- und Life-Sciences-Unternehmen kommt eine vierte Schicht dazu
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
-Das SEO Audit startet bei 1'800 CHF als Festpreis (Standard-Setup bis 1'000 URLs) und ist der typische Einstieg für Basler Unternehmen, die ihre digitale Sichtbarkeit zum ersten Mal systematisch prüfen lassen. Ein E-E-A-T Audit kostet 1'500 CHF, spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2'500 CHF (Kataloge bis 1'000 SKUs) und 4'000 CHF (Enterprise mit 10'000+ SKUs).
+Das SEO Audit kostet 1'800 CHF als Festpreis (Standard-Setup bis 1'000 URLs). Ein E-E-A-T Audit — Experience, Expertise, Authoritativeness, Trustworthiness, also die Signale, an denen Google und KI-Systeme Quellen gewichten — liegt bei 1'500 CHF. Spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2'500 CHF (Kataloge bis 1'000 SKUs) und 4'000 CHF (Enterprise mit 10'000+ SKUs).
 
-Für laufende Betreuung im Retainer-Modell veröffentlichen wir drei Bänder: ab 1'190 CHF/Monat für Einzelunternehmen und KMU, 3'000–5'000 CHF/Monat für klassischen Mittelstand, ab 6'000 CHF/Monat für Enterprise- und Multi-Standort-Mandate. Basler Unternehmen landen typischerweise im Mittelstands-Band, je nach Anzahl betreuter Kanäle und Geschwindigkeit der Umsetzung. Die vollständigen Bänder mit Leistungsumfang stehen unter [/ch-de/preise/seo/](/ch-de/preise/seo/) — keine Tagessätze, keine versteckten Setup-Kosten, keine "Beratungsstunden" auf Verdacht.
-
-Für Basler Unternehmen mit knappem Budget oder erstmaligem SEO-Engagement empfehlen wir oft, mit einem abgegrenzten Audit (ab 1'800 CHF technisch oder 1'500 CHF E-E-A-T) plus umsetzbarer Roadmap zu starten — statt direkt in einen Retainer einzusteigen. So testen Sie Arbeitsweise und Wirkung, bevor Sie sich monatlich binden.
+Für laufende Betreuung gelten drei Retainer-Bänder: ab 1'190 CHF/Monat für Einzelunternehmen und KMU, 3'000–5'000 CHF/Monat für klassischen Mittelstand, ab 6'000 CHF/Monat für Enterprise- und Multi-Standort-Mandate. Basler Mandate landen meist im Mittelstands-Band. Kommt eine zweite oder dritte Sprachversion für den deutschen und französischen Markt dazu, verschiebt sich das nach oben — Mehrsprachigkeit ist der Faktor, der Basler Projekte am häufigsten teurer macht als vergleichbare Mandate in der übrigen Deutschschweiz. Der vollständige Leistungsumfang je Band steht unter [/ch-de/preise/seo/](/ch-de/preise/seo/).
 
 </details>

@@ -4,9 +4,9 @@ locale: "de"
 title: "SEO & Online Marketing Agentur in Hannover"
 description: "SEO- und Marketing-Agentur für Hannoveraner Unternehmen — Webagentur, Webdesign, Lokale SEO, Google Ads, KI-Suchoptimierung. Kostenlose Erstberatung."
 heroHeadline: "SEO & Online Marketing **Agentur in Hannover**"
-heroLede: "Lokale digitale Sichtbarkeit für Hannoveraner Mittelstand — von Webagentur über Lokale SEO bis KI-Suchoptimierung."
+heroLede: "Digitale Sichtbarkeit für Hannoveraner Maschinenbau, IT und Zulieferer — inklusive der Suchspitze rund um die Hannover Messe."
 servicesTitle: "Dienstleistungen"
-servicesIntro: "Für Hannover führen wir die Dienstleistungen mit nachgewiesener regionaler Suchnachfrage prominent auf. Weitere Service-Bereiche (KI-Suchoptimierung, Linkaufbau, Text-Audit, Google Analytics-Beratung und mehr) liefern wir auf Anfrage — ohne dedizierte Hannover-Landingpage."
+servicesIntro: "Diese Bereiche haben in Hannover die höchste belegte Suchnachfrage. Weitere Leistungen — KI-Suchoptimierung, Linkaufbau, Text-Audit, Google-Analytics-Beratung — liefern wir auf Anfrage, nur ohne eigene Hannover-Landingpage."
 featuredServices:
   - "performance-web-development"
   - "technical-web-design"
@@ -50,7 +50,7 @@ cta: "Kostenlose Erstberatung für Hannover anfordern"
 
 Eine SEO-Agentur in Hannover baut digitale Sichtbarkeit für Unternehmen mit regionalem oder norddeutschem Marktfokus auf — mit technischem Audit, Content-Strategie, Linkaufbau und lokaler Optimierung für Google Maps und KI-Antworten. StarkRank verbindet das mit einer Spezialisierung auf B2B-Mittelstand und Maschinenbau.
 
-Konkret heißt das: Wir analysieren, wo Ihre Hannoveraner Zielgruppe heute sucht — Google für die erste Anbieter-Recherche, LinkedIn für die Verifikation, branchenspezifische Plattformen für Ausschreibungen und Beschaffung, zunehmend KI-Tools wie ChatGPT oder Perplexity für die Vorauswahl. Daraus entsteht eine Roadmap mit klaren Meilensteinen, statt einer generischen Standard-Empfehlung. Maschinenbauer brauchen Long-Tail-Optimierung für Komponenten und Verfahren plus englische Inhalte für internationale Einkäufer; IT-Dienstleister eine Strategie, die zwischen Demo-Funnel und Thought-Leadership balanciert; Logistikanbieter eine Mischung aus lokaler und überregionaler Sichtbarkeit.
+Konkret heißt das: Wir analysieren, wo Ihre Hannoveraner Zielgruppe heute sucht — Google für die erste Anbieter-Recherche, LinkedIn für die Verifikation, branchenspezifische Plattformen für Ausschreibungen und Beschaffung, zunehmend KI-Tools wie ChatGPT oder Perplexity für die Vorauswahl. Daraus ergibt sich, welche Produktstrecke zuerst Arbeit braucht. Maschinenbauer brauchen Long-Tail-Optimierung für Komponenten und Verfahren plus englische Inhalte für internationale Einkäufer; IT-Dienstleister eine Strategie, die zwischen Demo-Funnel und Thought-Leadership balanciert; Logistikanbieter eine Mischung aus lokaler und überregionaler Sichtbarkeit.
 
 </details>
 
@@ -62,9 +62,9 @@ Konkret heißt das: Wir analysieren, wo Ihre Hannoveraner Zielgruppe heute sucht
 
 Hannoveraner B2B-Entscheider verwenden drei Kanäle parallel — Google für die Long List ("Webagentur Hannover", "SEO Agentur Hannover", "Maschinenbau-Marketing Hannover"), LinkedIn für die Verifikation des Anbieter-Profils, und zunehmend KI-Tools wie ChatGPT oder Perplexity für die Vorrecherche. Die Reihenfolge hängt von der Anschaffungsgröße ab.
 
-Bei Aufträgen unter 10.000 € landet die Mehrheit direkt bei Google-Suchen mit Stadt-Bezug. Bei größeren Mandaten kommt ein zusätzlicher Schritt dazu: Eine erste Vorauswahl über KI-Tools, gefolgt von gezielter LinkedIn-Recherche zur Validierung der Anbieter — und erst danach der Direktkontakt. Wer in keiner dieser drei Schichten sichtbar ist, kommt erst gar nicht in den Auswahl-Trichter.
+Im Maschinenbau kommt eine Besonderheit dazu: Der Einkauf sucht selten nach der Agentur, sondern nach dem Bauteil, dem Verfahren oder der Spezifikation. Die Anbieterbewertung passiert dann auf der Seite, die zu dieser technischen Suche passt — nicht auf der Startseite. Lange Beschaffungszyklen bedeuten ausserdem, dass zwischen erstem Kontakt und Anfrage Monate liegen können.
 
-Für Maschinenbau- und Automotive-Zulieferer kommt eine vierte Schicht dazu: Branchenportale wie VDI Nachrichten, Industrieanzeiger, Heise und produktspezifische B2B-Marktplätze. Sichtbarkeit dort zählt für Beschaffungs-Entscheider oft mehr als das pure Google-Ranking. Wir bauen Präsenz in allen vier Schichten auf, weil die Conversion erst entsteht, wenn alle Touchpoints konsistent sind.
+Für Maschinenbau- und Automotive-Zulieferer kommt eine vierte Schicht dazu: Branchenportale wie VDI Nachrichten, Industrieanzeiger, Heise und produktspezifische B2B-Marktplätze. Sichtbarkeit dort zählt für Beschaffungs-Entscheider oft mehr als das pure Google-Ranking — und sie wirkt länger, weil solche Einträge selten neu recherchiert werden.
 
 </details>
 
@@ -88,10 +88,8 @@ Für Aussteller in den großen Hallen-Themen — Industrie 4.0, Energie, Mobilit
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
-Das SEO Audit startet bei 1.500 € als Festpreis (Standard-Setup bis 1.000 URLs) und ist der typische Einstieg für Hannoveraner Unternehmen, die ihre digitale Sichtbarkeit zum ersten Mal systematisch prüfen lassen. Ein E-E-A-T-Audit (Experience, Expertise, Authoritativeness, Trustworthiness) kostet 1.200 €, spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2.100 € (Kataloge bis 1.000 SKUs) und 3.400 € (Enterprise mit 10.000+ SKUs).
+Das SEO Audit kostet 1.500 € als Festpreis (Standard-Setup bis 1.000 URLs). Ein E-E-A-T-Audit (Experience, Expertise, Authoritativeness, Trustworthiness) liegt bei 1.200 €, spezialisierte E-Commerce-SEO-Audits zwischen 2.100 € (Kataloge bis 1.000 SKUs) und 3.400 € (Enterprise mit 10.000+ SKUs).
 
-Für laufende Betreuung im Retainer-Modell veröffentlichen wir drei Bänder: ab 990 €/Monat für Einzelunternehmen und Kleinunternehmen, 2.000–4.000 €/Monat für klassischen Mittelstand, ab 5.000 €/Monat für Enterprise- und Multi-Standort-Mandate. Hannoveraner Maschinenbau- und IT-Mandate landen typischerweise im Mittelstands-Band, je nach Anzahl betreuter Kanäle und ob messebegleitende Strecken Teil des Mandats sind. Die vollständigen Bänder mit Leistungsumfang stehen unter [/preise/seo/](/preise/seo/) — keine Tagessätze, keine versteckten Setup-Kosten, keine "Beratungsstunden" auf Verdacht.
-
-Für Hannoveraner Unternehmen mit erstem SEO-Engagement empfehlen wir oft, mit einem abgegrenzten Audit (ab 1.500 € technisch oder 1.200 € E-E-A-T) plus umsetzbarer Roadmap zu starten — statt direkt in einen Retainer einzusteigen. So testen Sie Arbeitsweise und Wirkung, bevor Sie sich monatlich binden.
+Für laufende Betreuung gelten drei Retainer-Bänder: ab 990 €/Monat für Einzel- und Kleinunternehmen, 2.000–4.000 €/Monat für klassischen Mittelstand, ab 5.000 €/Monat für Enterprise- und Multi-Standort-Mandate. Hannoveraner Maschinenbau- und IT-Mandate landen typischerweise im Mittelstands-Band. Messebegleitende Strecken sind der Posten, der Hannoveraner Mandate am häufigsten darüber hebt — sie konzentrieren Arbeit auf ein enges Zeitfenster. Der vollständige Leistungsumfang je Band steht unter [/preise/seo/](/preise/seo/).
 
 </details>

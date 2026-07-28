@@ -4,9 +4,9 @@ locale: "de"
 title: "SEO & Online Marketing Agentur in Hamburg"
 description: "SEO- und Marketing-Agentur für Hamburger Unternehmen — Webagentur, Webdesign, Lokale SEO, Google Ads, KI-Suchoptimierung. Kostenlose Erstberatung."
 heroHeadline: "SEO & Online Marketing **Agentur in Hamburg**"
-heroLede: "Lokale digitale Sichtbarkeit für Hamburger Mittelstand — von Webagentur über Lokale SEO bis KI-Suchoptimierung."
+heroLede: "Digitale Sichtbarkeit für Hamburger Versandhandel, Verlage und Maritime-Anbieter — mit Tracking, das bis auf Sortiments- und Margenniveau auflöst."
 servicesTitle: "Dienstleistungen"
-servicesIntro: "Für Hamburg führen wir die Dienstleistungen mit nachgewiesener regionaler Suchnachfrage prominent auf. Weitere Service-Bereiche (KI-Suchoptimierung, Linkaufbau, Text-Audit, Paid Social und mehr) liefern wir auf Anfrage — ohne dedizierte Hamburg-Landingpage."
+servicesIntro: "Diese Bereiche haben in Hamburg die höchste belegte Suchnachfrage. Weitere Leistungen — KI-Suchoptimierung, Linkaufbau, Text-Audit, Paid Social — liefern wir auf Anfrage, nur ohne eigene Hamburg-Landingpage."
 featuredServices:
   - "performance-web-development"
   - "technical-web-design"
@@ -18,7 +18,7 @@ sectors:
   - name: "Versandhandel und E-Commerce"
     description: "Hamburg ist eines der dichtesten europäischen E-Commerce-Cluster. Category Manager und Performance-Verantwortliche entscheiden datenintensiv und in kurzen Iterationszyklen — Sortiments-, Pricing- und Performance-Marketing-Entscheidungen brauchen sauberes Tracking und konsistente Schema-Daten als Voraussetzung."
   - name: "Medien, Verlage und Rundfunk"
-    description: "Die Hamburger Medienlandschaft ist die dichteste in DACH. Verlags- und Rundfunkanbieter, Mediendienstleister und Produktionsfirmen produzieren Content in Massen — verlieren aber oft Sichtbarkeit, weil Format und Markup nicht KI-zitierfähig aufgebaut sind."
+    description: "Die Hamburger Medienlandschaft gehört zu den dichtesten in Deutschland. Verlags- und Rundfunkanbieter, Mediendienstleister und Produktionsfirmen produzieren Content in Massen — verlieren aber oft Sichtbarkeit, weil Format und Markup nicht KI-zitierfähig aufgebaut sind."
   - name: "Hafenwirtschaft und Maritime Industrie"
     description: "Reedereien, Hafenbetreiber, Spediteure und maritime Zulieferer kommunizieren mit globalen Beschaffungsorganisationen. Die Anforderungen sind doppelt — deutscher Mittelstands-Auftritt plus englischsprachige B2B-Strecken für internationale Einkäufer."
   - name: "Luftfahrt und industrielle Hightech"
@@ -36,7 +36,7 @@ faq:
   - question: "Hat StarkRank ein Büro in Hamburg?"
     answer: "Wir betreuen Hamburger Kunden remote-first aus dem deutschsprachigen Raum, mit regelmäßigen Vor-Ort-Terminen für Workshops, Strategie-Reviews und Event-Begleitung rund um OMR Festival, SMM und Hamburg Open. Die geografische Distanz hat in unserer Erfahrung keinen messbaren Einfluss auf Projektqualität — die fachliche Tiefe und Verfügbarkeit unseres Teams hat ihn deutlich."
   - question: "Welche Dienstleistungen sind speziell für Hamburg relevant?"
-    answer: "Datenbasiert über aktuelle Keyword-Recherche bestätigt: Webagentur Hamburg (etwa 1.900 Suchen/Monat) und Webdesign Hamburg (etwa 1.600/Monat) zeigen mit Abstand die höchste Suchnachfrage der DACH-Städte. SEO Agentur Hamburg, Marketing Agentur Hamburg, Lokale SEO-Beratung und Google Ads Management folgen mit signifikantem Volumen. Für jeden Bereich pflegen wir eine eigene Service-Seite mit Hamburg-Bezug — keine austauschbaren Standard-Texte."
+    answer: "Datenbasiert über aktuelle Keyword-Recherche bestätigt: Webagentur Hamburg (etwa 1.900 Suchen/Monat) und Webdesign Hamburg (etwa 1.600/Monat) zeigen mit Abstand die höchste Suchnachfrage der von uns betreuten Städte. SEO Agentur Hamburg, Marketing Agentur Hamburg, Lokale SEO-Beratung und Google Ads Management folgen mit signifikantem Volumen. Für jeden Bereich pflegen wir eine eigene Service-Seite mit Hamburg-Bezug — keine austauschbaren Standard-Texte."
   - question: "Wie nutzt StarkRank das OMR Festival für Hamburger Mandanten?"
     answer: "OMR ist Europas wichtigster Digital-Marketing-Event und findet jährlich in Hamburg statt. Wir bauen Pre-Event-Content-Strecken für Aussteller und Sprecher, koordinieren Lead-Tracking-Setups für die Messe-Tage und begleiten die Nachfass-Phase mit gezielten Re-Engagement-Kampagnen. Für Versandhandels-Marken planen wir parallel Performance-Spitzen, weil OMR-Wochen die Plattform-CPMs in Hamburg signifikant verändern."
 cta: "Kostenlose Erstberatung für Hamburg anfordern"
@@ -50,7 +50,7 @@ cta: "Kostenlose Erstberatung für Hamburg anfordern"
 
 Eine SEO-Agentur in Hamburg baut digitale Sichtbarkeit für Unternehmen aus E-Commerce, Verlagen, Maritime und Hightech-Industrie auf — mit technischem Audit, Content-Strategie, Linkaufbau und KI-Antwort-Optimierung. StarkRank verbindet das mit einer Spezialisierung auf datenintensive Konsumgüter- und B2B-Märkte mit globaler Reichweite.
 
-Konkret heißt das: Wir analysieren, wo Ihre Hamburger Zielgruppe heute sucht — Google für die erste Anbieter-Recherche, LinkedIn für B2B-Verifikation, KI-Tools wie ChatGPT oder Perplexity für die Vorauswahl, plus E-Commerce-spezifische Kanäle wie Vergleichsportale und Marktplätze. Daraus entsteht eine Roadmap mit klaren Meilensteinen, statt einer generischen Standard-Empfehlung. Versandhandels-Marken brauchen schnelle Iteration auf Sortiment- und Performance-Ebene; Verlage eine Mischung aus redaktioneller Reichweite und Subscriber-Conversion; Maritime-Anbieter zweisprachige Strecken für globale Beschaffungs-Recherche; Luftfahrt-Zulieferer Compliance-konforme Inhalte mit hoher fachlicher Tiefe.
+Konkret heißt das: Wir analysieren, wo Ihre Hamburger Zielgruppe heute sucht — Google für die erste Anbieter-Recherche, LinkedIn für B2B-Verifikation, KI-Tools wie ChatGPT oder Perplexity für die Vorauswahl, plus E-Commerce-spezifische Kanäle wie Vergleichsportale und Marktplätze. Daraus ergibt sich, welcher Kanal zuerst Arbeit braucht. Versandhandels-Marken brauchen schnelle Iteration auf Sortiment- und Performance-Ebene; Verlage eine Mischung aus redaktioneller Reichweite und Subscriber-Conversion; Maritime-Anbieter zweisprachige Strecken für globale Beschaffungs-Recherche; Luftfahrt-Zulieferer Compliance-konforme Inhalte mit hoher fachlicher Tiefe.
 
 </details>
 
@@ -88,10 +88,8 @@ Wer als Anbieter nur auf Google-Rankings setzt und LinkedIn plus KI-Sichtbarkeit
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
-Das SEO Audit startet bei 1.500 € als Festpreis (Standard-Setup bis 1.000 URLs) und ist der typische Einstieg für Hamburger Unternehmen, die ihre digitale Sichtbarkeit zum ersten Mal systematisch prüfen lassen. Ein E-E-A-T-Audit (Experience, Expertise, Authoritativeness, Trustworthiness) kostet 1.200 €, spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2.100 € (Kataloge bis 1.000 SKUs) und 3.400 € (Enterprise mit 10.000+ SKUs) — besonders relevant für Hamburger Versandhandels-Marken mit größeren Produktkatalogen.
+Das SEO Audit kostet 1.500 € als Festpreis (Standard-Setup bis 1.000 URLs). Ein E-E-A-T-Audit (Experience, Expertise, Authoritativeness, Trustworthiness) liegt bei 1.200 €. Für den Hamburger Versandhandel ist meist das E-Commerce-SEO-Audit der passende Einstieg: 2.100 € für Kataloge bis 1.000 SKUs, 3.400 € ab 10.000 SKUs.
 
-Für laufende Betreuung im Retainer-Modell veröffentlichen wir drei Bänder: ab 990 €/Monat für Einzelunternehmen und Kleinunternehmen, 2.000–4.000 €/Monat für klassischen Mittelstand, ab 5.000 €/Monat für Enterprise- und Multi-Standort-Mandate. Hamburger Versandhandels- und Verlags-Mandate landen häufig im oberen Mittelstands- oder Enterprise-Band, je nach Anzahl betreuter Kanäle und ob Performance-Media-Budgets im Mandat enthalten sind. Die vollständigen Bänder mit Leistungsumfang stehen unter [/preise/seo/](/preise/seo/) — keine Tagessätze, keine versteckten Setup-Kosten, keine "Beratungsstunden" auf Verdacht.
-
-Für Hamburger Unternehmen mit erstem SEO-Engagement empfehlen wir oft, mit einem abgegrenzten Audit (ab 1.500 € technisch oder 1.200 € E-E-A-T) plus umsetzbarer Roadmap zu starten — statt direkt in einen Retainer einzusteigen. So testen Sie Arbeitsweise und Wirkung, bevor Sie sich monatlich binden.
+Für laufende Betreuung gelten drei Retainer-Bänder: ab 990 €/Monat für Einzel- und Kleinunternehmen, 2.000–4.000 €/Monat für klassischen Mittelstand, ab 5.000 €/Monat für Enterprise- und Multi-Standort-Mandate. Hamburger Versandhandels- und Verlags-Mandate landen häufig im oberen Mittelstands- oder Enterprise-Band — vor allem dann, wenn Performance-Media-Budgets mit im Mandat liegen und Sortimentsdaten in die Auswertung einfliessen müssen. Der vollständige Leistungsumfang je Band steht unter [/preise/seo/](/preise/seo/).
 
 </details>
