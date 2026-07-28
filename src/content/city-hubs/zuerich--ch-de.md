@@ -4,9 +4,9 @@ locale: "ch-de"
 title: "SEO & Online Marketing Agentur in Zürich"
 description: "SEO- und Marketing-Agentur für Zürcher Unternehmen — Webagentur, Webdesign, Lokale SEO, Google Ads. Finanz, Versicherung, Tech, Beratung. revDSG-konform."
 heroHeadline: "SEO & Online Marketing **Agentur in Zürich**"
-heroLede: "Lokale digitale Sichtbarkeit für Zürcher KMU — von Webagentur über Webdesign bis Google Ads."
+heroLede: "Digitale Sichtbarkeit für Zürcher Finanz-, Versicherungs- und Tech-Unternehmen — technisch sauber aufgesetzt und revDSG-konform."
 servicesTitle: "Dienstleistungen"
-servicesIntro: "Wir konzentrieren uns auf die Bereiche, in denen Zürcher Unternehmen die höchste Suchnachfrage und den klarsten Hebel haben — datenbasiert ausgewählt, nicht durch Template-Mirror entschieden."
+servicesIntro: "Diese Bereiche haben in Zürich die höchste Suchnachfrage. Weitere Leistungen — KI-Suchoptimierung, Linkaufbau, Content-Marketing — übernehmen wir für Zürcher Mandate ebenfalls, nur ohne eigene Landingpage dafür."
 featuredServices:
   - "technical-seo-audit"
   - "performance-web-development"
@@ -30,7 +30,7 @@ whyParagraphs:
   - "Als Spezialagentur für klassische und KI-gestützte Suche bauen wir Ihre Marke parallel in Google-Trefferlisten und in den generierten Antworten von ChatGPT, Perplexity und Google AI Overviews auf. Das ist der Suchkanal, der die nächste Welle der B2B-Beschaffungs-Recherche definiert — und der Hebel, in dem Zürcher Finanz- und Tech-Unternehmen oft noch fast vollständig blind sind."
 faq:
   - question: "Was kostet SEO und Online-Marketing in Zürich?"
-    answer: "Die kostenlose Erstberatung ist unverbindlich. Das SEO Audit startet bei 1'800 CHF (Standard, bis 1'000 URLs), Mittelstand 3'000 CHF, Enterprise ab 5'000 CHF. Ein E-E-A-T Audit liegt bei 1'500 CHF, spezialisierte E-Commerce-SEO-Audits zwischen 2'500 und 4'000 CHF. Laufende Betreuung im Retainer-Modell startet bei 1'190 CHF/Monat (Einzelunternehmen und KMU), Mittelstandsband 3'000–5'000 CHF/Monat, Enterprise ab 6'000 CHF/Monat. Vollständige Bänder transparent unter /ch-de/preise/seo/."
+    answer: "Das SEO Audit kostet 1'800 CHF als Festpreis, ein E-E-A-T Audit 1'500 CHF. Laufende Betreuung startet bei 1'190 CHF/Monat; Zürcher Finanz-, Versicherungs- und SaaS-Mandate liegen wegen Compliance und Mehrsprachigkeit meist im Enterprise-Band ab 6'000 CHF/Monat. Alle Bänder unter /ch-de/preise/seo/. Die Erstberatung ist kostenlos."
   - question: "Arbeitet StarkRank mit Zürcher Finanz- und Versicherungsunternehmen?"
     answer: "Ja, in Compliance-konformen Strukturen. Wir betreuen Banken, Vermögensverwalter und Versicherer mit klarer Trennung von Fach- und Laienkommunikation, FINMA-Pflichtangaben-Logik und revDSG-konformem Tracking. Spekulative Anlageempfehlungen oder beratungsähnliche Inhalte ohne aufsichtsrechtliche Freigabe gehören nicht in unseren Scope."
   - question: "Hat StarkRank ein Büro in Zürich?"
@@ -50,7 +50,7 @@ cta: "Kostenlose Erstberatung für Zürich anfordern"
 
 Eine SEO-Agentur in Zürich baut digitale Sichtbarkeit für Unternehmen mit regionalem oder schweizweitem Marktfokus auf — mit [technischem SEO Audit](/ch-de/seo-audit-zuerich/), Content-Strategie, Linkaufbau und lokaler Optimierung für Google Maps und KI-Antworten. StarkRank verbindet das mit einer Spezialisierung auf Finanzdienstleistungen, Versicherung, Tech und professionelle Beratungsdienste.
 
-Konkret bedeutet das: Wir analysieren, wo Ihre Zürcher Zielgruppe heute sucht — Google, LinkedIn, branchenspezifische Plattformen, KI-Tools wie ChatGPT oder Perplexity. Daraus entsteht eine Roadmap mit klaren Meilensteinen, statt einer generischen Standard-Empfehlung. Banken brauchen FINMA-konforme Content-Pfade; Versicherer eine saubere Trennung von B2B- und B2C-Funnels; SaaS-Anbieter vor allem KI-Sichtbarkeit für die technische Vorrecherche; Beratungen Thought-Leadership-Sichtbarkeit, die zur tatsächlichen Expertise passt.
+Der Einstieg ist immer dieselbe Frage: Wo sucht Ihre Zürcher Zielgruppe heute tatsächlich — auf Google, auf LinkedIn, in Branchenplattformen, in KI-Tools wie ChatGPT oder Perplexity? Aus der Antwort wird eine Roadmap mit datierten Meilensteinen. Banken brauchen FINMA-konforme Content-Pfade; Versicherer eine saubere Trennung von B2B- und B2C-Funnels; SaaS-Anbieter vor allem KI-Sichtbarkeit für die technische Vorrecherche; Beratungen Thought-Leadership-Sichtbarkeit, die zur tatsächlichen Expertise passt.
 
 </details>
 
@@ -60,11 +60,11 @@ Konkret bedeutet das: Wir analysieren, wo Ihre Zürcher Zielgruppe heute sucht �
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
-Zürcher B2B-Entscheider verwenden drei Kanäle parallel — Google für die Long List ("SEO Agentur Zürich", "Webagentur Zürich"), LinkedIn für die Verifikation des Anbieter-Profils, und zunehmend KI-Tools wie ChatGPT oder Perplexity für die Vorrecherche. Im Zürcher Finanz- und Tech-Umfeld liegt die KI-Vorrecherche-Quote messbar höher als im DACH-Durchschnitt — Anbieter ohne Sichtbarkeit in generierten KI-Antworten verlieren bereits heute spürbare Touchpoints.
+Zürcher B2B-Entscheider verwenden drei Kanäle parallel — Google für die Long List ("SEO Agentur Zürich", "Webagentur Zürich"), LinkedIn für die Verifikation des Anbieter-Profils, und zunehmend KI-Tools wie ChatGPT oder Perplexity für die Vorrecherche. Im Zürcher Finanz- und Tech-Umfeld fällt auf, wie früh diese Vorrecherche einsetzt: Wer in generierten Antworten nicht vorkommt, fehlt schon, bevor die Anbieterliste überhaupt steht.
 
-Bei Aufträgen unter 10'000 CHF landet die Mehrheit direkt bei Google-Suchen mit Stadt-Bezug. Bei grösseren Mandaten kommt ein zusätzlicher Schritt dazu: eine erste Vorauswahl über KI-Tools, gefolgt von gezielter LinkedIn-Recherche zur Validierung der Anbieter — und erst danach der Direktkontakt. Wer in keiner dieser drei Schichten sichtbar ist, kommt erst gar nicht in den Auswahl-Trichter.
+Kleinere Mandate laufen meist direkt über Google-Suchen mit Stadt-Bezug. Bei grösseren Budgets — im Zürcher Finanz- und Versicherungsumfeld eher die Regel als die Ausnahme — steht am Anfang eine KI-gestützte Vorauswahl, danach die Prüfung des Anbieterprofils auf LinkedIn, und erst dann der Direktkontakt.
 
-Für Zürcher Finanz- und Versicherungs-Anbieter kommt eine vierte Schicht dazu: spezialisierte Branchen-Verzeichnisse, Vergleichsplattformen (Comparis, BonusCheck) und Beschaffungs-Portale, in denen Sichtbarkeit oft mehr zählt als das Google-Ranking. Wir bauen Präsenz in allen vier Schichten auf, weil die Conversion erst entsteht, wenn alle Touchpoints konsistent sind.
+Für Zürcher Finanz- und Versicherungs-Anbieter kommt eine vierte Schicht dazu: spezialisierte Branchen-Verzeichnisse, Vergleichsplattformen (Comparis, BonusCheck) und Beschaffungs-Portale, in denen Sichtbarkeit oft mehr zählt als das Google-Ranking. Diese vier Schichten bauen wir zusammen auf, weil ein Zürcher Entscheider den Anbieter typischerweise in mehreren davon wiedersehen will, bevor er anfragt.
 
 </details>
 
@@ -74,11 +74,9 @@ Für Zürcher Finanz- und Versicherungs-Anbieter kommt eine vierte Schicht dazu:
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
-Das SEO Audit startet bei 1'800 CHF als Festpreis (Standard-Setup bis 1'000 URLs) und ist der typische Einstieg für Zürcher Unternehmen, die ihre digitale Sichtbarkeit zum ersten Mal systematisch prüfen lassen. Ein E-E-A-T Audit kostet 1'500 CHF, spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2'500 CHF (Kataloge bis 1'000 SKUs) und 4'000 CHF (Enterprise mit 10'000+ SKUs).
+Ein Zürcher Mandat startet fast immer mit einem abgegrenzten Audit, bevor über laufende Betreuung gesprochen wird. Das SEO Audit kostet 1'800 CHF als Festpreis (Standard-Setup bis 1'000 URLs). Ein E-E-A-T Audit — Experience, Expertise, Authoritativeness, Trustworthiness, also die Signale, an denen Google und KI-Systeme Quellen gewichten — liegt bei 1'500 CHF. Spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2'500 CHF (Kataloge bis 1'000 SKUs) und 4'000 CHF (Enterprise mit 10'000+ SKUs).
 
-Für laufende Betreuung im Retainer-Modell veröffentlichen wir drei Bänder: ab 1'190 CHF/Monat für Einzelunternehmen und KMU, 3'000–5'000 CHF/Monat für klassischen Mittelstand, ab 6'000 CHF/Monat für Enterprise- und Multi-Standort-Mandate. Zürcher Finanz-, Versicherungs- und etablierte SaaS-Mandate landen häufig im Enterprise-Band, weil Compliance-Anforderungen, Multi-Stack-Setups und mehrere Sprachen den Betreuungsaufwand erhöhen. Die vollständigen Bänder mit Leistungsumfang stehen unter [/ch-de/preise/seo/](/ch-de/preise/seo/) — keine Tagessätze, keine versteckten Setup-Kosten, keine "Beratungsstunden" auf Verdacht.
-
-Für Zürcher Unternehmen mit knappem Budget oder erstmaligem SEO-Engagement empfehlen wir oft, mit einem abgegrenzten Audit (ab 1'800 CHF technisch oder 1'500 CHF E-E-A-T) plus umsetzbarer Roadmap zu starten — statt direkt in einen Retainer einzusteigen. So testen Sie Arbeitsweise und Wirkung, bevor Sie sich monatlich binden.
+Für laufende Betreuung gelten drei Retainer-Bänder: ab 1'190 CHF/Monat für Einzelunternehmen und KMU, 3'000–5'000 CHF/Monat für klassischen Mittelstand, ab 6'000 CHF/Monat für Enterprise- und Multi-Standort-Mandate. Zürcher Finanz-, Versicherungs- und etablierte SaaS-Mandate landen häufig im Enterprise-Band, weil Compliance-Anforderungen, Multi-Stack-Setups und mehrere Sprachen den Betreuungsaufwand erhöhen. Der vollständige Leistungsumfang je Band steht unter [/ch-de/preise/seo/](/ch-de/preise/seo/).
 
 Wer in Zürich einen neuen Onlineshop bauen lässt statt einen bestehenden zu optimieren, findet unser schweizweites Festpreis-Angebot unter [Onlineshop erstellen lassen](/ch-de/onlineshop-erstellen-lassen/) — vier Stufen ab 3'900 CHF (Shopify-Build mit SEO-Fundament, TWINT, revDSG-Cookie-Logik).
 

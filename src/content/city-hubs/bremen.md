@@ -26,7 +26,7 @@ faq:
   - question: "Was kostet SEO und Online-Marketing in Bremen?"
     answer: "Die kostenlose Erstberatung ist unverbindlich. Das SEO Audit startet bei 1.500 € (Standard, bis 1.000 URLs), Mittelstand 2.500 €, Enterprise ab 4.000 €. Ein E-E-A-T-Audit liegt bei 1.200 €, spezialisierte E-Commerce-SEO-Audits zwischen 2.100 und 3.400 €. Laufende Betreuung im Retainer-Modell startet bei 990 €/Monat (Einzelunternehmen), typische Mittelstandsbudgets liegen zwischen 2.000 und 4.000 €/Monat. Vollständige Preisbänder transparent unter /preise/seo/."
   - question: "Arbeitet StarkRank mit Bremer Mittelständlern und Hidden Champions?"
-    answer: "Ja, das ist unser Kernsegment. B2B-Mittelstand und Hidden Champions in DACH bilden den Großteil unseres Portfolios — Bremer Unternehmen aus Maritime, Lebensmittelindustrie, Logistik und industrieller Hightech sind unsere Kernzielgruppe für die Region. Reine Konsumenten-Marken oder öffentliche Verwaltung sind nicht unser Fokus."
+    answer: "Ja, das ist unser Kernsegment. B2B-Mittelstand und Hidden Champions bilden den Großteil unseres Portfolios — Bremer Unternehmen aus Maritime, Lebensmittelindustrie, Logistik und industrieller Hightech sind unsere Kernzielgruppe für die Region. Reine Konsumenten-Marken oder öffentliche Verwaltung sind nicht unser Fokus."
   - question: "Hat StarkRank ein Büro in Bremen?"
     answer: "Wir betreuen Bremer Kunden remote-first aus dem deutschsprachigen Raum, mit regelmäßigen Vor-Ort-Terminen für Workshops und Strategie-Reviews. Die geografische Distanz hat in unserer Erfahrung keinen messbaren Einfluss auf Projektqualität — die fachliche Tiefe und Verfügbarkeit unseres Teams hat ihn deutlich."
   - question: "Welche Dienstleistungen sind speziell für Bremen relevant?"
@@ -44,7 +44,7 @@ cta: "Kostenlose Erstberatung für Bremen anfordern"
 
 Eine SEO-Agentur in Bremen baut digitale Sichtbarkeit für Unternehmen mit regionalem oder norddeutschem Marktfokus auf — mit technischem Audit, Content-Strategie, Linkaufbau und lokaler Optimierung für Google Maps und KI-Antworten. StarkRank verbindet das mit einer Spezialisierung auf B2B-Mittelstand und Hidden Champions.
 
-Konkret bedeutet das: Wir analysieren, wo Ihre Bremer Zielgruppe heute sucht — Google, LinkedIn, branchenspezifische Plattformen, KI-Tools wie ChatGPT oder Perplexity. Daraus entsteht eine Roadmap mit klaren Meilensteinen, statt einer generischen Standard-Empfehlung. Maritime-Zulieferer brauchen technische Long-Tail-Optimierung und englische Inhalte für internationale Einkäufer; Lebensmittelhersteller eine doppelgleisige B2B/B2C-Strategie; Hidden Champions vor allem Sichtbarkeitsaufbau, der zur tatsächlichen technischen Marktposition passt.
+Der Einstieg ist immer dieselbe Frage: Wo sucht Ihre Bremer Zielgruppe heute tatsächlich — und in welcher Sprache? Daraus ergibt sich, welche Strecke zuerst Arbeit braucht. Maritime-Zulieferer brauchen technische Long-Tail-Optimierung und englische Inhalte für internationale Einkäufer; Lebensmittelhersteller eine doppelgleisige B2B/B2C-Strategie; Hidden Champions vor allem Sichtbarkeitsaufbau, der zur tatsächlichen technischen Marktposition passt.
 
 </details>
 
@@ -56,9 +56,9 @@ Konkret bedeutet das: Wir analysieren, wo Ihre Bremer Zielgruppe heute sucht —
 
 Bremer B2B-Entscheider verwenden drei Kanäle parallel — Google für die Long List ("Webagentur Bremen", "SEO Agentur Bremen"), LinkedIn für die Verifikation des Anbieter-Profils, und zunehmend KI-Tools wie ChatGPT oder Perplexity für die Vorrecherche. Die Reihenfolge hängt von der Anschaffungsgröße ab.
 
-Bei Aufträgen unter 10.000 € landet die Mehrheit direkt bei Google-Suchen mit Stadt-Bezug. Bei größeren Mandaten kommt ein zusätzlicher Schritt dazu: Eine erste Vorauswahl über KI-Tools, gefolgt von gezielter LinkedIn-Recherche zur Validierung der Anbieter — und erst danach der Direktkontakt. Wer in keiner dieser drei Schichten sichtbar ist, kommt erst gar nicht in den Auswahl-Trichter.
+Bremer Besonderheit ist der hohe Anteil internationaler Einkäufer: Maritime- und Außenhandels-Recherche läuft häufig auf Englisch und von außerhalb Deutschlands. Damit entscheidet nicht nur, ob Sie in der deutschen Suche auftauchen, sondern ob es überhaupt eine englischsprachige Fassung Ihrer Leistungsseiten gibt, die der Einkäufer findet.
 
-Für Bremer Maritime- und Logistikunternehmen kommt eine vierte Schicht dazu: Beschaffungs-Plattformen und Verbandsverzeichnisse, in denen Sichtbarkeit oft mehr zählt als das Google-Ranking. Wir bauen Präsenz in allen vier Schichten auf, weil die Conversion erst entsteht, wenn alle Touchpoints konsistent sind.
+Für Bremer Maritime- und Logistikunternehmen kommt eine vierte Schicht dazu: Beschaffungs-Plattformen und Verbandsverzeichnisse, in denen Sichtbarkeit oft mehr zählt als das Google-Ranking. Bei internationalen Ausschreibungen ist das regelmäßig der Punkt, an dem ein Anbieter überhaupt erst auf die Liste kommt.
 
 </details>
 
@@ -80,10 +80,8 @@ Für Bremer Konsumgüter-Marken bedeutet das eine doppelte Anforderung. Klassisc
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
-Das SEO Audit startet bei 1.500 € als Festpreis (Standard-Setup bis 1.000 URLs) und ist der typische Einstieg für Bremer Unternehmen, die ihre digitale Sichtbarkeit zum ersten Mal systematisch prüfen lassen. Ein E-E-A-T-Audit (Experience, Expertise, Authoritativeness, Trustworthiness) kostet 1.200 €, spezialisierte E-Commerce-SEO-Audits bewegen sich zwischen 2.100 € (Kataloge bis 1.000 SKUs) und 3.400 € (Enterprise mit 10.000+ SKUs).
+Das SEO Audit kostet 1.500 € als Festpreis (Standard-Setup bis 1.000 URLs). Ein E-E-A-T-Audit (Experience, Expertise, Authoritativeness, Trustworthiness) liegt bei 1.200 €, spezialisierte E-Commerce-SEO-Audits zwischen 2.100 € (Kataloge bis 1.000 SKUs) und 3.400 € (Enterprise mit 10.000+ SKUs).
 
-Für laufende Betreuung im Retainer-Modell veröffentlichen wir drei Bänder: ab 990 €/Monat für Einzelunternehmen und Kleinunternehmen, 2.000–4.000 €/Monat für klassischen Mittelstand, ab 5.000 €/Monat für Enterprise- und Multi-Standort-Mandate. Bremer Unternehmen landen typischerweise im Mittelstands-Band, je nach Anzahl betreuter Kanäle und Geschwindigkeit der Umsetzung. Die vollständigen Bänder mit Leistungsumfang stehen unter [/preise/seo/](/preise/seo/) — keine Tagessätze, keine versteckten Setup-Kosten, keine "Beratungsstunden" auf Verdacht.
-
-Für Bremer Unternehmen mit knappem Budget oder erstmaligem SEO-Engagement empfehlen wir oft, mit einem abgegrenzten Audit (ab 1.500 € technisch oder 1.200 € E-E-A-T) plus umsetzbarer Roadmap zu starten — statt direkt in einen Retainer einzusteigen. So testen Sie Arbeitsweise und Wirkung, bevor Sie sich monatlich binden.
+Für laufende Betreuung gelten drei Retainer-Bänder: ab 990 €/Monat für Einzel- und Kleinunternehmen, 2.000–4.000 €/Monat für klassischen Mittelstand, ab 5.000 €/Monat für Enterprise- und Multi-Standort-Mandate. Bremer Mandate landen typischerweise im Mittelstands-Band. Kommt eine englischsprachige Fassung für internationale Einkäufer dazu, verschiebt sich das nach oben — bei Maritime- und Außenhandels-Anbietern ist das eher die Regel. Der vollständige Leistungsumfang je Band steht unter [/preise/seo/](/preise/seo/).
 
 </details>
