@@ -58,9 +58,9 @@ const breadcrumbs = [
 ];
 
 const blogHreflangPairs: Record<string, Record<string, string>> = {
-  'seo-kosten-schweiz': { 'en': '/blog/seo-pricing-guide/', 'de': '/blog/seo-kosten/' },
-  'seo-vs-google-ads-ch': { 'en': '/blog/seo-vs-google-ads/', 'de': '/blog/seo-vs-google-ads-de/' },
-  'seo-agentur-auswaehlen-ch': { 'en': '/blog/how-to-choose-seo-agency/', 'de': '/blog/seo-agentur-auswaehlen/' },
+  'seo-kosten-schweiz': { 'en': '/en/blog/seo-pricing-guide/', 'de-DE': '/de/blog/seo-kosten/' },
+  'seo-vs-google-ads-ch': { 'en': '/en/blog/seo-vs-google-ads/', 'de-DE': '/de/blog/seo-vs-google-ads-de/' },
+  'seo-agentur-auswaehlen-ch': { 'en': '/en/blog/how-to-choose-seo-agency/', 'de-DE': '/de/blog/seo-agentur-auswaehlen/' },
 };
 const pairs = blogHreflangPairs[post.id] ?? {};
 const hreflangAlternates = Object.entries(pairs).map(([hreflang, href]) => ({ hreflang, href }));

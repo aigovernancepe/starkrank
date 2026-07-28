@@ -138,4 +138,4 @@ The best predictor of a good agency relationship is transparency before the sale
 Use this 10-point framework. Ask every question. Demand specific answers. And if something feels off — trust the feeling. You've been burned once. You know what evasion sounds like.
 
 [Get Your Free AI Search Score →](/aiso-score/) — See exactly where your SEO stands before talking to any agency.
-[Read: What Does SEO Cost? Pricing Guide 2026 →](/blog/seo-pricing-guide/)
+[Read: What Does SEO Cost? Pricing Guide 2026 →](/en/blog/seo-pricing-guide/)

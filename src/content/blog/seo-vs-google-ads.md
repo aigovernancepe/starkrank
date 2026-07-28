@@ -129,4 +129,4 @@ Google Ads faces a structural challenge. As AI Overviews expand and users intera
 This doesn't mean Google Ads is dying — it's still the fastest path to search visibility. But it does mean the long-term investment case for SEO is strengthening.
 
 [Get a Free Google Ads Audit →](/free-google-ads-audit/) — We'll show you exactly where your ad budget is going and where organic can replace paid.
-[Read: What Does SEO Cost? →](/blog/seo-pricing-guide/)
+[Read: What Does SEO Cost? →](/en/blog/seo-pricing-guide/)

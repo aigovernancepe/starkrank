@@ -55,8 +55,8 @@ const breadcrumbs = [
 ];
 
 const blogHreflangPairs: Record<string, Record<string, string>> = {
-  'seo-vs-redes-sociales': { 'en': '/blog/seo-vs-social-media/' },
-  'precios-seo-peru': { 'en': '/blog/seo-pricing-guide/', 'de': '/de/blog/seo-kosten/', 'de-CH': '/ch-de/blog/seo-kosten-schweiz/' },
+  'seo-vs-redes-sociales': { 'en': '/en/blog/seo-vs-social-media/' },
+  'precios-seo-peru': { 'en': '/en/blog/seo-pricing-guide/', 'de-DE': '/de/blog/seo-kosten/', 'de-CH': '/ch-de/blog/seo-kosten-schweiz/' },
 };
 const pairs = blogHreflangPairs[post.id] ?? {};
 const hreflangAlternates = Object.entries(pairs).map(([hreflang, href]) => ({ hreflang, href }));
