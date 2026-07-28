@@ -5,6 +5,7 @@ export const pe: Record<string, string> = {
   'nav.about': 'Nosotros',
   'nav.contact': 'Contacto',
   'nav.locations': 'Ubicaciones',
+  'nav.aria.main': 'Navegación principal',
 
   // Pillar Names
   'pillar.search-ai-intelligence': 'Búsqueda e Inteligencia IA',
