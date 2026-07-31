@@ -535,7 +535,7 @@ const schemas = [webPageSchema, serviceSchema, faqSchema, howToSchema];
     />
     <div class="max-w-3xl">
       <p class="text-base font-body text-gray leading-relaxed">
-        <a href="https://handzentrum-ost.ch/" target="_blank" rel="noopener" class="text-blue hover:underline">Handzentrum Ost</a> ist eine Facharzt-Klinik für Handchirurgie an drei Standorten in der Ostschweiz. Ärztliche Leitung: Dr. med. Jörg Hainich, Facharzt Handchirurgie FMH, Europäisches Diplom Handchirurgie (FESSH). Co-Operating: Stephanie Luz, Fachärztin Chirurgie FMH, EBHS-/FESSH-Diplom. Die Klinik kooperiert mit StarkRank seit April 2026 — diese Sektion wird quartalsweise mit den jeweils messbaren Befunden aktualisiert.
+        <a href="https://handzentrum-ost.ch/" target="_blank" rel="noopener" class="text-blue hover:underline">Handzentrum Ost</a> ist eine Facharzt-Klinik für Handchirurgie an drei Standorten in der Ostschweiz. Ärztliche Leitung: Dr. med. Jörg Hainich, Facharzt Handchirurgie FMH, Europäisches Diplom Handchirurgie (FESSH). Co-Operating: Stephanie Luz, Fachärztin Chirurgie FMH, EBHS-/FESSH-Diplom. Die Klinik arbeitet seit April 2026 mit StarkRank — projektweise in einzeln beauftragten Paketen, ohne laufenden Retainer. Diese Sektion wird quartalsweise mit den jeweils messbaren Befunden aktualisiert; sie zeigt bewusst auch, was nicht funktioniert hat.
       </p>
 
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Phase 0 — Diagnose und Quick Wins (April 2026)</h3>
@@ -553,19 +553,59 @@ const schemas = [webPageSchema, serviceSchema, faqSchema, howToSchema];
         Quick Wins ausgerollt am Ende der Diagnose-Phase: Schema-Knotengraph-Fundament auf der Homepage — <code>MedicalOrganization</code> mit vier <code>hasLocation[]</code>-Knoten und zwei <code>Physician</code>-Knoten mit FMH-, FESSH- und EBHS-Credentials. 14 Meta-Beschreibungen für die wichtigsten Seiten neu angelegt. Tippfehler korrigiert.
       </p>
 
-      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Phase 1 — Snippet-Engineering und AI-Citation-Layer <span class="text-sm font-label font-semibold uppercase tracking-wide text-blue ml-2">Update folgt ~Juni 2026</span></h3>
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Phase 1 — Schema-Knotengraph und erste Krankheitsbild-Seite (Mai 2026)</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
-        Phase 1 ist als gezielte Quick-Wins-Tranche aufgesetzt — sie schliesst die Konversions- und AI-Citation-Lücke über dem in Phase 0 ausgerollten Schema-Fundament. Konkreter Scope: Snippet-Engineering der bereits Top-rankenden Krankheitsbild-Seite (Position 1 für „Handgelenksbruch", null Klicks über 16 Monate), <code>MedicalCondition</code>-Schema für Distale Radiusfraktur als verknüpfte Entität im bestehenden Graphen, Indexierungs-Freigabe der Credentials-Seite, AI-Citation-Spotchecks auf ChatGPT, Perplexity, Google AI Overviews und Microsoft Copilot gegen Krankheitsbild-Queries als Messung.
+        Die ursprünglich skizzierte Plattform-Migration wurde nicht umgesetzt. Der Hebel lag in der Struktur, nicht in der Technik — Phase 1 lief deshalb als schlanke Tranche direkt auf dem bestehenden WordPress-Stack:
+      </p>
+      <ul class="mt-4 space-y-3 text-base font-body text-gray leading-relaxed">
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Schema-Knotengraph sitewide ausgebaut.</strong> <code>MedicalOrganization</code> mit Handelsregister-Identifikatoren (UID, CH-ID), zwei <code>Physician</code>-Knoten mit FMH-, FESSH- und EBHS-Credentials, GLN-Identifikator und <code>sameAs</code>-Verweisen auf bestehende Klinik- und Fachprofile. Die Credentials standen bereits im Fliesstext der Team-Seite — sie wurden nicht neu geschrieben, sondern in strukturierte Daten überführt.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Die Krankheitsbild-Seite „Handgelenksbruch" komplett neu strukturiert.</strong> Vorher: Position 1 ohne Klicks über 16 Monate, kein <code>H1</code>, keine Antwortstruktur. Nachher: ein <code>H1</code>, neun Patientenfragen als <code>H2</code>, sieben Capsule-Antwortblöcke à 40 bis 60 Wörter — inhaltlich von der ärztlichen Leitung korrigiert und freigegeben.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark"><code>MedicalCondition</code>-Schema als verknüpfte Entität.</strong> Distale Radiusfraktur (ICD-10 S52.5) plus die Folge-Kondition „in Fehlstellung verheilt" (M84.0), verbunden mit <code>SurgicalProcedure</code>-Knoten für Plattenosteosynthese und Korrekturosteotomie. Jeder Knoten verweist über <code>@id</code> zurück auf die behandelnden Ärzte und die Klinik — der Graph ist der Hebel, isolierte Schema-Blöcke sind es nicht.</span></li>
+      </ul>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Ergebnis der Seite zwischen Mai und Juli, gemessen in der Google Search Console: die Zahl der Suchanfragen, bei denen die Seite überhaupt erscheint, stieg von 18 auf 242. Die Impressionen vervielfachten sich entsprechend, die Klicks verdreifachten sich. Die durchschnittliche Position rutschte dabei von 11,6 auf 13,2 — kein Rückschritt, sondern ein Artefakt: Im Mai erschien die Seite bei 18 überwiegend seltenen Anfragen, im Juli bei 242, darunter viele stark umkämpfte. Ein Durchschnitt über zwei so verschiedene Fragenkörbe lässt sich nicht vergleichen.
       </p>
 
-      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Phase 2 — Strukturelle Vollausbau und Krankheitsbild-Bibliothek <span class="text-sm font-label font-semibold uppercase tracking-wide text-blue ml-2">Update folgt nach Phase-1-Auswertung</span></h3>
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Einzelauftrag — zweite Krankheitsbild-Seite (Juni 2026)</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
-        Phase 2 setzt auf den Phase-1-Befunden auf — sie wird konfiguriert, sobald die 30-Tage-Daten aus Phase 1 vorliegen. Vorgesehene Scope-Bausteine: Indexierungs-Freigabe der verbleibenden Service-Seiten, revDSG-konformer Consent-Mode-v2-Stack, mobile Core Web Vitals in den grünen Bereich, plus SME-Interview-basierte Krankheitsbild-Seiten (Ganglion, Karpaltunnel, weitere Distale Radiusfraktur-Erweiterungen) als Proof-Tranche der Skalierungs-Hypothese.
+        Statt eines Vollausbaus folgte ein einzeln beauftragtes Paket nach demselben Muster: die Seite zum Karpaltunnelsyndrom. Vor dem Umbau war sie in der Google-Suche nicht vorhanden, seit Ende Juni erscheint sie bei 90 verschiedenen Patientenfragen. Sie wirkt dort, wo sie gezielt ausgerichtet wurde — Position 3 auf „Karpaltunnelsyndrom Schweiz", Position 6 auf „Karpaltunnelsyndrom OP Kosten Schweiz", beides Anfragen kurz vor einer Terminvereinbarung.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Die beiden Spitzenplätze beruhen bisher auf wenigen Impressionen und sind entsprechend wackelig. Auf dem allgemeinen Kopfbegriff „Karpaltunnelsyndrom" steht die Seite auf Position 33 — davor liegen medizinische Lexika und Universitätskliniken aus dem gesamten deutschen Sprachraum. Und ehrlich gesagt: die durchschnittliche Position der Seite hat sich seit dem Start nicht verbessert, sondern von 20,2 auf 23,8 leicht verschlechtert. Gewachsen ist bisher nur die Breite. Ob sich die Position einpendelt, ist erst rund drei Monate nach dem Umbau beurteilbar.
+      </p>
+
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">Zwischenstand nach vier Monaten (Juli 2026)</h3>
+      <p class="mt-3 text-base font-body text-gray leading-relaxed">
+        Vorjahresvergleich über dieselben Kalendertage, weil bei einer saisonalen Praxis nur das aussagekräftig ist. Datengrundlage ist die Google Search Console der Klinik:
+      </p>
+      <ul class="mt-4 space-y-3 text-base font-body text-gray leading-relaxed">
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Besuche aus der Google-Suche: plus 154 Prozent</strong> gegenüber dem Vorjahresmonat. Die Monatsreihe seit Projektstart: April plus 33, Mai plus 76, Juni plus 154, Juli plus 154 Prozent.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Sichtbarkeit mehr als verdreifacht und Position gleichzeitig verbessert:</strong> durchschnittliche Position von 19,8 auf 12,9. Normalerweise verschlechtert sich der Durchschnitt, wenn eine Website für dreimal so viele Anfragen erscheint, weil die zusätzlichen Anfragen umkämpfter sind. Beides gleichzeitig ist die belastbarste Einzelzahl im Mandat.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Die Klickrate ist gefallen — von 8,3 auf 6,4 Prozent.</strong> Erklärbar: Die neu hinzugekommenen Anfragen liegen überwiegend auf Position 13 und tiefer, wo selten geklickt wird. Das drückt den Durchschnitt rechnerisch, obwohl absolut deutlich mehr Menschen kommen. Der Engpass hat sich damit verschoben — von „wird nicht gefunden" zu „steht noch zu weit unten".</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Ein Teil des Zuwachses ist nicht Website-Arbeit.</strong> Die Suchen nach Praxis- und Arztnamen haben sich etwa verdreifacht — die entstehen aus Zuweisungen, Empfehlungen und der Arbeit in der Praxis. Die Website sorgt dafür, dass diese Menschen die Klinik sauber finden; die Nachfrage erzeugt sie nicht. Wer diese Trennung in einem SEO-Bericht nicht ausweist, verkauft fremdes Wachstum als eigenes.</span></li>
+      </ul>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Der grösste Klick-Zuwachs entstand auf Startseite und Team-Seite, nicht auf den neuen Krankheitsbild-Seiten — dort hatten die Phase-1-Arbeiten an Kennung, Beschreibungstexten und Überschriften direkt gewirkt. Die Team-Seite kam im Vorjahreszeitraum auf null Besuche. Der Beitrag der beiden Krankheitsbild-Seiten zum Klick-Zuwachs liegt heute im einstelligen Prozentbereich; ihr Ertrag sind aktuell die 332 Patientenfragen, bei denen die Klinik überhaupt erscheint.
+      </p>
+
+      <h3 class="mt-10 text-xl font-headline font-bold text-navy">AI-Citation-Messung — was Schema bewegt und was nicht</h3>
+      <p class="mt-3 text-base font-body text-gray leading-relaxed">
+        Gemessen wurden fünf Krankheitsbild-Queries verbatim gegen drei KI-Antwortmaschinen, vor und nach dem Schema-Rollout, identische Modelle und Locale. Das Ergebnis ist unbequem: von 6 zitierenden Antworten aus 15 auf 3 aus 15 — netto zurück, nicht vorwärts. Die Aufschlüsselung erklärt, warum das trotzdem verwertbar ist:
+      </p>
+      <ul class="mt-4 space-y-3 text-base font-body text-gray leading-relaxed">
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Die Schema-lesende Maschine gewann: 0 auf 2.</strong> Und zwar exakt dort, wo Struktur ausgerollt wurde — Handgelenksbruch und Karpaltunnel, beim Handgelenksbruch prominent mit mehrfacher Verlinkung der Klinik-Domain. Vorher wurde die Klinik dort nie genannt. Direkte Mechanismus-Bestätigung: Schema erzeugt Entity-Knoten, Entity-Knoten erzeugen Zitierungen.</span></li>
+        <li class="flex gap-3"><span class="mt-2 shrink-0 w-2.5 h-2.5 rounded-full bg-blue"></span><span><strong class="text-dark">Die ranking-getriebene Maschine kollabierte: 4 auf 0.</strong> Perplexity zitiert im Wesentlichen, was organisch rankt. Auf Krankheitsbild-Begriffen rankt die Klinik noch nicht, und ein Universitätsspital der Region hat für jedes Krankheitsbild eine eigene Seite. Schema allein bewegt diese Klasse von Antwortmaschine nicht.</span></li>
+      </ul>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Die praktische Konsequenz: Schema ist die Eintrittskarte in die Antwortmaschinen, die strukturierte Daten auswerten. Alles Übrige gewinnt nur eine Bibliothek organisch rankender, capsule-formatierter Krankheitsbild-Seiten. Wer Schema als direkten Zitierungs-Hebel verkauft, verkauft die halbe Wahrheit — und wer AI-Citations nur einmal misst statt vorher und nachher, merkt es nicht.
       </p>
 
       <h3 class="mt-10 text-xl font-headline font-bold text-navy">Was wir bisher gelernt haben</h3>
       <p class="mt-3 text-base font-body text-gray leading-relaxed">
         Fachklinik-SEO ist eine Inventar-Frage, bevor sie eine Ranking-Frage wird. Bei strukturell gepflegten Praxis-Sites ist die Hebelreihenfolge Indexierbarkeit, Schema-Knotengraph, Capsule-Inhalte, AI-Citation-Tracking — nicht „mehr Backlinks" oder „mehr Content". Diese Reihenfolge gilt für jede Spezialklinik mit gewachsener WordPress- oder Divi-Vergangenheit.
+      </p>
+      <p class="mt-4 text-base font-body text-gray leading-relaxed">
+        Vier Monate später kommen drei Befunde dazu. Erstens: Struktur wirkt zuerst dort, wo bereits Substanz liegt — die grössten Zuwächse entstanden auf Startseite und Team-Seite, nicht auf den neuen Seiten. Zweitens: Eine neue Krankheitsbild-Seite kauft zuerst Breite, dann erst Position; wer nach vier Wochen Positionen bewertet, bewertet Rauschen. Drittens, und das ist der eigentliche Engpass: Ohne Messung der Telefon-Abschlüsse bleibt unbekannt, was aus der gewonnenen Sichtbarkeit wird. Bei einer Praxis mit hohem Mobil-Anteil ist der Anruf der häufigste Weg zur Terminvereinbarung — und er taucht in keiner Standard-Auswertung auf. Der nächste Schritt in diesem Mandat ist deshalb Conversion-Messung, nicht mehr Content.
       </p>
     </div>
   </Section>
