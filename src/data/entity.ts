@@ -30,7 +30,18 @@ export const organizationSchema = {
     'https://www.crunchbase.com/organization/starkrank',
     'https://www.local.ch/de/d/oberwil-bl/4104/marketing/starkrank-feye-KN9ZenQHAYQeeoIE6nM2SQ',
     'https://www.search.ch/tel/oberwil/langegasse-117/starkrank-feye',
+    // Handelsregister-gestuetzte Bestaetigung von Name, Adresse und UID.
+    // NICHT ergaenzt: zefix.ch — robots.txt sperrt die gesamte Site fuer alle
+    // Bots inkl. Googlebot/Bingbot, ein sameAs dorthin ist fuer keinen Crawler
+    // aufloesbar.
+    'https://www.moneyhouse.ch/de/company/starkrank-feye-10506118041',
   ],
+  // Sichtbar im Impressum (Schema-Content-Paritaet, §5.5).
+  identifier: {
+    '@type': 'PropertyValue',
+    propertyID: 'UID',
+    value: 'CHE-220.283.724',
+  },
   contactPoint: [
     {
       '@type': 'ContactPoint',
