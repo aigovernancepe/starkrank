@@ -42,7 +42,7 @@ cta: "Kostenlose Erstberatung für Bremen anfordern"
 <svg class="w-5 h-5 shrink-0 text-blue transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
 </summary>
 
-Eine SEO-Agentur in Bremen baut digitale Sichtbarkeit für Unternehmen mit regionalem oder norddeutschem Marktfokus auf — mit technischem Audit, Content-Strategie, Linkaufbau und lokaler Optimierung für Google Maps und KI-Antworten. StarkRank verbindet das mit einer Spezialisierung auf B2B-Mittelstand und Hidden Champions.
+Eine SEO-Agentur in Bremen baut digitale Sichtbarkeit für Unternehmen mit regionalem oder norddeutschem Marktfokus auf — mit technischem Audit, Content-Strategie, Linkaufbau und lokaler Optimierung für Google Maps und KI-Antworten. StarkRank verbindet das mit einer Spezialisierung auf [B2B-Mittelstand](/b2b-seo/) und Hidden Champions.
 
 Der Einstieg ist immer dieselbe Frage: Wo sucht Ihre Bremer Zielgruppe heute tatsächlich — und in welcher Sprache? Daraus ergibt sich, welche Strecke zuerst Arbeit braucht. Maritime-Zulieferer brauchen technische Long-Tail-Optimierung und englische Inhalte für internationale Einkäufer; Lebensmittelhersteller eine doppelgleisige B2B/B2C-Strategie; Hidden Champions vor allem Sichtbarkeitsaufbau, der zur tatsächlichen technischen Marktposition passt.
 

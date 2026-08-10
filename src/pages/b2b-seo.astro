@@ -7,6 +7,12 @@ import Card from '../components/ui/Card.astro';
 import CTABanner from '../components/ui/CTABanner.astro';
 import { Content } from '../markdown/b2b-seo.md';
 import { getSelfLastModified } from '../utils/getLastModified';
+import {
+  organizationSchema,
+  websiteSchema,
+  ORGANIZATION_ID,
+  WEBSITE_ID,
+} from '../data/entity';
 
 const site = Astro.site?.origin ?? 'https://starkrank.com';
 const pageUrl = `${site}/b2b-seo/`;
@@ -40,16 +46,30 @@ const faqItems = [
   },
 ];
 
-// provider bound by @id to the canonical Organization node (emitted inline on
-// the homepage). Same convention as the /services/[slug] hubs — cross-page
-// @id reference, not a re-declared node.
+// Leistungen spiegeln die sichtbare Liste unter "Welche B2B-SEO-Leistungen
+// bietet StarkRank?" in src/markdown/b2b-seo.md 1:1 (Schema-Content-Parität,
+// §5.5) und speisen den hasOfferCatalog.
+const offeredServices = [
+  'Technisches SEO',
+  'Content-Marketing & SEO-Copywriting',
+  'Authority & Linkbuilding',
+  'KI-Suchoptimierung (AISO)',
+  'SEO-Beratung & laufende SEO-Betreuung',
+];
+
+// provider/isPartOf verweisen per @id auf die kanonischen Entity-Knoten, die
+// diese Seite unten mit ausliefert (siehe src/data/entity.ts) — eine reine
+// cross-page-Referenz ließe den Anbieter unaufgelöst.
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  '@id': `${pageUrl}#service`,
   name: 'B2B-SEO',
   serviceType: 'B2B Search Engine Optimization',
   url: pageUrl,
-  provider: { '@id': 'https://starkrank.com/#organization' },
+  mainEntityOfPage: pageUrl,
+  isPartOf: { '@id': WEBSITE_ID },
+  provider: { '@id': ORGANIZATION_ID },
   areaServed: [
     { '@type': 'Country', name: 'Deutschland' },
     { '@type': 'Country', name: 'Schweiz' },
@@ -58,13 +78,30 @@ const serviceSchema = {
     '@type': 'BusinessAudience',
     audienceType: 'B2B-Hersteller, Industrie- und Technologieunternehmen',
   },
+  about: {
+    '@type': 'Thing',
+    name: 'B2B-Suchmaschinenoptimierung',
+    sameAs: 'https://de.wikipedia.org/wiki/Suchmaschinenoptimierung',
+  },
+  mentions: [
+    { '@type': 'Thing', name: 'AI Search Optimization Score' },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'B2B-SEO-Leistungen',
+    itemListElement: offeredServices.map((name) => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name },
+    })),
+  },
   description:
     'Auf B2B spezialisierte SEO-Agentur für Hersteller, Industrie- und Technologieunternehmen im DACH-Raum. Mehr qualifizierte Leads aus Google und KI-Antworten, messbar mit dem AI Search Optimization Score.',
 };
 
 // BreadcrumbList is emitted by the <Breadcrumbs> component below (same names +
-// URLs), so it is intentionally NOT duplicated here. Page carries exactly three
-// schema objects: Service + FAQPage (here) and BreadcrumbList (Breadcrumbs).
+// URLs), so it is intentionally NOT duplicated here. Page carries exactly six
+// schema objects: Organization + WebSite + Service + FAQPage + HowTo (here) and
+// BreadcrumbList (Breadcrumbs).
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -100,7 +137,7 @@ const howToSchema = {
   })),
 };
 
-const schemas = [serviceSchema, faqSchema, howToSchema];
+const schemas = [organizationSchema, websiteSchema, serviceSchema, faqSchema, howToSchema];
 
 const breadcrumbs = [
   { label: 'Start', href: '/' },
