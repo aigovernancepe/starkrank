@@ -6,7 +6,7 @@ description: "SEO- und Marketing-Agentur für Hannoveraner Unternehmen — Webag
 heroHeadline: "SEO & Online Marketing **Agentur in Hannover**"
 heroLede: "Digitale Sichtbarkeit für Hannoveraner Maschinenbau, IT und Zulieferer — inklusive der Suchspitze rund um die Hannover Messe."
 servicesTitle: "Dienstleistungen"
-servicesIntro: "Diese Bereiche haben in Hannover die höchste belegte Suchnachfrage. Weitere Leistungen — KI-Suchoptimierung, Linkaufbau, Text-Audit, Google-Analytics-Beratung — liefern wir auf Anfrage, nur ohne eigene Hannover-Landingpage."
+servicesIntro: "Diese Bereiche haben in Hannover die höchste belegte Suchnachfrage und stehen deshalb hier vorn. Für KI-Suchoptimierung, Linkaufbau, Text-Audit und Google-Analytics-Beratung gibt es ebenfalls eigene Hannover-Seiten."
 featuredServices:
   - "performance-web-development"
   - "technical-web-design"

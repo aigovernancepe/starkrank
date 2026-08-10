@@ -6,7 +6,7 @@ description: "SEO- und Marketing-Agentur für Zürcher Unternehmen — Webagentu
 heroHeadline: "SEO & Online Marketing **Agentur in Zürich**"
 heroLede: "Digitale Sichtbarkeit für Zürcher Finanz-, Versicherungs- und Tech-Unternehmen — technisch sauber aufgesetzt und revDSG-konform."
 servicesTitle: "Dienstleistungen"
-servicesIntro: "Diese Bereiche haben in Zürich die höchste Suchnachfrage. Weitere Leistungen — KI-Suchoptimierung, Linkaufbau, Content-Marketing — übernehmen wir für Zürcher Mandate ebenfalls, nur ohne eigene Landingpage dafür."
+servicesIntro: "Diese Bereiche haben in Zürich die höchste Suchnachfrage und stehen deshalb hier vorn. Für KI-Suchoptimierung und Content-Marketing gibt es ebenfalls eigene Zürcher Seiten. Strategischen Linkaufbau übernehmen wir für Zürcher Mandate ebenso, dafür ohne eigene Landingpage."
 featuredServices:
   - "technical-seo-audit"
   - "performance-web-development"

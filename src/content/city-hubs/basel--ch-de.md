@@ -6,7 +6,7 @@ description: "SEO- und Marketing-Agentur für Basler Unternehmen — Webdesign, 
 heroHeadline: "SEO & Online Marketing **Agentur in Basel**"
 heroLede: "Digitale Sichtbarkeit für Basler Pharma-, Logistik- und Industriebetriebe — auch über die Landesgrenze hinweg, revDSG-konform."
 servicesTitle: "Dienstleistungen"
-servicesIntro: "Diese Bereiche haben in Basel die höchste Suchnachfrage. Weitere Leistungen — KI-Suchoptimierung, Content-Marketing, strategischer Linkaufbau — übernehmen wir für Basler Mandate ebenfalls, nur ohne eigene Landingpage dafür."
+servicesIntro: "Diese Bereiche haben in Basel die höchste Suchnachfrage und stehen deshalb hier vorn. Für KI-Suchoptimierung und Content-Marketing gibt es ebenfalls eigene Basler Seiten. Strategischen Linkaufbau übernehmen wir für Basler Mandate ebenso, dafür ohne eigene Landingpage."
 featuredServices:
   - "technical-seo-audit"
   - "technical-web-design"
