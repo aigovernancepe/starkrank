@@ -162,7 +162,7 @@ Für spezifische Bedarfe wie Whitepapers, E-Books oder Sales-Enablement-Material
 SEO-Texterstellung bei StarkRank lohnt sich typischerweise für:
 
 - **Unternehmen vor einem Website-Relaunch** — die bestehende Texte auf Capsule-Qualität heben wollen, statt sie unverändert auf die neue Struktur zu übertragen
-- **B2B-Firmen mit langen Sales-Cycles** — wo informationsreiche Texte den Käufer durch mehrere Entscheidungsstadien führen, bevor er überhaupt mit Sales spricht
+- **[B2B-Firmen mit langen Sales-Cycles](/b2b-seo/)** — wo informationsreiche Texte den Käufer durch mehrere Entscheidungsstadien führen, bevor er überhaupt mit Sales spricht
 - **Dienstleister in wettbewerbsintensiven Märkten** — wo der Unterschied zwischen Top-10 und nicht-sichtbar in Mikro-Formulierungen und Capsule-Disziplin liegt
 - **Unternehmen, die in ChatGPT oder Perplexity zitiert werden wollen** — KI-Zitationsfähigkeit ist bei uns das Standard-Liefermerkmal, kein Premium-Feature
 - **Firmen mit eigenen Autoren, die ein Quality-Gate brauchen** — wir nehmen die Rolle des externen Editor-in-Chief ein, lesen, briefen Überarbeitung, sichern Capsule-Qualität

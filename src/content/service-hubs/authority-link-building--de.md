@@ -66,7 +66,7 @@ Was sich gegenüber dem klassischen Linkaufbau-Geschäft verschoben hat, ist die
 
 Klassische Link-Recherche-Methoden starten mit Listen: DR-50+-Domains aus dem Ahrefs-Filter, „thematisch passend" als grobe Selbstauskunft, Ansprache im Volumen. [Entitätsverankerter Linkaufbau](/glossar/#entitaetsverankerter-linkaufbau) kehrt die Reihenfolge um. Wir starten mit der Wikidata-Entity Ihres Unternehmens (oder mit der Inventur, falls noch keine angelegt ist), folgen den `sameAs`-Verknüpfungen zu Wikipedia, LinkedIn, Crunchbase, Branchenwissensgraphen und identifizieren so den Cluster aus Domains, die im strukturierten Web bereits mit Ihrer Entität in Beziehung stehen oder stehen könnten.
 
-Aus diesem Cluster bewerten wir jede Ziel-Domain entlang von vier Dimensionen — eine Domain qualifiziert sich, wenn sie in mindestens zwei davon dokumentierbar passt:
+Aus diesem Cluster bewerten wir jede Ziel-Domain entlang von vier Dimensionen — eine Domain qualifiziert sich, wenn sie in mindestens zwei davon dokumentierbar passt. Für Hersteller und Industrieanbieter ist dieser Schritt Teil des größeren Mandats, das die [B2B-SEO-Betreuung](/b2b-seo/) abdeckt:
 
 | Dimension | Was wir prüfen | Beispiel |
 |-----------|----------------|----------|
