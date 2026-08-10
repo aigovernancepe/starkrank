@@ -6,7 +6,7 @@ description: "SEO- und Marketing-Agentur für Hamburger Unternehmen — Webagent
 heroHeadline: "SEO & Online Marketing **Agentur in Hamburg**"
 heroLede: "Digitale Sichtbarkeit für Hamburger Versandhandel, Verlage und Maritime-Anbieter — mit Tracking, das bis auf Sortiments- und Margenniveau auflöst."
 servicesTitle: "Dienstleistungen"
-servicesIntro: "Diese Bereiche haben in Hamburg die höchste belegte Suchnachfrage. Weitere Leistungen — KI-Suchoptimierung, Linkaufbau, Text-Audit, Paid Social — liefern wir auf Anfrage, nur ohne eigene Hamburg-Landingpage."
+servicesIntro: "Diese Bereiche haben in Hamburg die höchste belegte Suchnachfrage und stehen deshalb hier vorn. Für KI-Suchoptimierung, Linkaufbau, Text-Audit und Paid Social gibt es ebenfalls eigene Hamburg-Seiten."
 featuredServices:
   - "performance-web-development"
   - "technical-web-design"
