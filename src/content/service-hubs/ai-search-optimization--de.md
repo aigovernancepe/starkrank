@@ -2,13 +2,14 @@
 serviceSlug: "ai-search-optimization"
 urlSlug: "ai-seo"
 locale: "de"
-title: "AI SEO & KI-Sichtbarkeit"
+title: "AI SEO & KI-Suchoptimierung"
 description: "AI SEO macht Ihre Marke in KI-Antworten sichtbar: messen, überwachen, optimieren. StarkRank trackt Ihre Nennungen in ChatGPT und Google AI Overviews."
-heroLede: "AI SEO sorgt dafür, dass KI-Systeme wie ChatGPT und Google AI Overviews Ihr Unternehmen nennen, statt Ihre Konkurrenz. StarkRank misst Ihre KI-Sichtbarkeit, überwacht Ihre Nennungen und setzt die Optimierung um — in drei aufeinander aufbauenden Schritten: Score, Monitor, Optimize."
+heroLede: "AI SEO, im Deutschen auch KI-Suchoptimierung genannt, sorgt dafür, dass KI-Systeme wie ChatGPT und Google AI Overviews Ihr Unternehmen nennen, statt Ihre Konkurrenz. StarkRank misst Ihre KI-Sichtbarkeit, überwacht Ihre Nennungen und setzt die Optimierung um — in drei aufeinander aufbauenden Schritten: Score, Monitor, Optimize."
 schemaAbout:
   - "StarkRank"
   - "AI Search Optimization"
   - "AI SEO"
+  - "KI-Suchoptimierung"
   - "KI-Sichtbarkeit"
 schemaMentions:
   - "Generative Engine Optimization"
@@ -59,9 +60,15 @@ AI-gestützte Suche — ChatGPT, Google AI Overviews, Perplexity — beantwortet
 
 StarkRank schließt diese Lücke mit **AI Search Optimization**: Wir prüfen, überwachen und verbessern Ihre digitale Präsenz so, dass KI-Plattformen Sie als vertrauenswürdige Quelle zitieren statt Ihrer Konkurrenz. Statt eines einmaligen Audits, das in der Schublade landet, arbeiten wir in einer Kette, die sich selbst belegt: **Score → Monitor → Optimize**.
 
-## Was ist AI SEO?
+## Was ist AI SEO, und was bedeutet KI-Suchoptimierung?
 
-AI SEO ist die Disziplin, in den Antworten von KI-Systemen wie ChatGPT und Google AI Overviews gefunden und zitiert zu werden — wir nennen sie AI Search Optimization, im Markt heißt sie auch Generative Engine Optimization (GEO). Während klassisches SEO um Ranking-Plätze kämpft, geht es hier um Ihre **KI-Sichtbarkeit**: wie oft und wie vertrauenswürdig künstliche Intelligenz Ihre Marke in generierten Antworten nennt.
+AI SEO und KI-Suchoptimierung bezeichnen dasselbe: die Disziplin, in den Antworten von KI-Systemen wie ChatGPT und Google AI Overviews gefunden und zitiert zu werden. Wir nennen sie AI Search Optimization, im Markt heißt sie auch Generative Engine Optimization (GEO). Während klassisches SEO um Ranking-Plätze kämpft, geht es hier um Ihre **KI-Sichtbarkeit**: wie oft und wie vertrauenswürdig künstliche Intelligenz Ihre Marke in generierten Antworten nennt.
+
+## Was macht eine Agentur für KI-Suchoptimierung?
+
+Eine Agentur für KI-Suchoptimierung sorgt dafür, dass ChatGPT, Google AI Overviews und Perplexity Ihr Unternehmen als Quelle nennen. Sie misst Ihre heutige KI-Sichtbarkeit, überwacht die Nennungen laufend und schließt die technischen und inhaltlichen Lücken. Anders als klassisches SEO zielt sie nicht auf Ranking-Plätze, sondern auf die Nennung in der Antwort selbst.
+
+Bei StarkRank läuft das in der Kette Score, Monitor, Optimize: zuerst die Bestandsaufnahme über sechs Dimensionen, dann das monatliche Tracking Ihrer Nennungen, dann die Umsetzung. Wo Sie heute stehen, zeigt der kostenlose [AI Search Optimization Check](/aiso-check/).
 
 ## KI-Sichtbarkeit & Mentions: Score → Monitor → Optimize
 
