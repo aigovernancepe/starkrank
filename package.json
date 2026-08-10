@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "(git rev-parse --is-shallow-repository 2>/dev/null | grep -q true && git fetch --unshallow 2>/dev/null) || true && astro build && node scripts/inject-sitemap-lastmod.mjs",
+    "build": "(git rev-parse --is-shallow-repository 2>/dev/null | grep -q true && git fetch --unshallow 2>/dev/null) || true && node scripts/verify-slug-maps.mjs && astro build && node scripts/inject-sitemap-lastmod.mjs",
     "preview": "astro preview",
     "salience": "node scripts/salience-verify.mjs",
-    "a11y": "node scripts/a11y-audit.mjs"
+    "a11y": "node scripts/a11y-audit.mjs",
+    "verify:slugs": "node scripts/verify-slug-maps.mjs"
   },
   "repository": {
     "type": "git",

@@ -134,7 +134,7 @@ const deServiceHubSlugMap = new Map<string, string>([
   ['google-ads-audit', 'google-ads-audit'],
   ['paid-social-strategy', 'paid-social-strategy'],
   ['content-marketing', 'content-marketing-agentur'],
-  ['seo-copywriting', 'seo-copywriting'],
+  ['seo-copywriting', 'seo-texterstellung'],
   ['copywriting-audit', 'copywriting-audit'],
   ['audience-persona-mapping', 'zielgruppenanalyse'],
   ['google-analytics-consultancy', 'google-analytics-consultancy'],
@@ -155,6 +155,8 @@ const chDeServiceHubSlugMap = new Map<string, string>([
   // GEO 260/mo, DataForSEO 2026-06-19). Follows the -schweiz CH convention; the
   // DE side uses bare "ai-seo" only because the (now-moot) .ai reservation sat there.
   ['ai-search-optimization', 'ai-seo-schweiz'],
+  // urlSlug gleich serviceSlug (keine Keyword-Migration).
+  ['google-ads-audit', 'google-ads-audit'],
 ]);
 
 /**
