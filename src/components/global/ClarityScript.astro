@@ -1,0 +1,52 @@
+---
+/**
+ * Microsoft Clarity tag — consent-gated and deferred past LCP.
+ *
+ * Two deviations from the vendor snippet, both required here:
+ *
+ * 1. The tag is not injected until consent exists. Clarity records sessions,
+ *    which needs opt-in under DSGVO and revDSG — the vendor snippet fires on
+ *    parse, before the banner is even visible. We load on the stored decision
+ *    and on the `starkrank:consent-granted` event that CookieConsent fires.
+ * 2. Injection waits for `window.load`, matching how GA4 is deferred in
+ *    BaseLayout so the recorder does not compete with LCP.
+ *
+ * After injection we still have to send `consentv2` explicitly: since
+ * 2025-10-31 Clarity defaults EEA/UK/CH visitors into no-consent mode, which
+ * assigns a fresh ID per page view instead of stitching a session. Without this
+ * call the recordings would be useless for exactly the funnel questions Clarity
+ * is here to answer. ad_Storage stays denied — analytics_Storage is what enables
+ * cross-page session tracking, and denying ads keeps Clarity from setting the
+ * advertising-related Microsoft cookies (MUID and friends).
+ */
+import { CLARITY_PROJECT_ID } from '../../utils/clarity';
+---
+
+<script is:inline define:vars={{ projectId: CLARITY_PROJECT_ID }}>
+  (function () {
+    function loadClarity() {
+      if (window.clarity) return;
+
+      (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+        t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', projectId);
+
+      window.clarity('consentv2', {
+        ad_Storage: 'denied',
+        analytics_Storage: 'granted',
+      });
+    }
+
+    function loadAfterPaint() {
+      if (document.readyState === 'complete') loadClarity();
+      else window.addEventListener('load', loadClarity, { once: true });
+    }
+
+    if (localStorage.getItem('cookie-consent') === 'granted') loadAfterPaint();
+
+    // Consent given during this page view — CookieConsent dispatches on accept.
+    window.addEventListener('starkrank:consent-granted', loadAfterPaint);
+  })();
+</script>
