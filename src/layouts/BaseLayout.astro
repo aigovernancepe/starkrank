@@ -4,7 +4,9 @@ import '../styles/global.css';
 import Header from '../components/global/Header.astro';
 import Footer from '../components/global/Footer.astro';
 import CookieConsent from '../components/global/CookieConsent.astro';
+import ClarityScript from '../components/global/ClarityScript.astro';
 import { getLangAttribute, getHreflangAlternates } from '../utils/i18n';
+import { hasClarity } from '../utils/clarity';
 import type { Locale } from '../data/locales';
 
 interface Props {
@@ -37,6 +39,7 @@ const site = Astro.site?.origin ?? 'https://starkrank.com';
 const canonicalUrl = canonical ?? `${site}${Astro.url.pathname}`;
 const alternates = hreflangAlternates ?? getHreflangAlternates(Astro.url.pathname, site);
 const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
+const clarity = hasClarity(Astro.url.pathname);
 ---
 
 <html lang={lang}>
@@ -86,6 +89,9 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
         document.head.appendChild(s);
       }, { once: true });
     </script>
+
+    <!-- Microsoft Clarity — lead-form and homepage entry points only, see utils/clarity.ts -->
+    {clarity && <ClarityScript />}
 
     <!-- SEO -->
     <title>{title}</title>

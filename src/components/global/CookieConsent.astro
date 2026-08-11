@@ -84,6 +84,15 @@ const { locale = 'en' } = Astro.props;
         ad_personalization: granted ? 'granted' : 'denied',
       });
     }
+
+    if (granted) {
+      // ClarityScript listens for this to inject the tag (pages that embed it).
+      window.dispatchEvent(new CustomEvent('starkrank:consent-granted'));
+    } else if (typeof window.clarity === 'function') {
+      // Consent withdrawn after Clarity already loaded — tells Clarity to drop
+      // its cookies and end the session.
+      window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: 'denied' });
+    }
   }
 
   // Run on initial load

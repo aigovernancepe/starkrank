@@ -31,6 +31,12 @@ const lastModifiedLabel = lastModified.toLocaleDateString('en-US', { year: 'nume
       <p><strong>After you consent:</strong> Google Analytics may set cookies to distinguish unique visitors and sessions. Data collected includes pages visited, time on site, approximate location (country/city level), device type, and referral source.</p>
       <p>We have implemented Google Consent Mode v2, which ensures that tracking behaviour adapts to your consent choice. You can change your consent at any time by clearing your browser's local storage for this site.</p>
 
+      <h3>Behavioural analytics (Microsoft Clarity)</h3>
+      <p>On a subset of our pages — the homepages, the contact pages and the free-check pages — we additionally use Microsoft Clarity (project ID: wv9i3u54lb), a service provided by Microsoft Corporation. Clarity records how a session unfolds (mouse movement, clicks, scrolling, time spent on individual sections) and aggregates this into session recordings and heatmaps. We use it solely to find usability problems, such as where in a form visitors drop off.</p>
+      <p><strong>Before you consent:</strong> Clarity is not loaded at all. No Microsoft script is executed, no cookies are set, and no recording takes place.</p>
+      <p><strong>After you consent:</strong> The Clarity script is loaded and your session is recorded. The contents of input fields and dropdown menus are masked by Clarity and never transmitted to Microsoft — whatever you type into a form is not readable in the recordings. We also explicitly signal to Clarity that advertising storage is not permitted.</p>
+      <p>You can withdraw your consent at any time by clearing your browser's local storage for this site. The cookie banner will reappear on your next visit; declining there stops Clarity from loading.</p>
+
       <h3>Contact forms</h3>
       <p>When you submit a contact form, we collect the information you provide (name, email address, message). This data is used solely to respond to your enquiry and is not shared with third parties.</p>
 
@@ -42,18 +48,20 @@ const lastModifiedLabel = lastModified.toLocaleDateString('en-US', { year: 'nume
       <ul>
         <li><strong>Essential:</strong> Local storage entry for your cookie consent preference. No expiry — persists until you clear browser data.</li>
         <li><strong>Analytics (requires consent):</strong> Google Analytics cookies (_ga, _ga_*) used to distinguish visitors and sessions. Expire after 2 years.</li>
+        <li><strong>Behavioural analytics (requires consent):</strong> Microsoft Clarity cookies. _clck stores a pseudonymous user ID (1 year), _clsk stitches multiple page views into one session (1 day). Microsoft may additionally set third-party cookies on clarity.ms and Microsoft domains (CLID, MUID, ANONCHK, MR, SM) with lifetimes ranging from minutes to 13 months.</li>
       </ul>
-      <p>We do not use advertising cookies, social media tracking pixels, or any third-party marketing cookies.</p>
+      <p>We do not run advertising through this website, we set no social media tracking pixels, and we do not use any of the data above for advertising purposes. We explicitly signal to Microsoft Clarity that advertising storage is not permitted. The MUID cookie is nonetheless also used by Microsoft for advertising — if you want to exclude that, decline consent in the cookie banner.</p>
 
       <h2>Legal basis for processing</h2>
       <ul>
-        <li><strong>Consent</strong> (Art. 6(1)(a) GDPR / Art. 6(1)(a) revDSG): Analytics cookies are only activated after you explicitly consent via our cookie banner.</li>
+        <li><strong>Consent</strong> (Art. 6(1)(a) GDPR / Art. 6(1)(a) revDSG): Analytics and behavioural analytics services are only activated after you explicitly consent via our cookie banner. Microsoft Clarity is not loaded at all before consent.</li>
         <li><strong>Legitimate interest</strong> (Art. 6(1)(f) GDPR): Server logs and essential site functionality.</li>
         <li><strong>Contract performance</strong> (Art. 6(1)(b) GDPR): Processing contact form data to respond to your enquiry.</li>
       </ul>
 
       <h2>Data transfers</h2>
       <p>Google Analytics data may be transferred to servers in the United States. Google LLC participates in the EU-US Data Privacy Framework. We rely on Standard Contractual Clauses (SCCs) and Google's data processing terms for adequate data protection.</p>
+      <p>Microsoft Clarity data is stored in the Microsoft Azure cloud. For customers in the EEA, the contracting entity is Microsoft Ireland Operations Limited (MIOL); onward transfer to Microsoft Corporation in the United States takes place under Standard Contractual Clauses (SCCs) between those affiliates. Microsoft participates in the EU-US Data Privacy Framework.</p>
 
       <h2>Your rights</h2>
       <p>Depending on your location, you have the right to:</p>
@@ -67,7 +75,7 @@ const lastModifiedLabel = lastModified.toLocaleDateString('en-US', { year: 'nume
       <p>For EU/EEA residents, the relevant supervisory authority depends on your country of residence. For Swiss residents, the Federal Data Protection and Information Commissioner (FDPIC) is the responsible authority.</p>
 
       <h2>Data retention</h2>
-      <p>Google Analytics data is retained for 14 months, after which it is automatically deleted. Contact form data is retained for the duration of the business relationship, then deleted within 12 months. Server logs are retained for a maximum of 90 days.</p>
+      <p>Google Analytics data is retained for 14 months, after which it is automatically deleted. Microsoft Clarity session recordings are deleted 30 days after recording; individually favourited or randomly sampled recordings and heatmap data remain available for up to 9 months. Contact form data is retained for the duration of the business relationship, then deleted within 12 months. Server logs are retained for a maximum of 90 days.</p>
 
       <h2>Changes to this policy</h2>
       <p>We may update this policy to reflect changes in our practices or legal requirements. The "Last updated" date at the top indicates the most recent revision.</p>

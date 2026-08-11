@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Logo from '../components/global/Logo.astro';
 import Footer from '../components/global/Footer.astro';
 import CookieConsent from '../components/global/CookieConsent.astro';
+import ClarityScript from '../components/global/ClarityScript.astro';
 import { getLangAttribute } from '../utils/i18n';
 import type { Locale } from '../data/locales';
 
@@ -69,6 +70,9 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
       gtag('js', new Date());
       gtag('config', 'G-FCS0HH5VC0');
     </script>
+
+    <!-- Microsoft Clarity — this layout serves only the free-check landings, all in scope -->
+    <ClarityScript />
 
     <!-- SEO -->
     <title>{title}</title>
