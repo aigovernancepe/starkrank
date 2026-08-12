@@ -14,6 +14,7 @@ const { locale = 'en' } = Astro.props;
   class="fixed bottom-0 left-0 right-0 z-50 hidden"
   role="dialog"
   aria-label={t('consent.title', locale)}
+  tabindex="-1"
 >
   <div class="max-w-4xl mx-auto px-4 pb-4">
     <div class="bg-navy border border-gray/30 rounded-lg shadow-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
@@ -24,6 +25,12 @@ const { locale = 'en' } = Astro.props;
             {t('consent.policyText', locale)}
           </a>
         </p>
+        <p
+          id="cookie-consent-status"
+          class="hidden text-xs font-body text-gray-light mt-2"
+          data-status-granted={t('consent.status.granted', locale)}
+          data-status-denied={t('consent.status.denied', locale)}
+        ></p>
       </div>
       <div class="flex gap-3 shrink-0">
         <button
@@ -48,6 +55,9 @@ const { locale = 'en' } = Astro.props;
     const banner = document.getElementById('cookie-consent');
     const acceptBtn = document.getElementById('cookie-accept');
     const declineBtn = document.getElementById('cookie-decline');
+    const status = document.getElementById('cookie-consent-status');
+    // Lives in the footer, so it is a sibling of this component rather than a child.
+    const settingsBtn = document.getElementById('cookie-settings');
 
     if (!banner || !acceptBtn || !declineBtn) return;
 
@@ -62,16 +72,57 @@ const { locale = 'en' } = Astro.props;
     }
     // If 'denied', consent defaults already set to denied — nothing to do
 
-    acceptBtn.addEventListener('click', () => {
-      localStorage.setItem('cookie-consent', 'granted');
-      updateConsent(true);
-      banner.classList.add('hidden');
-    });
+    function showStatus() {
+      if (!status) return;
+      const current = localStorage.getItem('cookie-consent');
+      const text = current === 'granted' ? status.dataset.statusGranted : status.dataset.statusDenied;
+      if (current === null || !text) return;
+      status.textContent = text;
+      status.classList.remove('hidden');
+    }
 
-    declineBtn.addEventListener('click', () => {
-      localStorage.setItem('cookie-consent', 'denied');
-      updateConsent(false);
+    // Tracks how the banner was opened. Return focus to the footer button only
+    // when that is where the visitor came from — on the first-visit banner they
+    // never touched it, so sending focus to the footer would be disorienting.
+    let openedFromSettings = false;
+
+    function close() {
       banner.classList.add('hidden');
+      status?.classList.add('hidden');
+      if (openedFromSettings) {
+        settingsBtn?.focus();
+        openedFromSettings = false;
+      }
+    }
+
+    function decide(granted: boolean) {
+      localStorage.setItem('cookie-consent', granted ? 'granted' : 'denied');
+      updateConsent(granted);
+      close();
+    }
+
+    acceptBtn.addEventListener('click', () => decide(true));
+    declineBtn.addEventListener('click', () => decide(false));
+
+    if (settingsBtn) {
+      // Revealed only now: without JS the banner cannot open, so the control
+      // would be dead. See Footer.astro.
+      settingsBtn.classList.remove('hidden');
+      settingsBtn.addEventListener('click', () => {
+        openedFromSettings = true;
+        showStatus();
+        banner.classList.remove('hidden');
+        banner.focus();
+      });
+    }
+
+    // Bound to the banner, not to document — initConsent re-runs after every
+    // view transition, and a document-level listener would stack up each time.
+    banner.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      // Dismissible only once a choice is on record; first-time visitors decide.
+      if (localStorage.getItem('cookie-consent') === null) return;
+      close();
     });
   }
 

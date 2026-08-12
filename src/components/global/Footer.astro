@@ -168,6 +168,15 @@ const cityHubs = {
             {locale === 'en' ? 'Imprint' : 'Impressum'}
           </a>
         )}
+        {/* Reopens the consent banner. Hidden until CookieConsent's script wires
+            it up, so no-JS visitors never see a control that cannot work. */}
+        <button
+          type="button"
+          id="cookie-settings"
+          class="hidden text-xs text-gray font-body hover:text-cream transition-colors"
+        >
+          {t('consent.manage', locale)}
+        </button>
       </div>
     </div>
   </div>
