@@ -2,6 +2,7 @@
 import LandingLayout from '../../layouts/LandingLayout.astro';
 import Section from '../../components/ui/Section.astro';
 import LeadForm from '../../components/ui/LeadForm.astro';
+import { landingHreflangPairs } from '../../data/landingHreflangPairs';
 
 const title = 'Kostenloser Google-Ads-Audit | StarkRank Schweiz';
 const description = 'Verbrennt Ihr Google-Ads-Budget? Unsere kostenlose 9-Bereiche-Diagnose zeigt ungenutzte Chancen und schnelle Verbesserungen. Kein Kontozugriff nötig.';
@@ -69,10 +70,9 @@ const auditAreas = [
   backLink={{ label: 'Zurück zu den Dienstleistungen', href: '/ch-de/services/#performance-media' }}
 >
   <Fragment slot="head">
-    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/kostenloser-google-ads-check/" />
-    <link rel="alternate" hreflang="de-DE" href="https://starkrank.com/kostenloser-google-ads-check/" />
-    <link rel="alternate" hreflang="en" href="https://starkrank.com/free-google-ads-audit/" />
-    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/kostenloser-google-ads-check/" />
+    {landingHreflangPairs['kostenloser-google-ads-check'].map(({ hreflang, href }) => (
+      <link rel="alternate" hreflang={hreflang} href={href} />
+    ))}
   </Fragment>
 
   <!-- Hero + Form -->

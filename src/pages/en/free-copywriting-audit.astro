@@ -2,6 +2,7 @@
 import LandingLayout from '../../layouts/LandingLayout.astro';
 import Section from '../../components/ui/Section.astro';
 import LeadForm from '../../components/ui/LeadForm.astro';
+import { landingHreflangPairs } from '../../data/landingHreflangPairs';
 
 const title = 'Free Copywriting Audit — 20-Min Diagnostic | StarkRank';
 const description = "Your website gets traffic but not leads? Our free 6-dimension copywriting audit shows exactly where your copy loses visitors. No commitment. Results in 48h.";
@@ -75,10 +76,9 @@ const auditDimensions = [
   backLink={{ label: 'Back to Services', href: '/en/services/seo-copywriting/' }}
 >
   <Fragment slot="head">
-    <link rel="alternate" hreflang="en" href="https://starkrank.com/en/free-copywriting-audit/" />
-    <link rel="alternate" hreflang="de-DE" href="https://starkrank.com/kostenloser-copywriting-check/" />
-    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/kostenloser-copywriting-check/" />
-    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/en/free-copywriting-audit/" />
+    {landingHreflangPairs['kostenloser-copywriting-check'].map(({ hreflang, href }) => (
+      <link rel="alternate" hreflang={hreflang} href={href} />
+    ))}
   </Fragment>
 
   <!-- Hero + Form -->

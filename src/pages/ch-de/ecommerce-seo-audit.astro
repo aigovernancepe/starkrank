@@ -7,6 +7,7 @@ import Button from '../../components/ui/Button.astro';
 import Card from '../../components/ui/Card.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
 import EcommerceForkBox from '../../components/ch-de/EcommerceForkBox.astro';
+import { landingHreflangPairs } from '../../data/landingHreflangPairs';
 
 const title = 'Online Shop SEO Audit — Produktschema | StarkRank Schweiz';
 const description = 'Produktkatalog-SEO ist eine eigene Disziplin. Wir prüfen die 8 Schwachstellen Ihrer PDPs, PLPs und Filternavigation — Lieferung in 7 Tagen.';
@@ -99,13 +100,7 @@ const lastModifiedIso = lastModified.toISOString().split('T')[0];
 const lastModifiedLabel = lastModified.toLocaleDateString('de-CH', { year: 'numeric', month: 'long' });
 ---
 
-<BaseLayout title={title} description={description} locale="de" schema={schemas}>
-  <Fragment slot="head">
-    <link rel="alternate" hreflang="en" href="https://starkrank.com/en/services/ecommerce-seo-audit/" />
-    <link rel="alternate" hreflang="de-DE" href="https://starkrank.com/ecommerce-seo-audit/" />
-    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/ecommerce-seo-audit/" />
-    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/ecommerce-seo-audit/" />
-  </Fragment>
+<BaseLayout title={title} description={description} locale="de" schema={schemas} hreflangAlternates={landingHreflangPairs['ecommerce-seo-audit']}>
 
   <!-- Hero -->
   <Section bg="cream">

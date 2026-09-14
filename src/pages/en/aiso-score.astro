@@ -2,6 +2,7 @@
 import LandingLayout from '../../layouts/LandingLayout.astro';
 import Section from '../../components/ui/Section.astro';
 import LeadForm from '../../components/ui/LeadForm.astro';
+import { landingHreflangPairs } from '../../data/landingHreflangPairs';
 const title = 'AI Search Optimization Score — Are You AI-Ready? | StarkRank';
 const description = "ChatGPT, Perplexity, and Google AI cite your competitors — not you. Get your free AI Search Optimization Score in 24 hours. 2 dimensions checked. No commitment.";
 
@@ -73,7 +74,9 @@ const upsellDimensions = [
 >
   <!-- Custom hreflang tags -->
   <Fragment slot="head">
-    <link rel="alternate" hreflang="en" href="https://starkrank.com/en/aiso-score/" />
+    {landingHreflangPairs['aiso-check'].map(({ hreflang, href }) => (
+      <link rel="alternate" hreflang={hreflang} href={href} />
+    ))}
   </Fragment>
 
   <!-- Hero + Form -->

@@ -2,6 +2,7 @@
 import LandingLayout from '../layouts/LandingLayout.astro';
 import Section from '../components/ui/Section.astro';
 import LeadForm from '../components/ui/LeadForm.astro';
+import { landingHreflangPairs } from '../data/landingHreflangPairs';
 
 const title = 'Kostenloser KI SEO Check — Website KI-ready? | StarkRank';
 const description = 'ChatGPT und Google AI zitieren Ihre Konkurrenz — aber nicht Sie. Kostenloser AI Search Optimization Check in 24 Stunden. 2 Dimensionen geprüft. Unverbindlich.';
@@ -52,10 +53,9 @@ const upsellDimensions = [
   backLink={{ label: 'Zurück zur Startseite', href: '/' }}
 >
   <Fragment slot="head">
-    <link rel="alternate" hreflang="de-DE" href="https://starkrank.com/aiso-check/" />
-    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/aiso-check/" />
-    <link rel="alternate" hreflang="en" href="https://starkrank.com/en/aiso-score/" />
-    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/aiso-check/" />
+    {landingHreflangPairs['aiso-check'].map(({ hreflang, href }) => (
+      <link rel="alternate" hreflang={hreflang} href={href} />
+    ))}
   </Fragment>
 
   <!-- Hero + Form -->
