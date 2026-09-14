@@ -54,6 +54,19 @@ Die häufigsten Probleme, die wir bei Schweizer Unternehmen sehen:
 
 ---
 
+## Wann sollten Sie Ihre SEO-Agentur wechseln?
+
+Ein Agentur-Wechsel lohnt sich, wenn drei Signale zusammenkommen: Die Sichtbarkeit stagniert seit Monaten trotz laufendem Retainer, es kommt kein strategischer Input mehr, nur noch Reports, und die Abrechnung lässt sich nicht mehr nachvollziehen. Einzeln sind das Warnsignale, gemeinsam ist es Zeit für eine unabhängige Zweitmeinung vor der nächsten Vertragsverlängerung.
+
+- **Stagnation nach anfänglichem Fortschritt:** Rankings und Traffic bewegen sich seit einem Jahr oder länger nicht mehr, ohne dass sich an Website oder Wettbewerb etwas geändert hat.
+- **Reports statt Strategie:** Sie erhalten monatliche Zahlen, aber keine neuen Vorschläge oder Prioritäten — die Agentur wartet, dass Sie den nächsten Schritt anstossen.
+- **Intransparente Abrechnung:** Sie können nicht nachvollziehen, wofür die abgerechneten Stunden verwendet wurden.
+- **Vertragsende steht an:** Bevor Sie verlängern, lohnt sich ein unabhängiges Audit als Zweitmeinung — unabhängig davon, ob Sie am Ende wechseln oder bleiben.
+
+Wie Sie einen Wechsel konkret vorbereiten, lesen Sie in der FAQ unten. Für die Zweitmeinung selbst bietet sich ein [unabhängiges SEO-Audit](/ch-de/services/seo-audit-schweiz/) an, das Ihre aktuelle Betreuung ohne Eigeninteresse bewertet.
+
+---
+
 ## Was leistet eine SEO-Agentur konkret für ein Schweizer KMU?
 
 Eine SEO-Agentur übernimmt für ein Schweizer KMU vier wiederkehrende Arbeitsfelder: technische Site-Optimierung (Mobile, Indexierung, Core Web Vitals), Content- und Keyword-Strategie pro Sprache, lokale Sichtbarkeit (Google Unternehmensprofil, local.ch, search.ch) und laufende Performance-Messung. Für ein typisches KMU mit lokalem Fokus bedeutet das in der Praxis 1–2 strategische Sessions pro Monat, 4–8 inhaltliche Optimierungen pro Quartal sowie ein Monatsreporting mit Handlungsempfehlungen statt reinen Ranking-Tabellen.
