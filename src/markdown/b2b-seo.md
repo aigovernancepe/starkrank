@@ -4,6 +4,29 @@ B2B funktioniert anders als der Verkauf an Endverbraucher: lange Verkaufszyklen,
 
 → **[Kostenlose KI-Sichtbarkeits-Ersteinschätzung anfordern](/aiso-check/)**
 
+## Was ist B2B-SEO?
+
+B2B-SEO ist Suchmaschinenoptimierung für Unternehmen, die an andere Unternehmen verkaufen, nicht an Privatkunden. Sie macht Ihre Produkte und Leistungen dort sichtbar, wo Beschaffungsentscheidungen entstehen — in Google und in KI-Antworten wie ChatGPT und Perplexity. Anders als im Endkundengeschäft zählt dabei nicht die Reichweite, sondern die Kaufabsicht hinter wenigen, aber wertvollen Suchanfragen.
+
+### Warum reicht Ranking in B2B-SEO nicht mehr aus?
+
+Eine gute Position in der klassischen Google-Suche reicht heute nicht mehr aus, weil Einkäufer ihre Recherche zunehmend in KI-Assistenten beginnen, die zusammenfassen, vergleichen und Quellen nennen. B2B-SEO deckt deshalb beide Kanäle ab: das klassische Ranking als Fundament und die Zitierfähigkeit in KI-Antworten als zweite, wachsende Sichtbarkeitsebene.
+
+<div class="not-prose mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div class="bg-white border border-gray-light/40 rounded-lg p-6">
+    <h4 class="text-lg font-headline font-bold text-navy">Kaufstarke Nischenbegriffe statt Reichweite</h4>
+    <p class="mt-3 text-sm font-body text-gray leading-relaxed">Ein B2B-Fachbegriff mit 140 Suchanfragen im Monat kann mehr Umsatz bringen als eines mit 14.000, wenn dahinter ein konkreter Beschaffungsauftrag steht. B2B-SEO priorisiert deshalb Kaufabsicht vor Volumen und besetzt gezielt die wenigen Suchbegriffe, hinter denen echte Entscheidungsprozesse stehen.</p>
+  </div>
+  <div class="bg-white border border-gray-light/40 rounded-lg p-6">
+    <h4 class="text-lg font-headline font-bold text-navy">Zitierfähigkeit in KI-Antworten</h4>
+    <p class="mt-3 text-sm font-body text-gray leading-relaxed">Einkäufer recherchieren Anbieter und Spezifikationen zunehmend zuerst in ChatGPT oder Perplexity, bevor sie eine klassische Google-Suche starten. Wer dort als Quelle genannt wird, gelangt in die engere Auswahl, noch bevor überhaupt ein Kontaktformular ausgefüllt wird.</p>
+  </div>
+  <div class="bg-white border border-gray-light/40 rounded-lg p-6">
+    <h4 class="text-lg font-headline font-bold text-navy">Messbar mit dem AI Search Optimization Score</h4>
+    <p class="mt-3 text-sm font-body text-gray leading-relaxed">Statt anekdotischer Ranking-Listen liefert der AI Search Optimization Score einen Wert von 0 bis 100 über sechs Dimensionen — von technischer Erreichbarkeit bis zur Zitierfähigkeit in KI-Antworten. So wird der Fortschritt Ihrer B2B-Sichtbarkeit nachvollziehbar, nicht anekdotisch.</p>
+  </div>
+</div>
+
 ## Welche B2B-SEO-Leistungen bietet StarkRank?
 
 Als integrierte B2B-SEO-Agentur decken wir die Hebel ab, die im Mittelstand und bei Herstellern über die digitale Sichtbarkeit entscheiden: Technik, Content, Authority, KI-Suchoptimierung und laufende Beratung. Jede einzelne Leistung zahlt dabei auf dasselbe Ziel ein, nämlich mehr Sichtbarkeit und qualifizierte Leads aus Google und aus KI-Antworten, statt auf Reichweite ohne Beschaffungsbezug.
