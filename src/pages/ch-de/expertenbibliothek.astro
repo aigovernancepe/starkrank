@@ -6,6 +6,7 @@ import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
 import Button from '../../components/ui/Button.astro';
 import Card from '../../components/ui/Card.astro';
 import CTABanner from '../../components/ui/CTABanner.astro';
+import { landingHreflangPairs } from '../../data/landingHreflangPairs';
 
 const title = 'Expertenbibliothek — Gründerwissen wird Content | StarkRank';
 const description = 'Fälle, konträre Thesen, Fehlschläge und Frameworks Ihres Gründers gehören in eine strukturierte Bibliothek, aus der Ihr Content-Engine täglich schöpft.';
@@ -95,12 +96,7 @@ const lastModifiedIso = lastModified.toISOString().split('T')[0];
 const lastModifiedLabel = lastModified.toLocaleDateString('de-CH', { year: 'numeric', month: 'long' });
 ---
 
-<BaseLayout title={title} description={description} locale="de" schema={schemas}>
-  <Fragment slot="head">
-    <link rel="alternate" hreflang="de-DE" href="https://starkrank.com/expertenbibliothek/" />
-    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/expertenbibliothek/" />
-    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/expertenbibliothek/" />
-  </Fragment>
+<BaseLayout title={title} description={description} locale="de" schema={schemas} hreflangAlternates={landingHreflangPairs['expertenbibliothek']}>
 
   <!-- Hero -->
   <Section bg="cream">

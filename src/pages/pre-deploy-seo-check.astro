@@ -6,6 +6,7 @@ import Breadcrumbs from '../components/ui/Breadcrumbs.astro';
 import Button from '../components/ui/Button.astro';
 import Card from '../components/ui/Card.astro';
 import CTABanner from '../components/ui/CTABanner.astro';
+import { landingHreflangPairs } from '../data/landingHreflangPairs';
 
 const title = 'Pre-Deploy SEO Check — Vor dem Launch prüfen | StarkRank';
 const description = 'Migrationen und CMS-Wechsel brechen SEO leise. Wir baseline Money-Pages und flaggen 19 Regressionen nach dem Deploy. 500 € für bis zu 30 URLs.';
@@ -96,11 +97,7 @@ const lastModifiedIso = lastModified.toISOString().split('T')[0];
 const lastModifiedLabel = lastModified.toLocaleDateString('de-DE', { year: 'numeric', month: 'long' });
 ---
 
-<BaseLayout title={title} description={description} locale="de" schema={schemas}>
-  <Fragment slot="head">
-    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/pre-deploy-seo-check/" />
-    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/pre-deploy-seo-check/" />
-  </Fragment>
+<BaseLayout title={title} description={description} locale="de" schema={schemas} hreflangAlternates={landingHreflangPairs['pre-deploy-seo-check']}>
 
   <!-- Hero -->
   <Section bg="cream">

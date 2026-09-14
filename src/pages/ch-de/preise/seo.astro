@@ -6,6 +6,7 @@ import SectionHeader from '../../../components/ui/SectionHeader.astro';
 import Card from '../../../components/ui/Card.astro';
 import CTASplit from '../../../components/ui/CTASplit.astro';
 import Button from '../../../components/ui/Button.astro';
+import { landingHreflangPairs } from '../../../data/landingHreflangPairs';
 
 const title = 'SEO Kosten Schweiz — Transparente Retainer | StarkRank';
 const description = 'Was kostet eine SEO-Agentur in der Schweiz? Transparente Retainer ab 1\'190 CHF/Monat und Audit-Preise ab 1\'800 CHF — fair kalkuliert für KMU.';
@@ -257,12 +258,7 @@ const faqSchema = {
 const schemas = [serviceSchema, breadcrumbSchema, faqSchema];
 ---
 
-<BaseLayout title={title} description={description} locale="ch-de" schema={schemas}>
-  <Fragment slot="head">
-    <link rel="alternate" hreflang="de-DE" href="https://starkrank.com/preise/seo/" />
-    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/preise/seo/" />
-    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/preise/seo/" />
-  </Fragment>
+<BaseLayout title={title} description={description} locale="ch-de" schema={schemas} hreflangAlternates={landingHreflangPairs['preise-seo']}>
 
   <HeroSection
     eyebrow="Transparent · Fair · Nachvollziehbar"

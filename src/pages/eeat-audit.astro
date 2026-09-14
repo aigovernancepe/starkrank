@@ -6,6 +6,7 @@ import Breadcrumbs from '../components/ui/Breadcrumbs.astro';
 import Button from '../components/ui/Button.astro';
 import Card from '../components/ui/Card.astro';
 import CTABanner from '../components/ui/CTABanner.astro';
+import { landingHreflangPairs } from '../data/landingHreflangPairs';
 
 const title = 'E-E-A-T SEO-Audit für echte Autorität | StarkRank';
 const description = 'Echtes E-E-A-T wird gezeigt, nicht behauptet. Wir bewerten Ihre Seite nach einer 40-Punkte-Rubrik mit signal-basierter Remediation. 1.200 € pauschal.';
@@ -88,12 +89,7 @@ const lastModifiedIso = lastModified.toISOString().split('T')[0];
 const lastModifiedLabel = lastModified.toLocaleDateString('de-DE', { year: 'numeric', month: 'long' });
 ---
 
-<BaseLayout title={title} description={description} locale="de" schema={schemas}>
-  <Fragment slot="head">
-    <link rel="alternate" hreflang="en" href="https://starkrank.com/en/services/eeat-audit/" />
-    <link rel="alternate" hreflang="de-CH" href="https://starkrank.com/ch-de/eeat-audit/" />
-    <link rel="alternate" hreflang="x-default" href="https://starkrank.com/eeat-audit/" />
-  </Fragment>
+<BaseLayout title={title} description={description} locale="de" schema={schemas} hreflangAlternates={landingHreflangPairs['eeat-audit']}>
 
   <!-- Hero -->
   <Section bg="cream">
